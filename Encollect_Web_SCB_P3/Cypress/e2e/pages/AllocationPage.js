@@ -1,0 +1,1126 @@
+import { getLocators } from '../utils/Locatorutils';
+import { getBaseUrl } from '../utils/configutils';
+import 'cypress-file-upload';
+const path = require('path');
+
+
+class AllocationPage {
+  constructor(locators) {
+    this.locators = locators;
+  }
+ 
+AllocationTestPage_01(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+  cy.wait(1000);
+  cy.contains("Agency Bulk Allocation Account Level").should("be.visible");
+  cy.wait(1000);
+  cy.contains("Agency Bulk Allocation Customer Level").should("be.visible");
+  cy.wait(1000);
+  // cy.contains("Agency Bulk Deallocation Account Level").should("be.visible");
+  // cy.wait(1000);
+  // cy.contains("Agency Bulk Deallocation Customer Level").should("be.visible");
+  // cy.wait(1000);
+
+}
+  
+AllocationTestPage_02(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkAllocAccountLevel).click();
+  cy.wait(2000);
+
+
+}
+
+AllocationTestPage_03_download(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkAllocCustomerLevel).click();
+  cy.wait(1000);
+  cy.get(this.locators.clickOnFieldAgencyTemplate_Radio).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOndownloadTemplateBtn).click();
+  cy.wait(4000);
+
+
+}
+
+AllocationTestPage_03_upload(){
+
+  cy.wait(2000);
+  cy.get(this.locators.ClickOnFieldAgencyAlloc_Radio).click();
+  cy.wait(1000);  
+  cy.get('.form-control').attachFile('PrimaryAgency_Customerlevel.xlsx');
+  cy.wait(2000);  
+  cy.get(this.locators.ClickOnUpload).click();
+  cy.wait(2000);
+  cy.get('#confirm-dialog-okay').click();
+  cy.wait(6000);
+}
+
+AllocationTestPage_04_download(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkAllocCustomerLevel).click();
+  cy.wait(1000);
+  cy.get(this.locators.clickOnFieldAgencyTemplate_Radio).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOndownloadTemplateBtn).click();
+  cy.wait(4000);
+
+
+}
+
+AllocationTestPage_04_upload(){
+
+  cy.wait(2000);
+  cy.get(this.locators.ClickOnFieldAgencyAlloc_Radio).click();
+  cy.wait(1000);  
+  cy.get('.form-control').attachFile('PrimaryAgency_Customerlevel.xlsx');
+  cy.wait(2000);  
+  cy.get(this.locators.ClickOnUpload).click();
+  cy.wait(2000);
+  cy.get('#confirm-dialog-okay').click();
+  cy.wait(6000);
+  cy.get(this.locators.ClickOnAgencyAllocStstus).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAllocFileUploadDate).click();
+  cy.wait(1000);
+  // cy.get(this.locators.TodayDate).click();
+  // cy.wait(2000);
+  // cy.get(this.locators.AllocSearch).click();
+  // cy.wait(3000);
+}
+
+AllocationTestPage_05(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkAllocCustomerLevel).click();
+  cy.wait(1000);
+  cy.get(this.locators.clickOnFieldAgencyTemplate_Radio).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOndownloadTemplateBtn).click();
+  cy.wait(4000);
+ 
+    const downloadsFolder = Cypress.config('downloadsFolder');
+              const fixturesFolder = 'cypress/fixtures';
+              // const sourceFilePath = path.join(downloadsFolder, excelFileName);
+              // const destFilePath = path.join(fixturesFolder, excelFileName);
+
+  
+              //  Move File to Fixtures before Uploading
+              cy.task('moveAllDownloadsToFixtures').then(result => {
+                  cy.log(result); // Log file move result
+  cy.wait(4000);
+  cy.get(this.locators.ClickOnTeleCallingAgencyAlloc_Radio).click();
+  cy.wait(1000);  
+  cy.get('.form-control').attachFile('PrimaryAgency_Customerlevel.xlsx');
+  cy.wait(2000);             
+  // cy.get(this.locators.ClickOnUpload).click();
+  // cy.wait(2000);
+  cy.get('[role="alert"]').should('have.text', "The selected template does not match the 'Proceed with Allocation For' option. Please review and select the correct template to proceed.");
+
+
+});
+}
+
+AllocationTestPage_06_download(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkAllocCustomerLevel).click();
+  cy.wait(1000);
+  cy.get(this.locators.clickOnFieldAgencyTemplate_Radio).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOndownloadTemplateBtn).click();
+  cy.wait(4000);
+
+}
+
+AllocationTestPage_06_upload(){
+
+  cy.wait(2000);
+  cy.get(this.locators.ClickOnFieldAgencyAlloc_Radio).click();
+  cy.wait(1000);  
+  cy.get('.form-control').attachFile('PrimaryAgency_Customerlevel.xlsx');
+  cy.wait(2000);  
+  cy.get(this.locators.ClickOnUpload).click();
+  cy.wait(2000);
+  cy.get('#confirm-dialog-okay').click();
+  cy.wait(6000);
+  cy.get(this.locators.ClickOnAgencyAllocStstus).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAllocFileUploadDate).click();
+  cy.wait(1000);
+  // cy.get(this.locators.TodayDate).click();
+  // cy.wait(2000);
+  // cy.get(this.locators.AllocSearch).click();
+  // cy.wait(3000);
+  // cy.get('payment-paginations > .enc-card > .card-content').scrollTo(500,0);
+  // cy.wait(1000);
+  // cy.get('tbody > :nth-child(1) > :nth-child(5) > a').click({force: true});
+  // cy.wait(2000);
+
+}
+
+AllocationTestPage_07(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyAllocStstus).click();
+  cy.wait(1000);
+  cy.get(this.locators.AllocStstus).select("Processed");
+  cy.wait(1000);
+  cy.get(this.locators.AllocSearch).click();
+  cy.wait(3000);
+  cy.contains("Allocation Type").should("be.visible");
+  cy.wait(1000);
+
+}
+
+AllocationTestPage_08(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+  cy.wait(1000);
+  cy.contains("Agent Bulk Allocation Account Level").should("be.visible");
+  cy.wait(1000);
+  cy.contains("Agent Bulk Allocation Customer Level").should("be.visible");
+  cy.wait(1000);
+  // cy.contains("Agent Bulk Deallocation Account Level").should("be.visible");
+  // cy.wait(1000);
+  // cy.contains("Agent Bulk Deallocation Customer Level").should("be.visible");
+  // cy.wait(1000);
+
+}
+
+AllocationTestPage_09(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkAllocAccountLevel).click();
+  cy.wait(2000);
+
+}
+
+AllocationTestPage_10_download(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkAllocCustomerLevel).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgent_Staff_radio).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOndownloadTemplateBtn).click();
+  cy.wait(2000);
+
+}
+
+AllocationTestPage_10_upload(){
+
+  cy.wait(2000);
+  cy.get(this.locators.ClickOnAgentUpload_Staff_radio).click();
+  cy.wait(1000);
+  cy.get('.form-control').attachFile('ENCollectSecondaryAllocationCollectionStaff_Customerlevel.xlsx');
+  cy.wait(2000);
+  cy.get(this.locators.ClickOnUpload).click();
+  cy.wait(2000);
+  cy.get('#confirm-dialog-okay').click();
+  cy.wait(6000);
+
+}
+
+AllocationTestPage_11_download(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkAllocCustomerLevel).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgent_Staff_radio).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOndownloadTemplateBtn).click();
+  cy.wait(2000);
+
+}
+   
+AllocationTestPage_11_upload(){
+
+  cy.wait(2000);
+  cy.get(this.locators.ClickOnAgentUpload_Staff_radio).click();
+  cy.wait(1000);
+  cy.get('.form-control').attachFile('ENCollectSecondaryAllocationCollectionStaff_Customerlevel.xlsx');
+  cy.wait(2000);
+  cy.get(this.locators.ClickOnUpload).click();
+  cy.wait(2000);
+  cy.get('#confirm-dialog-okay').click();
+  cy.wait(10000);
+  cy.contains("Agent Allocation Status").click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentAlloc_fileuploadDate).click();
+  cy.wait(1000);
+  cy.get(this.locators.TodayDate).click();
+  cy.wait(1000);
+  cy.get(this.locators.AllocSearch).click();
+  cy.wait(2000);
+
+}
+
+AllocationTestPage_12(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkAllocCustomerLevel).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgent_Staff_radio).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOndownloadTemplateBtn).click();
+  cy.wait(2000);
+
+  const downloadsFolder = Cypress.config('downloadsFolder');
+  const fixturesFolder = 'cypress/fixtures';
+
+
+
+  //  Move File to Fixtures before Uploading
+      cy.task('moveAllDownloadsToFixtures').then(result => {
+      cy.log(result); // Log file move result
+cy.wait(4000);
+cy.get(this.locators.ClickOnAgentAlloc_Agent_radio).click();
+cy.wait(1000);
+cy.get('.form-control').attachFile('ENCollectSecondaryAllocationCollectionStaff_Customerlevel.xlsx');
+  cy.wait(2000);             
+  // cy.get(this.locators.ClickOnUpload).click();
+  // cy.wait(2000);
+  cy.get('[role="alert"]').should('have.text', "The selected template does not match the 'Proceed with Allocation For' option. Please review and select the correct template to proceed.");
+
+
+});
+
+
+}
+
+AllocationTestPage_13_download(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkAllocCustomerLevel).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgent_Staff_radio).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOndownloadTemplateBtn).click();
+  cy.wait(2000);
+
+}
+   
+AllocationTestPage_13_upload(){
+
+  cy.wait(2000);
+  cy.get(this.locators.ClickOnAgentUpload_Staff_radio).click();
+  cy.wait(1000);
+  cy.get('.form-control').attachFile('ENCollectSecondaryAllocationCollectionStaff_Customerlevel.xlsx');
+  cy.wait(2000);
+  cy.get(this.locators.ClickOnUpload).click();
+  cy.wait(2000);
+  cy.get('#confirm-dialog-okay').click();
+  cy.wait(10000);
+  cy.get(this.locators.ClickOnAgentAllocStstus).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentAlloc_fileuploadDate).click();
+  cy.wait(1000);
+  cy.get(this.locators.TodayDate).click();
+  cy.wait(1000);
+  cy.get(this.locators.AllocSearch).click();
+  cy.wait(2000);
+  cy.get('payment-paginations > .enc-card > .card-content').scrollTo(500,0);
+  cy.wait(1000);
+  cy.get('tbody > :nth-child(1) > :nth-child(5) > a').click({force: true});
+  cy.wait(2000);
+
+}
+
+
+AllocationTestPage_14(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgent_AllocStatus).click();
+  cy.wait(1000);
+  cy.get(this.locators.clickOnAgent_Status).select("Processed");
+  cy.wait(1000);
+  cy.get(this.locators.AllocSearch).click();
+  cy.wait(3000);
+  // cy.get('payment-paginations > .enc-card > .card-content').scrollTo(0,500);
+  // cy.wait(1000);
+  cy.contains("Allocation Type").should("be.visible");
+  cy.wait(2000);
+
+}
+
+AllocationTestPage_15(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnOwnerBulkUpload).click();
+  cy.wait(1000);
+  cy.contains("Allocation Owner Bulk Upload Account Level").should("be.visible");
+  cy.wait(1000);
+  cy.contains("Allocation Owner Bulk Upload Customer Level").should("be.visible");
+  cy.wait(1000);
+  cy.contains("Allocation Owner Upload Status").should("be.visible");
+  cy.wait(1000);
+
+}
+
+AllocationTestPage_16(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnOwnerBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnOwnerAllocAccountlevel).click();
+  cy.wait(2000);
+
+
+}
+
+AllocationTestPage_17_download(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnOwnerBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnOwnerAllocCustomerLevel).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnOwner_DownloadTemp).click();
+  cy.wait(3000);
+
+}
+
+AllocationTestPage_17_upload(){
+
+ cy.wait(3000); 
+ cy.get('.form-control').attachFile('AllocationToOwner_customeridLevel.xlsx');
+ cy.wait(2000);
+ cy.get(this.locators.clickOnOwnerUpload_search).click();
+ cy.wait(2000);
+ cy.get('#confirm-dialog-okay').click();
+ cy.wait(6000);
+
+}
+
+AllocationTestPage_18_download(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnOwnerBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnOwnerAllocCustomerLevel).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnOwner_DownloadTemp).click();
+  cy.wait(3000);
+
+}
+
+AllocationTestPage_18_upload(){
+
+ cy.wait(3000); 
+ cy.get('.form-control').attachFile('AllocationToOwner_customeridLevel.xlsx');
+ cy.wait(2000);
+ cy.get(this.locators.clickOnOwnerUpload_search).click();
+ cy.wait(2000);
+ cy.get('#confirm-dialog-okay').click();
+ cy.wait(10000);
+ cy.get(this.locators.ClickOnOwnerAllocStstusHead).click();
+ cy.wait(1000);
+ cy.get(this.locators.ClickOnOwner_ststus_fileUploadDate).click();
+ cy.wait(1000);
+ cy.get(this.locators.TodayDate).click();
+ cy.wait(1000);
+ cy.get(this.locators.OwnerAllocSearch).click();
+ cy.wait(3000);
+
+}
+
+AllocationTestPage_19_download(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnOwnerBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnOwnerAllocCustomerLevel).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnOwner_DownloadTemp).click();
+  cy.wait(3000);
+
+}
+
+AllocationTestPage_19_upload(){
+
+ cy.wait(3000); 
+ cy.get('.form-control').attachFile('AllocationToOwner_customeridLevel.xlsx');
+ cy.wait(2000);
+ cy.get(this.locators.clickOnOwnerUpload_search).click();
+ cy.wait(2000);
+ cy.get('#confirm-dialog-okay').click();
+ cy.wait(10000);
+ cy.get(this.locators.ClickOnOwnerAllocStstusHead).click();
+ cy.wait(1000);
+ cy.get(this.locators.ClickOnOwner_ststus_fileUploadDate).click();
+ cy.wait(1000);
+ cy.get(this.locators.TodayDate).click();
+ cy.wait(1000);
+ cy.get(this.locators.OwnerAllocSearch).click();
+ cy.wait(3000);
+ cy.get('payment-paginations > .enc-card > .card-content').scrollTo(500,0);
+ cy.wait(1000);
+ cy.get('tbody > :nth-child(1) > :nth-child(5) > a').click({force: true});
+ cy.wait(2000);
+
+
+}
+
+
+AllocationTestPage_20(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnOwnerBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnOwnerAllocStstusHead).click();
+  cy.wait(1000);
+  cy.get(this.locators.OwnerAllocStatus_status).select("Processed");
+  cy.wait(1000);
+  cy.get(this.locators.AllocSearch).click();
+  cy.wait(4000);
+  cy.contains("Allocation Type").should("be.visible");
+  cy.wait(2000);
+
+}
+
+AllocationTestPage_21(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(2000);
+  cy.get(this.locators.ClickOnAllocFilters).click();
+  cy.wait(2000);
+  cy.get(this.locators.AgencyAllocFilter).click();
+  cy.wait(2000);
+  cy.get('#Productgroup').select("All");
+  cy.wait(1000);
+  cy.get('[heading="Bucket Filter"] > .panel > .panel-heading').click();
+  cy.wait(1000);
+  cy.get('#bomBucket').select("All");
+  cy.wait(1000);
+  cy.get('[heading="  Geography Filter"] > .panel > .panel-heading > .panel-title').click();
+  cy.wait(1000);
+  cy.get('#Country').select("All");
+  cy.wait(1000);
+  cy.get('#unAllocated').click();
+  cy.wait(1000);
+  cy.get('#Allocated').click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnFilterSearch).click();
+  cy.wait(15000);
+  cy.contains("Customer ID").scrollIntoView().should("be.visible");
+  cy.wait(2000);
+ 
+
+
+}
+
+AllocationTestPage_22(){
+  
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(2000);
+  cy.get(this.locators.ClickOnAllocFilters).click();
+  cy.wait(2000);
+  cy.get(this.locators.AgentAllocFilters).click();
+  cy.wait(2000);
+  cy.get('#Productgroup').select("All");
+  cy.wait(1000);
+  cy.get('[heading="Bucket Filter"] > .panel > .panel-heading').click();
+  cy.wait(1000);
+  cy.get('#BomBucket').select("All");
+  cy.wait(1000);
+  cy.get('[heading="  Geography Filter"] > .panel > .panel-heading > .panel-title').click();
+  cy.wait(1000);
+  cy.get('#Country').select("All");
+  cy.wait(1000);
+  cy.get('#unAllocated').click();
+  cy.wait(1000);
+  cy.get('#Allocated').click();
+  cy.wait(1000);
+  cy.get('#searchAccount').click();
+  cy.wait(10000);
+  cy.contains("Customer ID").scrollIntoView().should("be.visible");
+  cy.wait(2000);
+ 
+}
+
+AllocationTestPage_23(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(2000);
+  cy.get(this.locators.ClickOnAllocFilters).click();
+  cy.wait(2000);
+  cy.get(this.locators.AgencyAllocFilter).click();
+  cy.wait(2000);
+  cy.get('#Productgroup').select("All");
+  cy.wait(1000);
+  cy.get('[heading="Bucket Filter"] > .panel > .panel-heading').click();
+  cy.wait(1000);
+  cy.get('#bomBucket').select("All");
+  cy.wait(1000);
+  cy.get('[heading="  Geography Filter"] > .panel > .panel-heading > .panel-title').click();
+  cy.wait(1000);
+  cy.get('#Country').select("All");
+  cy.wait(1000);
+  cy.get('#unAllocated').click();
+  cy.wait(1000);
+  cy.get('#Allocated').click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnFilterSearch).click();
+  cy.wait(10000);
+  cy.get(':nth-child(1) > :nth-child(1) > .form-control-group > .form-check-group > label > #ischecked').click();
+  cy.wait(1000);
+  cy.get('#allocateToagency').click();
+  cy.wait(1000);
+  cy.get('#tcagencyname').type("a");
+  cy.wait(500);
+  cy.get('#ngb-typeahead-1-0').click();
+  cy.wait(1000);
+  cy.get('#allocationExpiredate2').type("31/05/2025").click();
+  cy.wait(1000);
+  cy.get('#allocate').click();
+  cy.wait(5000);
+  cy.get('.inner-layout-container').scrollTo(0, -500);
+  cy.wait(1000);
+  cy.get('[heading="Product Filter"] > .panel > .panel-heading > .panel-title').click();
+  cy.wait(1000);
+  cy.get('#Productgroup').scrollIntoView().select("All");
+  cy.wait(1000);
+  cy.get('[heading="Bucket Filter"] > .panel > .panel-heading').click();
+  cy.wait(1000);
+  cy.get('#bomBucket').select("All");
+  cy.wait(1000);
+  cy.get('[heading="  Geography Filter"] > .panel > .panel-heading > .panel-title').click();
+  cy.wait(1000);
+  cy.get('#Country').select("All");
+  cy.wait(1000);
+  cy.get('#unAllocated').click();
+  cy.wait(1000);
+  cy.get('#Allocated').click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnFilterSearch).click();
+  cy.wait(10000);
+  cy.get('.active.tab-pane > form.ng-untouched').scrollIntoView().should("be.visible")
+  cy.wait(2000);
+ 
+
+}
+
+AllocationTestPage_24(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(2000);
+  cy.get(this.locators.ClickOnAllocFilters).click();
+  cy.wait(2000);
+  cy.get(this.locators.AgentAllocFilters).click();
+  cy.wait(2000);
+  cy.get('#Productgroup').select("All");
+  cy.wait(1000);
+  cy.get('[heading="Bucket Filter"] > .panel > .panel-heading').click();
+  cy.wait(1000);
+  cy.get('#BomBucket').select("All");
+  cy.wait(1000);
+  cy.get('[heading="  Geography Filter"] > .panel > .panel-heading > .panel-title').click();
+  cy.wait(1000);
+  cy.get('#Country').select("All");
+  cy.wait(1000);
+  cy.get('#unAllocated').click();
+  cy.wait(1000);
+  cy.get('#Allocated').click();
+  cy.wait(1000);
+  cy.get('#searchAccount').click();
+  cy.wait(7000);
+  cy.get(':nth-child(1) > :nth-child(1) > .form-control-group > .form-check-group > label > #checked').click().scrollIntoView();
+  cy.wait(1000);
+  cy.get('#TcagentName').type("a");
+  cy.wait(2000);
+  cy.get('#ngb-typeahead-1-0').click();
+  cy.wait(1000);
+  cy.get('#AllocationExpireDate2').type("31/05/2025").click();
+  cy.wait(1000);
+  cy.get('#allocate').click();
+  cy.wait(5000);
+  cy.get('.inner-layout-container').scrollTo(0, -500);
+  cy.wait(1000);
+  cy.get('[heading="Product Filter"] > .panel > .panel-heading > .panel-title').click();
+  cy.wait(1000);
+  cy.get('#Productgroup').select("All");
+  cy.wait(1000);
+  cy.get('[heading="Bucket Filter"] > .panel > .panel-heading').click();
+  cy.wait(1000);
+  cy.get('#BomBucket').select("All");
+  cy.wait(1000);
+  cy.get('[heading="  Geography Filter"] > .panel > .panel-heading > .panel-title').click();
+  cy.wait(1000);
+  cy.get('#Country').select("All");
+  cy.wait(1000);
+  cy.get('#unAllocated').click();
+  cy.wait(1000);
+  cy.get('#Allocated').click();
+  cy.wait(1000);
+  cy.get('#searchAccount').click();
+  cy.wait(7000);
+  cy.get('.tab-content').scrollIntoView().should("be.visible")
+  cy.wait(2000);
+ 
+}
+
+AllocationTestPage_101(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+  cy.wait(1000);
+  cy.contains("Agency Bulk Deallocation Account Level").should("be.visible");
+  cy.wait(1000);
+  cy.contains("Agency Bulk Deallocation Customer Level").should("be.visible");
+  cy.wait(1000);
+
+}
+
+AllocationTestPage_102(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkUnAllocAccountlevel).click();
+  cy.wait(2000);
+
+
+}
+
+AllocationTestPage_103_download(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkUnAllocCustomerlevel).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickAgencyUnallocDownloadTemp).click();
+  cy.wait(3000);
+
+}
+
+AllocationTestPage_103_upload(){
+
+  cy.wait(3000);
+  cy.get(this.locators.ClickOnAgencyUnalloc_field_radio).click();
+  cy.wait(1000);
+  cy.get('.form-control').attachFile('UnAllocation_acclevel.xlsx');
+  cy.wait(2000);
+  cy.get('#upload').click();
+  cy.wait(2000);
+  cy.get('#confirm-dialog-okay').click();
+  cy.wait(6000);
+
+}
+
+AllocationTestPage_104_download(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkUnAllocCustomerlevel).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickAgencyUnallocDownloadTemp).click();
+  cy.wait(3000);
+
+}
+
+AllocationTestPage_104_upload(){
+
+  cy.wait(3000);
+  cy.get(this.locators.ClickOnAgencyUnalloc_field_radio).click();
+  cy.wait(1000);
+  cy.get('.form-control').attachFile('UnAllocation_acclevel.xlsx');
+  cy.wait(2000);
+  cy.get('#upload').click();
+  cy.wait(2000);
+  cy.get('#confirm-dialog-okay').click();
+  cy.wait(6000);
+  cy.get(this.locators.ClickAgencyDeAllocStatus_head).click();
+  cy.wait(1000);
+  cy.get('#FileuploadDate').click();
+  cy.wait(500);
+  cy.get(this.locators.TodayDate).click();
+  cy.wait(500);
+  cy.get(this.locators.UnAllocSearch).click();
+  cy.wait(3000);
+
+}
+AllocationTestPage_105_download(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkUnAllocCustomerlevel).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickAgencyUnallocDownloadTemp).click();
+  cy.wait(3000);
+
+}
+
+AllocationTestPage_105_upload(){
+
+  cy.wait(3000);
+  cy.get(this.locators.ClickOnAgencyUnalloc_field_radio).click();
+  cy.wait(1000);
+  cy.get('.form-control').attachFile('UnAllocation_acclevel.xlsx');
+  cy.wait(2000);
+  cy.get('#upload').click();
+  cy.wait(2000);
+  cy.get('#confirm-dialog-okay').click();
+  cy.wait(6000);
+  cy.get(this.locators.ClickAgencyDeAllocStatus_head).click();
+  cy.wait(1000);
+  cy.get('#FileuploadDate').click();
+  cy.wait(500);
+  cy.get(this.locators.TodayDate).click();
+  cy.wait(500);
+  cy.get(this.locators.UnAllocSearch).click();
+  cy.wait(3000);
+
+}
+AllocationTestPage_106_download(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkUnAllocCustomerlevel).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickAgencyUnallocDownloadTemp).click();
+  cy.wait(3000);
+
+}
+
+AllocationTestPage_106_upload(){
+
+  cy.wait(3000);
+  cy.get(this.locators.ClickOnAgencyUnalloc_field_radio).click();
+  cy.wait(1000);
+  cy.get('.form-control').attachFile('UnAllocation_acclevel.xlsx');
+  cy.wait(2000);
+  cy.get('#upload').click();
+  cy.wait(2000);
+  cy.get('#confirm-dialog-okay').click();
+  cy.wait(10000);
+  cy.get(this.locators.ClickAgencyDeAllocStatus_head).click();
+  cy.wait(1000);
+  cy.get('#FileuploadDate').click();
+  cy.wait(500);
+  cy.get(this.locators.TodayDate).click();
+  cy.wait(500);
+  cy.get(this.locators.UnAllocSearch).click();
+  cy.wait(3000);
+  cy.get('payment-paginations > .enc-card > .card-content').scrollTo(500,0);
+  cy.wait(1000);
+  cy.get('tbody > :nth-child(1) > :nth-child(5) > a').click({force: true});
+  cy.wait(3000);
+
+}
+
+AllocationTestPage_107(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickAgencyDeAllocStatus_head).click();
+  cy.wait(1000);
+  cy.get(this.locators.AllocStstus).select("Processed");
+  cy.wait(1000);
+  cy.get(this.locators.AllocSearch).click();
+  cy.wait(3000);
+  cy.contains("Deallocation Type").should("be.visible");
+  cy.wait(1000);
+
+}
+
+AllocationTestPage_108(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+  cy.wait(1000);
+  cy.contains("Agent Bulk Deallocation Account Level").should("be.visible");
+  cy.wait(1000);
+  cy.contains("Agent Bulk Deallocation Customer Level").should("be.visible");
+  cy.wait(1000);
+
+
+}
+
+AllocationTestPage_109(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkDeAllocAccountLevel).click();
+  cy.wait(2000);
+
+}
+
+AllocationTestPage_110_download(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkUnAllocCustomerlevel).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickAgentUnallocDownloadTemp).click();
+  cy.wait(3000);
+
+
+}
+AllocationTestPage_110_upload(){
+
+cy.wait(2000);
+cy.get(this.locators.ClickOnAgentUnalloc_agent_radio).click();
+cy.wait(1000);
+cy.get('.form-control').attachFile('UnAllocation_customeridlevel.xlsx');
+cy.wait(2000);
+cy.get('#upload').click();
+cy.wait(2000);
+cy.get('#confirm-dialog-okay').click();
+cy.wait(6000);
+
+}
+
+AllocationTestPage_111_download(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkUnAllocCustomerlevel).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickAgentUnallocDownloadTemp).click();
+  cy.wait(3000);
+
+
+}
+AllocationTestPage_111_upload(){
+
+cy.wait(2000);
+cy.get(this.locators.ClickOnAgentUnalloc_agent_radio).click();
+cy.wait(1000);
+cy.get('.form-control').attachFile('UnAllocation_customeridlevel.xlsx');
+cy.wait(2000);
+cy.get('#upload').click();
+cy.wait(2000);
+cy.get('#confirm-dialog-okay').click();
+cy.wait(6000);
+
+
+//################################################
+
+cy.contains('File Uploaded Successfully', { timeout: 7000 }).invoke('text').then((popupText) => {
+  cy.log(`Popup text: ${popupText}`);
+  const transactionIdMatch = /Transaction ID\s*:\s*(\d+)/.exec(popupText);
+  if (transactionIdMatch) {
+    const transactionId = transactionIdMatch[1];
+    cy.log(`Transaction ID: ${transactionId}`);
+    cy.wait(1000);
+    Cypress.env('transactionID', transactionId);
+    cy.wait(1000);
+  }
+});
+
+
+cy.get(this.locators.ClickOnAgentDeAllocStatus_head).click();
+cy.wait(2000);
+cy.then(() => {
+  const transactionId = Cypress.env('transactionID');
+  cy.get('#Transactionid').type(transactionId.toString()); // Convert to string if needed
+});
+
+
+//#################################
+cy.get(this.locators.UnAllocSearch).click();
+cy.wait(3000);
+cy.get('tbody > :nth-child(1) > :nth-child(5) > a').click();
+cy.wait(4000);
+
+}
+AllocationTestPage_112_download(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkUnAllocCustomerlevel).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickAgentUnallocDownloadTemp).click();
+  cy.wait(3000);
+
+
+}
+AllocationTestPage_112_upload(){
+
+cy.wait(2000);
+cy.get(this.locators.ClickOnAgentUnalloc_agent_radio).click();
+cy.wait(1000);
+cy.get('.form-control').attachFile('UnAllocation_customeridlevel.xlsx');
+cy.wait(2000);
+cy.get('#upload').click();
+cy.wait(2000);
+cy.get('#confirm-dialog-okay').click();
+cy.wait(10000);
+cy.get(this.locators.ClickOnAgentDeAllocStatus_head).click();
+cy.wait(500);
+cy.get('#Fileuploaddate').click();
+cy.wait(1000);
+cy.get('.today-date').click();
+cy.wait(500);
+cy.get(this.locators.UnAllocSearch).click();
+cy.wait(3000);
+cy.get('tbody > :nth-child(1) > :nth-child(5) > a').click();
+cy.wait(4000);
+
+}
+
+AllocationTestPage_113_download(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkUnAllocCustomerlevel).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickAgentUnallocDownloadTemp).click();
+  cy.wait(3000);
+
+
+}
+AllocationTestPage_113_upload(){
+
+cy.wait(2000);
+cy.get(this.locators.ClickOnAgentUnalloc_agent_radio).click();
+cy.wait(1000);
+cy.get('.form-control').attachFile('UnAllocation_customeridlevel.xlsx');
+cy.wait(2000);
+cy.get('#upload').click();
+cy.wait(2000);
+cy.get('#confirm-dialog-okay').click();
+cy.wait(15000);
+cy.get(this.locators.ClickOnAgentDeAllocStatus_head).click();
+cy.wait(500);
+cy.get('#Fileuploaddate').click();
+cy.wait(1000);
+cy.get('.today-date').click();
+cy.wait(500);
+cy.get(this.locators.UnAllocSearch).click();
+cy.wait(3000);
+cy.get('payment-paginations > .enc-card > .card-content').scrollTo(500,0);
+cy.wait(1000);
+cy.get('tbody > :nth-child(1) > :nth-child(5) > a').click({force: true});
+cy.wait(4000);
+
+}
+
+AllocationTestPage_114(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentDeAllocStatus_head).click();
+  cy.wait(500);
+  cy.get(this.locators.AllocStstus).select("Processed");
+  cy.wait(1000);
+  cy.get(this.locators.AllocSearch).click();
+  cy.wait(3000);
+  cy.contains("Deallocation Type").should("be.visible");
+  cy.wait(1000);
+
+}
+
+AllocationTestPage_115(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickAgencyDeAllocStatus_head).click();
+  cy.wait(1000);
+  cy.get("select[name='UnAllocationType']").select("Customer ID Level");
+  cy.wait(1000);
+  cy.get('#search').click();
+  cy.wait(3000);
+
+}
+
+AllocationTestPage_116(){
+
+  cy.get(this.locators.ClickOnAllocation).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+  cy.wait(1000);
+  cy.get(this.locators.ClickOnAgentDeAllocStatus_head).click();
+  cy.wait(500);
+  cy.get("select[name='UnAllocationType']").select("Customer ID Level");
+  cy.wait(1000);
+  cy.get('#search').click();
+  cy.wait(3000);
+
+}
+
+
+
+
+
+}
+
+export default AllocationPage;

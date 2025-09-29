@@ -1,0 +1,36 @@
+pipeline {
+    agent any
+
+    environment {
+        NO_COLOR = '1'
+    }
+
+    stages {
+        stage('Clean Workspace') {
+            steps {
+                deleteDir()
+                echo 'Workspace has been cleaned to ensure a fresh build.'
+            }
+        }
+
+        stage('Checkout SCM') {
+            steps {
+                checkout scm
+                echo 'Source code successfully checked out from version control.'
+            }
+        }
+
+        stage('Run Parallel Tests') {
+            steps {
+                bat "npm run test:parallel"
+            }
+        }
+    }
+
+    post {
+        always {
+            cleanWs()
+            echo 'Post-build cleanup has been completed.'
+        }
+    }
+}

@@ -1,0 +1,101 @@
+{
+  "loginPage": {
+    "companynameInput": "#login-company-name",
+    "ClickonCompanyName": "#ngb-typeahead-0-0",
+    "usernameInput": "#login-email",
+    "passwordInput": "#login-password",
+    "signinButton": "#login-submit-button",
+    "dashboard": ".name-width",
+    "profile": ".avatar-info",
+    "logoutButton": ":nth-child(4) > .dropdown-item"
+  },
+
+  "NewDashboardPage": {
+    "ClickOnCredit_Radio_btn": "#cc-account-type",
+    "ClickOnSubmitBtn": "#search-submit-button",
+    "Type_Cuc_Name": "#search-customer-name",
+    "Type_CC_LastDigit": "#search-cc-number",
+    "Type_Bucket": "('input[placeholder='Enter Bucket']'",
+    "Type_SOC": "('input[placeholder='Enter SOC']'",
+    "Type_Cycle": "('input[placeholder='Enter Cycle']'",
+    "Type_BranchCode": "('input[placeholder='Enter Branch Code']'",
+    "Type_Status": "('input[placeholder='Enter Status']'",
+    "Type_Cus_ID": "('input[placeholder='Enter Customer ID']'"
+  },
+
+  "IssueReceipt":{
+
+ "ClickOnPayment":"[title='Payments'] > span.ng-star-inserted",
+ "ClickOnReceipts":".payments > :nth-child(2) > :nth-child(4) > a.ng-star-inserted",
+ "ClickOnWalk_in_cus":".payments > :nth-child(2) > :nth-child(4) > .sub-nav-list > :nth-child(1) > a",
+ "ClickOnCus_Acc_Num":":nth-child(5) > .form-control-group > .form-control",
+ "ClickOn_Physical_Rec_no":":nth-child(2) > :nth-child(1) > .form-control-group > .form-control",
+ "ClickOn_Collec_Id":".card-content > :nth-child(2) > :nth-child(2) > .form-control-group > .form-control",
+ "Select_Relationship_with_Cus":".form-control-group > .form-select",
+ "Select_Mode_Of_Payment":".payment-input > .form-select",
+ "Type_EMI_Overdue":"tbody > :nth-child(1) > :nth-child(2) > .form-control-group > .form-control",
+ "ClickOn_TotalAmt":":nth-child(7) > :nth-child(2) > .form-control-group > .form-control",
+ "Type_Pan_Num":":nth-child(3) > .col-lg-4 > .form-control-group > .form-control",
+ "Select_Payment_Partner":":nth-child(16) > .form-control-group > .payment-input > .form-select",
+ "Type_Trans_Id":".col-lg-4.form-control-group > .form-control",
+ "ClickOn_Submit_Payment":".btn-secondary",
+ "ClickOnOkay":"#confirm-dialog-okay",
+ "ClickOn_Home":".btn-success"
+
+
+  },
+
+  "SearchAccount":{
+
+
+
+
+  },
+
+  "Permission":{
+
+  "ClickOnSystemSetting":"[title='System Settings'] > span.ng-star-inserted",
+  "ClickOnPermissions":".system-settings > :nth-child(2) > :nth-child(3) > a.ng-star-inserted",
+  "ClickOndefinePermissionScheme":".system-settings > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(1) > a",
+  "TypeSchemeName":".col-md-4 > .form-control-group > .form-control",
+  "TypeSchemeremarks":":nth-child(5) > .form-control-group > .form-control",
+  "ClickOnProceed":".btn",
+  "ClickOn2ndProceed":":nth-child(7) > .btn",
+  "EnableAll_UserManagement":"#accordion-User\\ Management > .panel > .panel-heading > .panel-title > .accordion-toggle > .ms-2 > .mw-250px > .form-control-group > .form-toggle-group > label > input",
+  "EnableAll_profilesettings":"#accordion-Profile\\ Settings > .panel > .panel-heading > .panel-title > .accordion-toggle > .ms-2 > .mw-250px > .form-control-group > .form-toggle-group > label > input",
+  "ClickOn_ExpandAll":"#expand-all-button",
+  "ClickOnSavepermissionScheme":".card-footer > .btn",
+  "ClickOn_create_existing_Permissionscheme":".form-radio-group > :nth-child(1) > .ng-untouched",
+  "Select_existing_permission_scheme":".ng-input > input",
+  "type_create_exixting_Scheme_name":":nth-child(4) > .form-control-group > .form-control",
+
+  "Click_SearchPermissionScheme":".system-settings > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(2) > a",
+  "ClickON_plus":".btn > svg-icon > svg",
+  "ClickOn_Search":".form-control",
+  "ClickOn_showcounts_per_page":"select[name='itemsPerPage']",
+  "ClickonNextPage":".pagination-next > .page-link",
+  "ClickOnPrevious":".pagination-prev",
+  "ClickFull_Next":".pagination-last > .page-link",
+  "Click_fullprev":".pagination-first",
+  "ClickOn_icon_btn":":nth-child(1) > .actions > .d-flex > .action-icon-button",
+  "clickon_viewscheme":":nth-child(1) > .dropdown-item",
+  "clickOn_editscheme":":nth-child(2) > .dropdown-item",
+  "ClickOn_viewAssignedDesignations":":nth-child(3) > .dropdown-item",
+  "ClickOn_backBtn":":nth-child(7) > .btn",
+  "ClickOn_updateBtn":".card-footer > .btn",
+  "ClikcOn_update_yes":"#confirm-dialog-okay",
+  "ClickOn_update_No":"#confirm-dialog-cancel",
+
+  "ClickOn_Assign_Permission":".system-settings > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(3) > a",
+  "Type_Designation_Search":".form-control",
+  "ClickOn_Arrow_Wrapper":".ng-arrow-wrapper",
+  "ClickOn_Assign":".btn",
+  "ClickOn_Filters":".form-select.ng-valid.ng-dirty.ng-touched",
+  "Clickon_assign_per_body":":nth-child(1) > :nth-child(3) > .d-flex > .me-2"
+
+
+
+  }
+
+
+}

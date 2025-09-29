@@ -1,0 +1,82 @@
+{
+  "scripts": {
+    "test:group1:QA": "cypress run --spec 'cypress/e2e/tests/ReoprtPaymentTestPage_*.cy.js' --env ENV=QA",
+    "test:group2:QA": "cypress run --spec 'cypress/e2e/tests/GeoReportTestPage_*.cy.js' --env ENV=QA",
+    "test:group3:QA": "cypress run --spec 'cypress/e2e/tests/MoneyMovementReportTestPage_*.cy.js' --env ENV=QA",
+    "test:group4:QA": "cypress run --spec 'cypress/e2e/tests/SystemSettingPageTest_*.cy.js' --env ENV=QA",
+    "test:group5:QA": "cypress run --spec 'cypress/e2e/tests/SupervisoryReportTestPage_*.cy.js' --env ENV=QA",
+    "test:group6:QA": "cypress run --spec 'cypress/e2e/tests/SystemSettingTestPage_*.cy.js' --env ENV=QA",
+    "test:group7:QA": "cypress run --spec 'cypress/e2e/tests/TrailIntensityReportTestPage_*.cy.js' --env ENV=QA",
+    "test:group8:QA": "cypress run --spec 'cypress/e2e/tests/TrailsTestPage_*.cy.js' --env ENV=QA",
+    "test:group9:QA": "cypress run --spec 'cypress/e2e/tests/DashboardTestPage_*.cy.js' --env ENV=QA",
+    "test:group10:QA": "cypress run --spec 'cypress/e2e/tests/AllocatedvsAchievedReoprtTestPage_*.cy.js' --env ENV=QA",
+    "test:group11:QA": "cypress run --spec 'cypress/e2e/tests/AttendenceReoprtTestPage_*.cy.js' --env ENV=QA",
+    "test:group12:QA": "cypress run --spec 'cypress/e2e/tests/CashWalletLimitReportPage*.cy.js' --env ENV=QA",
+    "test:group13:QA": "cypress run --spec 'cypress/e2e/tests/UserManagementTestPage_*.cy.js' --env ENV=QA",
+    "test:group14:QA": "cypress run --spec 'cypress/e2e/tests/PaymentTestPage_*.cy.js' --env ENV=QA",
+    "test:group15:QA": "cypress run --spec 'cypress/e2e/tests/AllocationTestPage_*.cy.js' --env ENV=QA",
+    "test:group16:QA": "cypress run --spec 'cypress/e2e/tests/LoginTestPage_*.cy.js' --env ENV=QA",
+    "test:group17:QA": "cypress run --spec 'cypress/e2e/tests/SettlementTestPage_*.cy.js' --env ENV=QA",
+    "test:group18:QA": "cypress run --spec 'cypress/e2e/tests/CustomerContactReportPage*.cy.js' --env ENV=QA",
+    "test:group19:QA": "cypress run --spec 'cypress/e2e/tests/TrailHistoryReportTestPage_*.cy.js' --env ENV=QA",
+     "test:group20:QA": "cypress run --spec 'cypress/e2e/tests/PermissionTestPage_*.cy.js' --env ENV=QA",
+
+
+    "test:group1:UAT": "cypress run --spec 'cypress/e2e/tests/ReoprtPaymentTestPage_*.cy.js' --env ENV=UAT",
+    "test:group2:UAT": "cypress run --spec 'cypress/e2e/tests/GeoReportTestPage_*.cy.js' --env ENV=UAT",
+    "test:group3:UAT": "cypress run --spec 'cypress/e2e/tests/MoneyMovementReportTestPage_*.cy.js' --env ENV=UAT",
+    "test:group4:UAT": "cypress run --spec 'cypress/e2e/tests/SystemSettingPageTest_*.cy.js' --env ENV=UAT",
+    "test:group5:UAT": "cypress run --spec 'cypress/e2e/tests/SupervisoryReportTestPage_*.cy.js' --env ENV=UAT",
+    "test:group6:UAT": "cypress run --spec 'cypress/e2e/tests/SystemSettingTestPage_*.cy.js' --env ENV=UAT",
+    "test:group7:UAT": "cypress run --spec 'cypress/e2e/tests/TrailIntensityReportTestPage_*.cy.js' --env ENV=UAT",
+    "test:group8:UAT": "cypress run --spec 'cypress/e2e/tests/TrailsTestPage_*.cy.js' --env ENV=UAT",
+    "test:group9:UAT": "cypress run --spec 'cypress/e2e/tests/DashboardTestPage_*.cy.js' --env ENV=UAT",
+    "test:group10:UAT": "cypress run --spec 'cypress/e2e/tests/AllocatedvsAchievedReoprtTestPage_*.cy.js' --env ENV=UAT",
+    "test:group11:UAT": "cypress run --spec 'cypress/e2e/tests/AttendenceReoprtTestPage_*.cy.js' --env ENV=UAT",
+    "test:group12:UAT": "cypress run --spec 'cypress/e2e/tests/CashWalletLimitReportPage*.cy.js' --env ENV=UAT",
+    "test:group13:UAT": "cypress run --spec 'cypress/e2e/tests/UserManagementTestPage_*.cy.js' --env ENV=UAT",
+    "test:group14:UAT": "cypress run --spec 'cypress/e2e/tests/PaymentTestPage_*.cy.js' --env ENV=UAT",
+    "test:group15:UAT": "cypress run --spec 'cypress/e2e/tests/AllocationTestPage_*.cy.js' --env ENV=UAT",
+    "test:group16:UAT": "cypress run --spec 'cypress/e2e/tests/LoginTestPage_*.cy.js' --env ENV=UAT",
+    "test:group17:UAT": "cypress run --spec 'cypress/e2e/tests/SettlementTestPage_*.cy.js' --env ENV=UAT",
+    "test:group18:UAT": "cypress run --spec 'cypress/e2e/tests/CustomerContactReportPage*.cy.js' --env ENV=UAT",
+    "test:group19:UAT": "cypress run --spec 'cypress/e2e/tests/TrailHistoryReportTestPage_*.cy.js' --env ENV=UAT",
+
+
+    "test:parallel:QA": "npm-run-all --parallel test:group1:QA test:group2:QA test:group3:QA test:group4:QA test:group5:QA test:group6:QA test:group7:QA test:group8:QA test:group9:QA test:group10:QA test:group11:QA test:group12:QA test:group13:QA test:group14:QA test:group15:QA test:group16:QA test:group17:QA test:group18:QA test:group19:QA",
+    "test:parallel:UAT": "npm-run-all --parallel test:group1:UAT test:group2:UAT test:group3:UAT test:group4:UAT test:group5:UAT test:group6:UAT test:group7:UAT test:group8:UAT test:group9:UAT test:group10:UAT test:group11:UAT test:group12:UAT test:group13:UAT test:group14:UAT test:group15:UAT test:group16:UAT test:group17:UAT test:group18:UAT test:group19:UAT"
+  },
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.3.0",
+    "@cypress/xpath": "^2.0.3",
+    "@shelex/cypress-allure-plugin": "^2.41.0",
+    "allure-commandline": "^2.33.0",
+    "cypress": "^14.4.0",
+    "cypress-drag-drop": "^1.1.1",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-wait-until": "^3.0.1",
+    "install": "^0.13.0",
+    "npm-run-all": "^4.1.5",
+    "xlsx": "^0.18.5"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.3.0",
+    "csv-parse": "^5.5.6",
+    "csv-parser": "^3.0.0",
+    "csv-stringify": "^6.5.0",
+    "csv-writer": "^1.6.0",
+    "exceljs": "^4.4.0",
+    "glob": "^10.3.12",
+    "lodash": "^4.17.21"
+  },
+  "name": "encollect_web",
+  "description": "",
+  "version": "1.0.0",
+  "main": "cypress.config.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "author": "",
+  "license": "ISC"
+}
