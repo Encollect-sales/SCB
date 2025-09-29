@@ -9,7 +9,7 @@ export const getBaseUrl = () => {
       // config.baseUrl = 'https://scbuat.sumeruentiger.com/web/#/login'; // UAT URL
        config.baseUrl = 'https://scbdemo.sumeruentiger.com/web/#login'; // UAT URL
     } else {
-      config.baseUrl = 'https://scbdemo.sumeruentiger.com/web/#login'; // QA URL
+      config.baseUrl = 'https://qa.sumeruentiger.com/web/#login'; // QA URL
     }
    
     return config.baseUrl;
