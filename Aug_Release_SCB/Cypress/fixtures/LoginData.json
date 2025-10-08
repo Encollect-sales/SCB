@@ -1,0 +1,18 @@
+{
+  "login": {
+    "Companyname": "ENCollect",
+      "email": "rahmancbm@yopmail.com",
+      "password": "123@zxZX"
+  },
+
+  "login1": {
+    "Companyname": "ENCollect",
+    "email": "sysadmin@yopmail.com",
+      "password": "123@zxZX"
+  },
+  "login2": {
+    "Companyname": "ENCollect",
+     "email": "sysadmin@yopmail.com",
+      "password": "123@zxZX"
+  }
+}
