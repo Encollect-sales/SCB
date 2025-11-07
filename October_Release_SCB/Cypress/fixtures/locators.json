@@ -8,6 +8,19 @@
     "dashboard": ".name-width",
     "profile": ".avatar-info",
     "logoutButton": ":nth-child(4) > .dropdown-item"
+  },
+
+  "Allocation":{
+
+
+
+  },
+
+  "Repo":{
+
+
+
+    
   }
 
  

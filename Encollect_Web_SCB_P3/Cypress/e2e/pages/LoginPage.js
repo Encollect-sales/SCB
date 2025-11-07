@@ -14,6 +14,7 @@ class LoginPage {
   }
  
   
+  
   // fillcompanyname(Companyname) {
   //   //cy.get(this.locators.companynameInput).type(Companyname);
   //   cy.get(this.locators.companynameInput).type("ENCollect");
@@ -59,7 +60,7 @@ clickcompanyname() {
  
   submit() {
     cy.get(this.locators.signinButton).click();
-    cy.wait(5000);
+    cy.wait(2000);
     Cypress.on('uncaught:exception', (err, runnable) => {
       console.error('Uncaught exception:', err.message);
       console.error(err);
@@ -68,6 +69,13 @@ clickcompanyname() {
     });
   }
  
+   enterotp(){
+
+    cy.get('#otp-input').type(560062);
+    cy.wait(2000);
+    cy.get('.btn-success').click();
+    cy.wait(11000);
+  }
   verifyLoginSuccess() {
     return cy.get(this.locators.dashboard).then(() => {});
   }
@@ -79,7 +87,8 @@ clickcompanyname() {
     this.fillUsername(email);
     this.fillPassword(password);
     this.submit();
-    cy.wait(3000);
+    cy.wait(2000);
+    this.enterotp();
   }
  
   login1(Companyname,email1, password1) {
@@ -89,7 +98,8 @@ clickcompanyname() {
     this.fillUsername(email1);
     this.fillPassword(password1);
     this.submit();
-    cy.wait(4000);
+    cy.wait(2000);
+    this.enterotp();
   }
  
   logout() {

@@ -66,7 +66,15 @@ Clikcompanyname() {
   submit() {
     cy.wait(1000)
     cy.get(this.locators.signinButton).click();
-    cy.wait(3000);
+    cy.wait(2000);
+  }
+
+   enterotp(){
+
+    cy.get('#otp-input').type(560062);
+    cy.wait(2000);
+    cy.get('.btn-success').click();
+    cy.wait(11000);
   }
  
   // verifyLoginSuccess() {
@@ -83,6 +91,8 @@ Clikcompanyname() {
       this.fillPassword(password);
       this.submit();
       cy.wait(2000);
+      this.enterotp();
+
       // this.verifyLoginSuccess();
   }
 

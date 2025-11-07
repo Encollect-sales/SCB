@@ -11,38 +11,38 @@
   },
     "login2": {
     "Companyname": "ENCollect",
-    "email": "bml107@yopmail.com",
+    "email": "bmsettlement1@yopmail.com ",
     "password": "123@asAS"
   },
    "login3": {
     "Companyname": "ENCollect",
-    "email": "cml2@yopmail.com",
-    "password": "123@asAS"
+    "email": "cmsettlement2@yopmail.com",
+    "password": "123@mjMJ"
   },
    "login4": {
     "Companyname": "ENCollect",
-    "email": "cchl3@yopmail.com",
+    "email": "chsettlement3@yopmail.com",
     "password": "123@zxZX"
   },
    "login5": {
     "Companyname": "ENCollect",
-    "email": "pchl4@yopmail.com",
+    "email": "pchsettlement4@yopmail.com",
     "password": "123@asAS"
   },
    "login6": {
     "Companyname": "ENCollect",
-    "email": "rchl5@yopmail.com",
+    "email": "rcsettlement4@yopmail.com",
     "password": "123@zxZX"
   },
    "login7": {
     "Companyname": "ENCollect",
-    "email": "zchl6@yopmail.com",
-    "password": "123@asAS"
+    "email": "zchsettlement6@yopmail.com",
+    "password": "123@zxZX"
   },
    "login8": {
     "Companyname": "ENCollect",
-    "email": "cchl7@yopmail.com",
-    "password": "123@asAS"
+    "email": "ccchsettlement@yopmail.com",
+    "password": "123@zxZX"
   }
 
 }

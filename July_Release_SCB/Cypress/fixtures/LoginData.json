@@ -1,14 +1,14 @@
 {
   "login": {
     "Companyname": "ENCollect",
-      "email": "rahmancbm@yopmail.com",
-      "password": "123@qwQW"
+      "email": "kamalesh@yopmail.com",
+      "password": "123@asAS"
   },
 
   "login1": {
     "Companyname": "ENCollect",
     "email": "vatsalstaff07@yopmail.com",
-      "password": "123@qwQW"
+      "password": "123@asAS"
   },
   "login2": {
     "Companyname": "ENCollect",
@@ -17,15 +17,16 @@
   },
     "login3": {
     "Companyname": "ENCollect",
-     "email": "bmsettlement1@yopmail.com",
-      "password": "123@mjMJ"
+    "email": "bmsettlement1@yopmail.com",
+    "password": "123@asAS"
   },
 
   "login4": {
     "Companyname": "ENCollect",
      "email": "cmsettlement2@yopmail.com",
-      "password": "123@mjMJ"
-  }
+    "password": "123@mjMJ"
 
+
+}
 
 }

@@ -5,9 +5,8 @@ export const getBaseUrl = () => {
   // Load the fixture and modify the base URL dynamically based on the environment
   return cy.fixture('config').then((config) => {
     // Modify the baseUrl based on the environment (QA or UAT)
-    if (env === 'UAT') {
-      // config.baseUrl = 'https://scbuat.sumeruentiger.com/web/#/login'; // UAT URL   
-      config.baseUrl = 'https://scbuat.sumeruentiger.com/web/#login';
+    if (env === 'UAT') {  
+      config.baseUrl = 'https://qa.sumeruentiger.com/web/#login';
     } else {
       config.baseUrl = 'https://qa.sumeruentiger.com/web/#login'; // QA URL
     }

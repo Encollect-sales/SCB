@@ -56,13 +56,21 @@ Clikcompanyname() {
   submit() {
     cy.wait(2000);
     cy.get(this.locators.signinButton).click();
-    cy.wait(5000);
+    cy.wait(3000);
   }
  
   // verifyLoginSuccess() {
   //   return cy.get(this.locators.dashboard).then(() => {
   //   });
   // }
+
+  enterotp(){
+
+    cy.get('#otp-input').type(560062);
+    cy.wait(2000);
+    cy.get('.btn-success').click();
+    cy.wait(11000);
+  }
  
   login(Companyname, email, password) {
    
@@ -72,7 +80,8 @@ Clikcompanyname() {
       this.fillUsername(email);
       this.fillPassword(password);
       this.submit();
-      cy.wait(7000);
+      cy.wait(2000);
+      this.enterotp();
       // this.verifyLoginSuccess();
   }
 
