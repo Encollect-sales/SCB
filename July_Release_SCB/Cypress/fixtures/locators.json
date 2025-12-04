@@ -65,7 +65,6 @@
       "productgroup" : "select[name='scopeOfWorkProductGroup' ]",
       "product" : "select[name='scopeOfWorkProduct']",
       "subproduct" : "select[name='scopeOfWorkSubProduct']",
-      "placeofwork" : ":nth-child(6) > .nav-link",
       "selectpg" : "tr.ng-star-inserted > :nth-child(1) > .form-select",
       "selectp" : "app-scope-of-work > .p-0 > .table > tbody > tr.ng-star-inserted > :nth-child(2) > .form-select",
       "selectsubp" : "tr.ng-star-inserted > :nth-child(3) > .form-select",
@@ -154,7 +153,7 @@
       "bbrm" : "[heading='Base Branch And Reporting Manager'] > .panel > .panel-heading > .panel-title > .accordion-toggle",
       "basebranch" : "[heading='Base Branch And Reporting Manager'] > .panel > .panel-collapse > .panel-body > :nth-child(1) > :nth-child(1) > .form-control",
       "sprm" : ".col-md-6 > #Select",
-      "placeofwork" : "accordion-group[heading='Place of Work / Reach'] div[role='button']",
+    
       "areapincode" : ".active > .row > .col-md-6 > .form-control",
       "apc" : ".ng2-menu-item",
       "apcv": ".tag__text",
@@ -194,8 +193,8 @@
       "AgentUpload" : "input[name='attachedFile']",
       "confirmPopUp" : " button[class='btn btn-success']",
       "StaffRadio" : "input[value='Staff']",
-      "ScopeOfWork": ":nth-child(6) > .nav-link > span",
-      "PlaceOfWork" : ":nth-child(7) > .nav-link > span",
+      "ScopeOfWork": ":nth-child(5) > .nav-link > span",
+      "PlaceOfWork" : ":nth-child(6) > .nav-link > span",
       "pininput":"#areaPin",
       "SSearchAgent" : "body > app-root:nth-child(1) > div:nth-child(1) > div:nth-child(2) > app-navbar:nth-child(1) > div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(4) > a:nth-child(1) > span:nth-child(2)",
       "pendApproval" : ":nth-child(3) > :nth-child(1) > #Select",
@@ -208,7 +207,9 @@
       "selectsuboptions":".ng-option-label.ng-star-inserted",
 
       "ClickOnBucketHead":"[heading='Bucket'] > .panel > .panel-heading > .panel-title",
-      "ClickOnBucket":"ng-select[placeholder='Search and select your Bucket(s)'] input[role='combobox']"
+      "ClickOnBucket":"ng-select[placeholder='Search and select your Bucket(s)'] input[role='combobox']",
+
+      "SelectAgencyReportManager":"#reportingManager > .ng-select-container > .ng-value-container > .ng-input > input"
 
   },
 
@@ -238,7 +239,7 @@
     "Click_Search_Btn":"#search-submit-button",
     "Click_Acc_Number":"tbody > :nth-child(1) > :nth-child(4) > a",
     "Click_threedots":"#selectOption",
-    "Click_Razorpay":"#razor_pay",
+    "Click_Razorpay":".form-radio-group > .ng-star-inserted > .ng-untouched",
     "Click_Payinfo":"#pay_info",
     "Click_payU":"#payu",
     "Type_Amount":"#amount",
@@ -270,7 +271,7 @@
     "ClickOn_Allocation":"[title='Allocation'] > span.ng-star-inserted",
     "ClickOn_Agency_Bulkupload":".allocation > :nth-child(2) > :nth-child(1) > a.ng-star-inserted",
     "ClickOn_Agency_AccLevel":".allocation > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(1) > a",
-    "ClickOn_Product_group":"#Productgroup",
+    "ClickOn_Product_group":":nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
 
     "CLickOn_Reports":"[title='Reports'] > span.ng-star-inserted",
     "ClickOn_AllocationReports":".reports > :nth-child(2) > :nth-child(1) > a.ng-star-inserted",
@@ -362,7 +363,7 @@
     "Click_VisitIntensity_Bucket":":nth-child(4) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Click_VisitIntensity_Branch":":nth-child(5) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
 
-    "ClickOn_CustomerContact_Report":":nth-child(13) > .ng-star-inserted",
+    "ClickOn_CustomerContact_Report":":nth-child(2) > :nth-child(13) > .ng-star-inserted",
 
      "Click_CustomerContact_Productgroup":":nth-child(1) > .form-select",
     "Click_CustomerContact_Bucket":":nth-child(8) > .form-select",

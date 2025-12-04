@@ -18,19 +18,24 @@ class ScopeofWorkPage {
     
  const expectedOptions = ["CREDITCARD","LOANS PRODUCTS","CONSUMER LOAN","Consumer Loan","CreditCard","HOMELOAN","HL"];
 
-cy.get(this.locators.ClickOn_Product_group)
-  .find("option")
+cy.get(this.locators.ClickOn_Product_group).click();
+cy.wait(2000);
+cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
     const actualTexts = [...$options].map(o => o.innerText.trim());
 
-    const matched = expectedOptions.filter(option => actualTexts.includes(option));
+    const matched = expectedOptions.filter(option =>
+      actualTexts.includes(option)
+    );
 
     cy.log("Matched options: " + matched.join(", "));
     console.log("Matched options:", matched);
 
     expect(matched.length, "At least one expected option should be present").to.be.greaterThan(0);
   });
+
 cy.wait(2000);
+
 
 
   }
@@ -67,7 +72,7 @@ ScopeofWorkTestPage_003(){
     cy.get(this.locators.Click_AgentAlloc_Bucket).click()
     cy.wait(2000);
 
-const expectedNumbers = ["0", "1", "2", "3"];
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -89,7 +94,7 @@ ScopeofWorkTestPage_004(){
     cy.get(this.locators.Click_AgentAlloc_Branch).click()
     cy.wait(2000);
 
-const expectedBranches = ["Chennai Main", "Pallikaranai"];
+const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -129,7 +134,7 @@ ScopeofWorkTestPage_006(){
     cy.get(this.locators.Click_AgencyAlloc_Bucket).click()
     cy.wait(2000);
 
-const expectedNumbers = ["0", "1", "2", "3"];
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -148,7 +153,7 @@ ScopeofWorkTestPage_007(){
     cy.get(this.locators.Click_AgencyAlloc_Branch).click()
     cy.wait(2000);
 
-const expectedBranches = ["Chennai Main", "Pallikaranai"];
+const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -188,7 +193,7 @@ ScopeofWorkTestPage_009(){
     cy.get(this.locators.Click_AllocVSAchieve_Bucket).click()
     cy.wait(2000);
 
-const expectedNumbers = ["0", "1", "2", "3"];
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -207,7 +212,7 @@ ScopeofWorkTestPage_010(){
     cy.get(this.locators.Click_AllocVSAchieve_Branch).click()
     cy.wait(2000);
 
-const expectedBranches = ["Chennai Main", "Pallikaranai"];
+const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -247,7 +252,7 @@ ScopeofWorkTestPage_012(){
     cy.get(this.locators.Click_trailGap_Bucket).click()
     cy.wait(2000);
 
-const expectedNumbers = ["0", "1", "2", "3"];
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -266,7 +271,7 @@ ScopeofWorkTestPage_013(){
     cy.get(this.locators.Click_trailGap_Branch).click()
     cy.wait(2000);
 
-const expectedBranches = ["Chennai Main", "Pallikaranai"];
+const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -306,7 +311,7 @@ ScopeofWorkTestPage_015(){
     cy.get(this.locators.Click_trailHistory_Bucket).click()
     cy.wait(2000);
 
-const expectedNumbers = ["0", "1", "2", "3"];
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -325,7 +330,7 @@ ScopeofWorkTestPage_016(){
     cy.get(this.locators.Click_trailHistory_Branch).click()
     cy.wait(2000);
 
-const expectedBranches = ["Chennai Main", "Pallikaranai"];
+const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -365,7 +370,7 @@ ScopeofWorkTestPage_018(){
     cy.get(this.locators.Click_TrailIntensity_Bucket).click()
     cy.wait(2000);
 
-const expectedNumbers = ["0", "1", "2", "3"];
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -385,7 +390,7 @@ cy.wait(2000);
 cy.get(this.locators.Click_TrailIntensity_Branch).click();
 cy.wait(2000);
 
-const expectedBranches = ["Chennai Main", "Pallikaranai"];
+const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -421,7 +426,7 @@ ScopeofWorkTestPage_021(){
     cy.get(this.locators.Click_PaymentReport_Bucket).click()
     cy.wait(2000);
 
-const expectedNumbers = ["0", "1", "2", "3"];
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -438,7 +443,7 @@ cy.wait(2000);
 cy.get(this.locators.Click_PaymentReport_Branch).click();
 cy.wait(2000);
 
-const expectedBranches = ["Chennai Main", "Pallikaranai"];
+const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -478,7 +483,7 @@ ScopeofWorkTestPage_024(){
     cy.get(this.locators.Click_PaymentReport_Agency_Bucket).click()
     cy.wait(2000);
 
-const expectedNumbers = ["0", "1", "2", "3"];
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -497,7 +502,7 @@ cy.get(this.locators.ClickOn_PaymentReport_AgencyRadio).click();
 cy.get(this.locators.Click_PaymentReport_Agency_Branch).click();
 cy.wait(2000);
 
-const expectedBranches = ["Chennai Main", "Pallikaranai"];
+const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -532,7 +537,7 @@ ScopeofWorkTestPage_027(){
     cy.get(this.locators.Click_Moneymovement_Bucket).click()
     cy.wait(2000);
 
-const expectedNumbers = ["0", "1", "2", "3"];
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -549,7 +554,7 @@ cy.wait(2000);
 cy.get(this.locators.Click_Moneymovement_Branch).click();
 cy.wait(2000);
 
-const expectedBranches = ["Chennai Main", "Pallikaranai"];
+const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -584,7 +589,7 @@ ScopeofWorkTestPage_030(){
     cy.get(this.locators.Click_AccountDashboard_Bucket).click()
     cy.wait(2000);
 
-const expectedNumbers = ["0", "1", "2", "3"];
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -601,7 +606,7 @@ cy.get(this.locators.ClickOn_AccountDashboard_report).click();
 cy.get(this.locators.Click_AccountDashboard_Branch).click();
 cy.wait(2000);
 
-const expectedBranches = ["Chennai Main", "Pallikaranai"];
+const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -637,7 +642,7 @@ ScopeofWorkTestPage_033(){
     cy.get(this.locators.Click_Performance_Bucket).click()
     cy.wait(2000);
 
-const expectedNumbers = ["0", "1", "2", "3"];
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -654,7 +659,7 @@ cy.get(this.locators.ClickOn_Performance_Report).click();
 cy.get(this.locators.Click_Performance_Branch).click();
 cy.wait(2000);
 
-const expectedBranches = ["Chennai Main", "Pallikaranai"];
+const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -695,7 +700,7 @@ ScopeofWorkTestPage_039(){
     cy.get(this.locators.Click_CollectionIntensity_Bucket).click()
     cy.wait(2000);
 
-const expectedNumbers = ["0", "1", "2", "3"];
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -712,7 +717,7 @@ cy.get(this.locators.ClickOn_CollectionIntensity_Report).click();
 cy.get(this.locators.Click_CollectionIntensity_Branch).click();
 cy.wait(2000);
 
-const expectedBranches = ["Chennai Main", "Pallikaranai"];
+const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -747,7 +752,7 @@ ScopeofWorkTestPage_042(){
     cy.get(this.locators.Click_CollectionTrend_Bucket).click()
     cy.wait(2000);
 
-const expectedNumbers = ["0", "1", "2", "3"];
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -764,7 +769,7 @@ cy.get(this.locators.ClickOn_CollectionTrend_Report).click();
 cy.get(this.locators.Click_CollectionTrend_Branch).click();
 cy.wait(2000);
 
-const expectedBranches = ["Chennai Main", "Pallikaranai"];
+const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -799,7 +804,7 @@ ScopeofWorkTestPage_045(){
     cy.get(this.locators.Click_CustomerContact_Bucket).click()
     cy.wait(2000);
 
-const expectedNumbers = ["0", "1", "2", "3"];
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -816,7 +821,7 @@ cy.get(this.locators.ClickOn_CustomerContact_Report).click();
 cy.get(this.locators.Click_CustomerContact_Branch).click();
 cy.wait(2000);
 
-const expectedBranches = ["Chennai Main", "Pallikaranai"];
+const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -851,7 +856,7 @@ ScopeofWorkTestPage_048(){
     cy.get(this.locators.Click_VisitIntensity_Bucket).click()
     cy.wait(2000);
 
-const expectedNumbers = ["0", "1", "2", "3"];
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -868,7 +873,7 @@ cy.get(this.locators.ClickOn_VisitIntensity_report).click();
 cy.get(this.locators.Click_VisitIntensity_Branch).click();
 cy.wait(2000);
 
-const expectedBranches = ["Chennai Main", "Pallikaranai"];
+const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
