@@ -2,7 +2,7 @@
     "loginPage": {
 
     "companynameInput": "#login-company-name",
-    "ClickonCompanyName": "#ngb-typeahead-0-0",
+    "ClickonCompanyName": ".ng-option-label",
     "usernameInput": "#login-email",
     "passwordInput": "#login-password",
     "signinButton": "#login-submit-button",

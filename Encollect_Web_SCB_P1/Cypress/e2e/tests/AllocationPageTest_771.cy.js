@@ -5,7 +5,7 @@ import LoginPage from '../pages/LoginPage';
 import AllocationPage from '../pages/AllocationPage';
 import { getLocators } from '../utils/locatorUtils';
 
-describe('Allocation - Upload Agency Allocation Owner - File will get downloaded and usee can see the list of accounts which are not allocated to any of the agency, so that user can take those accounts and do the allocation to agencies accordingly.', () => {
+describe('Allocation - user should should not enter mandatory fields it shows a popup message', () => {
     let loginPage;
     let allocationPage;  
 

@@ -38,7 +38,7 @@ describe('User Management - Add Staff-Once staff submitted for approval, email n
                 addStaffPage.filllastname(firstRow.LastName);
                 addStaffPage.fillemailid(firstRow.EmailID);
                 addStaffPage.fillmobilenumber(firstRow.MobileNumber);
-                
+                addStaffPage.typeexistingcode();
                 addStaffPage.clickondandd();
                 cy.wait(500);
                 // addStaffPage.clickOnAdd();
@@ -65,7 +65,7 @@ describe('User Management - Add Staff-Once staff submitted for approval, email n
                 addStaffPage.clickonsubmitstaffprofile();
                 cy.wait(3000);
                 cy.get('#empStatus').select("Pending Approval");
-                cy.wait(500);
+                cy.wait(2000);
                 cy.get('#btn-search').click();
                 cy.wait(2000);
                 cy.get('.avatar').click();

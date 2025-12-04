@@ -44,7 +44,7 @@ class LoginPage {
  
 clickcompanyname() {
   cy.get(this.locators.ClickonCompanyName).click();
-  cy.wait(3000);
+  cy.wait(1000);
 }
 
 
@@ -74,7 +74,7 @@ clickcompanyname() {
     cy.get('#otp-input').type(560062);
     cy.wait(2000);
     cy.get('.btn-success').click();
-    cy.wait(11000);
+    cy.wait(4000);
   }
   verifyLoginSuccess() {
     return cy.get(this.locators.dashboard).then(() => {});

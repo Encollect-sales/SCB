@@ -38,6 +38,7 @@ describe('Allocation - Upload Agency Allocation Batch - 1.User should be able to
            allocationPage.fillproductgroup();
            allocationPage.fillproduct();
            allocationPage.fillsubproduct();
+           allocationPage.fillBucketAndCountry();
            allocationPage.clickonAllcated();
            allocationPage.clickonDownload();
            allocationPage.clickonprimaryfile(); 

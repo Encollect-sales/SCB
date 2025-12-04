@@ -1113,6 +1113,8 @@ class AccountDetailsPage {
     cy.wait(1000);
     cy.get('#sendPaymentLink > .dropdown-item').click();
     cy.wait(1000);
+    cy.get('.form-radio-group > label > .ng-untouched').click();
+    cy.wait(1000);
     cy.get('#amount').type('1');
     cy.wait(1000);
     cy.get('#aend').click();

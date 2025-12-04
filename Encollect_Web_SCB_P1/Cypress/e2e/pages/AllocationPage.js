@@ -39,33 +39,110 @@ class AllocationPage {
   } 
 
   fillproductgroup() {
-     cy.wait(2000);
-    cy.get(this.locators.pg_select).select('CreditCard', {force: true});
-    cy.wait(2000);
+
+  cy.get(this.locators.pg_select).click();   
+
+cy.get('.ng-dropdown-panel .ng-option').then(options => {
+
+  const total = options.length;
+
+  const firstIndex  = Math.floor(Math.random() * total);
+  let secondIndex   = Math.floor(Math.random() * total);
+
+  while (secondIndex === firstIndex) {
+    secondIndex = Math.floor(Math.random() * total);
+  }
+
+  cy.wrap(options[firstIndex]).click({ force: true });
+  cy.wait(500);
+
+  cy.get(this.locators.pg_select).click({ force: true });
+  cy.wait(500);
+
+  cy.wrap(options[secondIndex]).click({ force: true });
+});
+
+
   }
 
   fillproduct() {
-    cy.get(this.locators.product_select).select('CreditCard');
-     cy.wait(2000);
+
+     cy.get(this.locators.product_select).click();
+cy.wait(1000);
+
+cy.get('.ng-dropdown-panel .ng-option').each(($option, index) => {
+  
+  cy.wrap($option).click({ force: true });   // select option
+  cy.wait(1000);
+
+  // Re-open dropdown for next option
+  cy.get(this.locators.product_select).click();
+  cy.wait(500);
+
+});
+
   }
 
   fillsubproduct() {
-    cy.get(this.locators.subproduct_select).select('CreditCard');
-    cy.wait(2000)
+     cy.get(this.locators.subproduct_select).click();
+cy.wait(1000);
+
+cy.get('.ng-dropdown-panel .ng-option').each(($option, index) => {
+  
+  cy.wrap($option).click({ force: true });   // select option
+  cy.wait(1000);
+
+  // Re-open dropdown for next option
+  cy.get(this.locators.subproduct_select).click();
+  cy.wait(2000);
+
+});
+
+  }
+
+  fillBucketAndCountry(){
+
+     cy.get(this.locators.SelectBucket).click();
+cy.wait(1000);
+
+cy.get('.ng-dropdown-panel .ng-option').each(($option, index) => {
+  
+  cy.wrap($option).click({ force: true });   // select option
+  cy.wait(1000);
+
+  // Re-open dropdown for next option
+  cy.get(this.locators.SelectBucket).click();
+  cy.wait(2000);
+
+});
+
+ cy.get(this.locators.SelectCountry).click();
+cy.wait(1000);
+
+cy.get('.ng-dropdown-panel .ng-option').each(($option, index) => {
+  
+  cy.wrap($option).click({ force: true });   // select option
+  cy.wait(1000);
+
+  // Re-open dropdown for next option
+  cy.get(this.locators.SelectCountry).click();
+  cy.wait(2000);
+
+});
   }
 
   clickNotAllcated() {
-    cy.get(this.locators.notallocated).click();
+    cy.get(this.locators.notallocated).click({force: true});
      cy.wait(2000);
   }
 
   clickonAllcated() {
-    cy.get(this.locators.allocated).click();
+    cy.get(this.locators.allocated).click({force: true});
      cy.wait(2000);
   }
 
   clickonDownload() {
-    cy.get(this.locators.download).click();
+    cy.get(this.locators.download).click({force: true});
      cy.wait(4000);
   }
 
@@ -230,7 +307,7 @@ class AllocationPage {
     cy.wait(2000);
     cy.get('#search').click();
     cy.wait(2000);
-    cy.get('tr.ng-star-inserted > :nth-child(4)').scrollIntoView().contains('Processed').should('be.visible');
+    cy.get('tr.ng-star-inserted > :nth-child(4)').scrollIntoView().contains('Processed').should('be.visible', {force: true});
     cy.wait(2000);
 
   }
@@ -375,77 +452,252 @@ class AllocationPage {
   }
 
   fillproductgroupPAF() {
-    cy.get(this.locators.pg_select_PAF).select('39');
-    cy.wait(2000);
+    cy.get(this.locators.pg_select_PAF).click();     
+cy.wait(2000);
+
+cy.get('.ng-dropdown-panel .ng-option').contains('HL').click({ force: true });
+cy.wait(2000);
+
   }
 
   fillproductPAF() {
-    cy.get(this.locators.product_select_PAF).select('All');
+    cy.get(this.locators.product_select_PAF).click();
     cy.wait(2000);
+    cy.get('.ng-dropdown-panel .ng-option').contains('Home Loan').click({ force: true });
+cy.wait(2000);
   }
 
   fillsubproductPAF() {
-    cy.get(this.locators.subproduct_select_PAF).select('All');
-    cy.wait(2000)
+    cy.get(this.locators.subproduct_select_PAF).click();
+    cy.wait(2000);
+    cy.get('.ng-dropdown-panel .ng-option').contains('Home Loan').click({ force: true });
+cy.wait(2000);
   }
 
   fillproductgroupPAF1() {
-    cy.get(this.locators.pg_select_PAF).select('Consumer Loan');
-    cy.wait(2000);
+    
+    cy.get(this.locators.pg_select_PAF).click();   
+
+cy.get('.ng-dropdown-panel .ng-option').then(options => {
+
+  const total = options.length;
+
+  const firstIndex  = Math.floor(Math.random() * total);
+  let secondIndex   = Math.floor(Math.random() * total);
+
+  while (secondIndex === firstIndex) {
+    secondIndex = Math.floor(Math.random() * total);
+  }
+
+  cy.wrap(options[firstIndex]).click({ force: true });
+  cy.wait(500);
+
+  cy.get(this.locators.pg_select_PAF).click({ force: true });
+  cy.wait(500);
+
+  cy.wrap(options[secondIndex]).click({ force: true });
+});
+
   }
 
   fillproductPAF1() {
-    cy.get(this.locators.product_select_PAF).select('Unsecured');
-    cy.wait(2000);
+   
+     cy.get(this.locators.product_select_PAF).click();
+cy.wait(1000);
+
+cy.get('.ng-dropdown-panel .ng-option').each(($option, index) => {
+  
+  cy.wrap($option).click({ force: true });   // select option
+  cy.wait(1000);
+
+  cy.get(this.locators.product_select_PAF).click();
+  cy.wait(500);
+
+});
+
   }
 
   fillsubproductPAF1() {
-    cy.get(this.locators.subproduct_select_PAF).select('Personal Loan');
-    cy.wait(2000)
+
+    cy.get(this.locators.subproduct_select_PAF).click();
+cy.wait(1000);
+
+cy.get('.ng-dropdown-panel .ng-option').each(($option, index) => {
+  
+  cy.wrap($option).click({ force: true });   // select option
+  cy.wait(1000);
+
+  cy.get(this.locators.subproduct_select_PAF).click();
+  cy.wait(500);
+
+});
   }
 
 
   fillproductgroupPAF2() {
-    cy.get(this.locators.pg_select_PAF).select('e5785d0b72fa11ee9f4e0a527ec00cf4');
-    cy.wait(2000);
+
+     cy.get(this.locators.pg_select_PAF).click();   
+
+cy.get('.ng-dropdown-panel .ng-option').then(options => {
+
+  const total = options.length;
+
+  const firstIndex  = Math.floor(Math.random() * total);
+  let secondIndex   = Math.floor(Math.random() * total);
+
+  while (secondIndex === firstIndex) {
+    secondIndex = Math.floor(Math.random() * total);
+  }
+
+  cy.wrap(options[firstIndex]).click({ force: true });
+  cy.wait(500);
+
+  cy.get(this.locators.pg_select_PAF).click({ force: true });
+  cy.wait(500);
+
+  cy.wrap(options[secondIndex]).click({ force: true });
+});
   }
 
   fillproductPAF2() {
-    cy.get(this.locators.product_select_PAF).select('e57b680a72fa11ee9f4e0a527ec00cf');
-    cy.wait(2000);
+    cy.get(this.locators.product_select_PAF).click();
+cy.wait(1000);
+
+cy.get('.ng-dropdown-panel .ng-option').each(($option, index) => {
+  
+  cy.wrap($option).click({ force: true });   // select option
+  cy.wait(1000);
+
+  cy.get(this.locators.product_select_PAF).click();
+  cy.wait(500);
+
+});
   }
 
   fillsubproductPAF2() {
-    cy.get(this.locators.subproduct_select_PAF).select('e57cb07972fa11ee9f4e0a527ec00cf4');
-    cy.wait(2000)
+
+    cy.get(this.locators.subproduct_select_PAF).click();
+cy.wait(1000);
+
+cy.get('.ng-dropdown-panel .ng-option').each(($option, index) => {
+  
+  cy.wrap($option).click({ force: true });   // select option
+  cy.wait(1000);
+
+  cy.get(this.locators.subproduct_select_PAF).click();
+  cy.wait(500);
+
+});
   }
 
   fillproductgroupPAF3() {
-    cy.get(this.locators.pg_select_PAF).select('CreditCard');
+
+     cy.get(this.locators.pg_select_PAF).click();   
+
+cy.get('.ng-dropdown-panel .ng-option').then(options => {
+
+  const total = options.length;
+
+  const firstIndex  = Math.floor(Math.random() * total);
+  let secondIndex   = Math.floor(Math.random() * total);
+
+  while (secondIndex === firstIndex) {
+    secondIndex = Math.floor(Math.random() * total);
+  }
+
+  cy.wrap(options[firstIndex]).click({ force: true });
+  cy.wait(500);
+
+  cy.get(this.locators.pg_select_PAF).click({ force: true });
+  cy.wait(500);
+
+  cy.wrap(options[secondIndex]).click({ force: true });
+});
   }
 
   fillproductPAF3() {
-    cy.get(this.locators.product_select_PAF).select('CreditCard');
+    cy.get(this.locators.product_select_PAF).click();
+cy.wait(1000);
+
+cy.get('.ng-dropdown-panel .ng-option').each(($option, index) => {
+  
+  cy.wrap($option).click({ force: true });   // select option
+  cy.wait(1000);
+
+  cy.get(this.locators.product_select_PAF).click();
+  cy.wait(500);
+
+});
   }
 
   fillsubproductPAF3() {
-    cy.get(this.locators.subproduct_select_PAF).select('CreditCard');
-    cy.wait(2000)
+    cy.get(this.locators.subproduct_select_PAF).click();
+cy.wait(1000);
+
+cy.get('.ng-dropdown-panel .ng-option').each(($option, index) => {
+  
+  cy.wrap($option).click({ force: true });   // select option
+  cy.wait(1000);
+
+  cy.get(this.locators.subproduct_select_PAF).click();
+  cy.wait(500);
+
+});
   }
 
   fillproductgroupPAF4() {
-    cy.get(this.locators.pg_select_PAF).select('4ffacc7f03e74cbb961fa3aacf8b7f2a');
-    cy.wait(2000);
+  
+     cy.get(this.locators.pg_select_PAF).click();   
+
+cy.get('.ng-dropdown-panel .ng-option').then(options => {
+
+  const total = options.length;
+
+  const firstIndex  = Math.floor(Math.random() * total);
+  let secondIndex   = Math.floor(Math.random() * total);
+
+  while (secondIndex === firstIndex) {
+    secondIndex = Math.floor(Math.random() * total);
+  }
+
+  cy.wrap(options[firstIndex]).click({ force: true });
+  cy.wait(500);
+
+  cy.get(this.locators.pg_select_PAF).click({ force: true });
+  cy.wait(500);
+
+  cy.wrap(options[secondIndex]).click({ force: true });
+});
   }
 
   fillproductPAF4() {
-    cy.get(this.locators.product_select_PAF).select('VEHICLE LOAN');
-    cy.wait(2000);
+   cy.get(this.locators.product_select_PAF).click();
+cy.wait(1000);
+
+cy.get('.ng-dropdown-panel .ng-option').each(($option, index) => {
+  
+  cy.wrap($option).click({ force: true });   // select option
+  cy.wait(1000);
+
+  cy.get(this.locators.product_select_PAF).click();
+  cy.wait(500);
+
+});
   }
 
   fillsubproductPAF4() {
-    cy.get(this.locators.subproduct_select_PAF).select('CAR');
-    cy.wait(2000)
+   cy.get(this.locators.subproduct_select_PAF).click();
+cy.wait(1000);
+
+cy.get('.ng-dropdown-panel .ng-option').each(($option, index) => {
+  
+  cy.wrap($option).click({ force: true });   // select option
+  cy.wait(1000);
+
+  cy.get(this.locators.subproduct_select_PAF).click();
+  cy.wait(500);
+
+});
   }
 
   fillproductgroupPAF5() {
@@ -464,18 +716,24 @@ class AllocationPage {
   }
 
   fillproductgroupPAF6() {
-    cy.get(this.locators.pg_select_PAF).select('LOANS PRODUCTS');
+    cy.get(this.locators.pg_select_PAF).click();
     cy.wait(2000);
+    cy.get('.ng-dropdown-panel .ng-option').contains('Loan Products').click();
+     cy.wait(2000);
   }
 
   fillproductPAF6() {
-    cy.get(this.locators.product_select_PAF).select('VEHICLE LOAN');
+    cy.get(this.locators.product_select_PAF).click();
     cy.wait(2000);
+     cy.get('.ng-dropdown-panel .ng-option').contains('Vehicle Loan').click();
+     cy.wait(2000);
   }
 
   fillsubproductPAF6() {
-    cy.get(this.locators.subproduct_select_PAF).select('BIKE');
-    cy.wait(2000)
+    cy.get(this.locators.subproduct_select_PAF).click();
+    cy.wait(2000);
+     cy.get('.ng-dropdown-panel .ng-option').contains('Bike').click();
+     cy.wait(2000);
   }
 
   ClickonallocationBF() {
@@ -533,15 +791,25 @@ class AllocationPage {
     cy.wait(2000);
     cy.get(this.locators.Geography_Filter).click();
     cy.wait(2000);
-    cy.get(this.locators.GF_country).select('All');
+    cy.get(this.locators.GF_country).click();
     cy.wait(2000);
-    cy.get(this.locators.GF_region).select('All');
+     cy.get('.ng-dropdown-panel .ng-option').contains('India').click();
     cy.wait(2000);
-    cy.get(this.locators.GF_state).select('All');
+    cy.get(this.locators.GF_region).click();
     cy.wait(2000);
-    cy.get(this.locators.GF_city).select('All');
+     cy.get('.ng-dropdown-panel .ng-option').contains('South').click();
     cy.wait(2000);
-    cy.get(this.locators.GF_branch).select('All');
+    cy.get(this.locators.GF_state).click();
+    cy.wait(2000);
+     cy.get('.ng-dropdown-panel .ng-option').contains('Tamilnadu').click();
+    cy.wait(2000);
+    cy.get(this.locators.GF_city).click();
+    cy.wait(2000);
+     cy.get('.ng-dropdown-panel .ng-option').contains('Chennai').click();
+    cy.wait(2000);
+    cy.get(this.locators.GF_branch).click();
+    cy.wait(2000);
+     cy.get('.ng-dropdown-panel .ng-option').contains('Chennai Main').click();
     cy.wait(2000);
   }
 
@@ -572,53 +840,108 @@ class AllocationPage {
   }
 
   fillproductgroupSAF1() {
-    cy.get(this.locators.pg_select_SAF).select('CreditCard');
+    cy.get(this.locators.pg_select_SAF).click();
     cy.wait(2000);
+
+    cy.get('.ng-dropdown-panel .ng-option').then(options => {
+
+  const total = options.length;
+
+  const firstIndex  = Math.floor(Math.random() * total);
+  let secondIndex   = Math.floor(Math.random() * total);
+
+  while (secondIndex === firstIndex) {
+    secondIndex = Math.floor(Math.random() * total);
+  }
+
+  cy.wrap(options[firstIndex]).click({ force: true });
+  cy.wait(500);
+
+  cy.get(this.locators.pg_select_SAF).click({ force: true });
+  cy.wait(500);
+
+  cy.wrap(options[secondIndex]).click({ force: true });
+});
   }
 
   fillproductSAF1() {
-    cy.get(this.locators.product_select_SAF).select('CreditCard');
-    cy.wait(2000);
+
+     cy.get(this.locators.product_select_SAF).click();
+cy.wait(1000);
+
+cy.get('.ng-dropdown-panel .ng-option').each(($option, index) => {
+  
+  cy.wrap($option).click({ force: true });   // select option
+  cy.wait(1000);
+
+  cy.get(this.locators.product_select_PAF).click();
+  cy.wait(500);
+
+});
   }
 
   fillsubproductSAF1() {
-    cy.get(this.locators.subproduct_select_SAF).select('CreditCard');
-    cy.wait(2000)
+   cy.get(this.locators.subproduct_select_SAF).click();
+cy.wait(1000);
+
+cy.get('.ng-dropdown-panel .ng-option').each(($option, index) => {
+  
+  cy.wrap($option).click({ force: true });   // select option
+  cy.wait(1000);
+
+  cy.get(this.locators.subproduct_select_SAF).click();
+  cy.wait(500);
+
+});
   }
 
   fillproductgroupSAF2() {
-    cy.get(this.locators.pg_select_SAF).select('LOANS PRODUCTS');
+    cy.get(this.locators.pg_select_SAF).click();
+    cy.wait(2000);
+    cy.get('.ng-dropdown-panel .ng-option').contains('Loan Products').click();
     cy.wait(2000);
   }
 
   fillproductSAF2() {
-    cy.get(this.locators.product_select_SAF).select('VEHICLE LOAN');
+    cy.get(this.locators.product_select_SAF).click();
+    cy.wait(2000);
+      cy.get('.ng-dropdown-panel .ng-option').contains('Vehicle Loan').click();
     cy.wait(2000);
   }
 
   fillsubproductSAF2() {
-    cy.get(this.locators.subproduct_select_SAF).select('BIKE');
-    cy.wait(2000)
+    cy.get(this.locators.subproduct_select_SAF).click();
+    cy.wait(2000);
+      cy.get('.ng-dropdown-panel .ng-option').contains('Bike').click();
+    cy.wait(2000);
   }
 
   fillsubproductSAF3() {
-    cy.get(this.locators.subproduct_select_SAF).select('CAR');
-    cy.wait(2000)
+    cy.get(this.locators.subproduct_select_SAF).click();
+    cy.wait(2000);
+      cy.get('.ng-dropdown-panel .ng-option').contains('Car').click();
+    cy.wait(2000);
   }
 
   fillproductgroupSAF4() {
-    cy.get(this.locators.pg_select_SAF).select('LOANS PRODUCTS');
+     cy.get(this.locators.pg_select_SAF).click();
+    cy.wait(2000);
+    cy.get('.ng-dropdown-panel .ng-option').contains('Loan Products').click();
     cy.wait(2000);
   }
 
   fillproductSAF4() {
-    cy.get(this.locators.product_select_SAF).select('VEHICLE LOAN');
+    cy.get(this.locators.product_select_SAF).click();
+    cy.wait(2000);
+      cy.get('.ng-dropdown-panel .ng-option').contains('Vehicle Loan').click();
     cy.wait(2000);
   }
 
   fillsubproductSAF4() {
-    cy.get(this.locators.subproduct_select_SAF).select('CAR');
-    cy.wait(2000)
+    cy.get(this.locators.subproduct_select_SAF).click();
+    cy.wait(2000);
+      cy.get('.ng-dropdown-panel .ng-option').contains('Train').click();
+    cy.wait(2000);
   }
 
   ClickonallocationUAAOS(Status) {
@@ -971,22 +1294,69 @@ class AllocationPage {
     cy.wait(2000);
     cy.get(this.locators.clickagntfiltr).click();
     cy.wait(2000);
+
+    cy.get(this.locators.pg_select_SAF).click();
+cy.wait(500);
+
+cy.get('.ng-dropdown-panel .ng-option').then($options => {
+
+  const total = $options.length;
+
+  for (let i = 0; i < total; i++) {
+
+    // Click option i
+    cy.get('.ng-dropdown-panel .ng-option')
+      .eq(i)
+      .click({ force: true });
+
+    cy.wait(400);
+
+    // Re-open dropdown for next option
+    cy.get(this.locators.pg_select_SAF).click({ force: true });
+    cy.wait(300);
+  }
+
+});
+
+
+    cy.get(this.locators.BucketFilter).click({ force: true });
+    cy.wait(2000);
+    cy.get(this.locators.BomBu).click();
+    cy.wait(2000);
+
+cy.get('.ng-dropdown-panel .ng-option').then($options => {
+
+  const total = $options.length;
+
+  for (let i = 0; i < total; i++) {
+
+    cy.get('.ng-dropdown-panel .ng-option').eq(i).click({ force: true });
+
+    cy.wait(1000);
+    cy.get(this.locators.BomBu).click({ force: true });
+    cy.wait(300);
+  }
+
+});
+
+cy.get('[heading="  Geography Filter"] > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
+    cy.wait(2000);
+
+     cy.get(this.locators.SAF_GF_country).click();
+    cy.wait(2000);
+     cy.get('.ng-dropdown-panel .ng-option').contains('India').click();
+    cy.wait(2000);
+
+
     cy.get(this.locators.allctedACCbtn).click({ force: true });
     cy.wait(2000);
     cy.get(this.locators.searchBTN).click({ force: true });
-    cy.wait(2000);
+    cy.wait(10000);
     cy.get(':nth-child(1) > :nth-child(1) > .form-control-group > .form-check-group > label > #checked').click();
     cy.wait(2000);
     cy.get('#allocate').click();
     cy.wait(2000);
     cy.contains("TC Agent name or Agent name any one required").should("be.visible");
-
-    /*cy.get(this.locators.allocateBtn).click();
-    cy.wait(2000);*/
-    // cy.get(this.locators.AccEmptyerr).then(($el) => {
-    //   const text = $el.text();
-    //   cy.log(text);
-    // })
 
   }
 
@@ -1136,12 +1506,24 @@ class AllocationPage {
     cy.wait(2000);
     cy.get(this.locators.BucketFilter).click({ force: true });
     cy.wait(2000);
-    cy.get(this.locators.BomBu).select("All");
+    cy.get(this.locators.BomBu).click();
     cy.wait(2000);
-    // cy.get(this.locators.Semptyerr).then(($el) => {
-    //   const text = $el.text();
-    //   cy.log(text);
-    // })
+
+cy.get('.ng-dropdown-panel .ng-option').then($options => {
+
+  const total = $options.length;
+
+  for (let i = 0; i < total; i++) {
+
+    cy.get('.ng-dropdown-panel .ng-option').eq(i).click({ force: true });
+
+    cy.wait(1000);
+    cy.get(this.locators.BomBu).click({ force: true });
+    cy.wait(300);
+  }
+
+});
+
 
   }
 
@@ -1156,17 +1538,9 @@ class AllocationPage {
     cy.wait(2000);
     cy.get(this.locators.searchBTN).click({ force: true });
     cy.wait(2000);
-    // cy.get('[role="alert"]').should(
-    //   "contain.text",
-    //   "Please try again later"
-    // )
-   //cy.get(this.locators.allocateBtn).click();
+    cy.get('[role="alert"]').should("contain.text", "Please select mandatory filters: Product Group, Country, Bucket");
     cy.wait(2000);
-    // cy.get(this.locators.AccEmptyerr).then(($el) => {
-    //   const text = $el.text();
-    //   cy.log(text);
-    // })
-
+  
   }
 
   ClickonAllocationSearchResult() {
@@ -1318,15 +1692,26 @@ class AllocationPage {
     cy.wait(2000);
     cy.get('[heading="  Geography Filter"] > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(2000);
-    cy.get(this.locators.SAF_GF_country).select('All');
+
+     cy.get(this.locators.SAF_GF_country).click();
     cy.wait(2000);
-    cy.get(this.locators.SAF_GF_region).select('All');
+     cy.get('.ng-dropdown-panel .ng-option').contains('India').click();
     cy.wait(2000);
-    cy.get(this.locators.SAF_GF_state).select('All');
+    cy.get(this.locators.SAF_GF_region).click();
     cy.wait(2000);
-    cy.get(this.locators.SAF_GF_city).select('All');
+     cy.get('.ng-dropdown-panel .ng-option').contains('South').click();
     cy.wait(2000);
-    cy.get(this.locators.SAF_GF_branch).select('All');
+    cy.get(this.locators.SAF_GF_state).click();
+    cy.wait(2000);
+     cy.get('.ng-dropdown-panel .ng-option').contains('Tamilnadu').click();
+    cy.wait(2000);
+    cy.get(this.locators.SAF_GF_city).click();
+    cy.wait(2000);
+     cy.get('.ng-dropdown-panel .ng-option').contains('Chennai').click();
+    cy.wait(2000);
+    cy.get(this.locators.SAF_GF_branch).click();
+    cy.wait(2000);
+     cy.get('.ng-dropdown-panel .ng-option').contains('Chennai Main').click();
     cy.wait(2000);
   }
 
@@ -1534,16 +1919,25 @@ class AllocationPage {
     cy.wait(2000);
     cy.get(this.locators.ClickAGBU).click();
     cy.wait(2000);
-    cy.get(this.locators.ProductGroupUAAO).select('Consumer Loan');
-    cy.wait(2000)
-    cy.get(this.locators.ProductUAAO).select('Unsecured');
-    cy.wait(2000)
-    cy.get(this.locators.SubproducUAAO).select('Personal Loan');
-    cy.wait(2000)
+    cy.get(this.locators.ProductGroupUAAO).click();
+    cy.wait(2000);
+    cy.get('.ng-dropdown-panel .ng-option').contains('Consumer Loan').click({ force: true });
+    cy.wait(2000);
+    cy.get(this.locators.ProductUAAO).click();
+    cy.wait(2000);
+     cy.get('.ng-dropdown-panel .ng-option').contains('Unsecured').click({ force: true });
+    cy.wait(2000);
+    cy.get(this.locators.SubproducUAAO).click();
+    cy.wait(2000);
+     cy.get('.ng-dropdown-panel .ng-option').contains('Personal Loan').click({ force: true });
+    cy.wait(2000);
     cy.get(this.locators.ClickonNotAllocatedAgency).click();
     cy.wait(2000)
     cy.get('#downloadAccounts').click();
-    cy.wait(2000)
+    cy.wait(2000);
+    cy.get('[role="alert"]').contains('Please select mandatory filters: Country, Bucket');
+ cy.wait(2000);
+
   }
 
   ClickonallocationPUS1(Status) {
@@ -1629,20 +2023,88 @@ class AllocationPage {
     cy.wait(400);
     cy.get(this.locators.clickagntfiltr).click().click();
     cy.wait(2000);
-    cy.get('#Allocated').click();
+
+     cy.get(this.locators.pg_select_SAF).click();
+cy.wait(500);
+
+cy.get('.ng-dropdown-panel .ng-option').then($options => {
+
+  const total = $options.length;
+
+  for (let i = 0; i < total; i++) {
+
+    // Click option i
+    cy.get('.ng-dropdown-panel .ng-option')
+      .eq(i)
+      .click({ force: true });
+
+    cy.wait(400);
+
+    // Re-open dropdown for next option
+    cy.get(this.locators.pg_select_SAF).click({ force: true });
+    cy.wait(300);
+  }
+
+});
+
+
+    cy.get(this.locators.BucketFilter).click({ force: true });
+    cy.wait(2000);
+    cy.get(this.locators.BomBu).click();
+    cy.wait(2000);
+
+cy.get('.ng-dropdown-panel .ng-option').then($options => {
+
+  const total = $options.length;
+
+  for (let i = 0; i < total; i++) {
+
+    cy.get('.ng-dropdown-panel .ng-option').eq(i).click({ force: true });
+
+    cy.wait(1000);
+    cy.get(this.locators.BomBu).click({ force: true });
+    cy.wait(300);
+  }
+
+});
+
+cy.get('[heading="  Geography Filter"] > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
+    cy.wait(2000);
+
+     cy.get(this.locators.SAF_GF_country).click();
+    cy.wait(2000);
+     cy.get('.ng-dropdown-panel .ng-option').contains('India').click();
+    cy.wait(2000);
+
+    cy.get('#unAllocated').click();
     cy.wait(2000);
     cy.get('#searchAccount').click();
-    cy.wait(2000);
+    cy.wait(11000);
     cy.get(':nth-child(1) > :nth-child(1) > .form-control-group > .form-check-group > label > #checked').click();
     cy.wait(2000);
     cy.get('#TcagentName').type("A");
     cy.wait(2000);
-    cy.get('#ngb-typeahead-1-0').click();
-    cy.wait(2000);
+
+ cy.get('h5.ng-star-inserted').then($items => {
+  const count = $items.length;
+  const randomIndex = Math.floor(Math.random() * count);
+
+  cy.wrap($items[randomIndex]).click({ force: true });
+});
+
+  cy.wait(2000);
     cy.get('#Agentname').type("A");
     cy.wait(2000);
-    cy.get('#ngb-typeahead-2-0').click();
-    cy.wait(2000);
+   
+    
+    cy.get('h5.ng-star-inserted').then($items => {
+  const count = $items.length;
+  const randomIndex = Math.floor(Math.random() * count);
+
+  cy.wrap($items[randomIndex]).click({ force: true });
+});
+  cy.wait(2000);
+
     cy.get('#AllocationExpireDate2').type("01/05/2025");
     cy.wait(2000);
     cy.get('#allocate').click();
@@ -1655,22 +2117,86 @@ class AllocationPage {
     cy.wait(400);
     cy.get(this.locators.clickagntfiltr).click().click();
     cy.wait(2000);
-    cy.get('#Allocated').click();
+
+        cy.get(this.locators.pg_select_SAF).click();
+cy.wait(500);
+
+cy.get('.ng-dropdown-panel .ng-option').then($options => {
+
+  const total = $options.length;
+
+  for (let i = 0; i < total; i++) {
+
+    // Click option i
+    cy.get('.ng-dropdown-panel .ng-option')
+      .eq(i)
+      .click({ force: true });
+
+    cy.wait(400);
+
+    // Re-open dropdown for next option
+    cy.get(this.locators.pg_select_SAF).click({ force: true });
+    cy.wait(300);
+  }
+
+});
+
+
+    cy.get(this.locators.BucketFilter).click({ force: true });
+    cy.wait(2000);
+    cy.get(this.locators.BomBu).click();
+    cy.wait(2000);
+
+cy.get('.ng-dropdown-panel .ng-option').then($options => {
+
+  const total = $options.length;
+
+  for (let i = 0; i < total; i++) {
+
+    cy.get('.ng-dropdown-panel .ng-option').eq(i).click({ force: true });
+
+    cy.wait(1000);
+    cy.get(this.locators.BomBu).click({ force: true });
+    cy.wait(300);
+  }
+
+});
+
+cy.get('[heading="  Geography Filter"] > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
+    cy.wait(2000);
+
+     cy.get(this.locators.SAF_GF_country).click();
+    cy.wait(2000);
+     cy.get('.ng-dropdown-panel .ng-option').contains('India').click();
+    cy.wait(2000);
+
+
+    cy.get('#unAllocated').click();
     cy.wait(2000);
     cy.get('#searchAccount').click();
-    cy.wait(2000);
+    cy.wait(11000);
     cy.get(':nth-child(1) > :nth-child(1) > .form-control-group > .form-check-group > label > #checked').click();
     cy.wait(2000);
     // cy.get('#AllocateToAgency').scrollIntoView().click();
     cy.wait(2000);
     cy.get('#TcagentName').type("A");
     cy.wait(2000);
-    cy.get('#ngb-typeahead-1-0').click();
-    cy.wait(2000);
+   cy.get('h5.ng-star-inserted').then($items => {
+  const count = $items.length;
+  const randomIndex = Math.floor(Math.random() * count);
+
+  cy.wrap($items[randomIndex]).click({ force: true });
+});
+
     cy.get('#Agentname').type("A");
     cy.wait(2000);
-    cy.get('#ngb-typeahead-2-0').click();
-    cy.wait(2000);
+   cy.get('h5.ng-star-inserted').then($items => {
+  const count = $items.length;
+  const randomIndex = Math.floor(Math.random() * count);
+
+  cy.wrap($items[randomIndex]).click({ force: true });
+});
+
     cy.get('#AllocationExpireDate2').type("01/05/2025");
     cy.wait(2000);
     cy.get('#allocate').click();
@@ -1709,29 +2235,59 @@ class AllocationPage {
     cy.wait(2000);
     cy.get(this.locators.clickonSABF).click().click();
     cy.wait(2000);
-    //cy.get(this.locators.clickonPF).click();
-    cy.get(this.locators.pg_select_SAF).select('39');
-    cy.get(this.locators.product_select_SAF).select('All');
-    cy.get(this.locators.subproduct_select_SAF).select('All');
-    cy.get(this.locators.clickonBF).click();
+
+     cy.get(this.locators.pg_select_SAF).click();
+cy.wait(500);
+
+cy.get('.ng-dropdown-panel .ng-option').then($options => {
+
+  const total = $options.length;
+
+  for (let i = 0; i < total; i++) {
+
+    // Click option i
+    cy.get('.ng-dropdown-panel .ng-option')
+      .eq(i)
+      .click({ force: true });
+
+    cy.wait(400);
+
+    // Re-open dropdown for next option
+    cy.get(this.locators.pg_select_SAF).click({ force: true });
+    cy.wait(300);
+  }
+
+});
+
+
+    cy.get(this.locators.BucketFilter).click({ force: true });
     cy.wait(2000);
-    cy.get(this.locators.clickonDPD).type('12');
+    cy.get(this.locators.BomBu).click();
     cy.wait(2000);
-    cy.get(this.locators.clickonDString).type('OK');
+
+cy.get('.ng-dropdown-panel .ng-option').then($options => {
+
+  const total = $options.length;
+
+  for (let i = 0; i < total; i++) {
+
+    cy.get('.ng-dropdown-panel .ng-option').eq(i).click({ force: true });
+
+    cy.wait(1000);
+    cy.get(this.locators.BomBu).click({ force: true });
+    cy.wait(300);
+  }
+
+});
+
+cy.get('[heading="  Geography Filter"] > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(2000);
-    cy.get(this.locators.BOMBucket).select('All');
-    cy.get(this.locators.Geography_Filter).click();
+
+     cy.get(this.locators.SAF_GF_country).click();
     cy.wait(2000);
-    cy.get(this.locators.GF_country).select('All');
+     cy.get('.ng-dropdown-panel .ng-option').contains('Japan').click();
     cy.wait(2000);
-    cy.get(this.locators.GF_region).select('All');
-    cy.wait(2000);
-    cy.get(this.locators.GF_state).select('All');
-    cy.wait(2000);
-    cy.get(this.locators.GF_city).select('All');
-    cy.wait(2000);
-    cy.get(this.locators.GF_branch).select('All');
-    cy.wait(2000);
+
     cy.get(this.locators.clickonOF).click();
     cy.wait(2000);
     cy.get(this.locators.Unallocated_Accounts).click();
@@ -1740,23 +2296,17 @@ class AllocationPage {
     cy.wait(2000);
     cy.get(this.locators.SearchOF).click()
     cy.wait(2000);
-  
-    /*cy.get(':nth-child(2) > :nth-child(10) > input').click()
-    cy.get(':nth-child(3) > :nth-child(10) > input').click()
-    cy.wait(2000);
-    cy.get(this.locators.Allocation_SearchResult).click()
-    cy.get(this.locators.AllocateToAgency).click()
-    cy.get(this.locators.TCAgency).type('Tirupati Travels');
-    cy.get(this.locators.AgencyName).type('Dev Electronics');
-    cy.get(this.locators.AGencyExpirayDate).click();
-    cy.get(':nth-child(5) > :nth-child(8) > .ng-star-inserted').click();
-    cy.get('.btn-danger').click();
-    cy.wait(2000);*/
-    // cy.get(this.locators.Welcome).then(($el) => {
-    //   const text = $el.text();
-    //   cy.log(text);
-    // })
 
+
+    cy.get('[heading="  Geography Filter"] > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
+    cy.wait(2000);
+
+     cy.get(this.locators.SAF_GF_country).click();
+    cy.wait(2000);
+     cy.get('.ng-dropdown-panel .ng-option').contains('India').click();
+    cy.wait(2000);
+     cy.get(this.locators.SearchOF).click()
+    cy.wait(12000);
   }
 
   ClickOnSearchResultAllocationSABF2() {
@@ -1766,79 +2316,15 @@ class AllocationPage {
     cy.wait(2000);
     cy.get(this.locators.clickonSABF).click().click();
     cy.wait(2000);
-    //cy.get(this.locators.clickonPF).click();
-    cy.get(this.locators.pg_select_SAF).select('39');
-    cy.get(this.locators.product_select_SAF).select('All');
-    cy.get(this.locators.subproduct_select_SAF).select('All');
-    cy.get(this.locators.clickonBF).click();
-    cy.wait(2000);
-    cy.get(this.locators.clickonDPD).type('21');
-    cy.wait(2000);
-    cy.get(this.locators.clickonDString).type('OK');
-    cy.wait(2000);
-    cy.get(this.locators.BOMBucket).select('All');
-    cy.get(this.locators.Geography_Filter).click();
-    cy.wait(2000);
-    cy.get(this.locators.GF_country).select('All');
-    cy.wait(2000);
-    cy.get(this.locators.GF_region).select('All');
-    cy.wait(2000);
-    cy.get(this.locators.GF_state).select('All');
-    cy.wait(2000);
-    cy.get(this.locators.GF_city).select('All');
-    cy.wait(2000);
-    cy.get(this.locators.GF_branch).select('All');
-    cy.wait(2000);
-    cy.get(this.locators.clickonOF).click();
-    cy.wait(2000);
+  
     cy.get(this.locators.Unallocated_Accounts).click();
     cy.wait(2000);
     cy.get(this.locators.Allocated_Accounts).click();
     cy.wait(2000);
     cy.get(this.locators.SearchOF).click()
     cy.wait(2000);
-  //   cy.get('.col-md-12 > .btn').then($element => {
-  //     if ($element.length === 0) {
-  //         // If no data found, stop test execution
-  //         cy.log('No data found. Stopping test execution.');
-  //         // You can use `cy.fail()` to fail the test explicitly
-  //         cy.fail('No data found.');
-  //     } else {
-  //         // If data found, proceed further
-  //         cy.log('Data found. Proceeding further.');
-  //         // Add your further test steps here
-  //     }
-  // });
-  cy.get('[role="alert"]').then(($alert) => {
-    // Check if the alert contains "No Results found!"
-    if ($alert.text().includes("No Results found!")) {
-  cy.get('[role="alert"]').should(
-   "contain.text",
-    "No Results found!"
-   )
-    } else {
-
-   cy.get(':nth-child(2) > :nth-child(10) > input').click()
-    cy.get(':nth-child(3) > :nth-child(10) > input').click()
-    cy.wait(2000);
-    cy.get(this.locators.Allocation_SearchResult).click()
-    cy.get(this.locators.AllocateToAgency).click()
-    cy.get(this.locators.TCAgency).type('Tirupati Travels');
-    cy.get(this.locators.AgencyName).type('Dev Electronics');
-    cy.get(this.locators.AGencyExpirayDate).click();
-    cy.get(':nth-child(5) > :nth-child(8) > .ng-star-inserted').click();
-    cy.get(this.locators.pg_select_SAF).select('CreditCard');
-    cy.get(this.locators.product_select_SAF).select('CreditCard');
-    cy.get(this.locators.subproduct_select_SAF).select('CreditCard');
-    cy.get('.buttons_set > #upload').click();
-    cy.wait(2000);
-    cy.get(this.locators.Welcome).then(($el) => {
-      const text = $el.text();
-      cy.log(text);
-    })
-  }
-  
-});
+  cy.get('[role="alert"]').contains('Please select mandatory filters: Product Group, Country, Bucket');
+  cy.wait(2000);
 
 } 
   downloadAgencyUnallocationbatch() {
@@ -1921,7 +2407,7 @@ class AllocationPage {
   }
 
   uploadAgencyUnallocationBatchWithoutUnAllocationAgency() {
-    const filePath = 'Cypress/fixtures/UnAllocation_acclevel.xlsx'
+    const filePath = 'Cypress/fixtures/UnAllocati@$on_acclevel.xlsx'
     cy.get(this.locators.allocation).click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnABAL).click();
@@ -1930,7 +2416,11 @@ class AllocationPage {
     cy.wait(2000);
     cy.get(this.locators.uploadfile).selectFile(filePath, { force: true });
     cy.wait(2000);
-    cy.contains('Please Select Proceed with Unallocation For Before Uploading File', { timeout: 20000 }).invoke('text').then((popupText) => {
+    cy.get(this.locators.Click_UploadBtn).click({ force: true });
+    cy.wait(2000);
+    cy.get('#confirm-dialog-okay').click();
+    cy.wait(2000);
+    cy. contains('Filename should not contain any special characters', { timeout: 20000 }).invoke('text').then((popupText) => {
       cy.log(`Popup text: ${popupText}`);
     });
   }
@@ -2181,7 +2671,7 @@ class AllocationPage {
   }
 
   uploadCollectorUnallocationBatchWithoutUnAllocation() {
-    const filePath = 'Cypress/downloads/UnAllocation_acclevel.xlsx'
+    const filePath = 'Cypress/fixtures/UnAllocati@$on_acclevel.xlsx'
     cy.get(this.locators.allocation).click();
     cy.wait(2000);
     cy.get(this.locators.ClickAgentU).click();
@@ -2192,7 +2682,11 @@ class AllocationPage {
     cy.wait(2000);
     cy.get(this.locators.uploadfile).selectFile(filePath, { force: true });
     cy.wait(2000);
-    cy.contains('Please Select Proceed with Deallocation For Before Uploading File', { timeout: 20000 }).invoke('text').then((popupText) => {
+    cy.get(this.locators.Click_UploadBtn).click({ force: true });
+    cy.wait(2000);
+    cy.get('#confirm-dialog-okay').click();
+    cy.wait(2000);
+    cy. contains('Filename should not contain any special characters', { timeout: 20000 }).invoke('text').then((popupText) => {
       cy.log(`Popup text: ${popupText}`);
     });
   }
@@ -2376,23 +2870,49 @@ class AllocationPage {
     cy.wait(2000);
     cy.get(this.locators.ClickAGBU).click({force: true} );
     cy.wait(2000);
-    cy.get(this.locators.pg_select).select('Consumer Loan');
+    cy.get(this.locators.pg_select).click();
     cy.wait(2000);
-    cy.get(this.locators.product_select).select('Unsecured');
+    cy.get('.ng-dropdown-panel .ng-option').contains('Consumer Loan').click({ force: true });
     cy.wait(2000);
-    cy.get(this.locators.subproduct_select).select('Personal Loan');
+    
+ cy.get(this.locators.UAABbucket).click();
+cy.wait(500);
+
+cy.get('.ng-dropdown-panel .ng-option').then($options => {
+  const total = $options.length;
+
+  for (let i = 0; i < total; i++) {
+
+    cy.get('.ng-dropdown-panel .ng-option')
+      .eq(i)
+      .click({ force: true });
+
+    cy.wait(300);
+    cy.get(this.locators.UAABbucket).click({ force: true });
+    cy.wait(300);
+  }
+});
+
+
+    cy.get(this.locators.UAABCountry).click();
     cy.wait(2000);
-    cy.get(this.locators.UAABbucket).select('3');
+      cy.get('.ng-dropdown-panel .ng-option').contains('India').click({ force: true });
     cy.wait(2000);
-    cy.get(this.locators.UAABCountry).select('All');
+    cy.get(this.locators.UAABRegion).click();
     cy.wait(2000);
-    cy.get(this.locators.UAABRegion).select('All');
+      cy.get('.ng-dropdown-panel .ng-option').contains('South').click({ force: true });
     cy.wait(2000);
-    cy.get(this.locators.UAABState).select('All');
+    cy.get(this.locators.UAABState).click();
     cy.wait(2000);
-    cy.get(this.locators.UAABCity).select('All');
+      cy.get('.ng-dropdown-panel .ng-option').contains('Tamilnadu').click({ force: true });
     cy.wait(2000);
-    cy.get(this.locators.UAABbranch).select('All');
+    cy.get(this.locators.UAABCity).click();
+    cy.wait(2000);
+      cy.get('.ng-dropdown-panel .ng-option').contains('Chennai').click({ force: true });
+    cy.wait(2000);
+    cy.get(this.locators.UAABbranch).click();
+    cy.wait(2000);
+      cy.get('.ng-dropdown-panel .ng-option').contains('Chennai Main').click({ force: true });
     cy.wait(2000);
     cy.get('#downloadAccounts').click({ force: true });
     cy.wait(2000);
@@ -2582,16 +3102,51 @@ class AllocationPage {
     cy.wait(2000);
     cy.get(this.locators.ClickAGBU).click();
     cy.wait(2000);
-    cy.get(this.locators.ProductGroupUAAO).select('Consumer Loan');
-    cy.wait(2000)
-    cy.get(this.locators.ProductUAAO).select('Unsecured');
-    cy.wait(2000)
-    cy.get(this.locators.SubproducUAAO).select('Personal Loan');
-    cy.wait(2000)
-    cy.get(this.locators.ClickonAllocatedAgency).click();
-    cy.wait(2000)
+    cy.get(this.locators.ProductGroupUAAO).click();
+    cy.wait(2000);
+     cy.get('.ng-dropdown-panel .ng-option').contains('Consumer Loan').click({ force: true });
+    cy.wait(2000);
+    cy.get(this.locators.ProductUAAO).click();
+    cy.wait(2000);
+     cy.get('.ng-dropdown-panel .ng-option').contains('Unsecured').click({ force: true });
+    cy.wait(2000);
+    cy.get(this.locators.SubproducUAAO).click();
+    cy.wait(2000);
+     cy.get('.ng-dropdown-panel .ng-option').contains('Personal Loan').click({ force: true });
+    cy.wait(2000);
+
+ cy.get(this.locators.SelectBucket).click();
+cy.wait(1000);
+
+cy.get('.ng-dropdown-panel .ng-option').each(($option, index) => {
+  
+  cy.wrap($option).click({ force: true });   // select option
+  cy.wait(1000);
+
+  // Re-open dropdown for next option
+  cy.get(this.locators.SelectBucket).click();
+  cy.wait(2000);
+
+});
+
+ cy.get(this.locators.SelectCountry).click();
+cy.wait(1000);
+
+cy.get('.ng-dropdown-panel .ng-option').each(($option, index) => {
+  
+  cy.wrap($option).click({ force: true });   // select option
+  cy.wait(1000);
+
+  // Re-open dropdown for next option
+  cy.get(this.locators.SelectCountry).click();
+  cy.wait(2000);
+
+});
+
+    cy.get(this.locators.ClickonAllocatedAgency).click({force: true});
+    cy.wait(2000);
     cy.get(this.locators.ClickOnAgBAAccLevelDownBtn).click();
-    cy.wait(2000)
+    cy.wait(2000);
   }
 
   UploadFilledAgencyLevelAllocationFile290() {
@@ -2733,34 +3288,60 @@ class AllocationPage {
     cy.wait(2000);
     cy.get(this.locators.clickagntfiltr).click();
     cy.wait(2000);
-    // cy.get(this.locators.clickonPF).click();
-    // cy.wait(2000);
-    cy.get(this.locators.pg_select_PAF).select('39');
+    
+
+     cy.get(this.locators.pg_select_SAF).click();
+cy.wait(500);
+
+cy.get('.ng-dropdown-panel .ng-option').then($options => {
+
+  const total = $options.length;
+
+  for (let i = 0; i < total; i++) {
+
+    // Click option i
+    cy.get('.ng-dropdown-panel .ng-option')
+      .eq(i)
+      .click({ force: true });
+
+    cy.wait(400);
+
+    // Re-open dropdown for next option
+    cy.get(this.locators.pg_select_SAF).click({ force: true });
+    cy.wait(300);
+  }
+
+});
+
+
+    cy.get(this.locators.BucketFilter).click({ force: true });
     cy.wait(2000);
-    cy.get(this.locators.product_select_PAF).select('All');
+    cy.get(this.locators.BomBu).click();
     cy.wait(2000);
-    cy.get(this.locators.subproduct_select_PAF).select('All');
+
+cy.get('.ng-dropdown-panel .ng-option').then($options => {
+
+  const total = $options.length;
+
+  for (let i = 0; i < total; i++) {
+
+    cy.get('.ng-dropdown-panel .ng-option').eq(i).click({ force: true });
+
+    cy.wait(1000);
+    cy.get(this.locators.BomBu).click({ force: true });
+    cy.wait(300);
+  }
+
+});
+
+cy.get('[heading="  Geography Filter"] > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(2000);
-    cy.get(this.locators.clickonBF).click();
+
+     cy.get(this.locators.SAF_GF_country).click();
     cy.wait(2000);
-    cy.get(this.locators.clickonDPD).type('12');
+     cy.get('.ng-dropdown-panel .ng-option').contains('India').click();
     cy.wait(2000);
-    cy.get(this.locators.clickonDString).type('OK');
-    cy.wait(2000);
-    cy.get(this.locators.BOMBucket).select('All');
-    cy.wait(2000);
-    cy.get(this.locators.Geography_Filter).click();
-    cy.wait(2000);
-    cy.get(this.locators.GF_country).select('All');
-    cy.wait(2000);
-    cy.get(this.locators.GF_region).select('All');
-    cy.wait(2000);
-    cy.get(this.locators.GF_state).select('All');
-    cy.wait(2000);
-    cy.get(this.locators.GF_city).select('All');
-    cy.wait(2000);
-    cy.get(this.locators.GF_branch).select('All');
-    cy.wait(2000);
+
     cy.get(this.locators.clickonOF).click();
     cy.wait(2000);
     cy.get(this.locators.clickonCN).type('Amar');
@@ -3038,19 +3619,81 @@ class AllocationPage {
       cy.wait(400);
       cy.get(this.locators.clickagntfiltr).click().click();
       cy.wait(2000);
+
+       cy.get(this.locators.pg_select_SAF).click();
+cy.wait(500);
+
+cy.get('.ng-dropdown-panel .ng-option').then($options => {
+
+  const total = $options.length;
+
+  for (let i = 0; i < total; i++) {
+
+    // Click option i
+    cy.get('.ng-dropdown-panel .ng-option')
+      .eq(i)
+      .click({ force: true });
+
+    cy.wait(400);
+
+    // Re-open dropdown for next option
+    cy.get(this.locators.pg_select_SAF).click({ force: true });
+    cy.wait(300);
+  }
+
+});
+
+
+    cy.get(this.locators.BucketFilter).click({ force: true });
+    cy.wait(2000);
+    cy.get(this.locators.BomBu).click();
+    cy.wait(2000);
+
+cy.get('.ng-dropdown-panel .ng-option').then($options => {
+
+  const total = $options.length;
+
+  for (let i = 0; i < total; i++) {
+
+    cy.get('.ng-dropdown-panel .ng-option').eq(i).click({ force: true });
+
+    cy.wait(1000);
+    cy.get(this.locators.BomBu).click({ force: true });
+    cy.wait(300);
+  }
+
+});
+
+cy.get('[heading="  Geography Filter"] > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
+    cy.wait(2000);
+
+     cy.get(this.locators.SAF_GF_country).click();
+    cy.wait(2000);
+     cy.get('.ng-dropdown-panel .ng-option').contains('India').click();
+    cy.wait(2000);
+
       cy.get('#Allocated').click();
       cy.wait(2000);
       cy.get('#searchAccount').click();
-      cy.wait(2000);
+      cy.wait(10000);
       cy.get(':nth-child(1) > :nth-child(1) > .form-control-group > .form-check-group > label > #checked').click();
       cy.wait(2000);
       cy.get('#TcagentName').type("A");
       cy.wait(2000);
-      cy.get('#ngb-typeahead-1-0').click();
-      cy.wait(2000);
+      cy.get('h5.ng-star-inserted').then($items => {
+  const count = $items.length;
+  const randomIndex = Math.floor(Math.random() * count);
+
+  cy.wrap($items[randomIndex]).click({ force: true });
+});
       cy.get('#Agentname').type("A");
       cy.wait(2000);
-      cy.get('#ngb-typeahead-2-0').click();
+      cy.get('h5.ng-star-inserted').then($items => {
+  const count = $items.length;
+  const randomIndex = Math.floor(Math.random() * count);
+
+  cy.wrap($items[randomIndex]).click({ force: true });
+});
       cy.wait(2000);
       cy.get('#AllocationExpireDate2').type("01/05/2025");
       cy.wait(2000);
@@ -3128,13 +3771,19 @@ class AllocationPage {
     cy.wait(2000);
     cy.get(this.locators.clickagntfiltr).click();
     cy.wait(2000);
-    cy.get('#Productgroup').select("LOANS PRODUCTS");
-    cy.wait(2000);
-    cy.get('#product').select("VEHICLE LOAN");
-    cy.wait(2000);
-    cy.get('#subproduct').select("CAR");
-    cy.wait(2000);
 
+    cy.get(this.locators.pg_select_SAF).click();
+    cy.wait(2000);
+    cy.get('.ng-dropdown-panel .ng-option').contains('Consumer Loan').click();
+    cy.wait(2000);
+  cy.get(this.locators.product_select_SAF).click();
+    cy.wait(2000);
+      cy.get('.ng-dropdown-panel .ng-option').contains('Unsecured').click();
+    cy.wait(2000);
+     cy.get(this.locators.subproduct_select_SAF).click();
+    cy.wait(2000);
+      cy.get('.ng-dropdown-panel .ng-option').contains('Personal Loan').click();
+    cy.wait(2000);
 
 
   }

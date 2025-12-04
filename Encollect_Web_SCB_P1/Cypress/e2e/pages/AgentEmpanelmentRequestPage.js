@@ -321,8 +321,18 @@ class AgentEmpanelmentRequestPage {
     cy.wait(2000);
     cy.get(this.locators.Agencyname).select("Arun").should('be.visible');
     cy.wait(2000);
-    cy.get(this.locators.AgencySupervisorEmailId).type("pranshu@yopmail.com").should('be.visible');
-    cy.wait(2000);
+    // cy.get(this.locators.AgencySupervisorEmailId).type("pranshu@yopmail.com").should('be.visible');
+    // cy.wait(2000);
+ cy.get(this.locators.SelectAgencyReportManager).click(); 
+cy.wait(2000);
+cy.get('.ng-dropdown-panel .ng-option')        
+  .then(options => {
+    const randomIndex = Math.floor(Math.random() * options.length);
+    cy.wrap(options[randomIndex]).click();   
+  });
+cy.wait(2000);
+
+
     cy.get(this.locators.dilarID).type("123").should('be.visible');
     cy.wait(2000);
     cy.get(this.locators.DRACertificateDate).type("16-05-2024").should('be.visible');
@@ -664,8 +674,18 @@ class AgentEmpanelmentRequestPage {
     cy.wait(2000);
     cy.get(this.locators.Agencyname).select("Arun").should('be.visible');
     cy.wait(2000);
-    cy.get(this.locators.AgencySupervisorEmailId).type("pranshu@yopmail.com").should('be.visible');
-    cy.wait(2000);
+    // cy.get(this.locators.AgencySupervisorEmailId).type("pranshu@yopmail.com").should('be.visible');
+    // cy.wait(2000);
+
+     cy.get(this.locators.SelectAgencyReportManager).click(); 
+cy.wait(2000);
+cy.get('.ng-dropdown-panel .ng-option')        
+  .then(options => {
+    const randomIndex = Math.floor(Math.random() * options.length);
+    cy.wrap(options[randomIndex]).click();   
+  });
+cy.wait(2000);
+
     cy.get(this.locators.dilarID).type("123").should('be.visible');
     cy.wait(2000);
     cy.get(this.locators.DRACertificateDate).type("16-05-2024").should('be.visible');
@@ -859,8 +879,19 @@ class AgentEmpanelmentRequestPage {
     cy.wait(2000);
     cy.get(this.locators.Agencyname).select("Arun").should('be.visible');
     cy.wait(2000);
-    cy.get(this.locators.AgencySupervisorEmailId).type("pranshu@yopmail.com").should('be.visible');
-    cy.wait(2000);
+    // cy.get(this.locators.AgencySupervisorEmailId).type("pranshu@yopmail.com").should('be.visible');
+    // cy.wait(2000);
+
+    cy.get(this.locators.SelectAgencyReportManager).click(); 
+cy.wait(2000);
+cy.get('.ng-dropdown-panel .ng-option')        
+  .then(options => {
+    const randomIndex = Math.floor(Math.random() * options.length);
+    cy.wrap(options[randomIndex]).click();   
+  });
+cy.wait(2000);
+
+
     cy.get(this.locators.dilarID).type("123").should('be.visible');
     cy.wait(2000);
     cy.get(this.locators.DRACertificateDate).type("16-05-2024").should('be.visible');
@@ -1062,8 +1093,19 @@ AgentEnpalmentRequest631(){
     cy.wait(2000);
     cy.get(this.locators.Agencyname).select("Arun").should('be.visible');
     cy.wait(2000);
-    cy.get(this.locators.AgencySupervisorEmailId).type("pranshu@yopmail.com").should('be.visible');
-    cy.wait(2000);
+    // cy.get(this.locators.AgencySupervisorEmailId).type("pranshu@yopmail.com").should('be.visible');
+    // cy.wait(2000);
+
+     cy.get(this.locators.SelectAgencyReportManager).click(); 
+cy.wait(2000);
+cy.get('.ng-dropdown-panel .ng-option')        
+  .then(options => {
+    const randomIndex = Math.floor(Math.random() * options.length);
+    cy.wrap(options[randomIndex]).click();   
+  });
+cy.wait(2000);
+
+
     cy.get(this.locators.dilarID).type("123").should('be.visible');
     cy.wait(2000);
     cy.get(this.locators.DRACertificateDate).type("16-05-2024").should('be.visible');
@@ -1288,14 +1330,15 @@ AgentEnpalmentRequest634(){
   cy.wait(2000);
   cy.get(this.locators.AddAgent).click();
   cy.wait(500);
-   cy.get(this.locators.PlaceOfWork).click().should('be.visible');
+   cy.get(':nth-child(3) > .nav-link > span').click().should('be.visible');
     cy.wait(2000);
-    cy.get(this.locators.pininput).type("845438").should('be.visible');
-    cy.wait(2000);
-
+  cy.get('#walletLimit').type(500000);
+  cy.wait(2000);
 
 }
 AgentEnpalmentRequest635(){
+  const filePath = 'Cypress/fixtures/Aadhar_AboveSize.jpg'
+
   cy.wait(2000);
   cy.get(this.locators.usermngt).click().should('be.visible');
   cy.wait(2000);
@@ -1303,15 +1346,21 @@ AgentEnpalmentRequest635(){
   cy.wait(2000);
   cy.get(this.locators.AddAgent).click();
   cy.wait(2000);
-  cy.get(':nth-child(8) > .nav-link > span').click().should('be.visible');
-    cy.wait(2000);
-    // cy.get("#maxAccounts").type("2").should('be.visible');
-    // cy.wait(2000);
-    cy.get("input[name='experiance']").type("2",{force: true}).should('be.visible');
+ cy.get(':nth-child(7) > .nav-link > span').click().should('be.visible');
+
+  cy.wait(2000);
+  cy.get("#docTypeSelect-0").select("Pan Card").should('be.visible');
+  cy.wait(2000);
+  cy.get('#addFileBtn-0').click();
+  cy.get('input[type="file"]').eq(1).selectFile(filePath, { force: true });
   cy.wait(2000);
 
+  cy.contains("File names should not contain special characters or spaces.").should("be.visible");
+  cy.wait(2000);
 }
 AgentEnpalmentRequest636(){
+   const filePath = 'Cypress/fixtures/AadharAboveSize.jpg'
+
   cy.wait(2000);
   cy.get(this.locators.usermngt).click().should('be.visible');
   cy.wait(2000);
@@ -1319,16 +1368,18 @@ AgentEnpalmentRequest636(){
   cy.wait(2000);
   cy.get(this.locators.AddAgent).click();
   cy.wait(2000);
-  cy.get(':nth-child(8) > .nav-link > span').click().should('be.visible');
+
+  cy.get(':nth-child(7) > .nav-link > span').click().should('be.visible');
+
   cy.wait(2000);
-  cy.get("input[name='experiance']").type("2",{force: true}).should('be.visible');
+  cy.get("#docTypeSelect-0").select("Pan Card").should('be.visible');
   cy.wait(2000);
-  // cy.get("select[name='cutomerPersona']").select("Self-cure customer").should('be.visible');
-  // cy.wait(2000);
-  cy.get('#lanKnown').select("Hindi").should('be.visible');
+  cy.get('#addFileBtn-0').click();
+  cy.get('input[type="file"]').eq(1).selectFile(filePath, { force: true });
   cy.wait(2000);
-  // cy.get('#perBand').select("LH").should('be.visible');
-  // cy.wait(2000);
+
+  cy.contains("File size must not exceed 2 MB.").should("be.visible");
+  cy.wait(2000);
 
 }
 AgentEnpalmentRequest637(){
@@ -1419,8 +1470,18 @@ AgentEnpalmentRequest639(){
   cy.wait(2000);
   cy.get(this.locators.Agencyname).select("Arun").should('be.visible');
   cy.wait(2000);
-  cy.get(this.locators.AgencySupervisorEmailId).type("pranshu@yopmail.com").should('be.visible');
-  cy.wait(2000);
+  // cy.get(this.locators.AgencySupervisorEmailId).type("pranshu@yopmail.com").should('be.visible');
+  // cy.wait(2000);
+
+   cy.get(this.locators.SelectAgencyReportManager).click(); 
+cy.wait(2000);
+cy.get('.ng-dropdown-panel .ng-option')        
+  .then(options => {
+    const randomIndex = Math.floor(Math.random() * options.length);
+    cy.wrap(options[randomIndex]).click();   
+  });
+cy.wait(2000);
+
   cy.get(this.locators.dilarID).type("123").should('be.visible');
   cy.wait(2000);
   cy.get(this.locators.DRACertificateDate).type("16-05-2024").should('be.visible');
@@ -1619,8 +1680,19 @@ AgentEnpalmentRequest640(){
   cy.wait(2000);
   cy.get(this.locators.Agencyname).select("Arun").should('be.visible');
   cy.wait(2000);
-  cy.get(this.locators.AgencySupervisorEmailId).type("pranshu@yopmail.com").should('be.visible');
-  cy.wait(2000);
+  // cy.get(this.locators.AgencySupervisorEmailId).type("pranshu@yopmail.com").should('be.visible');
+  // cy.wait(2000);
+
+   cy.get(this.locators.SelectAgencyReportManager).click(); 
+cy.wait(2000);
+cy.get('.ng-dropdown-panel .ng-option')        
+  .then(options => {
+    const randomIndex = Math.floor(Math.random() * options.length);
+    cy.wrap(options[randomIndex]).click();   
+  });
+cy.wait(2000);
+
+
   cy.get(this.locators.dilarID).type("123").should('be.visible');
   cy.wait(2000);
   cy.get(this.locators.DRACertificateDate).type("16-05-2024").should('be.visible');
@@ -1820,8 +1892,18 @@ AgentEnpalmentRequest641(){
   cy.wait(2000);
   cy.get(this.locators.Agencyname).select("Arun").should('be.visible');
   cy.wait(2000);
-  cy.get(this.locators.AgencySupervisorEmailId).type("pranshu@yopmail.com").should('be.visible');
-  cy.wait(2000);
+  // cy.get(this.locators.AgencySupervisorEmailId).type("pranshu@yopmail.com").should('be.visible');
+  // cy.wait(2000);
+
+   cy.get(this.locators.SelectAgencyReportManager).click(); 
+cy.wait(2000);
+cy.get('.ng-dropdown-panel .ng-option')        
+  .then(options => {
+    const randomIndex = Math.floor(Math.random() * options.length);
+    cy.wrap(options[randomIndex]).click();   
+  });
+cy.wait(2000);
+
   cy.get(this.locators.dilarID).type("123").should('be.visible');
   cy.wait(2000);
   cy.get(this.locators.DRACertificateDate).type("16-05-2024").should('be.visible');

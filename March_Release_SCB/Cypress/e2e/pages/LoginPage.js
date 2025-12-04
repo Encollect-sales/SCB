@@ -62,7 +62,7 @@ clickcompanyname() {
     cy.get('#otp-input').type(560062);
     cy.wait(2000);
     cy.get('.btn-success').click();
-    cy.wait(11000);
+    cy.wait(5000);
   }
  
   // verifyLoginSuccess() {

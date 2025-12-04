@@ -86,6 +86,15 @@ selectUserType(){
 
 }
   
+typeexistingcode(){
+
+const randomNum = Math.floor(100000 + Math.random() * 900000);
+cy.get('#customId').type(randomNum);
+cy.wait(2000);
+
+
+
+}
 
   Clikonaddstaff() {
     cy.get(this.locators.Clickonaddstaff).click({force: true});
@@ -120,23 +129,35 @@ selectUserType(){
   }
 
   UpdateStaff(){
-    cy.wait(5000);
+    cy.wait(2000);
     cy.get('#empStatus').select("Saved As Draft");
-    cy.wait(5000);
+    cy.wait(2000);
     cy.get('#btn-search').click();
-    cy.wait(5000);
+    cy.wait(2000);
     cy.get(":nth-child(1) > :nth-child(9) > .form-control-group > .form-check-group > label > input").click();
-    cy.wait(5000);
+    cy.wait(2000);
     cy.get('#btn-edit').click();
-    cy.wait(5000);
-    cy.get('#lastName').clear({force: true} );
-    cy.wait(5000);
-    cy.get('#lastName').type("Kumar");
-    cy.wait(5000);
+    cy.wait(2000);
+    cy.get('#lastName').clear({force: true} ).type("Kumar");
+    cy.wait(2000);
+    // cy.get('#lastName').type("Kumar");
+    // cy.wait(2000);
+    cy.get(':nth-child(5) > .nav-link').click();
+    cy.wait(2000);
+     cy.get('#spManager > .ng-select-container > .ng-arrow-wrapper').type("A");
+    cy.wait(3000);
+cy.get('.ng-option-label')
+  .then($options => {
+    const optionsCount = $options.length;
+    const randomIndex = Math.floor(Math.random() * optionsCount);
+    cy.wrap($options[randomIndex]).click({ force: true });
+  });
+  cy.wait(2000);
+
     cy.get('#btn-update').click();
-    cy.wait(5000);
+    cy.wait(8000);
     cy.contains("Collection staff updated successfully.").should("be.visible");
-    cy.wait(5000);
+    cy.wait(2000);
 
 
   }

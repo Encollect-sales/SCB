@@ -1,2 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-1667,1660,Yes,PTP,PTP,2025-06-28,21524,,Bulk upload dec 16,9942413413,bakori,banglore,jawa25@yopmail.com,permenant11,new116,09262025110617055,Error,Next action date cannot be less than current date

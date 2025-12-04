@@ -37,7 +37,7 @@ describe('User Management - Add Staff-Once staff submitted for approval, email n
                 addStaffPage.filllastname(firstRow.LastName);
                 addStaffPage.fillemailid(firstRow.EmailID);
                 addStaffPage.fillmobilenumber(firstRow.MobileNumber);
-              
+               addStaffPage.typeexistingcode();
 
                 addStaffPage.clickondandd();
                 cy.wait(500);

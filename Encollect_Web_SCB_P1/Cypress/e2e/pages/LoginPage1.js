@@ -1,7 +1,7 @@
 import { getLocators } from '../utils/locatorUtils';
 import { getBaseUrl } from '../utils/configUtils';
  
-class loginPage1 {
+class LoginPage {
   constructor(locators) {
     this.locators = locators;
   }
@@ -21,26 +21,51 @@ class loginPage1 {
     });
   }
  
-  fillcompanyname(Companyname) {
-    //cy.get(this.locators.companynameInput).type(Companyname);
-    cy.get(this.locators.companynameInput).type("ENCollect");
-  }
+  // fillcompanyname(Companyname) {
+  //   //cy.get(this.locators.companynameInput).type(Companyname);
+  //   cy.get(this.locators.companynameInput).type("ENCollect");
+  //   cy.wait(2000);
+  // }
  
-  Clikcompanyname() {
-    cy.wait(2000);
-    cy.get(this.locators.ClickonCompanyName).click();
-  }
+  // Clikcompanyname() {
+   
+  //   cy.get(this.locators.ClickonCompanyName).click();
+  //   cy.wait(2000);
+  // }
+
+
+  fillcompanyname(Companyname) {
+  cy.get(this.locators.companynameInput).then(($input) => {
+    const currentValue = $input.val();
+ 
+    if (currentValue) {
+      cy.wrap($input).clear().type(Companyname);
+    } else {
+      cy.wrap($input).type(Companyname);
+    }
+  });
+ 
+  cy.wait(4000);
+}
+ 
+Clikcompanyname() {
+  cy.get(this.locators.ClickonCompanyName).click();
+  cy.wait(1000);
+}
  
   fillUsername(email) {
+    
     cy.get(this.locators.usernameInput).type(email);
+    cy.wait(2000);
   }
  
   fillPassword(password) {
+    
     cy.get(this.locators.passwordInput).type(password);
   }
  
   submit() {
-    cy.wait(5000);
+    cy.wait(2000);
     cy.get(this.locators.signinButton).click();
     cy.wait(2000);
   }
@@ -49,6 +74,14 @@ class loginPage1 {
   //   return cy.get(this.locators.dashboard).then(() => {
   //   });
   // }
+
+  enterotp(){
+
+    cy.get('#otp-input').type(560062);
+    cy.wait(2000);
+    cy.get('.btn-success').click();
+    cy.wait(7000);
+  }
  
   login(Companyname, email, password) {
    
@@ -58,19 +91,15 @@ class loginPage1 {
       this.fillUsername(email);
       this.fillPassword(password);
       this.submit();
+      cy.wait(2000);
+      this.enterotp();
       // this.verifyLoginSuccess();
   }
 
-  // logout() {
-  //   // Implement logout functionality here
-  //   cy.wait(5000);
-  //   cy.get(this.locators.profile).click();
-  //   cy.get(this.locators.logoutButton).click(); // Example locator for logout button
-  //   cy.wait(2000); // Adjust wait time if necessary
-  // }
+ 
 
 
 
 }
  
-export default loginPage1;
+export default LoginPage;

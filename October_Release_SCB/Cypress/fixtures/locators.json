@@ -12,6 +12,43 @@
 
   "Allocation":{
 
+    "ClickOn_Allocation":"[title='Allocation'] > span.ng-star-inserted",
+
+    "ClickOn_Agency_Bulkupload":".allocation > :nth-child(2) > :nth-child(1) > a.ng-star-inserted",
+    "ClickOn_Agency_Bulkalloc_Acclevel":".allocation > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(1) > a",
+    "ClickOn_Agency_Bulkalloc_Cuslevel":".allocation > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(2) > a",
+    "ClickOn_Agency_Dealloc_Acclevel":".allocation > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(3) > a",
+    "ClickOn_Agency_Dealloc_Cuslevel":":nth-child(1) > .sub-nav-list > :nth-child(4) > a",
+
+    "ClickOn_Agent_Bulkupload":".allocation > :nth-child(2) > :nth-child(2) > a.ng-star-inserted",
+    "ClickOn_Agent_Bulkalloc_Acclevel":".allocation > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(1) > a",
+    "ClickOn_Agent_Bulkalloc_Cuslevel":".allocation > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(2) > a",
+    "ClickOn_Agent_Dealloc_Acclevel":".allocation > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(3) > a",
+    "ClickOn_Agent_Dealloc_Cuslevel":".allocation > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(4) > a",
+
+    "ClickOn_Owner_Bulkupload":".allocation > :nth-child(2) > :nth-child(3) > a.ng-star-inserted",
+    "ClickOn_Owner_Bulkalloc_Acclevel":".allocation > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(1) > a",
+    "ClickOn_Owner_Bulkalloc_Cuslevel":".allocation > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(2) > a",
+
+    "ClickOn_Productgroup":":nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "ClickOn_Bucket":":nth-child(5) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "ClickOn_Branch":":nth-child(6) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+
+    "ClickOn_Alloc_Filters":".allocation > :nth-child(2) > :nth-child(4) > a.ng-star-inserted",
+
+    "CLickOn_Agency_Allocfilter":".allocation > :nth-child(2) > :nth-child(4) > .sub-nav-list > :nth-child(1) > a",
+    "CLickOn_Agent_Allocfilter":".allocation > :nth-child(2) > :nth-child(4) > .sub-nav-list > :nth-child(2) > a",
+    "ClickOn_Bucketfilter":"[heading='Bucket Filter'] > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn",
+    "ClickOn_Geofilter":"[heading= 'Geography Filter'] > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn",
+
+    "ClickOn_Agent_Geofilter":"accordion-group:nth-child(3) div:nth-child(1) div:nth-child(1) div:nth-child(1) div:nth-child(1) button:nth-child(1)",
+     "ClickOn_Agent_Bucketfilter": "[heading='Bucket Filter'] > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn",
+    
+    "ClickOn_Filter_Productgroup":".panel-open > .panel > .panel-collapse > .panel-body > .row > :nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "ClickOn_Filter_Bucket":".panel-open > .panel > .panel-collapse > .panel-body > .row > .col-lg-4.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "ClickOn_Filter_Geo":".panel-open > .panel > .panel-collapse > .panel-body > .row > .col-lg-4 > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input"
+
+
 
 
   },
