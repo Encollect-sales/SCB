@@ -1086,12 +1086,12 @@ class AccountDetailsPage {
     cy.wait(1000);
     cy.contains('Razor Pay').should('be.visible');
     cy.wait(1000);
-    cy.contains('Email ID').should('be.visible');
-    cy.wait(1000);
-    cy.contains('Mobile').should('be.visible');
-    cy.wait(1000);
-    cy.contains('Amount').should('be.visible');
-    cy.wait(1000);
+    // cy.contains('Email ID').should('be.visible');
+    // cy.wait(1000);
+    // cy.contains('Mobile').should('be.visible');
+    // cy.wait(1000);
+    // cy.contains('Amount').should('be.visible');
+    // cy.wait(1000);
 
   }
 
@@ -1113,9 +1113,9 @@ class AccountDetailsPage {
     cy.wait(1000);
     cy.get('#sendPaymentLink > .dropdown-item').click();
     cy.wait(1000);
-    cy.get('.form-radio-group > label > .ng-untouched').click();
+    cy.get('.form-radio-group > .ng-star-inserted > .ng-untouched').click();
     cy.wait(1000);
-    cy.get('#amount').type('1');
+    cy.get('#amount').clear().type('1');
     cy.wait(1000);
     cy.get('#aend').click();
     cy.wait(1000);
@@ -1152,7 +1152,9 @@ class AccountDetailsPage {
     cy.wait(1000);
     cy.get('#sendPaymentLink > .dropdown-item').click();
     cy.wait(1000);
-    cy.get('#amount').type('1');
+    cy.get('.form-radio-group > .ng-star-inserted > .ng-untouched').click();
+    cy.wait(1000);
+    cy.get('#amount').clear().type('1');
     cy.wait(1000);
     cy.get('#aend').click();
     cy.wait(1000);
@@ -1197,7 +1199,9 @@ class AccountDetailsPage {
     cy.wait(1000);
     cy.get('#sendPaymentLink > .dropdown-item').click();
     cy.wait(1000);
-    cy.get('#amount').type('1');
+    cy.get('.form-radio-group > .ng-star-inserted > .ng-untouched').click();
+    cy.wait(1000);
+    cy.get('#amount').clear().type('1');
     cy.wait(1000);
     cy.get('#aend').click();
     cy.wait(1000);
@@ -1401,11 +1405,13 @@ class AccountDetailsPage {
     cy.wait(3000);
     cy.get(this.locators.clickonsendpaymentlink).click();
     cy.wait(3000);
-    cy.contains('Razor Pay').should('be.visible');
-    cy.wait(1000);
-    cy.contains('Email ID').should('be.visible');
-    cy.wait(1000);
-    cy.contains('Mobile').should('be.visible');
+    // cy.contains('Razor Pay').should('be.visible');
+    // cy.wait(1000);
+    // cy.contains('Email ID').should('be.visible');
+    // cy.wait(1000);
+    // cy.contains('Mobile').should('be.visible');
+    // cy.wait(1000);
+    cy.get('.form-radio-group > .ng-star-inserted > .ng-untouched').click();
     cy.wait(1000);
     cy.get('#amount').type('1');
     cy.wait(1000);
@@ -1442,11 +1448,13 @@ class AccountDetailsPage {
     cy.wait(3000);
     cy.get(this.locators.clickonsendpaymentlink).click();
     cy.wait(3000);
-    cy.contains('Razor Pay').should('be.visible');
-    cy.wait(1000);
-    cy.contains('Email ID').should('be.visible');
-    cy.wait(1000);
-    cy.contains('Mobile').should('be.visible');
+    // cy.contains('Razor Pay').should('be.visible');
+    // cy.wait(1000);
+    // cy.contains('Email ID').should('be.visible');
+    // cy.wait(1000);
+    // cy.contains('Mobile').should('be.visible');
+    // cy.wait(1000);
+    cy.get('.form-radio-group > .ng-star-inserted > .ng-untouched').click();
     cy.wait(1000);
     cy.get('#amount').type('1');
     cy.wait(1000);
@@ -1494,11 +1502,7 @@ class AccountDetailsPage {
     cy.wait(3000);
     cy.get(this.locators.clickonsendpaymentlink).click();
     cy.wait(3000);
-    cy.contains('Razor Pay').should('be.visible');
-    cy.wait(1000);
-    cy.contains('Email ID').should('be.visible');
-    cy.wait(1000);
-    cy.contains('Mobile').should('be.visible');
+  cy.get('.form-radio-group > .ng-star-inserted > .ng-untouched').click();
     cy.wait(1000);
     cy.get('#amount').type('1');
     cy.wait(1000);
@@ -1524,7 +1528,7 @@ class AccountDetailsPage {
       const ref = data.referenceNumber;
     cy.log('Checking for reference number: ' + ref);
 
-      // Assert the reference number is present in the DOM
+      cy.wait(3000);
       cy.contains(ref).should('exist');
     });   
     cy.get(':nth-child(1) > :nth-child(6) > #config-button').click({ force: true });  

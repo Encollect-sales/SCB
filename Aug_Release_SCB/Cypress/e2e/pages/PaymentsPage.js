@@ -33,9 +33,9 @@ class PaymentsPage {
     cy.wait(1000);
     cy.contains('Online Payment Requests').should('be.visible');
     cy.wait(1000);
-    cy.contains('Receipt From Date').should('be.visible');
+    cy.contains('From Date').should('be.visible');
     cy.wait(1000);
-    cy.contains('Receipt To Date').should('be.visible');
+    cy.contains('To Date').should('be.visible');
     cy.wait(1000);
     cy.contains('Request Status').should('be.visible');
     cy.wait(1000);
@@ -52,19 +52,21 @@ class PaymentsPage {
     cy.wait(2000);
     cy.get(this.locators.onlinePaymentRequest).click();
     cy.wait(1000);
-    cy.contains('Online Payment Requests').should('be.visible');
+   cy.contains('Online Payment Requests').should('be.visible');
     cy.wait(1000);
-    cy.contains('Receipt From Date').should('be.visible');
+    cy.contains('From Date').should('be.visible');
     cy.wait(1000);
-    cy.contains('Receipt To Date').should('be.visible');
+    cy.contains('To Date').should('be.visible');
     cy.wait(1000);
     cy.contains('Request Status').should('be.visible');
     cy.wait(1000);
     cy.contains('Request Mode').should('be.visible');
     cy.wait(1000);
-    cy.contains('Agency(s)').should('be.visible');
+    cy.contains('User Branch(s)').should('be.visible');
     cy.wait(1000);
-    cy.contains('Agent(s)').should('be.visible');
+    cy.contains('Staff(s)').should('be.visible');
+    cy.wait(1000);
+    cy.get('#generate-report-button').should("be.disabled");
     cy.wait(1000);
   }
 
