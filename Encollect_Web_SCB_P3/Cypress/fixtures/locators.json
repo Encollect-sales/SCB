@@ -83,8 +83,8 @@
     "ClickonCurrentBucketnew": "#current-bucket",
     "ClickOnAttendenceReport" : ".reports > :nth-child(2) > :nth-child(5) > .ng-star-inserted",
      "ClickOnPerformanceReport":":nth-child(2) > :nth-child(8) > .ng-star-inserted",
-     "ClickonCashWlletLimitReport":":nth-child(14) > .ng-star-inserted",
-     "ClickonCustomerContactReport":":nth-child(13) > .ng-star-inserted",
+     "ClickonCashWlletLimitReport":":nth-child(2) > :nth-child(14) > .ng-star-inserted",
+     "ClickonCustomerContactReport":":nth-child(2) > :nth-child(13) > .ng-star-inserted",
      "ClickonVisitIntensityReport":":nth-child(2) > :nth-child(12) > .ng-star-inserted",
 
      "ClickOn_Product_group":":nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
@@ -104,7 +104,23 @@
     "Clickon_Onwer" :".form-control-group.col-lg-4 > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "ClickonTrail_Product":":nth-child(2) > :nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
 
-    "ClickOn_Country_MM":":nth-child(6) > .form-control-group > .form-ng-select > .ng-select-container"
+    "ClickOn_Country_MM":":nth-child(6) > .form-control-group > .form-ng-select > .ng-select-container",
+    "ClickOn_Agency_RadioBtn":"#agencyUserRadio",
+    "ClickOn_Supervisory_PG":".panel-open > .panel > .panel-collapse > .panel-body > .row > :nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "ClikcOn_Supervisory_Product":".panel-open > .panel > .panel-collapse > .panel-body > .row > :nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "ClickOn_Supervisory_SubProduct":".panel-open > .panel > .panel-collapse > .panel-body > .row > :nth-child(3) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+
+    "ClickOn_Supervisory_Bucket":".panel-open > .panel > .panel-collapse > .panel-body > .row > .col-lg-4.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "ClickOn_Supervisory_Country":".panel-open > .panel > .panel-collapse > .panel-body > .row > :nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    
+    "ClickOn_TrailHistory_Bucket":":nth-child(4) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+
+    "Select_trailGap_BUcket":":nth-child(4) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "Select_trailGap_Country":":nth-child(5) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "Select_trailGap_Region":":nth-child(6) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "Select_trailGap_State":":nth-child(7) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "Select_trailGap_City":":nth-child(8) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "Select_trailGap_Branch":":nth-child(9) > .form-control-group > .form-ng-select > .ng-select-container"
 
 
      
@@ -341,7 +357,11 @@
     "ClickOnAllocFilters": ".allocation > :nth-child(2) > :nth-child(4) > a.ng-star-inserted",
     "AgencyAllocFilter": ".allocation > :nth-child(2) > :nth-child(4) > .sub-nav-list > :nth-child(1) > a",
     "AgentAllocFilters": ".allocation > :nth-child(2) > :nth-child(4) > .sub-nav-list > :nth-child(2) > a",
-    "ClickOnFilterSearch": "#search"
+    "ClickOnFilterSearch": "#search",
+
+    "ClickOn_ProductGroup_AgencyFilter":".panel-open > .panel > .panel-collapse > .panel-body > .row > :nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "ClickOn_Bucket_AgencyFilter":".panel-open > .panel > .panel-collapse > .panel-body > .row > .col-lg-4.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "ClickOn_Country_AgencyFilter":".panel-open > .panel > .panel-collapse > .panel-body > .row > :nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input"
   },
   "CollectionTrend": {
     "clickonreport": "a[title='Reports'] span[class='ng-star-inserted']",
@@ -367,7 +387,7 @@
     "ClickOnUserManagement": "[title='User Management'] > span.ng-star-inserted",
     "ClickOnAgentEmpanelment": ".user-management > :nth-child(2) > :nth-child(2) > a.ng-star-inserted",
     "ClickOnAddAgent": ".user-management > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(1) > a",
-    "ClickOnWalletLimit": ":nth-child(3) > .nav-link > span",
+    "ClickOnWalletLimit": ":nth-child(4) > .nav-link > span",
     "ClickOnSearchAgent": ".user-management > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(2) > a",
     "ClickOnSearchButton": "#btn-search",
     "ClickOnStaffEmpanelment": ".user-management > :nth-child(2) > :nth-child(3) > a.ng-star-inserted",
@@ -415,9 +435,9 @@
     "clickOnYes": "#confirm-dialog-okay",
     "settlementAmount": "#settlementAmt",
     "remark": "#settlementRemarks",
-    "installmentAmount": "#installmentAmount-0",
-    "dueDate": "#installmentDate-0",
-    "dueDateOne": "#installmentDate-0",
+    "installmentAmount": "#installmentAmount-",
+    "dueDate": "#installmentDate-",
+    "dueDateOne": ":nth-child(2) > :nth-child(3) > #installmentDate-",
     "settlementInformation": "[heading='Settlement Information'] > .panel > .panel-heading > .panel-title",
     "settlementTranches": "[heading='Settlement Tranches'] > .panel > .panel-heading > .panel-title",
     "uploadDocument": "[heading='Upload Documents'] > .panel > .panel-heading > .panel-title",
@@ -427,8 +447,8 @@
     "numberOfInstallment": "#numberOfInstallment",
     "underevaluation": ":nth-child(1) > .enc-card-content > .table > tbody > :nth-child(2) > .w-50 > .status-link",
     "myRequest": ".settlement > .sub-nav-list > :nth-child(3) > .ng-star-inserted",
-    "myActionQueue": "a[title='My Action Queue']",
-    "clickOnUnderEvaluation": ":nth-child(1) > .status-link",
+    "myActionQueue": ".settlement > .sub-nav-list > :nth-child(4) > .ng-star-inserted",
+    "clickOnUnderEvaluation": ":nth-child(1) > :nth-child(1) > .status-link",
     "clickOnUnderEvaluation1": ":nth-child(1) > :nth-child(1) > .status-link",
     "clickOnUpdateButton": "#updateCaseStatusIcon",
     "action": ".form-field > .form-select",
@@ -462,12 +482,12 @@
     "ClickOnSubmitBtn": "#search-submit-button",
     "Type_Cuc_Name": "#search-customer-name",
     "Type_CC_LastDigit": "#search-cc-number",
-    "Type_Bucket": "('input[placeholder='Enter Bucket']'",
+    "Type_Bucket": ":nth-child(5) > .form-control-group > .form-control",
     "Type_SOC": "('input[placeholder='Enter SOC']'",
     "Type_Cycle": "('input[placeholder='Enter Cycle']'",
     "Type_BranchCode": "('input[placeholder='Enter Branch Code']'",
     "Type_Status": "('input[placeholder='Enter Status']'",
-    "Type_Cus_ID": "('input[placeholder='Enter Customer ID']'"
+    "Type_Cus_ID": ":nth-child(5) > .form-control-group > .form-control"
   },
 
   "IssueReceipt":{
@@ -488,13 +508,6 @@
  "ClickOn_Submit_Payment":".btn-secondary",
  "ClickOnOkay":"#confirm-dialog-okay",
  "ClickOn_Home":".btn-success"
-
-
-  },
-
-  "SearchAccount":{
-
-
 
 
   },

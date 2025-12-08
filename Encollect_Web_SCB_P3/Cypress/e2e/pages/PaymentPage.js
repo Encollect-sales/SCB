@@ -164,17 +164,38 @@ PaymentTestPage_07(){
     cy.wait(1000);
     cy.get(this.locators.ClickOnReceiveMoneyCollector).click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnCollectorcode).type(2163);
+    cy.get(this.locators.ClickOnCollectorcode).type(2, {force: true});
+    cy.wait(2000);
+    cy.get("h5[class='ng-star-inserted']").first().click({force: true});
     cy.wait(1000);
+    // cy.get(this.locators.ClickOnCollectorcode).type(2163);
+    // cy.wait(1000);
     //cy.get('#ngb-typeahead-1-0 > .ng-star-inserted').click();
-    cy.wait(1000);
-    cy.get(this.locators.ClickOnFromDate).type("01/06/2025");
-    cy.wait(1000);
-    cy.get(this.locators.ClickOnTODate).click();
-    cy.wait(1000);
-    cy.get('.today-date').click();
-    cy.wait(1000);
-    //cy.get(this.locators.ClickSearchButton).click();
+
+    cy.get(this.locators.ClickOnFromDate).click();
+                        cy.wait(2000);
+                        cy.get('.previous > span').click();
+                        cy.wait(2000);
+                        const pastDate = new Date();
+                        pastDate.setDate(pastDate.getDate() - 30);
+                        const pastDay = pastDate.getDate().toString();
+                        cy.get('.bs-datepicker-body').contains('span', pastDay).click();
+                        cy.wait(2000);
+                        cy.get(this.locators.ClickOnTODate).click();
+                        cy.wait(2000);
+                        const today = new Date().getDate().toString();
+                        cy.get('.bs-datepicker-body').contains('span', today).click();
+                        cy.wait(2000);
+
+
+    // cy.wait(1000);
+    // cy.get(this.locators.ClickOnFromDate).type("01/06/2025");
+    // cy.wait(1000);
+    // cy.get(this.locators.ClickOnTODate).click();
+    // cy.wait(1000);
+    // cy.get('.today-date').click();
+    // cy.wait(1000);
+    cy.get(this.locators.ClickSearchButton).click();
     cy.wait(3000);
 
 }

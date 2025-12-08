@@ -9,12 +9,12 @@ class DashboardPage {
 
   NewDashboardTestPage_01() {
     cy.get(this.locators.ClickOnCredit_Radio_btn).click();
-    cy.wait(1000);
+    cy.wait(3000);
     cy.get(".ng-arrow-wrapper").click();
+    cy.wait(2000);
+    cy.contains("span.ng-option-label", "Credit Card Last 4 Digits").click();
     cy.wait(1000);
-    cy.contains("span.ng-option-label", "Credit Card Last 4 digits").click();
-    cy.wait(1000);
-    cy.contains("Credit Card Last 4 digits").should("be.visible");
+    cy.contains("Credit Card Last 4 Digits").should("be.visible");
     cy.wait(1000);
     cy.get(this.locators.ClickOnSubmitBtn).click({ force: true });
     cy.wait(1000);
@@ -33,14 +33,14 @@ class DashboardPage {
     cy.wait(1000);
   }
 
-  NewDashboardTestPage_03() {}
-
   NewDashboardTestPage_04() {
+
+    cy.wait(3000)
     cy.get(this.locators.ClickOnCredit_Radio_btn).click();
     cy.wait(1000);
     cy.get(".ng-arrow-wrapper").click();
     cy.wait(1000);
-    cy.contains("span.ng-option-label", "Credit Card Last 4 digits").click();
+    cy.contains("span.ng-option-label", "Credit Card Last 4 Digits").click();
     cy.wait(1000);
     cy.get(this.locators.Type_CC_LastDigit).type("7990");
     cy.wait(1000);
@@ -51,6 +51,7 @@ class DashboardPage {
   }
 
   NewDashboardTestPage_05() {
+     cy.wait(3000)
     cy.get(this.locators.ClickOnCredit_Radio_btn).click();
     cy.wait(1000);
     cy.get(this.locators.Type_Cuc_Name).type("Arun");
@@ -63,13 +64,8 @@ class DashboardPage {
     cy.wait(1000);
   }
 
-  NewDashboardTestPage_06() {
-
-
-
-  }
-
   NewDashboardTestPage_07() {
+     cy.wait(3000)
     cy.get(this.locators.ClickOnCredit_Radio_btn).click();
     cy.wait(1000);
     cy.get(".ng-arrow-wrapper").click();
@@ -85,6 +81,7 @@ class DashboardPage {
   }
 
   NewDashboardTestPage_08() {
+      cy.wait(3000)
     cy.get(this.locators.ClickOnCredit_Radio_btn).click();
     cy.wait(1000);
     cy.get(".ng-arrow-wrapper").click();
@@ -100,6 +97,8 @@ class DashboardPage {
   }
 
   NewDashboardTestPage_09() {
+    
+      cy.wait(3000)
     cy.get(this.locators.ClickOnCredit_Radio_btn).click();
     cy.wait(1000);
     cy.get(".ng-arrow-wrapper").click();
@@ -115,6 +114,7 @@ class DashboardPage {
   }
 
   NewDashboardTestPage_10() {
+      cy.wait(3000)
     cy.get(this.locators.ClickOnCredit_Radio_btn).click();
     cy.wait(1000);
     cy.get(".ng-arrow-wrapper").click();
@@ -130,6 +130,7 @@ class DashboardPage {
   }
 
   NewDashboardTestPage_11() {
+      cy.wait(3000)
     cy.get(this.locators.ClickOnCredit_Radio_btn).click();
     cy.wait(1000);
     cy.get(".ng-arrow-wrapper").click();
@@ -145,6 +146,7 @@ class DashboardPage {
   }
 
   NewDashboardTestPage_12() {
+      cy.wait(3000)
     cy.get(this.locators.ClickOnCredit_Radio_btn).click();
     cy.wait(1000);
     cy.get(".ng-arrow-wrapper").click();
@@ -157,14 +159,8 @@ class DashboardPage {
     cy.wait(1000);
     cy.get(this.locators.ClickOnSubmitBtn).click({ force: true });
     cy.wait(3000);
-    cy.contains("Customer ID").should("be.visible");
+    cy.get('#grid-table > thead > tr > :nth-child(2)').contains("Customer ID").should("be.visible");
     cy.wait(2000);
-  }
-
-  NewDashboardTestPage_13() {
-
-
-
   }
 
   NewDashboardTestPage_14() {

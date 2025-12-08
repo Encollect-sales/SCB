@@ -35,11 +35,11 @@ describe('Trails - Bulk trail upload  -', () => {
 
             const data = {
                 'A2': '1667',
-                'B2': '1660',
+                'B2': '10031',
                 'C2': 'Yes',
                 'D2': 'PTP',
                 'E2': 'PTP',
-                'F2': '2025-06-28',
+                'F2': '2027-06-28',
                 'G2': '21524',
                 'I2': 'Bulk upload dec 16',
                 'J2': '9942413413',

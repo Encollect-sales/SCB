@@ -88,9 +88,9 @@ describe('System Setting - Master Upload', () => {
                   }).then(() => {
                     cy.log('Excel file updated successfully with new data');
                     
-                    cy.wait(2000);
+                    cy.wait(5000);
                     cy.origin('https://yopmail.com', () => {
-                      cy.wait(2000);
+                      cy.wait(5000);
                     cy.visit('https://yopmail.com');
                     cy.get('#login').type('rahmancbm@yopmail.com');  // Type the email address
                     cy.get('.material-icons-outlined.f36').click();

@@ -16,14 +16,18 @@ IssueReceiptTestPage_01(){
     cy.wait(1000);
     cy.get(this.locators.ClickOnWalk_in_cus).click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
-    cy.wait(3000);
-   cy.get(this.locators.ClickOn_Physical_Rec_no).type(faker.number.int({ min: 100000, max: 999999 }));
-    cy.wait(1000);
-    cy.get(this.locators.ClickOn_Collec_Id).type(2163);
+
+ const randomNumber = faker.number.int({ min: 1000, max: 999999 });
+
+cy.get(this.locators.ClickOn_Physical_Rec_no).type(randomNumber.toString());
+cy.wait(2000);
+cy.get(this.locators.ClickOn_Collec_Id).type(2, {force: true});
     cy.wait(2000);
-    cy.get("h5[class='ng-star-inserted']").click();
+    cy.get("h5[class='ng-star-inserted']").first().click({force: true});
     cy.wait(1000);
+cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
+    cy.wait(3000);
+    
     cy.get(this.locators.Select_Relationship_with_Cus).select("Herself/Himself");
     cy.wait(1000);
     cy.get(this.locators.Select_Mode_Of_Payment).select("CASH");
@@ -39,7 +43,7 @@ IssueReceiptTestPage_01(){
     cy.get('input[type="file"]').attachFile(filePath);
     cy.wait(2000);
 
-    cy.get(this.locators.Type_Pan_Num).type("boops9614b");
+    cy.get(this.locators.Type_Pan_Num).type("panca9614b");
     cy.wait(1000);
     cy.get(this.locators.ClickOn_Submit_Payment).click();
     cy.wait(2000);
@@ -48,14 +52,15 @@ IssueReceiptTestPage_01(){
 
     cy.get('.btn-primary').click();
     cy.wait(4000);
-     cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
-    cy.wait(3000);
-   cy.get(this.locators.ClickOn_Physical_Rec_no).type(faker.number.int({ min: 100000, max: 999999 }));
-    cy.wait(1000);
-    cy.get(this.locators.ClickOn_Collec_Id).type(2163);
+
+cy.get(this.locators.ClickOn_Physical_Rec_no).type(randomNumber.toString());
+cy.wait(2000);
+cy.get(this.locators.ClickOn_Collec_Id).type(2, {force: true});
     cy.wait(2000);
-    cy.get("h5[class='ng-star-inserted']").click();
+    cy.get("h5[class='ng-star-inserted']").first().click({force: true});
     cy.wait(1000);
+cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
+    cy.wait(3000);
     cy.get(this.locators.Select_Relationship_with_Cus).select("Herself/Himself");
     cy.wait(1000);
     cy.get(this.locators.Select_Mode_Of_Payment).select("CASH");
@@ -71,7 +76,7 @@ IssueReceiptTestPage_01(){
     cy.get('input[type="file"]').attachFile(filePath1);
     cy.wait(2000);
 
-    cy.get(this.locators.Type_Pan_Num).type("boops9614b");
+    cy.get(this.locators.Type_Pan_Num).type("panca9614b");
     cy.wait(1000);
     cy.get(this.locators.ClickOn_Submit_Payment).click();
     cy.wait(2000);
@@ -90,14 +95,16 @@ IssueReceiptTestPage_02(){
     cy.wait(1000);
     cy.get(this.locators.ClickOnWalk_in_cus).click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
-    cy.wait(3000);
-     cy.get(this.locators.ClickOn_Physical_Rec_no).type(faker.number.int({ min: 100000, max: 999999 }));
-    cy.wait(1000);
-    cy.get(this.locators.ClickOn_Collec_Id).type(2163);
+    const randomNumber = faker.number.int({ min: 1000, max: 999999 });
+
+cy.get(this.locators.ClickOn_Physical_Rec_no).type(randomNumber.toString());
+cy.wait(2000);
+cy.get(this.locators.ClickOn_Collec_Id).type(2, {force: true});
     cy.wait(2000);
-    cy.get("h5[class='ng-star-inserted']").click();
+    cy.get("h5[class='ng-star-inserted']").first().click({force: true});
     cy.wait(1000);
+cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
+    cy.wait(3000);
     cy.get(this.locators.Select_Relationship_with_Cus).select("Herself/Himself");
     cy.wait(1000);
     cy.get(this.locators.Select_Mode_Of_Payment).select("CASH");
@@ -113,7 +120,7 @@ IssueReceiptTestPage_02(){
     cy.get('input[type="file"]').attachFile(filePath);
     cy.wait(2000);
 
-    cy.get(this.locators.Type_Pan_Num).type("boops9614b");
+    cy.get(this.locators.Type_Pan_Num).type("panca9614b");
     cy.wait(1000);
     cy.get(this.locators.ClickOn_Submit_Payment).click();
     cy.wait(2000);
@@ -134,14 +141,16 @@ IssueReceiptTestPage_03(){
     cy.wait(1000);
     cy.get(this.locators.ClickOnWalk_in_cus).click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
-    cy.wait(3000);
-    cy.get(this.locators.ClickOn_Physical_Rec_no).type(faker.number.int({ min: 100000, max: 999999 }));
-    cy.wait(1000);
-    cy.get(this.locators.ClickOn_Collec_Id).type(2163);
+    const randomNumber = faker.number.int({ min: 1000, max: 999999 });
+
+cy.get(this.locators.ClickOn_Physical_Rec_no).type(randomNumber.toString());
+cy.wait(2000);
+cy.get(this.locators.ClickOn_Collec_Id).type(2, {force: true});
     cy.wait(2000);
-    cy.get("h5[class='ng-star-inserted']").click();
+    cy.get("h5[class='ng-star-inserted']").first().click({force: true});
     cy.wait(1000);
+cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
+    cy.wait(3000);
     cy.get(this.locators.Select_Relationship_with_Cus).select("Herself/Himself");
     cy.wait(1000);
     cy.get(this.locators.Select_Mode_Of_Payment).select("CASH");
@@ -157,7 +166,7 @@ IssueReceiptTestPage_03(){
     cy.get('input[type="file"]').attachFile(filePath);
     cy.wait(2000);
 
-    cy.get(this.locators.Type_Pan_Num).type("boops9614b");
+    cy.get(this.locators.Type_Pan_Num).type("panca9614b");
     cy.wait(1000);
     cy.get(this.locators.ClickOn_Submit_Payment).click();
     cy.wait(2000);
@@ -178,14 +187,16 @@ IssueReceiptTestPage_04(){
     cy.wait(1000);
     cy.get(this.locators.ClickOnWalk_in_cus).click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
-    cy.wait(3000);
-     cy.get(this.locators.ClickOn_Physical_Rec_no).type(faker.number.int({ min: 100000, max: 999999 }));
-    cy.wait(1000);
-    cy.get(this.locators.ClickOn_Collec_Id).type(2163);
+    const randomNumber = faker.number.int({ min: 1000, max: 999999 });
+
+cy.get(this.locators.ClickOn_Physical_Rec_no).type(randomNumber.toString());
+cy.wait(2000);
+cy.get(this.locators.ClickOn_Collec_Id).type(2, {force: true});
     cy.wait(2000);
-    cy.get("h5[class='ng-star-inserted']").click();
+    cy.get("h5[class='ng-star-inserted']").first().click({force: true});
     cy.wait(1000);
+cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
+    cy.wait(3000);
     cy.get(this.locators.Select_Relationship_with_Cus).select("Herself/Himself");
     cy.wait(1000);
     cy.get(this.locators.Select_Mode_Of_Payment).select("CASH");
@@ -201,7 +212,7 @@ IssueReceiptTestPage_04(){
     cy.get('input[type="file"]').attachFile(filePath);
     cy.wait(2000);
 
-    cy.get(this.locators.Type_Pan_Num).type("boops9614b");
+    cy.get(this.locators.Type_Pan_Num).type("panca9614b");
     cy.wait(1000);
     cy.get(this.locators.ClickOn_Submit_Payment).click();
     cy.wait(2000);
@@ -223,14 +234,16 @@ IssueReceiptTestPage_05(){
     cy.wait(1000);
     cy.get(this.locators.ClickOnWalk_in_cus).click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
-    cy.wait(3000);
-    cy.get(this.locators.ClickOn_Physical_Rec_no).type(faker.number.int({ min: 100000, max: 999999 }));
-    cy.wait(1000);
-    cy.get(this.locators.ClickOn_Collec_Id).type(2163);
+    const randomNumber = faker.number.int({ min: 1000, max: 999999 });
+
+cy.get(this.locators.ClickOn_Physical_Rec_no).type(randomNumber.toString());
+cy.wait(2000);
+cy.get(this.locators.ClickOn_Collec_Id).type(2, {force: true});
     cy.wait(2000);
-    cy.get("h5[class='ng-star-inserted']").click();
+    cy.get("h5[class='ng-star-inserted']").first().click({force: true});
     cy.wait(1000);
+cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
+    cy.wait(3000);
     cy.get(this.locators.Select_Relationship_with_Cus).select("Herself/Himself");
     cy.wait(1000);
     cy.get(this.locators.Select_Mode_Of_Payment).select("CASH");
@@ -246,7 +259,7 @@ IssueReceiptTestPage_05(){
     cy.get('input[type="file"]').attachFile(filePath);
     cy.wait(2000);
 
-    cy.get(this.locators.Type_Pan_Num).type("boops9614b");
+    cy.get(this.locators.Type_Pan_Num).type("panca9614b");
     cy.wait(1000);
     cy.get(this.locators.ClickOn_Submit_Payment).click();
     cy.wait(2000);
@@ -278,7 +291,7 @@ IssueReceiptTestPage_05(){
     cy.get('input[type="file"]').attachFile(filePath1);
     cy.wait(2000);
 
-    cy.get(this.locators.Type_Pan_Num).type("boops9614b");
+    cy.get(this.locators.Type_Pan_Num).type("panca9614b");
     cy.wait(1000);
     cy.get(this.locators.ClickOn_Submit_Payment).click();
     cy.wait(2000);
@@ -297,14 +310,16 @@ IssueReceiptTestPage_06(){
     cy.wait(1000);
     cy.get(this.locators.ClickOnWalk_in_cus).click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
-    cy.wait(3000);
-   cy.get(this.locators.ClickOn_Physical_Rec_no).type(faker.number.int({ min: 100000, max: 999999 }));
-    cy.wait(1000);
-    cy.get(this.locators.ClickOn_Collec_Id).type(2163);
+   const randomNumber = faker.number.int({ min: 1000, max: 999999 });
+
+cy.get(this.locators.ClickOn_Physical_Rec_no).type(randomNumber.toString());
+cy.wait(2000);
+cy.get(this.locators.ClickOn_Collec_Id).type(2, {force: true});
     cy.wait(2000);
-    cy.get("h5[class='ng-star-inserted']").click();
+    cy.get("h5[class='ng-star-inserted']").first().click({force: true});
     cy.wait(1000);
+cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
+    cy.wait(3000);
     cy.get(this.locators.Select_Relationship_with_Cus).select("Herself/Himself");
     cy.wait(1000);
     cy.get(this.locators.Select_Mode_Of_Payment).select("ONLINE PAYMENT");
@@ -322,7 +337,7 @@ IssueReceiptTestPage_06(){
     cy.get('input[type="file"]').attachFile(filePath);
     cy.wait(2000);
 
-    cy.get(this.locators.Type_Pan_Num).type("boops9614b");
+    cy.get(this.locators.Type_Pan_Num).type("panca9614b");
     cy.wait(1000);
     cy.get(this.locators.ClickOn_Submit_Payment).click();
     cy.wait(2000);
@@ -341,14 +356,16 @@ IssueReceiptTestPage_07(){
     cy.wait(1000);
     cy.get(this.locators.ClickOnWalk_in_cus).click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
-    cy.wait(3000);
-     cy.get(this.locators.ClickOn_Physical_Rec_no).type(faker.number.int({ min: 100000, max: 999999 }));
-    cy.wait(1000);
-    cy.get(this.locators.ClickOn_Collec_Id).type(2163);
+   const randomNumber = faker.number.int({ min: 1000, max: 999999 });
+
+cy.get(this.locators.ClickOn_Physical_Rec_no).type(randomNumber.toString());
+cy.wait(2000);
+cy.get(this.locators.ClickOn_Collec_Id).type(2, {force: true});
     cy.wait(2000);
-    cy.get("h5[class='ng-star-inserted']").click();
+    cy.get("h5[class='ng-star-inserted']").first().click({force: true});
     cy.wait(1000);
+cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
+    cy.wait(3000);
     cy.get(this.locators.Select_Relationship_with_Cus).select("Herself/Himself");
     cy.wait(1000);
     cy.get(this.locators.Select_Mode_Of_Payment).select("ONLINE TRANSFER");
@@ -366,7 +383,7 @@ IssueReceiptTestPage_07(){
     cy.get('input[type="file"]').attachFile(filePath);
     cy.wait(2000);
 
-    cy.get(this.locators.Type_Pan_Num).type("boops9614b");
+    cy.get(this.locators.Type_Pan_Num).type("panca9614b");
     cy.wait(1000);
     cy.get(this.locators.ClickOn_Submit_Payment).click();
     cy.wait(2000);
@@ -385,14 +402,16 @@ IssueReceiptTestPage_08(){
     cy.wait(1000);
     cy.get(this.locators.ClickOnWalk_in_cus).click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
-    cy.wait(3000);
-     cy.get(this.locators.ClickOn_Physical_Rec_no).type(faker.number.int({ min: 100000, max: 999999 }));
-    cy.wait(1000);
-    cy.get(this.locators.ClickOn_Collec_Id).type(2163);
+   const randomNumber = faker.number.int({ min: 1000, max: 999999 });
+
+cy.get(this.locators.ClickOn_Physical_Rec_no).type(randomNumber.toString());
+cy.wait(2000);
+cy.get(this.locators.ClickOn_Collec_Id).type(2, {force: true});
     cy.wait(2000);
-    cy.get("h5[class='ng-star-inserted']").click();
+    cy.get("h5[class='ng-star-inserted']").first().click({force: true});
     cy.wait(1000);
+cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
+    cy.wait(3000);
     cy.get(this.locators.Select_Relationship_with_Cus).select("Herself/Himself");
     cy.wait(1000);
     cy.get(this.locators.Select_Mode_Of_Payment).select("ONLINE PAYMENT");
@@ -410,7 +429,7 @@ IssueReceiptTestPage_08(){
     cy.get('input[type="file"]').attachFile(filePath);
     cy.wait(2000);
 
-    cy.get(this.locators.Type_Pan_Num).type("boops9614b");
+    cy.get(this.locators.Type_Pan_Num).type("panca9614b");
     cy.wait(1000);
     cy.get(this.locators.ClickOn_Submit_Payment).click();
     cy.wait(2000);
@@ -431,14 +450,16 @@ cy.get(this.locators.ClickOnPayment).click();
     cy.wait(1000);
     cy.get(this.locators.ClickOnWalk_in_cus).click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCus_Acc_Num).type("68200000020152");
-    cy.wait(3000);
-    cy.get(this.locators.ClickOn_Physical_Rec_no).type("5689786");
-    cy.wait(1000);
-    cy.get(this.locators.ClickOn_Collec_Id).type(2235);
+   const randomNumber = faker.number.int({ min: 1000, max: 999999 });
+
+cy.get(this.locators.ClickOn_Physical_Rec_no).type(randomNumber.toString());
+cy.wait(2000);
+cy.get(this.locators.ClickOn_Collec_Id).type(2, {force: true});
     cy.wait(2000);
-    cy.get("h5[class='ng-star-inserted']").click();
+    cy.get("h5[class='ng-star-inserted']").first().click({force: true});
     cy.wait(1000);
+cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
+    cy.wait(3000);
     cy.get(this.locators.Select_Relationship_with_Cus).select("Herself/Himself");
     cy.wait(1000);
     cy.get(this.locators.Select_Mode_Of_Payment).select("CASH");
@@ -471,14 +492,16 @@ cy.get(this.locators.ClickOnPayment).click();
     cy.wait(1000);
     cy.get(this.locators.ClickOnWalk_in_cus).click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCus_Acc_Num).type("68200000020152");
-    cy.wait(3000);
-    cy.get(this.locators.ClickOn_Physical_Rec_no).type("568895");
-    cy.wait(1000);
-    cy.get(this.locators.ClickOn_Collec_Id).type(2163);
+    const randomNumber = faker.number.int({ min: 1000, max: 999999 });
+
+cy.get(this.locators.ClickOn_Physical_Rec_no).type(randomNumber.toString());
+cy.wait(2000);
+cy.get(this.locators.ClickOn_Collec_Id).type(2, {force: true});
     cy.wait(2000);
-    cy.get("h5[class='ng-star-inserted']").click();
+    cy.get("h5[class='ng-star-inserted']").first().click({force: true});
     cy.wait(1000);
+cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
+    cy.wait(3000);
     cy.get(this.locators.Select_Relationship_with_Cus).select("Herself/Himself");
     cy.wait(1000);
     cy.get(this.locators.Select_Mode_Of_Payment).select("ONLINE TRANSFER");
@@ -496,7 +519,7 @@ cy.get(this.locators.ClickOnPayment).click();
     cy.get('input[type="file"]').attachFile(filePath);
     cy.wait(2000);
 
-    cy.get(this.locators.Type_Pan_Num).type("boops9614b");
+    cy.get(this.locators.Type_Pan_Num).type("panca9614b");
     cy.wait(1000);
     cy.get(this.locators.ClickOn_Submit_Payment).click();
     cy.wait(2000);

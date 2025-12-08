@@ -211,7 +211,7 @@ DashboardTestPage_285(){
   cy.get(this.locators.CustomerName).type("a");
   cy.wait(1000);
   cy.get(this.locators.ClickOnSearch).click();
-  cy.wait(1000);
+  cy.wait(4000);
   //cy.contains("Customer Name").should ("be.visible");
  // cy.wait(1000);
   cy.contains("Customer ID").should ("be.visible");
@@ -220,11 +220,11 @@ DashboardTestPage_285(){
   cy.wait(1000);
   cy.contains("Min Amount Due").should ("be.visible");
   cy.wait(1000);
-  cy.get(':nth-child(4) > .card-content').scrollTo(500,0);
-  cy.wait(500);
-  cy.contains("Month Opening Bucket").should ("be.visible");
+  // cy.get(':nth-child(4) > .card-content').scrollTo(500,0);
+  // cy.wait(500);
+  cy.contains("Month Opening Bucket").scrollIntoView().should ("be.visible");
   cy.wait(1000);
-  cy.contains("TAD").should ("be.visible");
+  cy.contains("TAD").scrollIntoView().should("be.visible");
   cy.wait(1000);
 
 }

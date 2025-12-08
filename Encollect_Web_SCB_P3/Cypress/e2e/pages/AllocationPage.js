@@ -537,16 +537,47 @@ AllocationTestPage_21(){
   cy.wait(2000);
   cy.get(this.locators.AgencyAllocFilter).click();
   cy.wait(2000);
-  cy.get('#Productgroup').select("All");
+  cy.get(this.locators.ClickOn_ProductGroup_AgencyFilter).click();
   cy.wait(1000);
+
+   
+    cy.get('.ng-dropdown-panel .ng-option')
+    .each(($option) => {
+    cy.wrap($option).click({ force: true });
+    cy.wait(1000);
+    cy.get(this.locators.ClickOn_ProductGroup_AgencyFilter).click();
+    cy.wait(2000);
+  });
+cy.wait(2000);
+
   cy.get('[heading="Bucket Filter"] > .panel > .panel-heading').click();
   cy.wait(1000);
-  cy.get('#bomBucket').select("All");
-  cy.wait(1000);
+ 
+  cy.get(this.locators.ClickOn_Bucket_AgencyFilter).click();
+   cy.wait(1000);
+    cy.get('.ng-dropdown-panel .ng-option')
+    .each(($option) => {
+    cy.wrap($option).click({ force: true });
+    cy.wait(1000);
+    cy.get(this.locators.ClickOn_Bucket_AgencyFilter).click();
+    cy.wait(2000);
+  });
+cy.wait(2000);
+
   cy.get('[heading="  Geography Filter"] > .panel > .panel-heading > .panel-title').click();
   cy.wait(1000);
-  cy.get('#Country').select("All");
-  cy.wait(1000);
+  
+   cy.get(this.locators.ClickOn_Country_AgencyFilter).click();
+   cy.wait(1000);
+    cy.get('.ng-dropdown-panel .ng-option')
+    .each(($option) => {
+    cy.wrap($option).click({ force: true });
+    cy.wait(1000);
+    cy.get(this.locators.ClickOn_Country_AgencyFilter).click();
+    cy.wait(2000);
+  });
+cy.wait(2000);
+
   cy.get('#unAllocated').click();
   cy.wait(1000);
   cy.get('#Allocated').click();

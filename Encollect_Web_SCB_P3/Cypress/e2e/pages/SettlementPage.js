@@ -236,7 +236,7 @@ class SettlementPage {
     cy.wait(1000);
     cy.get(this.locators.TypeCurrentDPDTo).type(100);
     cy.wait(1000);
-    cy.get(this.locators.TypeTotalOutstandingFrom).type(100);
+    cy.get(this.locators.TypeTotalOutstandingFrom).type(10);
     cy.wait(1000);
     cy.get(this.locators.TypeTotalOutstandingTo).type(10000);
     cy.wait(1000);
@@ -253,11 +253,11 @@ class SettlementPage {
     cy.wait(1000);
     cy.get(this.locators.ClickOnFindEligibleCases).click();
     cy.wait(1000);
-    cy.get(this.locators.TypeCurrentDPDFrom).type(1);
-    cy.wait(1000);
-    cy.get(this.locators.TypeCurrentDPDTo).type(100);
-    cy.wait(1000);
-    cy.get(this.locators.TypeCustomerID).type(180000000522);
+    // cy.get(this.locators.TypeCurrentDPDFrom).type(1);
+    // cy.wait(1000);
+    // cy.get(this.locators.TypeCurrentDPDTo).type(100);
+    // cy.wait(1000);
+    cy.get(this.locators.TypeCustomerID).type(210000003738);
     cy.wait(1000);
     cy.get(this.locators.ClickOnSearchBtn).click();
     cy.wait(3000);
@@ -1680,7 +1680,7 @@ class SettlementPage {
     cy.wait(1000);
     cy.contains('S.No').should('be.visible');
     cy.wait(1000);
-    cy.contains('Installment Amount (Rs)').should('be.visible');
+    cy.contains('Installment Amount (₹)').should('be.visible');
     cy.wait(1000);
     cy.contains('Installment Due Date').should('be.visible');
     cy.wait(1000);
@@ -2635,7 +2635,7 @@ class SettlementPage {
       cy.wait(1000);
       cy.contains('Count').should('be.visible');
       cy.wait(1000);
-      cy.contains('Amount (Rs)').should('be.visible');
+      cy.contains('Amount (₹)').should('be.visible');
       cy.wait(1000);
       cy.contains('Total').should('be.visible');
       cy.wait(1000);
@@ -2657,7 +2657,7 @@ class SettlementPage {
       cy.wait(1000);
       cy.contains('Count').should('be.visible');
       cy.wait(1000);
-      cy.contains('Amount (Rs)').should('be.visible');
+      cy.contains('Amount (₹)').should('be.visible');
       cy.wait(1000);
       cy.contains('Total').should('be.visible');
       cy.wait(1000);
@@ -2679,7 +2679,7 @@ class SettlementPage {
       cy.wait(1000);
       cy.contains('Count').should('be.visible');
       cy.wait(1000);
-      cy.contains('Amount (Rs)').should('be.visible');
+      cy.contains('Amount (₹)').should('be.visible');
       cy.wait(1000);
       cy.contains('Total').should('be.visible');
       cy.wait(1000);
@@ -2701,7 +2701,7 @@ class SettlementPage {
       cy.wait(1000);
       cy.contains('Count').should('be.visible');
       cy.wait(1000);
-      cy.contains('Amount (Rs)').should('be.visible');
+      cy.contains('Amount (₹)').should('be.visible');
       cy.wait(1000);
       cy.contains('Total').should('be.visible');
       cy.wait(1000);
@@ -2808,7 +2808,7 @@ class SettlementPage {
       cy.wait(1000);
       cy.contains('Customer Name').should('be.visible');
       cy.wait(1000);
-      cy.contains('Settlement Amount (Rs)').should('be.visible');
+      cy.contains('Settlement Amount (₹)').should('be.visible');
       cy.wait(1000);
     })
   }

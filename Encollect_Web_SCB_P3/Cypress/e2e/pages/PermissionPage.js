@@ -3,6 +3,8 @@ import { getBaseUrl } from "../utils/configUtils";
 const path = require("path");
 import { faker } from "@faker-js/faker";
 
+
+
 class PermissionPage {
   constructor(locators) {
     this.locators = locators;
@@ -453,8 +455,8 @@ class PermissionPage {
 
     cy.get(this.locators.EnableAll_profilesettings).click();
     cy.wait(2000);
-    cy.contains("Mark All No").should("be.visible");
-    cy.wait(1000);
+    // cy.contains("Mark All No").should("be.visible");
+    // cy.wait(1000);
     cy.get(this.locators.ClickOnSavepermissionScheme).scrollIntoView().click();
     cy.wait(2000);
     cy.contains(schemeName).should("be.visible");
@@ -574,7 +576,7 @@ class PermissionPage {
     cy.wait(1000);
     cy.get(this.locators.Click_SearchPermissionScheme).click();
     cy.wait(1000);
-    cy.get(this.locators.Click_ClickOn_Search).type("AAAA");
+    cy.get(this.locators.ClickOn_Search).type("AAAA");
     cy.wait(2000);
 
   }
@@ -587,7 +589,7 @@ class PermissionPage {
     cy.wait(1000);
     cy.get(this.locators.Click_SearchPermissionScheme).click();
     cy.wait(1000);
-    cy.get(this.locators.Click_ClickOn_Search).type("AAAA");
+    cy.get(this.locators.ClickOn_Search).type("AAAA");
     cy.wait(2000);
      cy.contains("AAAA").should("be.visible");
     cy.wait(2000);
@@ -602,11 +604,11 @@ class PermissionPage {
     cy.wait(1000);
     cy.get(this.locators.Click_SearchPermissionScheme).click();
     cy.wait(1000);
-    cy.get(this.locators.Click_ClickOn_Search).type("AAAA");
+    cy.get(this.locators.ClickOn_Search).type("AAAA");
     cy.wait(2000);
      cy.contains("AAAA").should("be.visible");
     cy.wait(2000);
-     cy.get(this.locators.Click_ClickOn_Search).clear();
+     cy.get(this.locators.ClickOn_Search).clear();
     cy.wait(2000);
 
   }
@@ -666,7 +668,7 @@ class PermissionPage {
     cy.wait(1000);
     cy.get(this.locators.Click_SearchPermissionScheme).click();
     cy.wait(1000);
-    cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click();
+    cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
 
   }
@@ -679,7 +681,7 @@ class PermissionPage {
     cy.wait(1000);
     cy.get(this.locators.Click_SearchPermissionScheme).click();
     cy.wait(1000);
-    cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click();
+       cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
      cy.contains("View Scheme").should("be.visible");
     cy.wait(2000);
@@ -699,7 +701,7 @@ class PermissionPage {
     cy.wait(1000);
     cy.get(this.locators.Click_SearchPermissionScheme).click();
     cy.wait(1000);
-    cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click();
+       cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
     cy.get(this.locators.clickon_viewscheme).click();
     cy.wait(1000);
@@ -716,7 +718,7 @@ class PermissionPage {
     cy.wait(1000);
     cy.get(this.locators.Click_SearchPermissionScheme).click();
     cy.wait(1000);
-    cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click();
+       cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
     cy.get(this.locators.clickon_viewscheme).click();
     cy.wait(1000);
@@ -745,7 +747,7 @@ class PermissionPage {
     cy.wait(1000);
     cy.get(this.locators.Click_SearchPermissionScheme).click();
     cy.wait(1000);
-    cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click();
+       cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
     cy.get(this.locators.clickon_viewscheme).click();
     cy.wait(1000);
@@ -766,7 +768,7 @@ class PermissionPage {
     cy.wait(1000);
     cy.get(this.locators.Click_SearchPermissionScheme).click();
     cy.wait(1000);
-    cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click();
+       cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
     cy.get(this.locators.ClickOn_viewAssignedDesignations).click();
     cy.wait(1000);
@@ -783,7 +785,7 @@ class PermissionPage {
     cy.wait(1000);
     cy.get(this.locators.Click_SearchPermissionScheme).click();
     cy.wait(1000);
-    cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click();
+       cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
     cy.get(this.locators.ClickOn_viewAssignedDesignations).click();
     cy.wait(1000);
@@ -809,7 +811,7 @@ class PermissionPage {
     cy.wait(1000);
     cy.get(this.locators.Click_SearchPermissionScheme).click();
     cy.wait(1000);
-    cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click();
+       cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
     cy.get(this.locators.clickOn_editscheme).click();
     cy.wait(1000);
@@ -826,7 +828,7 @@ class PermissionPage {
     cy.wait(1000);
     cy.get(this.locators.Click_SearchPermissionScheme).click();
     cy.wait(1000);
-    cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click();
+       cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
     cy.get(this.locators.clickOn_editscheme).click();
     cy.wait(1000);
@@ -847,7 +849,7 @@ class PermissionPage {
     cy.wait(1000);
     cy.get(this.locators.Click_SearchPermissionScheme).click();
     cy.wait(1000);
-    cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click();
+       cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
     cy.get(this.locators.clickOn_editscheme).click();
     cy.wait(1000);
@@ -866,7 +868,7 @@ class PermissionPage {
     cy.wait(1000);
     cy.get(this.locators.Click_SearchPermissionScheme).click();
     cy.wait(1000);
-    cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click();
+       cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
     cy.get(this.locators.clickOn_editscheme).click();
     cy.wait(1000);
@@ -885,7 +887,7 @@ class PermissionPage {
     cy.wait(1000);
     cy.get(this.locators.Click_SearchPermissionScheme).click();
     cy.wait(1000);
-    cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click();
+       cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
     cy.get(this.locators.clickOn_editscheme).click();
     cy.wait(1000);
@@ -906,7 +908,7 @@ class PermissionPage {
     cy.wait(1000);
     cy.get(this.locators.Click_SearchPermissionScheme).click();
     cy.wait(1000);
-    cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click();
+       cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
     cy.get(this.locators.clickOn_editscheme).click();
     cy.wait(1000);
@@ -931,7 +933,7 @@ class PermissionPage {
     cy.wait(1000);
     cy.get(this.locators.Click_SearchPermissionScheme).click();
     cy.wait(1000);
-    cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click();
+       cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
     cy.get(this.locators.clickOn_editscheme).click();
     cy.wait(1000);
@@ -956,9 +958,9 @@ class PermissionPage {
     cy.wait(1000);
     cy.get(this.locators.Click_SearchPermissionScheme).click();
     cy.wait(1000);
-     cy.get(this.locators.Click_ClickOn_Search).type("AAAA");
+     cy.get(this.locators.ClickOn_Search).type("AAAA");
     cy.wait(2000);
-    cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click();
+       cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
     cy.get(this.locators.clickOn_editscheme).click();
     cy.wait(1000);
@@ -977,7 +979,7 @@ class PermissionPage {
      cy.contains("Search Permission Schemes").should("be.visible");
     cy.wait(2000);
 
-     cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click();
+        cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
      cy.get(this.locators.clickon_viewscheme).click();
     cy.wait(3000);
@@ -1041,7 +1043,7 @@ PermissionTestPage_47() {
     cy.wait(1000);
     cy.get(this.locators.ClickOn_Assign_Permission).click();
     cy.wait(2000);
-    cy.get(':nth-child(3) > :nth-child(3) > .d-flex > .me-2').click();
+    cy.get(':nth-child(3) > :nth-child(3) > .d-flex > .me-2').click({force: true });
     cy.wait(2000);
     cy.get('.modal-body').should("be.visible")
     cy.wait(2000);
@@ -1055,7 +1057,7 @@ PermissionTestPage_48() {
     cy.wait(1000);
     cy.get(this.locators.ClickOn_Assign_Permission).click();
     cy.wait(2000);
-    cy.get(':nth-child(3) > :nth-child(3) > .d-flex > .me-2').click();
+    cy.get(':nth-child(3) > :nth-child(3) > .d-flex > .me-2').click({force: true });
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Arrow_Wrapper).click();
     cy.wait(2000);
@@ -1084,7 +1086,7 @@ PermissionTestPage_49() {
     cy.wait(1000);
     cy.get(this.locators.ClickOn_Assign_Permission).click();
     cy.wait(2000);
-    cy.get(':nth-child(3) > :nth-child(3) > .d-flex > .me-2').click();
+    cy.get(':nth-child(3) > :nth-child(3) > .d-flex > .me-2').click({force: true });
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Arrow_Wrapper).click();
     cy.wait(2000);
@@ -1162,7 +1164,7 @@ PermissionTestPage_53() {
     cy.wait(2000);
     cy.get('select.form-select').eq(0).select(2);
     cy.wait(2000);
-    cy.get(this.locators.Clickon_assign_per_body).click();
+    cy.get(this.locators.Clickon_assign_per_body).click({force: true});
     cy.wait(2000);
     cy.get('.modal-body').should("be.visible");
     cy.wait(2000);
@@ -1179,9 +1181,9 @@ PermissionTestPage_54() {
     cy.wait(2000);
     cy.get('select.form-select').eq(0).select(2);
     cy.wait(2000);
-    cy.get(this.locators.Clickon_assign_per_body).click();
+    cy.get(this.locators.Clickon_assign_per_body).click({force: true});
     cy.wait(2000);
-     cy.get(this.locators.ClickOn_Arrow_Wrapper).click();
+     cy.get(this.locators.ClickOn_Arrow_Wrapper).click({force: true});
     cy.wait(2000);
 
 

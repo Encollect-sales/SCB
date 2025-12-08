@@ -10,11 +10,11 @@ class Trailspage {
   }
   TrailsTestPage_466(){
     cy.get(this.locators.clickonTrails).click();
-    cy.wait(300);
+    cy.wait(1000);
     cy.get(this.locators.uploadTrails).click({force: true});
-    cy.wait(300);
+    cy.wait(1000);
     cy.get(this.locators.downloadfile).click({force: true});
-    cy.wait(300);
+    cy.wait(1000);
     cy.get('#bulk-trail-file').click({force: true} );
     cy.wait(800);
     cy.fixture('Bulktrail.xlsx').then((fileContent) => {
@@ -24,13 +24,13 @@ class Trailspage {
           mimeType: 'text/csv',
         });
         cy.get('#bulk-trail-upload-button').click({force: true});
-        cy.wait(500);
-        cy.get('button[class="btn btn-secondary"]').click();
-        cy.wait(500);
+        cy.wait(2000);
+        cy.get('#confirm-dialog-okay').click();
+         cy.wait(2000);
           });
           cy.wait(5000);
           cy.contains("File Uploaded Successfully. Transaction ID :").should("be.visible");
-          cy.wait(500);
+           cy.wait(2000);
          
 
         
@@ -38,7 +38,7 @@ class Trailspage {
     }
     TrailsTestPage_467(){
       cy.get(this.locators.clickonTrails).click();
-      cy.wait(300);
+      cy.wait(1000);
         cy.get(this.locators.CickTrailus).click();
         cy.wait(800);
         cy.get(this.locators.SelectStatus).select('Processed');
@@ -50,7 +50,7 @@ class Trailspage {
     }
     TrailsTestPage_927(){
       cy.get(this.locators.clickonTrails).click();
-      cy.wait(300);
+      cy.wait(1000);
       cy.get(this.locators.uploadTrails).click();
         cy.wait(800);
         cy.get(this.locators.downloadfile).click({force: true});
@@ -62,9 +62,9 @@ class Trailspage {
     }
     TrailsTestPage_928(){
         cy.get(this.locators.clickonTrails).click();
-    cy.wait(300);
+    cy.wait(1000);
     cy.get(this.locators.uploadTrails).click({force: true});
-    cy.wait(300);
+    cy.wait(1000);
         cy.get(this.locators.downloadfile).click({force: true} );
         cy.wait(800);
         cy.fixture('Bulktrail.xlsx').then((fileContent) => {
@@ -74,12 +74,12 @@ class Trailspage {
               mimeType: 'text/csv',
             });
             cy.get(this.locators.ClickOnUpload).click({force: true});
-            cy.wait(500);
+             cy.wait(2000);
               });
               cy.get(this.locators.ClickOnOK).click();
               cy.wait(3000);
               cy.get('.ng-trigger').should('contain','File Uploaded Successfully. Transaction ID :',{force: true});
-              cy.wait(500);
+               cy.wait(2000);
              
 
     }
@@ -88,7 +88,7 @@ class Trailspage {
 
     TrailsTestPage_929(){
       cy.get(this.locators.clickonTrails).click();
-      cy.wait(300);
+      cy.wait(1000);
       cy.wait(200);
       cy.get(this.locators.uploadTrails).click();
       cy.wait(200);
@@ -103,7 +103,7 @@ class Trailspage {
             mimeType: 'text/csv',
           });
           cy.get(this.locators.ClickOnUpload).click({force: true});
-          cy.wait(500);
+           cy.wait(2000);
             });
       
       
@@ -113,9 +113,9 @@ class Trailspage {
 
     TrailsTestPage_930(){
     cy.get(this.locators.clickonTrails).click();
-    cy.wait(300);
+    cy.wait(1000);
     cy.get(this.locators.uploadTrails).click({force: true});
-    cy.wait(300);
+    cy.wait(1000);
     cy.get(this.locators.downloadfile).click({force: true} );
         cy.wait(800);
         cy.fixture('Bulktrail.xlsx').then((fileContent) => {
@@ -147,7 +147,7 @@ class Trailspage {
     }
     TrailsTestPage_931(){
       cy.get(this.locators.clickonTrails).click();
-    cy.wait(300);
+    cy.wait(1000);
     cy.get(this.locators.uploadTrails).click({force: true});
       cy.wait(800);
       cy.get(this.locators.downloadfile).click({force: true} );
@@ -166,7 +166,7 @@ class Trailspage {
     }
     TrailsTestPage_932(){
       cy.get(this.locators.clickonTrails).click();
-      cy.wait(300);
+      cy.wait(1000);
       cy.get(this.locators.CickTrailus).click();
       cy.wait(800);
       cy.get(this.locators.EnterFilename).type('Bulktrail_20240731104807220.xlsx');
@@ -179,9 +179,9 @@ class Trailspage {
     }
     TrailsTestPage_933(){
       cy.get(this.locators.clickonTrails).click();
-    cy.wait(300);
+    cy.wait(1000);
     cy.get(this.locators.CickTrailus).click();
-    cy.wait(300);
+    cy.wait(1000);
       cy.get(this.locators.EnterDate).type('31/07/2024');
       cy.wait(800);
       cy.get(this.locators.ClickOnSearch).click();
@@ -192,7 +192,7 @@ class Trailspage {
     }
     TrailsTestPage_934(){
       cy.get(this.locators.clickonTrails).click();
-    cy.wait(300);
+    cy.wait(1000);
     cy.get(this.locators.CickTrailus).click();
       cy.wait(800);
       cy.get(this.locators.EnterTranId).type('07312024104807402');
@@ -205,7 +205,7 @@ class Trailspage {
     }
     TrailsTestPage_935(){
       cy.get(this.locators.clickonTrails).click();
-      cy.wait(300);
+      cy.wait(1000);
       cy.get(this.locators.CickTrailus).click();    
       cy.wait(800);
       cy.get(this.locators.SelectStatus).select('Processed');
@@ -218,7 +218,7 @@ class Trailspage {
     }
     TrailsTestPage_936(){
       cy.get(this.locators.clickonTrails).click();
-      cy.wait(300);
+      cy.wait(1000);
       cy.get(this.locators.CickTrailus).click();    
       cy.wait(800);
       cy.get(this.locators.SelectStatus).select('Processed');
@@ -248,7 +248,7 @@ class Trailspage {
   
   TrailsTestPage_939(){
     cy.get(this.locators.clickonTrails).click();
-    cy.wait(300);
+    cy.wait(1000);
       cy.wait(200);
       cy.get(this.locators.uploadTrails).click();
       cy.wait(200);
@@ -263,7 +263,7 @@ class Trailspage {
             mimeType: 'text/csv',
           });
           cy.get(this.locators.ClickOnUpload).click({force: true});
-          cy.wait(500);
+           cy.wait(2000);
             });
 
             cy.get(this.locators.ClickOnOK).click({force: true});
@@ -277,7 +277,7 @@ class Trailspage {
   TrailsTestPage_940(){
   
     cy.get(this.locators.clickonTrails).click();
-    cy.wait(300);
+    cy.wait(1000);
     cy.get(this.locators.uploadTrails).click();
       cy.wait(200);
       cy.get(this.locators.downloadfile).click();
@@ -289,7 +289,7 @@ class Trailspage {
   
   TrailsTestPage_941(){
     cy.get(this.locators.clickonTrails).click();
-    cy.wait(300);
+    cy.wait(1000);
       cy.wait(200);
       cy.get(this.locators.uploadTrails).click();
       cy.wait(200);
@@ -304,7 +304,7 @@ class Trailspage {
             mimeType: 'text/csv',
           });
           cy.get(this.locators.ClickOnUpload).click({force: true});
-          cy.wait(500);
+           cy.wait(2000);
             });
       
       
@@ -315,7 +315,7 @@ class Trailspage {
   
   TrailsTestPage_942(){
     cy.get(this.locators.clickonTrails).click();
-    cy.wait(300);
+    cy.wait(1000);
       cy.wait(200);
       cy.get(this.locators.uploadTrails).click();
       cy.wait(200);
@@ -330,14 +330,14 @@ class Trailspage {
             mimeType: 'text/csv',
           });
           cy.get(this.locators.ClickOnUpload).click({force: true});
-          cy.wait(500);
+           cy.wait(2000);
             });
   
   }
   
   TrailsTestPage_943(){
     cy.get(this.locators.clickonTrails).click();
-    cy.wait(300);
+    cy.wait(1000);
       cy.wait(200);
       cy.get(this.locators.uploadTrails).click();
       cy.wait(200);
@@ -352,7 +352,7 @@ class Trailspage {
             mimeType: 'text/csv',
           });
           cy.get(this.locators.ClickOnUpload).click({force: true});
-          cy.wait(500);
+           cy.wait(2000);
             });
       
       
@@ -362,7 +362,7 @@ class Trailspage {
   
   TrailsTestPage_944(){
     cy.get(this.locators.clickonTrails).click();
-    cy.wait(300);
+    cy.wait(1000);
       cy.wait(200);
       cy.get(this.locators.uploadTrails).click();
       cy.wait(200);
@@ -377,13 +377,13 @@ class Trailspage {
             mimeType: 'text/csv',
           });
           cy.get(this.locators.ClickOnUpload).click({force: true});
-          cy.wait(500);
+           cy.wait(2000);
             });
   }
   
   TrailsTestPage_945(){
     cy.get(this.locators.clickonTrails).click();
-    cy.wait(300);
+    cy.wait(1000);
       cy.wait(200);
       cy.get(this.locators.uploadTrails).click();
       cy.wait(200);
@@ -398,13 +398,13 @@ class Trailspage {
             mimeType: 'text/csv',
           });
           cy.get(this.locators.ClickOnUpload).click({force: true});
-          cy.wait(500);
+           cy.wait(2000);
             });
   }
   
   TrailsTestPage_946(){
     cy.get(this.locators.clickonTrails).click();
-    cy.wait(300);
+    cy.wait(1000);
       cy.wait(200);
       cy.get(this.locators.uploadTrails).click();
       cy.wait(200);
@@ -419,13 +419,13 @@ class Trailspage {
             mimeType: 'text/csv',
           });
           cy.get(this.locators.ClickOnUpload).click({force: true});
-          cy.wait(500);
+           cy.wait(2000);
             });
   }
   
   TrailsTestPage_947(){
     cy.get(this.locators.clickonTrails).click();
-    cy.wait(300);
+    cy.wait(1000);
       cy.wait(200);
       cy.get(this.locators.uploadTrails).click();
       cy.wait(200);
@@ -440,13 +440,13 @@ class Trailspage {
             mimeType: 'text/csv',
           });
           cy.get(this.locators.ClickOnUpload).click({force: true});
-          cy.wait(500);
+           cy.wait(2000);
             });
   }
   
   TrailsTestPage_948(){
     cy.get(this.locators.clickonTrails).click();
-    cy.wait(300);
+    cy.wait(1000);
       cy.wait(200);
       cy.get(this.locators.uploadTrails).click();
       cy.wait(200);
@@ -461,7 +461,7 @@ class Trailspage {
             mimeType: 'text/csv',
           });
           cy.get(this.locators.ClickOnUpload).click({force: true});
-          cy.wait(500);
+           cy.wait(2000);
             });
   
       cy.get(this.locators.ClickOnOK).click()
@@ -470,7 +470,7 @@ class Trailspage {
   
   TrailsTestPage_949(){
     cy.get(this.locators.clickonTrails).click();
-    cy.wait(300);
+    cy.wait(1000);
       cy.wait(200);
       cy.get(this.locators.CickTrailus).click();
       cy.wait(200);
@@ -482,7 +482,7 @@ class Trailspage {
   
   TrailsTestPage_950(){
     cy.get(this.locators.clickonTrails).click();
-    cy.wait(300);
+    cy.wait(1000);
       cy.wait(200);
       cy.get(this.locators.CickTrailus).click();
       cy.wait(200);
@@ -497,7 +497,7 @@ class Trailspage {
   
   TrailsTestPage_951(){
     cy.get(this.locators.clickonTrails).click();
-    cy.wait(300);
+    cy.wait(1000);
       cy.wait(200);
       cy.get(this.locators.CickTrailus).click();
       cy.wait(200);
@@ -705,11 +705,11 @@ class Trailspage {
 
     cy.get('#bulk-trail-search-button').click();
     cy.wait(4000);
-    cy.contains("Processed").should("be.visible");
+    cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains("Processed").should("be.visible");
     cy.wait(1000);
     cy.get('tbody > .ng-star-inserted > :nth-child(4) > a').click();
     cy.wait(5000);
-    cy.get('.dashboard > a.ng-star-inserted > span.ng-star-inserted').click();
+    cy.get('.account-search > a.ng-star-inserted > span.ng-star-inserted').scrollIntoView().click();
     cy.wait(1000);
     cy.get('#search-account-number').type(1667);
     cy.wait(2000);
