@@ -4,6 +4,7 @@ import LoginPage from '../pages/LoginPage';
 import { getLocators } from '../utils/Locatorutils';
 import UserCreationPage from '../pages/UserCreationPage';
 const path = require('path');
+import { faker } from '@faker-js/faker';
 
 describe('UserManagement -User should be able to see the list of fields in staff template as described in step.', () => {
     let loginPage;
@@ -33,19 +34,26 @@ describe('UserManagement -User should be able to see the list of fields in staff
                 }
             });
 
-            const data = {
-                'A2': 'PP1237',
-                'B2': 'helponesa',
-                'C2': 'testpsa',
-                'D2':'dbsteststaff0788@yopmail.com',
-                'E2': '3245320049',
-                'F2': '3245320049',
-                'G2': 'Collections Manager',
-                'H2': 'BANGALORE',
-
-
-
-            };
+              //############################################################################
+           
+               const empid = faker.number.int({ min: 10000, max: 99999 }).toString();
+           const fn = faker.name.firstName();             
+            const ln = faker.name.lastName();                
+         const phno = faker.number.int({ min: 1000000000, max: 9999999999 }).toString(); 
+         const email = `${fn.toLowerCase()}@yopmail.com`; 
+            //################################################################################
+            
+               const data = {
+                            'A2': 'Telecaller',
+                            'B2': empid,
+                            'C2': fn,
+                            'D2': ln,
+                            'E2': email,
+                            'F2': phno,
+                            'G2': 'Audit and Risk',
+                            'H2': 'Audit Manager',
+                            'I2': 'Bangalore',
+};
 
             
                                         const downloadsFolder = Cypress.config('downloadsFolder');

@@ -286,6 +286,39 @@ class UserCreationPage {
     cy.wait(2000);
     cy.get(this.locators.ClickOnOkay).click();
     cy.wait(4000);
+
+     //##################################################
+
+    cy.contains("File Uploaded Successfully", { timeout: 10000 })
+      .invoke("text")
+      .then((popupText) => {
+        cy.log(`Popup text: ${popupText}`);
+        const transactionIdMatch = /Transaction ID\s*:\s*(\d+)/.exec(popupText);
+        if (transactionIdMatch) {
+          const transactionId = transactionIdMatch[1];
+          cy.log(`Transaction ID: ${transactionId}`);
+          cy.wait(1000);
+          Cypress.env("transactionID", transactionId);
+          cy.wait(1000);
+        }
+      });
+
+    cy.get(this.locators.ClickOnUserCreationUploadStatus).click();
+    cy.wait(3000);
+    cy.then(() => {
+      const transactionId = Cypress.env("transactionID");
+      cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+    });
+
+    //###########################################################
+
+    cy.wait(2000);
+    cy.get(this.locators.ClickOnStatusSearchBtn).click();
+    cy.wait(3000);
+    cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Processed').should('be.visible');
+    cy.wait(2000);
+    cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
+    cy.wait(3000);
   }
 
   UserCreationStaffTemplate_upload02() {

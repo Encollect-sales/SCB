@@ -4,6 +4,7 @@ import LoginPage from '../pages/LoginPage';
 import { getLocators } from '../utils/Locatorutils';
 import UserCreationPage from '../pages/UserCreationPage';
 const path = require('path');
+import { faker } from '@faker-js/faker';
 
 describe('UserManagement -If user enters RecommendingOfficer more than 40 characters then system will throw an error as Recommending Officer cannot be more than 40 characters', () => {
     let loginPage;
@@ -33,22 +34,33 @@ describe('UserManagement -If user enters RecommendingOfficer more than 40 charac
                 }
             });
 
+              //############################################################################################
+
+            const agencycode = faker.number.int({ min: 100000, max: 999999 }).toString();
+            const name = faker.name.firstName()
+         
+              const phonenumber = faker.number.int({ min: 1000000000, max: 9999999999 }).toString(); // 10-digit
+         const email = `${name.toLowerCase()}@yopmail.com`; // N2 - short, simple
+
+         //###########################################################################################################
+
+
             const data = {
                 'A2': 'Yes',
                 'B2': '',
-                'C2': '17657',
-                'D2':'WikiLTDPma',
+                'C2': agencycode,
+                'D2':name,
                 'E2': '21985621333335683256341532896543216853253465132256',
                 'F2': 'Collections',
                 'G2': 'Field Agents',
                 'H2': '12345321',
-                'I2':'BOOPS9614B',
+                'I2':'PANCA9614B',
                 'J2':'hamad',
                 'K2':'P',
                 'L2':'Pune',
                 'M2':'wiki field',
-                'N2':'9960072202',
-                'O2':'hamad0679@yopmail.com',
+                'N2':phonenumber,
+                'O2':email,
                 'P2':'12-10-2022',
                 'Q2':'13-10-2023',
                 'R2':'10-10-2032',

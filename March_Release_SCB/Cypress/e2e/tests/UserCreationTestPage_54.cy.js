@@ -4,6 +4,7 @@ import LoginPage from '../pages/LoginPage';
 import { getLocators } from '../utils/Locatorutils';
 import UserCreationPage from '../pages/UserCreationPage';
 const path = require('path');
+import { faker } from '@faker-js/faker';
 
 describe('UserManagement - User to upload the bulk staff creation file by selecting the upload type as staff and by clicking on upload button.', () => {
     let loginPage;
@@ -33,16 +34,26 @@ describe('UserManagement - User to upload the bulk staff creation file by select
                 }
             });
 
+              //############################################################################
+           
+               const empid = faker.number.int({ min: 10000, max: 99999 }).toString();
+           const fn = faker.name.firstName();             
+            const ln = faker.name.lastName();                
+         const phno = faker.number.int({ min: 1000000000, max: 9999999999 }).toString(); 
+         const email = `${fn.toLowerCase()}@yopmail.com`; 
+            //################################################################################
+            
             const data = {
-                'A2': 'PP1237',
-                'B2': 'helponesa',
-                'C2': 'testpsa',
-                'D2':'dbsteststaff0788@yopmail.com',
-                'E2': '3245320049',
-                'F2': '3245320049',
-                'G2': 'Collections Manager',
-                'H2': 'BANGALORE',
 
+                            'A2': 'Others',
+                            'B2': empid,
+                            'C2': fn,
+                            'D2': ln,
+                            'E2': email,
+                            'F2': phno,
+                            'G2': 'Branch Backend',
+                            'H2': 'Branch Manager',
+                            'I2': 'Bangalore',                        
 
 
             };

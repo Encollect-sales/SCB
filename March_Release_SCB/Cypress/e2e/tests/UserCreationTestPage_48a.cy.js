@@ -4,6 +4,7 @@ import LoginPage from '../pages/LoginPage';
 import { getLocators } from '../utils/Locatorutils';
 import UserCreationPage from '../pages/UserCreationPage';
 const path = require('path');
+import { faker } from '@faker-js/faker';
 
 describe('UserManagement -If user enters First Name which is less than 1 character then system will throw an error as "First Name must be at least 1 character long"', () => {
     let loginPage;
@@ -33,15 +34,27 @@ describe('UserManagement -If user enters First Name which is less than 1 charact
                 }
             });
 
+              //############################################################################
+           
+               const empid = faker.number.int({ min: 10000, max: 99999 }).toString();
+           const fn = faker.name.firstName();             
+            const ln = faker.name.lastName();                
+         const phno = faker.number.int({ min: 1000000000, max: 9999999999 }).toString(); 
+         const email = `${fn.toLowerCase()}@yopmail.com`; 
+            //################################################################################
             const data = {
-                'A2': 'PP1237',
-                'B2': '',
-                'C2': 'testpsa',
-                'D2':'dbsteststaff0788@yopmail.com',
-                'E2': '3245320049',
-                'F2': '3245320049',
-                'G2': 'Collections Manager',
-                'H2': 'BANGALORE',
+               
+                        'A2': 'Telecaller',
+                        'B2': empid,
+                        'C2': '',
+                        'D2': ln,
+                        'E2': email,
+                        'F2': phno,
+                        'G2': 'Branch Backend',
+                        'H2': 'Branch Manager',
+                        'I2': 'Bangalore',
+
+
 
 
 

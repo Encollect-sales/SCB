@@ -1,0 +1,2 @@
+Id,UserType,FirstName,LastName,AgencyCode,SupervisorEmailId,DialerId,DRACertificationDate,DRATrainingDate,DRAUniqueRegistrationNumber,Department,Designation,DateOfBirth,MobileNo,EmailId,FathersName,LocalResidentialAddress,PostalCode,CollectionEmploymentDate,LastRenewalDate,AuthorizationCardExpiryDate,Remarks,IsFailed,FailureReason
+3a1e0f19da49e9aea25330913c1ff74a,FOS,Waylon,Willms,13911,,435454,,,,Agency Frontend,Agent,18-10-1979,2383124351,waylon@yopmail.com,yop,bakori,765523,19-10-2022,19-10-2023,10-10-2033,resr,False,

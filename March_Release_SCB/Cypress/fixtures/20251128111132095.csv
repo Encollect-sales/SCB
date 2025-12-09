@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1ddb27f7f9c905461317a5d486a90b,PP1237,,testpsa,dbsteststaff0788@yopmail.com,3245320049,3245320049,Collections Manager,BANGALORE,,True," | Invalid User Type: 'PP1237'. User Type must be one of: FOS, Telecaller, or Others. | Employee Id is required | Please enter valid Last Name | Enter valid email | Mobile Number already exists | Department is invalid | Designation is invalid | BranchName is Required"

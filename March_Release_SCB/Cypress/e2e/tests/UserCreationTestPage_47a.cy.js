@@ -4,6 +4,7 @@ import LoginPage from '../pages/LoginPage';
 import { getLocators } from '../utils/Locatorutils';
 import UserCreationPage from '../pages/UserCreationPage';
 const path = require('path');
+import { faker } from '@faker-js/faker';
 
 describe('UserManagement -If user enters special characters then system will throw an error as "Please enter valid Employee Id"', () => {
     let loginPage;
@@ -33,15 +34,24 @@ describe('UserManagement -If user enters special characters then system will thr
                 }
             });
 
+              //############################################################################
+           
+               const empid = faker.number.int({ min: 10000, max: 99999 }).toString();
+           const fn = faker.name.firstName();             
+            const ln = faker.name.lastName();                
+         const phno = faker.number.int({ min: 1000000000, max: 9999999999 }).toString(); 
+         const email = `${fn.toLowerCase()}@yopmail.com`; 
+            //################################################################################
             const data = {
-                'A2': 'P&1#37',
-                'B2': 'helponesa',
-                'C2': 'testpsa',
-                'D2':'dbsteststaff0788@yopmail.com',
-                'E2': '3245320049',
-                'F2': '3245320049',
-                'G2': 'Collections Manager',
-                'H2': 'BANGALORE',
+                            'A2': 'Telecaller',
+                            'B2': 'PP$#@37',
+                            'C2': fn,
+                            'D2': ln,
+                            'E2': email,
+                            'F2': phno,
+                            'G2': 'Audit and Risk',
+                            'H2': 'Audit Manager',
+                            'I2': 'Bangalore',
 
 
 

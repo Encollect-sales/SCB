@@ -4,6 +4,7 @@ import LoginPage from '../pages/LoginPage';
 import { getLocators } from '../utils/Locatorutils';
 import UserCreationPage from '../pages/UserCreationPage';
 const path = require('path');
+import { faker } from '@faker-js/faker';
 
 describe('UserManagement -When  user enters alphabets or special characters then system will throw an error as "Only numbers are allowed"', () => {
     let loginPage;
@@ -33,17 +34,26 @@ describe('UserManagement -When  user enters alphabets or special characters then
                 }
             });
 
+              //############################################################################
+           
+               const empid = faker.number.int({ min: 10000, max: 99999 }).toString();
+           const fn = faker.name.firstName();             
+            const ln = faker.name.lastName();                
+         const phno = faker.number.int({ min: 1000000000, max: 9999999999 }).toString(); 
+         const email = `${fn.toLowerCase()}@yopmail.com`; 
+            //################################################################################
+            
             const data = {
-                'A2': 'PP1237',
-                'B2': 'helponesa',
-                'C2': 'testpsa',
-                'D2':'dbsteststaff0788@yopmail.com',
-                'E2': '32!53@0049',
-                'F2': '3245320049',
-                'G2': 'Collections Manager',
-                'H2': 'BANGALORE',
 
-
+                            'A2': 'Telecaller',
+                            'B2': empid,
+                            'C2': fn,
+                            'D2': ln,
+                            'E2': email,
+                            'F2': '32!53@0049',
+                            'G2': 'Branch Backend',
+                            'H2': 'Branch Manager',
+                            'I2': 'Bangalore',                        
 
             };
 
