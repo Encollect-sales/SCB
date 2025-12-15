@@ -1,0 +1,117 @@
+{
+    "loginPage": {
+
+    "companynameInput": "#login-company-name",
+    "ClickonCompanyName": ".ng-option-label",
+    "usernameInput": "#login-email",
+    "passwordInput": "#login-password",
+    "signinButton": "#login-submit-button",
+    "dashboard": ".name-width",
+     "profile" : ".avatar-info",
+    "logoutButton" : ":nth-child(4) > .dropdown-item"
+    },
+  
+
+  "UserManagementPage":{
+
+  "ClickOnUserManagement":"[title='User Management'] > span.ng-star-inserted",
+  "ClickOnAgentEmpanel":".user-management > :nth-child(2) > :nth-child(2) > a.ng-star-inserted",
+  "ClickOnAddAgent":".user-management > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(1) > a",
+  "ClickOnLocalAddressDetails":":nth-child(4) > .nav-link > span",
+  "ClickOnBulkUpload":".user-management > :nth-child(2) > :nth-child(4) > a.ng-star-inserted",
+  "ClickonEnableDisableUsers":".user-management > :nth-child(2) > :nth-child(4) > .sub-nav-list > :nth-child(3) > a",
+  "clickOnDownloadTempBtn":"#downloadAgentTemplateBtn",
+  "DownloadAgentRadioBtn":"#fileTypeAgent",
+  "UploadAgentRadioBtn":"#uploadFileTypeAgent",
+  "ClickOnUploadBtn":"#btn-upload",
+  "ClickOnOkay":"#confirm-dialog-okay",
+  "DownloadStaffRadioBtn":"#fileTypeStaff",
+  "ClickOnStaffDownloadTempBtn":"#downloadStaffTemplateBtn",
+  "UploadStaffRadioBtn":"#uploadFileTypeStaff",
+  "ClickonEnableDisableUsersStatus":".user-management > :nth-child(2) > :nth-child(4) > .sub-nav-list > :nth-child(4) > a",
+  "ClickOnStatusSearchBtn":"#btn-search"
+
+
+  },
+
+  "UserCreationPage":{
+
+  "ClickOnUserManagement":"[title='User Management'] > span.ng-star-inserted",
+  "ClickOnBulkUpload":".user-management > :nth-child(2) > :nth-child(4) > a.ng-star-inserted",
+  "ClickOnUserCreationUpload":".user-management > :nth-child(2) > :nth-child(4) > .sub-nav-list > :nth-child(1) > a",
+  "ClickOnDownloadAgentRadioBtn":":nth-child(1) > .enc-card > .card-content > .form-control-group > .form-radio-group > :nth-child(1) > .ng-untouched",
+  "ClickOnDownloadAgencyRadioBtn":":nth-child(1) > .enc-card > .card-content > .form-control-group > .form-radio-group > :nth-child(2) > .ng-untouched",
+  "ClickOnDownloadStaffRadioBtn":":nth-child(1) > .enc-card > .card-content > .form-control-group > .form-radio-group > .ng-star-inserted > .ng-valid",
+  "ClickOnDownloadTempBtn":".card-content > :nth-child(2) > .btn",
+  "ClickOnUploadAgentRadioBtn":":nth-child(1) > .ng-untouched",
+  "ClickOnUploadAgencyRadioBtn":":nth-child(2) > .ng-untouched",
+  "ClickOnUploadStaffRadioBtn":".ng-star-inserted > .ng-untouched",
+  "ClickOnUploadBtn":":nth-child(3) > .btn",
+  "ClickOnOkay":"#confirm-dialog-okay",
+  "ClickOnUserCreationUploadStatus":".user-management > :nth-child(2) > :nth-child(4) > .sub-nav-list > :nth-child(2) > a",
+  "ClickOnStatusSearchBtn":".btn"
+
+  },
+
+
+  "CollectionIntensity":{
+
+    "clickonreport":"a[title='Reports'] span[class='ng-star-inserted']",
+    "ClickOnCollectionIntensity":":nth-child(2) > :nth-child(10) > .ng-star-inserted",
+    "ClickBankStaff_Radio":".ng-star-inserted > #inlineRadio1",
+    "ClickAgencyStaff_Radio":".form-radio-group > :nth-child(2) > #inlineRadio2",
+    "ClickOnBOMBucket":"#bOMBucket",
+    "ClickOnReceiptFrom":"#receiptDate_from",
+    "ClickOnReceiptTo":"#receiptDate_to",
+    "ClickOnGenerateReportBtn":"#generateReport",
+    "ClickonDownloadreportBtn":"#downloadReport"
+   
+
+  },
+  
+  "CollectionTrend":{
+
+    "clickonreport":"a[title='Reports'] span[class='ng-star-inserted']",
+    "ClickOnCollectionTrend":":nth-child(2) > :nth-child(11) > .ng-star-inserted",
+    "ClickBankStaff_Radio":".ng-star-inserted > #inlineRadio1",
+    "ClickAgencyStaff_Radio":".form-radio-group > :nth-child(2) > #inlineRadio2",
+    "ClickOnGenerateReportBtn":".btn-secondary",
+    "ClickonDownloadreportBtn":".btn-outline-dark",
+    "ClickOnBOMBucket":"#bOMBucket",
+    "ClickOnReceiptFrom":"#receiptDate_from",
+    "ClickOnReceiptTo":"#receiptDate_to"
+
+    
+},
+
+"VisitIntensity":{
+
+   "clickonreport":"a[title='Reports'] span[class='ng-star-inserted']",
+   "ClickOnVisitIntensity":":nth-child(2) > :nth-child(12) > .ng-star-inserted",
+   "ClickBankStaff_Radio":".ng-star-inserted > #inlineRadio1",
+   "ClickAgencyStaff_Radio":".form-radio-group > :nth-child(2) > #inlineRadio2",
+   "ClickOnGenerateReportBtn":".btn-secondary",
+    "ClickonDownloadreportBtn":".btn-outline-dark",
+    "ClickOnBOMBucket":"#bOMBucket"
+
+
+},
+
+"InsightsPage":{
+
+"ClickOnInsights":"[title='Insights'] > span.ng-star-inserted",
+"ClickOnAlocInsights":".insights > :nth-child(2) > :nth-child(1) > a.ng-star-inserted",
+"ClickOnprimaryAllocInsights":".insights > :nth-child(2) > :nth-child(1) > .sub-nav-list > .nav-item > a",
+"ClickOnGeoAndProAnalysis":".tabs > :nth-child(2)",
+"ClickOnFilterBtn":".container-fluid > :nth-child(1) > .btn",
+"ClickOnByAgency":"#agencyHeading > .accordion-button",
+"ClickOnAgencyFieldPrimary":"#agencyCollapse > .accordion-body > :nth-child(1) > .selected-value"
+
+  
+}
+
+
+   
+    
+
+}

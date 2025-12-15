@@ -87,8 +87,8 @@ clickcompanyname() {
     this.fillUsername(email);
     this.fillPassword(password);
     this.submit();
-    cy.wait(2000);
-    this.enterotp();
+    cy.wait(5000);
+    // this.enterotp();
   }
  
   login1(Companyname,email1, password1) {
@@ -98,8 +98,8 @@ clickcompanyname() {
     this.fillUsername(email1);
     this.fillPassword(password1);
     this.submit();
-    cy.wait(2000);
-    this.enterotp();
+    cy.wait(5000);
+    // this.enterotp();
   }
  
   logout() {

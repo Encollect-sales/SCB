@@ -2211,8 +2211,8 @@ PanCardTestPage_01(){
   cy.wait(2000);
   cy.get(this.locators.Type_Agency_Address).type("Sunrise Residency Lakeview Street Near City Park Whitefield Main Road Bengaluru Karnataka India");
   cy.wait(2000);
-  cy.get(this.locators.ClickOn_Submit_afterEdit).click();
-  cy.wait(2000);
+  cy.get(this.locators.ClickOn_Submit_afterEdit).click({force: true});
+  cy.wait(3000);
   cy.get('[role="alert"]').should('be.visible').and('contain', 'Agency Profile has been Submitted for Approval.');
   cy.wait(2000);
 
@@ -2238,7 +2238,7 @@ PanCardTestPage_02(){
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Search_Agency).click();
   cy.wait(2000);
-  cy.get(this.locators.Type_Agency_Name).type("Kinder");
+  cy.get(this.locators.Type_Agency_Name).type("Amber");
   cy.wait(2000);
   cy.get(this.locators.Select_Agency_status).select("Approved");
   cy.wait(2000);
@@ -2259,7 +2259,7 @@ PanCardTestPage_02(){
   // cy.get(this.locators.Type_Agency_Address).clear().type("Sunrise Residency Lakeview Street Near City Park Whitefield Main Road Bengaluru Karnataka India");
   // cy.wait(2000);
   cy.get(this.locators.ClickOn_Submit_afterEdit).click();
-  cy.wait(2000);
+  cy.wait(8000);
   cy.get('[role="alert"]').should('be.visible').and('contain', 'Agency Profile has been Submitted for Approval.');
   cy.wait(2000);
 
@@ -2275,7 +2275,7 @@ PanCardTestPage_02a(){
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Search_Agency).click();
   cy.wait(2000);
-   cy.get(this.locators.Type_Agency_Name).type("Kinder");
+   cy.get(this.locators.Type_Agency_Name).type("Amber");
   cy.wait(2000);
   cy.get(this.locators.Select_Agency_status).select("Pending Approval");
   cy.wait(2000);
@@ -2287,16 +2287,16 @@ PanCardTestPage_02a(){
   cy.wait(2000);  
     cy.get('[role="alert"]').should('be.visible').and('contain', 'Agency Approved Successfully');
   cy.wait(4000);
-    cy.get(this.locators.Type_Agency_Name).clear().type("Kinder");
+    cy.get(this.locators.Type_Agency_Name).clear().type("Amber");
   cy.wait(2000);
   cy.get(this.locators.Select_Agency_status).select("Approved");
   cy.wait(2000);
   cy.get(this.locators.Click_On_Submit).click();
-  cy.wait(4000);
+  cy.wait(6000);
   cy.get('tbody > :nth-child(1) > :nth-child(5) > .form-control-group > .form-check-group > label > input').click();
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Edit).click();
-  cy.wait(3000);
+  cy.wait(7000);
   cy.contains("Edit Agency").should("be.visible");
   cy.wait(1000);
    cy.get(this.locators.ClickOn_Pancard).should("have.value", generatedPAN); 
@@ -2367,13 +2367,13 @@ PanCardTestPage_05(){
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Search_Agency).click();
   cy.wait(2000);
-    cy.get(this.locators.Type_Agency_Name).type("Kinder");
+    cy.get(this.locators.Type_Agency_Name).type("Amber");
   cy.wait(2000);
   cy.get(this.locators.Select_Agency_status).select("Approved");
   cy.wait(2000);
   cy.get(this.locators.Click_On_Submit).click();
   cy.wait(4000);
-  cy.get('tbody > :nth-child(1) > :nth-child(5) > .form-control-group > .form-check-group > label > input').click();
+  cy.get('tbody > :nth-child(2) > :nth-child(5) > .form-control-group > .form-check-group > label > input').click();
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Edit).click();
   cy.wait(3000);
@@ -2392,13 +2392,13 @@ cy.wait(2000);
 
     cy.get(this.locators.ClickOn_Search_Agency).click();
   cy.wait(2000);
-    cy.get(this.locators.Type_Agency_Name).type("Kinder");
+    cy.get(this.locators.Type_Agency_Name).type("Amber");
   cy.wait(2000);
   cy.get(this.locators.Select_Agency_status).select("Approved");
   cy.wait(2000);
   cy.get(this.locators.Click_On_Submit).click();
   cy.wait(4000);
-  cy.get('tbody > :nth-child(1) > :nth-child(5) > .form-control-group > .form-check-group > label > input').click();
+  cy.get('tbody > :nth-child(2) > :nth-child(5) > .form-control-group > .form-check-group > label > input').click();
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Edit).click();
   cy.wait(3000);
@@ -2455,13 +2455,13 @@ PanCardTestPage_08(){
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Search_Agency).click();
   cy.wait(2000);
-  cy.get(this.locators.Type_Agency_Name).type("Kinder");
+  cy.get(this.locators.Type_Agency_Name).type("Amber");
   cy.wait(2000);
   cy.get(this.locators.Select_Agency_status).select("Approved");
   cy.wait(2000);
   cy.get(this.locators.Click_On_Submit).click();
   cy.wait(4000);
-  cy.get('tbody > :nth-child(1) > :nth-child(5) > .form-control-group > .form-check-group > label > input').click();
+  cy.get('tbody > :nth-child(2) > :nth-child(5) > .form-control-group > .form-check-group > label > input').click();
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Edit).click();
   cy.wait(3000);

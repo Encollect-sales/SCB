@@ -21,8 +21,19 @@ class LoginPage {
     });
   }
  
-  // 
-  
+  // fillcompanyname(Companyname) {
+  //   //cy.get(this.locators.companynameInput).type(Companyname);
+  //   cy.get(this.locators.companynameInput).type("ENCollect");
+  //   cy.wait(2000);
+  // }
+ 
+  // Clikcompanyname() {
+   
+  //   cy.get(this.locators.ClickonCompanyName).click();
+  //   cy.wait(2000);
+  // }
+
+
   fillcompanyname(Companyname) {
   cy.get(this.locators.companynameInput).then(($input) => {
     const currentValue = $input.val();
@@ -34,12 +45,12 @@ class LoginPage {
     }
   });
  
-  cy.wait(2000);
+  cy.wait(4000);
 }
  
 Clikcompanyname() {
   cy.get(this.locators.ClickonCompanyName).click();
-  cy.wait(2000);
+  cy.wait(1000);
 }
  
   fillUsername(email) {
@@ -58,19 +69,19 @@ Clikcompanyname() {
     cy.get(this.locators.signinButton).click();
     cy.wait(2000);
   }
+ 
+  // verifyLoginSuccess() {
+  //   return cy.get(this.locators.dashboard).then(() => {
+  //   });
+  // }
 
   enterotp(){
 
     cy.get('#otp-input').type(560062);
     cy.wait(2000);
     cy.get('.btn-success').click();
-    cy.wait(3000);
+    cy.wait(7000);
   }
- 
-  // verifyLoginSuccess() {
-  //   return cy.get(this.locators.dashboard).then(() => {
-  //   });
-  // }
  
   login(Companyname, email, password) {
    
@@ -80,30 +91,9 @@ Clikcompanyname() {
       this.fillUsername(email);
       this.fillPassword(password);
       this.submit();
-      cy.wait(1000);
+      cy.wait(2000);
       this.enterotp();
       // this.verifyLoginSuccess();
-  }
-
-  // login1(Companyname, email, password) {
-   
-  //     this.visit();
-  //     this.fillcompanyname(Companyname);
-  //     this.Clikcompanyname();
-  //     this.fillUsername(email);
-  //     this.fillPassword(password);
-  //     this.submit();
-  //     cy.wait(7000);
-
-  // }
-
-  logout(){
-
-    cy.get('.avatar').click();
-    cy.wait(2000);
-    cy.get(':nth-child(3) > .dropdown-item').click();
-    cy.wait(6000);
-
   }
 
  

@@ -1,48 +1,48 @@
 {
   "login": {
     "Companyname": "ENCollect",
-   "email": "vatsalstaff07@yopmail.com",
-    "password": "123@asAS" 
+   "email": "rahmancbm@yopmail.com",
+    "password": "123@saSA" 
   },
   "login1": {
     "Companyname": "ENCollect",
-     "email": "vatsalstaff07@yopmail.com",
-    "password": "123@asAS" 
+    "email": "rahmancbm@yopmail.com",
+    "password": "123@saSA" 
   },
     "login2": {
     "Companyname": "ENCollect",
-    "email": "bmsettlement1@yopmail.com",
+    "email": "branchmanageruat1@yopmail.com",
     "password": "123@asAS"
   },
    "login3": {
     "Companyname": "ENCollect",
-    "email": "cmsettlement2@yopmail.com",
-    "password": "123@saSA"
+    "email": "collectionstaffuat@yopmail.com",
+    "password": "123@asAS"
   },
    "login4": {
     "Companyname": "ENCollect",
-    "email": "chsettlement3@yopmail.com",
-    "password": "123@sdSD"
+    "email": "citycollectionheaduat@yopmail.com",
+    "password": "123@asAS"
   },
    "login5": {
     "Companyname": "ENCollect",
-    "email": "pchsettlement4@yopmail.com",
-    "password": "123@sdSD"
+    "email": "productcollectionheaduat@yopmail.com",
+    "password": "123@asAS"
   },
    "login6": {
     "Companyname": "ENCollect",
-    "email": "rcsettlement4@yopmail.com",
-    "password": "123@zxZX"
+    "email": "regionalcollectionheaduat@yopmail.com",
+    "password": "123@asAS"
   },
    "login7": {
     "Companyname": "ENCollect",
-    "email": "zchsettlement6@yopmail.com",
-    "password": "123@zxZX"
+    "email": "zonalcollectionheaduat@yopmail.com",
+    "password": "123@asAS"
   },
    "login8": {
     "Companyname": "ENCollect",
-    "email": "ccchsettlement@yopmail.com",
-    "password": "123@zxZX"
+    "email": "kkcountrych@yopmail.com",
+    "password": "123@klKL"
   }
 
 }

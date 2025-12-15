@@ -1,0 +1,2 @@
+Id,IsParentAgency,ParentAgencyCode,AgencyCode,AgencyName,RecommendingOfficer,AgencyType,AgencySubType,TINNumber,PanCard,PrimaryOwnerFirstName,PrimaryOwnerLastName,RegisteredAgencyAddress,Landmark,MobileNo,EmailID,FirstAgreementDate,LastRenewalDate,ContractExpiryDate,Remarks,IsFailed,FailureReason
+3a1e1b331217713d527ce0040fd0bf87,Yes,,649982,Randal,4408,Collections,Field Agents,12345321,PANCA9614B,hamad,P,Pune,wiki field,2741622583,randal@yopmail.com,12-10-2022,13-10-2023,,Bulk upload,True, | Contract Expiry Date is required

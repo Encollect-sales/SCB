@@ -40,7 +40,7 @@ Allocation_sow_TestPage_02() {
     cy.get(this.locators.ClickOn_Bucket).click()
     cy.wait(2000);
 
-const expectedNumbers = ["0", "1", "2", "3", "4", "5"];
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -76,11 +76,13 @@ cy.get(".ng-dropdown-panel .ng-option")
 
 Allocation_sow_TestPage_04() {
 
- cy.get(this.locators.ClickOn_Allocation).click();
+  cy.get(this.locators.ClickOn_Allocation).click();
     cy.wait(2000);
      cy.get(this.locators.ClickOn_Agency_Bulkupload).click();
     cy.wait(2000);
-     cy.get(this.locators.ClickOn_Agency_Bulkalloc_Cuslevel).click();
+     cy.get(this.locators.ClickOn_Agency_Bulkalloc_Acclevel).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_CC_RadioBtn).click();
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Productgroup).click()
     cy.wait(2000);
@@ -102,12 +104,83 @@ Allocation_sow_TestPage_05() {
     cy.wait(2000);
      cy.get(this.locators.ClickOn_Agency_Bulkupload).click();
     cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agency_Bulkalloc_Acclevel).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_CC_RadioBtn).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOn_Bucket).click()
+    cy.wait(2000);
+
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
+
+cy.get(".ng-dropdown-panel .ng-option")
+  .then($options => {
+    const actual = [...$options].map(o => o.innerText.trim());
+    expect(actual).to.deep.equal(expectedNumbers);
+  });
+cy.wait(2000);
+
+  
+}
+
+Allocation_sow_TestPage_06() {
+
+  cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agency_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agency_Bulkalloc_Acclevel).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_CC_RadioBtn).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOn_Branch).click()
+    cy.wait(2000);
+
+const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
+
+cy.get(".ng-dropdown-panel .ng-option")
+  .then($options => {
+    const actual = [...$options].map(o => o.innerText.trim());
+    expect(actual).to.deep.equal(expectedBranches);
+  });
+  cy.wait(2000);
+
+}
+
+Allocation_sow_TestPage_07() {
+
+ cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agency_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agency_Bulkalloc_Cuslevel).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOn_Productgroup).click()
+    cy.wait(2000);
+    
+    const expectedOption = ["CreditCard"];
+
+cy.get(".ng-dropdown-panel .ng-option")
+  .then($options => {
+    const actual = [...$options].map(o => o.innerText.trim());
+    expect(actual).to.deep.equal(expectedOption);
+  });
+cy.wait(2000);
+
+}
+
+Allocation_sow_TestPage_08() {
+
+   cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agency_Bulkupload).click();
+    cy.wait(2000);
      cy.get(this.locators.ClickOn_Agency_Bulkalloc_Cuslevel).click();
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Bucket).click()
     cy.wait(2000);
 
-const expectedNumbers = ["0", "1", "2", "3", "4", "5"];
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -118,7 +191,7 @@ cy.wait(2000);
 
 }
 
-Allocation_sow_TestPage_06() {
+Allocation_sow_TestPage_09() {
 
   cy.get(this.locators.ClickOn_Allocation).click();
     cy.wait(2000);
@@ -140,79 +213,15 @@ cy.get(".ng-dropdown-panel .ng-option")
 
 }
 
-Allocation_sow_TestPage_07() {
-
-  cy.get(this.locators.ClickOn_Allocation).click();
-    cy.wait(2000);
-     cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
-    cy.wait(2000);
-     cy.get(this.locators.ClickOn_Agent_Bulkalloc_Acclevel).click();
-    cy.wait(2000);
-    cy.get(this.locators.ClickOn_Productgroup).click()
-    cy.wait(2000);
-    
-    const expectedOption = ["CreditCard"];
-
-cy.get(".ng-dropdown-panel .ng-option")
-  .then($options => {
-    const actual = [...$options].map(o => o.innerText.trim());
-    expect(actual).to.deep.equal(expectedOption);
-  });
-cy.wait(2000);
-
-}
-
-Allocation_sow_TestPage_08() {
-
-  cy.get(this.locators.ClickOn_Allocation).click();
-    cy.wait(2000);
-     cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
-    cy.wait(2000);
-     cy.get(this.locators.ClickOn_Agent_Bulkalloc_Acclevel).click();
-    cy.wait(2000);
-    cy.get(this.locators.ClickOn_Bucket).click()
-    cy.wait(2000);
-
-const expectedNumbers = ["0", "1", "2", "3", "4", "5"];
-
-cy.get(".ng-dropdown-panel .ng-option")
-  .then($options => {
-    const actual = [...$options].map(o => o.innerText.trim());
-    expect(actual).to.deep.equal(expectedNumbers);
-  });
-cy.wait(2000);
-
-}
-
-Allocation_sow_TestPage_09() {
-
-   cy.get(this.locators.ClickOn_Allocation).click();
-    cy.wait(2000);
-      cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
-    cy.wait(2000);
-     cy.get(this.locators.ClickOn_Agent_Bulkalloc_Acclevel).click();
-    cy.wait(2000);
-    cy.get(this.locators.ClickOn_Branch).click()
-    cy.wait(2000);
-
-const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
-
-cy.get(".ng-dropdown-panel .ng-option")
-  .then($options => {
-    const actual = [...$options].map(o => o.innerText.trim());
-    expect(actual).to.deep.equal(expectedBranches);
-  });
-  cy.wait(2000);
-
-}
-
 Allocation_sow_TestPage_10() {
 
-  cy.get(this.locators.ClickOn_Allocation).click();
+ cy.get(this.locators.ClickOn_Allocation).click();
     cy.wait(2000);
-     cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
+     cy.get(this.locators.ClickOn_Agency_Bulkupload).click();
     cy.wait(2000);
-     cy.get(this.locators.ClickOn_Agent_Bulkalloc_Cuslevel).click();
+     cy.get(this.locators.ClickOn_Agency_Bulkalloc_Cuslevel).click();
+    cy.wait(2000);
+      cy.get(this.locators.ClickOn_CC_RadioBtn).click();
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Productgroup).click()
     cy.wait(2000);
@@ -225,7 +234,6 @@ cy.get(".ng-dropdown-panel .ng-option")
     expect(actual).to.deep.equal(expectedOption);
   });
 cy.wait(2000);
-
 
 }
 
@@ -233,14 +241,16 @@ Allocation_sow_TestPage_11() {
 
    cy.get(this.locators.ClickOn_Allocation).click();
     cy.wait(2000);
-     cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
+     cy.get(this.locators.ClickOn_Agency_Bulkupload).click();
     cy.wait(2000);
-     cy.get(this.locators.ClickOn_Agent_Bulkalloc_Cuslevel).click();
+     cy.get(this.locators.ClickOn_Agency_Bulkalloc_Cuslevel).click();
+    cy.wait(2000);
+      cy.get(this.locators.ClickOn_CC_RadioBtn).click();
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Bucket).click()
     cy.wait(2000);
 
-const expectedNumbers = ["0", "1", "2", "3", "4", "5"];
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -253,6 +263,211 @@ cy.wait(2000);
 
 Allocation_sow_TestPage_12() {
 
+  cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agency_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agency_Bulkalloc_Cuslevel).click();
+    cy.wait(2000);
+      cy.get(this.locators.ClickOn_CC_RadioBtn).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOn_Branch).click()
+    cy.wait(2000);
+
+const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
+
+cy.get(".ng-dropdown-panel .ng-option")
+  .then($options => {
+    const actual = [...$options].map(o => o.innerText.trim());
+    expect(actual).to.deep.equal(expectedBranches);
+  });
+  cy.wait(2000);
+
+}
+Allocation_sow_TestPage_13() {
+
+  cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkalloc_Acclevel).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOn_Productgroup).click()
+    cy.wait(2000);
+    
+    const expectedOption = ["CreditCard"];
+
+cy.get(".ng-dropdown-panel .ng-option")
+  .then($options => {
+    const actual = [...$options].map(o => o.innerText.trim());
+    expect(actual).to.deep.equal(expectedOption);
+  });
+cy.wait(2000);
+
+}
+
+Allocation_sow_TestPage_14() {
+
+  cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkalloc_Acclevel).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOn_Bucket).click()
+    cy.wait(2000);
+
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
+
+cy.get(".ng-dropdown-panel .ng-option")
+  .then($options => {
+    const actual = [...$options].map(o => o.innerText.trim());
+    expect(actual).to.deep.equal(expectedNumbers);
+  });
+cy.wait(2000);
+
+}
+
+Allocation_sow_TestPage_15() {
+
+   cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+      cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkalloc_Acclevel).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOn_Branch).click()
+    cy.wait(2000);
+
+const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
+
+cy.get(".ng-dropdown-panel .ng-option")
+  .then($options => {
+    const actual = [...$options].map(o => o.innerText.trim());
+    expect(actual).to.deep.equal(expectedBranches);
+  });
+  cy.wait(2000);
+
+}
+
+Allocation_sow_TestPage_16() {
+
+  cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkalloc_Acclevel).click();
+    cy.wait(2000);
+      cy.get(this.locators.ClickOn_CC_RadioBtn).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOn_Productgroup).click()
+    cy.wait(2000);
+    
+    const expectedOption = ["CreditCard"];
+
+cy.get(".ng-dropdown-panel .ng-option")
+  .then($options => {
+    const actual = [...$options].map(o => o.innerText.trim());
+    expect(actual).to.deep.equal(expectedOption);
+  });
+cy.wait(2000);
+
+}
+
+Allocation_sow_TestPage_17() {
+
+  cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkalloc_Acclevel).click();
+    cy.wait(2000);
+      cy.get(this.locators.ClickOn_CC_RadioBtn).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOn_Bucket).click()
+    cy.wait(2000);
+
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
+
+cy.get(".ng-dropdown-panel .ng-option")
+  .then($options => {
+    const actual = [...$options].map(o => o.innerText.trim());
+    expect(actual).to.deep.equal(expectedNumbers);
+  });
+cy.wait(2000);
+
+}
+
+Allocation_sow_TestPage_18() {
+
+   cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+      cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkalloc_Acclevel).click();
+    cy.wait(2000);
+      cy.get(this.locators.ClickOn_CC_RadioBtn).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOn_Branch).click()
+    cy.wait(2000);
+
+const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
+
+cy.get(".ng-dropdown-panel .ng-option")
+  .then($options => {
+    const actual = [...$options].map(o => o.innerText.trim());
+    expect(actual).to.deep.equal(expectedBranches);
+  });
+  cy.wait(2000);
+
+}
+Allocation_sow_TestPage_19() {
+
+  cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkalloc_Cuslevel).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOn_Productgroup).click()
+    cy.wait(2000);
+    
+    const expectedOption = ["CreditCard"];
+
+cy.get(".ng-dropdown-panel .ng-option")
+  .then($options => {
+    const actual = [...$options].map(o => o.innerText.trim());
+    expect(actual).to.deep.equal(expectedOption);
+  });
+cy.wait(2000);
+
+
+}
+
+Allocation_sow_TestPage_20() {
+
+   cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkalloc_Cuslevel).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOn_Bucket).click()
+    cy.wait(2000);
+
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
+
+cy.get(".ng-dropdown-panel .ng-option")
+  .then($options => {
+    const actual = [...$options].map(o => o.innerText.trim());
+    expect(actual).to.deep.equal(expectedNumbers);
+  });
+cy.wait(2000);
+
+}
+
+Allocation_sow_TestPage_21() {
+
    cy.get(this.locators.ClickOn_Allocation).click();
     cy.wait(2000);
       cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
@@ -273,7 +488,80 @@ cy.get(".ng-dropdown-panel .ng-option")
 
 }
 
-Allocation_sow_TestPage_13() {
+Allocation_sow_TestPage_22() {
+
+  cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkalloc_Cuslevel).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_CC_RadioBtn).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOn_Productgroup).click()
+    cy.wait(2000);
+    
+    const expectedOption = ["CreditCard"];
+
+cy.get(".ng-dropdown-panel .ng-option")
+  .then($options => {
+    const actual = [...$options].map(o => o.innerText.trim());
+    expect(actual).to.deep.equal(expectedOption);
+  });
+cy.wait(2000);
+
+
+}
+
+Allocation_sow_TestPage_23() {
+
+   cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkalloc_Cuslevel).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_CC_RadioBtn).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOn_Bucket).click()
+    cy.wait(2000);
+
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
+
+cy.get(".ng-dropdown-panel .ng-option")
+  .then($options => {
+    const actual = [...$options].map(o => o.innerText.trim());
+    expect(actual).to.deep.equal(expectedNumbers);
+  });
+cy.wait(2000);
+
+}
+
+Allocation_sow_TestPage_24() {
+
+   cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+      cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkalloc_Cuslevel).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_CC_RadioBtn).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOn_Branch).click()
+    cy.wait(2000);
+
+const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
+
+cy.get(".ng-dropdown-panel .ng-option")
+  .then($options => {
+    const actual = [...$options].map(o => o.innerText.trim());
+    expect(actual).to.deep.equal(expectedBranches);
+  });
+  cy.wait(2000);
+
+}
+
+Allocation_sow_TestPage_25() {
 
   cy.get(this.locators.ClickOn_Allocation).click();
     cy.wait(2000);
@@ -296,7 +584,7 @@ cy.wait(2000);
 
 }
 
-Allocation_sow_TestPage_14() {
+Allocation_sow_TestPage_26() {
 
    cy.get(this.locators.ClickOn_Allocation).click();
     cy.wait(2000);
@@ -307,7 +595,7 @@ Allocation_sow_TestPage_14() {
     cy.get(this.locators.ClickOn_Bucket).click()
     cy.wait(2000);
 
-const expectedNumbers = ["0", "1", "2", "3", "4", "5"];
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -318,7 +606,7 @@ cy.wait(2000);
 
 }
 
-Allocation_sow_TestPage_15() {
+Allocation_sow_TestPage_27() {
 
   
    cy.get(this.locators.ClickOn_Allocation).click();
@@ -342,7 +630,7 @@ cy.get(".ng-dropdown-panel .ng-option")
 
 }
 
-Allocation_sow_TestPage_16() {
+Allocation_sow_TestPage_28() {
 
    cy.get(this.locators.ClickOn_Allocation).click();
     cy.wait(2000);
@@ -364,7 +652,7 @@ cy.wait(2000);
 
 }
 
-Allocation_sow_TestPage_17() {
+Allocation_sow_TestPage_29() {
 
      cy.get(this.locators.ClickOn_Allocation).click();
     cy.wait(2000);
@@ -375,7 +663,7 @@ Allocation_sow_TestPage_17() {
     cy.get(this.locators.ClickOn_Bucket).click()
     cy.wait(2000);
 
-const expectedNumbers = ["0", "1", "2", "3", "4", "5"];
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -386,7 +674,7 @@ cy.wait(2000);
 
 }
 
-Allocation_sow_TestPage_18() {
+Allocation_sow_TestPage_30() {
 
     cy.get(this.locators.ClickOn_Allocation).click();
     cy.wait(2000);
@@ -409,7 +697,7 @@ cy.get(".ng-dropdown-panel .ng-option")
 
 }
 
-Allocation_sow_TestPage_19() {
+Allocation_sow_TestPage_31() {
 
   cy.get(this.locators.ClickOn_Allocation).click();
     cy.wait(2000);
@@ -431,7 +719,7 @@ cy.wait(2000);
 
 }
 
-Allocation_sow_TestPage_20() {
+Allocation_sow_TestPage_32() {
 
     cy.get(this.locators.ClickOn_Allocation).click();
     cy.wait(2000);
@@ -444,7 +732,7 @@ Allocation_sow_TestPage_20() {
     cy.get(this.locators.ClickOn_Filter_Bucket).click()
     cy.wait(2000);
 
-const expectedNumbers = ["0", "1", "2", "3", "4", "5"];
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -455,7 +743,7 @@ cy.wait(2000);
 
 }
 
-Allocation_sow_TestPage_21(){
+Allocation_sow_TestPage_33(){
 
  cy.get(this.locators.ClickOn_Allocation).click();
     cy.wait(2000);
@@ -479,7 +767,7 @@ cy.get(".ng-dropdown-panel .ng-option")
 
 }
 
-Allocation_sow_TestPage_22(){
+Allocation_sow_TestPage_34(){
 
   cy.get(this.locators.ClickOn_Allocation).click();
     cy.wait(2000);
@@ -501,7 +789,7 @@ cy.wait(2000);
 
 }
 
-Allocation_sow_TestPage_23(){
+Allocation_sow_TestPage_35(){
 
 
     cy.get(this.locators.ClickOn_Allocation).click();
@@ -515,7 +803,7 @@ Allocation_sow_TestPage_23(){
     cy.get(this.locators.ClickOn_Filter_Bucket).click()
     cy.wait(2000);
 
-const expectedNumbers = ["0", "1", "2", "3", "4", "5"];
+const expectedNumbers = ["0", "1", "2", "3", "3+"];
 
 cy.get(".ng-dropdown-panel .ng-option")
   .then($options => {
@@ -526,7 +814,7 @@ cy.wait(2000);
 
 }
 
-Allocation_sow_TestPage_24(){
+Allocation_sow_TestPage_36(){
 
  cy.get(this.locators.ClickOn_Allocation).click();
     cy.wait(2000);
@@ -552,64 +840,349 @@ cy.get(".ng-dropdown-panel .ng-option")
 
 Allocation_UT_TestPage_01(){
 
+  cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agency_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agency_Bulkalloc_Acclevel).click();
+    cy.wait(2000);
+    cy.contains("Account Type").should("be.visible");
+    cy.wait(2000);
+
 }
 
 Allocation_UT_TestPage_02(){
+
+   cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agency_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agency_Bulkalloc_Acclevel).click();
+    cy.wait(2000);
+   const expectedOptions = ['Delinquent', 'Non-Delinquent'];
+
+cy.get(this.locators.ClickOn_UserType)
+  .find('option')
+  .then($options => {
+    const actual = [...$options].map(o => o.text.trim());
+    expect(actual).to.deep.equal(expectedOptions);
+  });
+
+  cy.wait(2000);
+
 
 }
 
 Allocation_UT_TestPage_03(){
 
+   cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agency_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agency_Bulkalloc_Acclevel).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOn_CC_RadioBtn).click();
+    cy.wait(2000);
+    cy.contains("Account Type").should("be.visible");
+    cy.wait(2000);
+
 }
 
 Allocation_UT_TestPage_04(){
+
+   cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agency_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agency_Bulkalloc_Acclevel).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOn_CC_RadioBtn).click();
+    cy.wait(2000);
+   const expectedOptions = ['Delinquent', 'Non-Delinquent'];
+
+cy.get(this.locators.ClickOn_UserType)
+  .find('option')
+  .then($options => {
+    const actual = [...$options].map(o => o.text.trim());
+    expect(actual).to.deep.equal(expectedOptions);
+  });
+
+  cy.wait(2000);
 
 }
 
 Allocation_UT_TestPage_05(){
 
+  cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agency_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agency_Bulkalloc_Cuslevel).click();
+    cy.wait(2000);
+    cy.contains("Account Type").should("be.visible");
+    cy.wait(2000);
 }
 
 Allocation_UT_TestPage_06(){
 
+  cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agency_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agency_Bulkalloc_Cuslevel).click();
+    cy.wait(2000);
+  const expectedOptions = ['Delinquent', 'Non-Delinquent'];
+
+cy.get(this.locators.ClickOn_UserType)
+  .find('option')
+  .then($options => {
+    const actual = [...$options].map(o => o.text.trim());
+    expect(actual).to.deep.equal(expectedOptions);
+  });
+
+  cy.wait(2000);
 }
 
 Allocation_UT_TestPage_07(){
 
+   cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agency_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agency_Bulkalloc_Cuslevel).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOn_CC_RadioBtn).click();
+    cy.wait(2000);
+    cy.contains("Account Type").should("be.visible");
+    cy.wait(2000);
 }
 
 Allocation_UT_TestPage_08(){
 
+    cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agency_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agency_Bulkalloc_Cuslevel).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOn_CC_RadioBtn).click();
+    cy.wait(2000);
+   const expectedOptions = ['Delinquent', 'Non-Delinquent'];
+
+cy.get(this.locators.ClickOn_UserType)
+  .find('option')
+  .then($options => {
+    const actual = [...$options].map(o => o.text.trim());
+    expect(actual).to.deep.equal(expectedOptions);
+  });
+
+  cy.wait(2000);
 }
 
 Allocation_UT_TestPage_09(){
 
+  cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkalloc_Acclevel).click();
+    cy.wait(2000);
+    cy.contains("Account Type").should("be.visible");
+    cy.wait(2000);
 }
 
 Allocation_UT_TestPage_10(){
 
+  
+  cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkalloc_Acclevel).click();
+    cy.wait(2000);
+  const expectedOptions = ['Delinquent', 'Non-Delinquent'];
+
+cy.get(this.locators.ClickOn_UserType)
+  .find('option')
+  .then($options => {
+    const actual = [...$options].map(o => o.text.trim());
+    expect(actual).to.deep.equal(expectedOptions);
+  });
+
+  cy.wait(2000);
 }
 
 Allocation_UT_TestPage_11(){
 
+    cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkalloc_Acclevel).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOn_CC_RadioBtn).click();
+    cy.wait(2000);
+    cy.contains("Account Type").should("be.visible");
+    cy.wait(2000);
 }
 
 Allocation_UT_TestPage_12(){
+
+   cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkalloc_Acclevel).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOn_CC_RadioBtn).click();
+    cy.wait(2000);
+   const expectedOptions = ['Delinquent', 'Non-Delinquent'];
+
+cy.get(this.locators.ClickOn_UserType)
+  .find('option')
+  .then($options => {
+    const actual = [...$options].map(o => o.text.trim());
+    expect(actual).to.deep.equal(expectedOptions);
+  });
+
+  cy.wait(2000);
 
 }
 
 Allocation_UT_TestPage_13(){
 
+  cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkalloc_Cuslevel).click();
+    cy.wait(2000);
+    cy.contains("Account Type").should("be.visible");
+    cy.wait(2000);
 }
 
 Allocation_UT_TestPage_14(){
 
+  
+  cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkalloc_Cuslevel).click();
+    cy.wait(2000);
+  const expectedOptions = ['Delinquent', 'Non-Delinquent'];
+
+cy.get(this.locators.ClickOn_UserType)
+  .find('option')
+  .then($options => {
+    const actual = [...$options].map(o => o.text.trim());
+    expect(actual).to.deep.equal(expectedOptions);
+  });
+
+  cy.wait(2000);
 }
 
 Allocation_UT_TestPage_15(){
 
+    cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkalloc_Cuslevel).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOn_CC_RadioBtn).click();
+    cy.wait(2000);
+    cy.contains("Account Type").should("be.visible");
+    cy.wait(2000);
 }
 
+Allocation_UT_TestPage_16(){
+
+   cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Agent_Bulkalloc_Cuslevel).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOn_CC_RadioBtn).click();
+    cy.wait(2000);
+   const expectedOptions = ['Delinquent', 'Non-Delinquent'];
+
+cy.get(this.locators.ClickOn_UserType)
+  .find('option')
+  .then($options => {
+    const actual = [...$options].map(o => o.text.trim());
+    expect(actual).to.deep.equal(expectedOptions);
+  });
+
+  cy.wait(2000);
+
+}
+
+Allocation_UT_TestPage_17(){
+
+   cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Owner_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Owner_Bulkalloc_Acclevel).click();
+    cy.wait(2000);
+    cy.contains("Account Type").should("be.visible");
+    cy.wait(2000);
+}
+
+Allocation_UT_TestPage_18(){
+
+   cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Owner_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Owner_Bulkalloc_Acclevel).click();
+    cy.wait(2000);
+  const expectedOptions = ['Delinquent', 'Non-Delinquent'];
+
+cy.get(this.locators.ClickOn_UserType)
+  .find('option')
+  .then($options => {
+    const actual = [...$options].map(o => o.text.trim());
+    expect(actual).to.deep.equal(expectedOptions);
+  });
+
+  cy.wait(2000);
+}
+
+Allocation_UT_TestPage_19(){
+
+   cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Owner_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Owner_Bulkalloc_Cuslevel).click();
+    cy.wait(2000);
+    cy.contains("Account Type").should("be.visible");
+    cy.wait(2000);
+}
+
+Allocation_UT_Testpage_20(){
+
+   cy.get(this.locators.ClickOn_Allocation).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Owner_Bulkupload).click();
+    cy.wait(2000);
+     cy.get(this.locators.ClickOn_Owner_Bulkalloc_Cuslevel).click();
+    cy.wait(2000);
+  const expectedOptions = ['Delinquent', 'Non-Delinquent'];
+
+cy.get(this.locators.ClickOn_UserType)
+  .find('option')
+  .then($options => {
+    const actual = [...$options].map(o => o.text.trim());
+    expect(actual).to.deep.equal(expectedOptions);
+  });
+
+  cy.wait(2000);
+
+}
 
 
 

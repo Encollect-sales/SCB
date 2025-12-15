@@ -4,7 +4,7 @@ import LoginPage from '../pages/LoginPage';
 import { getLocators } from '../utils/locatorUtils';
 import AllocationPage from '../pages/AllocationPage';
 
-describe('Allocation - User Type -', () => {
+describe('Allocation - User Type -   User Click on agency customer level, loan account, in the Account type only respective options should be visible', () => {
     let loginPage;
     let allocationpage; 
 

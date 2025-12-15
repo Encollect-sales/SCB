@@ -1,5 +1,6 @@
 import { getLocators } from '../utils/locatorUtils';
 import { getBaseUrl } from '../utils/configUtils';
+import { faker } from '@faker-js/faker';
 
 
 class AgentEmpanelmentRequestPage {
@@ -345,6 +346,9 @@ cy.wait(2000);
     cy.wait(2000)
     cy.get(this.locators.UDIDNumberr).type("12345678909876543").should('be.visible');
     cy.wait(500);
+     const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+       cy.get('#agentCode').type(encode);
+      cy.wait(2000);
 
     const filePath1 = 'Aadhar.png'
     cy.get('.upload-text').click();
@@ -402,7 +406,7 @@ cy.wait(2000);
     // Cypress test code
     cy.get("#emailId").type(generateRandomEmail());
     cy.wait(500);
-    cy.get("#dobId").type("11-06-20006");
+    cy.get("#dobId").type("11-06-2006");
     cy.wait(2000);
     cy.get("#fatherNameId").type(" Mr B Kumar",{force: true});
     cy.wait(2000);
@@ -573,7 +577,7 @@ cy.wait(2000);
     // Cypress test code
     cy.get("#emailId").type(generateRandomEmail());
     cy.wait(500);
-    cy.get("#dobId").type("11-06-20006");
+    cy.get("#dobId").type("11-06-2006");
     cy.wait(2000);
     cy.get("#fatherNameId").type(" Mr B Kumar",{force: true});
     cy.wait(2000);
@@ -699,6 +703,10 @@ cy.wait(2000);
     cy.get(this.locators.UDIDNumberr).type("12345678909876543").should('be.visible');
     cy.wait(2000);
 
+     const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+       cy.get('#agentCode').type(encode);
+      cy.wait(2000);
+
     const filePath1 = 'Aadhar.png'
     cy.get('.upload-text').click();
     cy.wait(500);
@@ -755,7 +763,7 @@ cy.wait(2000);
     // Cypress test code
     cy.get("#emailId").type(generateRandomEmail());
     cy.wait(500);
-    cy.get("#dobId").type("11-06-20006");
+    cy.get("#dobId").type("11-06-2006");
     cy.wait(2000);
     cy.get("#fatherNameId").type("Kumar", {force: true});
     cy.wait(2000);
@@ -904,6 +912,12 @@ cy.wait(2000);
     cy.wait(2000)
     cy.get(this.locators.UDIDNumberr).type("12345678909876543").should('be.visible');
     cy.wait(2000);
+
+     const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+       cy.get('#agentCode').type(encode);
+      cy.wait(2000);
+
+
     const filePath1 = 'Aadhar.png'
     cy.get('.upload-text').click();
     cy.wait(500);
@@ -1119,6 +1133,10 @@ cy.wait(2000);
     cy.get(this.locators.UDIDNumberr).type("12345678909876543").should('be.visible');
     cy.wait(2000);
 
+     const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+       cy.get('#agentCode').type(encode);
+      cy.wait(2000);
+
     const filePath1 = 'Aadhar.png'
     cy.get('.upload-text').click();
     cy.wait(500);
@@ -1174,7 +1192,7 @@ cy.wait(2000);
     // Cypress test code
     cy.get("#emailId").type(generateRandomEmail());
     cy.wait(500);
-    cy.get("#dobId").type("11-06-20006");
+    cy.get("#dobId").type("11-06-2006");
     cy.wait(2000);
     cy.get("#fatherNameId").type("Kumar", {force: true});
     cy.wait(2000);
@@ -1267,7 +1285,7 @@ cy.wait(2000);
       cy.wait(2000);
     //choose date 2
 
-    cy.get("#CollectionDate").type("25/06/20003").should('be.visible');
+    cy.get("#CollectionDate").type("25/06/2003").should('be.visible');
     cy.wait(2000);
     cy.get("#RenewalDate").type("15-07-2024").should('be.visible');
     cy.wait(2000);
@@ -1442,7 +1460,7 @@ AgentEnpalmentRequest638(){
       cy.wait(2000);
     //choose date 2
 
-    cy.get("#CollectionDate").type("25/06/20003").should('be.visible');
+    cy.get("#CollectionDate").type("25/06/2003").should('be.visible');
     cy.wait(2000);
     cy.get("#RenewalDate").type("15-07-2024").should('be.visible');
     cy.wait(2000);
@@ -1494,6 +1512,10 @@ cy.wait(2000);
   cy.wait(2000)
   cy.get(this.locators.UDIDNumberr).type("12345678909876543").should('be.visible');
   cy.wait(2000);
+
+   const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+       cy.get('#agentCode').type(encode);
+      cy.wait(2000);
 
   const filePath1 = 'Aadhar.png'
   cy.get('.upload-text').click();
@@ -1551,7 +1573,7 @@ cy.wait(2000);
   // Cypress test code
   cy.get("#emailId").type(generateRandomEmail());
   cy.wait(500);
-  cy.get("#dobId").type("11-06-20006");
+  cy.get("#dobId").type("11-06-2006");
   cy.wait(2000);
   cy.get("#fatherNameId").type("Kumar", {force: true});
   cy.wait(2000);
@@ -1645,7 +1667,7 @@ cy.wait(2000);
   //   cy.wait(2000);
   //choose date 2
 
-  cy.get("#CollectionDate").type("25/06/20003").should('be.visible');
+  cy.get("#CollectionDate").type("25/06/2003").should('be.visible');
   cy.wait(2000);
   cy.get("#RenewalDate").type("15-07-2024").should('be.visible');
   cy.wait(2000);
@@ -1706,6 +1728,10 @@ cy.wait(2000);
   cy.get(this.locators.UDIDNumberr).type("12345678909876543").should('be.visible');
   cy.wait(2000);
 
+  const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+       cy.get('#agentCode').type(encode);
+      cy.wait(2000);
+
   const filePath1 = 'Aadhar.png'
     cy.get('.upload-text').click();
     cy.wait(500);
@@ -1760,7 +1786,7 @@ cy.wait(2000);
   // Cypress test code
   cy.get("#emailId").type(generateRandomEmail());
   cy.wait(500);
-  cy.get("#dobId").type("11-06-20006");
+  cy.get("#dobId").type("11-06-2006");
   cy.wait(2000);
   cy.get("#fatherNameId").type("Kumar", {force: true});
   cy.wait(2000);
@@ -1856,7 +1882,7 @@ cy.wait(2000);
     cy.wait(2000);
   //choose date 2
 
-  cy.get("#CollectionDate").type("25/06/20003").should('be.visible');
+  cy.get("#CollectionDate").type("25/06/2003").should('be.visible');
   cy.wait(2000);
   cy.get("#RenewalDate").type("15-07-2024").should('be.visible');
   cy.wait(2000);
@@ -1917,6 +1943,10 @@ cy.wait(2000);
   cy.get(this.locators.UDIDNumberr).type("12345678909876543").should('be.visible');
   cy.wait(2000);
 
+   const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+       cy.get('#agentCode').type(encode);
+      cy.wait(2000);
+
   const filePath1 = 'Aadhar.png'
     cy.get('.upload-text').click();
     cy.wait(500);
@@ -1974,7 +2004,7 @@ cy.wait(2000);
   // Cypress test code
   cy.get("#emailId").type(generateRandomEmail());
   cy.wait(500);
-  cy.get("#dobId").type("11-06-20006");
+  cy.get("#dobId").type("11-06-2006");
   cy.wait(2000);
   cy.get("#fatherNameId").type("Kumar", {force: true});
   cy.wait(2000);
@@ -2063,7 +2093,7 @@ cy.wait(2000);
   //   cy.wait(2000);
   //choose date 2
 
-  cy.get("#CollectionDate").type("25/06/20003").should('be.visible');
+  cy.get("#CollectionDate").type("25/06/2003").should('be.visible');
   cy.wait(2000);
   cy.get("#RenewalDate").type("15-07-2024").should('be.visible');
   cy.wait(2000);

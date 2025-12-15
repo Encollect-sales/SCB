@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1e1b437b786f1aedc22f8c4a5489c4,Telecaller,95106,Opal,Robel,opal@yopmail.com,,Branch Backend,Branch Manager,Bangalore,True, | Mobile Number is required

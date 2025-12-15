@@ -10,7 +10,9 @@ class UserManagementPage {
   }
 
   UserManagementModule() {
+    cy.wait(2000);
     cy.get(this.locators.clickonusermanagement).click();
+    cy.wait(2000);
   }
 
 
@@ -55,6 +57,7 @@ cy.wait(2000);
     const randomIndex = Math.floor(Math.random() * optionsCount); 
     const randomValue = $options[randomIndex].value; 
 
+cy.wait(1000);
     cy.get(this.locators.selectAgencySubType).select(randomValue, { force: true });
   });
 
@@ -63,8 +66,9 @@ cy.wait(2000);
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -258,6 +262,7 @@ cy.get(this.locators.selectAgencySubType)
     const randomIndex = Math.floor(Math.random() * optionsCount); 
     const randomValue = $options[randomIndex].value; 
 
+cy.wait(1000);
     cy.get(this.locators.selectAgencySubType).select(randomValue, { force: true });
   });
 
@@ -267,8 +272,9 @@ cy.wait(1000);
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+     const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -462,6 +468,7 @@ cy.get(this.locators.selectAgencySubType)
     const randomIndex = Math.floor(Math.random() * optionsCount); 
     const randomValue = $options[randomIndex].value; 
 
+cy.wait(1000);
     cy.get(this.locators.selectAgencySubType).select(randomValue, { force: true });
   });
 
@@ -471,8 +478,10 @@ cy.wait(1000);
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+
+   const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -522,10 +531,23 @@ cy.wait(1000);
     cy.wait(2000);
     cy.get(this.locators.bankaccountnumber).type("1234567890");
     cy.wait(2000);
-    cy.get(this.locators.bankname).select("SBI");
-    cy.wait(2000);
-    cy.get(this.locators.bankbranchname).select("YamunaNagar");
-    cy.wait(2000);
+
+     cy.get(this.locators.bankname).then($select => {
+  const options = $select.find('option');
+  const randomIndex = Math.floor(Math.random() * (options.length - 1)) + 1; 
+  const randomValue = options[randomIndex].value;
+
+  cy.wrap($select).select(randomValue);
+});
+cy.wait(2000);
+ cy.get(this.locators.bankbranchname).then($select => {
+  const options = $select.find('option');
+  const randomIndex = Math.floor(Math.random() * (options.length - 1)) + 1; 
+  const randomValue = options[randomIndex].value;
+
+  cy.wrap($select).select(randomValue);
+});
+  cy.wait(2000);
     cy.get(this.locators.gstnumber).type("ADCC123456ABCD");
     cy.wait(2000);
     //////////////////////////////////////Documentation_Details/////////////////////////////////////
@@ -717,6 +739,7 @@ cy.get(this.locators.selectAgencySubType)
     const randomIndex = Math.floor(Math.random() * optionsCount); 
     const randomValue = $options[randomIndex].value; 
 
+cy.wait(1000);
     cy.get(this.locators.selectAgencySubType).select(randomValue, { force: true });
   });
 
@@ -726,8 +749,9 @@ cy.wait(1000);
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-    // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+   const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -777,10 +801,22 @@ cy.wait(1000);
     cy.wait(2000);
     cy.get(this.locators.bankaccountnumber).type("1234567890");
     cy.wait(2000);
-    cy.get(this.locators.bankname).select("SBI");
-    cy.wait(2000);
-    cy.get(this.locators.bankbranchname).select("YamunaNagar");
-    cy.wait(2000);
+     cy.get(this.locators.bankname).then($select => {
+  const options = $select.find('option');
+  const randomIndex = Math.floor(Math.random() * (options.length - 1)) + 1; 
+  const randomValue = options[randomIndex].value;
+
+  cy.wrap($select).select(randomValue);
+});
+cy.wait(2000);
+ cy.get(this.locators.bankbranchname).then($select => {
+  const options = $select.find('option');
+  const randomIndex = Math.floor(Math.random() * (options.length - 1)) + 1; 
+  const randomValue = options[randomIndex].value;
+
+  cy.wrap($select).select(randomValue);
+});
+  cy.wait(2000);
     cy.get(this.locators.gstnumber).type("ADCC123456ABCD");
     cy.wait(2000);
     //////////////////////////////////////Documentation_Details/////////////////////////////////////
@@ -922,6 +958,7 @@ cy.wait(1000);
     const randomIndex = Math.floor(Math.random() * optionsCount); 
     const randomValue = $options[randomIndex].value; 
 
+cy.wait(1000);
     cy.get(this.locators.selectAgencySubType).select(randomValue, { force: true });
   });
 
@@ -931,8 +968,9 @@ cy.wait(1000);
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -982,10 +1020,22 @@ cy.wait(1000);
     cy.wait(2000);
     cy.get(this.locators.bankaccountnumber).type("1234567890");
     cy.wait(2000);
-    cy.get(this.locators.bankname).select("SBI");
-    cy.wait(2000);
-    cy.get(this.locators.bankbranchname).select("YamunaNagar");
-    cy.wait(2000);
+     cy.get(this.locators.bankname).then($select => {
+  const options = $select.find('option');
+  const randomIndex = Math.floor(Math.random() * (options.length - 1)) + 1; 
+  const randomValue = options[randomIndex].value;
+
+  cy.wrap($select).select(randomValue);
+});
+cy.wait(2000);
+ cy.get(this.locators.bankbranchname).then($select => {
+  const options = $select.find('option');
+  const randomIndex = Math.floor(Math.random() * (options.length - 1)) + 1; 
+  const randomValue = options[randomIndex].value;
+
+  cy.wrap($select).select(randomValue);
+});
+  cy.wait(2000);
     cy.get(this.locators.gstnumber).type("ADCC123456ABCD");
     cy.wait(2000);
     //////////////////////////////////////Documentation_Details/////////////////////////////////////
@@ -1296,6 +1346,7 @@ cy.wait(1000);
     const randomIndex = Math.floor(Math.random() * optionsCount); 
     const randomValue = $options[randomIndex].value; 
 
+cy.wait(1000);
     cy.get(this.locators.selectAgencySubType).select(randomValue, { force: true });
   });
 
@@ -1305,8 +1356,9 @@ cy.wait(1000);
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -1356,10 +1408,22 @@ cy.wait(1000);
     cy.wait(2000);
     cy.get(this.locators.bankaccountnumber).type("1234567890");
     cy.wait(2000);
-    cy.get(this.locators.bankname).select("SBI");
-    cy.wait(2000);
-    cy.get(this.locators.bankbranchname).select("YamunaNagar");
-    cy.wait(2000);
+     cy.get(this.locators.bankname).then($select => {
+  const options = $select.find('option');
+  const randomIndex = Math.floor(Math.random() * (options.length - 1)) + 1; 
+  const randomValue = options[randomIndex].value;
+
+  cy.wrap($select).select(randomValue);
+});
+cy.wait(2000);
+ cy.get(this.locators.bankbranchname).then($select => {
+  const options = $select.find('option');
+  const randomIndex = Math.floor(Math.random() * (options.length - 1)) + 1; 
+  const randomValue = options[randomIndex].value;
+
+  cy.wrap($select).select(randomValue);
+});
+  cy.wait(2000);
     cy.get(this.locators.gstnumber).type("ADCC123456ABCD");
     cy.wait(2000);
     //////////////////////////////////////Documentation_Details/////////////////////////////////////
@@ -1923,6 +1987,7 @@ cy.get(this.locators.selectAgencySubType)
     const randomIndex = Math.floor(Math.random() * optionsCount); 
     const randomValue = $options[randomIndex].value; 
 
+cy.wait(1000);
     cy.get(this.locators.selectAgencySubType).select(randomValue, { force: true });
   });
 
@@ -1932,8 +1997,9 @@ cy.wait(1000);
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -2124,6 +2190,7 @@ cy.wait(1000);
     const randomIndex = Math.floor(Math.random() * optionsCount); 
     const randomValue = $options[randomIndex].value; 
 
+cy.wait(1000);
     cy.get(this.locators.selectAgencySubType).select(randomValue, { force: true });
   });
 
@@ -2133,8 +2200,9 @@ cy.wait(1000);
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -2358,6 +2426,7 @@ cy.wait(1000);
     const randomIndex = Math.floor(Math.random() * optionsCount); 
     const randomValue = $options[randomIndex].value; 
 
+cy.wait(1000);
     cy.get(this.locators.selectAgencySubType).select(randomValue, { force: true });
   });
 
@@ -2367,8 +2436,9 @@ cy.wait(1000);
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -2418,10 +2488,22 @@ cy.wait(1000);
     cy.wait(2000);
     cy.get(this.locators.bankaccountnumber).type("1234567890");
     cy.wait(2000);
-    cy.get(this.locators.bankname).select("SBI");
-    cy.wait(2000);
-    cy.get(this.locators.bankbranchname).select("YamunaNagar");
-    cy.wait(2000);
+     cy.get(this.locators.bankname).then($select => {
+  const options = $select.find('option');
+  const randomIndex = Math.floor(Math.random() * (options.length - 1)) + 1; 
+  const randomValue = options[randomIndex].value;
+
+  cy.wrap($select).select(randomValue);
+});
+cy.wait(2000);
+ cy.get(this.locators.bankbranchname).then($select => {
+  const options = $select.find('option');
+  const randomIndex = Math.floor(Math.random() * (options.length - 1)) + 1; 
+  const randomValue = options[randomIndex].value;
+
+  cy.wrap($select).select(randomValue);
+});
+  cy.wait(2000);
     cy.get(this.locators.gstnumber).type("ADCC123456ABCD");
     cy.wait(2000);
     //////////////////////////////////////Documentation_Details/////////////////////////////////////
@@ -2550,6 +2632,7 @@ cy.wait(1000);
     const randomIndex = Math.floor(Math.random() * optionsCount); 
     const randomValue = $options[randomIndex].value; 
 
+cy.wait(1000);
     cy.get(this.locators.selectAgencySubType).select(randomValue, { force: true });
   });
 
@@ -2558,8 +2641,9 @@ cy.wait(2000);
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -2750,8 +2834,9 @@ cy.get(this.locators.selectAgencySubType).select("Regional Task Force");
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -2943,6 +3028,7 @@ cy.wait(1000);
     const randomIndex = Math.floor(Math.random() * optionsCount); 
     const randomValue = $options[randomIndex].value; 
 
+cy.wait(1000);
     cy.get(this.locators.selectAgencySubType).select(randomValue, { force: true });
   });
 
@@ -2951,8 +3037,9 @@ cy.wait(2000);
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -3143,8 +3230,9 @@ cy.get(this.locators.selectAgencySubType).select("Zonal Office");
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -3329,6 +3417,7 @@ cy.get(this.locators.selectRecommendingOfficer)
     const randomIndex = Math.floor(Math.random() * optionsCount); 
     const randomValue = $options[randomIndex].value; 
 
+cy.wait(1000);
     cy.get(this.locators.selectAgencySubType).select(randomValue, { force: true });
   });
 
@@ -3337,8 +3426,9 @@ cy.wait(2000);
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -3523,8 +3613,9 @@ cy.get(this.locators.selectRecommendingOfficer)
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -3710,8 +3801,9 @@ cy.get(this.locators.selectRecommendingOfficer)
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -3894,8 +3986,9 @@ cy.get(this.locators.selectRecommendingOfficer)
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -4079,8 +4172,9 @@ cy.get(this.locators.selectRecommendingOfficer)
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -4265,8 +4359,9 @@ cy.get(this.locators.selectRecommendingOfficer)
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -4450,8 +4545,9 @@ cy.get(this.locators.selectRecommendingOfficer)
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -4636,8 +4732,9 @@ cy.get(this.locators.selectRecommendingOfficer)
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -4821,8 +4918,9 @@ cy.get(this.locators.selectRecommendingOfficer)
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -5006,8 +5104,9 @@ cy.get(this.locators.selectRecommendingOfficer)
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -5191,8 +5290,9 @@ cy.get(this.locators.selectRecommendingOfficer)
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -5378,8 +5478,9 @@ cy.get(this.locators.selectRecommendingOfficer)
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -5565,8 +5666,9 @@ cy.wait(2000);
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -5750,8 +5852,9 @@ cy.get(this.locators.selectRecommendingOfficer)
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -6126,8 +6229,9 @@ cy.get(this.locators.selectRecommendingOfficer)
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);
@@ -6316,8 +6420,9 @@ cy.get(this.locators.selectRecommendingOfficer)
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-     // cy.get(this.locators.clickongenerateENcollectcode).click();
-    // cy.wait(2000);
+    const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+     cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
+    cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
     cy.wait(2000);

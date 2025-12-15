@@ -4,14 +4,14 @@ import LoginPage from '../pages/LoginPage';
 import { getLocators } from '../utils/locatorUtils';
 import AllocationPage from '../pages/AllocationPage';
 
-describe('Allocation - User Type -', () => {
+describe('Allocation - User Type - User Click on agency account level, loan account, in the Account type only respective options should be visible', () => {
     let loginPage;
     let allocationpage; 
 
     before(() => {
         // Load and set locators before any tests run
         getLocators('loginPage').then(locators => {
-            loginPage = new LoginPage(locators);
+            loginPage = new LoginPage(locators);s
         });
 
         getLocators('Allocation').then(locators => {  

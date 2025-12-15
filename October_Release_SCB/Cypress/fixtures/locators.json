@@ -1,18 +1,19 @@
 {
   "loginPage": {
     "companynameInput": "#login-company-name",
-    "ClickonCompanyName": "#ngb-typeahead-0-0",
+    "ClickonCompanyName": ".ng-option-label",
     "usernameInput": "#login-email",
     "passwordInput": "#login-password",
     "signinButton": "#login-submit-button",
     "dashboard": ".name-width",
-    "profile": ".avatar-info",
-    "logoutButton": ":nth-child(4) > .dropdown-item"
+     "profile" : ".avatar-info",
+    "logoutButton" : ":nth-child(4) > .dropdown-item"
   },
 
   "Allocation":{
 
     "ClickOn_Allocation":"[title='Allocation'] > span.ng-star-inserted",
+    "ClickOn_CC_RadioBtn":"#account-type-cc",
 
     "ClickOn_Agency_Bulkupload":".allocation > :nth-child(2) > :nth-child(1) > a.ng-star-inserted",
     "ClickOn_Agency_Bulkalloc_Acclevel":".allocation > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(1) > a",
@@ -46,16 +47,31 @@
     
     "ClickOn_Filter_Productgroup":".panel-open > .panel > .panel-collapse > .panel-body > .row > :nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "ClickOn_Filter_Bucket":".panel-open > .panel > .panel-collapse > .panel-body > .row > .col-lg-4.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
-    "ClickOn_Filter_Geo":".panel-open > .panel > .panel-collapse > .panel-body > .row > .col-lg-4 > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input"
+    "ClickOn_Filter_Geo":".panel-open > .panel > .panel-collapse > .panel-body > .row > .col-lg-4 > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
 
-
+    "ClickOn_UserType":"#AccountType"
 
 
   },
 
   "Repo":{
 
+   "ClickOn_Repo":"[title='Repossession'] > span.ng-star-inserted",
 
+   "ClickOn_RequestRepo":".repossession > .sub-nav-list > :nth-child(1) > .ng-star-inserted",
+   "TypeAccNumber":"#accountNumber",
+   "Type_Vehicle_Regnum":"#vehicleNumber",
+   "ClickOn_SubmitBtn":"#search-submit-button",
+   "ClickOn_ClearBtn":"#search-clear-button",
+   "ClickOn_Filter":"#loan-grid-column-filter-button",
+   "ClickOn_FlexBtn":":nth-child(1) > .actions > .d-flex > .action-icon-button > svg-icon.action-icon > .action-icon",
+
+
+   "ClickOn_MyRequests":".repossession > .sub-nav-list > :nth-child(2) > .ng-star-inserted",
+   "ClickOn_MyActionqueue":".repossession > .sub-nav-list > :nth-child(3) > .ng-star-inserted",
+   "ClickOn_SearchRepo":".repossession > .sub-nav-list > :nth-child(4) > .ng-star-inserted"
+
+   
 
     
   }
