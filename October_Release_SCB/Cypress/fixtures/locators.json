@@ -54,6 +54,95 @@
 
   },
 
+   "payments":{
+    "Product_Group":"select[name='productGroup']",
+    "CMS_PayIn_Slip_id":"input[name='cmsPayInSlipNo']",
+    "Payment_mode":":nth-child(3) > .form-control-group > .form-select",
+    "Deposit_account_number":":nth-child(4) > .form-control-group > .form-select",
+    "Account_holder_name":":nth-child(5) > .form-control-group > .form-select",
+    "Deposit_bank_name":":nth-child(6) > .form-control-group > .form-select",
+    "Deposit_branch":":nth-child(7) > .form-control-group > .form-select",
+    "Date_of_deposit":":nth-child(8) > .form-control-group > .form-control",
+    "Batch_id":".ng-select-container.ng-has-value",
+    "submit_button":"button[type='submit']",
+    "fileupload":"input[name='attachedFile']",
+    "generate":"button[class='btn btn-secondary mw-150px']",
+    "payments_mode":"select[name='paymentMode']",
+    "sub_btn":"button[type='submit']",
+    "pagination_count_dropdown":".pagination-count > .form-select",
+    "search_btn":"#search-button",
+    "search_edit_payment":".payments > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(3) > a",
+    "receipts":".payments > :nth-child(2) > :nth-child(4) > a.ng-star-inserted",
+    "walkin_cust":".payments > :nth-child(2) > :nth-child(4) > .sub-nav-list > :nth-child(1) > a",
+    "Customer_Account_Number":":nth-child(5) > .form-control-group > .form-control",
+    "Physical_Receipt_No":":nth-child(2) > :nth-child(1) > .form-control-group > .form-control",
+    "Collector_ID":".card-content > :nth-child(2) > :nth-child(2) > .form-control-group > .form-control",
+    "Relationship_With_Customer":".form-control-group > .form-select",
+    "Mode_Of_Payment":".payment-input > .form-select",
+    "field1":"tbody > :nth-child(1) > :nth-child(2) > .form-control-group > .form-control",
+    "field2":"tbody > :nth-child(2) > :nth-child(2) > .form-control-group > .form-control",
+    "field3":"tbody > :nth-child(3) > :nth-child(2) > .form-control-group > .form-control",
+    "field4":"tbody > :nth-child(4) > :nth-child(2) > .form-control-group > .form-control",
+    "field5":"tbody > :nth-child(5) > :nth-child(2) > .form-control-group > .form-control",
+    "field6":"tbody > :nth-child(6) > :nth-child(2) > .form-control-group > .form-control",
+    "button":".btn-secondary",
+    "confirm":"#confirm-dialog-okay",
+    "fileuploadone":".card-content > :nth-child(1) > .form-control",
+    "fileuploadtwo":".ng-star-inserted > .form-control",
+    "payment":"a[title='Payments']",
+    "Deposit_slip":"a[title='Deposit Slip']",
+    "searchandview":"a[title='Search and View Deposit Slip']",
+    "Mode_of_Payment":"select[name='paymentMode']",
+    "submit":"button[type='submit']",
+    "account_page":"a[title='Account Search']",
+    "cancel2":":nth-child(1) > .ng-value-icon",
+    "cancel3":":nth-child(2) > .ng-value-icon",
+    "cancel4":":nth-child(3) > .ng-value-icon",
+    "Customer_Name:":"#search-customer-name",
+    "btn":"#search-submit-button",
+    "dropdown":"select[name='itemsPerPage']",
+    "firstaccount":"tbody > :nth-child(1) > :nth-child(4) > a",
+    "lastaccount":"tbody > :nth-child(2) > :nth-child(4) > a",
+    "next_button":"#nextButton",
+    "Previous_Button":"#PreviousButton"
+  
+  },
+
+
+  "reports":{
+    "clickreports":"a[title='Reports']",
+    "Performance":"a[title='Performance Report']",
+    "productGroup":":nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container",
+    "dropdown":"div[aria-label='Options List']",
+    "buckets":":nth-child(4) > .form-control-group > .form-ng-select > .ng-select-container",
+    "country":":nth-child(5) > .form-control-group > .form-ng-select > .ng-select-container",
+    "generate":"#generate-report-button",
+    "dropdown_arrow":":nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-arrow-wrapper",
+    "Communication":".reports > :nth-child(2) > :nth-child(6) > .ng-star-inserted",
+    "Region":":nth-child(6) > .form-control-group > .form-ng-select > .ng-select-container",
+    "Communication_From_Date":":nth-child(1) > .form-control",
+    "Communication_To_Date":":nth-child(2) > .form-control",
+    "Triggertype":"#triggerType",
+    "Generate_button":"#generate-report-button",
+    "download_button":".btn-outline-dark",
+    "First_Page":".pagination-first",
+    "Last_Page":".pagination-last"
+  
+  },
+
+
+  "insights":{  
+    "primary_insights":".insights > .sub-nav-list > :nth-child(1) > .ng-star-inserted",
+    "filterbutton":"div[class='d-flex align-items-center justify-content-between mb-4'] button[class='btn btn-primary btn-filter px-4 py-2 h-auto rounded-4']",
+    "clickonproduct":"#accordion-product > .panel > .panel-heading > .panel-title",
+    "secondary_insights":".insights > .sub-nav-list > :nth-child(2) > .ng-star-inserted",
+    "Trail_Gap_Insights":".insights > .sub-nav-list > :nth-child(3) > .ng-star-inserted",
+    "Accountvsallocated":".insights > .sub-nav-list > :nth-child(4) > .ng-star-inserted",
+    "MoneymovementinsightsAgencystaff":".insights > .sub-nav-list > :nth-child(5) > .ng-star-inserted",
+    "MoneymovementinsightsBankstaff":".insights > .sub-nav-list > :nth-child(5) > .ng-star-inserted"
+  
+  },
+
   "Repo":{
 
    "ClickOn_Repo":"[title='Repossession'] > span.ng-star-inserted",
@@ -71,8 +160,7 @@
    "ClickOn_MyActionqueue":".repossession > .sub-nav-list > :nth-child(3) > .ng-star-inserted",
    "ClickOn_SearchRepo":".repossession > .sub-nav-list > :nth-child(4) > .ng-star-inserted"
 
-   
-
+  
     
   }
 

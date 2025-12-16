@@ -2,11 +2,14 @@ import { readExcelFile } from '../utils/excelutils';
 import { getTestData } from '../utils/testDataUtils';
 import LoginPage from '../pages/LoginPage';
 import { getLocators } from '../utils/locatorUtils';
-import RepoPage from '../pages/RepoPage';
+import AllocationPage from '../pages/AllocationPage';
+import InsightsPage from '../pages/InsightsPage';
 
-describe('Repo - My requests - User click On Pending Repo Authorization and user able to click on flex button and able to click the view repossession option and lands on the details page and headers will be there ', () => {
+describe('Trail Gap Insights - Verify and check whether the bucket fields are working properly -', () => {
     let loginPage;
-    let repopage; 
+    let allocationpage; 
+    //let paymentspage;
+    let insightspage;
 
     before(() => {
         // Load and set locators before any tests run
@@ -14,16 +17,16 @@ describe('Repo - My requests - User click On Pending Repo Authorization and user
             loginPage = new LoginPage(locators);
         });
 
-        getLocators('Repo').then(locators => {  
-            repopage = new RepoPage(locators); 
+        getLocators('insights').then(locators => {  
+            insightspage = new InsightsPage(locators); 
         });
     });
 
-    it('Repo - TC_ID_102', () => {
-        getTestData('loginData', 'Repologin1').then(user => {
+    it('Insights -TC_Ins_042', () => {
+        getTestData('loginData', 'login').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
                 cy.wait(2000);
-                repopage.RepoTestPage_102();            
+                insightspage.TC_Ins_042();            
             });
         });
     });

@@ -5,12 +5,12 @@
   "email": "testinginsight@yopmail.com",
       "password": "123@zxZX"
   },
-  "login3": {
-    "Companyname": "ENCollect",
-     "email": "testinginsight@yopmail.com",
-      "password": "123@zxZX"
-  },
 
+     "login2": {
+    "Companyname": "ENCollect",
+   "email": "kamalesh@yopmail.com",
+    "password": "123@asAS" 
+  },
 
 
 
