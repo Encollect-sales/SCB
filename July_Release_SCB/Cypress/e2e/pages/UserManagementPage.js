@@ -2238,7 +2238,7 @@ PanCardTestPage_02(){
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Search_Agency).click();
   cy.wait(2000);
-  cy.get(this.locators.Type_Agency_Name).type("Amber");
+  cy.get(this.locators.Type_Agency_Name).type("Kinder");
   cy.wait(2000);
   cy.get(this.locators.Select_Agency_status).select("Approved");
   cy.wait(2000);
@@ -2275,7 +2275,7 @@ PanCardTestPage_02a(){
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Search_Agency).click();
   cy.wait(2000);
-   cy.get(this.locators.Type_Agency_Name).type("Amber");
+   cy.get(this.locators.Type_Agency_Name).type("Kinder");
   cy.wait(2000);
   cy.get(this.locators.Select_Agency_status).select("Pending Approval");
   cy.wait(2000);
@@ -2287,7 +2287,7 @@ PanCardTestPage_02a(){
   cy.wait(2000);  
     cy.get('[role="alert"]').should('be.visible').and('contain', 'Agency Approved Successfully');
   cy.wait(4000);
-    cy.get(this.locators.Type_Agency_Name).clear().type("Amber");
+    cy.get(this.locators.Type_Agency_Name).clear().type("Kinder");
   cy.wait(2000);
   cy.get(this.locators.Select_Agency_status).select("Approved");
   cy.wait(2000);
@@ -2367,7 +2367,7 @@ PanCardTestPage_05(){
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Search_Agency).click();
   cy.wait(2000);
-    cy.get(this.locators.Type_Agency_Name).type("Amber");
+    cy.get(this.locators.Type_Agency_Name).type("Kinder");
   cy.wait(2000);
   cy.get(this.locators.Select_Agency_status).select("Approved");
   cy.wait(2000);
@@ -2392,7 +2392,7 @@ cy.wait(2000);
 
     cy.get(this.locators.ClickOn_Search_Agency).click();
   cy.wait(2000);
-    cy.get(this.locators.Type_Agency_Name).type("Amber");
+    cy.get(this.locators.Type_Agency_Name).type("Kinder");
   cy.wait(2000);
   cy.get(this.locators.Select_Agency_status).select("Approved");
   cy.wait(2000);
@@ -2455,7 +2455,7 @@ PanCardTestPage_08(){
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Search_Agency).click();
   cy.wait(2000);
-  cy.get(this.locators.Type_Agency_Name).type("Amber");
+  cy.get(this.locators.Type_Agency_Name).type("Kinder");
   cy.wait(2000);
   cy.get(this.locators.Select_Agency_status).select("Approved");
   cy.wait(2000);

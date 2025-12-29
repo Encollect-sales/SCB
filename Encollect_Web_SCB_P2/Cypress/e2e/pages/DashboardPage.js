@@ -17,7 +17,7 @@ class DashboardPage {
 
     cy.get('.ng-arrow-wrapper').click();
     cy.wait(1000);
-    cy.contains('span.ng-option-label', 'Credit Card Last 4 digits').click();
+    cy.contains('span.ng-option-label', 'Credit Card Last 4 Digits').click();
     cy.wait(1000);
     cy.get("#search-cc-number").type("7990");
     cy.wait(1000);
@@ -27,11 +27,11 @@ class DashboardPage {
   Dashboard982(){
      cy.get('.ng-arrow-wrapper').click();
     cy.wait(1000);
-    cy.contains('span.ng-option-label', 'Credit Card Last 4 digits').click();
+    cy.contains('span.ng-option-label','Loan Account Last 4 Digits').click();
     cy.wait(2000);
     cy.get('#cc-account-type').click();
     cy.wait(500);
-    cy.get(this.locators.creditcardnumber).type('7990');
+    cy.get("#search-lastXDigitsOfAccountNo").type('7990');
     cy.wait(500);
     cy.get(this.locators.search_btn);
   }

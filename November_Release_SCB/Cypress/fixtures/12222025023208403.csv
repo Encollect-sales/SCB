@@ -1,0 +1,3 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009590352,1936,Yes,PTP,PTP,2025-12-26,94,,Approved agent,1-684-887-4867 x634,BTM,Bangalore,Wellington.Howe@yahoo.com,Permanent,New,12222025023208403,Success,
+DMI0009801001,1933,Yes,PTP,PTP,2025-12-26,94,,Failure reason validation,430.474.0979 x2944,BTM,Bangalore,Abigayle_Kovacek2@gmail.com,Permanent,New,12222025023208403,Error,Account number does not exist in database

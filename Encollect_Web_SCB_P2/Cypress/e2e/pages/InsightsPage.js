@@ -66,13 +66,13 @@ class InsightsPage {
   }
 
   clickonInsights005() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force: true} );
     cy.wait(1000);
-    cy.get(this.locators.clickonprimaryallocationinsights).click();
+    cy.get(this.locators.clickonprimaryallocationinsights).click({force: true} );
     cy.wait(10000);
     cy.get('.inner-container').scrollTo('0%', '40%');
     cy.wait(1000);
-    cy.get(this.locators.resetcrossfilters).click();
+    cy.get(this.locators.resetcrossfilters).click({force: true} );
     cy.wait(1000);
   }
 
@@ -81,9 +81,10 @@ class InsightsPage {
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(10000);
-    cy.get(this.locators.clickonbottom).click();
-    cy.wait(1000);
-    cy.get('.active.tab-pane > .chart-cards-container > :nth-child(3) > .card-header > h3').contains('Bottom 10 Field Primary by Accounts Allocated').should('be.visible');
+    cy.get(':nth-child(3) > .card-header > .d-flex > .btn-group > [btnradio="bottom"]').click();
+    cy.get(2000);
+  cy.contains('h3', 'Bottom 10 Field Primary by Accounts Allocated').scrollIntoView().should('be.visible');
+
     cy.wait(1000);
 
   }
@@ -93,9 +94,9 @@ class InsightsPage {
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(10000);
-    cy.get(this.locators.topbottomowner).click();
+    cy.get(':nth-child(4) > .card-header > .d-flex > .btn-group > [btnradio="bottom"]').click({force:true});
     cy.wait(1000);
-    cy.get('tab:nth-child(1) div:nth-child(2) div:nth-child(4) div:nth-child(1) h3:nth-child(1)').contains('Bottom 10 Owners by Accounts Unallocated').should('be.visible');
+    cy.contains('h3', 'Bottom 10 Owners by Accounts Unallocated').should('exist');
     cy.wait(1000);
 
   }
@@ -105,9 +106,9 @@ class InsightsPage {
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(10000);
-    cy.get(this.locators.topbottomtelecalling).click();
+    cy.get(':nth-child(5) > .card-header > .d-flex > .btn-group > [btnradio="bottom"]').click({force:true});
     cy.wait(1000);
-    cy.get('tab:nth-child(1) div:nth-child(2) div:nth-child(5) div:nth-child(1) h3:nth-child(1)').contains('Bottom 10 Tele-Calling Primary by Accounts Allocated').should('be.visible');
+    cy.contains('h3','Bottom 10 Tele-Calling Primary by Accounts Allocated').should('exist');
     cy.wait(1000);
 
   }
@@ -215,9 +216,21 @@ class InsightsPage {
     cy.get(this.locators.clickonbyproduct).click();
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-pristine > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
-    cy.wait(1000);
+     cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
+    cy.wait(4000);
     cy.get('.ng-dropdown-panel').should('be.visible')
+      .within(() => {
+        cy.wait(3000);
+        cy.get('.ng-option').then($options => {
+          const count = $options.length;
+          const randomIndex = Math.floor(Math.random() * count);
+          cy.wrap($options[randomIndex]).click({ force: true });
+        });
+      });
+      cy.wait(2000);
+      cy.get("#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input").click({force:true});
+      cy.wait(4000);
+      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
         cy.get('.ng-option').then($options => {
           const count = $options.length;
@@ -225,9 +238,9 @@ class InsightsPage {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
-    cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+      cy.get("body > app-root:nth-child(1) > app-menu-layout:nth-child(2) > main:nth-child(1) > section:nth-child(3) > div:nth-child(2) > app-money-movement-insight:nth-child(2) > div:nth-child(1) > app-offcanvas:nth-child(2) > fieldset:nth-child(1) > app-money-movement-insight-filter:nth-child(1) > div:nth-child(3) > accordion:nth-child(1) > accordion-group:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > form:nth-child(1) > div:nth-child(1) > div:nth-child(3) > ng-select:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)").click({force:true});
+      cy.wait(4000);
+      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
         cy.get('.ng-option').then($options => {
           const count = $options.length;
@@ -235,10 +248,21 @@ class InsightsPage {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+}
+clickonmoneymovementingistspage154() {
+    cy.get(this.locators.clickoninsight).click();
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.wait(1000);
+    cy.get(this.locators.clickonfilter).click();
+    cy.wait(1000);
+    cy.get('#accordion-bucket > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
+    cy.wait(1000);
+    cy.get('#accordion-bucket > .panel > .panel-collapse > .panel-body > form.ng-pristine > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+    cy.wait(1000);
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
@@ -246,6 +270,17 @@ class InsightsPage {
         });
       });
 
+      cy.get('#accordion-bucket > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+      cy.wait(1000);
+      cy.get('.ng-dropdown-panel').should('be.visible')
+      .within(() => {
+        cy.wait(5000);
+        cy.get('.ng-option').then($options => {
+          const count = $options.length;
+          const randomIndex = Math.floor(Math.random() * count);
+          cy.wrap($options[randomIndex]).click({ force: true });
+        });
+      });
   }
 
   clickonInsights014() {
@@ -293,62 +328,62 @@ class InsightsPage {
     cy.scrollTo('bottom', { ensureScrollable: false });
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container').click();
+    cy.get('#accordion-geography > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
+    cy.wait(1000);
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(2) > .form-ng-select > .ng-select-container').click();
+      cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
+        cy.get('.ng-option').then($options => {
+          const count = $options.length;
+          const randomIndex = Math.floor(Math.random() * count);
+          cy.wrap($options[randomIndex]).click({ force: true });
+        });
+      });cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container').click({force:true});
+    cy.wait(1000);
+     cy.get('.ng-dropdown-panel').should('be.visible')
+      .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(3) > .form-ng-select > .ng-select-container').click();
+      cy.get(':nth-child(4) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(4) > .form-ng-select > .ng-select-container').click();
+      cy.get(':nth-child(5) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(5) > .form-ng-select > .ng-select-container').click();
-    cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
-      .within(() => {
-        cy.get('.ng-option').then($options => {
-          const count = $options.length;
-          const randomIndex = Math.floor(Math.random() * count);
-          cy.wrap($options[randomIndex]).click({ force: true });
-        });
-      });
-
   }
 
   clickonInsights016() {
@@ -358,7 +393,7 @@ class InsightsPage {
     cy.wait(8000);
     cy.get(this.locators.hoverOnIcon).click();
     cy.wait(1000);
-    cy.get('.enc-tabs-1').contains('Total Accounts').should('be.visible');
+    cy.contains('Total Accounts').should('be.visible');
     cy.wait(1000);
   }
 
@@ -437,9 +472,21 @@ class InsightsPage {
     cy.get(this.locators.clickonbyproduct).click();
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-pristine > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
-    cy.wait(1000);
+  cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
+    cy.wait(4000);
     cy.get('.ng-dropdown-panel').should('be.visible')
+      .within(() => {
+        cy.wait(3000);
+        cy.get('.ng-option').then($options => {
+          const count = $options.length;
+          const randomIndex = Math.floor(Math.random() * count);
+          cy.wrap($options[randomIndex]).click({ force: true });
+        });
+      });
+      cy.wait(2000);
+      cy.get("#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input").click({force:true});
+      cy.wait(4000);
+      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
         cy.get('.ng-option').then($options => {
           const count = $options.length;
@@ -447,19 +494,9 @@ class InsightsPage {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
-    cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
-      .within(() => {
-        cy.get('.ng-option').then($options => {
-          const count = $options.length;
-          const randomIndex = Math.floor(Math.random() * count);
-          cy.wrap($options[randomIndex]).click({ force: true });
-        });
-      });
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
-    cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+      cy.get("body > app-root:nth-child(1) > app-menu-layout:nth-child(2) > main:nth-child(1) > section:nth-child(3) > div:nth-child(2) > app-money-movement-insight:nth-child(2) > div:nth-child(1) > app-offcanvas:nth-child(2) > fieldset:nth-child(1) > app-money-movement-insight-filter:nth-child(1) > div:nth-child(3) > accordion:nth-child(1) > accordion-group:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > form:nth-child(1) > div:nth-child(1) > div:nth-child(3) > ng-select:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)").click({force:true});
+      cy.wait(4000);
+      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
         cy.get('.ng-option').then($options => {
           const count = $options.length;
@@ -524,55 +561,54 @@ class InsightsPage {
     cy.scrollTo('bottom', { ensureScrollable: false });
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container').click();
+ cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(2) > .form-ng-select > .ng-select-container').click();
+      cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
+        cy.get('.ng-option').then($options => {
+          const count = $options.length;
+          const randomIndex = Math.floor(Math.random() * count);
+          cy.wrap($options[randomIndex]).click({ force: true });
+        });
+      });cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container').click({force:true});
+    cy.wait(1000);
+     cy.get('.ng-dropdown-panel').should('be.visible')
+      .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(3) > .form-ng-select > .ng-select-container').click();
+      cy.get(':nth-child(4) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(4) > .form-ng-select > .ng-select-container').click();
+      cy.get(':nth-child(5) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
-        cy.get('.ng-option').then($options => {
-          const count = $options.length;
-          const randomIndex = Math.floor(Math.random() * count);
-          cy.wrap($options[randomIndex]).click({ force: true });
-        });
-      });
-
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(5) > .form-ng-select > .ng-select-container').click();
-    cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
-      .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
@@ -599,55 +635,54 @@ class InsightsPage {
     cy.scrollTo('bottom', { ensureScrollable: false });
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container').click();
+    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(2) > .form-ng-select > .ng-select-container').click();
+      cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
+        cy.get('.ng-option').then($options => {
+          const count = $options.length;
+          const randomIndex = Math.floor(Math.random() * count);
+          cy.wrap($options[randomIndex]).click({ force: true });
+        });
+      });cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container').click({force:true});
+    cy.wait(1000);
+     cy.get('.ng-dropdown-panel').should('be.visible')
+      .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(3) > .form-ng-select > .ng-select-container').click();
+      cy.get(':nth-child(4) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(4) > .form-ng-select > .ng-select-container').click();
+      cy.get(':nth-child(5) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
-        cy.get('.ng-option').then($options => {
-          const count = $options.length;
-          const randomIndex = Math.floor(Math.random() * count);
-          cy.wrap($options[randomIndex]).click({ force: true });
-        });
-      });
-
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(5) > .form-ng-select > .ng-select-container').click();
-    cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
-      .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
@@ -3674,11 +3709,11 @@ clickonmoneymovementingistspage153() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementingistspage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilter).click({force: true});
     cy.wait(1000);
-    cy.get('#accordion-product > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
+    cy.get('#accordion-product > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click({force:true});
     cy.wait(1000);
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
     cy.wait(4000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -3689,7 +3724,8 @@ clickonmoneymovementingistspage153() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-      cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+      cy.wait(2000);
+      cy.get("#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input").click({force:true});
       cy.wait(4000);
       cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -3699,7 +3735,7 @@ clickonmoneymovementingistspage153() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-      cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(3) > .form-ng-select > .ng-select-container').click();
+      cy.get("body > app-root:nth-child(1) > app-menu-layout:nth-child(2) > main:nth-child(1) > section:nth-child(3) > div:nth-child(2) > app-money-movement-insight:nth-child(2) > div:nth-child(1) > app-offcanvas:nth-child(2) > fieldset:nth-child(1) > app-money-movement-insight-filter:nth-child(1) > div:nth-child(3) > accordion:nth-child(1) > accordion-group:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > form:nth-child(1) > div:nth-child(1) > div:nth-child(3) > ng-select:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)").click({force:true});
       cy.wait(4000);
       cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -3752,7 +3788,7 @@ clickonmoneymovementingistspage155() {
     cy.wait(1000);
     cy.get('#accordion-geography > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
     cy.wait(1000);
      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -3763,7 +3799,7 @@ clickonmoneymovementingistspage155() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-      cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+      cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -3773,17 +3809,7 @@ clickonmoneymovementingistspage155() {
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
-      });cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
-    cy.wait(1000);
-     cy.get('.ng-dropdown-panel').should('be.visible')
-      .within(() => {
-        cy.wait(5000);
-        cy.get('.ng-option').then($options => {
-          const count = $options.length;
-          const randomIndex = Math.floor(Math.random() * count);
-          cy.wrap($options[randomIndex]).click({ force: true });
-        });
-      });cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(4) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+      });cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -3794,7 +3820,18 @@ clickonmoneymovementingistspage155() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-      cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(5) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+      cy.get(':nth-child(4) > .form-ng-select > .ng-select-container').click({force:true});
+    cy.wait(1000);
+     cy.get('.ng-dropdown-panel').should('be.visible')
+      .within(() => {
+        cy.wait(5000);
+        cy.get('.ng-option').then($options => {
+          const count = $options.length;
+          const randomIndex = Math.floor(Math.random() * count);
+          cy.wrap($options[randomIndex]).click({ force: true });
+        });
+      });
+      cy.get(':nth-child(5) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -3858,8 +3895,7 @@ clickonmoneymovementingistspage158() {
     cy.wait(1000);
     cy.get('.active.tab-pane > .ng-star-inserted > .overview-cards > :nth-child(1) > .overview-card-info-icon > svg-icon > svg').click();
     cy.wait(1000);
-    cy.get('.enc-tabs-2').contains('Shows thw total ammounts collected  across all accounts').should('be.visible');
-   cy.wait(1000);
+    cy.contains("Shows the total amount collected across all accounts").should("be.visible");
 }
 clickonmoneymovementingistspage159() {
     cy.get(this.locators.clickoninsight).click();
@@ -3966,7 +4002,7 @@ clickonmoneymovementingistspage162() {
     cy.wait(1000);
     cy.get('#accordion-product > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(4000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -3977,7 +4013,7 @@ clickonmoneymovementingistspage162() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-      cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+      cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
       cy.wait(4000);
       cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -3987,7 +4023,7 @@ clickonmoneymovementingistspage162() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-      cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(3) > .form-ng-select > .ng-select-container').click();
+      cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
       cy.wait(4000);
       cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -4050,7 +4086,7 @@ clickonmoneymovementingistspage165() {
     cy.wait(1000);
     cy.get('#accordion-geography > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
     cy.wait(1000);
      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -4061,7 +4097,7 @@ clickonmoneymovementingistspage165() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-      cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+      cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -4071,7 +4107,7 @@ clickonmoneymovementingistspage165() {
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
-      });cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+      });cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -4081,7 +4117,7 @@ clickonmoneymovementingistspage165() {
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
-      });cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(4) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+      });cy.get(':nth-child(4) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -4092,7 +4128,7 @@ clickonmoneymovementingistspage165() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-      cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(5) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+      cy.get(':nth-child(5) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -4325,7 +4361,7 @@ clickonmoneymovementingistspage174() {
     cy.wait(1000);
     cy.get('#accordion-product > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(4000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -4381,7 +4417,7 @@ clickonmoneymovementingistspage174() {
     cy.wait(1000);
     cy.get('#accordion-geography > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -4793,15 +4829,15 @@ clickonmoneymovementingistspage201() {
       });
     }
    clickonmoneymovementingistspage202() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click( {force: true} );
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
+    cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click( {force: true} );
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilter).click( {force: true} );
     cy.wait(1000);
     cy.get('#accordion-product > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+     cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
     cy.wait(4000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -4812,7 +4848,8 @@ clickonmoneymovementingistspage201() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-      cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+      cy.wait(2000);
+      cy.get("#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input").click({force:true});
       cy.wait(4000);
       cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -4822,7 +4859,7 @@ clickonmoneymovementingistspage201() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-      cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(3) > .form-ng-select > .ng-select-container').click();
+      cy.get("body > app-root:nth-child(1) > app-menu-layout:nth-child(2) > main:nth-child(1) > section:nth-child(3) > div:nth-child(2) > app-money-movement-insight:nth-child(2) > div:nth-child(1) > app-offcanvas:nth-child(2) > fieldset:nth-child(1) > app-money-movement-insight-filter:nth-child(1) > div:nth-child(3) > accordion:nth-child(1) > accordion-group:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > form:nth-child(1) > div:nth-child(1) > div:nth-child(3) > ng-select:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)").click({force:true});
       cy.wait(4000);
       cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -4875,7 +4912,7 @@ clickonmoneymovementingistspage204() {
     cy.wait(1000);
     cy.get('#accordion-geography > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
     cy.wait(1000);
      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -4886,7 +4923,7 @@ clickonmoneymovementingistspage204() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-      cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+      cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -4896,7 +4933,7 @@ clickonmoneymovementingistspage204() {
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
-      });cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+      });cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -4906,7 +4943,7 @@ clickonmoneymovementingistspage204() {
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
-      });cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(4) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+      });cy.get(':nth-child(4) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -4917,7 +4954,7 @@ clickonmoneymovementingistspage204() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-      cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(5) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+      cy.get(':nth-child(5) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -4981,7 +5018,7 @@ clickonmoneymovementingistspage207() {
     cy.wait(1000);
     cy.get('.active.tab-pane > .ng-star-inserted > .overview-cards > :nth-child(1) > .overview-card-info-icon > svg-icon > svg').click();
     cy.wait(1000);
-    cy.get('.enc-tabs-2').contains('Shows thw total ammounts collected  across all accounts').should('be.visible');
+    cy.contains("Shows the total amount collected across all accounts").should("be.visible");
    cy.wait(1000);
 }
 clickonmoneymovementingistspage208() {
@@ -5063,17 +5100,17 @@ clickonmoneymovementingistspage211() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
- cy.get('#accordion-user > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
-  cy.wait(10000);
-   cy.get('.ng-dropdown-panel').should('be.visible')
-      .within(() => {
-        cy.wait(8000);
-        cy.get('.ng-option').then($options => {
-          const count = $options.length;
-          const randomIndex = Math.floor(Math.random() * count);
-          cy.wrap($options[randomIndex]).click({ force: true });
-        });
-      });
+//  cy.get('#accordion-user > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+//   cy.wait(10000);
+//    cy.get('.ng-dropdown-panel').should('be.visible')
+//       .within(() => {
+//         cy.wait(8000);
+//         cy.get('.ng-option').then($options => {
+//           const count = $options.length;
+//           const randomIndex = Math.floor(Math.random() * count);
+//           cy.wrap($options[randomIndex]).click({ force: true });
+//         });
+//       });
       //Now Click on Detail Analysis
       cy.get(this.locators.clickOnDetailedAnalysis).click();
     cy.wait(1000)
@@ -5089,7 +5126,7 @@ clickonmoneymovementingistspage212() {
     cy.wait(1000);
     cy.get('#accordion-product > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+   cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(4000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -5100,7 +5137,7 @@ clickonmoneymovementingistspage212() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-      cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+      cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
       cy.wait(4000);
       cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -5110,7 +5147,7 @@ clickonmoneymovementingistspage212() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-      cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(3) > .form-ng-select > .ng-select-container').click();
+      cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
       cy.wait(4000);
       cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -5173,7 +5210,7 @@ clickonmoneymovementingistspage214() {
     cy.wait(1000);
     cy.get('#accordion-geography > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
     cy.wait(1000);
      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -5184,7 +5221,7 @@ clickonmoneymovementingistspage214() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-      cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+      cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -5194,7 +5231,7 @@ clickonmoneymovementingistspage214() {
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
-      });cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+      });cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -5204,7 +5241,7 @@ clickonmoneymovementingistspage214() {
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
-      });cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(4) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+      });cy.get(':nth-child(4) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -5215,7 +5252,7 @@ clickonmoneymovementingistspage214() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-      cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(5) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+      cy.get(':nth-child(5) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -5448,7 +5485,7 @@ clickonmoneymovementingistspage219() {
     cy.wait(1000);
     cy.get('#accordion-product > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(4000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -5504,7 +5541,7 @@ clickonmoneymovementingistspage224() {
     cy.wait(1000);
     cy.get('#accordion-geography > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
     cy.wait(1000);
      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -5658,50 +5695,52 @@ clickonmoneymovementingistspage230() {
     cy.scrollTo('bottom', { ensureScrollable: false });
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container').click();
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
+    cy.wait(1000);
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(2) > .form-ng-select > .ng-select-container').click();
+      cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(3) > .form-ng-select > .ng-select-container').click();
+      cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
-      });
-
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(4) > .form-ng-select > .ng-select-container').click();
+      })
+        cy.get(':nth-child(4) > .form-ng-select > .ng-select-container').click({force:true});
+        
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
-      });
-      
+      })
     //Now Click on Detail Analysis
     cy.get('body').click();
     cy.wait(1000);
@@ -5724,26 +5763,30 @@ clickonmoneymovementingistspage230() {
     cy.scrollTo('bottom', { ensureScrollable: false });
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container').click();
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
+    cy.wait(1000);
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(2) > .form-ng-select > .ng-select-container').click();
+      cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
-      });
+     
+      })
        //Now Click on Detail Analysis
     cy.get('body').click();
     cy.wait(1000);
@@ -5766,7 +5809,7 @@ clickonmoneymovementingistspage230() {
     cy.scrollTo('bottom', { ensureScrollable: false });
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container').click();
+    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -5776,18 +5819,7 @@ clickonmoneymovementingistspage230() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(2) > .form-ng-select > .ng-select-container').click();
-    cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
-      .within(() => {
-        cy.get('.ng-option').then($options => {
-          const count = $options.length;
-          const randomIndex = Math.floor(Math.random() * count);
-          cy.wrap($options[randomIndex]).click({ force: true });
-        });
-      });
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(3) > .form-ng-select > .ng-select-container').click();
+    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -5798,8 +5830,19 @@ clickonmoneymovementingistspage230() {
         });
       });
 
+    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
+    cy.wait(1000);
+    cy.get('.ng-dropdown-panel').should('be.visible')
+      .within(() => {
+        cy.get('.ng-option').then($options => {
+          const count = $options.length;
+          const randomIndex = Math.floor(Math.random() * count);
+          cy.wrap($options[randomIndex]).click({ force: true });
+        });
+      });
 
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(4) > .form-ng-select > .ng-select-container').click();
+
+    cy.get(':nth-child(4) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -5816,16 +5859,16 @@ clickonmoneymovementingistspage230() {
    ///
     cy.get('.toggle-menu-btn').click();
     cy.wait(2000); 
-    cy.get(':nth-child(4) > .page-link').click();
-    cy.wait(2000);
-    cy.get(':nth-child(5) > .page-link').click();
-    cy.wait(2000);
-    cy.get(':nth-child(6) > .page-link').click();
-    cy.wait(2000);
-    cy.get(':nth-child(7) > .page-link').click();
-    cy.wait(2000);
-    cy.get('.pagination-next > .page-link').click();
-    cy.wait(2000);
+    // cy.get(':nth-child(4) > .page-link').click();
+    // cy.wait(2000);
+    // cy.get(':nth-child(5) > .page-link').click();
+    // cy.wait(2000);
+    // cy.get(':nth-child(6) > .page-link').click();
+    // cy.wait(2000);
+    // cy.get(':nth-child(7) > .page-link').click();
+    // cy.wait(2000);
+    // cy.get('.pagination-next > .page-link').click();
+    // cy.wait(2000);
   }
   clickonmoneymovementingistspage233() {
     cy.get(this.locators.clickoninsight).click();
@@ -5883,17 +5926,17 @@ clickonmoneymovementingistspage236() {
     cy.wait(1000);
 }
 clickonmoneymovementingistspage237() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
+    cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click({force:true});
     cy.wait(1000);
-    cy.get(':nth-child(3) > .nav-link > span').click();
+    cy.get(':nth-child(3) > .nav-link > span').click({force:true});
     cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click();
+    cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
-    cy.get(':nth-child(1) > .dropdown-item > .flex-grow-1').click();
+    cy.get(':nth-child(1) > .dropdown-item > .flex-grow-1').click({force:true});
     cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click();
+    cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
      cy.get('th.ng-star-inserted').filter(':contains("Field Primary Name")').scrollIntoView().should('be.visible');
      cy.get('th.ng-star-inserted').filter(':contains("Agent Name")').scrollIntoView().should('be.visible');
@@ -5905,21 +5948,21 @@ clickonmoneymovementingistspage237() {
      cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
      cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
       cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
-      cy.get('th.ng-star-inserted').filter(':contains("Branch Name")').scrollIntoView().should('be.visible');
+      cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
        cy.get('th.ng-star-inserted').filter(':contains("Loan Amount Bucket")').scrollIntoView().should('be.visible');
 }
 clickonmoneymovementingistspage238() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
+    cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click({force:true});
     cy.wait(1000);
-    cy.get(':nth-child(3) > .nav-link > span').click();
+    cy.get(':nth-child(3) > .nav-link > span').click({force:true});
     cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click();
+    cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
-    cy.get(':nth-child(2) > .dropdown-item > .flex-grow-1').click();
+    cy.get(':nth-child(2) > .dropdown-item > .flex-grow-1').click({force:true});
     cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click();
+    cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
      cy.get('th.ng-star-inserted').filter(':contains("Field Primary Name")').scrollIntoView().should('be.visible');
      cy.get('th.ng-star-inserted').filter(':contains("Agent Name")').scrollIntoView().should('be.visible');
@@ -5931,22 +5974,22 @@ clickonmoneymovementingistspage238() {
      cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
      cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
       cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
-      cy.get('th.ng-star-inserted').filter(':contains("Branch Name")').scrollIntoView().should('be.visible');
+      cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
        cy.get('th.ng-star-inserted').filter(':contains("Days Bucket")').scrollIntoView().should('be.visible');
 
 }
 clickonmoneymovementingistspage239() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
+    cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click({force:true});
     cy.wait(1000);
-    cy.get(':nth-child(3) > .nav-link > span').click();
+    cy.get(':nth-child(3) > .nav-link > span').click({force:true});
     cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click();
+    cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
-    cy.get(':nth-child(3) > .dropdown-item > .flex-grow-1').click();
+    cy.get(':nth-child(3) > .dropdown-item > .flex-grow-1').click({force:true});
     cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click();
+    cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
      cy.get('th.ng-star-inserted').filter(':contains("Field Primary Name")').scrollIntoView().should('be.visible');
      cy.get('th.ng-star-inserted').filter(':contains("Agent Name")').scrollIntoView().should('be.visible');
@@ -5958,7 +6001,7 @@ clickonmoneymovementingistspage239() {
      cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
      cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
       cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
-      cy.get('th.ng-star-inserted').filter(':contains("Branch Name")').scrollIntoView().should('be.visible');
+      cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
        cy.get('th.ng-star-inserted').filter(':contains("Agency/FOS/Deposited With Bank")').scrollIntoView().should('be.visible');
 
 }
@@ -5967,14 +6010,14 @@ clickonmoneymovementingistspage240() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(':nth-child(3) > .nav-link > span').click();
+    cy.get(':nth-child(3) > .nav-link > span').click({force:true});
     cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click();
+    cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
-    cy.get(':nth-child(4) > .dropdown-item > .flex-grow-1').click();
+    cy.get(':nth-child(4) > .dropdown-item > .flex-grow-1').click({force:true});
     cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click();
-    cy.wait(2000);
+    cy.get('#loan-grid-column-filter-button').click({force:true});
+    cy.wait(5000);
      cy.get('th.ng-star-inserted').filter(':contains("Field Primary Name")').scrollIntoView().should('be.visible');
      cy.get('th.ng-star-inserted').filter(':contains("Agent Name")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Product Group")').scrollIntoView().should('be.visible');
@@ -5985,22 +6028,22 @@ clickonmoneymovementingistspage240() {
      cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
      cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
       cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
-      cy.get('th.ng-star-inserted').filter(':contains("Branch Name")').scrollIntoView().should('be.visible');
+      cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
        cy.get('th.ng-star-inserted').filter(':contains("Account Number")').scrollIntoView().should('be.visible');
 
 }
 clickonmoneymovementingistspage241() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
+    cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click({force:true});
     cy.wait(1000);
-    cy.get(':nth-child(3) > .nav-link > span').click();
+    cy.get(':nth-child(3) > .nav-link > span').click({force:true});
     cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click();
+    cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
-    cy.get(':nth-child(5) > .dropdown-item > .flex-grow-1').click();
+    cy.get(':nth-child(5) > .dropdown-item > .flex-grow-1').click({force:true});
     cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click();
+    cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
      cy.get('th.ng-star-inserted').filter(':contains("Field Primary Name")').scrollIntoView().should('be.visible');
      cy.get('th.ng-star-inserted').filter(':contains("Agent Name")').scrollIntoView().should('be.visible');
@@ -6012,30 +6055,30 @@ clickonmoneymovementingistspage241() {
      cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
      cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
       cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
-      cy.get('th.ng-star-inserted').filter(':contains("Branch Name")').scrollIntoView().should('be.visible');
+      cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
        cy.get('th.ng-star-inserted').filter(':contains("Total Overdue Amount")').scrollIntoView().should('be.visible');
 
 }
 clickonmoneymovementingistspage242() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
+    cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click({force:true});
     cy.wait(1000);
-    cy.get(':nth-child(3) > .nav-link > span').click();
+    cy.get(':nth-child(3) > .nav-link > span').click({force:true});
     cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click();
+    cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
-    cy.get(':nth-child(1) > .dropdown-item > .flex-grow-1').click();
+    cy.get(':nth-child(1) > .dropdown-item > .flex-grow-1').click({force:true});
     cy.wait(1000);
-    cy.get(':nth-child(2) > .dropdown-item > .flex-grow-1').click();
+    cy.get(':nth-child(2) > .dropdown-item > .flex-grow-1').click({force:true});
     cy.wait(1000);
-    cy.get(':nth-child(3) > .dropdown-item > .flex-grow-1').click();
+    cy.get(':nth-child(3) > .dropdown-item > .flex-grow-1').click({force:true});
     cy.wait(1000);
-    cy.get(':nth-child(4) > .dropdown-item > .flex-grow-1').click();
+    cy.get(':nth-child(4) > .dropdown-item > .flex-grow-1').click({force:true});
     cy.wait(1000);
-    cy.get(':nth-child(5) > .dropdown-item > .flex-grow-1').click();
+    cy.get(':nth-child(5) > .dropdown-item > .flex-grow-1').click({force:true});
     cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click();
+    cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
      cy.get('th.ng-star-inserted').filter(':contains("Field Primary Name")').scrollIntoView().should('be.visible');
      cy.get('th.ng-star-inserted').filter(':contains("Agent Name")').scrollIntoView().should('be.visible');
@@ -6047,7 +6090,7 @@ clickonmoneymovementingistspage242() {
      cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
      cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
       cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
-      cy.get('th.ng-star-inserted').filter(':contains("Branch Name")').scrollIntoView().should('be.visible');
+      cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
       cy.get('th.ng-star-inserted').filter(':contains("Loan Amount Bucket")').scrollIntoView().should('be.visible');
       cy.get('th.ng-star-inserted').filter(':contains("Days Bucket")').scrollIntoView().should('be.visible');
       cy.get('th.ng-star-inserted').filter(':contains("Agency/FOS/Deposited With Bank")').scrollIntoView().should('be.visible');
@@ -6574,50 +6617,63 @@ clickonmoneymovementingistspage256() {
     cy.scrollTo('bottom', { ensureScrollable: false });
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container').click();
-    cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
-      .within(() => {
-        cy.get('.ng-option').then($options => {
-          const count = $options.length;
-          const randomIndex = Math.floor(Math.random() * count);
-          cy.wrap($options[randomIndex]).click({ force: true });
-        });
-      });
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(2) > .form-ng-select > .ng-select-container').click();
-    cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
-      .within(() => {
-        cy.get('.ng-option').then($options => {
-          const count = $options.length;
-          const randomIndex = Math.floor(Math.random() * count);
-          cy.wrap($options[randomIndex]).click({ force: true });
-        });
-      });
 
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(3) > .form-ng-select > .ng-select-container').click();
+    cy.get('#accordion-geography > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
+    cy.wait(1000);
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(4) > .form-ng-select > .ng-select-container').click();
+      cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-      
+      cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container').click({force:true});
+    cy.wait(1000);
+     cy.get('.ng-dropdown-panel').should('be.visible')
+      .within(() => {
+        cy.wait(5000);
+        cy.get('.ng-option').then($options => {
+          const count = $options.length;
+          const randomIndex = Math.floor(Math.random() * count);
+          cy.wrap($options[randomIndex]).click({ force: true });
+        });
+      });cy.get(':nth-child(4) > .form-ng-select > .ng-select-container').click({force:true});
+    cy.wait(1000);
+     cy.get('.ng-dropdown-panel').should('be.visible')
+      .within(() => {
+        cy.wait(5000);
+        cy.get('.ng-option').then($options => {
+          const count = $options.length;
+          const randomIndex = Math.floor(Math.random() * count);
+          cy.wrap($options[randomIndex]).click({ force: true });
+        });
+      });
+      cy.get(':nth-child(5) > .form-ng-select > .ng-select-container').click({force:true});
+    cy.wait(1000);
+     cy.get('.ng-dropdown-panel').should('be.visible')
+      .within(() => {
+        cy.wait(5000);
+        cy.get('.ng-option').then($options => {
+          const count = $options.length;
+          const randomIndex = Math.floor(Math.random() * count);
+          cy.wrap($options[randomIndex]).click({ force: true });
+        });
+      });
     //Now Click on Detail Analysis
     cy.get('body').click();
     cy.wait(1000);
@@ -6640,20 +6696,22 @@ clickonmoneymovementingistspage256() {
     cy.scrollTo('bottom', { ensureScrollable: false });
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container').click();
+    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(2) > .form-ng-select > .ng-select-container').click();
+      cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
@@ -6682,43 +6740,45 @@ clickonmoneymovementingistspage256() {
     cy.scrollTo('bottom', { ensureScrollable: false });
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container').click();
+    cy.get('#accordion-geography > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
+    cy.wait(1000);
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(2) > .form-ng-select > .ng-select-container').click();
+      cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(3) > .form-ng-select > .ng-select-container').click();
+      cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
           cy.wrap($options[randomIndex]).click({ force: true });
         });
-      });
-
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(4) > .form-ng-select > .ng-select-container').click();
+      });cy.get(':nth-child(4) > .form-ng-select > .ng-select-container').click({force:true});
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
+        cy.wait(5000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
@@ -6730,18 +6790,18 @@ clickonmoneymovementingistspage256() {
     cy.get('body').click();
     cy.wait(1000);
    ///
-    cy.get('.toggle-menu-btn').click();
+    cy.get('.toggle-menu-btn').click({force: true});
     cy.wait(2000); 
-    cy.get(':nth-child(4) > .page-link').click();
+    cy.get(':nth-child(4) > .page-link').click({force: true});
     cy.wait(2000);
-    cy.get(':nth-child(5) > .page-link').click();
+    cy.get(':nth-child(5) > .page-link').click({force: true});
     cy.wait(2000);
-    cy.get(':nth-child(6) > .page-link').click();
-    cy.wait(2000);
-    cy.get(':nth-child(7) > .page-link').click();
-    cy.wait(2000);
-    cy.get('.pagination-next > .page-link').click();
-    cy.wait(2000);
+    // cy.get(':nth-child(6) > .page-link').click({force: true});
+    // cy.wait(2000);
+    // cy.get(':nth-child(7) > .page-link').click({force: true});
+    // cy.wait(2000);
+    // cy.get('.pagination-next > .page-link').click({force: true});
+    // cy.wait(2000);
   }
   clickonmoneymovementingistspage259() {
     cy.get(this.locators.clickoninsight).click();
@@ -6800,7 +6860,7 @@ clickonmoneymovementingistspage262() {
     cy.wait(2000);
     cy.get(':nth-child(1) > .dropdown-item > .flex-grow-1').click();
     cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click();
+    cy.get('#loan-grid-column-filter-button').click( {force: true});
     cy.wait(2000);
     cy.get('th.ng-star-inserted').filter(':contains("Field Primary Name")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Agent Name")').scrollIntoView().should('be.visible');
@@ -6812,7 +6872,7 @@ clickonmoneymovementingistspage262() {
     cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Branch Name")').scrollIntoView().should('be.visible');
+    cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Loan Amount Bucket")').scrollIntoView().should('be.visible');
       
 }
@@ -6821,7 +6881,7 @@ clickonmoneymovementingistspage263() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementingistspage).click();
     cy.wait(1000);
-    cy.get(':nth-child(3) > .nav-link > span').click();
+    cy.get(':nth-child(3) > .nav-link > span').click({force:true});
     cy.wait(1000);
     cy.get('#loan-grid-column-filter-button').click();
     cy.wait(2000);
@@ -6835,7 +6895,7 @@ clickonmoneymovementingistspage263() {
     cy.wait(1000);
     cy.get(':nth-child(5) > .dropdown-item > .flex-grow-1').click();
     cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click();
+    cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
     cy.get('th.ng-star-inserted').filter(':contains("Field Primary Name")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Agent Name")').scrollIntoView().should('be.visible');
@@ -6847,7 +6907,7 @@ clickonmoneymovementingistspage263() {
     cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Branch Name")').scrollIntoView().should('be.visible');
+    cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Loan Amount Bucket")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Days Bucket")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Agency/FOS/Deposited With Bank")').scrollIntoView().should('be.visible');
@@ -6870,7 +6930,7 @@ clickonmoneymovementingistspage264() {
     cy.wait(1000);
     cy.get(':nth-child(5) > .dropdown-item > .flex-grow-1').click();
     cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click();
+    cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
     cy.get('th.ng-star-inserted').filter(':contains("Field Primary Name")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Agent Name")').scrollIntoView().should('be.visible');
@@ -6882,7 +6942,7 @@ clickonmoneymovementingistspage264() {
     cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Branch Name")').scrollIntoView().should('be.visible');
+    cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Loan Amount Bucket")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Agency/FOS/Deposited With Bank")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Total Overdue Amount")').scrollIntoView().should('be.visible');

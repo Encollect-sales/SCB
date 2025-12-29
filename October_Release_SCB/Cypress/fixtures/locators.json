@@ -49,7 +49,16 @@
     "ClickOn_Filter_Bucket":".panel-open > .panel > .panel-collapse > .panel-body > .row > .col-lg-4.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "ClickOn_Filter_Geo":".panel-open > .panel > .panel-collapse > .panel-body > .row > .col-lg-4 > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
 
-    "ClickOn_UserType":"#AccountType"
+    "ClickOn_UserType":"#AccountType",
+
+    "ClickOn_Productgroup":":nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "ClickOn_Bucket":":nth-child(5) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "ClickOn_Country":":nth-child(6) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+
+    "Click_Country_WithoutBUcket":":nth-child(5) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+
+    "ClickOn_DownloadAccounts":"#downloadAccounts",
+    "Click_Downloads_Agency_Cuslevel":"[type='submit']"
 
 
   },

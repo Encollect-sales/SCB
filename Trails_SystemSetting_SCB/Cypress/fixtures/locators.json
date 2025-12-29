@@ -1,0 +1,27 @@
+{
+  "loginPage": {
+    "companynameInput": "#login-company-name",
+    "ClickonCompanyName": ".ng-option-label",
+    "usernameInput": "#login-email",
+    "passwordInput": "#login-password",
+    "signinButton": "#login-submit-button",
+    "dashboard": ".name-width",
+    "profile": ".avatar-info",
+    "logoutButton": ":nth-child(4) > .dropdown-item"
+  },
+
+  "Trails": {
+    "Clickontrials": "[title='Trails']",
+    "Clickontrailuploadstatus": ".trails > .sub-nav-list > :nth-child(2) > .ng-star-inserted",
+    "Clickonsearch":"#bulk-trail-search-button",
+    "Clickoncancel":"#bulk-trail-cancel-button",
+    "Clickonstatus":"#bulk-trail-status"
+    
+
+
+    
+  }
+ 
+ 
+
+}

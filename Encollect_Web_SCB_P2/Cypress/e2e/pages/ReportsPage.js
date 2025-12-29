@@ -16,7 +16,7 @@ class ReportsPage {
     cy.wait(5000);
     cy.get(this.locators.paymentreport).click();
     cy.wait(1000);
-    cy.get(this.locators.receiptFrom).type('01/12/2023',{force:true});
+    cy.get(this.locators.receiptFrom).type('01/12/2023');
     cy.wait(1000);
     cy.get(this.locators.receiptTo).type("21/02/2025");
     cy.wait(2000);
@@ -27,9 +27,9 @@ class ReportsPage {
     cy.wait(1000);
     cy.get(this.locators.paymentreport).click();
     cy.wait(1000);
-    cy.get(this.locators.receiptFrom).type('01/12/2023',{force:true});
+    cy.get(this.locators.receiptFrom).type('01/12/2023');
     cy.wait(1000);
-    cy.get(this.locators.receiptTo).type("21/02/2025").click();
+    cy.get(this.locators.receiptTo).type("21/02/2025");
     cy.wait(2000);
     // cy.get(this.locators.generateReport).click({force:true});
     // cy.wait(2000);
@@ -56,20 +56,42 @@ class ReportsPage {
     cy.wait(1000);
     cy.get(this.locators.paymentreport).click();
     cy.wait(1000);
-    cy.get(this.locators.product_group_dropdown).select('All', {force :true});
-    cy.wait(1000);
-    cy.get('select[name="Product"]').select("All");
+    cy.contains("Product Group(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+    cy.get("span.ng-option-label").then(($opts) => {
+    const random = Math.floor(Math.random() * $opts.length);
+    cy.wrap($opts[random]).click({ force: true });
+});
+
+    cy.contains("Product(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+    cy.get("span.ng-option-label").then($options => {
+    const randomIndex = Math.floor(Math.random() * $options.length);
+    cy.wrap($options[randomIndex]).click({ force: true });
+});
+
   }
 
   PaymentReport305(){
     cy.wait(1000);
     cy.get(this.locators.paymentreport).click();
     cy.wait(1000);
-    cy.get(this.locators.product_group_dropdown).select('All' ,{force :true});
-    cy.wait(1000);
-    cy.get(this.locators.product_dropdown).select("All");
-    cy.wait(1000);
-    cy.get(this.locators.subproduct_dropdown).select("All");
+     cy.contains("Product Group(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+    cy.get("span.ng-option-label").then(($opts) => {
+    const random = Math.floor(Math.random() * $opts.length);
+    cy.wrap($opts[random]).click({ force: true });
+});
+
+    cy.contains("Product(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+    cy.get("span.ng-option-label").then($options => {
+    const randomIndex = Math.floor(Math.random() * $options.length);
+    cy.wrap($options[randomIndex]).click({ force: true });
+});
+   
+    cy.contains("Sub Product(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+     cy.get("span.ng-option-label").then($options => {
+    const randomIndex = Math.floor(Math.random() * $options.length);
+    cy.wrap($options[randomIndex]).click({ force: true });
+});
+
 
   }
 
@@ -77,7 +99,12 @@ class ReportsPage {
     cy.wait(1000);
     cy.get(this.locators.paymentreport).click();
     cy.wait(1000);
-    cy.get(this.locators.bom_bucket_dropdown).select("All");
+    cy.contains("Bucket(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+    cy.get("span.ng-option-label").then($options => {
+    const randomIndex = Math.floor(Math.random() * $options.length);
+    cy.wrap($options[randomIndex]).click({ force: true });
+});
+
 
   }
 
@@ -85,40 +112,84 @@ class ReportsPage {
     cy.wait(1000);
     cy.get(this.locators.paymentreport).click();
     cy.wait(1000);
-    cy.get(this.locators.country_dropdown).select('INDIA' , {force :true});
+    cy.contains("Country(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+    cy.get("span.ng-option-label").then($options => {
+    const randomIndex = Math.floor(Math.random() * $options.length);
+    cy.wrap($options[randomIndex]).click({ force: true });
+});
+
+
   }
 
   PaymentReport309(){
     cy.wait(1000);
     cy.get(this.locators.paymentreport).click();
     cy.wait(1000);
-    cy.get(this.locators.country_dropdown).select('INDIA' , {force :true});
-    cy.wait(1000);
-    cy.get(this.locators.region_dropdown).select('West' , {force :true});
+    cy.contains("Country(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+    cy.get("span.ng-option-label").then($options => {
+    const randomIndex = Math.floor(Math.random() * $options.length);
+    cy.wrap($options[randomIndex]).click({ force: true });
+});
+    cy.contains("Region(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+    cy.get("span.ng-option-label").then($options => {
+    const randomIndex = Math.floor(Math.random() * $options.length);
+    cy.wrap($options[randomIndex]).click({ force: true });
+});
+
   }
 
   PaymentReport308(){
     cy.wait(1000);
     cy.get(this.locators.paymentreport).click();
+    cy.contains("Country(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+    cy.get("span.ng-option-label").then($options => {
+    const randomIndex = Math.floor(Math.random() * $options.length);
+    cy.wrap($options[randomIndex]).click({ force: true });
+});
     cy.wait(1000);
-    cy.get(this.locators.country_dropdown).select('INDIA' , {force :true});
-    cy.wait(1000);
-    cy.get(this.locators.region_dropdown).select('West' , {force :true});
-    cy.wait(1000);
-    cy.get(this.locators.state_dropdown).select('All' , {force :true});
+    cy.contains("Region(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+    cy.get("span.ng-option-label").then($options => {
+    const randomIndex = Math.floor(Math.random() * $options.length);
+    cy.wrap($options[randomIndex]).click({ force: true });
+});
+   cy.wait(1000);
+    cy.contains("State(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+    cy.get("span.ng-option-label").then($options => {
+    const randomIndex = Math.floor(Math.random() * $options.length);
+    cy.wrap($options[randomIndex]).click({ force: true });
+});
+
+
   }
 
   PaymentReport310(){
     cy.wait(1000);
     cy.get(this.locators.paymentreport).click();
     cy.wait(1000);
-    cy.get(this.locators.country_dropdown).select('INDIA' , {force :true});
+    cy.contains("Country(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+    cy.get("span.ng-option-label").then($options => {
+    const randomIndex = Math.floor(Math.random() * $options.length);
+    cy.wrap($options[randomIndex]).click({ force: true });
+});
     cy.wait(1000);
-    cy.get(this.locators.region_dropdown).select('West' , {force :true});
+    cy.contains("Region(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+    cy.get("span.ng-option-label").then($options => {
+    const randomIndex = Math.floor(Math.random() * $options.length);
+    cy.wrap($options[randomIndex]).click({ force: true });
+});
+   cy.wait(1000);
+    cy.contains("State(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+    cy.get("span.ng-option-label").then($options => {
+    const randomIndex = Math.floor(Math.random() * $options.length);
+    cy.wrap($options[randomIndex]).click({ force: true });
+});
     cy.wait(1000);
-    cy.get(this.locators.state_dropdown).select('All' , {force :true});
-    cy.wait(1000);
-    cy.get(this.locators.city_dropdown).select('All' , {force :true});
+    cy.contains("City(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+    cy.get("span.ng-option-label").then($options => {
+    const randomIndex = Math.floor(Math.random() * $options.length);
+    cy.wrap($options[randomIndex]).click({ force: true });
+});
+
 
   }
 
@@ -130,7 +201,12 @@ class ReportsPage {
     cy.wait(1000);
     cy.get(this.locators.receiptTo).type("21/02/2025");
     cy.wait(2000);
-    cy.get(this.locators.branch).type("ALL");
+    cy.contains("User Branch(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+    cy.get("span.ng-option-label").then($options => {
+    const randomIndex = Math.floor(Math.random() * $options.length);
+    cy.wrap($options[randomIndex]).click({ force: true });
+});
+
     cy.wait(1000);
     // cy.get(this.locators.generateReport).click({force:true});
     // cy.wait(1000);
@@ -141,22 +217,26 @@ class ReportsPage {
     cy.wait(1000);
     cy.get(this.locators.paymentreport).click();
     cy.wait(1000);
-    cy.get(this.locators.agencystaff_radiobtn).click({force:true});
+    cy.get("#agencyUserRadio").click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.receiptFrom).type('01/12/2023',{force:true});
+    cy.get(this.locators.receiptFrom).type('01/11/2025',{force:true});
     cy.wait(1000);
-    cy.get(this.locators.receiptTo).type("21/02/2025");
+    cy.get(this.locators.receiptTo).type("21/12/2025");
     cy.wait(2000);
-    cy.get(this.locators.agency).type("TestFriday");
+    cy.contains('Agency(s)').parent().find("ng-select[placeholder='Select Agency(s)'] .ng-select-container").click({ force: true });
+     cy.get("span.ng-option-label").then($options => {
+    const randomIndex = Math.floor(Math.random() * $options.length);
+    cy.wrap($options[randomIndex]).click({ force: true });
+});
     cy.wait(1000);
-    cy.get('#ngb-typeahead-1-0').click();
-    cy.wait(1000);
+    //cy.get('#ngb-typeahead-1-0').click();
+    //cy.wait(1000);
     // cy.get(this.locators.generateReport).click({force:true});
     // cy.get(1000)
     // cy.scrollTo('bottom');
   }
   PaymentReport313(){
-    cy.get(this.locators.clickonAccountDashboardReport).click();
+    cy.get(this.locators.clickonAccountDashboardReport).first().click({ force: true });
     cy.wait(400);
     cy.get(':nth-child(1) > :nth-child(1) > label').should("be.visible");
     cy.wait(400);

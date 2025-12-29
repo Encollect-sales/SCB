@@ -1,0 +1,5 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009590352,1174,ss,PTP,PTP,2025-12-26,83,,Bulk upload Aug29,7679009688,btm,banglore,Johnnie7@gmail.com,permanent,new,12232025063840075,Success,
+DMI0009590352,1174,ss,PTP,PTP,2025-12-26,83,,Bulk upload Aug29,7679009688,btm,banglore,Johnnie7@gmail.com,permanent,new,12232025063840075,Success,
+DMI0009590352,118974,ss,PTP,PTP,2025-12-26,83,,Bulk upload Aug29,7679009688,btm,banglore,Johnnie7@gmail.com,permanent,new,12232025063840075,Error,Agent code is invalid
+DMI0009590352,118974,ss,PTP,PTP,2025-12-26,83,,Bulk upload Aug29,7679009688,btm,banglore,Johnnie7@gmail.com,permanent,new,12232025063840075,Error,Agent code is invalid

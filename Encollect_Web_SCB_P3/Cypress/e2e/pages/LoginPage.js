@@ -74,7 +74,7 @@ clickcompanyname() {
     cy.get('#otp-input').type(560062);
     cy.wait(2000);
     cy.get('.btn-success').click();
-    cy.wait(4000);
+    cy.wait(7000);
   }
   verifyLoginSuccess() {
     return cy.get(this.locators.dashboard).then(() => {});
@@ -87,8 +87,8 @@ clickcompanyname() {
     this.fillUsername(email);
     this.fillPassword(password);
     this.submit();
-    cy.wait(5000);
-    // this.enterotp();
+    cy.wait(3000);
+    this.enterotp();
   }
  
   login1(Companyname,email1, password1) {
@@ -98,8 +98,8 @@ clickcompanyname() {
     this.fillUsername(email1);
     this.fillPassword(password1);
     this.submit();
-    cy.wait(5000);
-    // this.enterotp();
+    cy.wait(3000);
+    this.enterotp();
   }
  
   logout() {

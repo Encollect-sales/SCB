@@ -23,7 +23,8 @@ describe('TC93 - Allocated vs Achieved Insights - Click on Allocated vs Achieved
     it('TC93 - Allocated vs Achieved Insights', () => {
         getTestData('loginData', 'login').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
-                insightsPage.clickonAllocatedvsAchived093();
+                insightsPage.clickonAllocatevsAchived093();
+
                 // loginPage.logout();         
             });
         });

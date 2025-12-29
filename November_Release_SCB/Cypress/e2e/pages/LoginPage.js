@@ -39,23 +39,22 @@ class LoginPage {
  
 Clikcompanyname() {
   cy.get(this.locators.ClickonCompanyName).click();
-  cy.wait(2000);
+  cy.wait(5000);
 }
  
-  fillUsername(email) {
-    
-    cy.get(this.locators.usernameInput).type(email);
-    cy.wait(2000);
-  }
- 
-  fillPassword(password) {
-    
-    cy.get(this.locators.passwordInput).type(password);
-  }
- 
+ fillUsername(email) {
+  cy.get(this.locators.usernameInput)
+    .type(email, { force: true });
+  cy.wait(2000);
+}
+
+fillPassword(password) {
+  cy.get(this.locators.passwordInput)
+    .type(password, { force: true });
+}
   submit() {
     cy.wait(2000);
-    cy.get(this.locators.signinButton).click();
+    cy.get(this.locators.signinButton).click({force:true});
     cy.wait(3000);
   }
  
@@ -81,8 +80,8 @@ Clikcompanyname() {
       this.fillPassword(password);
       this.submit();
       cy.wait(5000);
-      // this.enterotp();
-      // this.verifyLoginSuccess();
+      this.enterotp();
+      //this.verifyLoginSuccess();
   }
 
   // login1(Companyname, email, password) {

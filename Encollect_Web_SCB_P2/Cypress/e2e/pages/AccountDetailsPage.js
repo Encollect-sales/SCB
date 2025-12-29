@@ -397,7 +397,8 @@ class AccountDetailsPage {
     cy.wait(1000);
 
     // Click on the specific tab (adjust selector as per your application's HTML structure)
-    cy.get(':nth-child(15) > .dropdown-item').should('be.visible').click();
+  cy.get(':nth-child(15) > .dropdown-item').scrollIntoView().click({ force: true });
+
     cy.wait(800);
     // cy.get(this.locators.Cheackbox).should('be.visible').click();
     // cy.wait(800);
@@ -753,7 +754,7 @@ class AccountDetailsPage {
     cy.wait(5000);
     cy.get(this.locators.Disp_Code_Group).select("Paid");
     cy.wait(5000);
-    cy.get(this.locators.Dis_code).select("ITP");
+    cy.get(this.locators.Dis_code).select("CP");
     cy.wait(5000);
     cy.wait(5000);
     // cy.get(this.locators.Disp_Code_Group).select("Broken PTP");
@@ -812,9 +813,9 @@ class AccountDetailsPage {
 
     cy.get(this.locators.Radio_yes).click();
     cy.wait(3000);
-    cy.get(this.locators.Disp_Code_Group).select("PTP");
+    cy.get(this.locators.Disp_Code_Group).select("BPTP");
     cy.wait(5000);
-    cy.get(this.locators.Dis_code).select("PTP");
+    cy.get(this.locators.Dis_code).select("BPTP");
     cy.wait(5000);
     cy.get(this.locators.Short_Discription).type("AAASNNDND");
     cy.wait(5000);
@@ -885,7 +886,11 @@ class AccountDetailsPage {
     cy.wait(5000);
     cy.get(this.locators.Trail_History_Report).click();
     cy.wait(5000);
-    cy.get(this.locators.BOM).select("All");
+    cy.get("ng-select.ng-select-multiple .ng-select-container")
+    cy.wait(5000);
+    cy.get("ng-select.ng-select-multiple .ng-input").click(); 
+    cy.wait(5000);
+    cy.get('.ng-option-label.ng-star-inserted').should('have.length', 5);
     cy.wait(5000);
     cy.get(this.locators.Trail_from_date).type("01/02/2025");
     cy.wait(5000);

@@ -1,0 +1,74 @@
+import 'cypress-file-upload';
+import { getTestData } from '../utils/testDataUtils';
+import LoginPage from '../pages/LoginPage';
+import { getLocators } from '../utils/locatorUtils';
+import ContactEnrichmentPage from '../pages/ContactEnrichmentPage';
+import { faker } from '@faker-js/faker';
+const path = require('path');
+
+describe('CE_BCU_013 - Negative – Mobile number with non-numeric characters', () => {
+
+  let loginPage;
+  let contactenrichmentpage;
+
+  before(() => {
+
+    getLocators('loginPage').then(locators => {
+      loginPage = new LoginPage(locators);
+    });
+
+    getLocators('contactenrichment').then(locators => {
+      contactenrichmentpage = new ContactEnrichmentPage(locators);
+    });
+
+  });
+
+  it('CE_BCU_013 - Upload template with non-numeric mobile number', () => {
+
+    getTestData('loginData', 'login').then(user => {
+
+      // ---------------- Step 1: Login ----------------
+      loginPage.login(user.Companyname, user.email, user.password);
+      cy.wait(3000);
+
+      // ---------------- Step 2: Navigate & Download Template ----------------
+      contactenrichmentpage.CE_BCU_002();
+
+      const sheetName = 'Sheet1';
+
+      // ---------------- Test Data ----------------
+      const invalidMobileNumber = '98AB76@#12'; // ❌ Non-numeric
+      const randomAddress = faker.location.streetAddress(); // ✅ Faker address
+
+      const data = {
+        'A2': '1667',              // Agreement ID
+        'B2': 'Office',            // Contact Type
+        'C2': randomAddress,       // ✅ Address from faker
+        'D2': invalidMobileNumber  // ❌ Invalid Mobile
+      };
+
+      // ---------------- Excel Handling ----------------
+      const downloadsFolder = Cypress.config('downloadsFolder');
+      const excelFileName = 'BulkContactTemplate.xlsx';
+      const sourceFilePath = path.join(downloadsFolder, excelFileName);
+
+      cy.task('updateBulkContactTemplateCell', {
+        filePath: sourceFilePath,
+        sheetName: sheetName,
+        data: data
+      }).then(() => {
+        cy.log('Excel updated with faker address & invalid mobile number');
+      });
+
+      // Move updated file to fixtures
+      cy.task('moveAllDownloadsToFixtures');
+
+      // ---------------- Step 3: Upload File ----------------
+      contactenrichmentpage.contacttemplate_failed();
+
+      
+    });
+
+  });
+
+});

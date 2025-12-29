@@ -1,0 +1,7 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009590352,1936,ss,PTP,PTP,2025-12-26,41,,,,,,,,,12222025123951687,Success,
+DMI0009590354,2002,,,,,,,,,,,,,,12222025123951687,Error,Invalid DispositionCodeGroup
+DMI0009590357,2005,,,,,,,,,,,,,,12222025123951687,Error,Invalid DispositionCodeGroup
+DMI0009590353,2001,,,,,,,,,,,,,,12222025123951687,Error,Invalid DispositionCodeGroup
+DMI0009590355,2003,,,,,,,,,,,,,,12222025123951687,Error,Invalid DispositionCodeGroup
+DMI0009590356,2004,,,,,,,,,,,,,,12222025123951687,Error,Invalid DispositionCodeGroup

@@ -1,0 +1,11 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009590352,10031,ss,PTP,PTP,2025-12-26,51,,Bulk upload automation,9367095958,btm,bangalore,Lois.Keebler@yahoo.com,permanent,new,12232025053406728,Success,
+DMI0009590354,1654,ss,PTP,PTP,2025-12-26,14,,Bulk upload automation,8696194389,btm,bangalore,Alek_Hamill@hotmail.com,permanent,new,12232025053406728,Error,Account number does not exist in database
+DMI0009590357,1585,ss,PTP,PTP,2025-12-26,19,,Bulk upload automation,7517123935,btm,bangalore,Rhoda.Johns@hotmail.com,permanent,new,12232025053406728,Error,Account number does not exist in database
+DMI0009590359,1526,ss,PTP,PTP,2025-12-26,53,,Bulk upload automation,8209249014,btm,bangalore,Maxine.OConner@hotmail.com,permanent,new,12232025053406728,Error,Account number does not exist in database
+DMI0009590355,1591,ss,PTP,PTP,2025-12-26,8,,Bulk upload automation,8996753522,btm,bangalore,Garrison64@hotmail.com,permanent,new,12232025053406728,Error,Account number does not exist in database
+DMI0009590358,1584,ss,PTP,PTP,2025-12-26,57,,Bulk upload automation,7388363103,btm,bangalore,Cara.Erdman@hotmail.com,permanent,new,12232025053406728,Error,Account number does not exist in database
+DMI0009590353,1936,ss,PTP,PTP,2025-12-26,39,,Bulk upload automation,7353122725,btm,bangalore,Tavares.Schowalter@yahoo.com,permanent,new,12232025053406728,Error,Account number does not exist in database
+DMI0009590350,10047,ss,PTP,PTP,2025-12-26,4,,Bulk upload automation,9516222618,btm,bangalore,Berniece.Reilly@gmail.com,permanent,new,12232025053406728,Error,Account number does not exist in database
+DMI0009590356,1586,ss,PTP,PTP,2025-12-26,14,,Bulk upload automation,6847461816,btm,bangalore,Moses37@hotmail.com,permanent,new,12232025053406728,Error,Account number does not exist in database
+DMI0009590351,10036,ss,PTP,PTP,2025-12-26,53,,Bulk upload automation,9750064119,btm,bangalore,Dante_Stanton85@yahoo.com,permanent,new,12232025053406728,Error,Account number does not exist in database

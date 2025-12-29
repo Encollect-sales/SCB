@@ -1,0 +1,3 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009001515,1515,Yes,PTP,PTP,2025-12-26,6,,Approved agent record,528-766-2152 x158,BTM,Bangalore,Breanne_Kautzer97@yahoo.com,Permanent,New,12222025024848845,Error,Account number does not exist in database
+DMI0009001907,1907,Yes,PTP,PTP,2025-12-26,6,,Non-approved agent,(209) 731-4369 x76564,BTM,Bangalore,Orlando_Hodkiewicz74@hotmail.com,Permanent,New,12222025024848845,Error,Account number does not exist in database

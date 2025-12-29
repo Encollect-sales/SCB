@@ -4906,7 +4906,7 @@ SearchAgent80() {
     cy.get(this.locators.search).click().should("be.visible");
     cy.wait(2000);
     //cy.scrollTo('bottom');
-    cy.get(':nth-child(1) > :nth-child(8) > .form-control-group > .form-check-group > label > input').click().should("be.visible");
+    cy.get('body > app-root:nth-child(1) > app-menu-layout:nth-child(2) > main:nth-child(1) > section:nth-child(3) > div:nth-child(2) > app-search:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(9) > div:nth-child(1) > div:nth-child(1) > label:nth-child(1) > input:nth-child(1)').click().should("be.visible");
    }
 
    EnableDisableStaff553(){
@@ -4919,7 +4919,7 @@ SearchAgent80() {
     cy.get(this.locators.search).click().should("be.visible");
     cy.wait(2000);
     //cy.scrollTo('bottom');
-    cy.get(':nth-child(1) > :nth-child(8) > .form-control-group > .form-check-group > label > input').click().should("be.visible");
+    cy.get('body > app-root:nth-child(1) > app-menu-layout:nth-child(2) > main:nth-child(1) > section:nth-child(3) > div:nth-child(2) > app-search:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(9) > div:nth-child(1) > div:nth-child(1) > label:nth-child(1) > input:nth-child(1)').click().should("be.visible");
     cy.wait(2000);
     cy.get(this.locators.enablestaff).click().should("be.visible");
    }
@@ -5009,7 +5009,7 @@ SearchAgent80() {
     cy.wait(1000);
     cy.get(this.locators.searchagent_submitbtn).click().should("be.visible");;
     cy.wait(1000);
-    cy.get(this.locators.agentaction_checkbox).click().should("be.visible");;
+    cy.get(this.locators.agentaction_checkboxtwo).click().should("be.visible");;
     cy.wait(1000)
     cy.get(this.locators.enablestaff).click().should("be.visible");;
     cy.wait(2000);
@@ -5283,24 +5283,25 @@ SearchAgent80() {
     cy.wait(2000);
     cy.get(this.locators.scopeOfWork).click();
     cy.wait(2000);
-    cy.get(this.locators.product_group_dropdown).select('All');
+    cy.get("#product-scope-HL01").click();
     cy.wait(2000);
-    cy.get(this.locators.product_dropdown).select('All');
+    cy.get(".col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container").type("Loan Products");
     cy.wait(2000);
-    cy.get(this.locators.subProduct_DropDown).select('All');
+    cy.contains(".ng-option-label","Loan Products").click({ force: true });
     cy.wait(2000);
-    cy.get(this.locators.Bucket_DropDown).select('All');
-    cy.wait(2000);
-    cy.get(this.locators.Country_DropDoun).select('All');
-    cy.wait(2000);
-    cy.get(this.locators.Region_DropDown).select('All');
-    cy.wait(2000);
-    cy.get(this.locators.State_DropDown).select('All');
-    cy.wait(2000);
-    cy.get(this.locators.City_DropDown).select('All');
-    cy.wait(2000);
-    cy.get(this.locators.Branch_DropDown).select('All');
-    cy.wait(2000);
+    cy.get('[heading="Bucket"] > .panel > .panel-heading').click();
+    cy.wait(500);
+    cy.get(".panel-open > .panel > .panel-collapse > .panel-body > .row > .col-md-12 > .form-control-group > .form-ng-select > .ng-select-container").type("3");
+    cy.wait(500);
+    cy.contains(".ng-option-label","3").click({ force: true });
+    cy.wait(500);
+    cy.get("accordion-group[heading='Geography'] div[class='panel-title']").click({force: true});
+    cy.wait(500);
+    cy.get("#geo-scope-HL04").click();
+    cy.wait(500);
+    cy.get(".panel-open > .panel > .panel-collapse > .panel-body > .row > .col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container").type("India");
+    cy.wait(500);
+    cy.contains(".ng-option-label","India").click({ force: true });
     cy.get(this.locators.documentation_details).click();
     cy.wait(2000);
    //###############################################
@@ -5370,26 +5371,27 @@ SearchAgent80() {
     cy.wait(2000);
     cy.get('#fatherNameId').type('asdfghjjk');
     cy.wait(2000);
-    cy.get(':nth-child(6) > .nav-link > span').click();
+    cy.get(this.locators.scopeOfWork).click();
     cy.wait(2000);
-    cy.get(this.locators.product_group_dropdown).select('All');
+    cy.get("#product-scope-HL01").click();
     cy.wait(2000);
-    cy.get(this.locators.product_dropdown).select('All');
+    cy.get(".col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container").type("Loan Products");
     cy.wait(2000);
-    cy.get(this.locators.subProduct_DropDown).select('All');
+    cy.contains(".ng-option-label","Loan Products").click({ force: true });
     cy.wait(2000);
-    cy.get(this.locators.Bucket_DropDown).select('All');
-    cy.wait(2000);
-    cy.get(this.locators.Country_DropDoun).select('All');
-    cy.wait(2000);
-    cy.get(this.locators.Region_DropDown).select('All');
-    cy.wait(2000);
-    cy.get(this.locators.State_DropDown).select('All');
-    cy.wait(2000);
-    cy.get(this.locators.City_DropDown).select('All');
-    cy.wait(2000);
-    cy.get(this.locators.Branch_DropDown).select('All');
-    cy.wait(2000);
+    cy.get('[heading="Bucket"] > .panel > .panel-heading').click();
+    cy.wait(500);
+    cy.get(".panel-open > .panel > .panel-collapse > .panel-body > .row > .col-md-12 > .form-control-group > .form-ng-select > .ng-select-container").type("3");
+    cy.wait(500);
+    cy.contains(".ng-option-label","3").click({ force: true });
+    cy.wait(500);
+    cy.get("accordion-group[heading='Geography'] div[class='panel-title']").click({force: true});
+    cy.wait(500);
+    cy.get("#geo-scope-HL04").click();
+    cy.wait(500);
+    cy.get(".panel-open > .panel > .panel-collapse > .panel-body > .row > .col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container").type("India");
+    cy.wait(500);
+    cy.contains(".ng-option-label","India").click({ force: true });
     cy.get(this.locators.documentation_details).click();
     cy.wait(2000);
     cy.get(this.locators.id_proof).select('Aadhar Card');
@@ -5561,7 +5563,7 @@ SearchAgent80() {
     //   cy.log(text);
     // })
     cy.wait(2000);
-    cy.get(this.locators.mail).type("abc@yop.c");
+    cy.get(this.locators.mail).type("abc@yop.c", { force: true });
     cy.wait(2000);
     cy.get('.form-error > .ng-star-inserted').should("contain.text"," Enter a valid email ")
     // cy.get(this.locators.mailerror).then(($el) => {
@@ -5580,7 +5582,7 @@ SearchAgent80() {
     cy.wait(2000);
     cy.get(this.locators.dob).click();
     cy.wait(2000);
-    cy.get(this.locators.mail).click();
+    cy.get(this.locators.mail).type("abc@yop.c", { force: true });
     cy.wait(2000);
     cy.contains("Date of birth is required").should("be.visible");
     cy.wait(2000);
@@ -6041,8 +6043,8 @@ UserManagement_888(){
     cy.wait(2000);
     cy.get(this.locators.Agencyname).select("Arun");
     cy.wait(2000);
-    cy.get(this.locators.AgencyE).type("pranshu@yopmail.com");
-    cy.wait(2000);
+    // cy.get(this.locators.AgencyE).type("pranshu@yopmail.com");
+    // cy.wait(2000);
     cy.get(this.locators.dilarID).type("123");
     cy.wait(2000);
     cy.get(this.locators.DRACertificateDate).type("16-05-2024");
@@ -6100,7 +6102,7 @@ UserManagement_888(){
       return prefix + paddedNumber;
     }
     // Cypress test code
-    cy.get('input[name="primaryMobileNumber"]').type("8978758685");
+    cy.get('input[name="primaryMobileNumber"]').type(generateRandomMobileNumber());
     cy.wait(2000);
     //cy.get("#emailId").type("pranshu@yopmail.com");
     //cy.wait(2000);
@@ -6132,53 +6134,54 @@ UserManagement_888(){
     cy.wait(2000);
     cy.get(':nth-child(6) > .nav-link > span').click();
     cy.wait(2000);
-    cy.get("#productGroup-0").select("All");
+    cy.get("#product-scope-HL01").click();
     cy.wait(2000);
-    cy.get("#product-0").select("All");
+    cy.get(".col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container").type("Loan Products");
     cy.wait(2000);
-    cy.get("#subProduct-0").select("All");
+    cy.contains(".ng-option-label","Loan Products").click({ force: true });
     cy.wait(2000);
-    cy.get("#bucket-0").select("All");
-    cy.wait(2000);
-    cy.get("#country-0").select("All");
-    cy.wait(2000);
-    cy.get("#region-0").select("All");
-    cy.wait(2000);
-    cy.get("#state-0").select("All");
-    cy.wait(2000);
-    cy.get("#city-0").select("All");
-    cy.wait(2000);
-    cy.get("#branch-0").select("All");
-    cy.wait(2000);
-
+    cy.get('[heading="Bucket"] > .panel > .panel-heading').click();
+    cy.wait(500);
+    cy.get(".panel-open > .panel > .panel-collapse > .panel-body > .row > .col-md-12 > .form-control-group > .form-ng-select > .ng-select-container").type("3");
+    cy.wait(500);
+    cy.contains(".ng-option-label","3").click({ force: true });
+    cy.wait(500);
+    cy.get("accordion-group[heading='Geography'] div[class='panel-title']").click({force: true});
+    cy.wait(500);
+    cy.get("#geo-scope-HL04").click();
+    cy.wait(500);
+    cy.get(".panel-open > .panel > .panel-collapse > .panel-body > .row > .col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container").type("India");
+    cy.wait(500);
+    cy.contains(".ng-option-label","India").click({ force: true });
+    cy.wait(500);
     cy.get(":nth-child(7) > .nav-link > span").click();
     cy.wait(2000);
-    cy.get("#areaPin").type("845438");
-    cy.wait(2000);
+    // cy.get("#areaPin").type("845438");
+    // cy.wait(2000);
 
-    cy.get(':nth-child(8) > .nav-link > span').click();
-    cy.wait(2000);
-    cy.get("#maxAccounts").type("2");
-    cy.wait(2000);
+    // cy.get(':nth-child(8) > .nav-link > span').click();
+    // cy.wait(2000);
+    // cy.get("#maxAccounts").type("2");
+    // cy.wait(2000);
 
-    cy.get(':nth-child(8) > .nav-link > span').click();
-    cy.wait(2000);
-    cy.get("#maxAccounts").type("2").should('be.visible');
-    cy.wait(2000);
-    cy.get(':nth-child(9) > .nav-link > span').click();
-    cy.wait(2000);
-    cy.get("#expYears").type("2").should('be.visible');
-    cy.wait(2000);
-    cy.get("select[name='cutomerPersona']").select("Self-cure customer").should('be.visible');
-    cy.wait(2000);
-    cy.get('#lanKnown').select("Hindi").should('be.visible');
-    cy.wait(2000);
-    cy.get('#perBand').select("LH").should('be.visible');
-    cy.wait(2000);
+    // cy.get(':nth-child(8) > .nav-link > span').click();
+    // cy.wait(2000);
+    // cy.get("#maxAccounts").type("2").should('be.visible');
+    // cy.wait(2000);
+    // cy.get(':nth-child(9) > .nav-link > span').click();
+    // cy.wait(2000);
+    // cy.get("#expYears").type("2").should('be.visible');
+    // cy.wait(2000);
+    // cy.get("select[name='cutomerPersona']").select("Self-cure customer").should('be.visible');
+    // cy.wait(2000);
+    // cy.get('#lanKnown').select("Hindi").should('be.visible');
+    // cy.wait(2000);
+    // cy.get('#perBand').select("LH").should('be.visible');
+    // cy.wait(2000);
 
 
     //#############################Document&Details######################################### 
-    cy.get(':nth-child(10) > .nav-link > span').click().should('be.visible');
+    cy.get(':nth-child(7) > .nav-link > span').click().should('be.visible');
 
     cy.wait(2000);
     cy.get("#docTypeSelect-0").select("Pan Card").should('be.visible');
@@ -6205,7 +6208,7 @@ UserManagement_888(){
    
 //#############################Document&Details######################################### 
 
-cy.get(':nth-child(11) > .nav-link > span').click().should('be.visible');
+cy.get(':nth-child(8) > .nav-link > span').click().should('be.visible');
 cy.wait(2000);
 
 //  cy.get('#CollectionDate').click().should('be.visible');
@@ -6221,11 +6224,11 @@ cy.wait(2000);
  cy.wait(2000);
 //choose date 2
 
-cy.get("#CollectionDate").type("25/06/2023").should('be.visible');
+cy.get("#CollectionDate").type("25-06-2023").should('be.visible');
 cy.wait(2000);
 cy.get("#RenewalDate").type("15-07-2024").should('be.visible');
 cy.wait(2000);
-cy.get("#ExpiryDate").type("15-11-2025").should('be.visible');
+cy.get("#ExpiryDate").type("15-07-2026").should('be.visible');
 cy.wait(2000);
 cy.get("#remarks").type("aaaaaa bbbbbbbbb cccccccccc dddddddddd 123",{force: true}).should('be.visible');
 cy.wait(2000)
@@ -6255,7 +6258,7 @@ AgentEnpalmentRequest905(){
   cy.wait(2000);
   cy.get(this.locators.Agencyname).select("Arun");
   cy.wait(2000);
-  cy.get(this.locators.AgencyE).type("pranshu@yopmail.com");
+  cy.get("#reportingManager").type("Arjun Singh - 1018");
   cy.wait(2000);
   cy.get(this.locators.dilarID).type("123");
   cy.wait(2000);
@@ -6314,7 +6317,7 @@ AgentEnpalmentRequest905(){
     return prefix + paddedNumber;
   }
   // Cypress test code
-  cy.get('input[name="primaryMobileNumber"]').type("8985687452");
+  cy.get('input[name="primaryMobileNumber"]').type(generateRandomMobileNumber());
   cy.wait(2000);
   //cy.get("#emailId").type("pranshu@yopmail.com");
   //cy.wait(2000);
@@ -6344,82 +6347,83 @@ AgentEnpalmentRequest905(){
   cy.wait(2000);
   cy.get("select[name='bankBranchId']").select("BANO");
   cy.wait(2000);
-  cy.get(':nth-child(6) > .nav-link > span').click();
-  cy.wait(2000);
-  cy.get("#productGroup-0").select("All");
-  cy.wait(2000);
-  cy.get("#product-0").select("All");
-  cy.wait(2000);
-  cy.get("#subProduct-0").select("All");
-  cy.wait(2000);
-  cy.get("#bucket-0").select("All");
-  cy.wait(2000);
-  cy.get("#country-0").select("All");
-  cy.wait(2000);
-  cy.get("#region-0").select("All");
-  cy.wait(2000);
-  cy.get("#state-0").select("All");
-  cy.wait(2000);
-  cy.get("#city-0").select("All");
-  cy.wait(2000);
-  cy.get("#branch-0").select("All");
-  cy.wait(2000);
+ cy.get(':nth-child(6) > .nav-link > span').click();
+    cy.wait(2000);
+    cy.get("#product-scope-HL01").click();
+    cy.wait(2000);
+    cy.get(".col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container").type("Loan Products");
+    cy.wait(2000);
+    cy.contains(".ng-option-label","Loan Products").click({ force: true });
+    cy.wait(2000);
+    cy.get('[heading="Bucket"] > .panel > .panel-heading').click();
+    cy.wait(500);
+    cy.get(".panel-open > .panel > .panel-collapse > .panel-body > .row > .col-md-12 > .form-control-group > .form-ng-select > .ng-select-container").type("3");
+    cy.wait(500);
+    cy.contains(".ng-option-label","3").click({ force: true });
+    cy.wait(500);
+    cy.get("accordion-group[heading='Geography'] div[class='panel-title']").click({force: true});
+    cy.wait(500);
+    cy.get("#geo-scope-HL04").click();
+    cy.wait(500);
+    cy.get(".panel-open > .panel > .panel-collapse > .panel-body > .row > .col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container").type("India");
+    cy.wait(500);
+    cy.contains(".ng-option-label","India").click({ force: true });
+    cy.wait(500);
+    cy.get(":nth-child(7) > .nav-link > span").click();
+    cy.wait(2000);
+    // cy.get("#areaPin").type("845438");
+    // cy.wait(2000);
 
-  cy.get(":nth-child(7) > .nav-link > span").click();
-  cy.wait(2000);
-  cy.get("#areaPin").type("845438");
-  cy.wait(2000);
+    // cy.get(':nth-child(8) > .nav-link > span').click();
+    // cy.wait(2000);
+    // cy.get("#maxAccounts").type("2");
+    // cy.wait(2000);
 
-  cy.get(':nth-child(8) > .nav-link > span').click();
-  cy.wait(2000);
-  cy.get("#maxAccounts").type("2");
-  cy.wait(2000);
-
-  cy.get(':nth-child(8) > .nav-link > span').click();
-  cy.wait(2000);
-  cy.get("#maxAccounts").type("2").should('be.visible');
-  cy.wait(2000);
-  cy.get(':nth-child(9) > .nav-link > span').click();
-  cy.wait(2000);
-  cy.get("#expYears").type("2").should('be.visible');
-  cy.wait(2000);
-  cy.get("select[name='cutomerPersona']").select("Self-cure customer").should('be.visible');
-  cy.wait(2000);
-  cy.get('#lanKnown').select("Hindi").should('be.visible');
-  cy.wait(2000);
-  cy.get('#perBand').select("LH").should('be.visible');
-  cy.wait(2000);
+    // cy.get(':nth-child(8) > .nav-link > span').click();
+    // cy.wait(2000);
+    // cy.get("#maxAccounts").type("2").should('be.visible');
+    // cy.wait(2000);
+    // cy.get(':nth-child(9) > .nav-link > span').click();
+    // cy.wait(2000);
+    // cy.get("#expYears").type("2").should('be.visible');
+    // cy.wait(2000);
+    // cy.get("select[name='cutomerPersona']").select("Self-cure customer").should('be.visible');
+    // cy.wait(2000);
+    // cy.get('#lanKnown').select("Hindi").should('be.visible');
+    // cy.wait(2000);
+    // cy.get('#perBand').select("LH").should('be.visible');
+    // cy.wait(2000);
 
 
-  //#############################Document&Details######################################### 
-  cy.get(':nth-child(10) > .nav-link > span').click().should('be.visible');
+    //#############################Document&Details######################################### 
+    cy.get(':nth-child(7) > .nav-link > span').click().should('be.visible');
 
-  cy.wait(2000);
-  cy.get("#docTypeSelect-0").select("Pan Card").should('be.visible');
-  cy.wait(2000);
-  cy.get('#addFileBtn-0').click();
-  cy.get('input[type="file"]').eq(1).selectFile(filePath, { force: true });
-  cy.wait(2000);
- 
-  cy.get('#docTypeSelect-1').select("Aadhar Card").should('be.visible');
-  cy.wait(2000);
-  cy.get('#addFileBtn-1').click();
-  cy.get('input[type="file"]').eq(2).selectFile(filePath, { force: true });
-  cy.wait(2000);
+    cy.wait(2000);
+    cy.get("#docTypeSelect-0").select("Pan Card").should('be.visible');
+    cy.wait(2000);
+    cy.get('#addFileBtn-0').click();
+    cy.get('input[type="file"]').eq(1).selectFile(filePath, { force: true });
+    cy.wait(2000);
+   
+    cy.get('#docTypeSelect-1').select("Aadhar Card").should('be.visible');
+    cy.wait(2000);
+    cy.get('#addFileBtn-1').click();
+    cy.get('input[type="file"]').eq(2).selectFile(filePath, { force: true });
+    cy.wait(2000);
 
-  cy.get("#docTypeSelect-2").select("Agency ID Card").should('be.visible');
-  cy.wait(2000)
-  cy.get('input[type="file"]').eq(3).selectFile(filePath, { force: true });
-  cy.wait(2000);
+    cy.get("#docTypeSelect-2").select("Agency ID Card").should('be.visible');
+    cy.wait(2000)
+    cy.get('input[type="file"]').eq(3).selectFile(filePath, { force: true });
+    cy.wait(2000);
 
-  cy.get("#docTypeSelect-3").select("HOC Approval").should('be.visible');
-  cy.wait(2000)
-  cy.get('input[type="file"]').eq(4).selectFile(filePath, { force: true });
-  cy.wait(2000);
- 
+    cy.get("#docTypeSelect-3").select("HOC Approval").should('be.visible');
+    cy.wait(2000)
+    cy.get('input[type="file"]').eq(4).selectFile(filePath, { force: true });
+    cy.wait(2000);
+   
 //#############################Document&Details######################################### 
 
-cy.get(':nth-child(11) > .nav-link > span').click().should('be.visible');
+cy.get(':nth-child(8) > .nav-link > span').click().should('be.visible');
 cy.wait(2000);
 
 //  cy.get('#CollectionDate').click().should('be.visible');
@@ -6431,11 +6435,11 @@ cy.wait(2000);
 //   cy.get("tbody > :nth-child(1) > :nth-child(1) > span").click()
 //   cy.wait(2000);
 //   cy.get('.bs-datepicker-container').contains('8').click()
-
-cy.wait(2000);
+ 
+ cy.wait(2000);
 //choose date 2
 
-cy.get("#CollectionDate").type("25/06/2023").should('be.visible');
+cy.get("#CollectionDate").type("25-06-2023").should('be.visible');
 cy.wait(2000);
 cy.get("#RenewalDate").type("15-07-2024").should('be.visible');
 cy.wait(2000);
@@ -6443,7 +6447,6 @@ cy.get("#ExpiryDate").type("15-07-2026").should('be.visible');
 cy.wait(2000);
 cy.get("#remarks").type("aaaaaa bbbbbbbbb cccccccccc dddddddddd 123",{force: true}).should('be.visible');
 cy.wait(2000)
-
 //##########################################################
 cy.get("#remarks").clear();
 cy.wait(2000)
@@ -6569,7 +6572,7 @@ AgentEnpalmentRequest911(){
     cy.wait(2000);
     cy.get(this.locators.button).click();
     cy.wait(2000);
-    cy.get('tbody > :nth-child(1) > :nth-child(9) > .form-control-group > .form-check-group > label > input').click();
+    cy.get('#action').click();
 
    }
 
@@ -6592,7 +6595,7 @@ cy.get(this.locators.fillpancard).type("ABCDE1234F");
 cy.wait(2000);
 cy.get(this.locators.fillTINNumber).type("123456");
 cy.wait(2000);
-cy.get(this.locators.clickongenerateENcollectcode).click({force: true});
+//cy.get(this.locators.clickongenerateENcollectcode).click({force: true});
 cy.wait(2000);
 
 // Address Details
@@ -6790,17 +6793,17 @@ cy.wait(2000);
     cy.wait(2000);
     cy.get(this.locators.designation).select("Agency Backend");
     cy.wait(2000);
-    cy.get('[heading="Local Address Details"] > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click().should('be.visible');
+    cy.get("div[class='router-container'] li:nth-child(4) a:nth-child(1) span:nth-child(1)").click().should('be.visible');
     cy.wait(2000);
     cy.get(this.locators.Address).type(" AAAAAAAAAAAAAAAA XXXXXXXXXXXXXXXXXX BBBBBBBBBBBBBB CCCCCCCCCCCCCCC");
     cy.wait(2000);
-    cy.get('.ng-invalid.ng-dirty > :nth-child(1) > :nth-child(2) > .row > :nth-child(1) > .form-control').select('All').should('be.visible');
+    cy.get('#cityId').select('All').should('be.visible');
     cy.wait(2000);
     cy.get("select[name='city']").select("All").should('be.visible');
     cy.wait(2000);
     cy.get("input[placeholder='Enter Address Landmark']").type("xxxx Bank").should('be.visible');
     cy.wait(2000);
-    cy.get("#pin").type("845438");
+    cy.get("#pinId").type("845438");
     cy.wait(2000);
     cy.get(".col-md-2 > .form-control").select("LL",{force : true});
     cy.wait(2000);
@@ -6883,23 +6886,23 @@ cy.wait(2000);
     cy.wait(2000);
     cy.get(".col-md-12 > .table-responsive > .table > tbody > :nth-child(1) > :nth-child(2) > .form-control").select("Pan Card").should('be.visible');
     cy.wait(2000)
-    cy.get("body > app-root:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(3) > create-agent:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > form:nth-child(2) > div:nth-child(6) > div:nth-child(2) > accordion:nth-child(1) > accordion-group:nth-child(8) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > app-documents:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1) > span:nth-child(1) > input:nth-child(2)").selectFile(filePath, { force: true });
+    cy.get("body > app-root:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(3) > create-agent:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > form:nth-child(2) > div:nth-child(6) > div:nth-child(2) > accordion:nth-child(1) > accordion-group:nth-child(8) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > app-documents:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1) > span:nth-child(1) > input:nth-child(2)").selectFile(filePath1, { force: true });
     cy.wait(2000);
     cy.get("tbody > :nth-child(2) > :nth-child(2) > .form-control").select("Aadhar Card").should('be.visible');
     cy.wait(2000);
-    cy.get("body > app-root:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(3) > create-agent:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > form:nth-child(2) > div:nth-child(6) > div:nth-child(2) > accordion:nth-child(1) > accordion-group:nth-child(8) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > app-documents:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(4) > div:nth-child(1) > span:nth-child(1) > input:nth-child(2)").selectFile(filePath, { force: true });
+    cy.get("body > app-root:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(3) > create-agent:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > form:nth-child(2) > div:nth-child(6) > div:nth-child(2) > accordion:nth-child(1) > accordion-group:nth-child(8) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > app-documents:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(4) > div:nth-child(1) > span:nth-child(1) > input:nth-child(2)").selectFile(filePath1, { force: true });
     cy.wait(2000);
     cy.get("tbody tr:nth-child(3) td:nth-child(2) select:nth-child(1)").select("Agency ID Card").should('be.visible');
     cy.wait(2000)
-     cy.get("body > app-root:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(3) > create-agent:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > form:nth-child(2) > div:nth-child(6) > div:nth-child(2) > accordion:nth-child(1) > accordion-group:nth-child(8) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > app-documents:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(3) > td:nth-child(4) > div:nth-child(1) > span:nth-child(1) > input:nth-child(2)").selectFile(filePath,{force:true});
+     cy.get("body > app-root:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(3) > create-agent:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > form:nth-child(2) > div:nth-child(6) > div:nth-child(2) > accordion:nth-child(1) > accordion-group:nth-child(8) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > app-documents:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(3) > td:nth-child(4) > div:nth-child(1) > span:nth-child(1) > input:nth-child(2)").selectFile(filePath1,{force:true});
      cy.wait(2000);
      cy.get("tbody > :nth-child(4) > :nth-child(2) > .form-control").select("HOC Approval").should('be.visible');
      cy.wait(2000);
-     cy.get("body > app-root:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(3) > create-agent:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > form:nth-child(2) > div:nth-child(6) > div:nth-child(2) > accordion:nth-child(1) > accordion-group:nth-child(8) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > app-documents:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(4) > td:nth-child(4) > div:nth-child(1) > span:nth-child(1) > input:nth-child(2)").selectFile(filePath,{force:true});
+     cy.get("body > app-root:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(3) > create-agent:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > form:nth-child(2) > div:nth-child(6) > div:nth-child(2) > accordion:nth-child(1) > accordion-group:nth-child(8) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > app-documents:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(4) > td:nth-child(4) > div:nth-child(1) > span:nth-child(1) > input:nth-child(2)").selectFile(filePath1,{force:true});
      cy.wait(2000);
      cy.get("tbody > :nth-child(5) > :nth-child(2) > .form-control").select("Police Verification Certificate").should('be.visible');
      cy.wait(2000);
-     cy.get("body > app-root:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(3) > create-agent:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > form:nth-child(2) > div:nth-child(6) > div:nth-child(2) > accordion:nth-child(1) > accordion-group:nth-child(8) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > app-documents:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(5) > td:nth-child(4) > div:nth-child(1) > span:nth-child(1) > input:nth-child(2)").selectFile(filePath,{force:true});
+     cy.get("body > app-root:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(3) > create-agent:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > form:nth-child(2) > div:nth-child(6) > div:nth-child(2) > accordion:nth-child(1) > accordion-group:nth-child(8) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > app-documents:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(5) > td:nth-child(4) > div:nth-child(1) > span:nth-child(1) > input:nth-child(2)").selectFile(filePath1,{force:true});
      cy.wait(2000);
      cy.get('[heading="Employment and Renewal Details"] > .panel > .panel-heading > .panel-title > .accordion-toggle').click().should('be.visible');
      cy.wait(2000);

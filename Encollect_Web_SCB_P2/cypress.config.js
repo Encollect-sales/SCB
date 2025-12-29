@@ -1,5 +1,7 @@
 const { defineConfig } = require('cypress');
 const path = require('path');
+ const XLSX = require("xlsx");
+
  
 module.exports = defineConfig({
   projectId: 'tb2cx2',

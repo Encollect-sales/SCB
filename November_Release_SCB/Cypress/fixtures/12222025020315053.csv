@@ -1,0 +1,5 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009701002,2005,Yes,PTP,PTP,2025-12-26,66,,Rejected Agency agent,,,,,,,12222025020315053,Error,Account number does not exist in database
+DMI0009701004,2003,Yes,PTP,PTP,2025-12-26,66,,Pending Staff agent,,,,,,,12222025020315053,Error,Account number does not exist in database
+DMI0009701003,787868,Yes,PTP,PTP,2025-12-26,66,,Approved Staff agent,,,,,,,12222025020315053,Error,Account number does not exist in database
+DMI0009701001,1166,Yes,PTP,PTP,2025-12-26,66,,Approved Agency agent,,,,,,,12222025020315053,Error,Account number does not exist in database

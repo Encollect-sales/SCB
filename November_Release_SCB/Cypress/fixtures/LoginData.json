@@ -3,7 +3,17 @@
     "Companyname": "ENCollect",
      "email": "rahmancbm@yopmail.com",
     "password": "123@saSA" 
-  }
+  },
 
+ "login2":{
+   "Companyname": "ENCollect",
+     "email": "teleagentfour07@yopmail.com",
+    "password": "234@asAS" 
 
+ },
+ "login3":{
+   "Companyname": "ENCollect",
+  "email":"vatsalstaff07@yopmail.com",
+  "password":"123@asAS"
+ }
 }
