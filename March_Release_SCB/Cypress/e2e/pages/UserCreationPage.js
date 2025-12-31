@@ -59,6 +59,8 @@ class UserCreationPage {
     cy.wait(2000);
     cy.get(this.locators.ClickOnStatusSearchBtn).click();
     cy.wait(3000);
+    cy.get(this.locators.ClickOnStatusSearchBtn).click();
+    cy.wait(3000);
     cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
     cy.wait(2000);
     cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
@@ -101,6 +103,8 @@ class UserCreationPage {
 
     //###########################################################
 
+    cy.wait(3000);
+    cy.get(this.locators.ClickOnStatusSearchBtn).click();
     cy.wait(3000);
     cy.get(this.locators.ClickOnStatusSearchBtn).click();
     cy.wait(3000);
@@ -162,6 +166,8 @@ class UserCreationPage {
     cy.wait(3000);
     cy.get(this.locators.ClickOnStatusSearchBtn).click();
     cy.wait(3000);
+    cy.get(this.locators.ClickOnStatusSearchBtn).click();
+    cy.wait(3000);
     cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
     cy.wait(2000);
     cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
@@ -206,6 +212,8 @@ class UserCreationPage {
     //###########################################################
 
     cy.wait(2000);
+    cy.get(this.locators.ClickOnStatusSearchBtn).click();
+    cy.wait(3000);
     cy.get(this.locators.ClickOnStatusSearchBtn).click();
     cy.wait(3000);
     cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Processed').should('be.visible');
@@ -270,6 +278,8 @@ class UserCreationPage {
     cy.wait(2000);
     cy.get(this.locators.ClickOnStatusSearchBtn).click();
     cy.wait(3000);
+    cy.get(this.locators.ClickOnStatusSearchBtn).click();
+    cy.wait(3000);
     cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
     cy.wait(2000);
     cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
@@ -313,6 +323,8 @@ class UserCreationPage {
     //###########################################################
 
     cy.wait(2000);
+    cy.get(this.locators.ClickOnStatusSearchBtn).click();
+    cy.wait(3000);
     cy.get(this.locators.ClickOnStatusSearchBtn).click();
     cy.wait(3000);
     cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Processed').should('be.visible');
