@@ -1,0 +1,2 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009590401,1917,Yes,PTP,PTP,2025-12-26,5,,Dormant agent test,9502277215,BTM,Bangalore,Thea.Vandervort38@yahoo.com,Permanent,New,12302025112635840,Error,Next action date cannot be less than current date

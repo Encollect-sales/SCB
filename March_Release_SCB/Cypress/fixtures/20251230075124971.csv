@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1e7f3c41139825270fe97ab6535207,Telecaller,32687,Una,Jones,dbste89ststaf@$!f0788@yopmail.com,1259931820,Audit and Risk,Audit Manager,Bangalore,True, | Enter valid email

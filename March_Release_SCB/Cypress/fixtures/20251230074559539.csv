@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1e7f3749d8e6c92bd315b2f07a93a4,Telecaller,21288,,Greenfelder-Smitham,orin@yopmail.com,6604946442,Branch Backend,Branch Manager,Bangalore,True, | First Name is required | Please enter valid Last Name

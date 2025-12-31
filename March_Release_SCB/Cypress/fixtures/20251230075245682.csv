@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1e7f3d7cb61cf036abd8d4676ddcc2,Telecaller,17283,Maria,Waelchi,maria@yopmail.com,,Branch Backend,Branch Manager,Bangalore,True, | Mobile Number is required

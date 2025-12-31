@@ -1,0 +1,5 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI9999999999,999999,Yes,PTP,PTP,2025-12-26,90,,Invalid agent ID,308-560-8348 x36103,Whitefield,Bangalore,Dawn.Bahringer79@yahoo.com,Permanent,New,12302025105620587,Error,Next action date cannot be less than current date
+DMI0009801001,1515,Yes,PTP,PTP,2025-12-26,90,,Disabled agent,839-816-6315 x232,HSR,Bangalore,Casimer_Crist14@yahoo.com,Permanent,New,12302025105620587,Error,Next action date cannot be less than current date
+DMI0009590352,1936,Yes,PTP,PTP,2025-12-26,90,,Approved agent,(655) 587-0131 x450,BTM,Bangalore,Samir_Klein@hotmail.com,Permanent,New,12302025105620587,Error,Next action date cannot be less than current date
+DMI0009810001,,Yes,PTP,PTP,2025-12-26,90,,Blank agent ID,653-770-1854 x04458,Indiranagar,Bangalore,Hilario_Hirthe@yahoo.com,Permanent,New,12302025105620587,Error,Next action date cannot be less than current date

@@ -1,0 +1,5 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009801001,1515,Yes,PTP,PTP,2025-12-26,7,,Disabled agent,300-629-8272 x778,HSR,Bangalore,Osvaldo.Powlowski@hotmail.com,Permanent,New,12302025105321207,Error,Next action date cannot be less than current date
+DMI0009801003,2005,Yes,PTP,PTP,2025-12-26,7,,Rejected agent,1-449-737-1837 x50328,Indiranagar,Bangalore,Jeremie1@hotmail.com,Permanent,New,12302025105321207,Error,Next action date cannot be less than current date
+DMI0009801002,1907,Yes,PTP,PTP,2025-12-26,7,,Pending approval,1-658-476-2432 x22077,Whitefield,Bangalore,Piper19@yahoo.com,Permanent,New,12302025105321207,Error,Next action date cannot be less than current date
+DMI9999999999,999999,Yes,PTP,PTP,2025-12-26,7,,Invalid agent ID,457-728-1585,BTM,Bangalore,Deontae_Lehner-Yundt95@gmail.com,Permanent,New,12302025105321207,Error,Next action date cannot be less than current date

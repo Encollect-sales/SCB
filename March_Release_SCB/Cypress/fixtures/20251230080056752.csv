@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1e7f44faf8838df607842c75d998ba,Telecaller,43150,Tad,Adams,tad@yopmail.com,7485386959,Audit and Risk,Arun Audit Manager,Bangalore,True, | Designation is invalid

@@ -1,0 +1,3 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009810001,,Yes,PTP,PTP,2025-12-26,90,,Blank agent ID,1-597-285-4806,BTM,Bangalore,Adrianna_Tromp@gmail.com,Permanent,New,12302025105743083,Error,Next action date cannot be less than current date
+DMI0009810002,,Yes,PTP,PTP,2025-12-26,90,,Null agent ID,549-464-7246 x83768,HSR,Bangalore,Felix.OKon@yahoo.com,Permanent,New,12302025105743083,Error,Next action date cannot be less than current date

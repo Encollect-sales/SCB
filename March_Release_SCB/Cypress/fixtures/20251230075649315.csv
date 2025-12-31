@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1e7f41340313ac08b46769446f5efe,Telecaller,50274,Arthur,Little,arthur@yopmail.com,6869493675,,Audit Manager,Bangalore,True, | Department is Required

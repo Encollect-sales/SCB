@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1e7f3ff8a56376af5977de8e224cb7,Telecaller,23752,Kian,Wisoky,kian@yopmail.com,32453049,Branch Backend,Branch Manager,Bangalore,True, | Mobile Number 10 digits are required
