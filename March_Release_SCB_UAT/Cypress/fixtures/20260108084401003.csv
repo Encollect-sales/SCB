@@ -1,0 +1,2 @@
+Id,UserType,FirstName,LastName,AgencyCode,SupervisorEmailId,DialerId,DRACertificationDate,DRATrainingDate,DRAUniqueRegistrationNumber,Department,Designation,DateOfBirth,MobileNo,EmailId,FathersName,LocalResidentialAddress,PostalCode,CollectionEmploymentDate,LastRenewalDate,AuthorizationCardExpiryDate,Remarks,IsFailed,FailureReason
+3a1eadc5a5d2c0758ef73ae897a468c2,FOS,Pascale,Larkin,13332,,435454,10-10-2020,10-10-2020,23577359447,Agency Frontend,Agent,18-10-1979,1115777067,pascale@yopmail.com,,bakori,765523,19-10-2022,19-10-2023,10-10-2033,resr,True, | Father Name is required

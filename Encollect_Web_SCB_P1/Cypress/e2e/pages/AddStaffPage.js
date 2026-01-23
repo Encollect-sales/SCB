@@ -88,7 +88,7 @@ selectUserType(){
   
 typeexistingcode(){
 
-const randomNum = Math.floor(10000 + Math.random() * 90000);
+const randomNum = Math.floor(100000 + Math.random() * 900000);
 cy.get('#customId').type(randomNum);
 cy.wait(2000);
 

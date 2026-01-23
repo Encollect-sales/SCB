@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1eae5cc22a61481387c53f966fafc9,Telecaller,97532,Mona,Littel,mona@yopmail.com,32453049,Branch Backend,Branch Manager,Bangalore,True, | Email Id already exists | Mobile Number 10 digits are required

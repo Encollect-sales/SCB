@@ -346,8 +346,8 @@ cy.wait(2000);
     cy.wait(2000)
     cy.get(this.locators.UDIDNumberr).type("12345678909876543").should('be.visible');
     cy.wait(500);
-     const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
-       cy.get('#agentCode').type(encode);
+    //  const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+    //    cy.get('#agentCode').type(encode);
       cy.wait(2000);
 
     const filePath1 = 'Aadhar.png'
@@ -703,8 +703,8 @@ cy.wait(2000);
     cy.get(this.locators.UDIDNumberr).type("12345678909876543").should('be.visible');
     cy.wait(2000);
 
-     const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
-       cy.get('#agentCode').type(encode);
+    //  const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+    //    cy.get('#agentCode').type(encode);
       cy.wait(2000);
 
     const filePath1 = 'Aadhar.png'
@@ -913,8 +913,8 @@ cy.wait(2000);
     cy.get(this.locators.UDIDNumberr).type("12345678909876543").should('be.visible');
     cy.wait(2000);
 
-     const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
-       cy.get('#agentCode').type(encode);
+    //  const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+    //    cy.get('#agentCode').type(encode);
       cy.wait(2000);
 
 
@@ -1133,8 +1133,8 @@ cy.wait(2000);
     cy.get(this.locators.UDIDNumberr).type("12345678909876543").should('be.visible');
     cy.wait(2000);
 
-     const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
-       cy.get('#agentCode').type(encode);
+    //  const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+    //    cy.get('#agentCode').type(encode);
       cy.wait(2000);
 
     const filePath1 = 'Aadhar.png'
@@ -1513,8 +1513,8 @@ cy.wait(2000);
   cy.get(this.locators.UDIDNumberr).type("12345678909876543").should('be.visible');
   cy.wait(2000);
 
-   const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
-       cy.get('#agentCode').type(encode);
+  //  const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+    //    cy.get('#agentCode').type(encode);
       cy.wait(2000);
 
   const filePath1 = 'Aadhar.png'
@@ -1728,8 +1728,8 @@ cy.wait(2000);
   cy.get(this.locators.UDIDNumberr).type("12345678909876543").should('be.visible');
   cy.wait(2000);
 
-  const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
-       cy.get('#agentCode').type(encode);
+ //  const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+    //    cy.get('#agentCode').type(encode);
       cy.wait(2000);
 
   const filePath1 = 'Aadhar.png'
@@ -1943,8 +1943,8 @@ cy.wait(2000);
   cy.get(this.locators.UDIDNumberr).type("12345678909876543").should('be.visible');
   cy.wait(2000);
 
-   const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
-       cy.get('#agentCode').type(encode);
+  //  const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
+    //    cy.get('#agentCode').type(encode);
       cy.wait(2000);
 
   const filePath1 = 'Aadhar.png'

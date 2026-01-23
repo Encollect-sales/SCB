@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1eae618ebb727081ddfabe2c68f479,Telecaller,97823,Esta,Baumbach,esta@yopmail.com,2657200496,Audit and Risk,Arun Audit Manager,Bangalore,True, | Designation is invalid

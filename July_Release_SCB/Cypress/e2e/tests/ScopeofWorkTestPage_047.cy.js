@@ -4,7 +4,7 @@ import LoginPage from '../pages/LoginPage';
 import { getLocators } from '../utils/locatorUtils';
 import ScopeofWorkPage from '../pages/ScopeofWorkPage';
 
-describe('ScopeofWork - user will click on Customer contact report and check the scoped Product Group', () => {
+describe('ScopeofWork - user will click on visit intensity report and check the scoped Product Group', () => {
     let loginPage;
     let scopeofworkpage; 
 

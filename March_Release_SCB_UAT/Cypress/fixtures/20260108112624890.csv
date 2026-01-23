@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1eae5a53cc0a55431362ccc65cef8a,Telecaller,33613,Angelita,Lockman,angelita@yopmail.com,,Branch Backend,Branch Manager,Bangalore,True, | Mobile Number is required

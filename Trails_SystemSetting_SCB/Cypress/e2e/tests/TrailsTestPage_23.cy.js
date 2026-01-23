@@ -6,7 +6,7 @@ import TrailsPage from '../pages/TrailsPage';
 const path = require('path');
 import { faker } from '@faker-js/faker';
 
-describe('Trails - ', () => {
+describe('Trails - Entering correct detailes and file is getting processed  ', () => {
     let loginPage;
     let trailspage;
 
@@ -21,7 +21,7 @@ describe('Trails - ', () => {
         });
     });
 
-    it('User download the Bulktrail template and make updates in the excel sheet and user upload the updated excel  - TC_ID_01', () => {
+    it('User download the Bulktrail template and make updates in the excel sheet and user upload the updated excel', () => {
         getTestData('loginData', 'login2').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
             cy.wait(900);
@@ -36,34 +36,31 @@ describe('Trails - ', () => {
 
             //############################################################################
 
-           const firstName = faker.name.firstName();              // B2
-            const lastName = faker.name.lastName();                // C2
+         const city = faker.location.city();    
          const phoneNumber = faker.number.int({ min: 1000000000, max: 9999999999 }).toString(); // 10-digit
-         const email = `${firstName.toLowerCase()}@yopmail.com`; // N2 - short, simple
+
+         const email = `${faker.string.alpha({ length: 8 }).toLowerCase()}@yopmail.com`;
+         const address = faker.location.streetAddress();
             //################################################################################
 
             const data = {
-                'A2':'FOS',
-                'B2': firstName,
-                'C2': lastName,
-                'D2': '13911',
-                'E2':'',
-                'F2': '435454',
-                'G2':'',
-                'H2':'',
-                'I2':'',
-                'J2':'Agency Frontend',
-                'K2':'Agent',
-                'L2':'18-10-1979',
-                'M2':phoneNumber,
-                'N2':email,
-                'O2':'yop',
-                'P2':'bakori',
-                'Q2':'765523',
-                'R2':'19-10-2022',
-                'S2':'19-10-2023',
-                'T2':'10-10-2033',
-                'U2':'resr',
+                'A2':'18765',
+                'B2': '10031',
+                'C2': 'yes',
+                'D2': 'PTP',
+                'E2': 'PTP',
+                'F2': '2027/12/22',
+                'G2': '109',
+                'H2':' ',
+                'I2':'Bulk upload',
+                'J2': phoneNumber,
+                'K2': city,
+                'L2': address,
+                'M2': email,
+                'N2': 'permenant',
+                'O2' : 'new'
+
+                
 
 
             };

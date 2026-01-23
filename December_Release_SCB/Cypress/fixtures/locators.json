@@ -8,9 +8,120 @@
     "dashboard": ".name-width",
     "profile": ".avatar-info",
     "logoutButton": ":nth-child(4) > .dropdown-item"
-  }
+  },
 
+ "reports":{
+  "Communication_From_Date ":":nth-child(1) > .form-control",
+  "Communication_To_Date ":":nth-child(2) > .form-control",
+  "Trigger_Type":"#triggerType",
+  "Trigger_Name":"#triggerName",
+  "Channel_Type":"#channelType",
+  "firstpage":".pagination-first",
+  "lastpage":".pagination-last > .page-link"
+ },
+ "communication":{
+  "create_communication_template":".communication > .sub-nav-list > :nth-child(2) > .ng-star-inserted",
+  "Channel_Type":"#channelType",
+  "Entry_Point":":nth-child(3) > .h-100 > .form-control-group > .form-select",
+  "Recipient_Type":":nth-child(4) > .h-100 > .form-control-group > .form-select",
+  "templateName":"#templateName",
+  "template_body":".editor-container",
+  "save_button":".btn-secondary",
+  "header":"#notificationHeader",
+  "triggerName":"#triggerName",
+  "entryPoint":"#entryPoint",
+  "create_trigger_template":".communication > .sub-nav-list > :nth-child(4) > .ng-star-inserted",
+  "Trigger_Type":"#trigger-type-5",
+  "recipient_type":"#recipientType",
+  "tempXValue":"#tempXValue",
+  "notification":"#notificationChannel",
+  "popupSelectedTemplate":"#popupSelectedTemplate",
+  "create_template":".btn-secondary",
+  "smsChannel":"#smsChannel",
+  "emailChannel":"#emailChannel",
+  "letterChannel":"#letterChannel",
+  "email_subject":"#subject",
+  "Search_Communication_Templates":"a[title='Search Communication Templates']",
+  "Search_Communication_Triggers":"a[title='Search Communication Triggers']",
+  "channel_field":".form-control-group.m-0.mw-150px",
+  "email":"option[value='email']",
+  "sms":"option[value='sms']",
+  "letter":"option[value='letter']",
+  "WhatsApp":"option[value='WhatsApp']",
+  "notifications":"option[value='Notification']",
+  "template_settings":"#template-grid-column-filter-button",
+  "created_by":":nth-child(4) > .dropdown-item > .flex-grow-1",
+  "created_on":":nth-child(5) > .dropdown-item > .flex-grow-1",
+  "field":".mw-150px > .form-select",
+  "settings_button":"#trigger-grid-column-filter-button",
+  "triggerDescription":"#triggerDescription",
+  "Add_Language":"#addLanguageBtn",
+  "Add_Language_button":".modal-footer > .btn",
+  "click_on_hindi":"#template-language-Hindi",
+  "Remove_button":"#template-language-English > .remove-language-btn",
+  "email_one":"#emailChannel",
+  "sms_one":"#smsChannel",
+  "letter_one":"#letterChannel",
+  "whatsapp":"#waChannel",
+  "yes":"#confirm-dialog-okay",
+  "upload_header_btn":":nth-child(6) > .form-control-group > .d-flex > .btn",
+  "upload_footer_btn":":nth-child(7) > .form-control-group > .d-flex > .btn"
+  
  
  
+
+
+
+ },
+"accounts":{
+ "Account_number":"#search-account-number",
+ "Search_Button":"#search-submit-button",
+ "click_number":"tr.ng-star-inserted > :nth-child(4) > a",
+ "Account_search":".account-search > a.ng-star-inserted",
+ "Button":"#toggleButton",
+ "Payment_History_page":":nth-child(13) > .dropdown-item",
+ "Settings_Page":".w-100 > .btn-outline-dark",
+ "Trans_option":":nth-child(11) > .dropdown-item > .flex-grow-1",
+ "Payer_Receipt_Image_option":":nth-child(10) > .dropdown-item > .flex-grow-1",
+ "pagefirst":".pagination-first",
+ "pagelast":".pagination-last > .page-link"
+ 
+},
+"insights":{
+  "performanceInsight":".insights > .sub-nav-list > :nth-child(7) > .ng-star-inserted",
+  "cards":".tab-pane.active > .mt-4.ng-star-inserted > .overview-cards",
+  "table_charts":".tab-pane.active > .chart-cards-container",
+  "pieChart":"#overallCollectionPerformanceChart > svg",
+  "pieSlices":"g > g > path",
+  "performanceStatus":"#accordion-performanceStatus > .panel > .panel-heading",
+  "agency":"#accordion-agency > .panel > .panel-heading > .panel-title",
+  "product":"#accordion-product > .panel > .panel-heading > .panel-title",
+  "bucket":"#accordion-bucket > .panel > .panel-heading > .panel-title",
+  "geography":"#accordion-geography > .panel > .panel-heading > .panel-title",
+  "filter":".justify-content-between > .btn",
+  "expand_all":"#expand-all-button",
+  "performanceStatus_field":"#accordion-performanceStatus > .panel > .panel-collapse > .panel-body > .ng-touched > .form-control-group > .form-ng-select > .ng-select-container",
+  "agency_field":"#accordion-agency > .panel > .panel-collapse > .panel-body > .ng-touched > :nth-child(1) > .form-ng-select > .ng-select-container",
+  "product_field":"#accordion-product > .panel > .panel-collapse > .panel-body > .ng-touched > .ng-untouched.ng-star-inserted > :nth-child(1) > .form-ng-select > .ng-select-container",
+  "type_number":":nth-child(2) > .card-header > .d-flex > .form-control",
+  "peer_to_peer":":nth-child(3) > .nav-link > span",
+  "Detailed_analysis":":nth-child(4) > .nav-link",
+  "settings_button":"#loan-grid-column-filter-button",
+  "metric":"#accordion-metric > .panel > .panel-collapse > .panel-body > form.ng-valid > .form-control-group > .form-ng-select > .ng-select-container",
+  "Download_button":"span > .btn",
+  "geography_tab":":nth-child(2) > .nav-link",
+  "down_arrow":"body > app-root:nth-child(1) > app-menu-layout:nth-child(2) > main:nth-child(1) > section:nth-child(3) > div:nth-child(2) > app-performance-insight:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > tabset:nth-child(1) > div:nth-child(2) > tab:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > app-level-shift-button:nth-child(1) > div:nth-child(1) > button:nth-child(2)",
+  "up_arrow":"body > app-root:nth-child(1) > app-menu-layout:nth-child(2) > main:nth-child(1) > section:nth-child(3) > div:nth-child(2) > app-performance-insight:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > tabset:nth-child(1) > div:nth-child(2) > tab:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > app-level-shift-button:nth-child(1) > div:nth-child(1) > button:nth-child(1)",
+  "product_grp_down_arrow":"body > app-root:nth-child(1) > app-menu-layout:nth-child(2) > main:nth-child(1) > section:nth-child(3) > div:nth-child(2) > app-performance-insight:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > tabset:nth-child(1) > div:nth-child(2) > tab:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > app-level-shift-button:nth-child(1) > div:nth-child(1) > button:nth-child(2)",
+  "product_grp_up_arrow":"body > app-root:nth-child(1) > app-menu-layout:nth-child(2) > main:nth-child(1) > section:nth-child(3) > div:nth-child(2) > app-performance-insight:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > tabset:nth-child(1) > div:nth-child(2) > tab:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > app-level-shift-button:nth-child(1) > div:nth-child(1) > button:nth-child(1)",
+  "peer_to_peer_comparision":"body app-root app-menu-layout[class='ng-star-inserted'] main[class='menu-layout-container'] section div[class='router-container'] app-performance-insight[class='ng-star-inserted'] div[class='inner-layout-container insight-layout-container'] div[class='inner-container'] div tabset[class='enc-tabs-1 tab-container'] div[class='tab-content'] tab:nth-child(3) div:nth-child(2) div:nth-child(3) div:nth-child(1) div:nth-child(1) button:nth-child(1)"
+  
+
+
+},
+"georeport":{
+"travelgeoreports":".geo-report > .sub-nav-list > .nav-item > .ng-star-inserted",
+"bank_user":"#travel-report-report-type-bank"
+}
 
 }

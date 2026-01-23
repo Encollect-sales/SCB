@@ -303,6 +303,14 @@ TrailsTestPage_22(){
 }
 
 BulkTrailTemplate_download(){
+  cy.get(this.locators.Clickontrials).click({force:true});
+  cy.wait(2000);
+  cy.get(this.locators.bulk_upload).click({force:true});
+  cy.wait(2000);
+  cy.get(this.locators.download_button).click({force:true});
+
+
+  
 
 
 
@@ -312,8 +320,7 @@ BulkTrailTemplate_download(){
 Bulktrail_Processed(){
 
  cy.wait(2000);
-    cy.get(this.locators.ClickOnUploadAgentRadioBtn).click();
-    cy.wait(2000);
+   
     cy.get('input[type="file"]').attachFile("Bulktrail.xlsx");
     cy.wait(2000);
     cy.get(this.locators.ClickOnUploadBtn).click();
@@ -337,11 +344,11 @@ Bulktrail_Processed(){
         }
       });
 
-    cy.get(this.locators.ClickOnUserCreationUploadStatus).click();
+    cy.get(this.locators.Clickontrailuploadstatus).click();
     cy.wait(3000);
     cy.then(() => {
       const transactionId = Cypress.env("transactionID");
-      cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+      cy.get("#bulk-trail-trxn-id").type(transactionId.toString()); // Convert to string if needed
     });
 
     //###########################################################
@@ -358,8 +365,6 @@ Bulktrail_Processed(){
 
 Bulktrail_Failed(){
  cy.wait(2000);
-    cy.get(this.locators.ClickOnUploadAgentRadioBtn).click();
-    cy.wait(2000);
     cy.get('input[type="file"]').attachFile("Bulktrail.xlsx");
     cy.wait(2000);
     cy.get(this.locators.ClickOnUploadBtn).click();
@@ -383,11 +388,228 @@ Bulktrail_Failed(){
         }
       });
 
-    cy.get(this.locators.ClickOnUserCreationUploadStatus).click();
+    cy.get(this.locators.Clickontrailuploadstatus).click();
     cy.wait(3000);
     cy.then(() => {
       const transactionId = Cypress.env("transactionID");
-      cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+      cy.get("#bulk-trail-trxn-id").type(transactionId.toString()); // Convert to string if needed
+    });
+
+    //###########################################################
+
+    cy.wait(3000);
+    cy.get(this.locators.ClickOnStatusSearchBtn).click();
+    cy.wait(3000);
+  cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
+    cy.wait(2000);
+    cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
+    cy.wait(3000);
+
+}
+
+BulkTrail_Partially_Processed() {
+
+ cy.wait(2000);
+   
+    cy.get('input[type="file"]').attachFile("Bulktrail.xlsx");
+    cy.wait(2000);
+    cy.get(this.locators.ClickOnUploadBtn).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOnOkay).click();
+    cy.wait(4000);
+
+    //##################################################
+
+    cy.contains("File Uploaded Successfully", { timeout: 10000 })
+      .invoke("text")
+      .then((popupText) => {
+        cy.log(`Popup text: ${popupText}`);
+        const transactionIdMatch = /Transaction ID\s*:\s*(\d+)/.exec(popupText);
+        if (transactionIdMatch) {
+          const transactionId = transactionIdMatch[1];
+          cy.log(`Transaction ID: ${transactionId}`);
+          cy.wait(1000);
+          Cypress.env("transactionID", transactionId);
+          cy.wait(1000);
+        }
+      });
+
+    cy.get(this.locators.Clickontrailuploadstatus).click();
+    cy.wait(3000);
+    cy.then(() => {
+      const transactionId = Cypress.env("transactionID");
+      cy.get("#bulk-trail-trxn-id").type(transactionId.toString()); // Convert to string if needed
+    });
+
+    //###########################################################
+
+    cy.wait(3000);
+    cy.get(this.locators.ClickOnStatusSearchBtn).click();
+    cy.wait(3000);
+  cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Partially Processed').should('be.visible');
+    cy.wait(2000);
+    cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
+    cy.wait(3000);
+
+}
+
+Bulktrail_canceled(){
+ cy.wait(2000);
+    cy.get('input[type="file"]').attachFile("Bulktrail.xlsx");
+    cy.wait(2000);
+    cy.get(this.locators.ClickOnUploadBtn).click();
+    cy.wait(2000);
+    cy.get(this.locators.cancelbutton).click();
+    cy.wait(4000);
+    cy.contains('Account Search').should('be.visible');
+
+}
+
+Bulktrail_Failed_csv_file(){
+  cy.get(this.locators.Clickontrials).click({force:true});
+  cy.wait(2000);
+  cy.get(this.locators.bulk_upload).click({force:true});
+  cy.wait(2000);
+  cy.get('#bulk-trail-file').attachFile("AllocationToOwner.csv");
+  cy.contains('Info!', { timeout: 5000 }).should('be.visible');
+  cy.contains(/xls or xlsx/i).should('be.visible');
+    
+}
+
+Bulktrail_Failed_empty_file(){
+  cy.get(this.locators.Clickontrials).click({force:true});
+  cy.wait(2000);
+  cy.get(this.locators.bulk_upload).click({force:true});
+  cy.wait(2000);
+  cy.get('#bulk-trail-file').attachFile("empty.xlsx");
+  cy.get(this.locators.ClickOnUploadBtn).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOnOkay).click();
+    cy.wait(4000);
+
+    //##################################################
+
+    cy.contains("File Uploaded Successfully", { timeout: 10000 })
+      .invoke("text")
+      .then((popupText) => {
+        cy.log(`Popup text: ${popupText}`);
+        const transactionIdMatch = /Transaction ID\s*:\s*(\d+)/.exec(popupText);
+        if (transactionIdMatch) {
+          const transactionId = transactionIdMatch[1];
+          cy.log(`Transaction ID: ${transactionId}`);
+          cy.wait(1000);
+          Cypress.env("transactionID", transactionId);
+          cy.wait(1000);
+        }
+      });
+
+    cy.get(this.locators.Clickontrailuploadstatus).click();
+    cy.wait(3000);
+    cy.then(() => {
+      const transactionId = Cypress.env("transactionID");
+      cy.get("#bulk-trail-trxn-id").type(transactionId.toString()); // Convert to string if needed
+    });
+
+    //###########################################################
+
+    cy.wait(3000);
+    cy.get(this.locators.ClickOnStatusSearchBtn).click();
+    cy.wait(3000);
+  cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
+    cy.wait(2000);
+    cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
+    cy.wait(3000);
+  
+}
+Bulktrail_Empty_with_headers(){
+   cy.get(this.locators.Clickontrials).click({force:true});
+  cy.wait(2000);
+  cy.get(this.locators.bulk_upload).click({force:true});
+  cy.wait(2000);
+  cy.get('#bulk-trail-file').attachFile("BulktrailHeaders.xlsx");
+  cy.get(this.locators.ClickOnUploadBtn).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOnOkay).click();
+    cy.wait(4000);
+
+    //##################################################
+
+    cy.contains("File Uploaded Successfully", { timeout: 10000 })
+      .invoke("text")
+      .then((popupText) => {
+        cy.log(`Popup text: ${popupText}`);
+        const transactionIdMatch = /Transaction ID\s*:\s*(\d+)/.exec(popupText);
+        if (transactionIdMatch) {
+          const transactionId = transactionIdMatch[1];
+          cy.log(`Transaction ID: ${transactionId}`);
+          cy.wait(1000);
+          Cypress.env("transactionID", transactionId);
+          cy.wait(1000);
+        }
+      });
+
+    cy.get(this.locators.Clickontrailuploadstatus).click();
+    cy.wait(3000);
+    cy.then(() => {
+      const transactionId = Cypress.env("transactionID");
+      cy.get("#bulk-trail-trxn-id").type(transactionId.toString()); // Convert to string if needed
+    });
+
+    //###########################################################
+
+    cy.wait(3000);
+    cy.get(this.locators.ClickOnStatusSearchBtn).click();
+    cy.wait(3000);
+  cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
+    cy.wait(2000);
+    cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
+    cy.wait(3000);
+  
+
+}
+Bulktrail_Reupload_While_Processing(){
+   cy.get(this.locators.Clickontrials).click({force:true});
+  cy.wait(2000);
+  cy.get(this.locators.bulk_upload).click({force:true});
+  cy.wait(2000);
+  cy.get('#bulk-trail-file').attachFile("Bulktrail.xlsx");
+  cy.get(this.locators.ClickOnUploadBtn).click();
+    cy.wait(2000);
+    cy.get(this.locators.cancelbutton).click();
+    cy.wait(4000);
+    cy.get(this.locators.Clickontrials).click({force:true});
+    cy.wait(2000);
+    cy.get(this.locators.bulk_upload).click({force:true});
+    cy.wait(2000);
+    cy.get('#bulk-trail-file').attachFile("Bulktrail.xlsx");
+    cy.get(this.locators.ClickOnUploadBtn).click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOnOkay).click();
+    cy.wait(4000);
+
+
+
+    //##################################################
+
+    cy.contains("File Uploaded Successfully", { timeout: 10000 })
+      .invoke("text")
+      .then((popupText) => {
+        cy.log(`Popup text: ${popupText}`);
+        const transactionIdMatch = /Transaction ID\s*:\s*(\d+)/.exec(popupText);
+        if (transactionIdMatch) {
+          const transactionId = transactionIdMatch[1];
+          cy.log(`Transaction ID: ${transactionId}`);
+          cy.wait(1000);
+          Cypress.env("transactionID", transactionId);
+          cy.wait(1000);
+        }
+      });
+
+    cy.get(this.locators.Clickontrailuploadstatus).click();
+    cy.wait(3000);
+    cy.then(() => {
+      const transactionId = Cypress.env("transactionID");
+      cy.get("#bulk-trail-trxn-id").type(transactionId.toString()); // Convert to string if needed
     });
 
     //###########################################################
@@ -399,8 +621,23 @@ Bulktrail_Failed(){
     cy.wait(2000);
     cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
     cy.wait(3000);
+  
 
 }
+
+Upload_button_disabled(){
+  cy.get(this.locators.Clickontrials).click({force:true});
+  cy.wait(2000);
+  cy.get(this.locators.bulk_upload).click({force:true});
+  cy.wait(2000);
+   cy.contains('button', 'Upload')
+    .should('be.disabled');
+  cy.get('input[type="file"]')
+    .attachFile('Bulktrail.xlsx');
+  cy.contains('button', 'Upload')
+    .should('be.enabled');
+}
+
 
   }
 export default TrailsPage;

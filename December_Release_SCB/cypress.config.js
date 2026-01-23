@@ -81,6 +81,9 @@ module.exports = defineConfig({
         updateBulktrailCell({ filePath, sheetName, data }) {
           return excelUtils.writeExcelFile(filePath, sheetName, data);
         },
+          getLatestFile({ filePath, sheetName, data }) {
+          return excelUtils.writeExcelFile(filePath, sheetName, data);
+        },
 
 
 

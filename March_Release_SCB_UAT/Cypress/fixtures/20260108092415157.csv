@@ -1,0 +1,2 @@
+Id,UserType,FirstName,LastName,AgencyCode,SupervisorEmailId,DialerId,DRACertificationDate,DRATrainingDate,DRAUniqueRegistrationNumber,Department,Designation,DateOfBirth,MobileNo,EmailId,FathersName,LocalResidentialAddress,PostalCode,CollectionEmploymentDate,LastRenewalDate,AuthorizationCardExpiryDate,Remarks,IsFailed,FailureReason
+3a1eadea7c2ff5d353ead2519140aa23,FOS,Clyde,Hartmann,13332,,4357867680454,,,,Agency Frontend,Agent,18-10-1979,1635206035,clyde@yopmail.com,yop,bakori,765523,19-10-2022,19-10-2023,10-10-2033,resr,True, | Dialer id cannot be more than 10 characters

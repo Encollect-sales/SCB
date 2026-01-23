@@ -6,7 +6,7 @@ import UserCreationPage from '../pages/UserCreationPage';
 const path = require('path');
 import { faker } from '@faker-js/faker';
 
-describe('UserManagement -User to enter Remarks in the bulk upload of agency and user creation template.', () => {
+describe('UserManagement -User to enter Remarks with special characters in the bulk upload of agency and user creation template.', () => {
     let loginPage;
     let usercreationpage;
 
@@ -21,7 +21,7 @@ describe('UserManagement -User to enter Remarks in the bulk upload of agency and
         });
     });
 
-    it('User download the agent template User to enter Remarks in the bulk upload of agency and user creation template. - TC_ID_02', () => {
+    it('User download the agent template User to enter Remarks with special characters in the bulk upload of agency and user creation template. - TC_ID_02', () => {
         getTestData('loginData', 'login2').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
             cy.wait(900);
@@ -89,7 +89,7 @@ describe('UserManagement -User to enter Remarks in the bulk upload of agency and
                                         });
                 
                 // Upload the file from `fixtures/`
-                usercreationpage.UserCreationAgencyTemplate_upload_01();
+                usercreationpage.UserCreationAgencyTemplate_upload();
             });
         });
     });

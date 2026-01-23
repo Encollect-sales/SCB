@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1eae57db6f9c8192c61c53341f88cd,Telecaller,97258,Gillian,Miller,,3116961742,Audit and Risk,Audit Manager,Bangalore,True, | Email id is required

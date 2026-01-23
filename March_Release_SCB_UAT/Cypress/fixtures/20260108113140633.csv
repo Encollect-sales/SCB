@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1eae5f25200404e19a9190a87187e0,Telecaller,75675,Jacques,Monahan,jacques@yopmail.com,5937506205,Audit and Branch,Audit Manager,Bangalore,True, | Department is invalid

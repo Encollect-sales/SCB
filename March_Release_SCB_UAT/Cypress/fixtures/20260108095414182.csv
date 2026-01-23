@@ -1,0 +1,2 @@
+Id,UserType,FirstName,LastName,AgencyCode,SupervisorEmailId,DialerId,DRACertificationDate,DRATrainingDate,DRAUniqueRegistrationNumber,Department,Designation,DateOfBirth,MobileNo,EmailId,FathersName,LocalResidentialAddress,PostalCode,CollectionEmploymentDate,LastRenewalDate,AuthorizationCardExpiryDate,Remarks,IsFailed,FailureReason
+3a1eae05ef918e81aceb0e8e7ac83a6c,Telecaller,Kaela,Heaney,13332,,435454,10-10-2020,10-10-2020,23577359447,Agency Frontend,Agent,18-10-1979,8595348920,kaela@yopmail.com,yop,,765523,19-10-2022,19-10-2023,10-10-2033,resr,True, | Address is required

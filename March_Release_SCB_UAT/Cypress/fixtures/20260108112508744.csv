@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1eae592be6b67a82ee823ee293dc84,Telecaller,24916,Melyssa,Lowe,dbste89ststaf@$!f0788@yopmail.com,4478425078,Audit and Risk,Audit Manager,Bangalore,True, | Enter valid email

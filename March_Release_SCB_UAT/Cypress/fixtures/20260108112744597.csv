@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1eae5b8b2a9761862f41f563cb09b9,Telecaller,86663,Reyna,Howe,reyna@yopmail.com,32!53@0049,Branch Backend,Branch Manager,Bangalore,True, | Mobile Number Only numbers are allowed

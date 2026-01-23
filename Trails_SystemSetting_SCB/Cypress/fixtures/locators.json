@@ -13,9 +13,16 @@
   "Trails": {
     "Clickontrials": "[title='Trails']",
     "Clickontrailuploadstatus": ".trails > .sub-nav-list > :nth-child(2) > .ng-star-inserted",
+    "bulk_upload":".trails > .sub-nav-list > :nth-child(1) > .ng-star-inserted",
     "Clickonsearch":"#bulk-trail-search-button",
     "Clickoncancel":"#bulk-trail-cancel-button",
-    "Clickonstatus":"#bulk-trail-status"
+    "Clickonstatus":"#bulk-trail-status",
+    "download_button":"#bulk-trail-download-template",
+    "ClickOnUploadBtn":"#bulk-trail-upload-button",
+    "ClickOnOkay":"#confirm-dialog-okay",
+    "ClickOnStatusSearchBtn":"#bulk-trail-search-button",
+    "cancelbutton":"#confirm-dialog-cancel"
+
     
 
 

@@ -10,6 +10,7 @@ module.exports = defineConfig({
     // testIsolation: false,
     setupNodeEvents(on, config) {
       require("cypress-mochawesome-reporter/plugin")(on);
+      
       require("@shelex/cypress-allure-plugin/writer")(on, config);
 
       on("task", {
