@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-03-18T03:16:03.821Z",
-    "end": "2026-03-18T03:16:52.520Z",
-    "duration": 48699,
+    "start": "2026-03-18T04:18:18.780Z",
+    "end": "2026-03-18T04:19:07.078Z",
+    "duration": 48298,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "cc1d0f13-0fe5-42c9-9aec-1245cffd57e3",
+      "uuid": "e4cf0d37-ce9e-445d-933b-395b1b02395c",
       "title": "",
       "fullFile": "cypress\\e2e\\tests\\AllocationPage_010.cy.js",
       "file": "cypress\\e2e\\tests\\AllocationPage_010.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4b28ca37-d6b5-490c-a5ba-b4aca78d1aa7",
+          "uuid": "5051c448-40cf-461d-8a34-0d1507c49f58",
           "title": "Allocation - Agency bulk allocation customer level - File size validation (download file - field agency, upload field - field agency)",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Should show error when uploading file larger than allowed size",
               "fullTitle": "Allocation - Agency bulk allocation customer level - File size validation (download file - field agency, upload field - field agency) Should show error when uploading file larger than allowed size",
               "timedOut": null,
-              "duration": 42563,
+              "duration": 43000,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "(0, _TestDataUtils.getTestData)('loginData', 'login2').then(user => {\n  // Login\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(1000);\n  // Navigate to Allocation → Primary Allocation Upload\n  allocationPage.Allocation_Agency_Bulk_Allocation_Customer_Level_loan_account_010();\n});",
               "err": {},
-              "uuid": "38669504-36c5-4cfe-96f9-6b1501bc5bdb",
-              "parentUUID": "4b28ca37-d6b5-490c-a5ba-b4aca78d1aa7",
+              "uuid": "00d36620-87bf-4ced-8280-62c327d3ded0",
+              "parentUUID": "5051c448-40cf-461d-8a34-0d1507c49f58",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "38669504-36c5-4cfe-96f9-6b1501bc5bdb"
+            "00d36620-87bf-4ced-8280-62c327d3ded0"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 42563,
+          "duration": 43000,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

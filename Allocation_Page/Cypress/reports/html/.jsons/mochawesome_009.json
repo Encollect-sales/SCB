@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-03-18T03:23:31.971Z",
-    "end": "2026-03-18T03:24:11.982Z",
-    "duration": 40011,
+    "start": "2026-03-18T04:27:28.735Z",
+    "end": "2026-03-18T04:28:10.669Z",
+    "duration": 41934,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "3ddf1f93-203b-4e48-b9b2-ea3d92e5d68e",
+      "uuid": "26ef4ef4-46b1-48a4-acd5-9d9e72d89319",
       "title": "",
       "fullFile": "cypress\\e2e\\tests\\AllocationPage_0107.cy.js",
       "file": "cypress\\e2e\\tests\\AllocationPage_0107.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6be18512-dadf-430f-b227-7112c2743e6e",
+          "uuid": "e2de692e-52fc-478f-a68c-5459a034ae56",
           "title": "Agent Bulk Allocation - Account Level Loan (Telecaller → Telecaller) - Upload button enable validation",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Should enable upload button after file selection",
               "fullTitle": "Agent Bulk Allocation - Account Level Loan (Telecaller → Telecaller) - Upload button enable validation Should enable upload button after file selection",
               "timedOut": null,
-              "duration": 34699,
+              "duration": 36135,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "(0, _TestDataUtils.getTestData)('loginData', 'login2').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.Agent_Bulk_allocation_account_level_loan_account_telecaller_telecaller_0107();\n});",
               "err": {},
-              "uuid": "d0bbf076-626b-45a1-b627-15dee4a16556",
-              "parentUUID": "6be18512-dadf-430f-b227-7112c2743e6e",
+              "uuid": "98151546-74d5-457b-b319-82056268515d",
+              "parentUUID": "e2de692e-52fc-478f-a68c-5459a034ae56",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "d0bbf076-626b-45a1-b627-15dee4a16556"
+            "98151546-74d5-457b-b319-82056268515d"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 34699,
+          "duration": 36135,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

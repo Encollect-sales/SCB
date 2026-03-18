@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-03-18T03:17:58.125Z",
-    "end": "2026-03-18T03:18:52.018Z",
-    "duration": 53893,
+    "start": "2026-03-18T04:20:28.738Z",
+    "end": "2026-03-18T04:21:34.394Z",
+    "duration": 65656,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e60383cb-8eac-4b03-a391-020a7cb06fae",
+      "uuid": "aae6db4e-50fc-43c8-b009-5c960f80c20c",
       "title": "",
       "fullFile": "cypress\\e2e\\tests\\AllocationPage_0101.cy.js",
       "file": "cypress\\e2e\\tests\\AllocationPage_0101.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "824405f5-2d00-431b-8e17-74a833217e24",
+          "uuid": "ef83d0db-3fdd-4019-8206-87464d1e8574",
           "title": "Agent Bulk Allocation - Account Level Loan (Telecaller → Staff) - Empty file upload validation",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Should fail allocation when empty file is uploaded",
               "fullTitle": "Agent Bulk Allocation - Account Level Loan (Telecaller → Staff) - Empty file upload validation Should fail allocation when empty file is uploaded",
               "timedOut": null,
-              "duration": 49516,
+              "duration": 58179,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Invalid File Format' within the element: <td> but never did.\n    at AllocationPage.Agent_Bulk_allocation_account_level_loan_account_telecaller_staff_0101 (webpack:///./cypress/e2e/pages/AllocationPage.js:2692:5)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPage_0101.cy.js:22:23)\n    at getRet (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
                 "diff": null
               },
-              "uuid": "6e6e3cc3-1867-4358-8b89-fea7f9fc3b52",
-              "parentUUID": "824405f5-2d00-431b-8e17-74a833217e24",
+              "uuid": "07e3862e-72e6-402a-b01b-15c808bf8aab",
+              "parentUUID": "ef83d0db-3fdd-4019-8206-87464d1e8574",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "6e6e3cc3-1867-4358-8b89-fea7f9fc3b52"
+            "07e3862e-72e6-402a-b01b-15c808bf8aab"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 49516,
+          "duration": 58179,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

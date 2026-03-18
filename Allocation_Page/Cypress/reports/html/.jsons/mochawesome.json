@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-03-18T03:15:19.001Z",
-    "end": "2026-03-18T03:15:56.067Z",
-    "duration": 37066,
+    "start": "2026-03-18T04:17:29.035Z",
+    "end": "2026-03-18T04:18:09.073Z",
+    "duration": 40038,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "6be48788-58b1-444d-8e7f-16b1c1b06fad",
+      "uuid": "6691c209-b715-46d7-b5bb-81b38dac4ca2",
       "title": "",
       "fullFile": "cypress\\e2e\\tests\\AllocationPage_01.cy.js",
       "file": "cypress\\e2e\\tests\\AllocationPage_01.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "5030e687-feca-4c0f-9773-b6490c907225",
+          "uuid": "f7b800f2-2a2a-4102-8edc-dfa30f2f8403",
           "title": "Allocation - Agency bulk allocation Account level - Upload button validation - Upload button validation (download file - field agency, upload field - field agency) ",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Upload button should be disabled until file is selected",
               "fullTitle": "Allocation - Agency bulk allocation Account level - Upload button validation - Upload button validation (download file - field agency, upload field - field agency)  Upload button should be disabled until file is selected",
               "timedOut": null,
-              "duration": 31988,
+              "duration": 34185,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "(0, _TestDataUtils.getTestData)('loginData', 'login2').then(user => {\n  // Login\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(1000);\n  // Navigate to Allocation → Bulk Upload\n  allocationPage.Allocation_loan_account_01();\n});",
               "err": {},
-              "uuid": "7e4db1cf-92eb-4b25-b031-3f60ecefd382",
-              "parentUUID": "5030e687-feca-4c0f-9773-b6490c907225",
+              "uuid": "6f7c5753-38d9-4f04-be07-81b5f18397a7",
+              "parentUUID": "f7b800f2-2a2a-4102-8edc-dfa30f2f8403",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "7e4db1cf-92eb-4b25-b031-3f60ecefd382"
+            "6f7c5753-38d9-4f04-be07-81b5f18397a7"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 31988,
+          "duration": 34185,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

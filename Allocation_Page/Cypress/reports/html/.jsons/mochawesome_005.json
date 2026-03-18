@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-03-18T03:19:50.771Z",
-    "end": "2026-03-18T03:20:34.410Z",
-    "duration": 43639,
+    "start": "2026-03-18T04:23:05.584Z",
+    "end": "2026-03-18T04:23:52.216Z",
+    "duration": 46632,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "a6538712-2964-41fd-9755-80f1b6da3d42",
+      "uuid": "9a2aecb2-9d66-4ba7-ae62-1d3fa670f946",
       "title": "",
       "fullFile": "cypress\\e2e\\tests\\AllocationPage_0103.cy.js",
       "file": "cypress\\e2e\\tests\\AllocationPage_0103.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "67cedbed-f111-4c5e-9377-c7ea432abe69",
+          "uuid": "0d3eb9d2-86bf-43cb-acfb-ed090ecc3bef",
           "title": "Agent Bulk Allocation - Account Level Loan (Telecaller → Agent) - Invalid file format validation",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Should show error for invalid file format",
               "fullTitle": "Agent Bulk Allocation - Account Level Loan (Telecaller → Agent) - Invalid file format validation Should show error for invalid file format",
               "timedOut": null,
-              "duration": 38441,
+              "duration": 38430,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "(0, _TestDataUtils.getTestData)('loginData', 'login2').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.Agent_Bulk_allocation_account_level_loan_account_telecaller_agent_0103();\n});",
               "err": {},
-              "uuid": "ae7534c7-1b85-40d9-94c1-be10b2fcd395",
-              "parentUUID": "67cedbed-f111-4c5e-9377-c7ea432abe69",
+              "uuid": "95080a18-3787-4677-b28e-28c7288c7a69",
+              "parentUUID": "0d3eb9d2-86bf-43cb-acfb-ed090ecc3bef",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "ae7534c7-1b85-40d9-94c1-be10b2fcd395"
+            "95080a18-3787-4677-b28e-28c7288c7a69"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 38441,
+          "duration": 38430,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
