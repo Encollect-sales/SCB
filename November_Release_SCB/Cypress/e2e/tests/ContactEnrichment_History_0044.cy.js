@@ -30,7 +30,7 @@ describe('Contact Enrichment Scenarios', () => {
   // =====================================================
   it('TC_ID_0044 - Negative – Contacts from failed upload do not appear in History', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       loginPage.login(user.Companyname, user.email, user.password);
       cy.wait(2000);
@@ -125,25 +125,30 @@ describe('Contact Enrichment Scenarios', () => {
       cy.get('[heading="History"] > .panel > .panel-heading').click({force:true});
       cy.wait(2000);
 
-      // ---------------- Validation: Verify Failed Contacts DO NOT Appear ----------------
-      cy.log('Step 3: Validating that FAILED contacts do NOT appear in History');
+     cy.get('@invalidPhone').then((invalidPhone) => {
 
-      cy.get('@invalidPhone').then((invalidPhone) => {
-        cy.get('@invalidAddress').then((invalidAddress) => {
-          
-          // Verify Invalid Phone Number does NOT appear in History
-          cy.log(`Verifying Invalid Phone does NOT appear: ${invalidPhone}`);
-          cy.get('#flip-scroll > .scrollable-table > .table > tbody').then(($tbody) => {
-            const phoneTableText = $tbody.text();
-            
-            if (phoneTableText.includes(invalidPhone)) {
-              cy.log('FAIL: Invalid phone number found in History (should NOT be there)');
-              expect(phoneTableText).to.not.include(invalidPhone);
-            } else {
-              cy.log('PASS: Invalid phone number NOT found in History (as expected)');
-            }
-          });
-          cy.wait(2000);
+  const firstTwo = invalidPhone.substring(0, 2);
+  const lastTwo = invalidPhone.substring(invalidPhone.length - 2);
+
+  cy.log(`Checking masked phone pattern: ${firstTwo}******${lastTwo}`);
+
+  cy.get('#flip-scroll > .scrollable-table > .table > tbody')
+    .invoke('text')
+    .then((tableText) => {
+
+      const regex = new RegExp(`${firstTwo}.*${lastTwo}`);
+
+      if (regex.test(tableText)) {
+        cy.log('FAIL: Masked invalid phone found in History');
+        expect(tableText).to.not.match(regex);
+      } else {
+        cy.log('PASS: Invalid phone (even masked) NOT found in History');
+      }
+
+    });
+
+});
+
 
           // Verify Invalid Address does NOT appear in History
           cy.log(`Verifying Invalid Address does NOT appear: ${invalidAddress}`);
@@ -160,7 +165,7 @@ describe('Contact Enrichment Scenarios', () => {
           cy.wait(2000);
 
           // Optional: Verify History is either empty or contains only old valid records
-          cy.log('🔍 Checking History table state');
+          cy.log('Checking History table state');
           cy.get('#flip-scroll > .scrollable-table > .table > tbody').then(($tbody) => {
             const rowCount = $tbody.find('tr').length;
             cy.log(`Number of records in History: ${rowCount}`);
@@ -186,6 +191,5 @@ describe('Contact Enrichment Scenarios', () => {
 
     });
 
-  });
 
-});
+

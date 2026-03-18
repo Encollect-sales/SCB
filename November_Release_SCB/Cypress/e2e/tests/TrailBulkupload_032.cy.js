@@ -22,7 +22,7 @@ describe('BULKTRL_032 - Display of progress indicator during long‑running proc
 
   it('Verify that a progress indicator is shown to the user during long-running bulk trail file processing until completion.', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       // ---------------- Login ----------------
       loginPage.login(user.Companyname, user.email, user.password);

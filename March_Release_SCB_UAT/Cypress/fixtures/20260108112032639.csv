@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1eae54f3d99447c61ba21824125c4b,Telecaller,95956,Alessandra,test@#psa,alessandra@yopmail.com,3627593326,Branch Backend,Branch Manager,Bangalore,True, | Please enter valid Last Name

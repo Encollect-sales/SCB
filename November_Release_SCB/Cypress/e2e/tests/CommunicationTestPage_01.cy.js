@@ -22,7 +22,7 @@ describe('Communication Module - ', () => {
 
   it('Communication - ', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       loginPage.login(user.Companyname,user.email,user.password
       );

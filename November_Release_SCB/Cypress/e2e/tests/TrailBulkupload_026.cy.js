@@ -28,7 +28,7 @@ describe('Invalid data type for Agent ID field', () => {
   
   it('TC_ID_026 - Duplicate Agent IDs in same file with different data', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       // ---------------- Login ----------------
       loginPage.login(user.Companyname, user.email, user.password);
@@ -60,10 +60,10 @@ describe('Invalid data type for Agent ID field', () => {
         'A2': 'DMI0009590352',      // Agreement id
         'B2': '1936',  
         'C2': '1514',              // Agent ENCollect Code
-        'D2': 'ss',                 // RightPartyContact
+        'D2': 'yes',                 // RightPartyContact
         'E2': 'PTP',                // Action Code
         'F2': 'PTP',                // ResultCode
-        'G2': '2025/12/26',         // Next Action Date
+        'G2': '2026/12/26',         // Next Action Date
         'H2': ptpAmount,            // ✅ Random PTP Amount (1–100)
         'I2': '',                   // NextActionCode
         'J2': 'Bulk upload Aug29',  // Remarks

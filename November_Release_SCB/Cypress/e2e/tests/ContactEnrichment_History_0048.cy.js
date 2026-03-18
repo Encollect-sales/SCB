@@ -30,7 +30,7 @@ describe('Contact Enrichment Scenarios', () => {
   // =====================================================
   it('TC_ID_0048 - Negative – Failed bulk upload rows should never show in History', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       loginPage.login(user.Companyname, user.email, user.password);
       cy.wait(2000);
@@ -50,22 +50,22 @@ describe('Contact Enrichment Scenarios', () => {
       const sheetName = 'Sheet1';
 
       // Valid Agreement ID (should succeed)
-      const validAgreementId = '1669';
-      const validPhone = faker.string.numeric(10);
-      const validAddress = faker.location.streetAddress();
+      const validAgreementId = '1667';
+      const validPhone = '';
+      const validAddress = '';
       const validContactType = 'Residential';
 
       // Invalid Agreement ID (should fail)
       const invalidAgreementId = '9999999'; // Non-existent Agreement ID
       const invalidPhone = faker.string.numeric(10);
       const invalidAddress = faker.location.streetAddress();
-      const invalidContactType = 'Office';
+      const invalidContactType = 'Mobile';
 
       // Another Invalid Row (should fail) - Missing required fields
       const invalidAgreementId2 = '8888888';
       const invalidPhone2 = ''; // Empty phone number to cause failure
-      const invalidAddress2 = faker.location.streetAddress();
-      const invalidContactType2 = 'Mobile';
+      const invalidAddress2 = '';
+      const invalidContactType2 = '';
 
       // Store data for validation
       cy.wrap(validAgreementId).as('validAgreementId');
@@ -177,15 +177,15 @@ describe('Contact Enrichment Scenarios', () => {
           const tableText = $tbody.text();
           
           if (tableText.includes(validContact.phone)) {
-            cy.log('✓ PASS: Valid contact phone number found in History');
+            cy.log('PASS: Valid contact phone number found in History');
           } else {
-            cy.log('✗ FAIL: Valid contact phone number NOT found in History');
+            cy.log('FAIL: Valid contact phone number NOT found in History');
           }
 
           if (tableText.includes(validContact.type)) {
-            cy.log('✓ PASS: Valid contact type found in History');
+            cy.log('PASS: Valid contact type found in History');
           } else {
-            cy.log('✗ FAIL: Valid contact type NOT found in History');
+            cy.log('FAIL: Valid contact type NOT found in History');
           }
         });
 
@@ -215,7 +215,7 @@ describe('Contact Enrichment Scenarios', () => {
           // Verify search returns no results or account doesn't exist
           cy.get('body').then(($body) => {
             if ($body.find("tbody tr[class='ng-star-inserted']").length === 0) {
-              cy.log('✓ PASS: Invalid Agreement ID 1 not found in system (as expected)');
+              cy.log('PASS: Invalid Agreement ID 1 not found in system (as expected)');
             } else {
               // If account exists, check that our failed contact is NOT in History
               cy.log('Agreement exists - Checking that failed contact is NOT in History');
@@ -234,9 +234,9 @@ describe('Contact Enrichment Scenarios', () => {
                 const tableText = $tbody.text();
                 
                 if (!tableText.includes(invalidContact.phone)) {
-                  cy.log('✓ PASS: Invalid contact 1 phone NOT found in History (as expected)');
+                  cy.log('PASS: Invalid contact 1 phone NOT found in History (as expected)');
                 } else {
-                  cy.log('✗ FAIL: Invalid contact 1 phone found in History (should not be present)');
+                  cy.log('FAIL: Invalid contact 1 phone found in History (should not be present)');
                 }
               });
 
@@ -262,7 +262,7 @@ describe('Contact Enrichment Scenarios', () => {
           // Verify search returns no results or account doesn't exist
           cy.get('body').then(($body) => {
             if ($body.find("tbody tr[class='ng-star-inserted']").length === 0) {
-              cy.log('✓ PASS: Invalid Agreement ID 2 not found in system (as expected)');
+              cy.log('PASS: Invalid Agreement ID 2 not found in system (as expected)');
             } else {
               // If account exists, check that our failed contact is NOT in History
               cy.log('Agreement exists - Checking that failed contact is NOT in History');
@@ -281,9 +281,9 @@ describe('Contact Enrichment Scenarios', () => {
                 const tableText = $tbody.text();
                 
                 if (!tableText.includes(invalidContact2.phone) || invalidContact2.phone === '') {
-                  cy.log('✓ PASS: Invalid contact 2 NOT found in History (as expected)');
+                  cy.log('PASS: Invalid contact 2 NOT found in History (as expected)');
                 } else {
-                  cy.log('✗ FAIL: Invalid contact 2 found in History (should not be present)');
+                  cy.log('FAIL: Invalid contact 2 found in History (should not be present)');
                 }
               });
             }

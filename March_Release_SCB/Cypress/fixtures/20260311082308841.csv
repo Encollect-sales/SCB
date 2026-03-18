@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1fef90003dace6ff7342f45cabee94,Telecaller,27924,Felicity,Ortiz,felicity@yopmail.com,3395134184,,Audit Manager,Bangalore,True, | Department is Required

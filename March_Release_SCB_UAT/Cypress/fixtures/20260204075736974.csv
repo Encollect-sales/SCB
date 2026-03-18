@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1f38a6dea388ce5f47d1a72e74503a,Telecaller,18124,Clarabelle,Hodkiewicz,clarabelle@yopmail.com,32453049,Branch Backend,Branch Manager,Bangalore,True, | Mobile Number 10 digits are required

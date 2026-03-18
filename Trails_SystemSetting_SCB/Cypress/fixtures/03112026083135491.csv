@@ -1,0 +1,2 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+18765,10031,yes,Kamna,PTP,2027-12-22,109, ,Bulk upload,2273725019,Norman,688 Post Road,kurxgksz@yopmail.com,permenant,new,03112026083135491,Error,DispositionCode does not belong to DispositionGroupMaster

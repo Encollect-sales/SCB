@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1e1b3acfd75c4e75742d37be26c10a,FOS,,Ottilie,Walsh,ottilie@yopmail.com,6303839562,Audit and Risk,Audit Manager,Bangalore,True, | Employee Id is required

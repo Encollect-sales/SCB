@@ -1,0 +1,4 @@
+AgreementId,AddressType,Address,MobileNumber,WorkRequestId,UploadStatus,ErrorMessage
+1667,Residential,577 Windsor Close,8445516340,02152026033631414,Success,
+1667,Office,91702 Effie Track,9059866660,02152026033631414,Success,
+1667,Permanent,691 Margaretta Path,9371897991,02152026033631414,Success,

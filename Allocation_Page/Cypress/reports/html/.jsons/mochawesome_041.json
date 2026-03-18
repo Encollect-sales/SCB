@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-03-18T03:49:17.140Z",
+    "end": "2026-03-18T03:50:15.165Z",
+    "duration": 58025,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ded11c83-bd3c-4eb3-b808-514f46155ab2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPage_0136.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPage_0136.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "04b57bdb-9371-4e44-ac35-abb08e63fa61",
+          "title": "TC-0136 | Agent Bulk Allocation - Account Level | Credit Card | Agent → Agent | Empty File Validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should mark allocation as Failed when empty file is uploaded",
+              "fullTitle": "TC-0136 | Agent Bulk Allocation - Account Level | Credit Card | Agent → Agent | Empty File Validation Should mark allocation as Failed when empty file is uploaded",
+              "timedOut": null,
+              "duration": 52533,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\AllocationPage_0136.cy.js\\\\TC-0136  Agent Bulk Allocation - Account Level  Credit Card  Agent → Agent  Empty File Validation -- Should mark allocation as Failed when empty file is uploaded (failed).png\"\n    ]\n  ]\n}",
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login2').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(1000);\n  allocationPage.Agent_Bulk_allocation_account_level_credit_card_agent_agent_0136();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Invalid File Format' within the element: <td> but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Invalid File Format' within the element: <td> but never did.\n    at AllocationPage.Agent_Bulk_allocation_account_level_credit_card_agent_agent_0136 (webpack:///./cypress/e2e/pages/AllocationPage.js:3685:5)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPage_0136.cy.js:26:11)\n    at getRet (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "5a7f27ae-baf2-4ef5-9550-05f8d209d5c5",
+              "parentUUID": "04b57bdb-9371-4e44-ac35-abb08e63fa61",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "5a7f27ae-baf2-4ef5-9550-05f8d209d5c5"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 52533,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

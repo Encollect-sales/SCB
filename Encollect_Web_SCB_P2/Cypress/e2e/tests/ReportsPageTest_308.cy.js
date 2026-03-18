@@ -20,7 +20,7 @@ describe('Reports - Payment Reports', () => {
         });
     });
 
-    it('Payment reports - TC_ID_308 - To check the State field drop down value', () => {
+    it('Payment reports - TC_ID_308 - To check the Buckets field drop down value', () => {
         getTestData('loginData', 'login').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
                 reportsPage.ReportsModule();

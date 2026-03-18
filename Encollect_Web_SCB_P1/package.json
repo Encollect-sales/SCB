@@ -1,15 +1,17 @@
 {
   "scripts": {
-    "test:group1:QA": "cypress run --spec 'cypress/e2e/tests/AddStaffPageTest_*.cy.js' --env ENV=QA",
-    "test:group2:QA": "cypress run --spec 'cypress/e2e/tests/AllocationPageTest_*.cy.js' --env ENV=QA",
-    "test:group3:QA": "cypress run --spec 'cypress/e2e/tests/UserManagementPageTest_*.cy.js' --env ENV=QA",
-    "test:group4:QA": "cypress run --spec 'cypress/e2e/tests/PaymentsPageTest_*.cy.js' --env ENV=QA",
-    "test:group5:QA": "cypress run --spec 'cypress/e2e/tests/SearchStaffPageTest_*.cy.js' --env ENV=QA",
-    "test:group6:QA": "cypress run --spec 'cypress/e2e/tests/AgentEmpanelmentRequestPageTest_*.cy.js' --env ENV=QA",
-    "test:group7:QA": "cypress run --spec 'cypress/e2e/tests/AgencyEmpanelmentRequest_*.cy.js' --env ENV=QA",
-    "test:group8:QA": "cypress run --spec 'cypress/e2e/tests/DashboardTestPage_*.cy.js' --env ENV=QA",
-    "test:group9:QA": "cypress run --spec 'cypress/e2e/tests/UserManagementTestPage*.cy.js' --env ENV=QA",
-    "test:group10:QA": "cypress run --spec 'cypress/e2e/tests/ScopeofWorkTestPage*.cy.js' --env ENV=QA",
+"test:group1:QA": "cypress run --spec 'cypress/e2e/tests/AddStaffPageTest_*.cy.js' --env ENV=QA",
+  "test:group2:QA": "cypress run --spec 'cypress/e2e/tests/AllocationPageTest_*.cy.js' --env ENV=QA",
+  "test:group3:QA": "cypress run --spec 'cypress/e2e/tests/UserManagementPageTest_*.cy.js' --env ENV=QA",
+  "test:group4:QA": "cypress run --spec 'cypress/e2e/tests/PaymentsPageTest_*.cy.js' --env ENV=QA",
+  "test:group5:QA": "cypress run --spec 'cypress/e2e/tests/SearchStaffPageTest_*.cy.js' --env ENV=QA",
+  "test:group6:QA": "cypress run --spec 'cypress/e2e/tests/AgentEmpanelmentRequestPageTest_*.cy.js' --env ENV=QA",
+  "test:group7:QA": "cypress run --spec 'cypress/e2e/tests/AgencyEmpanelmentRequest_*.cy.js' --env ENV=QA",
+  "test:group8:QA": "cypress run --spec 'cypress/e2e/tests/DashboardTestPage_*.cy.js' --env ENV=QA",
+  "test:group9:QA": "cypress run --spec 'cypress/e2e/tests/UserManagementTestPage*.cy.js' --env ENV=QA",
+  "test:group10:QA": "cypress run --spec 'cypress/e2e/tests/ScopeofWorkTestPage*.cy.js' --env ENV=QA",
+
+
     
     "test:group1:UAT": "cypress run --spec 'cypress/e2e/tests/AddStaffPageTest_*.cy.js' --env ENV=UAT",
     "test:group2:UAT": "cypress run --spec 'cypress/e2e/tests/AllocationPageTest_*.cy.js' --env ENV=UAT",

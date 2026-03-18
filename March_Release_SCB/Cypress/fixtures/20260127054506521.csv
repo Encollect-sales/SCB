@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1f118ddbe39bbb227479062979baac,Telecaller,47036,Sheila,Borer,sheila@yopmail.com,32453049,Branch Backend,Branch Manager,Bangalore,True, | Mobile Number 10 digits are required

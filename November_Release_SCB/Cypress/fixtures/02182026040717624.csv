@@ -1,0 +1,3 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+LXMUM33020211742684,1936,Yes,PTP,PTP,2026-12-26,59,,Approved agent,1361872512,BTM,Bangalore,Willard.Klocko69@gmail.com,Permanent,New,02182026040717624,Success,
+DMI0009801001,1933,Yes,PTP,PTP,2026-12-26,59,,Failure reason validation,6431870556,BTM,Bangalore,Earnestine46@hotmail.com,Permanent,New,02182026040717624,Error,Account number does not exist in database

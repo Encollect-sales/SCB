@@ -17,7 +17,11 @@
  "pagecount_dropdown":"select[name='itemsPerPage']",
  "next_btn":"#nextButton",
  "ClickOn_Toggle":"#toggleButton > img",
-"ClickOnCall_Btn":"#mobileCallTypeConfirmForDialer"
+"ClickOnCall_Btn":"app-call-button > .btn",
+"last_page":".pagination-last > .page-link",
+"prev_button":"#PreviousButton",
+"next_button":"#nextButton"
+
 
 
 },
@@ -122,7 +126,10 @@
   "recipient_type_dropdown":":nth-child(4) > .h-100 > .form-control-group > .form-select",
   "Trigger_type":"#trigger-type-1",
   "x_value_input":"#tempXValue",
-  "save_button":"button[class='btn btn-primary mw-150px me-4']"
+  "save_button":"button[class='btn btn-primary mw-150px me-4']",
+  "channel_type":"#channelType",
+  "entry_point":"#entryPoint",
+  "triggertype":"#trigger-type-7"
 },
 "reports":{
 "Delayed_Reports":"a[title='Delayed Deposits Report']",

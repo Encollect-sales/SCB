@@ -1,0 +1,5 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009801001,1515,Yes,PTP,PTP,2025-12-26,75,,Disabled agent,1-217-481-5643,HSR,Bangalore,Jennie61@hotmail.com,Permanent,New,01272026085419633,Error,Next action date cannot be less than current date
+DMI9999999999,999999,Yes,PTP,PTP,2025-12-26,75,,Invalid agent ID,1-304-788-3081 x25530,BTM,Bangalore,Bryon50@yahoo.com,Permanent,New,01272026085419633,Error,Next action date cannot be less than current date
+DMI0009801002,1907,Yes,PTP,PTP,2025-12-26,75,,Pending approval,1-695-291-8821,Whitefield,Bangalore,Ernestina.Kirlin16@gmail.com,Permanent,New,01272026085419633,Error,Next action date cannot be less than current date
+DMI0009801003,2005,Yes,PTP,PTP,2025-12-26,75,,Rejected agent,924.563.3340 x6422,Indiranagar,Bangalore,Paige85@gmail.com,Permanent,New,01272026085419633,Error,Next action date cannot be less than current date

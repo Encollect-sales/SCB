@@ -1,0 +1,2 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009590352,1936,yes,PTP,PTP,2026-12-26,50,,Session timeout test,8295432746,btm,banglore,Monica.Schamberger37@hotmail.com,permanent,new,02132026021009443,Error,Agent ID not approved

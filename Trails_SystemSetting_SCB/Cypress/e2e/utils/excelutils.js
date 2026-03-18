@@ -1,58 +1,45 @@
 const XLSX = require('xlsx');
 const fs = require('fs');
 
-const readExcelFile = (filePath) => {
-  try {
-    const workbook = XLSX.readFile(filePath);
-    const sheetsData = {};
+const waitForFile = (filePath, timeout = 30000) => {
+  const start = Date.now();
 
-    workbook.SheetNames.forEach(sheetName => {
-      const sheet = workbook.Sheets[sheetName];
-      sheetsData[sheetName] = XLSX.utils.sheet_to_json(sheet, {
-        defval: ''   // preserve empty cells
-      });
-    });
-
-    return sheetsData;
-  } catch (error) {
-    console.error(`Error reading Excel file: ${error.message}`);
-    return null;
-  }
+  return new Promise((resolve, reject) => {
+    const check = () => {
+      if (fs.existsSync(filePath)) return resolve(true);
+      if (Date.now() - start > timeout) {
+        return reject(new Error(`Excel file not found after ${timeout}ms: ${filePath}`));
+      }
+      setTimeout(check, 500);
+    };
+    check();
+  });
 };
 
-const writeExcelFile = (filePath, sheetName, data) => {
-  if (!fs.existsSync(filePath)) {
-    throw new Error(`Excel file not found: ${filePath}`);
-  }
+const writeExcelFile = async (filePath, sheetName, data) => {
+  await waitForFile(filePath);
 
-  // Read existing workbook (DO NOT recreate)
   const workbook = XLSX.readFile(filePath);
-
   const worksheet = workbook.Sheets[sheetName];
+
   if (!worksheet) {
-    throw new Error(`Sheet "${sheetName}" not found in Excel file`);
+    throw new Error(`Sheet "${sheetName}" not found`);
   }
 
-  // Update only specified cells (A2, B2, etc.)
-  Object.entries(data).forEach(([cellRef, value]) => {
-    worksheet[cellRef] = {
-      t: typeof value === 'number' ? 'n' : 's',
-      v: value
-    };
+  Object.entries(data).forEach(([cell, value]) => {
+    worksheet[cell] = { t: 's', v: value };
   });
 
-  // Safely update sheet range
-  const range = XLSX.utils.decode_range(worksheet['!ref']);
-  Object.keys(data).forEach(cellRef => {
-    const { r, c } = XLSX.utils.decode_cell(cellRef);
-    if (r > range.e.r) range.e.r = r;
-    if (c > range.e.c) range.e.c = c;
-  });
-  worksheet['!ref'] = XLSX.utils.encode_range(range);
-
-  // Write back SAME file
   XLSX.writeFile(workbook, filePath);
   return true;
 };
 
-module.exports = { readExcelFile, writeExcelFile };
+const readExcelFile = (filePath) => {
+  const workbook = XLSX.readFile(filePath);
+  return workbook;
+};
+
+module.exports = {
+  readExcelFile,
+  writeExcelFile
+};

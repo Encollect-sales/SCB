@@ -22,7 +22,7 @@ describe('Settlement - Workflow History section should also show Account Number,
     it('Settlement - TC_ID_003', () => {
         getTestData('loginData', 'login3').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
-                cy.wait(2000);
+                cy.wait(7000);
                 settlementpage.SettlementTestPage_003();            
             });
         });

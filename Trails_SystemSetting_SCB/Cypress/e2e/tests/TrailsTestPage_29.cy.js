@@ -6,7 +6,7 @@ import TrailsPage from '../pages/TrailsPage';
 const path = require('path');
 import { faker } from '@faker-js/faker';
 
-describe('Trails - Invalid Agreement ID. Spaces are not allowed.', () => {
+describe('Trails - Invalid Agreement ID. Special characters are not allowed.', () => {
     let loginPage;
     let trailspage;
 
@@ -21,7 +21,7 @@ describe('Trails - Invalid Agreement ID. Spaces are not allowed.', () => {
         });
     });
 
-    it('The system should reject the Agreement ID containing spaces and display an appropriate validation error message. The Trail record should not be created or processed.', () => {
+    it('The system should reject the Agreement ID containing special characters and display an appropriate validation error message. The Trail record should not be created or processed.', () => {
         getTestData('loginData', 'login2').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
             cy.wait(900);
@@ -68,7 +68,7 @@ describe('Trails - Invalid Agreement ID. Spaces are not allowed.', () => {
                  
                 'A3': 'AG#123',        
 'B3': '10031',
-'C3': 'ss',
+'C3': 'yes',
 'D3': 'PTP',
 'E3': 'PTP',
 'F3': '2027/12/22',
@@ -88,7 +88,7 @@ describe('Trails - Invalid Agreement ID. Spaces are not allowed.', () => {
 
             
                                         const downloadsFolder = Cypress.config('downloadsFolder');
-                                        const fixturesFolder = 'cypress/fixtures';
+                                        const fixturesFolder = 'fixtures';
                                         const excelFileName = 'Bulktrail.xlsx';
                                         const sourceFilePath = path.join(downloadsFolder, excelFileName);
                                         const destFilePath = path.join(fixturesFolder, excelFileName);

@@ -30,7 +30,7 @@ describe('Contact Enrichment Scenarios', () => {
   
   it('TC_ID_0039 -Positive – Sorting on File Uploaded Date', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       loginPage.login(user.Companyname, user.email, user.password);
       cy.wait(2000);

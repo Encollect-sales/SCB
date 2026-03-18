@@ -1,0 +1,3 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009810002,,Yes,PTP,PTP,2025-12-26,43,,Null agent ID,1-488-933-5504 x336,HSR,Bangalore,Corene.Murphy@yahoo.com,Permanent,New,02042026061635577,Error,Next action date cannot be less than current date
+DMI0009810001,,Yes,PTP,PTP,2025-12-26,43,,Blank agent ID,1-848-645-5079 x107,BTM,Bangalore,Melvina57@gmail.com,Permanent,New,02042026061635577,Error,Next action date cannot be less than current date

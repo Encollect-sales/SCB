@@ -15,8 +15,8 @@ UserManagementTestPage_01(){
  cy.wait(1000);
  cy.get(this.locators.ClickOnAddAgent).click();
  cy.wait(1000);
- //cy.contains("Wallet Limit").should("be.visible");
- cy.wait(1000);
+//  cy.contains("Wallet Limit").should("be.visible");
+//  cy.wait(1000);
  cy.get(this.locators.ClickOnWalletLimit).click();
  cy.wait(1000);
  cy.get('#walletLimit').type(20000);

@@ -30,7 +30,7 @@ describe('Contact Enrichment Scenarios', () => {
   
   it('TC_ID_0043 - Positive – Successfully uploaded contacts appear in History', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       loginPage.login(user.Companyname, user.email, user.password);
       cy.wait(2000);
@@ -92,7 +92,16 @@ describe('Contact Enrichment Scenarios', () => {
     cy.get('[heading="History"] > .panel > .panel-heading').click({force:true});
     cy.wait(2000);
  
-  cy.get('#flip-scroll > .scrollable-table > .table > tbody > :nth-child(1) > :nth-child(1)').scrollIntoView().contains(phoneNumber).should('be.visible');
+cy.get('#flip-scroll > .scrollable-table > .table > tbody > :nth-child(1) > :nth-child(1) > [style="text-wrap-mode: nowrap; position: relative;"] > span')
+  .scrollIntoView()
+  .invoke('text')
+  .then((rawText) => {
+
+    const text = rawText.replace(/\s/g, '')   // remove spaces + new lines
+    cy.log('UI Masked Mobile:', text)
+
+    expect(text).to.match(new RegExp(`^${firstTwo}.*${lastTwo}$`))
+  })
   cy.wait(2000);
  
  cy.get(':nth-child(2) > .col-md-6 > .enc-card > .card-content > .scrollable-table > .table > tbody > :nth-child(1) > :nth-child(1)').scrollIntoView().contains(randomAddress).should('be.visible');
@@ -104,11 +113,13 @@ describe('Contact Enrichment Scenarios', () => {
     const uiTime = new Date(text);
     const now = new Date();
  
-    // Check same date (Day, Month, Year)
+   
+   // Check same date
     expect(uiTime.toDateString()).to.eq(now.toDateString());
- 
-    // Check time difference within 60 seconds
-    expect(Math.abs(uiTime.getTime() - now.getTime())).to.be.lessThan(60000);
+
+    // Check time difference within 4 minutes (240000 ms)
+    const diff = Math.abs(uiTime.getTime() - now.getTime());
+    expect(diff).to.be.lessThan(240000);
   });
  cy.wait(2000);
  

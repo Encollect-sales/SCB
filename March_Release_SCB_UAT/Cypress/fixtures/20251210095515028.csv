@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1e1b41a18d991400b6f0569c4b0b52,Telecaller,97303,Ward,O'Kon,,3486554027,Audit and Risk,Audit Manager,Bangalore,True, | Please enter valid Last Name | Email id is required

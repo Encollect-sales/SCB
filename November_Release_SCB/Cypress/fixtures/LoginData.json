@@ -1,19 +1,19 @@
 {
   "login": {
     "Companyname": "ENCollect",
-     "email": "rahmancbm@yopmail.com",
-    "password": "123@akAK" 
+      "email": "staffautomationeight@yopmail.com",
+    "password": "123@asAS" 
   },
 
  "login2":{
    "Companyname": "ENCollect",
-     "email": "teleabc@yopmail.com",
-    "password": "123@akAK" 
+     "email": "staffautomationsix@yopmail.com",
+    "password": "123@asAS" 
 
  },
  "login3":{
    "Companyname": "ENCollect",
-  "email":"rahmancbm@yopmail.com",
-  "password":"123@akAK"
+ "email": "staffautomationten@yopmail.com",
+    "password": "123@asAS"  
  }
 }

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-10T17:44:10.116Z",
+    "end": "2026-03-10T17:45:12.586Z",
+    "duration": 62470,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ce25a1d7-a6b2-4c05-93e6-3abfdc7e7674",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AccountDetailsPageTest_242.cy.js",
+      "file": "cypress\\e2e\\tests\\AccountDetailsPageTest_242.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "202ec67b-1f4b-4aeb-808f-e8a67bc216dd",
+          "title": "Account Details - Communication history",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Account Details - TC_ID_242 - Communication history value should show",
+              "fullTitle": "Account Details - Communication history Account Details - TC_ID_242 - Communication history value should show",
+              "timedOut": null,
+              "duration": 59227,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(15000);\n  accountdetailsPage.AccountDetails242();\n  //loginPage.logout();         \n});",
+              "err": {},
+              "uuid": "99be3c44-1320-4989-ab98-b18b69642583",
+              "parentUUID": "202ec67b-1f4b-4aeb-808f-e8a67bc216dd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "99be3c44-1320-4989-ab98-b18b69642583"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 59227,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

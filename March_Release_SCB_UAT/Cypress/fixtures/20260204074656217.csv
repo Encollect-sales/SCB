@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1f389d17b7ddb0915062cdaa46be6f,Others,86122,hel@#onesa,Kshlerin,amaya@yopmail.com,8709662739,Branch Backend,Branch Manager,Bangalore,True, | Please enter valid First Name

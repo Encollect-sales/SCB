@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1eae605bd57b6012b4e0d32b87480c,FOS,54023,Melba,Carter,melba@yopmail.com,3130440768,Branch Backend,,Bangalore,True, | Designation is Required

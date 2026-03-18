@@ -1,0 +1,38 @@
+{
+  "loginPage": {
+    "companynameInput": "#login-company-name",
+    "ClickonCompanyName": ".ng-option-label",
+    "usernameInput": "#login-email",
+    "passwordInput": "#login-password",
+    "signinButton": "#login-submit-button",
+    "dashboard": ".name-width",
+    "profile": ".avatar-info",
+    "logoutButton": ":nth-child(4) > .dropdown-item"
+  },
+
+  "Allocation":{
+    "upload_field":".form-control",
+    "clickokbutton":"#confirm-dialog-okay", 
+    "cancelbutton":"#confirm-dialog-cancel",
+    "field_agency_download":"#downloadTemplateType1",
+    "telecalling_agency_download":"#downloadTemplateType2",
+    "field_agency_upload":"#allocationType1",
+    "telecalling_agency_upload":"#allocationType2",
+    "credit_card":"#account-type-cc",
+    "Allocation_agent_upload":"#AllocationType2",
+    "credit_card_allocation":"#account-type-cc",
+    "agent":"#allocationType2",
+    "telecaller":"#allocationType3",
+    "Allocation_Owner_Bulk_Upload":"a[title='Allocation Owner Bulk Upload']",
+    "Allocation_Owner_Bulk_Upload_Account_Level":"a[title='Allocation Owner Bulk Upload Account Level']",
+    "upload":"#AttachedFile",
+    "upload_btn":"#fileUploadConfirmation",
+    "ok_button":"#confirm-dialog-okay",
+    "Allocation_Owner_Bulk_Upload_Customer_Level":"a[title='Allocation Owner Bulk Upload Customer Level']",
+    "deallocation":".allocation > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(3) > a",
+    "upload_btn_new":".form-control",
+    "Agent_allocation_status":":nth-child(2) > .sub-nav-list > :nth-child(5) > a"
+  }
+ 
+
+}

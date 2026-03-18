@@ -67,7 +67,7 @@ describe('Trails - Verify validation when an invalid Agreement ID is entered. ',
 
             
                                         const downloadsFolder = Cypress.config('downloadsFolder');
-                                        const fixturesFolder = 'cypress/fixtures';
+                                        const fixturesFolder = 'fixtures';
                                         const excelFileName = 'Bulktrail.xlsx';
                                         const sourceFilePath = path.join(downloadsFolder, excelFileName);
                                         const destFilePath = path.join(fixturesFolder, excelFileName);

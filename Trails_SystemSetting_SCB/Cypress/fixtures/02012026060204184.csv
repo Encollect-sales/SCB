@@ -1,0 +1,2 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+18765,10031,yes,PTP,PTP,2027-12-22,0, ,Bulk upload,4993369002,Bernhardside,822 Cemetery Road,shvegjwf@yopmail.com,permenant,new,02012026060204184,Error,PTP amount must be greater than 0

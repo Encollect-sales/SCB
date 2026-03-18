@@ -1127,7 +1127,7 @@ class UserManagementPage {
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
-    cy.get(this.locators.clickongenerateENcollectcode).click();
+    // cy.get(this.locators.clickongenerateENcollectcode).click();
     cy.wait(2000);
     //Address Details
     cy.get(this.locators.clickonaddressdetails).click();
@@ -1187,9 +1187,9 @@ class UserManagementPage {
    cy.get('input[type="file"]').eq(0)
    .attachFile(filePath, { force: true });
    cy.wait(1000);
-   cy.get('#agencydocTypeSelect-1').select('Pan Card');
-   cy.get('#agencyaddFileBtn-1').click();
-   cy.wait(1000);
+  //  cy.get('#agencydocTypeSelect-1').select('Others');
+  //  cy.get('#agencyaddFileBtn-1').click();
+  //  cy.wait(1000);
    cy.get('input[type="file"]').eq(1)
    .attachFile(filePath1, { force: true });
    cy.wait(1000);
@@ -5497,12 +5497,12 @@ SearchAgent80() {
     cy.get(this.locators.agentEmpanelmentRequest).click();
     cy.get(this.locators.AddAgent).click();
     cy.wait(2000);
-    cy.get(this.locators.agency_supervisor_emaiID).type('darshan@gmail');
+    cy.get(':nth-child(4) > .nav-link > span').click({force:true});
     cy.wait(2000);
-    cy.get('.form-error > .ng-star-inserted').should(
-      "contain.text",
-      " Please Enter Valid E-mail ID "
-    )
+    cy.get('#emailId').type('darshan@gmail');
+    cy.wait(2000);
+    cy.contains("Enter a valid email").should("be.visible");
+    
     // cy.get(this.locators.agency_supervisor_emaiID_errmsg).then(($el) => {
     //   const text = $el.text();
     //   cy.log(text);
@@ -6583,7 +6583,7 @@ cy.get(this.locators.ClcikAgncyEnplm).click();
 cy.wait(2000);
 cy.get(this.locators.ClickAddAgency).click();
 cy.wait(2000);
-cy.get(this.locators.fillAgencyName).type("ABCDEF");
+cy.get(this.locators.fillAgencyName).type("New Name");
 cy.wait(2000);
 cy.get(this.locators.selectRecommendingOfficer).select("danny ng");
 cy.wait(2000);
@@ -6646,9 +6646,9 @@ cy.get(this.locators.accountholdername).type("AJAY KUMAR");
 cy.wait(2000);
 cy.get(this.locators.bankaccountnumber).type("1234567890");
 cy.wait(2000);
-cy.get(this.locators.bankname).select("SBI");
+cy.get(this.locators.bankname).select("BANK OF INDIA");
 cy.wait(2000);
-cy.get(this.locators.bankbranchname).select("YamunaNagar");
+cy.get(this.locators.bankbranchname).select("HALOL");
 cy.wait(2000);
 cy.get(this.locators.gstnumber).type("ADCC123456ABCD");
 cy.wait(2000);

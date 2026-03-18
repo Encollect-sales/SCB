@@ -40,7 +40,7 @@ class AllocationPage {
     cy.get(this.locators.ClickOn_Bucket).click()
     cy.wait(2000);
 
-    const expectedNumbers = ["0", "1", "2", "3", "3+"];
+    const expectedNumbers = ["0", "1", "2", "3","3+"];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -63,7 +63,7 @@ class AllocationPage {
     cy.get(this.locators.ClickOn_Branch).click()
     cy.wait(2000);
 
-    const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
+    const expectedBranches = ["Chennai Main", "Pallikaranai","Velachery"];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -111,7 +111,7 @@ class AllocationPage {
     cy.get(this.locators.ClickOn_Bucket).click()
     cy.wait(2000);
 
-    const expectedNumbers = ["0", "1", "2", "3", "3+"];
+    const expectedNumbers = ["0", "1", "2", "3","3+"];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -136,7 +136,7 @@ class AllocationPage {
     cy.get(this.locators.ClickOn_Branch).click()
     cy.wait(2000);
 
-    const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
+    const expectedBranches = ["Chennai Main", "Pallikaranai","Velachery"];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -180,7 +180,7 @@ class AllocationPage {
     cy.get(this.locators.ClickOn_Bucket).click()
     cy.wait(2000);
 
-    const expectedNumbers = ["0", "1", "2", "3", "3+"];
+    const expectedNumbers = ["0", "1", "2", "3","3+"];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -202,7 +202,7 @@ class AllocationPage {
     cy.get(this.locators.ClickOn_Branch).click()
     cy.wait(2000);
 
-    const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
+    const expectedBranches = ["Chennai Main", "Pallikaranai","Velachery"];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -250,7 +250,7 @@ class AllocationPage {
     cy.get(this.locators.ClickOn_Bucket).click()
     cy.wait(2000);
 
-    const expectedNumbers = ["0", "1", "2", "3", "3+"];
+    const expectedNumbers = ["0", "1", "2", "3","3+"];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -274,7 +274,7 @@ class AllocationPage {
     cy.get(this.locators.ClickOn_Branch).click()
     cy.wait(2000);
 
-    const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
+    const expectedBranches = ["Chennai Main", "Pallikaranai","Velachery"];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -317,7 +317,7 @@ class AllocationPage {
     cy.get(this.locators.ClickOn_Bucket).click()
     cy.wait(2000);
 
-    const expectedNumbers = ["0", "1", "2", "3", "3+"];
+    const expectedNumbers = ["0", "1", "2", "3","3+"];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -339,7 +339,7 @@ class AllocationPage {
     cy.get(this.locators.ClickOn_Branch).click()
     cy.wait(2000);
 
-    const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
+    const expectedBranches = ["Chennai Main", "Pallikaranai","Velachery"];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -387,7 +387,7 @@ class AllocationPage {
     cy.get(this.locators.ClickOn_Bucket).click()
     cy.wait(2000);
 
-    const expectedNumbers = ["0", "1", "2", "3", "3+"];
+    const expectedNumbers = ["0", "1", "2", "3","3+"];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -411,7 +411,7 @@ class AllocationPage {
     cy.get(this.locators.ClickOn_Branch).click()
     cy.wait(2000);
 
-    const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
+    const expectedBranches = ["Chennai Main", "Pallikaranai","Velachery"];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -455,7 +455,7 @@ class AllocationPage {
     cy.get(this.locators.ClickOn_Bucket).click()
     cy.wait(2000);
 
-    const expectedNumbers = ["0", "1", "2", "3", "3+"];
+    const expectedNumbers = ["0", "1", "2", "3","3+"];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -477,7 +477,7 @@ class AllocationPage {
     cy.get(this.locators.ClickOn_Branch).click()
     cy.wait(2000);
 
-    const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
+    const expectedBranches = ["Chennai Main", "Pallikaranai","Velachery"];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -526,7 +526,7 @@ class AllocationPage {
     cy.get(this.locators.ClickOn_Bucket).click()
     cy.wait(2000);
 
-    const expectedNumbers = ["0", "1", "2", "3", "3+"];
+    const expectedNumbers = ["0", "1", "2", "3","3+"];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -550,7 +550,7 @@ class AllocationPage {
     cy.get(this.locators.ClickOn_Branch).click()
     cy.wait(2000);
 
-    const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
+    const expectedBranches = ["Chennai Main", "Pallikaranai","Velachery"];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -595,7 +595,7 @@ class AllocationPage {
     cy.get(this.locators.ClickOn_Bucket).click()
     cy.wait(2000);
 
-    const expectedNumbers = ["0", "1", "2", "3", "3+"];
+    const expectedNumbers = ["0", "1", "2", "3","3+"];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -618,7 +618,7 @@ class AllocationPage {
     cy.get(this.locators.ClickOn_Branch).click()
     cy.wait(2000);
 
-    const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
+    const expectedBranches = ["Chennai Main", "Pallikaranai","Velachery"];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -663,7 +663,7 @@ class AllocationPage {
     cy.get(this.locators.ClickOn_Bucket).click()
     cy.wait(2000);
 
-    const expectedNumbers = ["0", "1", "2", "3", "3+"];
+    const expectedNumbers = ["0", "1", "2", "3","3+"];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -685,7 +685,7 @@ class AllocationPage {
     cy.get(this.locators.ClickOn_Branch).click()
     cy.wait(2000);
 
-    const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
+    const expectedBranches = ["Chennai Main", "Pallikaranai","Velachery"];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -732,7 +732,7 @@ class AllocationPage {
     cy.get(this.locators.ClickOn_Filter_Bucket).click()
     cy.wait(2000);
 
-    const expectedNumbers = ["0", "1", "2", "3", "3+"];
+    const expectedNumbers = ["0", "1", "2", "3","3+"];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -756,7 +756,7 @@ class AllocationPage {
     cy.get(this.locators.lickOn_Filter_Geo).click()
     cy.wait(2000);
 
-    const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
+    const expectedBranches = ["Chennai Main", "Pallikaranai","Velachery"];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -803,7 +803,7 @@ class AllocationPage {
     cy.get(this.locators.ClickOn_Filter_Bucket).click()
     cy.wait(2000);
 
-    const expectedNumbers = ["0", "1", "2", "3", "3+"];
+    const expectedNumbers = ["0", "1", "2", "3","3+"];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -827,7 +827,7 @@ class AllocationPage {
     cy.get(this.locators.ClickOn_Filter_Geo).click()
     cy.wait(2000);
 
-    const expectedBranches = ["Chennai Main", "Pallikaranai", "Velachery"];
+    const expectedBranches = ["Chennai Main", "Pallikaranai","Velachery"];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {

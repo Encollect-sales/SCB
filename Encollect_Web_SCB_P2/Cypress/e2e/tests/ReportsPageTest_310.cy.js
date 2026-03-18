@@ -19,7 +19,7 @@ describe('Reports - Payment Reports', () => {
         });
     });
 
-    it('Payment reports - TC_ID_310 - To check the City field drop down value', () => {
+    it('Payment reports - TC_ID_310 - To check all Mandatory field drop down value', () => {
         getTestData('loginData', 'login').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
                 reportsPage.ReportsModule();

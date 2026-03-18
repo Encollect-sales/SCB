@@ -1,0 +1,3 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009603002,2005,Yes,PTP,PTP,2025-12-26,5,,Rejected agent test,489-600-0671 x942,BTM,Bangalore,Ellis.Collier@hotmail.com,Permanent,New,02112026015044773,Error,Next action date cannot be less than current date
+DMI0009603001,2005,Yes,PTP,PTP,2025-12-26,5,,Rejected agent test,(600) 845-8026 x672,BTM,Bangalore,Keyshawn68@gmail.com,Permanent,New,02112026015044773,Error,Next action date cannot be less than current date

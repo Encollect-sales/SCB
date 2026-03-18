@@ -25,7 +25,7 @@ describe('CE_BCU_013 - Negative – Mobile number with non-numeric characters', 
 
   it('CE_BCU_013 - Upload template with non-numeric mobile number', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       // ---------------- Step 1: Login ----------------
       loginPage.login(user.Companyname, user.email, user.password);

@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1fef94665658c8338271a5a1c5ff78,FOS,59193,Steve,Hauck,steve@yopmail.com,4031372977,Branch Backend,,Bangalore,True, | Designation is Required

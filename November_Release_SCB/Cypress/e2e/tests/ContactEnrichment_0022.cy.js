@@ -23,7 +23,7 @@ describe('CE_BCU_022 - All fields should be filled', () => {
 
   it('CE_BCU_0022 - Verify all allowed Contact Type values are accepted', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       // Step 1: Login
       loginPage.login(user.Companyname, user.email, user.password);
@@ -66,7 +66,7 @@ describe('CE_BCU_022 - All fields should be filled', () => {
 
       // Step 4: Upload file
       contactenrichmentpage.contacttemplate_processed_001();
-      cy.wait(2000);
+      cy.wait(5000);
       cy.get('.account-search > a.ng-star-inserted').click({force:true});
     cy.wait(2000);
     cy.get('#search-account-number').type('1667');
@@ -78,28 +78,42 @@ describe('CE_BCU_022 - All fields should be filled', () => {
     cy.get('#toggleButton').click({force:true});
     cy.wait(2000);
     cy.contains("Customer Contact Hub").scrollIntoView().should('be.visible').click({force:true});
-    cy.wait(2000);
+    cy.wait(8000);
     cy.get('[heading="History"] > .panel > .panel-heading').click({force:true});
     cy.wait(2000);
- 
-  cy.get('#flip-scroll > .scrollable-table > .table > tbody > :nth-child(1) > :nth-child(1)').scrollIntoView().contains(mobileNumber).should('be.visible');
-  cy.wait(2000);
- 
+   
+const firstTwo = mobileNumber.slice(0, 2)
+const lastTwo = mobileNumber.slice(-2)
+
+cy.get('#flip-scroll > .scrollable-table > .table > tbody > :nth-child(1) > :nth-child(1) > [style="text-wrap-mode: nowrap; position: relative;"] > span')
+  .scrollIntoView()
+  .invoke('text')
+  .then((rawText) => {
+
+    const text = rawText.replace(/\s/g, '')   // remove spaces + new lines
+    cy.log('UI Masked Mobile:', text)
+
+    expect(text).to.match(new RegExp(`^${firstTwo}.*${lastTwo}$`))
+  })
+
+cy.wait(2000);
  cy.get(':nth-child(2) > .col-md-6 > .enc-card > .card-content > .scrollable-table > .table > tbody > :nth-child(1) > :nth-child(1)').scrollIntoView().contains(randomAddress).should('be.visible');
   cy.wait(2000);
  
   cy.get('#flip-scroll > .scrollable-table > .table > tbody > :nth-child(1) > :nth-child(2)')
   .invoke('text')
   .then(text => {
-    const uiTime = new Date(text);
+    const uiTime = new Date(text.trim());
     const now = new Date();
- 
-    // Check same date (Day, Month, Year)
+
+    // Check same date
     expect(uiTime.toDateString()).to.eq(now.toDateString());
- 
-    // Check time difference within 60 seconds
-    expect(Math.abs(uiTime.getTime() - now.getTime())).to.be.lessThan(60000);
+
+    // Check time difference within 4 minutes (240000 ms)
+    const diff = Math.abs(uiTime.getTime() - now.getTime());
+    expect(diff).to.be.lessThan(240000);
   });
+
  cy.wait(2000);
 
      

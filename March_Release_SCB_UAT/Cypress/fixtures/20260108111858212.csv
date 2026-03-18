@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1eae53830742b7c96640cbf574ffeb,Telecaller,17227,,Robel,alexandre@yopmail.com,9492287373,Branch Backend,Branch Manager,Bangalore,True, | First Name is required

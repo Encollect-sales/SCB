@@ -27,7 +27,7 @@ describe('Missing mandatory column (e.g. Agent ID)', () => {
 
  
   it('TC_ID_022 - should reject upload when mandatory column header (Agent ID) is misspelled', () => {
-     getTestData('loginData', 'login').then(user => {
+     getTestData('loginData', 'login2').then(user => {
 
       // ---------------- Login ----------------
       loginPage.login(user.Companyname, user.email, user.password);

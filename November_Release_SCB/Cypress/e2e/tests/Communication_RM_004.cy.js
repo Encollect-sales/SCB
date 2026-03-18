@@ -22,7 +22,7 @@ describe('Communication Module | Create Communication Trigger', () => {
 
   it('CFG_004 | Negative – X Value blank or non-numeric not allowed', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       loginPage.login(
         user.Companyname,

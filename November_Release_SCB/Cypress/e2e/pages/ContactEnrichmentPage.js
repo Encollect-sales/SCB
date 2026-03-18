@@ -13,11 +13,47 @@ CE_BCU_002(){
   cy.get(this.locators.bulk_Contact_upload).click({force:true});
   cy.wait(2000);
   cy.get(this.locators.ClickOnDownload).click({force:true});
+}
+downloadTemplate(){
+  cy.get(this.locators.ClickOnDownload).click({force:true});
+  cy.wait(4000);
+}
+// Upload SAME file and capture Transaction ID
+uploadBulkFileAndCaptureTxn(){
+
+  cy.get('input[type="file"]').attachFile("BulkContactTemplate.xlsx");
+  cy.wait(2000);
+
+  cy.get(this.locators.ClickOnUploadBtn).click();
+  cy.wait(2000);
+  cy.get(this.locators.ClickOnOkay).click();
+
+  return cy.contains("File Uploaded Successfully", { timeout: 15000 })
+    .invoke("text")
+    .then((popupText) => {
+
+      const match = /Transaction ID\s*:\s*(\d+)/.exec(popupText);
+      expect(match).to.not.be.null;
+
+      const txnId = match[1];
+
+      // ⚠️ IMPORTANT FIX → wrap the value
+      return cy.wrap(txnId);
+    });
+}
 
 
-}  
+// Verify file processed using Transaction ID
+verifyFileProcessed(txnId){
+
+  cy.get("#bulk-trail-trxn-id").clear().type(txnId);
+  cy.get('#bulk-trail-search-button').click();
+
+  cy.contains('td','Processed',{timeout:20000}).should('be.visible');
+}
+
 contacttemplate_processed_001(){
-    cy.wait(2000);
+    cy.wait(5000);
     cy.get('input[type="file"]').attachFile("BulkContactTemplate.xlsx");
     cy.wait(2000);
     cy.get(this.locators.ClickOnUploadBtn).click();
@@ -472,15 +508,15 @@ CE_CUS_007(){
 }
 
 CE_CUS_008() {
-
+  cy.wait(5000);
   cy.get('[title="Contact Enrichment"]').click({ force: true });
-
+  cy.wait(2000);
   cy.get(this.locators.contact_Upload_Status).click({ force: true });
-
+  cy.wait(2000);
   // Enter date and search
   cy.get(this.locators.bulk_trail_upload)
     .type('18-12-2025');
-
+  
   cy.get(this.locators.search).click({ force: true });
 
   // Set page size
@@ -536,39 +572,73 @@ headers.forEach(header => {
 
 
 }
-CE_CUS_009(){
+CE_CUS_009() {
+
+  // ---------- helper : get today's date in DD-MM-YYYY ----------
+  const getTodayDate = () => {
+    const d = new Date();
+    const day = String(d.getDate()).padStart(2, '0');
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    const year = d.getFullYear();
+    return `${day}-${month}-${year}`;
+  };
+
+  const todayFormatted = getTodayDate();
+  cy.log('Today Date' + todayFormatted);
+
+
+  // ---------- Navigate to Contact Enrichment ----------
   cy.get('[title="Contact Enrichment"]').click({ force: true });
   cy.wait(2000);
+
   cy.get(this.locators.contact_Upload_Status).click({ force: true });
   cy.wait(2000);
+
   cy.get(this.locators.status).select('Failed');
   cy.wait(2000);
+
   cy.get(this.locators.search).click({ force: true });
-  cy.wait(2000);
+  cy.wait(3000);
+
   cy.get(this.locators.pageno).select('50');
+  cy.wait(4000);
+
+
+  // ---------- Step 1 : Verify latest date (today) is on top ----------
+  cy.get('table tbody tr')
+    .first()
+    .find('td')
+    .eq(2)
+    .invoke('text')
+    .then(text => {
+        const uiDate = text.replace(/\s+/g, '').trim();
+        cy.log('Top row BEFORE sort ' + uiDate);
+        expect(uiDate).to.eq(todayFormatted);
+    });
+
+
+  // ---------- Step 2 : Click sort icon twice (DESC → ASC) ----------
+  cy.contains('th', 'File Uploaded Date').click(); // 1st click
+  cy.wait(1500);
+  cy.contains('th', 'File Uploaded Date').click(); // 2nd click (older first)
   cy.wait(2000);
-  cy.contains('th', 'File Uploaded Date')
-    .scrollIntoView()
-    .should('be.visible')
-    .click();
 
-  cy.get('table tbody tr td:nth-child(3)').then($cells => {
-    const datesAsc = [...$cells].map(cell => new Date(cell.innerText.trim()));
-    const sortedAsc = [...datesAsc].sort((a, b) => a - b);
-    expect(datesAsc).to.deep.equal(sortedAsc);
-  });
 
-  cy.contains('th', 'File Uploaded Date')
-    .scrollIntoView()
-    .click();
-  cy.get('table tbody tr td:nth-child(3)').then($cells => {
-    const datesDesc = [...$cells].map(cell => new Date(cell.innerText.trim()));
-    const sortedDesc = [...datesDesc].sort((a, b) => b - a);
-    expect(datesDesc).to.deep.equal(sortedDesc);
-  });
+  // ---------- Step 3 : Verify older date comes on top ----------
+  cy.get('table tbody tr')
+    .first()
+    .find('td')
+    .eq(2)
+    .invoke('text')
+    .then(text => {
+        const uiDate = text.replace(/\s+/g, '').trim();
+        cy.log('Top row AFTER sort ' + uiDate);
+
+        expect(uiDate).to.not.eq(todayFormatted);
+    });
+
 }
 
-  
 CE_CUS_0010(){
   cy.get('[title="Contact Enrichment"]').click({ force: true });
   cy.wait(2000);

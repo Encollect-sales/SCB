@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1e7f3b067b654d0e2e8df462392969,Telecaller,10322,Zita,Crooks,,6338516223,Audit and Risk,Audit Manager,Bangalore,True, | Email id is required

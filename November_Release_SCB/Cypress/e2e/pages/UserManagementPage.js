@@ -34,7 +34,7 @@ class UserManagementPage {
 
       const text = $option.text().trim();
 
-      // 🚫 Skip ng-select helper options
+      //  Skip ng-select helper options
       if (
         text === 'No items found' ||
         text === 'Type to search' ||
@@ -57,7 +57,7 @@ class UserManagementPage {
 
 
  RM_002_No_Approved_Users_Agency() {
-
+  cy.wait(2000);
   cy.get('[title="User Management"]').click({ force: true });
   cy.wait(2000);
 
@@ -77,7 +77,7 @@ class UserManagementPage {
 
   // Select agency WITHOUT approved users (update text after logging)
   cy.get(this.locators.agency_name_dropdown)
-    .select('agency 1');
+    .select('ABCDEF');
 
   // Open Agency Reporting Manager dropdown
   cy.get(this.locators.agency_reporting_manager)
@@ -155,18 +155,20 @@ TC_DD_021(){
 
 }
 TC_DD_022(){
+  cy.wait(3000);
   cy.get('[title="User Management"]').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.agent).click({ force: true });
   cy.wait(2000);
   cy.contains('Add Agent').click({ force: true });
   cy.wait(2000);
-  cy.get(this.locators.agency_name_dropdown).select('agency 1');
+  cy.get(this.locators.agency_name_dropdown).select('ABCDEF');
   cy.wait(2000);
-  cy.get(this.locators.agency_reporting_manager).type('Vincent Jaba - 1118');
-  cy.get('.ng-option')
-  .should('have.length', 1)
-  .and('contain.text', 'No items found');
+ cy.get(this.locators.agency_reporting_manager)
+  .type('Pranshu Raj - 1630');
+cy.get('.ng-option-label')
+  .should('not.contain', 'No items found')
+  .and('have.length.greaterThan', 0);
 
 
 

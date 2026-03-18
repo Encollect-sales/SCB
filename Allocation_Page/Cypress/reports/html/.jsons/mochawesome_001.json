@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-18T03:16:03.821Z",
+    "end": "2026-03-18T03:16:52.520Z",
+    "duration": 48699,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cc1d0f13-0fe5-42c9-9aec-1245cffd57e3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPage_010.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPage_010.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4b28ca37-d6b5-490c-a5ba-b4aca78d1aa7",
+          "title": "Allocation - Agency bulk allocation customer level - File size validation (download file - field agency, upload field - field agency)",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should show error when uploading file larger than allowed size",
+              "fullTitle": "Allocation - Agency bulk allocation customer level - File size validation (download file - field agency, upload field - field agency) Should show error when uploading file larger than allowed size",
+              "timedOut": null,
+              "duration": 42563,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login2').then(user => {\n  // Login\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(1000);\n  // Navigate to Allocation → Primary Allocation Upload\n  allocationPage.Allocation_Agency_Bulk_Allocation_Customer_Level_loan_account_010();\n});",
+              "err": {},
+              "uuid": "38669504-36c5-4cfe-96f9-6b1501bc5bdb",
+              "parentUUID": "4b28ca37-d6b5-490c-a5ba-b4aca78d1aa7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "38669504-36c5-4cfe-96f9-6b1501bc5bdb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 42563,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -5,7 +5,7 @@ import { getLocators } from '../utils/locatorUtils';
 import InsightsPage from '../pages/InsightsPage';
 
 
-describe('TC70 - Trail Gap Insights - Trail Gap Insights - check Trail Gap - Product Group & Region Matrix table', () => {
+describe('TC70 - Trail Gap Insights - Trail Gap Insights - check Trail Gap - Product Group & Country Matrix table', () => {
     let loginPage;
     let insightsPage; 
 

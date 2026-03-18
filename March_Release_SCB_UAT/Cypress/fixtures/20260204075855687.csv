@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1f38a8121dcc7d931f56484aa6ce17,Telecaller,85743,Lera,Nader,lera@yopmail.com,4693285265,,Audit Manager,Bangalore,True, | Department is Required

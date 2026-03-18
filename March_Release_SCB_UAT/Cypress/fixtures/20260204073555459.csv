@@ -1,0 +1,2 @@
+Id,IsParentAgency,ParentAgencyCode,AgencyCode,AgencyName,RecommendingOfficer,AgencyType,AgencySubType,TINNumber,PanCard,PrimaryOwnerFirstName,PrimaryOwnerLastName,RegisteredAgencyAddress,Landmark,MobileNo,EmailID,FirstAgreementDate,LastRenewalDate,ContractExpiryDate,Remarks,IsFailed,FailureReason
+3a1f389302aa17ca2b9853c1a6a9c1e1,Yes,,422796,Felipa,4408,Collections,Field Agents,12345321,PANCA9614B,hamad,P,Pune,wiki field,9553687864,felipa@yopmail.com,12-10-2022,13-10-2023,10-10-2022,Bulk upload,True, | Contract expiry date cannot be past date.

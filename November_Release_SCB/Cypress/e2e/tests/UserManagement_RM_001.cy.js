@@ -30,7 +30,7 @@ describe('Agency Reporting Manager Dropdown Validation', () => {
  
   it('RM_001 | Verify Agency Reporting Manager dropdown shows approved users of selected agency', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       loginPage.login(user.Companyname, user.email, user.password);
       cy.wait(2000);

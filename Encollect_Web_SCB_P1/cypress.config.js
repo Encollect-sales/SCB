@@ -10,8 +10,34 @@ module.exports = defineConfig({
     // testIsolation: false,
     setupNodeEvents(on, config) {
       require("cypress-mochawesome-reporter/plugin")(on);
-      
       require("@shelex/cypress-allure-plugin/writer")(on, config);
+
+      /* 🔐 LOGIN SELECTION START (ADDED CODE ONLY) */
+      const loginKey = config.env.LOGIN_KEY; // login, login2, login3...
+
+      if (loginKey) {
+        const loginFilePath = path.join(
+          config.projectRoot,
+          "cypress",
+          "fixtures",
+          "LoginData.json"
+        );
+
+        const loginData = JSON.parse(
+          fs.readFileSync(loginFilePath, "utf-8")
+        );
+
+        const user = loginData[loginKey];
+
+        if (!user) {
+          throw new Error(`No login found for ${loginKey}`);
+        }
+
+        config.env.Companyname = user.Companyname;
+        config.env.email = user.email;
+        config.env.password = user.password;
+      }
+      /* 🔐 LOGIN SELECTION END */
 
       on("task", {
         fileExists(filePath) {
@@ -38,27 +64,12 @@ module.exports = defineConfig({
         updatAgencyTemplateCell({ filePath, sheetName, data }) {
           return excelUtils.writeExcelFile(filePath, sheetName, data);
         },
-
-        updatAgencyTemplateCell({ filePath, sheetName, data }) {
-          return excelUtils.writeExcelFile(filePath, sheetName, data);
-        },
-
-        updatAgencyTemplateCell({ filePath, sheetName, data }) {
-          return excelUtils.writeExcelFile(filePath, sheetName, data);
-        },
-
         updatAgentTemplateateCell({ filePath, sheetName, data }) {
           return excelUtils.writeExcelFile(filePath, sheetName, data);
         },
-
-        updatAgencyTemplateCell({ filePath, sheetName, data }) {
-          return excelUtils.writeExcelFile(filePath, sheetName, data);
-        },
-
         updatAllocationToOwnerCell({ filePath, sheetName, data }) {
           return excelUtils.writeExcelFile(filePath, sheetName, data);
         },
-
         updatAllocationToOwner_customeridLevelCell({
           filePath,
           sheetName,
@@ -66,11 +77,9 @@ module.exports = defineConfig({
         }) {
           return excelUtils.writeExcelFile(filePath, sheetName, data);
         },
-
         updatePrimaryAgency_CustomerlevelCell({ filePath, sheetName, data }) {
           return excelUtils.writeExcelFile(filePath, sheetName, data);
         },
-
         updateENCollectSecondaryAllocationAgentCell({
           filePath,
           sheetName,
@@ -78,7 +87,6 @@ module.exports = defineConfig({
         }) {
           return excelUtils.writeExcelFile(filePath, sheetName, data);
         },
-
         updateENCollectSecondaryAllocationCollectionStaffCell({
           filePath,
           sheetName,
@@ -86,7 +94,6 @@ module.exports = defineConfig({
         }) {
           return excelUtils.writeExcelFile(filePath, sheetName, data);
         },
-
         updateENCollectSecondaryAllocationTelecallerCell({
           filePath,
           sheetName,
@@ -94,28 +101,21 @@ module.exports = defineConfig({
         }) {
           return excelUtils.writeExcelFile(filePath, sheetName, data);
         },
-
         updateUnAllocation_customeridlevelCell({ filePath, sheetName, data }) {
           return excelUtils.writeExcelFile(filePath, sheetName, data);
         },
-
         updateBulkPaymentsUploadTemplateCell({ filePath, sheetName, data }) {
           return excelUtils.writeExcelFile(filePath, sheetName, data);
         },
-
         updateAgentTemplateCell({ filePath, sheetName, data }) {
           return excelUtils.writeExcelFile(filePath, sheetName, data);
         },
-
         updateAgencyTemplateCell({ filePath, sheetName, data }) {
           return excelUtils.writeExcelFile(filePath, sheetName, data);
         },
-
         updateStaffTemplateCell({ filePath, sheetName, data }) {
           return excelUtils.writeExcelFile(filePath, sheetName, data);
         },
-
-        // 🛠 Move only `Bulktrail.xlsx` from `downloads` to `fixtures`
         moveAllDownloadsToFixtures() {
           const downloadsFolder = path.join(
             config.projectRoot,
@@ -140,13 +140,14 @@ module.exports = defineConfig({
           files.forEach((file) => {
             const sourcePath = path.join(downloadsFolder, file);
             const destPath = path.join(fixturesFolder, file);
-
             fs.renameSync(sourcePath, destPath);
           });
 
           return `Moved ${files.length} file(s) from downloads to fixtures.`;
         },
       });
+
+      return config;
     },
 
     specPattern: "cypress/e2e/tests/**/*.cy.js",
@@ -155,6 +156,6 @@ module.exports = defineConfig({
   },
 
   env: {
-    allure: true, // Enable Allure environment
+    allure: true,
   },
 });

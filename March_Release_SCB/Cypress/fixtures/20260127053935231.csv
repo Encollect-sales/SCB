@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1f1188cdc623a8cefefc4b088aaaff,Telecaller,17636,Abner,Feest,,2397127303,Audit and Risk,Audit Manager,Bangalore,True, | Email id is required

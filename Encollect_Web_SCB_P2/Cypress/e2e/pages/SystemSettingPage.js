@@ -119,7 +119,7 @@ class SystemSettingPage {
     // cy.wait(3000);
     // cy.then(() => {
     //   const transactionId = Cypress.env("transactionID");
-    //   cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+    //     cy.get('#status-transaction-id').type(transactionId.toString()); // Convert to string if needed
     // });
 
     //  cy.wait(1000);
@@ -267,7 +267,7 @@ class SystemSettingPage {
     cy.wait(3000);
     cy.then(() => {
       const transactionId = Cypress.env("transactionID");
-      cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+     cy.get('#status-transaction-id').type(transactionId.toString()); // Convert to string if needed
     });
 
      cy.wait(1000);
@@ -318,7 +318,7 @@ class SystemSettingPage {
     cy.wait(3000);
     cy.then(() => {
       const transactionId = Cypress.env("transactionID");
-      cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+        cy.get('#status-transaction-id').type(transactionId.toString()); // Convert to string if needed
     });
 
      cy.wait(1000);
@@ -393,7 +393,7 @@ class SystemSettingPage {
     cy.wait(3000);
     cy.then(() => {
       const transactionId = Cypress.env("transactionID");
-      cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+        cy.get('#status-transaction-id').type(transactionId.toString()); // Convert to string if needed
     });
 
      cy.wait(1000);
@@ -442,7 +442,7 @@ class SystemSettingPage {
     // cy.wait(3000);
     // cy.then(() => {
     //   const transactionId = Cypress.env("transactionID");
-    //   cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+    //     cy.get('#status-transaction-id').type(transactionId.toString()); // Convert to string if needed
     // });
 
     //  cy.wait(1000);
@@ -492,7 +492,7 @@ class SystemSettingPage {
     // cy.wait(3000);
     // cy.then(() => {
     //   const transactionId = Cypress.env("transactionID");
-    //   cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+    //     cy.get('#status-transaction-id').type(transactionId.toString()); // Convert to string if needed
     // });
 
     //  cy.wait(1000);
@@ -541,7 +541,7 @@ class SystemSettingPage {
     // cy.wait(3000);
     // cy.then(() => {
     //   const transactionId = Cypress.env("transactionID");
-    //   cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+    //     cy.get('#status-transaction-id').type(transactionId.toString()); // Convert to string if needed
     // });
 
     //  cy.wait(1000);
@@ -589,7 +589,7 @@ cy.contains("File Uploaded Successfully", { timeout: 10000 })
     // cy.wait(3000);
     // cy.then(() => {
     //   const transactionId = Cypress.env("transactionID");
-    //   cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+    //     cy.get('#status-transaction-id').type(transactionId.toString()); // Convert to string if needed
     // });
 
     //  cy.wait(1000);
@@ -639,7 +639,7 @@ cy.contains("File Uploaded Successfully", { timeout: 10000 })
     // cy.wait(3000);
     // cy.then(() => {
     //   const transactionId = Cypress.env("transactionID");
-    //   cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+    //     cy.get('#status-transaction-id').type(transactionId.toString()); // Convert to string if needed
     // });
 
     //  cy.wait(1000);
@@ -689,7 +689,7 @@ cy.contains("File Uploaded Successfully", { timeout: 10000 })
     // cy.wait(3000);
     // cy.then(() => {
     //   const transactionId = Cypress.env("transactionID");
-    //   cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+    //     cy.get('#status-transaction-id').type(transactionId.toString()); // Convert to string if needed
     // });
 
     //  cy.wait(1000);
@@ -805,7 +805,7 @@ SystemSettingTest_983(){
     // cy.wait(3000);
     // cy.then(() => {
     //   const transactionId = Cypress.env("transactionID");
-    //   cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+    //     cy.get('#status-transaction-id').type(transactionId.toString()); // Convert to string if needed
     // });
 
     //  cy.wait(1000);
@@ -857,7 +857,7 @@ SystemSettingTest_983(){
     // cy.wait(3000);
     // cy.then(() => {
     //   const transactionId = Cypress.env("transactionID");
-    //   cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+    //     cy.get('#status-transaction-id').type(transactionId.toString()); // Convert to string if needed
     // });
 
     //  cy.wait(1000);
@@ -907,7 +907,7 @@ SystemSettingTest_983(){
     // cy.wait(3000);
     // cy.then(() => {
     //   const transactionId = Cypress.env("transactionID");
-    //   cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+    //     cy.get('#status-transaction-id').type(transactionId.toString()); // Convert to string if needed
     // });
 
     //  cy.wait(1000);
@@ -1008,7 +1008,7 @@ SystemSettingTest_983(){
     // cy.wait(3000);
     // cy.then(() => {
     //   const transactionId = Cypress.env("transactionID");
-    //   cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+    //     cy.get('#status-transaction-id').type(transactionId.toString()); // Convert to string if needed
     // });
 
     //  cy.wait(1000);
@@ -1058,7 +1058,7 @@ SystemSettingTest_983(){
     // cy.wait(3000);
     // cy.then(() => {
     //   const transactionId = Cypress.env("transactionID");
-    //   cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+    //     cy.get('#status-transaction-id').type(transactionId.toString()); // Convert to string if needed
     // });
 
     //  cy.wait(1000);
@@ -1109,7 +1109,7 @@ SystemSettingTest_983(){
     // cy.wait(3000);
     // cy.then(() => {
     //   const transactionId = Cypress.env("transactionID");
-    //   cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+    //     cy.get('#status-transaction-id').type(transactionId.toString()); // Convert to string if needed
     // });
 
     //  cy.wait(1000);
@@ -1159,7 +1159,7 @@ SystemSettingTest_983(){
     // cy.wait(3000);
     // cy.then(() => {
     //   const transactionId = Cypress.env("transactionID");
-    //   cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+    //     cy.get('#status-transaction-id').type(transactionId.toString()); // Convert to string if needed
     // });
 
     //  cy.wait(1000);
@@ -1209,7 +1209,7 @@ SystemSettingTest_983(){
     // cy.wait(3000);
     // cy.then(() => {
     //   const transactionId = Cypress.env("transactionID");
-    //   cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+    //     cy.get('#status-transaction-id').type(transactionId.toString()); // Convert to string if needed
     // });
 
     //  cy.wait(1000);
@@ -1260,7 +1260,7 @@ SystemSettingTest_983(){
     // cy.wait(3000);
     // cy.then(() => {
     //   const transactionId = Cypress.env("transactionID");
-    //   cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+    //     cy.get('#status-transaction-id').type(transactionId.toString()); // Convert to string if needed
     // });
 
     //  cy.wait(1000);
@@ -1308,7 +1308,7 @@ SystemSettingTest_983(){
     // cy.wait(3000);
     // cy.then(() => {
     //   const transactionId = Cypress.env("transactionID");
-    //   cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+    //     cy.get('#status-transaction-id').type(transactionId.toString()); // Convert to string if needed
     // });
 
     //  cy.wait(1000);
@@ -1360,7 +1360,7 @@ SystemSettingTest_983(){
     // cy.wait(3000);
     // cy.then(() => {
     //   const transactionId = Cypress.env("transactionID");
-    //   cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+    //     cy.get('#status-transaction-id').type(transactionId.toString()); // Convert to string if needed
     // });
 
     //  cy.wait(1000);
@@ -1411,7 +1411,7 @@ SystemSettingTest_983(){
     // cy.wait(3000);
     // cy.then(() => {
     //   const transactionId = Cypress.env("transactionID");
-    //   cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+    //     cy.get('#status-transaction-id').type(transactionId.toString()); // Convert to string if needed
     // });
 
     //  cy.wait(1000);
@@ -1494,7 +1494,7 @@ SystemSettingTest_983(){
     cy.wait(3000);
     cy.then(() => {
       const transactionId = Cypress.env("transactionID");
-      cy.get(":nth-child(4) > .form-control").type(transactionId.toString()); // Convert to string if needed
+        cy.get('#status-transaction-id').type(transactionId.toString()); // Convert to string if needed
     });
 
      cy.wait(1000);

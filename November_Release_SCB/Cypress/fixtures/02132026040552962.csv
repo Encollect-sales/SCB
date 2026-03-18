@@ -1,0 +1,3 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009801001,1933,Yes,PTP,PTP,2026-12-26,53,,Failure reason validation,1-566-346-5794,BTM,Bangalore,Nicklaus60@gmail.com,Permanent,New,02132026040552962,Error,Account number does not exist in database
+DMI0009590352,1936,Yes,PTP,PTP,2026-12-26,53,,Approved agent,652-208-7016 x23521,BTM,Bangalore,Annie97@gmail.com,Permanent,New,02132026040552962,Error,Agent ID not approved

@@ -13,12 +13,12 @@ class AccountSearchPage {
     cy.wait(5000);
     cy.get(this.locators.accountsearch_btn).click({force:true});
     cy.wait(2000);
-    cy.get('.ng-select-container').click({ force: true });
-    cy.wait(1000);
-    cy.get('.ng-input > input').type('Customer Name', { force: true });
-    cy.wait(1000);
-    cy.contains('.ng-option-label', 'Customer Name').click({ force: true });
-    cy.wait(2000);
+    // cy.get('.ng-select-container').click({ force: true });
+    // cy.wait(1000);
+    // cy.get('.ng-input > input').type('Customer Name', { force: true });
+    // cy.wait(1000);
+    // cy.contains('.ng-option-label', 'Customer Name').click({ force: true });
+    // cy.wait(2000);
     cy.get(this.locators.customer_name).type("a");
     cy.wait(2000);
     cy.get(this.locators.search_btn).click({force:true});
@@ -49,12 +49,12 @@ class AccountSearchPage {
   cy.wait(5000);
   cy.get(this.locators.accountsearch_btn).click({ force: true });
   cy.wait(2000);
-  cy.get('.ng-select-container').click({ force: true });
-  cy.wait(1000);
-  cy.get('.ng-input > input').type('Customer Name', { force: true });
-  cy.wait(1000);
-  cy.contains('.ng-option-label', 'Customer Name').click({ force: true });
-  cy.wait(2000);
+  // cy.get('.ng-select-container').click({ force: true });
+  // cy.wait(1000);
+  // cy.get('.ng-input > input').type('Customer Name', { force: true });
+  // cy.wait(1000);
+  // cy.contains('.ng-option-label', 'Customer Name').click({ force: true });
+  // cy.wait(2000);
   cy.get(this.locators.customer_name).type("a");
   cy.wait(2000);
   cy.get(this.locators.search_btn).click({ force: true });
@@ -83,34 +83,26 @@ TC_59() {
   cy.wait(5000);
   cy.get(this.locators.accountsearch_btn).click({ force: true });
   cy.wait(2000);
-  cy.get('.ng-select-container').click({ force: true });
-  cy.wait(1000);
-  cy.get('.ng-input > input').type('Customer Name', { force: true });
-  cy.wait(1000);
-  cy.contains('.ng-option-label', 'Customer Name').click({ force: true });
-  cy.wait(2000);
+  // cy.get('.ng-select-container').click({ force: true });
+  // cy.wait(1000);
+  // cy.get('.ng-input > input').type('Customer Name', { force: true });
+  // cy.wait(1000);
+  // cy.contains('.ng-option-label', 'Customer Name').click({ force: true });
+  // cy.wait(2000);
   cy.get(this.locators.customer_name).type('a');
   cy.wait(2000);
   cy.get(this.locators.search_btn).click({ force: true });
 
+  // cy.wait(2000);
+  // cy.get(this.locators.pagecount_dropdown).select('50');
+  cy.get(this.locators.last_page).click({force:true});
   cy.wait(2000);
-  cy.get(this.locators.pagecount_dropdown).select('50');
-
+  cy.get(':nth-child(5) > :nth-child(4) > a > [style="text-wrap-mode: nowrap;"] > :nth-child(1)').click({force:true});
   cy.wait(2000);
-  cy.contains('button', 'Last')
-    .should('exist')
-    .click({ force: true });
-
+  cy.get(this.locators.prev_button).click({force:true});
   cy.wait(2000);
-  cy.get('#grid-table tbody tr')
-    .last()
-    .find('td:nth-child(4) a')
-    .should('exist')
-    .scrollIntoView()
-    .click({ force: true });
-
+  cy.get(this.locators.next_button).click({force:true});
   cy.wait(2000);
-
   cy.contains('button', 'Next')
     .should('exist')
     .and('be.disabled');
@@ -126,12 +118,12 @@ TC_60() {
   cy.wait(5000);
   cy.get(this.locators.accountsearch_btn).click({ force: true });
   cy.wait(2000);
-  cy.get('.ng-select-container').click({ force: true });
-  cy.wait(1000);
-  cy.get('.ng-input > input').type('Customer Name', { force: true });
-  cy.wait(1000);
-  cy.contains('.ng-option-label', 'Customer Name').click({ force: true });
-  cy.wait(2000);
+  // cy.get('.ng-select-container').click({ force: true });
+  // cy.wait(1000);
+  // cy.get('.ng-input > input').type('Customer Name', { force: true });
+  // cy.wait(1000);
+  // cy.contains('.ng-option-label', 'Customer Name').click({ force: true });
+  // cy.wait(2000);
   cy.get(this.locators.customer_name).type('a');
   cy.wait(2000);
   cy.get(this.locators.search_btn).click({ force: true });
@@ -144,7 +136,8 @@ TC_60() {
       .should('exist')
       .scrollIntoView()
       .click({ force: true });
-    //cy.get(this.locators.next_btn).click({force:true}); 
+      cy.wait(2000);
+    cy.get(this.locators.next_btn).click({force:true}); 
  
   cy.wait(2000);
   cy.contains('button', 'Previous')
@@ -162,12 +155,12 @@ TC_61() {
   cy.wait(5000);
   cy.get(this.locators.accountsearch_btn).click({ force: true });
   cy.wait(2000);
-  cy.get('.ng-select-container').click({ force: true });
-  cy.wait(1000);
-  cy.get('.ng-input > input').type('Customer Name', { force: true });
-  cy.wait(1000);
-  cy.contains('.ng-option-label', 'Customer Name').click({ force: true });
-  cy.wait(2000);
+  // cy.get('.ng-select-container').click({ force: true });
+  // cy.wait(1000);
+  // cy.get('.ng-input > input').type('Customer Name', { force: true });
+  // cy.wait(1000);
+  // cy.contains('.ng-option-label', 'Customer Name').click({ force: true });
+  // cy.wait(2000);
   cy.get(this.locators.customer_name).type('a');
   cy.wait(2000);
   cy.get(this.locators.search_btn).click({ force: true });
@@ -201,12 +194,12 @@ TC_62() {
   cy.wait(5000);
   cy.get(this.locators.accountsearch_btn).click({ force: true });
   cy.wait(2000);
-  cy.get('.ng-select-container').click({ force: true });
-  cy.wait(1000);
-  cy.get('.ng-input > input').type('Customer Name', { force: true });
-  cy.wait(1000);
-  cy.contains('.ng-option-label', 'Customer Name').click({ force: true });
-  cy.wait(2000);
+  // cy.get('.ng-select-container').click({ force: true });
+  // cy.wait(1000);
+  // cy.get('.ng-input > input').type('Customer Name', { force: true });
+  // cy.wait(1000);
+  // cy.contains('.ng-option-label', 'Customer Name').click({ force: true });
+  // cy.wait(2000);
   cy.get(this.locators.customer_name).type('a');
   cy.wait(2000);
   cy.get(this.locators.search_btn).click({ force: true });
@@ -239,14 +232,14 @@ TC_63() {
   cy.wait(5000);
   cy.get(this.locators.accountsearch_btn).click({ force: true });
   cy.wait(2000);
-  cy.contains("Bird's Eye View for the Month of December, 2025")
+  cy.contains("Bird's Eye View for the Month")
   .should('be.visible');
-    cy.get('.ng-select-container').click({ force: true });
-    cy.wait(1000);
-    cy.get('.ng-input > input').type('Customer Name', { force: true });
-    cy.wait(1000);
-    cy.contains('.ng-option-label', 'Customer Name').click({ force: true });
-    cy.wait(2000);
+    // cy.get('.ng-select-container').click({ force: true });
+    // cy.wait(1000);
+    // cy.get('.ng-input > input').type('Customer Name', { force: true });
+    // cy.wait(1000);
+    // cy.contains('.ng-option-label', 'Customer Name').click({ force: true });
+    // cy.wait(2000);
     cy.get(this.locators.customer_name).type("a");
     cy.wait(2000);
     cy.get(this.locators.search_btn).click({force:true});
@@ -278,11 +271,11 @@ cy.contains('button', 'Next')
 
 InboundCallTestPage_01(){
 
-  cy.get('.ng-arrow-wrapper').click();
-    cy.wait(1000);
-    cy.contains('span.ng-option-label', 'Customer Name').click();
-    cy.wait(1000);
-    cy.get(this.locators.customer_name).type("a" ,{ force: true });
+  // cy.get('.ng-arrow-wrapper').click();
+  //   cy.wait(1000);
+  //   cy.contains('span.ng-option-label', 'Customer Name').click();
+  //   cy.wait(1000);
+    cy.get(this.locators.customer_name).type("a");
     cy.wait(2000);
     cy.get(this.locators.search_btn).click({force:true});
     cy.wait(2000);

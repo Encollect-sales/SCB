@@ -1,2 +1,0 @@
-Id,IsParentAgency,ParentAgencyCode,AgencyCode,AgencyName,RecommendingOfficer,AgencyType,AgencySubType,TINNumber,PanCard,PrimaryOwnerFirstName,PrimaryOwnerLastName,RegisteredAgencyAddress,Landmark,MobileNo,EmailID,FirstAgreementDate,LastRenewalDate,ContractExpiryDate,Remarks,IsFailed,FailureReason
-3a1e1b17a7263a37de8df271c895151c,Yes,,570806,Reece,4408,Collections,,12345321,PANCA9614B,hamad,P,Pune,wiki field,8033490087,reece@yopmail.com,12-10-2022,13-10-2023,10-10-2032,Bulk upload,True, | Agency Type is Required

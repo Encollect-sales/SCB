@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1f38a94e74f4474c1950215be2b168,Telecaller,31963,Israel,Dibbert,israel@yopmail.com,4816799132,Audit and Branch,Audit Manager,Bangalore,True, | Department is invalid

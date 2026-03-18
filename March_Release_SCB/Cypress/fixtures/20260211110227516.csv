@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1f5d5c9cd745ebf17aa9fd52aadcec,Others,60368,hel@#onesa,Weissnat,summer@yopmail.com,3027252047,Branch Backend,Branch Manager,Bangalore,True, | Please enter valid First Name

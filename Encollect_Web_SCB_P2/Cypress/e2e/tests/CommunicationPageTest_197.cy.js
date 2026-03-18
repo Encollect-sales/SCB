@@ -4,7 +4,7 @@ import LoginPage from '../pages/LoginPage';
 import { getLocators } from '../utils/locatorUtils';
 import CommunicationPage from '../pages/CommunicationPage'
 
-describe('TC_ID_197 - Communication - Create communication Template type Letter with multiple language "Telugu and English" and allow access from account details Yes and add variable', () => {
+describe('TC_ID_197 - Communication - Create communication Template type Notification with multiple language "Telugu and English"', () => {
     let loginPage;
     let communicationPage; 
 
@@ -19,7 +19,7 @@ describe('TC_ID_197 - Communication - Create communication Template type Letter 
         });
     });
 
-    it('Communication - TC_ID_197 - Create communication Template type Letter with multiple language "Telugu and English" and allow access from account details Yes and add variable', () => {
+    it('Communication - TC_ID_197 - Create communication Template type Notification with multiple language "Telugu and English"', () => {
         getTestData('loginData', 'login').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
                 cy.wait(5000);

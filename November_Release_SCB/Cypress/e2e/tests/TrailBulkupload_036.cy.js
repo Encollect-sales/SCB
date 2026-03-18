@@ -23,7 +23,7 @@ describe('BULKTRL_036 - Display of progress indicator during long‑running proc
 
   it('Verify that a progress indicator is shown to the user during long-running bulk trail file processing until completion.', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       // ---------------- Login ----------------
       loginPage.login(user.Companyname, user.email, user.password);
@@ -34,14 +34,8 @@ describe('BULKTRL_036 - Display of progress indicator during long‑running proc
 
      // ---------------- Agent Codes ----------------
 const agentCodes = [
-  '10047',
-  '10036',
   '10031',
-  '1936',
   '1654',
-  '1591',
-  '1586',
-  '1585',
   '1584',
   '1526'
 ];
@@ -61,12 +55,12 @@ agentCodes.forEach((agentCode, index) => {
 
   const ptpAmount = faker.number.int({ min: 1, max: 100 });
 
-  excelData[`A${row}`] = `DMI00095903${50 + index}`; // Agreement ID
+  excelData[`A${row}`] = 'DMI0009590352'; // Agreement ID
   excelData[`B${row}`] = agentCode;                  // Agent Code
-  excelData[`C${row}`] = 'ss';                        // RightPartyContact
+  excelData[`C${row}`] = 'yes';                        // RightPartyContact
   excelData[`D${row}`] = 'PTP';                       // Action Code
   excelData[`E${row}`] = 'PTP';                       // Result Code
-  excelData[`F${row}`] = '2025/12/26';                // Next Action Date
+  excelData[`F${row}`] = '2026/12/26';                // Next Action Date
   excelData[`G${row}`] = ptpAmount;                   // PTP Amount
   excelData[`H${row}`] = '';                          // NextActionCode
   excelData[`I${row}`] = 'Bulk upload automation';    // Remarks

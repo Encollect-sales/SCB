@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-03-10T21:44:00.934Z",
+    "end": "2026-03-10T21:45:05.448Z",
+    "duration": 64514,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2264f277-d026-4ba5-bff7-c876ddd629bb",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\InsightsTrailGapPageTest_064.cy.js",
+      "file": "cypress\\e2e\\tests\\InsightsTrailGapPageTest_064.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5f21965f-ed60-4b53-acbd-30da2da0350a",
+          "title": "TC64 - Trail Gap Insights - Trail Gap Insights - check Attempted vs Unattempted Accounts by Region graph",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC64 - Trail Gap Insights - Trail Gap Insights - check Attempted vs Unattempted Accounts  graph",
+              "fullTitle": "TC64 - Trail Gap Insights - Trail Gap Insights - check Attempted vs Unattempted Accounts by Region graph TC64 - Trail Gap Insights - Trail Gap Insights - check Attempted vs Unattempted Accounts  graph",
+              "timedOut": null,
+              "duration": 60616,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  insightsPage.clickonTrailGapInsights064();\n  // loginPage.logout();         \n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<h3>' to be 'visible'\n\nThis element `<h3>` is not visible because its content is being clipped by one of its parent elements, which has a CSS property of overflow: `hidden`, `clip`, `scroll` or `auto`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<h3>' to be 'visible'\n\nThis element `<h3>` is not visible because its content is being clipped by one of its parent elements, which has a CSS property of overflow: `hidden`, `clip`, `scroll` or `auto`\n    at InsightsPage.clickonTrailGapInsights064 (webpack://encollect_web/./cypress/e2e/pages/InsightsPage.js:1646:60)\n    at Context.eval (webpack://encollect_web/./cypress/e2e/tests/InsightsTrailGapPageTest_064.cy.js:26:29)\n    at getRet (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "a9584c49-ff9c-4a04-adf2-06ce4e751cdd",
+              "parentUUID": "5f21965f-ed60-4b53-acbd-30da2da0350a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a9584c49-ff9c-4a04-adf2-06ce4e751cdd"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 60616,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

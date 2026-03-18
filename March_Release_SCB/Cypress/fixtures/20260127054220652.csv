@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1f118b53e243384811533e516fb1f4,Telecaller,59294,Torey,Price,torey@yopmail.com,,Branch Backend,Branch Manager,Bangalore,True, | Mobile Number is required

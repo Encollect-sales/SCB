@@ -1,2 +1,0 @@
-Id,UserType,FirstName,LastName,AgencyCode,SupervisorEmailId,DialerId,DRACertificationDate,DRATrainingDate,DRAUniqueRegistrationNumber,Department,Designation,DateOfBirth,MobileNo,EmailId,FathersName,LocalResidentialAddress,PostalCode,CollectionEmploymentDate,LastRenewalDate,AuthorizationCardExpiryDate,Remarks,IsFailed,FailureReason
-3a1eae0a2c74b4dddc3801d843363085,FOS,Hugh,Feil,13332,,435454,10-10-2020,10-10-2020,23577359447,Agency Frontend,Agent,18-10-1979,3212105525,hugh@yopmail.com,yop,bakori,765523,,19-10-2023,10-10-2033,resr,True, | Collection Employment Date is required

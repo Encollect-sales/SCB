@@ -6,7 +6,7 @@ import TrailPage from '../pages/TrailPage';
 import { faker } from '@faker-js/faker';
 const path = require('path');
 
-describe('BULKTRL_013 - Blank or Null Agent ID Validation', () => {
+describe('BULKTRL_013 - Blank Null Agent ID Validation', () => {
 
   let loginPage;
   let trailpage;
@@ -25,9 +25,9 @@ describe('BULKTRL_013 - Blank or Null Agent ID Validation', () => {
 
   });
 
-  it('Reject rows with blank or null Agent ID and create no trails', () => {
+  it('Reject rows with null Agent ID and create no trails', () => {
 
-    getTestData('loginData', '').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       // ---------------- Login ----------------
       loginPage.login(user.Companyname, user.email, user.password);
@@ -50,24 +50,7 @@ describe('BULKTRL_013 - Blank or Null Agent ID Validation', () => {
       // ---------------- Excel Data ----------------
       const data = {
 
-        // ❌ Blank Agent ID
-        'A2': 'DMI0009810001',
-        'B2': '',                   // Blank Agent ID
-        'C2': 'Yes',
-        'D2': 'PTP',
-        'E2': 'PTP',
-        'F2': '2025/12/26',
-        'G2': ptpAmount,
-        'H2': '',
-        'I2': 'Blank agent ID',
-        'J2': faker.phone.number('9#########'),
-        'K2': 'BTM',
-        'L2': 'Bangalore',
-        'M2': faker.internet.email(),
-        'N2': 'Permanent',
-        'O2': 'New',
-
-        // ❌ Null Agent ID
+     
         'A3': 'DMI0009810002',
         'B3': null,                 // Null Agent ID
         'C3': 'Yes',

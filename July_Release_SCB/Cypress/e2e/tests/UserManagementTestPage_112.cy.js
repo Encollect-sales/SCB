@@ -22,7 +22,7 @@ describe('User Management - Add Agent - User enter 100 characters and able to cr
     it('User Management - Address TC_ID_112', () => {
         getTestData('loginData', 'login').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
-                cy.wait(2000);
+                cy.wait(7000);
                 userManagementPage.UserManagementTestPage_112();            
             });
         });

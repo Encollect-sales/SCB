@@ -5,7 +5,7 @@ import { getLocators } from '../utils/locatorUtils';
 import InsightsPage from '../pages/InsightsPage';
 
 
-describe('TC170- Money Movement Insights (Agency Staff)-  select filter by Matrics and downlode report', () => {
+describe('TC170- Money Movement Insights (Agency Staff)-  select filter by Matrics and download report', () => {
     let loginPage;
     let insightsPage; 
 
@@ -20,7 +20,7 @@ describe('TC170- Money Movement Insights (Agency Staff)-  select filter by Matri
         });
     });
 
-    it('TC170 -Money Movement Insights (Agency Staff)-   select filter by Matrics and downlode report', () => {
+    it('TC170 -Money Movement Insights (Agency Staff)-   select filter by Matrics and download report', () => {
         getTestData('loginData', 'login').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
                 insightsPage.clickonmoneymovementingistspage170();

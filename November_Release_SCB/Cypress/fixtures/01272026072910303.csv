@@ -1,0 +1,2 @@
+AgreementId,AddressType,Address,MobileNumber,WorkRequestId,UploadStatus,ErrorMessage
+1667,InvalidType,72501 Steve Circles,9172514455,01272026072910303,Error,AddressType is invalid

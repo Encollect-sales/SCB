@@ -1,0 +1,3 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009801001,1933,Yes,PTP,PTP,2026-12-26,48,,Failure reason validation,3781724053,BTM,Bangalore,Christy7@hotmail.com,Permanent,New,02132026044446891,Error,Account number does not exist in database
+LXMUM33020211742684,1936,Yes,PTP,PTP,2026-12-26,48,,Approved agent,6438282049,BTM,Bangalore,Jefferey_Koelpin10@gmail.com,Permanent,New,02132026044446891,Error,Agent ID not approved

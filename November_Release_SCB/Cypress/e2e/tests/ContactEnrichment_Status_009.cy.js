@@ -30,7 +30,7 @@ describe('Contact Enrichment Scenarios', () => {
   
   it('TC_ID_004 - Negative – No results found for search criteria', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       loginPage.login(user.Companyname, user.email, user.password);
       cy.wait(2000);

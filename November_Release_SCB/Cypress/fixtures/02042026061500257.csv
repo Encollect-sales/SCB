@@ -1,0 +1,5 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009590352,1936,Yes,PTP,PTP,2025-12-26,66,,Approved agent,783-833-6696,BTM,Bangalore,Ramona.Wyman96@hotmail.com,Permanent,New,02042026061500257,Error,Next action date cannot be less than current date
+DMI0009801001,1515,Yes,PTP,PTP,2025-12-26,66,,Disabled agent,864-310-8802 x984,HSR,Bangalore,Syble69@gmail.com,Permanent,New,02042026061500257,Error,Next action date cannot be less than current date
+DMI9999999999,999999,Yes,PTP,PTP,2025-12-26,66,,Invalid agent ID,(834) 870-7091 x98661,Whitefield,Bangalore,Hailie_Ferry@gmail.com,Permanent,New,02042026061500257,Error,Next action date cannot be less than current date
+DMI0009810001,,Yes,PTP,PTP,2025-12-26,66,,Blank agent ID,(669) 541-2653 x921,Indiranagar,Bangalore,Lavern91@gmail.com,Permanent,New,02042026061500257,Error,Next action date cannot be less than current date

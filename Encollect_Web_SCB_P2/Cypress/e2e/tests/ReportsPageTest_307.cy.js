@@ -20,7 +20,7 @@ describe('Reports - Payment Reports', () => {
         });
     });
 
-    it('Payment reports - TC_ID_307 - To check the Zone field drop down value', () => {
+    it('Payment reports - TC_ID_307 - To check the Branch field drop down value', () => {
         getTestData('loginData', 'login').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
                 reportsPage.ReportsModule();

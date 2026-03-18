@@ -21,12 +21,30 @@
     "ClickOnUploadBtn":"#bulk-trail-upload-button",
     "ClickOnOkay":"#confirm-dialog-okay",
     "ClickOnStatusSearchBtn":"#bulk-trail-search-button",
-    "cancelbutton":"#confirm-dialog-cancel"
+    "cancelbutton":"#confirm-dialog-cancel",
+    "firstpage":".pagination-first",
+    "lastpage":".pagination-last > .page-link"
 
     
 
 
     
+  },
+  "SystemSettings":{
+    "Account_upload":".system-settings > :nth-child(2) > :nth-child(1) > a.ng-star-inserted",
+    "Account_upload_bulk":".system-settings > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(1) > a",
+    "cc_download":"#radio-download-template-card",
+    "cc_upload":"#radio-upload-template-card",
+    "loan_download":"#radio-download-template-account",
+    "clickokbutton":"#confirm-dialog-okay",
+    "cancelbutton":"#confirm-dialog-cancel",
+    "masters_upload":".system-settings > :nth-child(2) > :nth-child(4) > a.ng-star-inserted",
+    "bulk_upload_master":".system-settings > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(1) > a",
+    "download_template_bank_master":"#download-template-type",
+    "upload_template_bank_master":"#upload-template-type",
+    "download_template_button":"#download-template-button",
+    "upload":"#upload-template-file",
+    "cancel":"#confirm-dialog-cancel"
   }
  
  

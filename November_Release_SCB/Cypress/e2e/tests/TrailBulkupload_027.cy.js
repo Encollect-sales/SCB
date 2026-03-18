@@ -30,7 +30,7 @@ describe('Same valid file processed twice', () => {
   // =====================================================
   it('TC_ID_027 - Verify system behavior when the same valid bulk trail file is uploaded and processed twice', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       // ---------------- Login ----------------
       loginPage.login(user.Companyname, user.email, user.password);
@@ -59,12 +59,12 @@ describe('Same valid file processed twice', () => {
 
       // ---------------- Excel Cell Data ----------------
       const data = {
-        'A2': 'DMI0009590352',      // Agreement id
-        'B2': '1936',               // Agent ENCollect Code
-        'C2': 'ss',                 // RightPartyContact
+        'A2': 'LXBNG28019200749726',      // Agreement id
+        'B2': '1667',               // Agent ENCollect Code
+        'C2': 'yes',                 // RightPartyContact
         'D2': 'PTP',                // Action Code
         'E2': 'PTP',                // ResultCode
-        'F2': '2025/12/26',         // Next Action Date
+        'F2': '2026/12/26',         // Next Action Date
         'G2': ptpAmount,            // ✅ Random PTP Amount (1–100)
         'H2': '',                   // NextActionCode
         'I2': 'Bulk upload Aug29',  // Remarks

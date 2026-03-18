@@ -22,7 +22,7 @@ describe('Settlement - Open settlement - User should see "View Settlement" and "
     it('Settlement - TC_ID_001', () => {
         getTestData('loginData', 'login3').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
-                cy.wait(2000);
+                cy.wait(7000);
                 settlementpage.SettlementTestPage_001();            
             });
         });

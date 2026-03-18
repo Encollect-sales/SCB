@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-10T21:13:05.833Z",
+    "end": "2026-03-10T21:14:01.260Z",
+    "duration": 55427,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a6a54fde-97a7-4192-8826-c16fc64a55ce",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\InsightsSecondaryAllocationPageTest_033.cy.js",
+      "file": "cypress\\e2e\\tests\\InsightsSecondaryAllocationPageTest_033.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "075044f4-ad8a-4ab9-819b-f1d452f53baa",
+          "title": "TC_033 - Insights - Secondary Allocation Insights - Overview - check Top 10 Tele-Calling Secondary by Accounts Allocated graph and click on Bottom",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC_033 - Insights - Secondary Allocation Insights - Overview - check Top 10 Tele-Calling Secondary by Accounts Allocated graph and click on Bottom",
+              "fullTitle": "TC_033 - Insights - Secondary Allocation Insights - Overview - check Top 10 Tele-Calling Secondary by Accounts Allocated graph and click on Bottom TC_033 - Insights - Secondary Allocation Insights - Overview - check Top 10 Tele-Calling Secondary by Accounts Allocated graph and click on Bottom",
+              "timedOut": null,
+              "duration": 50795,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  insightsPage.clickonSecondaryInsights033();\n  // loginPage.logout();         \n});",
+              "err": {},
+              "uuid": "5565d1fd-6feb-481c-9188-1c147474e5c3",
+              "parentUUID": "075044f4-ad8a-4ab9-819b-f1d452f53baa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5565d1fd-6feb-481c-9188-1c147474e5c3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 50795,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

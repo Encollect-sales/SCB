@@ -1,0 +1,3 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+18765,10031,yes,PTP,PTP,2023-01-01,109, ,Bulk upload,8944992896,Plantation,81650 Devonshire Road,yregjavz@yopmail.com,permenant,new,02012026055927819,Error,Next action date cannot be less than current date
+18765,10031,yes,PTP,PTP,2023-01-01,109, ,Bulk upload,8944992896,Plantation,81650 Devonshire Road,yregjavz@yopmail.com,permenant,new,02012026055927819,Error,Next action date cannot be less than current date

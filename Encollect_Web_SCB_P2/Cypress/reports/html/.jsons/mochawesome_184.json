@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-03-10T21:08:48.096Z",
+    "end": "2026-03-10T21:09:51.059Z",
+    "duration": 62963,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "12fe0843-8d51-40b4-a7ab-6c6da15c84dd",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\InsightsSecondaryAllocationPageTest_029.cy.js",
+      "file": "cypress\\e2e\\tests\\InsightsSecondaryAllocationPageTest_029.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "22241288-1901-43f1-bd2b-6c9278ee3f13",
+          "title": "TC_029 - Insights - Secondary Allocation Insights - Overview - Click Accounts by Allocation Status graph and check the filter",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC_029 - Insights - Secondary Allocation Insights - Overview - Click Accounts by Allocation Status graph and check the filter",
+              "fullTitle": "TC_029 - Insights - Secondary Allocation Insights - Overview - Click Accounts by Allocation Status graph and check the filter TC_029 - Insights - Secondary Allocation Insights - Overview - Click Accounts by Allocation Status graph and check the filter",
+              "timedOut": null,
+              "duration": 58354,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  insightsPage.clickonSecondaryInsights029();\n  // loginPage.logout();         \n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `body > app-root:nth-child(1) > app-menu-layout:nth-child(2) > main:nth-child(1) > section:nth-child(3) > div:nth-child(2) > app-secondary-allocation-insight:nth-child(2) > div:nth-child(1) > div:nth-child(1) > tabset:nth-child(4) > div:nth-child(2) > tab:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > svg:nth-child(1) > g:nth-child(1) > g:nth-child(1) > rect:nth-child(25)`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `body > app-root:nth-child(1) > app-menu-layout:nth-child(2) > main:nth-child(1) > section:nth-child(3) > div:nth-child(2) > app-secondary-allocation-insight:nth-child(2) > div:nth-child(1) > div:nth-child(1) > tabset:nth-child(4) > div:nth-child(2) > tab:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > svg:nth-child(1) > g:nth-child(1) > g:nth-child(1) > rect:nth-child(25)`, but never found it.\n    at InsightsPage.clickonSecondaryInsights029 (webpack://encollect_web/./cypress/e2e/pages/InsightsPage.js:786:7)\n    at Context.eval (webpack://encollect_web/./cypress/e2e/tests/InsightsSecondaryAllocationPageTest_029.cy.js:26:29)\n    at getRet (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "00a85122-490c-4659-9948-0217bdca097e",
+              "parentUUID": "22241288-1901-43f1-bd2b-6c9278ee3f13",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "00a85122-490c-4659-9948-0217bdca097e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 58354,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

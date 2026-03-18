@@ -23,7 +23,7 @@ describe('BULKTRL_010 - Failure Reason Text Validation (Mixed Entries)', () => {
 
   it('Validate exact failure reason text for non-approved users with mixed file', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       // ---------------- Login ----------------
       loginPage.login(user.Companyname, user.email, user.password);
@@ -41,20 +41,20 @@ describe('BULKTRL_010 - Failure Reason Text Validation (Mixed Entries)', () => {
 
       // ---------------- Faker Data ----------------
       const ptpAmount = faker.number.int({ min: 1, max: 100 });
-      const phone1 = faker.phone.number('9#########');
-      const phone2 = faker.phone.number('9#########');
+      const phone1 = faker.string.numeric(10);
+      const phone2 = faker.string.numeric(10);
       const email1 = faker.internet.email();
       const email2 = faker.internet.email();
 
       // ---------------- Excel Data (BOTH Entries) ----------------
       const data = {
         // ✅ Approved Agent
-        'A2': 'DMI0009590352',
+        'A2': 'LXMUM33020211742684',
         'B2': '1936',               // Approved
         'C2': 'Yes',
         'D2': 'PTP',
         'E2': 'PTP',
-        'F2': '2025/12/26',
+        'F2': '2026/12/26',
         'G2': ptpAmount,
         'H2': '',
         'I2': 'Approved agent',
@@ -71,7 +71,7 @@ describe('BULKTRL_010 - Failure Reason Text Validation (Mixed Entries)', () => {
         'C3': 'Yes',
         'D3': 'PTP',
         'E3': 'PTP',
-        'F3': '2025/12/26',
+        'F3': '2026/12/26',
         'G3': ptpAmount,
         'H3': '',
         'I3': 'Failure reason validation',

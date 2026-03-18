@@ -1,0 +1,3 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009810001,,Yes,PTP,PTP,2025-12-26,59,,Blank agent ID,488-637-2019,BTM,Bangalore,Carmine_Leffler@hotmail.com,Permanent,New,02112026010951548,Error,Next action date cannot be less than current date
+DMI0009810002,,Yes,PTP,PTP,2025-12-26,59,,Null agent ID,483-985-3794 x97381,HSR,Bangalore,Rhianna.Considine@yahoo.com,Permanent,New,02112026010951548,Error,Next action date cannot be less than current date

@@ -23,7 +23,7 @@ describe('CE_BCU_028 - Mobile Number exceeds allowed length', () => {
 
   it('CE_BCU_028 - Reject mobile number exceeding max length', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       // Step 1: Login
       loginPage.login(user.Companyname, user.email, user.password);

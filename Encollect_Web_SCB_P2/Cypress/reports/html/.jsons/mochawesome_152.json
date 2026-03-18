@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-03-10T20:36:14.177Z",
+    "end": "2026-03-10T20:37:05.762Z",
+    "duration": 51585,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "60f8c6c7-e206-4e8a-a734-8a5772240ace",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\DashboardPageTestBOBtoSCB_1517.cy.js",
+      "file": "cypress\\e2e\\tests\\DashboardPageTestBOBtoSCB_1517.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "11450897-ca96-4091-8445-a985b13cd259",
+          "title": "Dashboard - Account Dashboard Screen",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Dashboard - TC_ID_1517 - Last successful login date and time + Last failed login date and time to be shown in encollect web application when ever user try to log in.",
+              "fullTitle": "Dashboard - Account Dashboard Screen Dashboard - TC_ID_1517 - Last successful login date and time + Last failed login date and time to be shown in encollect web application when ever user try to log in.",
+              "timedOut": null,
+              "duration": 47974,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(1000);\n  //dashboardPage.CreditCardRadioBtn();\n  dashboardPage.Dashboard1517();\n  // loginPage.logout();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[role=\"alert\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[role=\"alert\"]`, but never found it.\n    at DashboardPage.Dashboard1517 (webpack://encollect_web/./cypress/e2e/pages/DashboardPage.js:55:29)\n    at Context.eval (webpack://encollect_web/./cypress/e2e/tests/DashboardPageTestBOBtoSCB_1517.cy.js:29:30)\n    at getRet (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "c75ec101-e805-4f7f-84a8-705f24d9da20",
+              "parentUUID": "11450897-ca96-4091-8445-a985b13cd259",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "c75ec101-e805-4f7f-84a8-705f24d9da20"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 47974,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

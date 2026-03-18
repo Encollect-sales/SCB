@@ -32,7 +32,7 @@ describe('Contact Enrichment Scenarios', () => {
   // =====================================================
   it('TC_ID_001 - Download template, update Excel and upload (B2 = Office)', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       loginPage.login(user.Companyname, user.email, user.password);
       cy.wait(2000);
@@ -57,7 +57,7 @@ describe('Contact Enrichment Scenarios', () => {
      
       // ---------------- Excel Cell Data ----------------
       const data = {
-        'A2': '14007',
+        'A2': '1667',
         'B2': 'Office',           // ✅ As requested
         'C2': randomAddress,
         'D2': phoneNumber

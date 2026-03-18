@@ -30,7 +30,7 @@ describe('Contact Enrichment Scenarios', () => {
   // =====================================================
   it('TC_ID_0045 - Positive – Contact Type field visible for enriched contacts (web)', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       loginPage.login(user.Companyname, user.email, user.password);
       cy.wait(2000);
@@ -152,30 +152,47 @@ describe('Contact Enrichment Scenarios', () => {
             cy.get('[heading="History"] .panel-collapse').should('have.class', 'in');
             cy.wait(1000);
 
-            // Verify Phone Number (Column 1)
-            cy.log('Verifying Phone Number in History');
-            cy.get('#flip-scroll > .scrollable-table > .table > tbody > :nth-child(1) > :nth-child(1)')
-              .scrollIntoView()
-              .should('be.visible')
-              .invoke('text')
-              .then((text) => {
-                expect(text.trim()).to.include(uploadedPhone);
-                cy.log(`PASS: Phone number verified: ${uploadedPhone}`);
-              });
-            cy.wait(1000);
+           // Verify Masked Phone Number (only first 2 & last 2 visible)
+cy.log('Verifying Masked Phone Number in History');
 
-            // Verify Contact Type (Column 3)
-            cy.log(`Verifying Contact Type in History: "${uploadedContactType}"`);
-            cy.get('#flip-scroll > .scrollable-table > .table > tbody > :nth-child(1) > :nth-child(3)')
-              .scrollIntoView()
-              .should('be.visible')
-              .invoke('text')
-              .then((text) => {
-                expect(text.trim()).to.include(uploadedContactType);
-                cy.log(`PASS: Contact Type verified: ${uploadedContactType}`);
-                cy.log('PASS: Contact Type field is visible as a separate column');
-              });
-            cy.wait(1000);
+const firstTwo = uploadedPhone.slice(0, 2);
+const lastTwo = uploadedPhone.slice(-2);
+
+cy.get('#flip-scroll > .scrollable-table > .table > tbody > :nth-child(1) > :nth-child(1)')
+  .scrollIntoView()
+  .should('be.visible')
+  .invoke('text')
+  .then((text) => {
+
+    const phoneUI = text.replace(/\s/g, '');   // remove spaces & new lines
+    cy.log(`Phone from UI: ${phoneUI}`);
+
+    // Regex: starts with firstTwo and ends with lastTwo
+    const maskedRegex = new RegExp(`^${firstTwo}.*${lastTwo}$`);
+
+    expect(phoneUI).to.match(maskedRegex);
+
+    cy.log(`PASS: Masked phone verified → ${firstTwo}XXXXXX${lastTwo}`);
+  });
+
+
+           // Verify Contact Type (Column 3)
+cy.log(`Verifying Contact Type in History: "${uploadedContactType}"`);
+
+cy.get('#flip-scroll > .scrollable-table > .table > tbody > :nth-child(1) > :nth-child(3)')
+  .should('be.visible')
+  .invoke('text')
+  .then((text) => {
+
+    const uiText = text.replace(/\s+/g, ' ').trim(); // remove extra spaces/new lines
+
+    expect(uiText).to.contain(uploadedContactType);
+
+    cy.log(`PASS: Contact Type verified: ${uploadedContactType}`);
+    cy.log('PASS: Contact Type column is displayed separately');
+  });
+
+            cy.wait(5000);
 
             // Validate Address
             cy.log('Verifying Address in History');

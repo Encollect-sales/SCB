@@ -32,7 +32,7 @@ describe('User Management - Pan Card -Open profile, modify PAN value, and save a
           it('User Management -Pan Card- TC_ID_02', () => {
         getTestData('loginData', 'login1').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
-                cy.wait(2000);
+                cy.wait(7000);
                 userManagementPage.PanCardTestPage_02a();            
             });
         });

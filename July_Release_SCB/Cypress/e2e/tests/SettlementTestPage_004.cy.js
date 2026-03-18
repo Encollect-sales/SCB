@@ -22,7 +22,7 @@ describe('Settlement - Under "My Action Queue" > "View My Settlement", the "Curr
     it('Settlement - TC_ID_004', () => {
         getTestData('loginData', 'login3').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
-                cy.wait(2000);
+                cy.wait(7000);
                 settlementpage.SettlementTestPage_004();            
             });
         });

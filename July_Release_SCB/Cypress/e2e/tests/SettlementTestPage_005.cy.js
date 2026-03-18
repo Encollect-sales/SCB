@@ -22,7 +22,7 @@ describe('Settlement - When a settlement is approved or recommended, a celebrati
     it('Settlement - TC_ID_005', () => {
         getTestData('loginData', 'login4').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
-                cy.wait(2000);
+                cy.wait(7000);
                 settlementpage.SettlementTestPage_005();            
             });
         });

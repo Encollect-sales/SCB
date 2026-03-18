@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-10T20:09:39.220Z",
+    "end": "2026-03-10T20:11:03.768Z",
+    "duration": 84548,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6c23b462-104b-474a-8759-726d166a30c0",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\CommunicationPageTest_188.cy.js",
+      "file": "cypress\\e2e\\tests\\CommunicationPageTest_188.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "39365a5c-1548-414e-8875-3f483bbc6c4e",
+          "title": "Communication - TC_ID_188 - Communication - Create communication Template type Letter with multiple language \"Kannada and English\" and allow access from account details Yes",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Communication - TC_ID_188 - Communication - Create communication Template type Letter with multiple language \"Kannada and English\" and allow access from account details Yes",
+              "fullTitle": "Communication - TC_ID_188 - Communication - Create communication Template type Letter with multiple language \"Kannada and English\" and allow access from account details Yes Communication - TC_ID_188 - Communication - Create communication Template type Letter with multiple language \"Kannada and English\" and allow access from account details Yes",
+              "timedOut": null,
+              "duration": 74951,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(5000);\n  communicationPage.communicationModule();\n  communicationPage.CreateCommunicationTemplate188();\n  //loginPage.logout();\n});",
+              "err": {},
+              "uuid": "2c4d27a7-f825-4555-a480-44ff0a28f30c",
+              "parentUUID": "39365a5c-1548-414e-8875-3f483bbc6c4e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2c4d27a7-f825-4555-a480-44ff0a28f30c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 74951,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

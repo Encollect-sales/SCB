@@ -4,7 +4,7 @@ import LoginPage from '../pages/LoginPage';
 import { getLocators } from '../utils/locatorUtils';
 import CommunicationPage from '../pages/CommunicationPage'
 
-describe('Communication - TC_ID_200 - Communication - Create communication Template type Letter with multiple language "Kannada and English" and allow access from account details Yes and add variable in both language', () => {
+describe('Communication - TC_ID_200 - Communication - Create communication Template type Notification with multiple language "Kannada and English" and allow access from account details Yes and add variable in both language', () => {
     let loginPage;
     let communicationPage; 
 

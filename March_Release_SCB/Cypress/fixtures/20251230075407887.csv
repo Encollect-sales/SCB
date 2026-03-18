@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1e7f3ebd8c7594b08eeaf44ff3f589,Telecaller,30963,Vernice,Reinger,vernice@yopmail.com,32!53@0049,Branch Backend,Branch Manager,Bangalore,True, | Mobile Number Only numbers are allowed

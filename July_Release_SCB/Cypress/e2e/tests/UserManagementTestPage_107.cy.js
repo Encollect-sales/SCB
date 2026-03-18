@@ -22,7 +22,7 @@ describe('User Management - Add Agency - User try to enter a 300 characters but 
     it('User Management - Address TC_ID_107', () => {
         getTestData('loginData', 'login').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
-                cy.wait(2000);
+                cy.wait(7000);
                 userManagementPage.UserManagementTestPage_107();            
             });
         });

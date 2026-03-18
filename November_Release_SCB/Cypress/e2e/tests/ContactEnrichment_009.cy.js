@@ -25,7 +25,7 @@ describe('CE_BCU_009 - Missing Agreement ID validation', () => {
 
   it('CE_BCU_009 - Upload file with blank Agreement ID in some rows', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       // Step 1: Login
       loginPage.login(user.Companyname, user.email, user.password);

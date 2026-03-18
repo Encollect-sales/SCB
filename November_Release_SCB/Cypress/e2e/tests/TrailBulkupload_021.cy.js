@@ -28,7 +28,7 @@ describe('Missing mandatory column (e.g. Agent ID)', () => {
  
   it('TC_ID_021 - should reject upload when mandatory column Agent ID is missing', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       // ---------------- Login ----------------
       loginPage.login(user.Companyname, user.email, user.password);
@@ -58,11 +58,11 @@ describe('Missing mandatory column (e.g. Agent ID)', () => {
       // ---------------- Excel Cell Data ----------------
       const data = {
         'A2': 'DMI0009590352',      // Agreement id
-        'B2': '',               // Agent ENCollect Code
-        'C2': 'ss',                 // RightPartyContact
+        'B2': '1667',               // Agent ENCollect Code
+        'C2': 'yes',                 // RightPartyContact
         'D2': 'PTP',                // Action Code
         'E2': 'PTP',                // ResultCode
-        'F2': '2025/12/26',         // Next Action Date
+        'F2': '2026/12/26',         // Next Action Date
         'G2': ptpAmount,            // ✅ Random PTP Amount (1–100)
         'H2': '',                   // NextActionCode
         'I2': 'Bulk upload Aug29',  // Remarks
@@ -92,7 +92,7 @@ describe('Missing mandatory column (e.g. Agent ID)', () => {
       cy.task('moveAllDownloadsToFixtures');
 
       // ---------------- Upload Updated Excel ----------------
-      trailpage.bulkupload_approved_001();
+      trailpage.bulkupload_failed_003();
 
     });
 

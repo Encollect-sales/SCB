@@ -22,7 +22,7 @@ describe('ScopeofWork -  Login as bank staff and navigate to Allocation module a
     it('ScopeofWork- TC_ID_001', () => {
         getTestData('loginData', 'login').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
-                cy.wait(2000);
+                cy.wait(7000);
                 scopeofworkpage.ScopeofWorkTestPage_001();            
             });
         });

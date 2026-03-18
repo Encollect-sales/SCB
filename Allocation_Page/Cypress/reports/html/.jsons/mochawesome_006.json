@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-18T03:20:43.088Z",
+    "end": "2026-03-18T03:21:24.859Z",
+    "duration": 41771,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "23dd1334-4387-47e9-9818-4241e07c8153",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPage_0104.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPage_0104.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e0c78dfb-475c-4804-b266-3b851ee756f6",
+          "title": "Agent Bulk Allocation - Account Level Loan (Telecaller → Agent) - Special character filename validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should show error when filename contains special characters",
+              "fullTitle": "Agent Bulk Allocation - Account Level Loan (Telecaller → Agent) - Special character filename validation Should show error when filename contains special characters",
+              "timedOut": null,
+              "duration": 36219,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login2').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.Agent_Bulk_allocation_account_level_loan_account_telecaller_agent_0104();\n});",
+              "err": {},
+              "uuid": "5ccd7531-e35f-4840-95b5-f4bc7389d959",
+              "parentUUID": "e0c78dfb-475c-4804-b266-3b851ee756f6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5ccd7531-e35f-4840-95b5-f4bc7389d959"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 36219,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

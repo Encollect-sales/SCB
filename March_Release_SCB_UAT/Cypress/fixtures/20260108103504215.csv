@@ -1,2 +1,0 @@
-Id,IsParentAgency,ParentAgencyCode,AgencyCode,AgencyName,RecommendingOfficer,AgencyType,AgencySubType,TINNumber,PanCard,PrimaryOwnerFirstName,PrimaryOwnerLastName,RegisteredAgencyAddress,Landmark,MobileNo,EmailID,FirstAgreementDate,LastRenewalDate,ContractExpiryDate,Remarks,IsFailed,FailureReason
-3a1eae2b51e7c1380f339a83381935fc,Yes,,126204,Zula,4408,Collections,Field Agents,12345321,,hamad,P,Pune,wiki field,2163480390,zula@yopmail.com,12-10-2022,13-10-2023,10-10-2032,Bulk upload,True, | PAN is required Required

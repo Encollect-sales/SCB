@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-10T18:13:34.657Z",
+    "end": "2026-03-10T18:14:24.753Z",
+    "duration": 50096,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e0e21468-b0aa-4e31-88b1-699329a7061a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocatedVsAchievedinsightsPageTest_103.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocatedVsAchievedinsightsPageTest_103.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "06cbfcaa-35eb-42d2-9677-42544f131063",
+          "title": "TC103- Allocated vs Achieved Insights-Allocated vs Achieved Insights  - click on Geography & Product Analysis ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC98 - Allocated vs Achieved Insights-Allocated vs Achieved Insights  -click on Geography & Product Analysis",
+              "fullTitle": "TC103- Allocated vs Achieved Insights-Allocated vs Achieved Insights  - click on Geography & Product Analysis  TC98 - Allocated vs Achieved Insights-Allocated vs Achieved Insights  -click on Geography & Product Analysis",
+              "timedOut": null,
+              "duration": 43822,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  insightsPage.clickonAllocatedVsAchived103();\n  // loginPage.logout();         \n});",
+              "err": {},
+              "uuid": "86185eaf-f379-4961-9506-8ce7024aa280",
+              "parentUUID": "06cbfcaa-35eb-42d2-9677-42544f131063",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "86185eaf-f379-4961-9506-8ce7024aa280"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 43822,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

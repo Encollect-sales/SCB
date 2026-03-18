@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1f1184f0c9ba55f2075e12a0de60da,Telecaller,68195,,Yundt,toy@yopmail.com,2019670041,Branch Backend,Branch Manager,Bangalore,True, | First Name is required | Email Id already exists

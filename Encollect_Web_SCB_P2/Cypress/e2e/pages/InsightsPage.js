@@ -8,7 +8,7 @@ class InsightsPage {
   }
 
   clickonInsights001() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(5000);
@@ -17,7 +17,7 @@ class InsightsPage {
   }
 
   clickonInsights002() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(5000);
@@ -38,21 +38,23 @@ class InsightsPage {
   }
 
   clickonInsights003() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(8000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(10000);
-    cy.get('.inner-container').scrollTo('0%', '50%');
-    cy.wait(1000);
-    cy.get('g.arc-group path.arc[fill="rgb(213, 72, 72)"]').click({ force: true });
+   cy.get('#allocationStatusChart')
+  .find('svg g .arc')
+  .first()
+  .click({ force: true });
     cy.wait(1500);
     cy.get('.toast-title').contains('All charts are cross filtered by').should('be.visible');
-    cy.get('.toast-message').contains('Status : ACCOUNT NOT ALLOCATED').should('be.visible');
+    cy.get('.toast-message').contains('Status : ACCOUNT ALLOCATED').should('be.visible');
     cy.wait(1000);
   }
 
   clickonInsights004() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(10000);
@@ -77,7 +79,7 @@ class InsightsPage {
   }
 
   clickonInsights006() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(10000);
@@ -90,7 +92,7 @@ class InsightsPage {
   }
 
   clickonInsights007() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(10000);
@@ -102,7 +104,7 @@ class InsightsPage {
   }
 
   clickonInsights008() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(10000);
@@ -114,7 +116,7 @@ class InsightsPage {
   }
 
   clickonInsights009() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(10000);
@@ -130,7 +132,7 @@ class InsightsPage {
   }
 
   clickonInsights010() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(10000);
@@ -144,7 +146,7 @@ class InsightsPage {
   }
 
   clickonInsights011() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(10000);
@@ -184,7 +186,7 @@ class InsightsPage {
   }
 
   clickonInsights012() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(10000);
@@ -207,7 +209,7 @@ class InsightsPage {
   }
 
   clickonInsights013() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(10000);
@@ -238,7 +240,7 @@ class InsightsPage {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-      cy.get("body > app-root:nth-child(1) > app-menu-layout:nth-child(2) > main:nth-child(1) > section:nth-child(3) > div:nth-child(2) > app-money-movement-insight:nth-child(2) > div:nth-child(1) > app-offcanvas:nth-child(2) > fieldset:nth-child(1) > app-money-movement-insight-filter:nth-child(1) > div:nth-child(3) > accordion:nth-child(1) > accordion-group:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > form:nth-child(1) > div:nth-child(1) > div:nth-child(3) > ng-select:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)").click({force:true});
+    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
       cy.wait(4000);
       cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -250,9 +252,9 @@ class InsightsPage {
       });
 }
 clickonmoneymovementingistspage154() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -284,7 +286,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonInsights014() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(10000);
@@ -317,22 +319,25 @@ clickonmoneymovementingistspage154() {
 
 
   clickonInsights015() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(5000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(10000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
+    cy.get(this.locators.expand_all).click({force:true});
+    cy.wait(2000);
     cy.get(this.locators.clickonbyGeography).click();
     cy.wait(1000);
     cy.scrollTo('bottom', { ensureScrollable: false });
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-geography > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
+  cy.get('#accordion-geography > .panel > .panel-heading > .panel-title').click();
     cy.wait(1000);
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
+    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').scrollIntoView().click({force:true});
     cy.wait(1000);
-     cy.get('.ng-dropdown-panel').should('be.visible')
+     cy.get('.ng-dropdown-panel').scrollIntoView().should('be.visible')
       .within(() => {
         cy.wait(5000);
         cy.get('.ng-option').then($options => {
@@ -387,7 +392,8 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonInsights016() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(5000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(8000);
@@ -398,7 +404,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonInsights018() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(10000);
@@ -435,7 +441,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonInsights019() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(10000);
@@ -458,12 +464,13 @@ clickonmoneymovementingistspage154() {
     //Now Click on Detail Analysis
     cy.get(this.locators.clickOnDetailedAnalysis).click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000)
   }
 
   clickonInsights020() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(5000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(10000);
@@ -494,7 +501,7 @@ clickonmoneymovementingistspage154() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-      cy.get("body > app-root:nth-child(1) > app-menu-layout:nth-child(2) > main:nth-child(1) > section:nth-child(3) > div:nth-child(2) > app-money-movement-insight:nth-child(2) > div:nth-child(1) > app-offcanvas:nth-child(2) > fieldset:nth-child(1) > app-money-movement-insight-filter:nth-child(1) > div:nth-child(3) > accordion:nth-child(1) > accordion-group:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > form:nth-child(1) > div:nth-child(1) > div:nth-child(3) > ng-select:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > input:nth-child(1)").click({force:true});
+   cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
       cy.wait(4000);
       cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -507,12 +514,12 @@ clickonmoneymovementingistspage154() {
     //Now Click on Detail Analysis
     cy.get(this.locators.clickOnDetailedAnalysis).click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000)
   }
 
   clickonInsights021() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(10000);
@@ -544,13 +551,13 @@ clickonmoneymovementingistspage154() {
     //Now Click on Detail Analysis
     cy.get(this.locators.clickOnDetailedAnalysis).click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000)
 
   }
 
   clickonInsights022() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(10000);
@@ -618,13 +625,13 @@ clickonmoneymovementingistspage154() {
     //Now Click on Detail Analysis
     cy.get(this.locators.clickOnDetailedAnalysis).click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000)
 
   }
 
   clickonInsights023() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(10000);
@@ -702,7 +709,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonInsights024() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(5000);
@@ -714,7 +721,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonInsights025() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonprimaryallocationinsights).click();
     cy.wait(5000);
@@ -728,7 +735,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonSecondaryInsights026() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonsecondaryallocationinsights).click();
     cy.wait(5000);
@@ -737,7 +744,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonSecondaryInsights027() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonsecondaryallocationinsights).click();
     cy.wait(5000);
@@ -758,7 +765,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonSecondaryInsights028() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonsecondaryallocationinsights).click();
     cy.wait(10000);
@@ -769,18 +776,20 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonSecondaryInsights029() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(5000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonsecondaryallocationinsights).click();
     cy.wait(10000);
-    cy.get('.inner-container').scrollTo('0%', '50%');
+    // cy.get('.inner-container').scrollTo('0%', '50%');
+    // cy.wait(1000);
+    cy.get('body > app-root:nth-child(1) > app-menu-layout:nth-child(2) > main:nth-child(1) > section:nth-child(3) > div:nth-child(2) > app-secondary-allocation-insight:nth-child(2) > div:nth-child(1) > div:nth-child(1) > tabset:nth-child(4) > div:nth-child(2) > tab:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > svg:nth-child(1) > g:nth-child(1) > g:nth-child(1) > rect:nth-child(25)').click({ force: true });
     cy.wait(1000);
-    cy.get('rect[x="240"][y="80"][width="38"][height="38"][fill="#D54848"]').click({ force: true });
-    cy.wait(1000);
+   cy.contains('Allocation').scrollIntoView().should('be.visible');
   }
 
   clickonSecondaryInsights030() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonsecondaryallocationinsights).click();
     cy.wait(10000);
@@ -791,7 +800,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonSecondaryInsights031() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonsecondaryallocationinsights).click();
     cy.wait(10000);
@@ -805,7 +814,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonSecondaryInsights032() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonsecondaryallocationinsights).click();
     cy.wait(10000);
@@ -819,7 +828,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonSecondaryInsights033() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonsecondaryallocationinsights).click();
     cy.wait(10000);
@@ -829,7 +838,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonSecondaryInsights034() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonsecondaryallocationinsights).click();
     cy.wait(10000);
@@ -845,7 +854,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonSecondaryInsights035() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonsecondaryallocationinsights).click();
     cy.wait(10000);
@@ -859,7 +868,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonSecondaryInsights036() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonsecondaryallocationinsights).click();
     cy.wait(10000);
@@ -921,30 +930,41 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonSecondaryInsights037() {
-    cy.get(this.locators.clickoninsight).click();
-    cy.wait(1000);
-    cy.get(this.locators.clickonsecondaryallocationinsights).click();
-    cy.wait(10000);
-    cy.get(this.locators.clickonfilter).click();
-    cy.wait(1000);
-    cy.get(this.locators.clickonbyallocationowner).click();
-    cy.wait(1000);
-    // Select a random option
-    cy.get('#accordion-product > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
-    cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+
+  cy.wait(5000);
+
+  cy.get(this.locators.clickoninsight).click({ force: true });
+  cy.wait(1000);
+
+  cy.get(this.locators.clickonsecondaryallocationinsights).click({ force: true });
+  cy.wait(5000);
+
+  cy.get(this.locators.clickonfilter).click({ force: true });
+  cy.wait(1000);
+
+  cy.get(this.locators.expand_all).click({ force: true });
+  cy.wait(2000);
+cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input')
+    .click({ force: true });
+
+  cy.wait(1000);
+ cy.get('.ng-dropdown-panel')
+      .should('be.visible') // Wait until the panel appears
       .within(() => {
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
-          cy.wrap($options[randomIndex]).click({ force: true });
+          cy.wrap($options[randomIndex]).click();
         });
       });
 
-  }
+
+}
+
 
   clickonSecondaryInsights038() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(5000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonsecondaryallocationinsights).click();
     cy.wait(10000);
@@ -953,7 +973,7 @@ clickonmoneymovementingistspage154() {
     cy.get(this.locators.clickonbyproduct).click();
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-pristine > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+  cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -963,7 +983,7 @@ clickonmoneymovementingistspage154() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -973,7 +993,7 @@ clickonmoneymovementingistspage154() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+   cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -987,7 +1007,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonSecondaryInsights039() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonsecondaryallocationinsights).click();
     cy.wait(10000);
@@ -1020,19 +1040,19 @@ clickonmoneymovementingistspage154() {
 
 
   clickonSecondaryInsights040() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(5000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonsecondaryallocationinsights).click();
+    cy.get(this.locators.clickonsecondaryallocationinsights).click({force:true});
     cy.wait(10000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilter).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonbyGeography).click();
+    cy.get(this.locators.clickonbyGeography).click({force:true});
     cy.wait(1000);
     cy.scrollTo('bottom', { ensureScrollable: false });
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container').click();
-    cy.wait(1000);
+   cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
         cy.get('.ng-option').then($options => {
@@ -1041,8 +1061,7 @@ clickonmoneymovementingistspage154() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(2) > .form-ng-select > .ng-select-container').click();
-    cy.wait(1000);
+cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
         cy.get('.ng-option').then($options => {
@@ -1051,20 +1070,7 @@ clickonmoneymovementingistspage154() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(3) > .form-ng-select > .ng-select-container').click();
-    cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
-      .within(() => {
-        cy.get('.ng-option').then($options => {
-          const count = $options.length;
-          const randomIndex = Math.floor(Math.random() * count);
-          cy.wrap($options[randomIndex]).click({ force: true });
-        });
-      });
-
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(4) > .form-ng-select > .ng-select-container').click();
+cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -1076,7 +1082,19 @@ clickonmoneymovementingistspage154() {
       });
 
 
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(5) > .form-ng-select > .ng-select-container').click();
+cy.get('form.ng-valid > :nth-child(1) > :nth-child(4) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+    cy.wait(1000);
+    cy.get('.ng-dropdown-panel').should('be.visible')
+      .within(() => {
+        cy.get('.ng-option').then($options => {
+          const count = $options.length;
+          const randomIndex = Math.floor(Math.random() * count);
+          cy.wrap($options[randomIndex]).click({ force: true });
+        });
+      });
+
+
+cy.get(':nth-child(5) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -1090,37 +1108,29 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonSecondaryInsights041() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(5000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonsecondaryallocationinsights).click();
     cy.wait(8000);
-    cy.get(this.locators.hoverOnIcon).click();
+    cy.get(this.locators.hover_sec).click();
     cy.wait(1000);
-    cy.get('.enc-tabs-1').contains('Total Accounts').should('be.visible');
+    cy.contains('Total Allocated Accounts to Primary').should('be.visible');
     cy.wait(1000);
   }
 
   clickonSecondaryInsights042() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(5000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonsecondaryallocationinsights).click();
     cy.wait(10000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonbyagency).click();
-    cy.wait(1000);
-    cy.get('ng-select[formcontrolname="agency"]').then($el => {
-      const isOpen = $el.hasClass('ng-select-opened');
-      if (!isOpen) {
-        cy.get('ng-select[formcontrolname="agency"] .ng-arrow-wrapper').click();
-      }
-    });
-    cy.get('.ng-dropdown-panel .ng-option').then($options => {
-      const count = $options.length;
-      const randomIndex = Math.floor(Math.random() * count);
-      cy.wrap($options[randomIndex]).click();
-    });
-    cy.get('#accordion-agency > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-arrow-wrapper').should('be.visible').click();
+    cy.get(this.locators.expand_all).click();
+    cy.wait(2000);
+   
+  cy.get('#accordion-user > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').should('be.visible').click();
     // Step 2: Wait for the new dropdown panel to appear and select a random option
     cy.get('.ng-dropdown-panel')
       .should('be.visible') // Wait until the panel appears
@@ -1138,7 +1148,8 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonSecondaryInsights043() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(5000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonsecondaryallocationinsights).click();
     cy.wait(10000);
@@ -1147,9 +1158,9 @@ clickonmoneymovementingistspage154() {
     cy.get(this.locators.clickonbyallocationowner).click();
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-owner > .panel > .panel-collapse > .panel-body > form.ng-pristine > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+  cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
     cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
+    cy.get('.ng-dropdown-panel')
       .within(() => {
         cy.get('.ng-option').then($options => {
           const count = $options.length;
@@ -1161,12 +1172,13 @@ clickonmoneymovementingistspage154() {
     //Now Click on Detail Analysis
     cy.get(this.locators.clickOnDetailedAnalysis).click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000)
   }
 
   clickonSecondaryInsights044() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(5000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonsecondaryallocationinsights).click();
     cy.wait(10000);
@@ -1175,7 +1187,7 @@ clickonmoneymovementingistspage154() {
     cy.get(this.locators.clickonbyproduct).click();
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-pristine > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+  cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -1185,7 +1197,7 @@ clickonmoneymovementingistspage154() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -1195,7 +1207,7 @@ clickonmoneymovementingistspage154() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -1208,12 +1220,12 @@ clickonmoneymovementingistspage154() {
     //Now Click on Detail Analysis
     cy.get(this.locators.clickOnDetailedAnalysis).click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000)
   }
 
   clickonSecondaryInsights045() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonsecondaryallocationinsights).click();
     cy.wait(10000);
@@ -1245,13 +1257,14 @@ clickonmoneymovementingistspage154() {
     //Now Click on Detail Analysis
     cy.get(this.locators.clickOnDetailedAnalysis).click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000)
 
   }
 
   clickonSecondaryInsights046() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(8000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonsecondaryallocationinsights).click();
     cy.wait(10000);
@@ -1262,7 +1275,7 @@ clickonmoneymovementingistspage154() {
     cy.scrollTo('bottom', { ensureScrollable: false });
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container').click();
+ cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -1272,18 +1285,7 @@ clickonmoneymovementingistspage154() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(2) > .form-ng-select > .ng-select-container').click();
-    cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
-      .within(() => {
-        cy.get('.ng-option').then($options => {
-          const count = $options.length;
-          const randomIndex = Math.floor(Math.random() * count);
-          cy.wrap($options[randomIndex]).click({ force: true });
-        });
-      });
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(3) > .form-ng-select > .ng-select-container').click();
+cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -1294,8 +1296,7 @@ clickonmoneymovementingistspage154() {
         });
       });
 
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(4) > .form-ng-select > .ng-select-container').click();
+ cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -1307,7 +1308,19 @@ clickonmoneymovementingistspage154() {
       });
 
 
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(5) > .form-ng-select > .ng-select-container').click();
+  cy.get('form.ng-valid > :nth-child(1) > :nth-child(4) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+    cy.wait(1000);
+    cy.get('.ng-dropdown-panel').should('be.visible')
+      .within(() => {
+        cy.get('.ng-option').then($options => {
+          const count = $options.length;
+          const randomIndex = Math.floor(Math.random() * count);
+          cy.wrap($options[randomIndex]).click({ force: true });
+        });
+      });
+
+
+cy.get(':nth-child(5) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -1320,13 +1333,14 @@ clickonmoneymovementingistspage154() {
     //Now Click on Detail Analysis
     cy.get(this.locators.clickOnDetailedAnalysis).click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000)
 
   }
 
   clickonSecondaryInsights047() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(5000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonsecondaryallocationinsights).click();
     cy.wait(10000);
@@ -1337,7 +1351,7 @@ clickonmoneymovementingistspage154() {
     cy.scrollTo('bottom', { ensureScrollable: false });
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container').click();
+ cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -1347,18 +1361,7 @@ clickonmoneymovementingistspage154() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(2) > .form-ng-select > .ng-select-container').click();
-    cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
-      .within(() => {
-        cy.get('.ng-option').then($options => {
-          const count = $options.length;
-          const randomIndex = Math.floor(Math.random() * count);
-          cy.wrap($options[randomIndex]).click({ force: true });
-        });
-      });
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(3) > .form-ng-select > .ng-select-container').click();
+   cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -1369,8 +1372,7 @@ clickonmoneymovementingistspage154() {
         });
       });
 
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(4) > .form-ng-select > .ng-select-container').click();
+  cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -1382,7 +1384,19 @@ clickonmoneymovementingistspage154() {
       });
 
 
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(5) > .form-ng-select > .ng-select-container').click();
+cy.get('form.ng-untouched > :nth-child(1) > :nth-child(4) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+    cy.wait(1000);
+    cy.get('.ng-dropdown-panel').should('be.visible')
+      .within(() => {
+        cy.get('.ng-option').then($options => {
+          const count = $options.length;
+          const randomIndex = Math.floor(Math.random() * count);
+          cy.wrap($options[randomIndex]).click({ force: true });
+        });
+      });
+
+
+ cy.get(':nth-child(5) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -1405,7 +1419,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonSecondaryInsights048() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonsecondaryallocationinsights).click();
     cy.wait(5000);
@@ -1417,7 +1431,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonSecondaryInsights049() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonsecondaryallocationinsights).click();
     cy.wait(5000);
@@ -1431,7 +1445,8 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonTrailGapInsights050() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(5000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(1000);
@@ -1440,7 +1455,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonTrailGapInsights051() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(1000);
@@ -1463,7 +1478,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonTrailGapInsights052() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -1476,7 +1491,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonTrailGapInsights053() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -1487,7 +1502,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonTrailGapInsights054() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -1498,7 +1513,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonTrailGapInsights055() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -1511,7 +1526,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonTrailGapInsights056() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -1526,7 +1541,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonTrailGapInsights057() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -1539,7 +1554,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonTrailGapInsights058() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -1554,7 +1569,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonTrailGapInsights059() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -1567,7 +1582,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonTrailGapInsights060() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -1582,7 +1597,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonTrailGapInsights061() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -1595,7 +1610,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonTrailGapInsights062() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -1610,7 +1625,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonTrailGapInsights063() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -1621,55 +1636,53 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonTrailGapInsights064() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(6000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
     cy.get('.inner-container').scrollTo('0%', '60%');
     cy.wait(1000);
-    cy.contains('h3', ' Attempted vs Unattempted Accounts by Region ').should('be.visible');;
+    cy.contains('h3', ' Attempted vs Unattempted Accounts').should('be.visible');;
     cy.wait(1000);
   }
 
   clickonTrailGapInsights065() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(8000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
     cy.get('.inner-container').scrollTo('0%', '60%');
     cy.wait(1000);
-    cy.get('body > app-root:nth-child(1) > app-menu-layout:nth-child(1) > main:nth-child(1) > section:nth-child(3) > div:nth-child(2) > app-trail-gap-insight:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > tabset:nth-child(1) > div:nth-child(2) > tab:nth-child(1) > div:nth-child(2) > div:nth-child(8) > div:nth-child(1) > div:nth-child(2) > app-level-shift-button:nth-child(1) > div:nth-child(1) > button:nth-child(2)').click();
-    cy.wait(1000);
-    cy.contains('h3', ' Attempted vs Unattempted Accounts by State ').should('be.visible');;
+    cy.contains('h3', 'Attempted vs Unattempted Accounts By Field Primary').scrollIntoView().should('be.visible');;
     cy.wait(1000);
   }
 
   clickonTrailGapInsights066() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
     cy.get('.inner-container').scrollTo('0%', '60%');
     cy.wait(1000);
-    cy.contains('h3', ' Attempted vs Unattempted Accounts by Product Group ').should('be.visible');;
+    cy.contains('h3', 'Attempted vs Unattempted Accounts by Product Group').should('be.visible');;
     cy.wait(1000);
   }
 
   clickonTrailGapInsights067() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
     cy.get('.inner-container').scrollTo('0%', '60%');
     cy.wait(1000);
-    cy.get('body > app-root:nth-child(1) > app-menu-layout:nth-child(1) > main:nth-child(1) > section:nth-child(3) > div:nth-child(2) > app-trail-gap-insight:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > tabset:nth-child(1) > div:nth-child(2) > tab:nth-child(1) > div:nth-child(2) > div:nth-child(9) > div:nth-child(1) > div:nth-child(2) > app-level-shift-button:nth-child(1) > div:nth-child(1) > button:nth-child(2) > svg-icon:nth-child(1) > svg:nth-child(1)').click();
-    cy.wait(1000);
-    cy.contains('h3', ' Attempted vs Unattempted Accounts by Product ').should('be.visible');;
+    cy.contains('h3', 'Top 5 Under Performing Field Primary Accounts (Unattempted %)').scrollIntoView().should('be.visible');;
     cy.wait(1000);
   }
 
   clickonTrailGapInsights068() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -1680,7 +1693,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonTrailGapInsights069() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -1692,18 +1705,20 @@ clickonmoneymovementingistspage154() {
 
 
   clickonTrailGapInsights070() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(8000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
     cy.get('.inner-container').scrollTo('0%', '90%');
     cy.wait(1000);
-    cy.contains('Trail Gap - Product Group & Region Matrix').should('be.visible');;
+    cy.contains('Trail Gap - Product Group & Country Matrix').scrollIntoView().should('be.visible');;
     cy.wait(1000);
   }
 
   clickonTrailGapInsights071() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(8000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -1711,30 +1726,24 @@ clickonmoneymovementingistspage154() {
     cy.wait(1000);
     cy.get(':nth-child(12) > .card-header > .d-flex > .level-shift-button > .btn-group > :nth-child(2) > svg-icon > svg > g > [fill="currentColor"]').click();
     cy.wait(1000);
-    cy.contains('Trail Gap - Product & Region Matrix').should('be.visible');;
+    cy.contains('Trail Gap - Product & Country Matrix').scrollIntoView().should('be.visible');;
     cy.wait(1000);
   }
 
 
   clickonTrailGapInsights072() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(9000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
     cy.get('.inner-container').scrollTo('0%', '90%');
     cy.wait(1000);
-    cy.contains('Trail Gap - Product Group & Region Matrix').should('be.visible');
-    cy.wait(1000);
-    cy.get(':nth-child(11) > .card-header > .d-flex > button[_ngcontent-ng-c2132142327=""] > svg-icon.icon-btn-svg > .icon-btn-svg').click();
-    cy.wait(1000);
-    cy.get(':nth-child(11) > .card-header > .d-flex > app-chart-type-switch > .btn > svg-icon.icon-btn-svg > .icon-btn-svg').click();
-    cy.wait(1000);
-    cy.get('bs-dropdown-container li:nth-child(2) span:nth-child(1)').click();
-    cy.wait(1000);
+    cy.contains('Trail Gap - Product Group & Country Matrix').should('be.visible');
   }
 
   clickonTrailGapInsights073() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -1745,7 +1754,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonTrailGapInsights074() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -1761,7 +1770,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonTrailGapInsights075() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -1776,7 +1785,7 @@ clickonmoneymovementingistspage154() {
 
 
   clickonTrailGapInsights076() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -1835,7 +1844,7 @@ clickonmoneymovementingistspage154() {
 
 
   clickonTrailGapInsights077() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -1878,7 +1887,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonTrailGapInsights078() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -1911,7 +1920,8 @@ clickonmoneymovementingistspage154() {
 
 
   clickonTrailGapInsights079() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(8000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -1922,7 +1932,7 @@ clickonmoneymovementingistspage154() {
     cy.scrollTo('bottom', { ensureScrollable: false });
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container').click();
+  cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -1932,18 +1942,7 @@ clickonmoneymovementingistspage154() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(2) > .form-ng-select > .ng-select-container').click();
-    cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
-      .within(() => {
-        cy.get('.ng-option').then($options => {
-          const count = $options.length;
-          const randomIndex = Math.floor(Math.random() * count);
-          cy.wrap($options[randomIndex]).click({ force: true });
-        });
-      });
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(3) > .form-ng-select > .ng-select-container').click();
+ cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -1954,8 +1953,7 @@ clickonmoneymovementingistspage154() {
         });
       });
 
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(4) > .form-ng-select > .ng-select-container').click();
+  cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -1967,7 +1965,19 @@ clickonmoneymovementingistspage154() {
       });
 
 
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(5) > .form-ng-select > .ng-select-container').click();
+   cy.get('form.ng-valid > :nth-child(1) > :nth-child(4) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+    cy.wait(1000);
+    cy.get('.ng-dropdown-panel').should('be.visible')
+      .within(() => {
+        cy.get('.ng-option').then($options => {
+          const count = $options.length;
+          const randomIndex = Math.floor(Math.random() * count);
+          cy.wrap($options[randomIndex]).click({ force: true });
+        });
+      });
+
+
+   cy.get(':nth-child(5) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -1981,7 +1991,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonTrailGapInsights080() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(8000);
@@ -1992,7 +2002,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonTrailGapInsights081() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -2055,7 +2065,7 @@ clickonmoneymovementingistspage154() {
   }
 
   clickonTrailGapInsights082() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -2077,12 +2087,13 @@ clickonmoneymovementingistspage154() {
     cy.wait(1000)
     cy.get(':nth-child(2) > .nav-link > span').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000)
   }
 
   clickonTrailGapInsights083() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(8000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -2091,7 +2102,7 @@ clickonmoneymovementingistspage154() {
     cy.get(this.locators.clickonbyproduct).click();
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-pristine > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+   cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2101,7 +2112,7 @@ clickonmoneymovementingistspage154() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+ cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2111,7 +2122,7 @@ clickonmoneymovementingistspage154() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+ cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2127,13 +2138,13 @@ clickonmoneymovementingistspage154() {
     cy.wait(1000)
     cy.get(':nth-child(2) > .nav-link > span').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000)
 
 }
 
 clickonTrailGapInsights084() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -2157,24 +2168,25 @@ clickonTrailGapInsights084() {
     cy.wait(1000)
     cy.get(':nth-child(2) > .nav-link > span').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000)  
   
   }
 
   clickonTrailGapInsights085() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(8000)
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonbyGeography).click();
+    cy.get(this.locators.expand_all).click();
     cy.wait(1000);
     cy.scrollTo('bottom', { ensureScrollable: false });
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container').click();
+   cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2184,7 +2196,17 @@ clickonTrailGapInsights084() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(2) > .form-ng-select > .ng-select-container').click();
+  cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-touched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+    cy.wait(1000);
+    cy.get('.ng-dropdown-panel').should('be.visible')
+      .within(() => {
+        cy.get('.ng-option').then($options => {
+          const count = $options.length;
+          const randomIndex = Math.floor(Math.random() * count);
+          cy.wrap($options[randomIndex]).click({ force: true });
+        });
+      });
+cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-touched > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2195,19 +2217,8 @@ clickonTrailGapInsights084() {
         });
       });
 
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(3) > .form-ng-select > .ng-select-container').click();
-    cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
-      .within(() => {
-        cy.get('.ng-option').then($options => {
-          const count = $options.length;
-          const randomIndex = Math.floor(Math.random() * count);
-          cy.wrap($options[randomIndex]).click({ force: true });
-        });
-      });
 
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(4) > .form-ng-select > .ng-select-container').click();
+cy.get(':nth-child(5) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2223,12 +2234,13 @@ clickonTrailGapInsights084() {
     cy.wait(1000)
     cy.get(':nth-child(2) > .nav-link > span').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000)  
   }
 
   clickonTrailGapInsights086() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(9000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -2239,7 +2251,7 @@ clickonTrailGapInsights084() {
     cy.scrollTo('bottom', { ensureScrollable: false });
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container').click();
+   cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2249,18 +2261,7 @@ clickonTrailGapInsights084() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(2) > .form-ng-select > .ng-select-container').click();
-    cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
-      .within(() => {
-        cy.get('.ng-option').then($options => {
-          const count = $options.length;
-          const randomIndex = Math.floor(Math.random() * count);
-          cy.wrap($options[randomIndex]).click({ force: true });
-        });
-      });
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(3) > .form-ng-select > .ng-select-container').click();
+  cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2271,8 +2272,19 @@ clickonTrailGapInsights084() {
         });
       });
 
+  cy.get('form.ng-valid > :nth-child(1) > :nth-child(4) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+    cy.wait(1000);
+    cy.get('.ng-dropdown-panel').should('be.visible')
+      .within(() => {
+        cy.get('.ng-option').then($options => {
+          const count = $options.length;
+          const randomIndex = Math.floor(Math.random() * count);
+          cy.wrap($options[randomIndex]).click({ force: true });
+        });
+      });
 
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(4) > .form-ng-select > .ng-select-container').click();
+
+    cy.get('form.ng-valid > :nth-child(1) > :nth-child(4) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2297,7 +2309,7 @@ clickonTrailGapInsights084() {
   }
 
     clickonTrailGapInsights087() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(10000);
@@ -2308,7 +2320,7 @@ clickonTrailGapInsights084() {
     cy.scrollTo('bottom', { ensureScrollable: false });
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container').click();
+  cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2318,7 +2330,7 @@ clickonTrailGapInsights084() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(2) > .form-ng-select > .ng-select-container').click();
+cy.get('form.ng-valid > :nth-child(1) > :nth-child(4) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2329,7 +2341,7 @@ clickonTrailGapInsights084() {
         });
       });
 
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(3) > .form-ng-select > .ng-select-container').click();
+cy.get(':nth-child(5) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2366,7 +2378,7 @@ clickonTrailGapInsights084() {
   }
 
   clickonAllocatedvsAchived092() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2374,27 +2386,28 @@ clickonTrailGapInsights084() {
     cy.wait(1000);
   }
 clickonAllocatevsAchived093() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(8000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickontrailgapinsight).click();
     cy.wait(1000);
     cy.get('.nav-link.active').contains('Overview').should('be.visible');
     cy.wait(1000);
-    cy.contains('Allocated Accounts').should('be.visible');
+    cy.contains('Total Accounts').should('be.visible');
     cy.wait(1000);
-    cy.contains('Collected Accounts').should('be.visible');
+    cy.contains('Attemped Accounts').should('be.visible');
     cy.wait(1000);
-    cy.contains('Uncollected Accounts').should('be.visible');
+    cy.contains('Unattemped Accounts').should('be.visible');
     cy.wait(1000);
-    cy.contains('Allocated Amount').should('be.visible');
+    cy.contains('Total Amount').should('be.visible');
     cy.wait(1000);
-    cy.contains('Collected Amount').should('be.visible');
+    cy.contains('Attemped Amount').should('be.visible');
     cy.wait(1000);
-    cy.contains('Uncollected Amount').should('be.visible');
+    cy.contains('Unattemped Amount').should('be.visible');
     cy.wait(1000);
   }
   clickonAllocatedvsAchived094() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2403,7 +2416,7 @@ clickonAllocatevsAchived093() {
   }
 
   clickonAllocatedVsAchived095() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2411,7 +2424,7 @@ clickonAllocatevsAchived093() {
     cy.wait(1000);
   }
   clickonAllocatedVsAchived096() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2420,7 +2433,7 @@ clickonAllocatevsAchived093() {
     cy.wait(1000);
   }
    clickonAllocatedVsAchived097() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2429,7 +2442,7 @@ clickonAllocatevsAchived093() {
     cy.wait(1000);
   }
   clickonAllocatedVsAchived098() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2438,7 +2451,7 @@ clickonAllocatevsAchived093() {
     cy.wait(1000);
   }
   clickonAllocatedVsAchived099() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2447,7 +2460,7 @@ clickonAllocatevsAchived093() {
     cy.wait(1000);
   }
   clickonAllocatedVsAchived100() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2456,7 +2469,7 @@ clickonAllocatevsAchived093() {
     cy.wait(1000);
   }
   clickonAllocatedVsAchived101() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2465,7 +2478,7 @@ clickonAllocatevsAchived093() {
     cy.wait(1000);
   }
   clickonAllocatedVsAchived102() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2474,7 +2487,7 @@ clickonAllocatevsAchived093() {
     cy.wait(1000);
   }
   clickonAllocatedVsAchived103() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2485,7 +2498,8 @@ clickonAllocatevsAchived093() {
 
 }
 clickonAllocatedVsAchived104() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(5000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2493,13 +2507,14 @@ clickonAllocatedVsAchived104() {
     cy.contains('Geography & Product Analysis')
     .scrollIntoView()
     .click({ force: true });
-    cy.contains('h3', ' Uncollected by Region').should('exist');
-    cy.contains('h3', ' Uncollected by Region').scrollIntoView().should('be.visible');
+    cy.contains('h3', 'Uncollected by Country').should('exist');
+    cy.contains('h3', 'Uncollected by Country').scrollIntoView().should('be.visible');
     cy.wait(1000);
 
 }
 clickonAllocatedVsAchived105() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(2000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2507,13 +2522,13 @@ clickonAllocatedVsAchived105() {
     cy.contains('Geography & Product Analysis')
     .scrollIntoView()
     .click({ force: true });
-    cy.contains('h3', ' Accounts Collected vs Uncollected by Region ').should('exist');
-    cy.contains('h3', ' Accounts Collected vs Uncollected by Region ').scrollIntoView().should('be.visible');
+    cy.contains('h3', 'Accounts Collected vs Uncollected by Country').should('exist');
+    cy.contains('h3', 'Accounts Collected vs Uncollected by Country').scrollIntoView().should('be.visible');
     cy.wait(1000);
 
 }
 clickonAllocatedVsAchived106() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2527,7 +2542,7 @@ clickonAllocatedVsAchived106() {
 
 }
 clickonAllocatedVsAchived107() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2541,7 +2556,7 @@ clickonAllocatedVsAchived107() {
 
 }
 clickonAllocatedVsAchived108() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2555,7 +2570,7 @@ clickonAllocatedVsAchived108() {
 
 }
 clickonAllocatedVsAchived109() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2569,7 +2584,7 @@ clickonAllocatedVsAchived109() {
     cy.get('.d-flex > .form-select').select('row');
 }
 clickonAllocatedVsAchived110() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2585,7 +2600,7 @@ clickonAllocatedVsAchived110() {
 
 
  clickonAllocatedVsAchived111() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2599,7 +2614,7 @@ clickonAllocatedVsAchived110() {
     cy.wait(1000);
  }
  clickonAllocatedVsAchived112() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2612,7 +2627,7 @@ clickonAllocatedVsAchived110() {
 
   }
   clickonAllocatedVsAchived113() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2666,7 +2681,8 @@ clickonAllocatedVsAchived110() {
       });
   }
 clickonAllocatedVsAchived114() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(5000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2674,7 +2690,7 @@ clickonAllocatedVsAchived114() {
     cy.wait(1000);
     cy.get(this.locators.clickonproduct).click();
     cy.wait(1000);
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+   cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2684,8 +2700,7 @@ clickonAllocatedVsAchived114() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-
-      cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(2) > .form-ng-select > .ng-select-container').click();
+cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
       cy.wait(1000);
        cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2695,7 +2710,7 @@ clickonAllocatedVsAchived114() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-      cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+   cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
       cy.wait(1000);
        cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2707,7 +2722,7 @@ clickonAllocatedVsAchived114() {
       });
 }
 clickonAllocatedVsAchived115() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2740,18 +2755,19 @@ clickonAllocatedVsAchived115() {
     
 }
   clickonAllocatedVsAchived116() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(6000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilter).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickongeography).click();
     cy.wait(1000);
     cy.scrollTo('bottom', { ensureScrollable: false });
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container').click();
+ cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2761,18 +2777,7 @@ clickonAllocatedVsAchived115() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(2) > .form-ng-select > .ng-select-container').click();
-    cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
-      .within(() => {
-        cy.get('.ng-option').then($options => {
-          const count = $options.length;
-          const randomIndex = Math.floor(Math.random() * count);
-          cy.wrap($options[randomIndex]).click({ force: true });
-        });
-      });
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(3) > .form-ng-select > .ng-select-container').click();
+cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2783,8 +2788,7 @@ clickonAllocatedVsAchived115() {
         });
       });
 
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(4) > .form-ng-select > .ng-select-container').click();
+cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2796,7 +2800,19 @@ clickonAllocatedVsAchived115() {
       });
 
 
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(5) > .form-ng-select > .ng-select-container').click();
+   cy.get('form.ng-valid > :nth-child(1) > :nth-child(4) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+    cy.wait(1000);
+    cy.get('.ng-dropdown-panel').should('be.visible')
+      .within(() => {
+        cy.get('.ng-option').then($options => {
+          const count = $options.length;
+          const randomIndex = Math.floor(Math.random() * count);
+          cy.wrap($options[randomIndex]).click({ force: true });
+        });
+      });
+
+
+   cy.get(':nth-child(5) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2810,7 +2826,7 @@ clickonAllocatedVsAchived115() {
   
   }
   clickonAllocatedVsAchived117() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2820,18 +2836,19 @@ clickonAllocatedVsAchived115() {
     cy.wait(1000);
   }
   clickonAllocatedVsAchived118() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(8000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
     cy.get('.active.tab-pane > .ng-star-inserted > .overview-cards > :nth-child(2) > .overview-card-info-icon > svg-icon > svg').click();
     cy.wait(1000);
-    cy.get('.enc-tabs-2').contains('Collected Accounts').should('be.visible');
+    cy.contains('Collected Accounts').should('be.visible');
     cy.wait(1000);
     
   }
   clickonAllocatedVsAchived119() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2842,7 +2859,7 @@ clickonAllocatedVsAchived115() {
     
   }
   clickonAllocatedVsAchived120() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2902,7 +2919,8 @@ clickonAllocatedVsAchived115() {
   
   }
   clickonAllocatedVsAchived121() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(8000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2910,7 +2928,7 @@ clickonAllocatedVsAchived115() {
     cy.wait(1000);
     cy.get(this.locators.clickonproduct).click();
     cy.wait(1000);
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+   cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2921,7 +2939,7 @@ clickonAllocatedVsAchived115() {
         });
       });
 
-      cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(2) > .form-ng-select > .ng-select-container').click();
+ cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
       cy.wait(1000);
        cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2931,7 +2949,7 @@ clickonAllocatedVsAchived115() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-      cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
       cy.wait(1000);
       cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2950,7 +2968,7 @@ clickonAllocatedVsAchived115() {
     cy.wait(1000)
 }
 clickonAllocatedVsAchived122() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2988,7 +3006,8 @@ clickonAllocatedVsAchived122() {
 }
 
   clickonAllocatedVsAchived123() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(8000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -2999,7 +3018,7 @@ clickonAllocatedVsAchived122() {
     cy.scrollTo('bottom', { ensureScrollable: false });
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container').click();
+  cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -3009,18 +3028,7 @@ clickonAllocatedVsAchived122() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(2) > .form-ng-select > .ng-select-container').click();
-    cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
-      .within(() => {
-        cy.get('.ng-option').then($options => {
-          const count = $options.length;
-          const randomIndex = Math.floor(Math.random() * count);
-          cy.wrap($options[randomIndex]).click({ force: true });
-        });
-      });
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(3) > .form-ng-select > .ng-select-container').click();
+ cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -3031,8 +3039,7 @@ clickonAllocatedVsAchived122() {
         });
       });
 
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(4) > .form-ng-select > .ng-select-container').click();
+ cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -3044,7 +3051,19 @@ clickonAllocatedVsAchived122() {
       });
 
 
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(5) > .form-ng-select > .ng-select-container').click();
+cy.get('form.ng-valid > :nth-child(1) > :nth-child(4) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+    cy.wait(1000);
+    cy.get('.ng-dropdown-panel').should('be.visible')
+      .within(() => {
+        cy.get('.ng-option').then($options => {
+          const count = $options.length;
+          const randomIndex = Math.floor(Math.random() * count);
+          cy.wrap($options[randomIndex]).click({ force: true });
+        });
+      });
+
+
+  cy.get(':nth-child(5) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -3062,7 +3081,7 @@ clickonAllocatedVsAchived122() {
   
     }
   clickonAllocatedVsAchived124() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -3122,7 +3141,8 @@ clickonAllocatedVsAchived122() {
 
   }
   clickonAllocatedVsAchived125() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(8000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -3130,7 +3150,7 @@ clickonAllocatedVsAchived122() {
     cy.wait(1000);
     cy.get(this.locators.clickonproduct).click();
     cy.wait(1000);
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+ cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -3141,7 +3161,7 @@ clickonAllocatedVsAchived122() {
         });
       });
 
-      cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(2) > .form-ng-select > .ng-select-container').click();
+ cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
       cy.wait(1000);
        cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -3151,7 +3171,7 @@ clickonAllocatedVsAchived122() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-      cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
       cy.wait(1000);
       cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -3168,7 +3188,8 @@ clickonAllocatedVsAchived122() {
     cy.wait(1000)
     }
 clickonAllocatedVsAchived126() {
-    cy.get(this.locators.clickoninsight).click();
+  cy.wait(9000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -3179,7 +3200,7 @@ clickonAllocatedVsAchived126() {
     cy.scrollTo('bottom', { ensureScrollable: false });
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container').click();
+ cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -3189,8 +3210,7 @@ clickonAllocatedVsAchived126() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(2) > .form-ng-select > .ng-select-container').click();
-    cy.wait(1000);
+   cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
         cy.get('.ng-option').then($options => {
@@ -3200,19 +3220,7 @@ clickonAllocatedVsAchived126() {
         });
       });
 
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(3) > .form-ng-select > .ng-select-container').click();
-    cy.wait(1000);
-    cy.get('.ng-dropdown-panel').should('be.visible')
-      .within(() => {
-        cy.get('.ng-option').then($options => {
-          const count = $options.length;
-          const randomIndex = Math.floor(Math.random() * count);
-          cy.wrap($options[randomIndex]).click({ force: true });
-        });
-      });
-
-
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(4) > .form-ng-select > .ng-select-container').click();
+ cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -3224,7 +3232,18 @@ clickonAllocatedVsAchived126() {
       });
 
 
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(5) > .form-ng-select > .ng-select-container').click();
+  cy.get('form.ng-valid > :nth-child(1) > :nth-child(4) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
+    cy.get('.ng-dropdown-panel').should('be.visible')
+      .within(() => {
+        cy.get('.ng-option').then($options => {
+          const count = $options.length;
+          const randomIndex = Math.floor(Math.random() * count);
+          cy.wrap($options[randomIndex]).click({ force: true });
+        });
+      });
+
+
+  cy.get(':nth-child(5) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -3241,7 +3260,7 @@ clickonAllocatedVsAchived126() {
     cy.wait(1000)
 }
 clickonAllocatedVsAchived124() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -3300,7 +3319,7 @@ clickonAllocatedVsAchived124() {
     cy.wait(1000) 
     }
     clickonAllocatedVsAchived128() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -3321,11 +3340,12 @@ clickonAllocatedVsAchived124() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000)
   }
   clickonAllocatedVsAchived129() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(5000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -3333,7 +3353,7 @@ clickonAllocatedVsAchived124() {
     cy.wait(1000);
     cy.get(this.locators.clickonproduct).click();
     cy.wait(1000);
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+ cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -3348,13 +3368,13 @@ clickonAllocatedVsAchived124() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000)
 
     }
 
   clickonAllocatedVsAchived130() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -3377,12 +3397,13 @@ clickonAllocatedVsAchived124() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000)
 
     }
     clickonAllocatedVsAchived131() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(6000);  
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -3393,7 +3414,7 @@ clickonAllocatedVsAchived124() {
     cy.scrollTo('bottom', { ensureScrollable: false });
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container').click();
+  cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -3403,7 +3424,7 @@ clickonAllocatedVsAchived124() {
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(2) > .form-ng-select > .ng-select-container').click();
+cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -3420,21 +3441,21 @@ clickonAllocatedVsAchived124() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000)
     }
     clickonmoneymovementingistspage132() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get('.nav-link.active').contains('Overview').should('be.visible');
     cy.wait(1000);
   }
   clickonmoneymovementingistspage133() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get('.nav-link.active').contains('Overview').should('be.visible');
     cy.wait(1000);
@@ -3456,9 +3477,9 @@ clickonAllocatedVsAchived124() {
     cy.wait(1000);
   }
   clickonmoneymovementingistspage134() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.contains('h3', 'Top 5 Agency by Total Accounts ').should('exist');
     cy.contains('h3', 'Top 5 Agency by Total Accounts ').scrollIntoView().should('be.visible');
@@ -3466,9 +3487,9 @@ clickonAllocatedVsAchived124() {
   
   }
     clickonmoneymovementingistspage135() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.contains('h3', 'Top 5 Agency by Total Accounts ').should('exist');
     cy.contains('h3', 'Top 5 Agency by Total Accounts ').scrollIntoView().should('be.visible');
@@ -3476,9 +3497,9 @@ clickonAllocatedVsAchived124() {
   
   }
    clickonmoneymovementingistspage136() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.contains('h3', ' Top 5 Agents by Total Accounts ').should('exist');
     cy.contains('h3', ' Top 5 Agents by Total Accounts ').scrollIntoView().should('be.visible');
@@ -3486,36 +3507,36 @@ clickonAllocatedVsAchived124() {
   
   }
   clickonmoneymovementingistspage137() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.contains('h3', 'Total Accounts by Hold Days').should('exist');
     cy.contains('h3', 'Total Accounts by Hold Days').scrollIntoView().should('be.visible');
     cy.wait(1000);
   }
    clickonmoneymovementingistspage138() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.contains('h3', 'Collection Run Rate Comparison Chart').should('exist');
     cy.contains('h3', 'Collection Run Rate Comparison Chart').scrollIntoView().should('be.visible');
     cy.wait(1000);
   }
    clickonmoneymovementingistspage139() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.contains('h3', ' Collection Snapshot by Overdue Amount and Current Bucket ').should('exist');
     cy.contains('h3', ' Collection Snapshot by Overdue Amount and Current Bucket ').scrollIntoView().should('be.visible');
     cy.wait(1000);
   }
   clickonmoneymovementingistspage140() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.contains('Geography & Product Analysis').should('exist');
     cy.contains('Geography & Product Analysis')
@@ -3523,9 +3544,9 @@ clickonAllocatedVsAchived124() {
     .click({ force: true });
   }
   clickonmoneymovementingistspage141() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.contains('Geography & Product Analysis').should('exist');
     cy.contains('Geography & Product Analysis')
@@ -3537,9 +3558,9 @@ clickonAllocatedVsAchived124() {
   }
  
   clickonmoneymovementingistspage142() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.contains('Geography & Product Analysis').should('exist');
     cy.contains('Geography & Product Analysis')
@@ -3550,9 +3571,9 @@ clickonAllocatedVsAchived124() {
     cy.wait(1000);
   }
   clickonmoneymovementingistspage143() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.contains('Geography & Product Analysis').should('exist');
     cy.contains('Geography & Product Analysis')
@@ -3563,9 +3584,9 @@ clickonAllocatedVsAchived124() {
     cy.wait(1000);
   }
    clickonmoneymovementingistspage144() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.contains('Geography & Product Analysis').should('exist');
     cy.contains('Geography & Product Analysis')
@@ -3576,9 +3597,9 @@ clickonAllocatedVsAchived124() {
     cy.wait(1000);
   }
    clickonmoneymovementingistspage145() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.contains('Geography & Product Analysis').should('exist');
     cy.contains('Geography & Product Analysis')
@@ -3589,9 +3610,9 @@ clickonAllocatedVsAchived124() {
     cy.wait(1000);
   }
   clickonmoneymovementingistspage146() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.contains('Geography & Product Analysis').should('exist');
     cy.contains('Geography & Product Analysis')
@@ -3602,9 +3623,9 @@ clickonAllocatedVsAchived124() {
     cy.wait(1000);
   }
   clickonmoneymovementingistspage147() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -3616,9 +3637,9 @@ clickonAllocatedVsAchived124() {
     cy.wait(1000);
 }
 clickonmoneymovementingistspage148() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -3629,9 +3650,9 @@ clickonmoneymovementingistspage148() {
 
   }
   clickonmoneymovementingistspage149() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -3647,9 +3668,9 @@ clickonmoneymovementingistspage148() {
       });
   } 
    clickonmoneymovementingistspage150() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -3659,9 +3680,9 @@ clickonmoneymovementingistspage148() {
     cy.wait(1000);
 }
 clickonmoneymovementingistspage151() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -3673,9 +3694,9 @@ clickonmoneymovementingistspage151() {
     cy.wait(1000);
 }
 clickonmoneymovementingistspage152() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -3705,9 +3726,9 @@ clickonmoneymovementingistspage152() {
       });
 }
 clickonmoneymovementingistspage153() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click({force: true});
     cy.wait(1000);
@@ -3747,9 +3768,9 @@ clickonmoneymovementingistspage153() {
       });
 }
 clickonmoneymovementingistspage154() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -3780,9 +3801,9 @@ clickonmoneymovementingistspage154() {
       });
 }
 clickonmoneymovementingistspage155() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -3844,9 +3865,9 @@ clickonmoneymovementingistspage155() {
       });
 }
 clickonmoneymovementingistspage156() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -3866,9 +3887,9 @@ clickonmoneymovementingistspage156() {
 
 }
 clickonmoneymovementingistspage157() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -3889,18 +3910,18 @@ clickonmoneymovementingistspage157() {
 
 }
 clickonmoneymovementingistspage158() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get('.active.tab-pane > .ng-star-inserted > .overview-cards > :nth-child(1) > .overview-card-info-icon > svg-icon > svg').click();
     cy.wait(1000);
     cy.contains("Shows the total amount collected across all accounts").should("be.visible");
 }
 clickonmoneymovementingistspage159() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -3921,9 +3942,9 @@ clickonmoneymovementingistspage159() {
     cy.wait(1000);
   } 
   clickonmoneymovementingistspage160() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -3938,9 +3959,9 @@ clickonmoneymovementingistspage159() {
     cy.wait(1000)
 }
    clickonmoneymovementingistspage161() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -3957,9 +3978,9 @@ clickonmoneymovementingistspage159() {
     cy.wait(1000)
 }
 clickonmoneymovementingistspage162() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -3994,9 +4015,9 @@ clickonmoneymovementingistspage162() {
     cy.wait(1000);
     }
     clickonmoneymovementingistspage163() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -4040,9 +4061,9 @@ clickonmoneymovementingistspage162() {
     cy.wait(1000)
 }
 clickonmoneymovementingistspage164() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -4078,9 +4099,9 @@ clickonmoneymovementingistspage164() {
     cy.wait(1000);
 }
 clickonmoneymovementingistspage165() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -4146,9 +4167,9 @@ clickonmoneymovementingistspage165() {
     cy.wait(1000);
 }
 clickonmoneymovementingistspage166() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -4172,9 +4193,9 @@ clickonmoneymovementingistspage166() {
     cy.wait(1000);
 }
 clickonmoneymovementingistspage167() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -4198,9 +4219,9 @@ clickonmoneymovementingistspage167() {
     cy.wait(1000);
     }
     clickonmoneymovementingistspage168() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -4221,9 +4242,9 @@ clickonmoneymovementingistspage167() {
     cy.wait(1000);
     }
     clickonmoneymovementingistspage169() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -4260,12 +4281,14 @@ clickonmoneymovementingistspage167() {
     cy.wait(1000);
     }
     clickonmoneymovementingistspage170() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
+    cy.get(this.locators.expand_all).click({force:true}) ;
+    cy.wait(2000);
     cy.get('#accordion-metric > .panel > .panel-collapse > .panel-body > form.ng-pristine > .form-control-group > .form-ng-select > .ng-select-container').click();
     cy.wait(1000);
      cy.get('.ng-dropdown-panel').should('be.visible')
@@ -4281,13 +4304,14 @@ clickonmoneymovementingistspage167() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+    cy.get('span > .btn').click({force: true} );
     cy.wait(5000)
   }
   clickonmoneymovementingistspage171() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(2000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -4300,13 +4324,13 @@ clickonmoneymovementingistspage167() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000);
   }
   clickonmoneymovementingistspage172() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -4321,13 +4345,13 @@ clickonmoneymovementingistspage167() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000);
   }
   clickonmoneymovementingistspage173() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -4349,13 +4373,14 @@ clickonmoneymovementingistspage167() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000);
   }
 clickonmoneymovementingistspage174() {
-    cy.get(this.locators.clickoninsight).click();
+  cy.wait(3000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -4377,13 +4402,14 @@ clickonmoneymovementingistspage174() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000);
   }
   clickonmoneymovementingistspage175() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(3000);
+    cy.get(this.locators.clickoninsight).click({force: true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -4405,21 +4431,24 @@ clickonmoneymovementingistspage174() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000);
   }
   clickonmoneymovementingistspage176() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(3000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilter).click({force:true});
     cy.wait(1000);
-    cy.get('#accordion-geography > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
+    cy.get(this.locators.expand_all).click({force:true});
+    cy.wait(2000);
+    // cy.get('#accordion-geography > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container').click({force:true});
+    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-pristine > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
     cy.wait(1000);
-     cy.get('.ng-dropdown-panel').should('be.visible')
+     cy.get('.ng-option-label').should('be.visible')
       .within(() => {
         cy.wait(5000);
         cy.get('.ng-option').then($options => {
@@ -4433,13 +4462,13 @@ clickonmoneymovementingistspage174() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000);
 }
 clickonmoneymovementingistspage177() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -4461,13 +4490,13 @@ clickonmoneymovementingistspage177() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000);
 }
 clickonmoneymovementingistspage178() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -4489,13 +4518,13 @@ clickonmoneymovementingistspage178() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000);
 }
  clickonmoneymovementingistspage179() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -4514,13 +4543,13 @@ clickonmoneymovementingistspage178() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000);
 }
 clickonmoneymovementingistspage180() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -4555,11 +4584,11 @@ clickonmoneymovementingistspage180() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000);
 }
  clickonmoneymovementingistspage181() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -4567,7 +4596,7 @@ clickonmoneymovementingistspage180() {
     cy.wait(1000);
   }
   clickonmoneymovementingistspage182() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -4589,7 +4618,7 @@ clickonmoneymovementingistspage180() {
     cy.wait(1000);
   }
    clickonmoneymovementingistspage183() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -4599,7 +4628,7 @@ clickonmoneymovementingistspage180() {
   
   }
    clickonmoneymovementingistspage184() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -4609,7 +4638,7 @@ clickonmoneymovementingistspage180() {
   
   }
    clickonmoneymovementingistspage185() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -4618,7 +4647,7 @@ clickonmoneymovementingistspage180() {
     cy.wait(1000);
   }
   clickonmoneymovementingistspage186() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -4628,7 +4657,7 @@ clickonmoneymovementingistspage180() {
   
   }
   clickonmoneymovementingistspage187() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -4638,7 +4667,7 @@ clickonmoneymovementingistspage180() {
   
   }
    clickonmoneymovementingistspage188() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -4649,7 +4678,7 @@ clickonmoneymovementingistspage180() {
   }
  
   clickonmoneymovementingistspage189() {
-   cy.get(this.locators.clickoninsight).click();
+   cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -4659,7 +4688,7 @@ clickonmoneymovementingistspage180() {
     .click({ force: true });
   }
   clickonmoneymovementingistspage190() {
-   cy.get(this.locators.clickoninsight).click();
+   cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -4672,7 +4701,7 @@ clickonmoneymovementingistspage180() {
     cy.wait(1000);
   }
   clickonmoneymovementingistspage191() {
-   cy.get(this.locators.clickoninsight).click();
+   cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -4685,7 +4714,7 @@ clickonmoneymovementingistspage180() {
     cy.wait(1000);
   }
   clickonmoneymovementingistspage192() {
-   cy.get(this.locators.clickoninsight).click();
+   cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -4698,7 +4727,7 @@ clickonmoneymovementingistspage180() {
     cy.wait(1000);
   }
   clickonmoneymovementingistspage193() {
-   cy.get(this.locators.clickoninsight).click();
+   cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -4711,7 +4740,7 @@ clickonmoneymovementingistspage180() {
     cy.wait(1000);
   }
   clickonmoneymovementingistspage194() {
-   cy.get(this.locators.clickoninsight).click();
+   cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -4724,7 +4753,7 @@ clickonmoneymovementingistspage180() {
     cy.wait(1000);
   }
   clickonmoneymovementingistspage195() {
-   cy.get(this.locators.clickoninsight).click();
+   cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -4737,7 +4766,7 @@ clickonmoneymovementingistspage180() {
     cy.wait(1000);
   }
 clickonmoneymovementingistspage196() {
-   cy.get(this.locators.clickoninsight).click();
+   cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -4751,7 +4780,7 @@ clickonmoneymovementingistspage196() {
     cy.wait(1000);
 }
  clickonmoneymovementingistspage197() {
-   cy.get(this.locators.clickoninsight).click();
+   cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -4764,7 +4793,7 @@ clickonmoneymovementingistspage196() {
 
   }
   clickonmoneymovementingistspage198() {
-   cy.get(this.locators.clickoninsight).click();
+   cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -4782,7 +4811,7 @@ clickonmoneymovementingistspage196() {
       });
   } 
   clickonmoneymovementingistspage199() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -4794,7 +4823,7 @@ clickonmoneymovementingistspage196() {
     cy.wait(1000);
 }
 clickonmoneymovementingistspage200() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -4808,7 +4837,7 @@ clickonmoneymovementingistspage200() {
     cy.wait(1000);
 }
 clickonmoneymovementingistspage201() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -4871,7 +4900,7 @@ clickonmoneymovementingistspage201() {
       });
 }
  clickonmoneymovementingistspage203() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -4904,7 +4933,7 @@ clickonmoneymovementingistspage201() {
       });
 }
 clickonmoneymovementingistspage204() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -4967,7 +4996,7 @@ clickonmoneymovementingistspage204() {
       });
 }
 clickonmoneymovementingistspage205() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -4989,7 +5018,7 @@ clickonmoneymovementingistspage205() {
 
 }
 clickonmoneymovementingistspage206() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5012,7 +5041,7 @@ clickonmoneymovementingistspage206() {
 
 }
 clickonmoneymovementingistspage207() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5022,7 +5051,7 @@ clickonmoneymovementingistspage207() {
    cy.wait(1000);
 }
 clickonmoneymovementingistspage208() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5045,7 +5074,7 @@ clickonmoneymovementingistspage208() {
     cy.wait(1000);
   } 
  clickonmoneymovementingistspage209() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5062,7 +5091,7 @@ clickonmoneymovementingistspage208() {
     cy.wait(1000)
 }
 clickonmoneymovementingistspage210() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5081,7 +5110,7 @@ clickonmoneymovementingistspage210() {
     cy.wait(1000)
 }
 clickonmoneymovementingistspage211() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5118,7 +5147,7 @@ clickonmoneymovementingistspage211() {
     cy.wait(1000);
     }
 clickonmoneymovementingistspage212() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5164,7 +5193,7 @@ clickonmoneymovementingistspage212() {
     cy.wait(1000)
 }
 clickonmoneymovementingistspage213() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5202,7 +5231,7 @@ clickonmoneymovementingistspage213() {
     cy.wait(1000);
 }
 clickonmoneymovementingistspage214() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5270,7 +5299,7 @@ clickonmoneymovementingistspage214() {
     cy.wait(1000);
 }
 clickonmoneymovementingistspage215() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5296,7 +5325,7 @@ clickonmoneymovementingistspage215() {
     cy.wait(1000);
 }
 clickonmoneymovementingistspage216() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5322,7 +5351,7 @@ clickonmoneymovementingistspage216() {
     cy.wait(1000);
     }
 clickonmoneymovementingistspage217() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5345,7 +5374,7 @@ clickonmoneymovementingistspage217() {
     cy.wait(1000);
     }
  clickonmoneymovementingistspage218() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5384,7 +5413,7 @@ clickonmoneymovementingistspage217() {
     cy.wait(1000);
     }
 clickonmoneymovementingistspage219() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5405,11 +5434,11 @@ clickonmoneymovementingistspage219() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000)
   }
   clickonmoneymovementingistspage220() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5424,11 +5453,11 @@ clickonmoneymovementingistspage219() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000);
   }
   clickonmoneymovementingistspage221() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5445,11 +5474,11 @@ clickonmoneymovementingistspage219() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000);
   }
   clickonmoneymovementingistspage222() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5473,11 +5502,11 @@ clickonmoneymovementingistspage219() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000);
   }
   clickonmoneymovementingistspage223() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5501,11 +5530,11 @@ clickonmoneymovementingistspage219() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000);
   }
 clickonmoneymovementingistspage224() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5529,11 +5558,12 @@ clickonmoneymovementingistspage224() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000);
   }
  clickonmoneymovementingistspage225() {
-    cy.get(this.locators.clickoninsight).click();
+  cy.wait(5000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5557,11 +5587,12 @@ clickonmoneymovementingistspage224() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000);
 }
 clickonmoneymovementingistspage226() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(5000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5585,11 +5616,11 @@ clickonmoneymovementingistspage226() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000);
 }
 clickonmoneymovementingistspage227() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5613,12 +5644,12 @@ clickonmoneymovementingistspage227() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000);
 }
 
 clickonmoneymovementingistspage228() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5639,11 +5670,11 @@ clickonmoneymovementingistspage228() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000);
 }
 clickonmoneymovementingistspage229() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5680,11 +5711,11 @@ clickonmoneymovementingistspage229() {
     cy.wait(1000)
     cy.get('.toggle-menu-btn > img').click();
     cy.wait(1000)
-    cy.get('span > .btn').click();
+     cy.get('span > .btn').click({force:true});
     cy.wait(5000);
 }
 clickonmoneymovementingistspage230() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5752,7 +5783,7 @@ clickonmoneymovementingistspage230() {
     cy.wait(2000);
   }
   clickonmoneymovementingistspage231() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5798,7 +5829,7 @@ clickonmoneymovementingistspage230() {
     cy.wait(2000);
   }
   clickonmoneymovementingistspage232() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5871,7 +5902,7 @@ clickonmoneymovementingistspage230() {
     // cy.wait(2000);
   }
   clickonmoneymovementingistspage233() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5881,7 +5912,7 @@ clickonmoneymovementingistspage230() {
     cy.wait(2000);
   }
 clickonmoneymovementingistspage234() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5893,7 +5924,7 @@ clickonmoneymovementingistspage234() {
     cy.wait(1000);
 }
 clickonmoneymovementingistspage235() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -5906,7 +5937,7 @@ clickonmoneymovementingistspage235() {
     cy.wait(1000);
 }
 clickonmoneymovementingistspage236() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -6006,7 +6037,8 @@ clickonmoneymovementingistspage239() {
 
 }
 clickonmoneymovementingistspage240() {
-    cy.get(this.locators.clickoninsight).click();
+  cy.wait(5000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -6099,7 +6131,7 @@ clickonmoneymovementingistspage242() {
 
 }
 clickonmoneymovementingistspage243() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
@@ -6110,7 +6142,7 @@ clickonmoneymovementingistspage243() {
 
 }
 clickonAllocatedVsAchived244() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -6174,7 +6206,7 @@ clickonAllocatedVsAchived244() {
     cy.wait(2000);
   }
   clickonAllocatedVsAchived245() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -6239,7 +6271,7 @@ clickonAllocatedVsAchived244() {
   }
   
    clickonAllocatedVsAchived246() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -6310,7 +6342,7 @@ clickonAllocatedVsAchived244() {
   }
 
 clickonAllocatedVsAchived247() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -6320,7 +6352,7 @@ clickonAllocatedVsAchived247() {
     cy.wait(2000);
 }
 clickonAllocatedVsAchived248() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -6370,7 +6402,7 @@ clickonAllocatedVsAchived248() {
     cy.wait(1000);
 }
 clickonAllocatedVsAchived249() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -6388,34 +6420,52 @@ clickonAllocatedVsAchived249() {
     cy.wait(1000);
 }
 clickonAllocatedVsAchived250() {
-    cy.get(this.locators.clickoninsight).click();
-    cy.wait(1000);
-    cy.get(this.locators.clickOnAllocatedVsAchived).click();
-    cy.wait(1000);
-    cy.get(':nth-child(3) > .nav-link > span').click();
-    cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click();
-    cy.wait(2000);
-    cy.get(':nth-child(1) > .dropdown-item > .flex-grow-1').click();
-    cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click();
-    cy.wait(2000);
-    cy.get('th.ng-star-inserted').filter(':contains("Account Number")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product Group")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product ")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Sub Product")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Current Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("BOM Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Zone")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("BOM POS")').scrollIntoView().should('be.visible');
-    
+  cy.wait(5000);
+  cy.get(this.locators.clickoninsight).click({force:true});
+  cy.wait(1000);
+  cy.get(this.locators.clickOnAllocatedVsAchived).click();
+  cy.wait(1000);
+  cy.get(':nth-child(3) > .nav-link > span').click();
+  cy.wait(1000);
+  // Open dropdown
+  cy.get('#loan-grid-column-filter-button')
+    .should('be.visible')
+    .click();
+
+  // Select first column
+  cy.get('.dropdown-menu')
+    .should('be.visible')
+    .find('.dropdown-item')
+    .first()
+    .click();
+
+  // 🔥 IMPORTANT — close dropdown by clicking outside
+  cy.get('body').click(0,0);   // simulate user clicking outside
+
+  // // Re-open dropdown safely
+  // cy.get('#loan-grid-column-filter-button')
+  //   .should('be.visible')
+  //   .click();
+
+  // Continue validations
+  cy.contains('th.ng-star-inserted', 'Account Number').scrollIntoView().should('be.visible');
+  cy.contains('th.ng-star-inserted', 'Product Group').scrollIntoView().should('be.visible');
+  cy.contains('th.ng-star-inserted', 'Product ').scrollIntoView().should('be.visible');
+  cy.contains('th.ng-star-inserted', 'Sub Product').scrollIntoView().should('be.visible');
+  cy.contains('th.ng-star-inserted', 'Current Bucket').scrollIntoView().should('be.visible');
+  cy.contains('th.ng-star-inserted', 'BOM Bucket').scrollIntoView().should('be.visible');
+  cy.contains('th.ng-star-inserted', 'Country').scrollIntoView().should('be.visible');
+  cy.contains('th.ng-star-inserted', 'Region').scrollIntoView().should('be.visible');
+  cy.contains('th.ng-star-inserted', 'State').scrollIntoView().should('be.visible');
+  cy.contains('th.ng-star-inserted', 'City').scrollIntoView().should('be.visible');
+  cy.contains('th.ng-star-inserted', 'Branch').scrollIntoView().should('be.visible');
+  cy.contains('th.ng-star-inserted', 'BOM POS').scrollIntoView().should('be.visible');
+
 }
+
 clickonAllocatedVsAchived251() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(6000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -6425,7 +6475,7 @@ clickonAllocatedVsAchived251() {
     cy.wait(2000);
     cy.get(':nth-child(5) > .dropdown-item > .flex-grow-1').click();
     cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click();
+    cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
     cy.get('th.ng-star-inserted').filter(':contains("Account Number")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Product Group")').scrollIntoView().should('be.visible');
@@ -6433,7 +6483,7 @@ clickonAllocatedVsAchived251() {
     cy.get('th.ng-star-inserted').filter(':contains("Sub Product")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Current Bucket")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("BOM Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Zone")').scrollIntoView().should('be.visible');
+    cy.get('th.ng-star-inserted').filter(':contains("Country")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
@@ -6442,7 +6492,8 @@ clickonAllocatedVsAchived251() {
     
 }
 clickonAllocatedVsAchived252() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(5000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -6452,7 +6503,7 @@ clickonAllocatedVsAchived252() {
     cy.wait(2000);
     cy.get(':nth-child(8) > .dropdown-item > .flex-grow-1').click();
     cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click();
+    cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
     cy.get('th.ng-star-inserted').filter(':contains("Account Number")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Product Group")').scrollIntoView().should('be.visible');
@@ -6460,7 +6511,7 @@ clickonAllocatedVsAchived252() {
     cy.get('th.ng-star-inserted').filter(':contains("Sub Product")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Current Bucket")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("BOM Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Zone")').scrollIntoView().should('be.visible');
+    cy.get('th.ng-star-inserted').filter(':contains("Country")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
@@ -6469,7 +6520,8 @@ clickonAllocatedVsAchived252() {
     
 }
 clickonAllocatedVsAchived253() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(5000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -6479,7 +6531,7 @@ clickonAllocatedVsAchived253() {
     cy.wait(2000);
     cy.get(':nth-child(14) > .dropdown-item > .flex-grow-1').click();
     cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click();
+    cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
     cy.get('th.ng-star-inserted').filter(':contains("Account Number")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Product Group")').scrollIntoView().should('be.visible');
@@ -6487,16 +6539,16 @@ clickonAllocatedVsAchived253() {
     cy.get('th.ng-star-inserted').filter(':contains("Sub Product")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Current Bucket")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("BOM Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Zone")').scrollIntoView().should('be.visible');
+    cy.get('th.ng-star-inserted').filter(':contains("Country")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Field Primary name")').scrollIntoView().should('be.visible');
+    cy.get('th.ng-star-inserted').filter(':contains("Field Primary Name")').scrollIntoView().should('be.visible');
     
 }
 clickonAllocatedVsAchived254() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -6506,7 +6558,7 @@ clickonAllocatedVsAchived254() {
     cy.wait(2000);
     cy.get(':nth-child(20) > .dropdown-item > .flex-grow-1').click();
     cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click();
+    cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
     cy.get('th.ng-star-inserted').filter(':contains("Account Number")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Product Group")').scrollIntoView().should('be.visible');
@@ -6514,7 +6566,7 @@ clickonAllocatedVsAchived254() {
     cy.get('th.ng-star-inserted').filter(':contains("Sub Product")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Current Bucket")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("BOM Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Zone")').scrollIntoView().should('be.visible');
+    cy.get('th.ng-star-inserted').filter(':contains("Country")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
@@ -6523,7 +6575,8 @@ clickonAllocatedVsAchived254() {
     
 }
 clickonAllocatedVsAchived255() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(5000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
@@ -6571,7 +6624,7 @@ clickonAllocatedVsAchived255() {
     cy.wait(1000);
     cy.get(':nth-child(20) > .dropdown-item > .flex-grow-1').click();
     cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click();
+    cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000)
     cy.get('th.ng-star-inserted').filter(':contains("Account Number")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Product Group")').scrollIntoView().should('be.visible');
@@ -6579,7 +6632,7 @@ clickonAllocatedVsAchived255() {
     cy.get('th.ng-star-inserted').filter(':contains("Sub Product")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Current Bucket")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("BOM Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Zone")').scrollIntoView().should('be.visible');
+    cy.get('th.ng-star-inserted').filter(':contains("Country")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
     cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
@@ -6606,19 +6659,20 @@ clickonAllocatedVsAchived255() {
     cy.get('th.ng-star-inserted').filter(':contains("Last Modified Date and Time")').scrollIntoView().should('be.visible');
 }
 clickonmoneymovementingistspage256() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.wait(3000);
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonbyGeography).click();
+    cy.get(this.locators.expand_all).click();
     cy.wait(1000);
     cy.scrollTo('bottom', { ensureScrollable: false });
     cy.wait(1000);
     // Select a random option
 
-    cy.get('#accordion-geography > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
+    // cy.get('#accordion-geography > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
     cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
     cy.wait(1000);
@@ -6685,9 +6739,9 @@ clickonmoneymovementingistspage256() {
     cy.wait(2000);
   }
   clickonmoneymovementingistspage257() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -6729,9 +6783,9 @@ clickonmoneymovementingistspage256() {
     cy.wait(2000);
   }
   clickonmoneymovementingistspage258() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -6804,9 +6858,9 @@ clickonmoneymovementingistspage256() {
     // cy.wait(2000);
   }
   clickonmoneymovementingistspage259() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(':nth-child(3) > .nav-link > span').click();
     cy.wait(1000);
@@ -6814,9 +6868,9 @@ clickonmoneymovementingistspage256() {
     cy.wait(2000);
   }
 clickonmoneymovementingistspage260() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(':nth-child(3) > .nav-link > span').click();
     cy.wait(1000);
@@ -6834,9 +6888,9 @@ clickonmoneymovementingistspage260() {
     cy.wait(1000);
 }
 clickonmoneymovementingistspage261() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(':nth-child(3) > .nav-link > span').click();
     cy.wait(1000);
@@ -6850,9 +6904,9 @@ clickonmoneymovementingistspage261() {
     cy.wait(1000);
 }
 clickonmoneymovementingistspage262() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(':nth-child(3) > .nav-link > span').click();
     cy.wait(1000);
@@ -6877,9 +6931,9 @@ clickonmoneymovementingistspage262() {
       
 }
 clickonmoneymovementingistspage263() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(':nth-child(3) > .nav-link > span').click({force:true});
     cy.wait(1000);
@@ -6916,9 +6970,9 @@ clickonmoneymovementingistspage263() {
 
 }
 clickonmoneymovementingistspage264() {
-    cy.get(this.locators.clickoninsight).click();
+    cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click();
+    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
     cy.get(':nth-child(3) > .nav-link > span').click();
     cy.wait(1000);

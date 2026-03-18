@@ -1,0 +1,3 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009603001,2005,Yes,PTP,PTP,2025-12-26,45,,Rejected agent test,776-623-4432 x8455,BTM,Bangalore,Electa_Jast@gmail.com,Permanent,New,01272026092936534,Error,Next action date cannot be less than current date
+DMI0009603002,2005,Yes,PTP,PTP,2025-12-26,45,,Rejected agent test,415.221.4405 x54861,BTM,Bangalore,Nicklaus1@yahoo.com,Permanent,New,01272026092936534,Error,Next action date cannot be less than current date

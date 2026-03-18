@@ -120,13 +120,17 @@
     "Select_trailGap_Region":":nth-child(6) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Select_trailGap_State":":nth-child(7) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Select_trailGap_City":":nth-child(8) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
-    "Select_trailGap_Branch":":nth-child(9) > .form-control-group > .form-ng-select > .ng-select-container"
+    "Select_trailGap_Branch":":nth-child(9) > .form-control-group > .form-ng-select > .ng-select-container",
+    "select_state":":nth-child(5) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "Product_Group":":nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "select_city":":nth-child(2) > :nth-child(8) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "select_staff":":nth-child(2) > :nth-child(9) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input"
 
 
      
   },
   "SystemSettingPage": {
-    "clickOnSystemSetting": "a[title='System Settings'] span[class='ng-star-inserted']",
+    "clickOnSystemSetting": "div.ng-scroll-content > ul.nav-list > li.nav-item",
     "ClickOnMasterUpload": "a[title='Masters Upload']",
     "ClickOnBUM": "a[title='Bulk Upload Masters']",
     "accountImportMaster": "a[title='Masters Upload']",
@@ -273,7 +277,8 @@
     "ClickOnAccNumber": "#search-account-number",
     "ClickOnResultAccNumber": ".link > a",
     "ClickOnToggle": "#toggleButton > img",
-    "ClickOnTrailHistory": ":nth-child(15) > .dropdown-item"
+    "ClickOnTrailHistory": ":nth-child(15) > .dropdown-item",
+    "state":":nth-child(5) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input"
   },
   "DashboardPage": {
     "Radio_cradit_card": "#cc-account-type",
@@ -387,7 +392,7 @@
     "ClickOnUserManagement": "[title='User Management'] > span.ng-star-inserted",
     "ClickOnAgentEmpanelment": ".user-management > :nth-child(2) > :nth-child(2) > a.ng-star-inserted",
     "ClickOnAddAgent": ".user-management > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(1) > a",
-    "ClickOnWalletLimit": ":nth-child(4) > .nav-link > span",
+    "ClickOnWalletLimit": ":nth-child(3) > .nav-link > span",
     "ClickOnSearchAgent": ".user-management > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(2) > a",
     "ClickOnSearchButton": "#btn-search",
     "ClickOnStaffEmpanelment": ".user-management > :nth-child(2) > :nth-child(3) > a.ng-star-inserted",

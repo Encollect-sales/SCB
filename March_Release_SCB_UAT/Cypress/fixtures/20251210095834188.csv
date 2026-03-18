@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1e1b44a92a51ce40ab1468320d012a,Telecaller,63142,Cheyenne,Stanton,cheyenne@yopmail.com,32!53@0049,Branch Backend,Branch Manager,Bangalore,True, | Mobile Number Only numbers are allowed

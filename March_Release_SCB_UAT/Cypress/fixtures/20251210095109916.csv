@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1e1b3de8a549b3f6676ac0d36f36d9,Telecaller,46897,,Kozey,kianna@yopmail.com,3964728824,Branch Backend,Branch Manager,Bangalore,True, | First Name is required

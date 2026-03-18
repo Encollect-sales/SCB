@@ -22,7 +22,7 @@ describe('Communication Module | Create Communication Template', () => {
 
   it('CFG_001 | Entry Point "Collections" shows only Agent as recipient type', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       loginPage.login(
         user.Companyname,

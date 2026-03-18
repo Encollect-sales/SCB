@@ -112,7 +112,7 @@ class ReportsPage {
     cy.wait(1000);
     cy.get(this.locators.paymentreport).click();
     cy.wait(1000);
-    cy.contains("Country(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+    cy.contains("Branch(s)").parent().find("ng-select .ng-select-container").click({ force: true });
     cy.get("span.ng-option-label").then($options => {
     const randomIndex = Math.floor(Math.random() * $options.length);
     cy.wrap($options[randomIndex]).click({ force: true });
@@ -125,40 +125,25 @@ class ReportsPage {
     cy.wait(1000);
     cy.get(this.locators.paymentreport).click();
     cy.wait(1000);
-    cy.contains("Country(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+    cy.contains("User Branch(s)").parent().find("ng-select .ng-select-container").click({ force: true });
     cy.get("span.ng-option-label").then($options => {
     const randomIndex = Math.floor(Math.random() * $options.length);
     cy.wrap($options[randomIndex]).click({ force: true });
 });
-    cy.contains("Region(s)").parent().find("ng-select .ng-select-container").click({ force: true });
-    cy.get("span.ng-option-label").then($options => {
-    const randomIndex = Math.floor(Math.random() * $options.length);
-    cy.wrap($options[randomIndex]).click({ force: true });
-});
+   
+
 
   }
 
   PaymentReport308(){
     cy.wait(1000);
     cy.get(this.locators.paymentreport).click();
-    cy.contains("Country(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+    cy.contains("Bucket(s)").parent().find("ng-select .ng-select-container").click({ force: true });
     cy.get("span.ng-option-label").then($options => {
     const randomIndex = Math.floor(Math.random() * $options.length);
     cy.wrap($options[randomIndex]).click({ force: true });
 });
-    cy.wait(1000);
-    cy.contains("Region(s)").parent().find("ng-select .ng-select-container").click({ force: true });
-    cy.get("span.ng-option-label").then($options => {
-    const randomIndex = Math.floor(Math.random() * $options.length);
-    cy.wrap($options[randomIndex]).click({ force: true });
-});
-   cy.wait(1000);
-    cy.contains("State(s)").parent().find("ng-select .ng-select-container").click({ force: true });
-    cy.get("span.ng-option-label").then($options => {
-    const randomIndex = Math.floor(Math.random() * $options.length);
-    cy.wrap($options[randomIndex]).click({ force: true });
-});
-
+    
 
   }
 
@@ -166,29 +151,41 @@ class ReportsPage {
     cy.wait(1000);
     cy.get(this.locators.paymentreport).click();
     cy.wait(1000);
-    cy.contains("Country(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+    cy.contains("Product Group(s)").parent().find("ng-select .ng-select-container").click({ force: true });
     cy.get("span.ng-option-label").then($options => {
     const randomIndex = Math.floor(Math.random() * $options.length);
     cy.wrap($options[randomIndex]).click({ force: true });
 });
     cy.wait(1000);
-    cy.contains("Region(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+    cy.contains("Product(s)").parent().find("ng-select .ng-select-container").click({ force: true });
     cy.get("span.ng-option-label").then($options => {
     const randomIndex = Math.floor(Math.random() * $options.length);
     cy.wrap($options[randomIndex]).click({ force: true });
 });
    cy.wait(1000);
-    cy.contains("State(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+    cy.contains("Sub Product(s)").parent().find("ng-select .ng-select-container").click({ force: true });
     cy.get("span.ng-option-label").then($options => {
     const randomIndex = Math.floor(Math.random() * $options.length);
     cy.wrap($options[randomIndex]).click({ force: true });
 });
     cy.wait(1000);
-    cy.contains("City(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+    cy.contains("Bucket(s)").parent().find("ng-select .ng-select-container").click({ force: true });
     cy.get("span.ng-option-label").then($options => {
     const randomIndex = Math.floor(Math.random() * $options.length);
     cy.wrap($options[randomIndex]).click({ force: true });
 });
+
+    cy.wait(1000);
+    cy.contains("Branch(s)").parent().find("ng-select .ng-select-container").click({ force: true });
+    cy.get("span.ng-option-label").then($options => {
+    const randomIndex = Math.floor(Math.random() * $options.length);
+    cy.wrap($options[randomIndex]).click({ force: true });
+});
+
+   cy.wait(1000);
+cy.contains("Receipt From Date").should("be.visible");
+cy.wait(1000);
+cy.contains("Receipt To Date").should("be.visible");
 
 
   }

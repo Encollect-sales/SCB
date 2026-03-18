@@ -1609,7 +1609,7 @@ cy.wait(1500);
 }
 
 UserManagementTestPage_113(){
-
+cy.wait()
   const filePath = "Cypress/fixtures/Aadhar.png";
 
   cy.get(this.locators.clickonusermanagement).click();
@@ -2197,7 +2197,10 @@ PanCardTestPage_01(){
   cy.wait(2000);
   cy.get(this.locators.Click_On_Submit).click();
   cy.wait(4000);
-  cy.get('tbody > :nth-child(2) > :nth-child(5) > .form-control-group > .form-check-group > label > input').click();
+  cy.get('tbody tr')
+    .first()
+    .find(':nth-child(5) .form-check-group input')
+    .check({ force: true });
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Edit).click();
   cy.wait(3000);
@@ -2227,7 +2230,6 @@ PanCardTestPage_01(){
         Cypress.env('generatedPAN', generatedPAN);  // Store it in Cypress.env
         return generatedPAN;
  }
-
 PanCardTestPage_02(){
 
   const generatedPAN = this.generateRandomPAN();
@@ -2238,7 +2240,7 @@ PanCardTestPage_02(){
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Search_Agency).click();
   cy.wait(2000);
-  cy.get(this.locators.Type_Agency_Name).type("Kinder");
+  cy.get(this.locators.Type_Agency_Name).type("Amber");
   cy.wait(2000);
   cy.get(this.locators.Select_Agency_status).select("Approved");
   cy.wait(2000);
@@ -2275,7 +2277,7 @@ PanCardTestPage_02a(){
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Search_Agency).click();
   cy.wait(2000);
-   cy.get(this.locators.Type_Agency_Name).type("Kinder");
+   cy.get(this.locators.Type_Agency_Name).type("Amber");
   cy.wait(2000);
   cy.get(this.locators.Select_Agency_status).select("Pending Approval");
   cy.wait(2000);
@@ -2287,7 +2289,7 @@ PanCardTestPage_02a(){
   cy.wait(2000);  
     cy.get('[role="alert"]').should('be.visible').and('contain', 'Agency Approved Successfully');
   cy.wait(4000);
-    cy.get(this.locators.Type_Agency_Name).clear().type("Kinder");
+    cy.get(this.locators.Type_Agency_Name).clear().type("Amber");
   cy.wait(2000);
   cy.get(this.locators.Select_Agency_status).select("Approved");
   cy.wait(2000);
@@ -2303,6 +2305,7 @@ PanCardTestPage_02a(){
   cy.wait(2000);
 
 }
+
 
 PanCardTestPage_03(){
 
@@ -2359,61 +2362,89 @@ PanCardTestPage_04(){
 
 }
 
-PanCardTestPage_05(){
+PanCardTestPage_05() {
 
- cy.get(this.locators.clickonusermanagement).click();
+  cy.get(this.locators.clickonusermanagement).click();
   cy.wait(1000);
-  cy.get(this.locators.clickonAgencyEmpanelRequest).click({force: true});
+
+  cy.get(this.locators.clickonAgencyEmpanelRequest).click({ force: true });
   cy.wait(2000);
+
   cy.get(this.locators.ClickOn_Search_Agency).click();
   cy.wait(2000);
-    cy.get(this.locators.Type_Agency_Name).type("Kinder");
-  cy.wait(2000);
+
   cy.get(this.locators.Select_Agency_status).select("Approved");
   cy.wait(2000);
+
   cy.get(this.locators.Click_On_Submit).click();
   cy.wait(4000);
-  cy.get('tbody > :nth-child(2) > :nth-child(5) > .form-control-group > .form-check-group > label > input').click();
+
+  // ⭐ STEP 1 — Click first row checkbox AND store row index
+  cy.get('tbody tr').first().then(($row) => {
+    const rowIndex = $row.index();
+    cy.wrap(rowIndex).as('selectedRowIndex');
+
+    cy.wrap($row)
+      .find(':nth-child(5) .form-check-group input')
+      .check({ force: true });
+  });
+
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Edit).click();
   cy.wait(3000);
+
   cy.contains("Edit Agency").should("be.visible");
   cy.wait(2000);
 
+  // Copy PAN value
   cy.get(this.locators.ClickOn_Pancard).invoke("val").as("copiedPan");
-cy.wait(2000);
+  cy.wait(2000);
 
+  // Edit PAN and cancel
   cy.get(this.locators.ClickOn_Pancard).clear();
   cy.wait(2000);
+
   cy.get(this.locators.ClickOn_Pancard).type("BNZAA1234F");
-  cy.wait(2000);  
-   cy.get(this.locators.Clickon_Cancel_afteredit).click();
   cy.wait(2000);
 
-    cy.get(this.locators.ClickOn_Search_Agency).click();
+  cy.get(this.locators.Clickon_Cancel_afteredit).click();
   cy.wait(2000);
-    cy.get(this.locators.Type_Agency_Name).type("Kinder");
+
+  // Search again
+  cy.get(this.locators.ClickOn_Search_Agency).click();
   cy.wait(2000);
+
   cy.get(this.locators.Select_Agency_status).select("Approved");
   cy.wait(2000);
+
   cy.get(this.locators.Click_On_Submit).click();
   cy.wait(4000);
-  cy.get('tbody > :nth-child(2) > :nth-child(5) > .form-control-group > .form-check-group > label > input').click();
+
+  // ⭐ STEP 2 — Click SAME row checkbox again using saved index
+  cy.get('@selectedRowIndex').then((rowIndex) => {
+    cy.get('tbody tr')
+      .eq(rowIndex)
+      .find(':nth-child(5) .form-check-group input')
+      .check({ force: true });
+  });
+
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Edit).click();
   cy.wait(3000);
+
   cy.contains("Edit Agency").should("be.visible");
   cy.wait(1000);
-  
-  cy.get("@copiedPan").then((panValue) => {
-  cy.get(this.locators.ClickOn_Pancard)
-    .invoke("val")
-    .should("eq", panValue);
-});
-cy.wait(2000);
-   
 
+  // Verify PAN is unchanged after cancel
+  cy.get("@copiedPan").then((panValue) => {
+    cy.get(this.locators.ClickOn_Pancard)
+      .invoke("val")
+      .should("eq", panValue);
+  });
+
+  cy.wait(2000);
 }
+
 
 PanCardTestPage_06(){
 
@@ -2447,44 +2478,51 @@ PanCardTestPage_07(){
 
 }
 
-PanCardTestPage_08(){
+PanCardTestPage_08() {
 
   cy.get(this.locators.clickonusermanagement).click();
   cy.wait(1000);
-  cy.get(this.locators.clickonAgencyEmpanelRequest).click({force: true});
+  cy.get(this.locators.clickonAgencyEmpanelRequest).click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Search_Agency).click();
-  cy.wait(2000);
-  cy.get(this.locators.Type_Agency_Name).type("Kinder");
   cy.wait(2000);
   cy.get(this.locators.Select_Agency_status).select("Approved");
   cy.wait(2000);
   cy.get(this.locators.Click_On_Submit).click();
   cy.wait(4000);
-  cy.get('tbody > :nth-child(2) > :nth-child(5) > .form-control-group > .form-check-group > label > input').click();
+
+  // ⭐ Stable checkbox click (dynamic table fix)
+  cy.get('tbody tr')
+    .first()
+    .find(':nth-child(5) .form-check-group input')
+    .check({ force: true });
+
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Edit).click();
   cy.wait(3000);
+
   cy.contains("Edit Agency").should("be.visible");
   cy.wait(1000);
+
   cy.get(':nth-child(8) > .nav-link > span').click();
   cy.wait(2000);
 
   const today = new Date().toLocaleDateString("en-US", {
-  month: "short",
-  day: "numeric",
-  year: "numeric",
-});
-cy.contains(today).should("be.visible");
-cy.wait(2000);
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+
+  cy.contains(today).should("be.visible");
+  cy.wait(2000);
+
   cy.contains("AgencyApproved").should("be.visible");
   cy.wait(2000);
+
   cy.contains("AgencyPendingApproval").should("be.visible");
   cy.wait(2000);
-
-
-
 }
+
 
 
 }

@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1eae566905a9250ba7098b62c52989,FOS,83709,Coralie,,coralie@yopmail.com,2263398719,Audit and Risk,Audit Manager,Bangalore,True, | Last Name is required

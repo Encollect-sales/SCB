@@ -954,8 +954,7 @@ class Trailspage {
     cy.wait(4000);
     cy.contains("Failed").should("be.visible");
     cy.wait(1000);
-    cy.get('tbody > .ng-star-inserted > :nth-child(4) > a').click();
-    cy.wait(5000);
+ 
   
   
   }

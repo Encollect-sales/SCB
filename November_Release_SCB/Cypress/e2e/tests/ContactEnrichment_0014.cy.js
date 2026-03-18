@@ -27,7 +27,7 @@ describe('CE_BCU_014 - Negative – Mobile number with incorrect length', () => 
 
   it('CE_BCU_014 - Upload template with incorrect length mobile number', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       // ---------------- Step 1: Login ----------------
       loginPage.login(user.Companyname, user.email, user.password);
@@ -46,13 +46,13 @@ describe('CE_BCU_014 - Negative – Mobile number with incorrect length', () => 
       });
 
       // ---------------- Test Data ----------------
-      const shortMobileNumber = '12345';          // ❌ Too short
+      const shortMobileNumber = '123';          // ❌ Too short
       // const longMobileNumber = '1234567890123'; // ❌ Too long (use this if needed)
 
       const randomAddress = faker.location.streetAddress();
 
       const data = {
-        'A2': '14007',            // Agreement ID
+        'A2': '1667',            // Agreement ID
         'B2': 'Office',           // Contact Type
         'C2': randomAddress,      // Address (faker)
         'D2': shortMobileNumber   // ❌ Invalid mobile length

@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1e1b485fff978280544cc56fbe7463,Telecaller,10421,Hershel,Grady,hershel@yopmail.com,2886872143,Audit and Branch,Audit Manager,Bangalore,True, | Department is invalid

@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1f38a5a80b95f7947100bef6ca1e13,Telecaller,51589,Laverna,Schultz,laverna@yopmail.com,32!53@0049,Branch Backend,Branch Manager,Bangalore,True, | Mobile Number Only numbers are allowed

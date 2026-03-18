@@ -70,7 +70,7 @@ describe('Trails - Invalid Agreement ID. Spaces are not allowed.', () => {
                                         const fixturesFolder = 'cypress/fixtures';
                                         const excelFileName = 'Bulktrail.xlsx';
                                         const sourceFilePath = path.join(downloadsFolder, excelFileName);
-                                        const destFilePath = path.join(fixturesFolder, excelFileName);
+                                       
                             
                                         // Update Excel File
                                         cy.task('updateBulktrailCell', {

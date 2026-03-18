@@ -4,7 +4,7 @@ import LoginPage from '../pages/LoginPage';
 import { getLocators } from '../utils/locatorUtils';
 import CommunicationPage from '../pages/CommunicationPage'
 
-describe('TC_ID_186 - Communication - Create communication Template type Letter with multiple language "Hindi and English" and allow access from account details Yes', () => {
+describe('TC_ID_186 - Communication - Create communication Template type Letter with multiple language "Hindi and English"', () => {
     let loginPage;
     let communicationPage; 
 

@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-03-10T18:04:55.479Z",
+    "end": "2026-03-10T18:05:53.383Z",
+    "duration": 57904,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "29931c82-b81b-49fb-bc5d-64ec3ff09398",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AccountDetailsTestPage_110.cy.js",
+      "file": "cypress\\e2e\\tests\\AccountDetailsTestPage_110.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d8fa2db1-1c08-4324-a59a-1b6ef681a0dd",
+          "title": "Account Details -Trail History Report",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Account Details - TC_ID_110 - Trail History Report",
+              "fullTitle": "Account Details -Trail History Report Account Details - TC_ID_110 - Trail History Report",
+              "timedOut": null,
+              "duration": 53877,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  accountdetailspage.AccountDetailsTestPage_110();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Too many elements found. Found '7', expected '5'.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Too many elements found. Found '7', expected '5'.\n    at AccountDetailsPage.AccountDetailsTestPage_110 (webpack://encollect_web/./cypress/e2e/pages/AccountDetailsPage.js:911:5)\n    at Context.eval (webpack://encollect_web/./cypress/e2e/tests/AccountDetailsTestPage_110.cy.js:27:36)\n    at getRet (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": "- 7\n+ 5\n"
+              },
+              "uuid": "9a41ad07-4bc5-421a-a425-8f9a8ae66f80",
+              "parentUUID": "d8fa2db1-1c08-4324-a59a-1b6ef681a0dd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9a41ad07-4bc5-421a-a425-8f9a8ae66f80"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 53877,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

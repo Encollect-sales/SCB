@@ -1008,7 +1008,7 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1228(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.get(this.locators.clickOnSystemSetting).click({force:true});
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click({force:true});
     cy.wait(2000);
@@ -1036,9 +1036,9 @@ cy.wait(2000);
     // cy.wait(800);
   }
   SystemSettingTestPage_1305(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.get('[title="System Settings"]').click({force:true});
       cy.wait(2000);
-      cy.get(this.locators.accountImportMaster).click();
+      cy.get(this.locators.accountImportMaster).click({force:true});
       cy.wait(2000);
       cy.get(this.locators.uploadAccountImportMaster).click({force:true});
       cy.wait(2000);
@@ -1404,7 +1404,7 @@ cy.wait(2000);
     cy.wait(800);
     cy.get(this.locators.ClickDipoSlip).click();
     cy.wait(2000);
-    cy.get(this.locators.Banknumber).select('324550',{force:true}).should('contain','324550');
+    cy.get(this.locators.Banknumber).select('324550',{force:true}).should('contain','XX4550');
     cy.wait(800);
     cy.get(this.locators.Bankname).select('My Bank',{force:true}).should('contain','My Bank');
     cy.wait(800);
@@ -1419,7 +1419,7 @@ cy.wait(2000);
     cy.wait(800);
     cy.get(this.locators.ClickDipoSlip).click();
     cy.wait(2000);
-    cy.get(this.locators.Banknumber).select('324550',{force:true}).should('contain','324550');
+    cy.get(this.locators.Banknumber).select('324550',{force:true}).should('contain','XX4550');
     cy.wait(800);
     cy.get(this.locators.Bankname).select('My Bank',{force:true}).should('contain','My Bank');
     cy.wait(800);
@@ -2290,9 +2290,9 @@ cy.wait(2000);
     
 
   SystemSettingTestPage_1305(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.get('[title="System Settings"]').click({force:true});
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.get(this.locators.accountImportMaster).click({force:true});
     cy.wait(2000);
     cy.get(this.locators.uploadAccountImportMaster).click({force:true});
     cy.wait(2000);

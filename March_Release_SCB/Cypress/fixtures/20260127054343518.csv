@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1f118c97bb6c884fbabd94e0aca3f6,Telecaller,27754,Ebony,Grady,ebony@yopmail.com,32!53@0049,Branch Backend,Branch Manager,Bangalore,True, | Mobile Number Only numbers are allowed

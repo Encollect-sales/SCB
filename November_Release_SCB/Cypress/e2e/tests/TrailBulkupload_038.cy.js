@@ -30,7 +30,7 @@ describe('Trail Scenarios - PTP Bulk Upload', () => {
   // =====================================================
   it('TC_ID_038 - PTP account bulk upload with random PTP amount (1–100)', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       // ---------------- Login ----------------
       loginPage.login(user.Companyname, user.email, user.password);
@@ -55,11 +55,11 @@ describe('Trail Scenarios - PTP Bulk Upload', () => {
       const data = {
         'A2': 'DMI0009590352',      // Agreement id
         'B2': '1174',               // Agent ENCollect Code
-        'C2': 'ss',                 // RightPartyContact
+        'C2': 'yes',                 // RightPartyContact
         'D2': 'PTP',                // Action Code
         'D2': 'PTP',                // Action Code
         'E2': 'PTP',                // ResultCode
-        'F2': '2025/12/26',         // Next Action Date
+        'F2': '2026/12/26',         // Next Action Date
         'G2': ptpAmount,            // ✅ Random PTP Amount (1–100)
         'H2': '',                   // NextActionCode
         'I2': 'Bulk upload Aug29',  // Remarks

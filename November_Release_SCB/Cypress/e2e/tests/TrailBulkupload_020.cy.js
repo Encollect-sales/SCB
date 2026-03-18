@@ -25,7 +25,7 @@ describe('BULKTRL_020 - Upload empty file (0 records)e', () => {
 
   it('should show an error and prevent processing when a empty file is uploaded', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       // ---------------- Login ----------------
       loginPage.login(user.Companyname, user.email, user.password);

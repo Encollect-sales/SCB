@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1e1b498e3e8957da96af3506802b04,FOS,59298,Penelope,Moen,penelope@yopmail.com,7465001941,Branch Backend,,Bangalore,True, | Designation is Required

@@ -209,7 +209,8 @@
       "ClickOnBucketHead":"[heading='Bucket'] > .panel > .panel-heading > .panel-title",
       "ClickOnBucket":"ng-select[placeholder='Search and select your Bucket(s)'] input[role='combobox']",
 
-      "SelectAgencyReportManager":"#reportingManager > .ng-select-container > .ng-value-container > .ng-input > input"
+      "SelectAgencyReportManager":"#reportingManager > .ng-select-container > .ng-value-container > .ng-input > input",
+      "select_fifty":".pagination-count > .form-select"
 
   },
 
@@ -319,7 +320,8 @@
     "ClickOn_PaymentReport_AgencyRadio":"#agencyUserRadio",
      "Click_PaymentReport_Agency_Productgroup":":nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Click_PaymentReport_Agency_Bucket":":nth-child(4) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
-    "Click_PaymentReport_Agency_Branch":":nth-child(9) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "Click_PaymentReport_Agency_Branch":":nth-child(5) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+
 
     "ClickOn_Moneymovement_Report":".reports > :nth-child(2) > :nth-child(4) > .ng-star-inserted",
 
@@ -337,8 +339,8 @@
 
      "Click_Performance_Productgroup":":nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Click_Performance_Bucket":":nth-child(4) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "Click_Performance_Report":":nth-child(2) > :nth-child(6) > .sub-nav-list > :nth-child(1) > a",
     "Click_Performance_Branch":":nth-child(5) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
-
     "ClickOn_Supervisory_Report":":nth-child(2) > :nth-child(9) > .ng-star-inserted",
 
       "Click_Supervisory_Productgroup":":nth-child(1) > .form-select",

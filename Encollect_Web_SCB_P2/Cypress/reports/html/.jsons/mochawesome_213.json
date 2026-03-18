@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-03-10T21:38:41.308Z",
+    "end": "2026-03-10T21:39:27.689Z",
+    "duration": 46381,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9ffb87be-5ee7-4f07-98e6-eb0ae03f9d84",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\InsightsTrailGapPageTest_058.cy.js",
+      "file": "cypress\\e2e\\tests\\InsightsTrailGapPageTest_058.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1882fa8d-b752-4190-911b-74627bcb0164",
+          "title": "TC58 - Trail Gap Insights - Trail Gap Insights - check bottom 10 graph",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC58 - Trail Gap Insights - Trail Gap Insights - check bottom 10 and graph",
+              "fullTitle": "TC58 - Trail Gap Insights - Trail Gap Insights - check bottom 10 graph TC58 - Trail Gap Insights - Trail Gap Insights - check bottom 10 and graph",
+              "timedOut": null,
+              "duration": 42073,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  insightsPage.clickonTrailGapInsights058();\n  // loginPage.logout();         \n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[title='Insights'] span[class='ng-star-inserted']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `a[title='Insights'] span[class='ng-star-inserted']`, but never found it.\n    at InsightsPage.clickonTrailGapInsights058 (webpack://encollect_web/./cypress/e2e/pages/InsightsPage.js:1557:7)\n    at Context.eval (webpack://encollect_web/./cypress/e2e/tests/InsightsTrailGapPageTest_058.cy.js:26:29)\n    at getRet (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "e5a00a72-277e-434f-afb9-0647e10c353c",
+              "parentUUID": "1882fa8d-b752-4190-911b-74627bcb0164",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "e5a00a72-277e-434f-afb9-0647e10c353c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 42073,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

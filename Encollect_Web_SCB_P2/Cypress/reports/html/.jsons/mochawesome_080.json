@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-10T18:58:43.632Z",
+    "end": "2026-03-10T18:59:28.239Z",
+    "duration": 44607,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "45da8351-f462-406f-a9b2-53ccbbb5bab7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocatedVsAchievedinsightsPageTest_96.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocatedVsAchievedinsightsPageTest_96.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6e6192b8-878a-4d95-9983-77f3cea10c60",
+          "title": "TC96- Allocated vs Achieved Insights-Allocated vs Achieved Insights  - check the  Top 10 Field Primary by Total Accounts Collected ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC95 - Allocated vs Achieved Insights-Allocated vs Achieved Insights  - check tha  Top 10 Field Primary by Total Accounts Collected graph ",
+              "fullTitle": "TC96- Allocated vs Achieved Insights-Allocated vs Achieved Insights  - check the  Top 10 Field Primary by Total Accounts Collected  TC95 - Allocated vs Achieved Insights-Allocated vs Achieved Insights  - check tha  Top 10 Field Primary by Total Accounts Collected graph ",
+              "timedOut": null,
+              "duration": 41149,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  insightsPage.clickonAllocatedVsAchived096();\n  // loginPage.logout();         \n});",
+              "err": {},
+              "uuid": "44e3171c-c096-4277-9f71-e7234baa3723",
+              "parentUUID": "6e6192b8-878a-4d95-9983-77f3cea10c60",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "44e3171c-c096-4277-9f71-e7234baa3723"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 41149,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

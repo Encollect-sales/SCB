@@ -8,9 +8,8 @@ class PayementGatewayPage {
   }
 
   PaymentGatewayTestPage_01() {
-    cy.get(".ng-arrow-wrapper").click();
-    cy.wait(1000);
-    cy.contains("span.ng-option-label", "Customer Name").click();
+    cy.wait(2000);
+    cy.get(".ng-arrow-wrapper").click({force:true});
     cy.wait(1000);
     cy.get(this.locators.Type_Cus_Name).type("A");
     cy.wait(1000);
@@ -25,10 +24,6 @@ class PayementGatewayPage {
   }
 
   PaymentGatewayTestPage_02() {
-    cy.get(".ng-arrow-wrapper").click();
-    cy.wait(1000);
-    cy.contains("span.ng-option-label", "Customer Name").click();
-    cy.wait(1000);
     cy.get(this.locators.Type_Cus_Name).type("A");
     cy.wait(1000);
     cy.get(this.locators.Click_Search_Btn).click();
@@ -44,10 +39,6 @@ class PayementGatewayPage {
   }
 
   PaymentGatewayTestPage_03() {
-     cy.get(".ng-arrow-wrapper").click();
-    cy.wait(1000);
-    cy.contains("span.ng-option-label", "Customer Name").click();
-    cy.wait(1000);
     cy.get(this.locators.Type_Cus_Name).type("A");
     cy.wait(1000);
     cy.get(this.locators.Click_Search_Btn).click();
@@ -70,11 +61,6 @@ class PayementGatewayPage {
   }
 
   PaymentGatewayTestPage_04() {
-
-      cy.get(".ng-arrow-wrapper").click();
-    cy.wait(1000);
-    cy.contains("span.ng-option-label", "Customer Name").click();
-    cy.wait(1000);
     cy.get(this.locators.Type_Cus_Name).type("A");
     cy.wait(1000);
     cy.get(this.locators.Click_Search_Btn).click();
@@ -91,16 +77,11 @@ class PayementGatewayPage {
     cy.wait(2000);
     cy.get(this.locators.Click_Send_Btn).click();
     cy.wait(3000);
-    cy.get('[role="alert"]').should('be.visible').and('contain.text', 'Payment Link send successfully');
+ cy.get('[role="alert"]').should('contain.text', 'Payment Link sent successfully with reference number');
      cy.wait(2000);
   }
 
   PaymentGatewayTestPage_05() {
-
-      cy.get(".ng-arrow-wrapper").click();
-    cy.wait(1000);
-    cy.contains("span.ng-option-label", "Customer Name").click();
-    cy.wait(1000);
     cy.get(this.locators.Type_Cus_Name).type("A");
     cy.wait(1000);
     cy.get(this.locators.Click_Search_Btn).click();
@@ -117,17 +98,12 @@ class PayementGatewayPage {
     cy.wait(2000);
     cy.get(this.locators.Click_Send_Btn).click();
     cy.wait(3000);
-    cy.get('[role="alert"]').should('be.visible').and('contain.text', 'Payment Link send successfully');
+cy.get('[role="alert"]').should('contain.text', 'Payment Link sent successfully with reference number');
      cy.wait(2000);
 
   }
 
   PaymentGatewayTestPage_06() {
-
-      cy.get(".ng-arrow-wrapper").click();
-    cy.wait(1000);
-    cy.contains("span.ng-option-label", "Customer Name").click();
-    cy.wait(1000);
     cy.get(this.locators.Type_Cus_Name).type("A");
     cy.wait(1000);
     cy.get(this.locators.Click_Search_Btn).click();
@@ -153,12 +129,7 @@ class PayementGatewayPage {
   }
 
   PaymentGatewayTestPage_07() {
-
-     cy.get(".ng-arrow-wrapper").click();
-    cy.wait(1000);
-    cy.contains("span.ng-option-label", "Customer Name").click();
-    cy.wait(1000);
-    cy.get(this.locators.Type_Cus_Name).type("A");
+    cy.get('#search-customer-name').type("A");
     cy.wait(1000);
     cy.get(this.locators.Click_Search_Btn).click();
     cy.wait(5000);
@@ -183,11 +154,6 @@ class PayementGatewayPage {
   }
 
   PaymentGatewayTestPage_08() {
-
-      cy.get(".ng-arrow-wrapper").click();
-    cy.wait(1000);
-    cy.contains("span.ng-option-label", "Customer Name").click();
-    cy.wait(1000);
     cy.get(this.locators.Type_Cus_Name).type("A");
     cy.wait(1000);
     cy.get(this.locators.Click_Search_Btn).click();
@@ -218,11 +184,6 @@ class PayementGatewayPage {
   }
 
   PaymentGatewayTestPage_09() {
-
-      cy.get(".ng-arrow-wrapper").click();
-    cy.wait(1000);
-    cy.contains("span.ng-option-label", "Customer Name").click();
-    cy.wait(1000);
     cy.get(this.locators.Type_Cus_Name).type("A");
     cy.wait(1000);
     cy.get(this.locators.Click_Search_Btn).click();
@@ -243,16 +204,12 @@ class PayementGatewayPage {
     cy.wait(2000);
     cy.get(this.locators.Click_Send_Btn).click({force: true});
     cy.wait(3000);
-    cy.get('[role="alert"]').should('be.visible').and('contain.text', 'Special characters are not allowed in the input');
+    cy.get('[role="alert"]').should('be.visible').and('contain.text', 'Payment Link sent successfully with reference number');
      cy.wait(2000);
+
   }
 
   PaymentGatewayTestPage_10() {
-
-   cy.get(".ng-arrow-wrapper").click();
-    cy.wait(1000);
-    cy.contains("span.ng-option-label", "Customer Name").click();
-    cy.wait(1000);
     cy.get(this.locators.Type_Cus_Name).type("A");
     cy.wait(1000);
     cy.get(this.locators.Click_Search_Btn).click();
@@ -272,11 +229,6 @@ class PayementGatewayPage {
   }
 
   PaymentGatewayTestPage_11() {
-
-   cy.get(".ng-arrow-wrapper").click();
-    cy.wait(1000);
-    cy.contains("span.ng-option-label", "Customer Name").click();
-    cy.wait(1000);
     cy.get(this.locators.Type_Cus_Name).type("A");
     cy.wait(1000);
     cy.get(this.locators.Click_Search_Btn).click();

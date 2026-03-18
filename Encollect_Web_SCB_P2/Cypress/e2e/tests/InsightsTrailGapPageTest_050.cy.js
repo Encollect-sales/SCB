@@ -16,7 +16,7 @@ describe('TC50 - Trail Gap Insights - Trail Gap Insights', () => {
         });
 
         getLocators('Insights').then(locators => {  
-            insightsPage = new InsightsPage(locators); s
+            insightsPage = new InsightsPage(locators);
         });
     });
 

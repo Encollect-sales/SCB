@@ -5,7 +5,7 @@ import { getLocators } from '../utils/locatorUtils';
 import InsightsPage from '../pages/InsightsPage';
 
 
-describe('TC67 - Trail Gap Insights - Trail Gap Insights - check Attempted vs Unattempted Accounts by Product graph', () => {
+describe('TC67 - Trail Gap Insights - Trail Gap Insights - check Top 5 Under Performing Field Primary Accounts (Unattempted %) graph', () => {
     let loginPage;
     let insightsPage; 
 

@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1e1b471a361d9682ff78a8568c02e4,Telecaller,58929,Dante,Willms,dante@yopmail.com,6878459888,,Audit Manager,Bangalore,True, | Department is Required

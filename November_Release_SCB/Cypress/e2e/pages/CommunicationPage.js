@@ -6,38 +6,34 @@ class CommunicationPage {
   constructor(locators) {
     this.locators = locators;
   }
-  CFG_001_Collections_EntryPoint_RecipientType() {
+ CFG_001_Collections_EntryPoint_RecipientType() {
 
   // Navigate to Communication Module
   cy.get('[title="Communication"]').click({ force: true });
-  cy.wait(2000);
   cy.contains('Create Communication Template').click({ force: true });
-  cy.wait(2000);
-  // Select Entry Point = Collections
-  cy.get(this.locators.entry_point_dropdown).select('Collection');
-  cy.wait(2000);
-  // Open Recipient Type dropdown
-cy.get(this.locators.recipient_type_dropdown)
+
+  // Select Entry Point = Collection
+  cy.get(this.locators.entry_point_dropdown)
     .should('be.visible')
-    .find('option')
-    .then($options => {
-
-      // Remove placeholder if present
-      const values = [...$options]
-        .map(o => o.text.trim())
-        .filter(text => text && !text.toLowerCase().includes('select'));
-
-      // Only Agent should be available
-      expect(values).to.have.length(1);
-      expect(values[0]).to.eq('Agent');
-    });
+    .select('Collection');
+  cy.wait(2000);
+  cy.get(this.locators.channel_type).should('be.visible')
+    .select('Email');
+  // Wait until Recipient Type dropdown is populated
+  cy.get(this.locators.recipient_type_dropdown).select('Agent').should('be.visible');
+    
+   
 }
+
+
 
 CFG_002_Collections_TriggerType_OnXDaysDelayedDeposit() {
 
   cy.get('[title="Communication"]').click({ force: true });
   cy.wait(2000);
   cy.contains('Create Communication Trigger').click({ force: true });
+  cy.wait(2000);
+  cy.get(this.locators.entry_point).select('Collection');
   cy.wait(2000);
   cy.get(this.locators.Trigger_type).click({force:true});
    cy.contains(
@@ -63,15 +59,14 @@ CFG_003_Collections_XValue_Mandatory_Positive() {
   cy.get('[title="Communication"]').click({ force: true });
   cy.contains('Create Communication Trigger').click({ force: true });
   cy.wait(2000);
-  cy.get(this.locators.Trigger_type).click({force:true});
-
+  cy.get(this.locators.triggertype).click({force:true});
+  cy.wait(2000);
   cy.get(this.locators.x_value_input)
     .should('be.visible')
     .and('be.enabled');
 
   // Enter valid positive numeric value
   cy.get(this.locators.x_value_input)
-
     .type('3')
     .should('have.value', '3');
 
@@ -87,7 +82,7 @@ CFG_004_Collections_XValue_Blank_Or_NonNumeric_NotAllowed() {
   cy.get('[title="Communication"]').click({ force: true });
   cy.contains('Create Communication Trigger').click({ force: true });
   cy.wait(2000);
-  cy.get(this.locators.Trigger_type).click({force:true});
+  cy.get(this.locators.triggertype).click({force:true});
 
   // ---- Case 1: Blank X Value ----
   cy.get(this.locators.x_value_input)

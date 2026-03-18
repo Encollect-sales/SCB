@@ -30,7 +30,7 @@ describe('Agency Reporting Manager Dropdown Validation', () => {
  
   it('RM_0022 | Cross-agency manager not allowed', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       loginPage.login(user.Companyname, user.email, user.password);
       cy.wait(2000);

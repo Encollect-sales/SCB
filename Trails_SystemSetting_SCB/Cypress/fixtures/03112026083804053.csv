@@ -1,0 +1,2 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+18765,10031,yes,PTP,Kamna,2027-12-22,109, ,Bulk upload,7307584472,New Ozella,90708 N Poplar Street,rslpbkeg@yopmail.com,permenant,new,03112026083804053,Error,Invalid DispositionCode

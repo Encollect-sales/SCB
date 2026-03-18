@@ -20,7 +20,7 @@ describe('TC64 - Trail Gap Insights - Trail Gap Insights - check Attempted vs Un
         });
     });
 
-    it('TC64 - Trail Gap Insights - Trail Gap Insights - check Attempted vs Unattempted Accounts by Region graph', () => {
+    it('TC64 - Trail Gap Insights - Trail Gap Insights - check Attempted vs Unattempted Accounts  graph', () => {
         getTestData('loginData', 'login').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
                 insightsPage.clickonTrailGapInsights064();

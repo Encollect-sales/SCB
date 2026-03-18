@@ -1,0 +1,3 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009810001,,Yes,PTP,PTP,2025-12-26,88,,Blank agent ID,361-264-4442,BTM,Bangalore,Lenore_Quitzon60@gmail.com,Permanent,New,01272026085827803,Error,Next action date cannot be less than current date
+DMI0009810002,,Yes,PTP,PTP,2025-12-26,88,,Null agent ID,1-924-632-1773,HSR,Bangalore,Keven.Lang42@gmail.com,Permanent,New,01272026085827803,Error,Next action date cannot be less than current date

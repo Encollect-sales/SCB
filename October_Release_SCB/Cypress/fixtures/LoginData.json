@@ -3,31 +3,31 @@
   "login": {
     "Companyname": "ENCollect",
   "email": "testinginsight@yopmail.com",
-      "password": "123@zxZX"
+      "password": "123@qaQA"
   },
 
   "login1": {
     "Companyname": "ENCollect",
-   "email": "vatsalstaff07@yopmail.com",
-    "password": "123@akAK" 
+   "email": "kamalesh@yopmail.com",
+      "password": "123@qaQA"
   },
 
 
   "Repologin1": {
     "Companyname": "ENCollect",
      "email": "recoveryofficer@yopmail.com",
-      "password": "123@asAS"
+      "password": "123@saSA"
   },
 
   "Repologin2": {
     "Companyname": "ENCollect",
-     "email": "rahmat07@yopmail.com",
-      "password": "123@asAS"
+     "email": "religionalcollection@yopmail.com",
+      "password": "123@saSA"
   },
   
   "Repologin3": {
     "Companyname": "ENCollect",
-     "email": "vatsalstaff07@yopmail.com",
+     "email": "opsmanager@yopmail.com",
       "password": "123@asAS"
   }
 

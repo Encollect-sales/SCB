@@ -1,0 +1,2 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009602001,10032,Yes,PTP,PTP,2025-12-26,59,,Saved as Draft agent test,(551) 812-7917 x207,BTM,Bangalore,Raven_Stracke10@yahoo.com,Permanent,New,02112026014903815,Error,Next action date cannot be less than current date

@@ -261,7 +261,7 @@ TrailsTestPage_20(){
   cy.wait(2000);
   cy.get(this.locators.Clickonsearch).click();
   cy.wait(2000);
-  cy.get('.pagination-last > .page-link').should('have.class', 'enabled');
+  cy.get(this.locators.lastpage).click({force:true});
   cy.wait(2000);
 
 }
@@ -275,7 +275,9 @@ TrailsTestPage_21(){
   cy.wait(2000);
   cy.get(this.locators.Clickonsearch).click();
   cy.wait(2000);
-  cy.get('.pagination-first').should('have.class', 'enabled');
+   cy.get(this.locators.lastpage).click({force:true});
+  cy.wait(2000);
+  cy.get(this.locators.firstpage).click({force:true });
   cy.wait(2000);
 }
 

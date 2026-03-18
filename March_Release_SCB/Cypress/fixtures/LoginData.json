@@ -2,18 +2,18 @@
   "login": {
     "Companyname": "ENCollect",
      "email": "kamalesh@yopmail.com",
-      "password": "123@asAS"
+      "password": "123@qaQA"
   },
   
 
   "login1": {
     "Companyname": "ENCollect",
-    "email": "kamalesh@yopmail.com",
-      "password": "123@asAS"
+     "email": "staffautomationsix@yopmail.com",
+    "password": "123@asAS" 
   },
   "login2": {
     "Companyname": "ENCollect",
-   "email": "kamalesh@yopmail.com",
-      "password": "123@asAS"
+    "email": "staffautomationsix@yopmail.com",
+    "password": "123@asAS" 
   }
 }

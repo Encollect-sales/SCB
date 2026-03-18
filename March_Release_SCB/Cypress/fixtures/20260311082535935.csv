@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1fef923eccb04aa6c4c1442b565009,Telecaller,50182,Emmalee,Stokes,emmalee@yopmail.com,7685099331,Audit and Branch,Audit Manager,Bangalore,True, | Department is invalid

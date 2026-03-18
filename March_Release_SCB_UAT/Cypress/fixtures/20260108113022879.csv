@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1eae5df572fb1028679a753dd9f6ea,Telecaller,79693,Elza,Beier,elza@yopmail.com,4665267160,,Audit Manager,Bangalore,True, | Department is Required

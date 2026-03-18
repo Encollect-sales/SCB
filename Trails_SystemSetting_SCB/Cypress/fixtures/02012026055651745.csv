@@ -1,0 +1,2 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+18765,10031,yes,PTP,Kamna,2027-12-22,109, ,Bulk upload,2209792961,East Taureanfurt,601 Beech Drive,rggcscim@yopmail.com,permenant,new,02012026055651745,Error,Invalid DispositionCode

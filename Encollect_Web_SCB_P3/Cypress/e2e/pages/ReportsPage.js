@@ -4254,29 +4254,29 @@ cy.get('#generate-report-button').click();
       });
     cy.wait(2000);
 
-      cy.get(this.locators.Select_trailGap_City).click();
+      cy.get(this.locators.select_city).click();
     cy.wait(2000);
 
      cy.get('.ng-dropdown-panel .ng-option')
       .each(($option) => {
         cy.wrap($option).click({ force: true });
         cy.wait(2000);
-        cy.get(this.locators.Select_trailGap_City).click();
+        cy.get(this.locators.select_city).click();
         cy.wait(2000);
       });
     cy.wait(2000);
 
-      cy.get(this.locators.Select_trailGap_Branch).click();
-    cy.wait(2000);
+    //   cy.get(this.locators.Select_trailGap_Branch).click();
+    // cy.wait(2000);
 
-     cy.get('.ng-dropdown-panel .ng-option')
-      .each(($option) => {
-        cy.wrap($option).click({ force: true });
-        cy.wait(2000);
-        cy.get(this.locators.Select_trailGap_Branch).click();
-        cy.wait(2000);
-      });
-    cy.wait(2000);
+    //  cy.get('.ng-dropdown-panel .ng-option')
+    //   .each(($option) => {
+    //     cy.wrap($option).click({ force: true });
+    //     cy.wait(2000);
+    //     cy.get(this.locators.Select_trailGap_Branch).click();
+    //     cy.wait(2000);
+    //   });
+    // cy.wait(2000);
 
    
   }
@@ -4295,7 +4295,7 @@ cy.get('#generate-report-button').click();
     cy.wait(2000);
     cy.get('#agencyUserRadio').click();
     cy.wait(2000);
-    cy.get(':nth-child(11) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+    cy.get(':nth-child(11) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
     cy.wait(2000);
     cy.get('.ng-dropdown-panel .ng-option').then($options => {
   const count = $options.length;
@@ -4318,8 +4318,8 @@ cy.get('#generate-report-button').click();
     cy.wait(2000);
     cy.get(this.locators.ClickTrailGapReport).click({ force: true });
     cy.wait(2000);
-    cy.get('#inlineRadio2').click();
-    cy.get(':nth-child(10) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+    cy.get('#agencyUserRadio').click();
+    cy.get(':nth-child(10) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
     cy.wait(2000);
 
      cy.get('.ng-dropdown-panel .ng-option').then($options => {
@@ -7719,19 +7719,24 @@ cy.wait(2000);
   }
 
   trailHistoryReport_016() {
-    cy.get(this.locators.clickonreport).click();
+    cy.get(this.locators.clickonreport).click({force:true});
     cy.wait(2000);
     cy.get(this.locators.ClicktrailReport).click({ force: true });
     cy.wait(2000);
     cy.get(this.locators.clickTrailHistoryReport).click({ force: true });
     cy.wait(2000);
-
-    cy.get(this.locators.ClickOn_TrailHistory_Bucket).click();
+    // cy.get(this.locators.Product_Group).click({force:true});
+    // cy.wait(2000);
+    // cy.get('.ng-dropdown-panel .ng-option').contains('Cards').click({ force: true });
     cy.wait(2000);
-    cy.get('.ng-dropdown-panel .ng-option').contains('0').click({ force: true });
+    cy.get(this.locators.ClickOn_TrailHistory_Bucket).click({force:true});
     cy.wait(2000);
-
-   cy.get('#trailDate_from').click();
+    cy.get('.ng-dropdown-panel .ng-option').contains('1').click({ force: true });
+    cy.wait(2000);
+    cy.get(this.locators.Select_trailGap_Country).click({force:true});
+    cy.get('.ng-dropdown-panel .ng-option').contains('Tamilnadu').click({ force: true });
+    cy.wait(2000);
+cy.get('#trailDate_from').click();
                         cy.wait(500);
                         cy.get('.previous > span').click();
                         cy.wait(500);
@@ -7745,7 +7750,6 @@ cy.wait(2000);
                         const today = new Date().getDate().toString();
                         cy.get('.bs-datepicker-body').contains('span', today).click();
                         cy.wait(1000);
-                        
     cy.get('#discCodeGroup').then($select => {
       const allValues = [...$select[0].options].map(option => option.value);
       cy.get('#discCodeGroup').select('Contact');
@@ -7816,7 +7820,7 @@ cy.wait(2000);
     cy.wait(2000);
      cy.get(this.locators.ClickOn_TrailHistory_Bucket).click();
     cy.wait(2000);
-    cy.get('.ng-dropdown-panel .ng-option').contains('2').click({ force: true });
+    cy.get('.ng-dropdown-panel .ng-option').contains('1').click({ force: true });
     cy.wait(2000);
    
    cy.get('#trailDate_from').click();
@@ -7860,7 +7864,7 @@ cy.wait(2000);
     cy.wait(2000);
      cy.get(this.locators.ClickOn_TrailHistory_Bucket).click();
     cy.wait(2000);
-    cy.get('.ng-dropdown-panel .ng-option').contains('3').click({ force: true });
+    cy.get('.ng-dropdown-panel .ng-option').contains('1').click({ force: true });
     cy.wait(2000);
   
    cy.get('#trailDate_from').click();
@@ -7888,7 +7892,7 @@ cy.wait(2000);
       cy.get('#discCode').select('CB');
     });
     cy.wait(1000);
-    cy.get(this.locators.ClickGenrtReport).click({ force: true });
+    cy.get("#downloadReport").click({ force: true });
     cy.wait(2000);
      cy.get('[role="alert"]').should('contain', 'Please fill all required fields');
  cy.wait(2000);
@@ -7904,7 +7908,7 @@ cy.wait(2000);
     cy.wait(2000);
    cy.get(this.locators.ClickOn_TrailHistory_Bucket).click();
     cy.wait(2000);
-    cy.get('.ng-dropdown-panel .ng-option').contains('3+').click({ force: true });
+    cy.get('.ng-dropdown-panel .ng-option').contains('1').click({ force: true });
     cy.wait(2000);
   
    cy.get('#trailDate_from').click();

@@ -21,7 +21,7 @@ describe('CE_BCU_002 | Bulk Contact Template Structure Validation', () => {
 
   it('CE_BCU_002 - Verify template download shows correct mandatory columns', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       // Step 1: Login
       loginPage.login(user.Companyname, user.email, user.password);

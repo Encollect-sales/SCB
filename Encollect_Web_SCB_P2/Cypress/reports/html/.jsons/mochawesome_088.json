@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-10T19:06:08.106Z",
+    "end": "2026-03-10T19:07:07.450Z",
+    "duration": 59344,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f970e46c-8047-473f-a828-2af3e65f03ed",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationHistoryPageTest_547.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationHistoryPageTest_547.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "24db0f15-1fc1-4648-8940-15f4044b727c",
+          "title": "Allocation History - Account search",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Allocation History - TC_ID_547 - Check the Allocation by below methods available in ENCollection application: 1.Do allocation by primary and secondary bulk upload method 2.Do allocation by primary and secondary filters method 3.Do allocation while doing trial update >>Assign to method 4.Do allocation while execute segmentation and treatment method",
+              "fullTitle": "Allocation History - Account search Allocation History - TC_ID_547 - Check the Allocation by below methods available in ENCollection application: 1.Do allocation by primary and secondary bulk upload method 2.Do allocation by primary and secondary filters method 3.Do allocation while doing trial update >>Assign to method 4.Do allocation while execute segmentation and treatment method",
+              "timedOut": null,
+              "duration": 56514,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(5000);\n  // Perform communication setup and download file\n  allocationHistoryPage.AccountSearch546();\n  // Wait for download to complete (adjust timeout as needed)\n  cy.wait(3000); // Increase timeout if necessary for slower downloads\n  // Define the data for new columns C1 and D1\n  const updatedData = [{\n    AccountNo: '12345',\n    AllocationOwnerCode: 'ABC',\n    AllocationExpireDate: '2024-07-10'\n  }\n  // Add more data objects as needed\n  ];\n  const newData = ['12345', 'ABC', '2024-07-10'];\n  // Upload the updated XLSX file\n  allocationHistoryPage.fileuploadAllocationHistory547().then(() => {\n    // Optionally assert success criteria after upload completes\n    cy.log('File upload completed');\n    //loginPage.logout();\n  });\n});",
+              "err": {},
+              "uuid": "d41c2b4a-7dea-4ecf-8172-ad3fb29b50a5",
+              "parentUUID": "24db0f15-1fc1-4648-8940-15f4044b727c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d41c2b4a-7dea-4ecf-8172-ad3fb29b50a5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 56514,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -67,7 +67,7 @@ describe('Trails - Agreement ID – Alphanumeric Value is Allowed ', () => {
 
             
                                         const downloadsFolder = Cypress.config('downloadsFolder');
-                                        const fixturesFolder = 'cypress/fixtures';
+                                        const fixturesFolder = 'fixtures';
                                         const excelFileName = 'Bulktrail.xlsx';
                                         const sourceFilePath = path.join(downloadsFolder, excelFileName);
                                         const destFilePath = path.join(fixturesFolder, excelFileName);

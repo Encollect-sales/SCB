@@ -1,18 +1,20 @@
+
 {
   "login": {
-    "Companyname": "ENCollect",
-    "email": "vatsalstaff07@yopmail.com",
-      "password": "123@akAK"
-  },
-
-  "login1": {
-    "Companyname": "ENCollect",
-     "email": "vatsalstaff07@yopmail.com",
+    "Companyname": "Encollect",
+    "email": "rahmancbm@yopmail.com",
       "password": "123@akAK"
   },
   "login2": {
-    "Companyname": "ENCollect",
-   "email": "vatsalstaff07@yopmail.com",
+    "Companyname": "Encollect",
+"email": "rahmancbm@yopmail.com",
       "password": "123@akAK"
+  },
+  "login3": {
+    "Companyname": "Encollect",
+   "email": "rahmancbm@yopmail.com",
+      "password": "123@akAK"
+
   }
-}
+  
+  }

@@ -1,0 +1,2 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+18765,10031,yes,$%^%&^&&,PTP,2027-12-22,109, ,Bulk upload,8539152258,Shannabury,19358 Margret Common,ninynozo@yopmail.com,permenant,new,03112026082923659,Error,Invalid DispositionCodeGroup

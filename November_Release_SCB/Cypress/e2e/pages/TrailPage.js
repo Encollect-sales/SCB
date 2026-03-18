@@ -161,8 +161,8 @@ class TrailPage {
   });
 
     cy.wait(2000);
-    cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
-    cy.wait(3000);
+    // cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
+    // cy.wait(3000);
  
 }
 
@@ -237,8 +237,8 @@ BULKTRL_020(){
   });
 
     cy.wait(2000);
-    cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
-    cy.wait(3000);
+    // cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
+    // cy.wait(3000);
    
 
 }
@@ -283,8 +283,8 @@ BULKTRL_022(){
   });
 
     cy.wait(2000);
-    cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
-    cy.wait(3000);
+    // cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
+    // cy.wait(3000);
    
 
 

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-10T18:29:28.100Z",
+    "end": "2026-03-10T18:30:15.345Z",
+    "duration": 47245,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c4a429e2-1e20-4835-98af-68b22090acb5",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocatedVsAchievedinsightsPageTest_119.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocatedVsAchievedinsightsPageTest_119.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "214a6c5b-0809-4d59-9825-55730440c1d8",
+          "title": "TC119- Allocated vs Achieved Insights-Allocated vs Achieved Insights  - hover on icon Unllocated account",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC19- Allocated vs Achieved Insights-Allocated vs Achieved Insights  - hover on icon Unllocated account",
+              "fullTitle": "TC119- Allocated vs Achieved Insights-Allocated vs Achieved Insights  - hover on icon Unllocated account TC19- Allocated vs Achieved Insights-Allocated vs Achieved Insights  - hover on icon Unllocated account",
+              "timedOut": null,
+              "duration": 43612,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  insightsPage.clickonAllocatedVsAchived119();\n  // loginPage.logout();         \n});",
+              "err": {},
+              "uuid": "e28400de-4e65-4901-9214-5cf02222e3dc",
+              "parentUUID": "214a6c5b-0809-4d59-9825-55730440c1d8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e28400de-4e65-4901-9214-5cf02222e3dc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 43612,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

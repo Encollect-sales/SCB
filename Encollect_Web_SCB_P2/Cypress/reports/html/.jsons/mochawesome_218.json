@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-10T21:43:00.074Z",
+    "end": "2026-03-10T21:43:55.494Z",
+    "duration": 55420,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5dc948e5-4955-4aa4-ac5d-27815ea4c7da",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\InsightsTrailGapPageTest_063.cy.js",
+      "file": "cypress\\e2e\\tests\\InsightsTrailGapPageTest_063.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "af66314a-6f40-4349-98ae-890bdefe4475",
+          "title": "TC63 - Trail Gap Insights - Trail Gap Insights - check Attempted vs Unattempted Accounts by Tele-Calling Primary graph",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC63 - Trail Gap Insights - Trail Gap Insights - check Attempted vs Unattempted Accounts by Tele-Calling Primary graph",
+              "fullTitle": "TC63 - Trail Gap Insights - Trail Gap Insights - check Attempted vs Unattempted Accounts by Tele-Calling Primary graph TC63 - Trail Gap Insights - Trail Gap Insights - check Attempted vs Unattempted Accounts by Tele-Calling Primary graph",
+              "timedOut": null,
+              "duration": 51476,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  insightsPage.clickonTrailGapInsights063();\n  // loginPage.logout();         \n});",
+              "err": {},
+              "uuid": "068c1281-6151-4e22-ad13-630c87ba8a90",
+              "parentUUID": "af66314a-6f40-4349-98ae-890bdefe4475",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "068c1281-6151-4e22-ad13-630c87ba8a90"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 51476,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

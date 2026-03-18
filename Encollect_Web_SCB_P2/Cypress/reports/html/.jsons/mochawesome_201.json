@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-03-10T21:27:17.747Z",
+    "end": "2026-03-10T21:28:22.961Z",
+    "duration": 65214,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cddc9902-3c38-4ee0-b8af-5e492e88c282",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\InsightsSecondaryAllocationPageTest_046.cy.js",
+      "file": "cypress\\e2e\\tests\\InsightsSecondaryAllocationPageTest_046.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0258c1fd-5122-4270-a8af-5e2e36f2de7a",
+          "title": "TC_046 - Insights - Secondary Allocation Insights - Overview - select filter by Bucket and download the report",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC_046 - Insights - Secondary Allocation Insights - Overview - select filter by Bucket and download the report",
+              "fullTitle": "TC_046 - Insights - Secondary Allocation Insights - Overview - select filter by Bucket and download the report TC_046 - Insights - Secondary Allocation Insights - Overview - select filter by Bucket and download the report",
+              "timedOut": null,
+              "duration": 61019,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  insightsPage.clickonSecondaryInsights046();\n  // loginPage.logout();         \n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.justify-content-between > .d-flex > .btn`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.justify-content-between > .d-flex > .btn`, but never found it.\n    at InsightsPage.clickonSecondaryInsights046 (webpack://encollect_web/./cypress/e2e/pages/InsightsPage.js:1271:7)\n    at Context.eval (webpack://encollect_web/./cypress/e2e/tests/InsightsSecondaryAllocationPageTest_046.cy.js:26:29)\n    at getRet (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "63d268f9-563a-4a0f-8594-7d1b41b925af",
+              "parentUUID": "0258c1fd-5122-4270-a8af-5e2e36f2de7a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "63d268f9-563a-4a0f-8594-7d1b41b925af"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 61019,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

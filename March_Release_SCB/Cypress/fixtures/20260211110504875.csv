@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1f5d5f0398dbf73b677da3b12ef2c2,Telecaller,72539,,Murphy,demetrius@yopmail.com,4729706183,Branch Backend,Branch Manager,Bangalore,True, | First Name is required

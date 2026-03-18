@@ -1,0 +1,3 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009001907,1907,Yes,PTP,PTP,2025-12-26,8,,Non-approved agent,1-451-783-2816 x0474,BTM,Bangalore,Annabel94@yahoo.com,Permanent,New,02042026060949825,Error,Next action date cannot be less than current date
+DMI0009001515,1515,Yes,PTP,PTP,2025-12-26,8,,Approved agent record,1-383-869-5007,BTM,Bangalore,Khalil81@gmail.com,Permanent,New,02042026060949825,Error,Next action date cannot be less than current date

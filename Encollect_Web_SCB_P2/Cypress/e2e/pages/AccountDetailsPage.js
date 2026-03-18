@@ -12,10 +12,10 @@ class AccountDetailsPage {
     cy.wait(3000);
     //cy.get('#radios-0').click();
     cy.wait(2000);
-    cy.get('.ng-arrow-wrapper').click();
-    cy.wait(1000);
-    cy.contains('span.ng-option-label', 'Customer Name').click();
-    cy.wait(1000);
+    // cy.get('.ng-arrow-wrapper').click();
+    // cy.wait(1000);
+    // cy.contains('span.ng-option-label', 'Customer Name').click();
+    // cy.wait(1000);
     cy.get(this.locators.accountname).type("R anupriya");
     cy.wait(2000);
     cy.get(this.locators.clickonsearchbtn).click();
@@ -40,10 +40,10 @@ class AccountDetailsPage {
       // returning false here prevents Cypress from failing the test
       return false;
     });
-    cy.get('.ng-arrow-wrapper').click();
-    cy.wait(1000);
-    cy.contains('span.ng-option-label', 'Customer Name').click();
-    cy.wait(1000);
+    // cy.get('.ng-arrow-wrapper').click();
+    // cy.wait(1000);
+    // cy.contains('span.ng-option-label', 'Customer Name').click();
+    // cy.wait(1000);
     cy.wait(500);
     cy.get(this.locators.csname).type('A dhanalaxmi', { force: true });
     cy.wait(500)
@@ -63,10 +63,10 @@ class AccountDetailsPage {
       // returning false here prevents Cypress from failing the test
       return false;
     });
-    cy.get('.ng-arrow-wrapper').click();
-    cy.wait(1000);
-    cy.contains('span.ng-option-label', 'Customer Name').click();
-    cy.wait(500);
+    // cy.get('.ng-arrow-wrapper').click();
+    // cy.wait(1000);
+    // cy.contains('span.ng-option-label', 'Customer Name').click();
+    // cy.wait(500);
     cy.get(this.locators.csname).type('A dhanalaxmi', { force: true });
     cy.wait(500)
     cy.get('.btn-secondary').click();
@@ -86,10 +86,10 @@ class AccountDetailsPage {
       // returning false here prevents Cypress from failing the test
       return false;
     });
-    cy.get('.ng-arrow-wrapper').click();
-    cy.wait(1000);
-    cy.contains('span.ng-option-label', 'Customer Name').click();
-    cy.wait(500);
+    // cy.get('.ng-arrow-wrapper').click();
+    // cy.wait(1000);
+    // cy.contains('span.ng-option-label', 'Customer Name').click();
+    // cy.wait(500);
     cy.get(this.locators.csname).type('A dhanalaxmi', { force: true });
     cy.wait(500)
     cy.get('.btn-secondary').click();
@@ -108,10 +108,10 @@ class AccountDetailsPage {
       // returning false here prevents Cypress from failing the test
       return false;
     });
-    cy.get('.ng-arrow-wrapper').click();
-    cy.wait(1000);
-    cy.contains('span.ng-option-label', 'Customer Name').click();
-    cy.wait(500);
+    // cy.get('.ng-arrow-wrapper').click();
+    // cy.wait(1000);
+    // cy.contains('span.ng-option-label', 'Customer Name').click();
+    // cy.wait(500);
     cy.get(this.locators.csname).type('A dhanalaxmi', { force: true });
     cy.wait(500)
     cy.get('.btn-secondary').click();
@@ -125,21 +125,21 @@ class AccountDetailsPage {
   }
 
   AccountDetails237() {
-    Cypress.on('uncaught:exception', (err, runnable) => {
-      console.error('Uncaught exception:', err.message);
-      console.error(err);
-      // returning false here prevents Cypress from failing the test
-      return false;
-    });
-    //cy.get(this.locators.LoanAmount).click();
-    cy.wait(500);
-    cy.get('.ng-arrow-wrapper').click();
-    cy.wait(1000);
-    cy.contains('span.ng-option-label', 'Customer Name').click();
-    cy.wait(500);
-    cy.get(this.locators.csname).type('A dhanalaxmi', { force: true });
+    // Cypress.on('uncaught:exception', (err, runnable) => {
+    //   console.error('Uncaught exception:', err.message);
+    //   console.error(err);
+    //   // returning false here prevents Cypress from failing the test
+    //   return false;
+    // });
+    // //cy.get(this.locators.LoanAmount).click();
+    // cy.wait(500);
+    // cy.get('.ng-arrow-wrapper').click();
+    // cy.wait(1000);
+    // cy.contains('span.ng-option-label', 'Customer Name').click();
+    // cy.wait(500);
+    cy.get("#search-customer-name").type('A dhanalaxmi');
     cy.wait(500)
-    cy.get('.btn-secondary').click();
+    cy.get('.btn-secondary').click({force:true});
     cy.wait(500);
     cy.get('tr.ng-star-inserted > .link').dblclick();
     cy.wait(500);
@@ -159,10 +159,10 @@ class AccountDetailsPage {
       return false;
     });
     cy.wait(500);
-      cy.get('.ng-arrow-wrapper').click();
-    cy.wait(1000);
-    cy.contains('span.ng-option-label', 'Customer Name').click();
-    cy.wait(1000);
+    //   cy.get('.ng-arrow-wrapper').click();
+    // cy.wait(1000);
+    // cy.contains('span.ng-option-label', 'Customer Name').click();
+    // cy.wait(1000);
     cy.get(this.locators.csname).type('A dhanalaxmi', { force: true });
     cy.wait(500)
     cy.get('.btn-secondary').click();
@@ -182,10 +182,10 @@ class AccountDetailsPage {
       // returning false here prevents Cypress from failing the test
       return false;
     });
-    cy.get('.ng-arrow-wrapper').click();
-    cy.wait(1000);
-    cy.contains('span.ng-option-label', 'Customer Name').click();
-    cy.wait(500);
+    // cy.get('.ng-arrow-wrapper').click();
+    // cy.wait(1000);
+    // cy.contains('span.ng-option-label', 'Customer Name').click();
+    // cy.wait(500);
     cy.get(this.locators.csname).type('A dhanalaxmi', { force: true });
     cy.wait(500)
     cy.get('.btn-secondary').click();
@@ -206,10 +206,10 @@ class AccountDetailsPage {
       return false;
     });
     cy.wait(500);
-    cy.get('.ng-arrow-wrapper').click();
-    cy.wait(1000);
-    cy.contains('span.ng-option-label', 'Customer Name').click();
-    cy.wait(500);
+    // cy.get('.ng-arrow-wrapper').click();
+    // cy.wait(1000);
+    // cy.contains('span.ng-option-label', 'Customer Name').click();
+    // cy.wait(500);
     cy.get(this.locators.csname).type('A dhanalaxmi', { force: true });
     cy.wait(500)
     cy.get('.btn-secondary').click();
@@ -230,10 +230,10 @@ class AccountDetailsPage {
       return false;
     });
     cy.wait(500);
-    cy.get('.ng-arrow-wrapper').click();
-    cy.wait(1000);
-    cy.contains('span.ng-option-label', 'Customer Name').click();
-    cy.wait(500);
+    // cy.get('.ng-arrow-wrapper').click();
+    // cy.wait(1000);
+    // cy.contains('span.ng-option-label', 'Customer Name').click();
+    // cy.wait(500);
     cy.get(this.locators.csname).type('A dhanalaxmi', { force: true });
     cy.wait(500)
     cy.get('.btn-secondary').click();
@@ -271,53 +271,61 @@ class AccountDetailsPage {
 
   }
 
-  ViewAccountDetailsPageTest_248() {
-    Cypress.on('uncaught:exception', (err, runnable) => {
-      console.error('Uncaught exception:', err.message);
-      console.error(err);
-      // returning false here prevents Cypress from failing the test
-      return false;
-    });
-    cy.wait(7000);
-    cy.get('.ng-arrow-wrapper').click();
-    cy.wait(1000);
-    cy.contains('span.ng-option-label', 'Customer Name').click();
-    cy.wait(500);
-    cy.get(this.locators.csname).type('A dhanalaxmi', { force: true });
-    cy.wait(500)
-    cy.get('.btn-secondary').click();
-    cy.wait(500);
-    cy.get('tr.ng-star-inserted > .link').dblclick();
-    cy.wait(500);
-    cy.get('#addTrail').click({ force: true });
-    cy.wait(500);
+ViewAccountDetailsPageTest_248() {
 
-
-    cy.get('#customer_yes').click({ force: true });
-    cy.get(this.locators.dcg).select("BPTP");
-    cy.wait(200);
-    cy.get(this.locators.dc).select("BPTP");
-    cy.wait(200);
-    cy.get('#mode_of_communication').select("Call");
+  cy.get("#search-customer-name")
+    .type("A AROCKIADASS");
+  cy.wait(2000);  
+  cy.get('.btn-secondary')
+    .click();
+  cy.wait(2000);
+  cy.contains("A AROCKIADASS")
+    .should("be.visible")
+    .click();
+  cy.wait(2000);  
+  cy.get('[style="text-wrap-mode: nowrap; position: relative;"]').click({force:true});
+  // Add Trail
+  cy.wait(2000);
+  cy.get('#addTrail')
+    .click({ force: true });
     cy.wait(2000);
-    cy.get(this.locators.ptp).type("17-07-2024");
-    cy.wait(200);
-    cy.get(this.locators.ptp).click();
-    //cy.get('#basicinfo > .panel > .panel-collapse > .panel-body > .content > .container-fluid > :nth-child(5) > :nth-child(2) > .form-control').type("15000");
-    cy.wait(200);
-    cy.get(this.locators.nxtact).select("Call");
-    cy.wait(200);
-    cy.get(this.locators.rnp).select("Lost job");
-    cy.wait(200);
-    cy.get(this.locators.rmrk).type("No");
-    cy.wait(100);
-    cy.get(this.locators.update_trail).click({ force: true })
-    cy.wait(5000);
-    cy.contains("Update trail added successfully").click();
+  cy.get('#customer_yes')
+    .should("be.visible")
+    .click({ force: true });
+    cy.wait(2000);
+  cy.get(this.locators.dcg)
+    .should("be.visible")
+    .select("BPTP");
+    cy.wait(2000);
+  cy.get(this.locators.dc)
+    .should("be.visible")
+    .select("BPTP");
+    cy.wait(2000);
+  cy.get('#mode_of_communication')
+    .select("Call");
+  cy.wait(2000);
+  cy.get(this.locators.ptp)
+    .should("be.visible")
+    .clear()
+    .type("17/03/2026{enter}");
+  cy.wait(2000);  
+  cy.get(this.locators.nxtact)
+    .select("Call");
+  cy.wait(2000);  
+  cy.get(this.locators.rnp)
+    .select("Lost job");
+  cy.wait(2000);  
+  cy.get(this.locators.rmrk)
+    .type("No");
+  cy.wait(20000);
+  cy.get(this.locators.update_trail)
+    .click({ force: true });
+  // Verify success message (do NOT click toast)
+  cy.contains("Update trail added successfully", { timeout: 10000 })
+    .should("be.visible");
 
+}
 
-
-  }
 
   AllocationHistoryPageTest_544() {
     Cypress.on('uncaught:exception', (err, runnable) => {
@@ -359,7 +367,7 @@ class AccountDetailsPage {
     // Interaction Part 1: Typing and Clicking
     cy.get('.ng-arrow-wrapper').click();
     cy.wait(1000);
-    cy.contains('span.ng-option-label', 'Credit Card Last 4 digits').click();
+    cy.contains('span.ng-option-label', 'Credit Card Last 4 Digits').click();
     cy.wait(2000);
     cy.get("#search-cc-number").type('7980', { force: true });
     cy.wait(500);
@@ -382,10 +390,10 @@ class AccountDetailsPage {
     });
     cy.get('#loan-account-type').click();
     cy.wait(500);
-    cy.get('.ng-arrow-wrapper').click();
-    cy.wait(1000);
-    cy.contains('span.ng-option-label', 'Customer Name').click();
-    cy.wait(500);
+    // cy.get('.ng-arrow-wrapper').click();
+    // cy.wait(1000);
+    // cy.contains('span.ng-option-label', 'Customer Name').click();
+    // cy.wait(500);
     // Interaction Part 1: Typing and Clicking
     cy.get('#search-customer-name').type('A dhanalaxmi', { force: true });
     cy.wait(500);
@@ -413,10 +421,10 @@ class AccountDetailsPage {
     cy.wait(500);
     // cy.get(this.locators.loanamountradiobtn).click();
     cy.wait(2000);
-      cy.get('.ng-arrow-wrapper').click();
-    cy.wait(1000);
-    cy.contains('span.ng-option-label', 'Customer Name').click();
-    cy.wait(1000);
+    //   cy.get('.ng-arrow-wrapper').click();
+    // cy.wait(1000);
+    // cy.contains('span.ng-option-label', 'Customer Name').click();
+    // cy.wait(1000);
     cy.get(this.locators.accountname).type("a");
     cy.wait(2000);
     cy.get(this.locators.clickonsearchbtn).click();
@@ -440,10 +448,10 @@ class AccountDetailsPage {
     cy.wait(5000);
     //cy.get('#radios-0').click();
     cy.wait(500);
-    cy.get('.ng-arrow-wrapper').click();
-    cy.wait(1000);
-    cy.contains('span.ng-option-label', 'Customer Name').click();
-    cy.wait(500);
+    // cy.get('.ng-arrow-wrapper').click();
+    // cy.wait(1000);
+    // cy.contains('span.ng-option-label', 'Customer Name').click();
+    // cy.wait(500);
     cy.get(this.locators.csname).type('A dhanalaxmi', { force: true });
     cy.wait(500)
     cy.get('.btn-secondary').click({ force: true });
@@ -482,10 +490,10 @@ class AccountDetailsPage {
     });
     //cy.get('#radios-0').click();
     cy.wait(1000);
-    cy.get('.ng-arrow-wrapper').click();
-    cy.wait(1000);
-    cy.contains('span.ng-option-label', 'Customer Name').click();
-    cy.wait(500);
+    // cy.get('.ng-arrow-wrapper').click();
+    // cy.wait(1000);
+    // cy.contains('span.ng-option-label', 'Customer Name').click();
+    // cy.wait(500);
     cy.get(this.locators.csname).type('A dhanalaxmi', { force: true });
     cy.wait(1000)
     cy.get('.btn-secondary').click();
@@ -531,10 +539,10 @@ class AccountDetailsPage {
     cy.wait(2000);
     //cy.get('#radios-0').click();
     cy.wait(500);
-    cy.get('.ng-arrow-wrapper').click();
-    cy.wait(1000);
-    cy.contains('span.ng-option-label', 'Customer Name').click();
-    cy.wait(500);
+    // cy.get('.ng-arrow-wrapper').click();
+    // cy.wait(1000);
+    // cy.contains('span.ng-option-label', 'Customer Name').click();
+    // cy.wait(500);
     cy.get(this.locators.csname).type('A dhanalaxmi', { force: true });
     cy.wait(500)
     cy.get('.btn-secondary').click();
@@ -562,10 +570,10 @@ class AccountDetailsPage {
     });
 
     cy.wait(500);
-    cy.get('.ng-arrow-wrapper').click();
-    cy.wait(1000);
-    cy.contains('span.ng-option-label', 'Customer Name').click();
-    cy.wait(500);
+    // cy.get('.ng-arrow-wrapper').click();
+    // cy.wait(1000);
+    // cy.contains('span.ng-option-label', 'Customer Name').click();
+    // cy.wait(500);
     cy.get(this.locators.csname).type('A dhanalaxmi', { force: true });
     cy.wait(500)
     cy.get('.btn-secondary').click();
@@ -594,10 +602,10 @@ class AccountDetailsPage {
       return false;
     });
     cy.wait(500);
-    cy.get('.ng-arrow-wrapper').click();
-    cy.wait(1000);
-    cy.contains('span.ng-option-label', 'Customer Name').click();
-    cy.wait(500);
+    // cy.get('.ng-arrow-wrapper').click();
+    // cy.wait(1000);
+    // cy.contains('span.ng-option-label', 'Customer Name').click();
+    // cy.wait(500);
     cy.get(this.locators.csname).type('A dhanalaxmi', { force: true });
     cy.wait(500)
     cy.get('.btn-secondary').click();
@@ -879,35 +887,53 @@ class AccountDetailsPage {
 
   }
   AccountDetailsTestPage_110() {
-    cy.wait(5000);
-    cy.get(this.locators.Report).click();
-    cy.wait(5000);
-    cy.get(this.locators.Trail_Report).click();
-    cy.wait(5000);
-    cy.get(this.locators.Trail_History_Report).click();
-    cy.wait(5000);
-    cy.get("ng-select.ng-select-multiple .ng-select-container")
-    cy.wait(5000);
-    cy.get("ng-select.ng-select-multiple .ng-input").click(); 
-    cy.wait(5000);
-    cy.get('.ng-option-label.ng-star-inserted').should('have.length', 5);
-    cy.wait(5000);
-    cy.get(this.locators.Trail_from_date).type("01/02/2025");
-    cy.wait(5000);
-    cy.get(this.locators.Trail_To_Date).type("11/02/2025");
-    cy.wait(5000);
-    cy.wait(5000);
-    cy.get(this.locators.DisCode_Group).select("BPTP");
-    cy.wait(5000);
-    cy.get(this.locators.DisCode).select("BPTP");
-    cy.wait(5000);
-    cy.get(this.locators.Gene_Report).click({ force: true });
 
+  cy.get(this.locators.Report)
+    .should("be.visible")
+    .click();
+  cy.wait(2000);
+  cy.get(this.locators.Trail_Report)
+    .should("be.visible")
+    .click();
+  cy.wait(2000);
+  cy.get(this.locators.Trail_History_Report)
+    .should("be.visible")
+    .click();
+  cy.wait(2000);
+  // Open multi-select dropdown (FIXED HERE)
+  cy.get("ng-select.ng-select-multiple .ng-input")
+    .first()
+    .should("be.visible")
+    .click();
+  cy.wait(2000);
+  // Verify dropdown options count
+  cy.get('.ng-option-label.ng-star-inserted')
+    .should('have.length', 5);
+   cy.wait(2000);
+  cy.get(this.locators.Trail_from_date)
+    .should("be.visible")
+    .clear()
+    .type("01/02/2025{enter}");
+  cy.wait(2000);
+  cy.get(this.locators.Trail_To_Date)
+    .clear()
+    .type("11/02/2025{enter}");
+  cy.wait(2000);
+  // Dropdowns
+  cy.get(this.locators.DisCode_Group)
+    .should("be.visible")
+    .select("BPTP");
+    cy.wait(2000);
+  cy.get(this.locators.DisCode)
+    .should("be.visible")
+    .select("BPTP");
+    cy.wait(2000);
+  // Generate report
+  cy.get(this.locators.Gene_Report)
+    .should("be.enabled")
+    .click({ force: true });
 
-  }
-
-
-
+}
 
 
 }

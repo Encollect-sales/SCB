@@ -30,7 +30,7 @@ describe('Agency Reporting Manager Dropdown Validation', () => {
  
   it('RM_002 | Verify that when an agency does not have any approved users, the Agency Reporting Manager dropdown does not allow selection and displays a friendly empty-state message.', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       loginPage.login(user.Companyname, user.email, user.password);
       cy.wait(2000);

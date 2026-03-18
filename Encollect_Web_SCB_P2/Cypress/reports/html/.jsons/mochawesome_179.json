@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-10T21:03:48.015Z",
+    "end": "2026-03-10T21:04:38.807Z",
+    "duration": 50792,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f330986a-8974-433f-9239-7cdef09f0ade",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\InsightsPageTest_024.cy.js",
+      "file": "cypress\\e2e\\tests\\InsightsPageTest_024.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0da2d181-fcd8-4d58-bc6c-b7301ffcde9c",
+          "title": "TC024 - Insights - Primary Allocation Insights - Geography and Product",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC024 - Insights - Primary Allocation Insights - Geography and Product",
+              "fullTitle": "TC024 - Insights - Primary Allocation Insights - Geography and Product TC024 - Insights - Primary Allocation Insights - Geography and Product",
+              "timedOut": null,
+              "duration": 47124,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  insightsPage.clickonInsights024();\n  // loginPage.logout();         \n});",
+              "err": {},
+              "uuid": "1aa1ef9b-28bf-4052-8916-ac50066cc232",
+              "parentUUID": "0da2d181-fcd8-4d58-bc6c-b7301ffcde9c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1aa1ef9b-28bf-4052-8916-ac50066cc232"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 47124,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

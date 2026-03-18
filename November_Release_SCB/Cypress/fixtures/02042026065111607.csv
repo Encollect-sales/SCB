@@ -1,0 +1,3 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009603001,2005,Yes,PTP,PTP,2025-12-26,79,,Rejected agent test,964.446.3173,BTM,Bangalore,Albertha.Ziemann45@yahoo.com,Permanent,New,02042026065111607,Error,Next action date cannot be less than current date
+DMI0009603002,2005,Yes,PTP,PTP,2025-12-26,79,,Rejected agent test,(211) 654-4731 x303,BTM,Bangalore,Katrina_Littel39@gmail.com,Permanent,New,02042026065111607,Error,Next action date cannot be less than current date

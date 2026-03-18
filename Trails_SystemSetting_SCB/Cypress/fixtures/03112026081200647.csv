@@ -1,0 +1,5 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+18765,10031,yes,PTP,PTP,2027-12-22,109, ,Bulk upload,9001571867,Goldnerville,37722 Anabel Ferry,vkgnwuci@yopmail.com,permenant,new,03112026081200647,Success,
+18765,10031,yes,PTP,PTP,2027-12-22,109, ,Bulk upload,9001571867,Goldnerville,37722 Anabel Ferry,vkgnwuci@yopmail.com,permenant,new,03112026081200647,Success,
+AG#123,10031,yes,PTP,PTP,2027-12-22,109, ,Bulk upload,8876398497,East Michael,44555 East Street,jhlwzdrw@yopmail.com,permenant,new,03112026081200647,Error,Account number does not exist in database
+AG#123,10031,yes,PTP,PTP,2027-12-22,109, ,Bulk upload,8876398497,East Michael,44555 East Street,jhlwzdrw@yopmail.com,permenant,new,03112026081200647,Error,Account number does not exist in database

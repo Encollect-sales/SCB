@@ -22,8 +22,9 @@ describe('User Management - Pan Card - Navigate to user profile, click Edit PAN,
     it('User Management -Pan Card- TC_ID_01', () => {
         getTestData('loginData', 'login').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
-                cy.wait(2000);
-                userManagementPage.PanCardTestPage_01();            
+                cy.wait(7000);
+                userManagementPage.PanCardTestPage_01(); 
+                         
             });
         });
     });

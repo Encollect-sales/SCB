@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-03-10T19:54:31.521Z",
+    "end": "2026-03-10T19:55:40.591Z",
+    "duration": 69070,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1dc27100-af2e-4d51-b9d6-e62df5661cf0",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\CommunicationPageTest_177.cy.js",
+      "file": "cypress\\e2e\\tests\\CommunicationPageTest_177.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d0137281-ccd6-4cbb-b682-fa2e1d7c55ed",
+          "title": "TC_ID_177 - Communication - Create communication Template type SMS with multiple language \"Malayalam and English\" and allow access from account details No",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Communication - TC_ID_177 - Create communication Template type SMS with multiple language \"Malayalam and English\" and allow access from account details No",
+              "fullTitle": "TC_ID_177 - Communication - Create communication Template type SMS with multiple language \"Malayalam and English\" and allow access from account details No Communication - TC_ID_177 - Create communication Template type SMS with multiple language \"Malayalam and English\" and allow access from account details No",
+              "timedOut": null,
+              "duration": 62440,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(5000);\n  communicationPage.communicationModule();\n  communicationPage.CreateCommunicationTemplate177();\n  //loginPage.logout();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#allowAccessNo`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#allowAccessNo`, but never found it.\n    at CommunicationPage.CreateCommunicationTemplate177 (webpack://encollect_web/./cypress/e2e/pages/CommunicationPage.js:1843:5)\n    at Context.eval (webpack://encollect_web/./cypress/e2e/tests/CommunicationPageTest_177.cy.js:27:34)\n    at getRet (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "92be016b-296a-46ef-8450-6ec536f35802",
+              "parentUUID": "d0137281-ccd6-4cbb-b682-fa2e1d7c55ed",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "92be016b-296a-46ef-8450-6ec536f35802"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 62440,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

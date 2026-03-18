@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1e7f4275fe41860f60d6de9d30a364,Telecaller,84011,Florian,Windler,florian@yopmail.com,4376352866,Audit and Branch,Audit Manager,Bangalore,True, | Department is invalid

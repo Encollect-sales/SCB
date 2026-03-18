@@ -22,7 +22,7 @@ describe('Communication Module | Create Communication Trigger', () => {
 
   it('CFG_003 | Positive – X Value mandatory and accepts positive numeric', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       loginPage.login(
         user.Companyname,

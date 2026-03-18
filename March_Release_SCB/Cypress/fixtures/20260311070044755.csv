@@ -1,0 +1,2 @@
+Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
+3a1fef448f4ac3fa591ae633c456b62b,Telecaller,93876,Miles,Pfannerstill,,6776120670,Audit and Risk,Audit Manager,Bangalore,True, | Email id is required

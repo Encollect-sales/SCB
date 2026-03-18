@@ -1,0 +1,3 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009590352,1667,Yes,PTP,PTP,2026-12-26,92,,Approved agent,376-301-1075 x62349,BTM,Bangalore,Clotilde_OKeefe@gmail.com,Permanent,New,02132026042924560,Error,Agent ID not approved
+DMI0009801001,1933,Yes,PTP,PTP,2026-12-26,92,,Failure reason validation,(329) 575-8555 x04731,BTM,Bangalore,Pasquale.Wilkinson@hotmail.com,Permanent,New,02132026042924560,Error,Account number does not exist in database

@@ -22,7 +22,7 @@ describe('User Management - Pan Card -Ensure user cannot save empty PAN card fie
     it('User Management -Pan Card- TC_ID_04', () => {
         getTestData('loginData', 'login').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
-                cy.wait(2000);
+                cy.wait(7000);
                 userManagementPage.PanCardTestPage_04();            
             });
         });

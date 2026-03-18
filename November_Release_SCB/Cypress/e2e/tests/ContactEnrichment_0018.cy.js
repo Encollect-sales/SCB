@@ -23,7 +23,7 @@ describe('CE_BCU_018 - Mobile filled, Address blank accepted', () => {
 
   it('CE_BCU_018 - Upload file with Mobile only (Address blank)', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       // Step 1: Login
       loginPage.login(user.Companyname, user.email, user.password);

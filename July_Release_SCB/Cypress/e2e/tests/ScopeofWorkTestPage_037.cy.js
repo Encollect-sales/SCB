@@ -22,7 +22,7 @@ describe('ScopeofWork - user will click on Supervisory report and check the scop
     it('ScopeofWork- TC_ID_037', () => {
         getTestData('loginData', 'login2').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
-                cy.wait(2000);
+                cy.wait(7000);
                 scopeofworkpage.ScopeofWorkTestPage_037();            
             });
         });

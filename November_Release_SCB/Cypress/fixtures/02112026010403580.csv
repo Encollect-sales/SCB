@@ -1,0 +1,5 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009801002,1907,Yes,PTP,PTP,2025-12-26,86,,Pending approval,372.504.6983 x13952,Whitefield,Bangalore,Julia89@gmail.com,Permanent,New,02112026010403580,Error,Next action date cannot be less than current date
+DMI0009801003,2005,Yes,PTP,PTP,2025-12-26,86,,Rejected agent,202-548-1608 x33266,Indiranagar,Bangalore,Kurt72@gmail.com,Permanent,New,02112026010403580,Error,Next action date cannot be less than current date
+DMI0009801001,1515,Yes,PTP,PTP,2025-12-26,86,,Disabled agent,533-490-1225 x02514,HSR,Bangalore,Adam_Weimann@yahoo.com,Permanent,New,02112026010403580,Error,Next action date cannot be less than current date
+DMI9999999999,999999,Yes,PTP,PTP,2025-12-26,86,,Invalid agent ID,(727) 557-0191,BTM,Bangalore,Jairo.Hodkiewicz@gmail.com,Permanent,New,02112026010403580,Error,Next action date cannot be less than current date

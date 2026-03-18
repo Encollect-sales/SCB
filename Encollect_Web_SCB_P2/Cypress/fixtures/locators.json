@@ -580,7 +580,7 @@
       "registeredagencyaddress" : "#agencyAddress",
       "mobilenumber" : "#primaryMobileno",
       "areacode" : ":nth-child(3) > :nth-child(2) > .row > :nth-child(3) > .form-control",
-      "landlinenumber" : "#landMark",
+      "landlinenumber" : "#landNo",
       "selectstate" : "#state",
       "fillemailid" : "#emailId",
       "selectcity" : "#city",
@@ -1016,7 +1016,7 @@
       
       "DepositionGCode":"select[class='form-control ng-pristine ng-valid ng-touched']",
       "epositionCode":"select[formcontrolname='disCode']",
-      "PTP":"input[placeholder='DD-MM-YYYY']",
+      "PTP":"#nextAction_date",
       "PTPA":"input[class='form-control input-md ng-pristine ng-valid ng-touched']",
       "NextAction":"select[formcontrolname='nextAction']",
       "Reason":"select[formcontrolname='reasonForNonPayment']",
@@ -1059,7 +1059,7 @@
       "rpc" : ".form-control.ng-pristine.ng-valid.ng-touched",
       "dcg" : "select[formcontrolname='disCodeGroup']",
       "dc" : "select[formcontrolname='disCode']",
-      "ptp": "input[placeholder='DD-MM-YYYY']",
+      "ptp": "#nextAction_date",
       "ptpamnt" : ".form-control.input-md.ng-pristine.ng-valid.ng-touched",
       "nxtact" : "select[formcontrolname='nextAction']",
       "rnp": "select[formcontrolname='reasonForNonPayment']",
@@ -1273,9 +1273,11 @@
       "channelType" : "#channelType",
       "entryPoint" : ":nth-child(3) > .h-100 > .form-control-group > .form-select",
       "recipientType" : ":nth-child(4) > .h-100 > .form-control-group > .form-select",
-      "templatebody" : ".ProseMirror",
+      "templatebody" : ".editor-container",
       "templatebodysms" : "#templateBody",
       "templatebodyletter" : "#templateBody",
+      "clickonvar":"app-template-variable-mapping > .template-variable-mapping > p > span",
+      "Template_ID":"#dltTemplateId",
       "clickonemail" : "#ccm-temEmail",
       "selectlanguage" : "button[id='addLanguageBtn'] span",
       "clickondropdownlanguage" : ".ng-arrow-wrapper",
@@ -1292,16 +1294,16 @@
       "selectTeluguTemplate" : "#template-language-Telugu",
       "hindiEmailSubject" : "#emailSubject",
       "kannadaEmailSubject" : "#emailSubject",
-      "hindiTemplateBody" : "#templateBody",
+      "hindiTemplateBody" : ".editor-container",
       "marathiiEmailSubject" : "#emailSubject",
-      "marathiTemplateBody" : "#templateBody",
-      "kannadaTemplateBody" : "#templateBody",
+      "marathiTemplateBody" : ".editor-container",
+      "kannadaTemplateBody" : ".editor-container",
       "malayalamEmailSubject" : "#emailSubject",
-      "malayalamTemplateBody" : "#templateBody",
+      "malayalamTemplateBody" : ".editor-container",
       "tamilEmailSubject" : "#emailSubject",
-      "tamilTemplateBody" : "#templateBody",
+      "tamilTemplateBody" : ".editor-container",
       "teluguEmailSubject" : "#emailSubject",
-      "teluguTemplateBody" : "#templateBody",
+      "teluguTemplateBody" : ".editor-container",
       "triggerName" : "#triggerName",
       "triggerTypeOne" : "#trigger-type-1",
       "triggerTypeTwo" : "#trigger-type-2",
@@ -1329,7 +1331,7 @@
       "clickondropdown" : ".ng-arrow-wrapper",
       "clickonmap" : ".modal-footer > .btn",
       "selectsms" : "#channelTypeSMS",
-      "subjectline" : "#emailSubject",
+      "subjectline" : "#subject",
       "smsradio"  : "input[value='sms']",
       "createnewTemp" : "input[value='new']",
       "useexistingtemplate" : ":nth-child(3) > .form-control-group > .form-radio-group > :nth-child(1) > .ng-valid",
@@ -1456,7 +1458,11 @@
       "deletetemplate" : ".btn-success",
       "clickondisable" : ".ng-star-inserted > .fa",
       "confirmdisable" : "#confirm-dialog-okay",
-      "clickonletter" : ":nth-child(3) > .ng-untouched"
+      "clickonletter" : ":nth-child(3) > .ng-untouched",
+      "Notification_header":"#notificationHeader",
+      "tempelate":".editor-container",
+      "template_id":"#dltTemplateId",
+      "temp_body_sms":".editor-container > .form-control"
  
     },
 
@@ -1587,7 +1593,9 @@
       "UploadAccountstatus":"body > app-root:nth-child(1) > div:nth-child(1) > div:nth-child(2) > app-navbar:nth-child(1) > div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > a:nth-child(1) > span:nth-child(2)",
 
       "StaDrop" : "select[name='status']",
-      "uploadclick" : "body > app-root:nth-child(1) > div:nth-child(1) > div:nth-child(2) > app-navbar:nth-child(1) > div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(2)"
+      "uploadclick" : "body > app-root:nth-child(1) > div:nth-child(1) > div:nth-child(2) > app-navbar:nth-child(1) > div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(2)",
+      "ClickOnUserCreationUploadStatus":".system-settings > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(2) > a",
+      "ClickOnStatusSearchBtn":"#status-search"
 
     },
     "DbstoScb":{
@@ -1740,17 +1748,17 @@
       "clickonbottom" : "body > app-root:nth-child(1) > app-menu-layout:nth-child(2) > main:nth-child(1) > section:nth-child(3) > div:nth-child(2) > app-primary-allocation-insight:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > tabset:nth-child(1) > div:nth-child(2) > tab:nth-child(1) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button:nth-child(2)",
       "topbottomowner" : "body > app-root:nth-child(1) > app-menu-layout:nth-child(2) > main:nth-child(1) > section:nth-child(3) > div:nth-child(2) > app-primary-allocation-insight:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > tabset:nth-child(1) > div:nth-child(2) > tab:nth-child(1) > div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button:nth-child(2)",
       "topbottomtelecalling" : "body > app-root:nth-child(1) > app-menu-layout:nth-child(1) > main:nth-child(1) > section:nth-child(3) > div:nth-child(2) > app-primary-allocation-insight:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > tabset:nth-child(1) > div:nth-child(2) > tab:nth-child(1) > div:nth-child(2) > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button:nth-child(2)",
-      "clickonfilter" : "div[class='d-flex align-items-center justify-content-between mb-4'] button[class='btn btn-primary btn-filter px-4 py-2 h-auto rounded-4']",
+      "clickonfilter" : ".justify-content-between > .d-flex > .btn",
       "clickonexpandall" : "#expand-all-button",
       "clickonclosebutton" : "#close-button",
       "clickonselectmatrix" : "#a82aa4cb1339-1",
       "clickonbyagency" : "#accordion-agency > .panel > .panel-heading > .panel-title",
       "byagency" : "'#accordion-agency > .panel > .panel-heading > .panel-title'",
-      "clickonbyallocationowner" : "#accordion-owner > .panel > .panel-heading > .panel-title",
+      "clickonbyallocationowner" : "accordion-group[id='accordion-product'] div[class='panel-title']",
       "clickonbyproduct" : "#accordion-product > .panel > .panel-heading > .panel-title",
       "clickonbybucket" : "#accordion-bucket > .panel > .panel-heading > .panel-title",
       "clickonbyGeography" : "#accordion-geography > .panel > .panel-heading > .panel-title",
-      "hoverOnIcon" : "body > app-root:nth-child(1) > app-menu-layout:nth-child(1) > main:nth-child(1) > section:nth-child(3) > div:nth-child(2) > app-primary-allocation-insight:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > tabset:nth-child(1) > div:nth-child(2) > tab:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button:nth-child(3)",
+      "hoverOnIcon" : "body > app-root:nth-child(1) > app-menu-layout:nth-child(2) > main:nth-child(1) > section:nth-child(3) > div:nth-child(2) > app-primary-allocation-insight:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > tabset:nth-child(1) > div:nth-child(2) > tab:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button:nth-child(3)",
       "clickOnDetailedAnalysis" : "div[class='router-container'] li:nth-child(3) a:nth-child(1) span:nth-child(1)",
       "geoandproduct" : ":nth-child(2) > .nav-link > span",
       "selectsubproduct" : ":nth-child(2) > .card-header > .d-flex > .level-shift-button > .btn-group > :nth-child(2)",
@@ -1766,7 +1774,9 @@
        "clickongeography":"#accordion-geography > .panel > .panel-heading > .panel-title > .accordion-toggle >",
        "clickongeographyandproductanalysis":".nav-item.active > .nav-link > span",
        "clickonmoneymovementingistspage":".insights > .sub-nav-list > :nth-child(5) > .ng-star-inserted",
-      "clickonmoneymovementinsightsbankstaffpage":".insights > .sub-nav-list > :nth-child(6) > .ng-star-inserted"
+      "clickonmoneymovementinsightsbankstaffpage":".insights > .sub-nav-list > :nth-child(6) > .ng-star-inserted",
+      "expand_all":"#expand-all-button",
+      "hover_sec":"tab[class='tab-pane active'] div[class='overview-card span-4 purple'] button[class='overview-card-info-icon']"
        
     }
 

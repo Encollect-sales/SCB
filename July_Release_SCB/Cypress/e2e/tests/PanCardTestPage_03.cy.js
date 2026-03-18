@@ -22,7 +22,7 @@ describe('User Management - Pan Card - Try updating PAN with invalid format and 
     it('User Management -Pan Card- TC_ID_03', () => {
         getTestData('loginData', 'login').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
-                cy.wait(2000);
+                cy.wait(7000);
                 userManagementPage.PanCardTestPage_03();            
             });
         });

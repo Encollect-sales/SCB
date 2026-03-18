@@ -80,7 +80,7 @@ Clikcompanyname() {
     cy.get('#otp-input').type(560062);
     cy.wait(2000);
     cy.get('.btn-success').click();
-    cy.wait(7000);
+    cy.wait(14000);
   }
  
   login(Companyname, email, password) {
@@ -91,7 +91,7 @@ Clikcompanyname() {
       this.fillUsername(email);
       this.fillPassword(password);
       this.submit();
-      cy.wait(2000);
+      cy.wait(3000);
       this.enterotp();
       // this.verifyLoginSuccess();
   }

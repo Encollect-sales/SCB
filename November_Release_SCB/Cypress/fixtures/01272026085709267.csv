@@ -1,0 +1,5 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009810001,,Yes,PTP,PTP,2025-12-26,81,,Blank agent ID,209-322-9622 x6646,Indiranagar,Bangalore,Fidel47@gmail.com,Permanent,New,01272026085709267,Error,Next action date cannot be less than current date
+DMI0009801001,1515,Yes,PTP,PTP,2025-12-26,81,,Disabled agent,(917) 935-8248,HSR,Bangalore,Rosemarie.Rempel@gmail.com,Permanent,New,01272026085709267,Error,Next action date cannot be less than current date
+DMI0009590352,1936,Yes,PTP,PTP,2025-12-26,81,,Approved agent,359.353.2266 x5703,BTM,Bangalore,Ruthe_Padberg@gmail.com,Permanent,New,01272026085709267,Error,Next action date cannot be less than current date
+DMI9999999999,999999,Yes,PTP,PTP,2025-12-26,81,,Invalid agent ID,(771) 409-3425 x935,Whitefield,Bangalore,Dolores.King-Rolfson@yahoo.com,Permanent,New,01272026085709267,Error,Next action date cannot be less than current date

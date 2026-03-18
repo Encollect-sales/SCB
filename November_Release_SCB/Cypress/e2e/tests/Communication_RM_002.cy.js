@@ -22,7 +22,7 @@ describe('Communication Module | Create Communication Trigger', () => {
 
   it('CFG_002 | Positive – Trigger type On X days of delayed deposit is available for Collections entry point', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       loginPage.login(
         user.Companyname,
@@ -33,6 +33,7 @@ describe('Communication Module | Create Communication Trigger', () => {
       cy.wait(2000);
 
       communicationPage.CFG_002_Collections_TriggerType_OnXDaysDelayedDeposit();
+
     });
   });
 });

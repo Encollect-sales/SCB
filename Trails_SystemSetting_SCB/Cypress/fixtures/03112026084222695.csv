@@ -1,0 +1,2 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+18765,10031,yes,PTP,PTP,2023-01-01,109, ,Bulk upload,5568975913,New Fabian,50934 Wellington Street,mfzlgzxr@yopmail.com,permenant,new,03112026084222695,Error,Next action date cannot be less than current date

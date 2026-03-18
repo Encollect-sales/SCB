@@ -1,0 +1,4 @@
+AgreementId,AddressType,Address,MobileNumber,WorkRequestId,UploadStatus,ErrorMessage
+1667,Residential,,9958896576,02152026082951435,Success,
+9999999,Mobile,855 Gunnar Divide,6353827268,02152026082951435,Error,AgreementId does not exist
+8888888,,,,02152026082951435,Error,AgreementId does not exist

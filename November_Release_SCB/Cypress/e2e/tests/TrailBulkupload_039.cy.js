@@ -28,7 +28,7 @@ describe('Audit trail created for each bulk upload attempt', () => {
   
   it('TC_ID_039 - Perform a successful bulk upload.Perform a failed bulk upload.Check audit logs or monitoring screen.', () => {
 
-    getTestData('loginData', 'login').then(user => {
+    getTestData('loginData', 'login2').then(user => {
 
       // ---------------- Login ----------------
       loginPage.login(user.Companyname, user.email, user.password);
@@ -53,11 +53,11 @@ describe('Audit trail created for each bulk upload attempt', () => {
       const data = {
         'A2': 'DMI0009590352',      // Agreement id
         'B2': '1174',               // Agent ENCollect Code
-        'C2': 'ss',                 // RightPartyContact
+        'C2': 'yes',                 // RightPartyContact
         'D2': 'PTP',                // Action Code
         'D2': 'PTP',                // Action Code
         'E2': 'PTP',                // ResultCode
-        'F2': '2025/12/26',         // Next Action Date
+        'F2': '2026/12/26',         // Next Action Date
         'G2': ptpAmount,            // ✅ Random PTP Amount (1–100)
         'H2': '',                   // NextActionCode
         'I2': 'Bulk upload Aug29',  // Remarks
@@ -71,11 +71,11 @@ describe('Audit trail created for each bulk upload attempt', () => {
       
         'A3': 'DMI0009590352',      // Agreement id
         'B3': '118974',               // Agent ENCollect Code
-        'C3': 'ss',                 // RightPartyContact
+        'C3': 'yes',                 // RightPartyContact
         'D3': 'PTP',                // Action Code
         'D3': 'PTP',                // Action Code
         'E3': 'PTP',                // ResultCode
-        'F3': '2025/12/26',         // Next Action Date
+        'F3': '2026/12/26',         // Next Action Date
         'G3': ptpAmount,            // ✅ Random PTP Amount (1–100)
         'H3': '',                   // NextActionCode
         'I3': 'Bulk upload Aug29',  // Remarks

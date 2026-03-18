@@ -1,0 +1,2 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+18765,10031,yes,PTP,PTP,2027-12-22,0, ,Bulk upload,7623547523,New Paigecester,77915 N Jefferson Street,tsgcafsv@yopmail.com,permenant,new,03112026084643454,Error,PTP amount must be greater than 0
