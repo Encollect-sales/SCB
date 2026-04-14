@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-03-31T13:36:17.878Z",
+    "end": "2026-03-31T13:37:20.879Z",
+    "duration": 63001,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "95e5e2ba-bf9f-4436-add2-9701d492eea1",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\UserCreationTestPage_01.cy.js",
+      "file": "cypress\\e2e\\tests\\UserCreationTestPage_01.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "06aae23d-393c-4d51-b093-2525ef89cdca",
+          "title": "UserManagement -First name allows only alphabets and spaces are allowed.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User download the agent template and make updates in the excel sheet and user upload the updated excel sheet-First name allows only alphabets and spaces are allowed. - TC_ID_01",
+              "fullTitle": "UserManagement -First name allows only alphabets and spaces are allowed. User download the agent template and make updates in the excel sheet and user upload the updated excel sheet-First name allows only alphabets and spaces are allowed. - TC_ID_01",
+              "timedOut": null,
+              "duration": 53913,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\UserCreationTestPage_01.cy.js\\\\UserManagement -First name allows only alphabets and spaces are allowed -- User download the agent template and make updates in the excel sheet and user upload the updated excel sheet-First name allows only alphabets and spaces are allowed. - TC_ID_0.png\"\n    ]\n  ]\n}",
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login2').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  usercreationpage.UserCreationAgentTemplate_download();\n  const sheetName = 'Sheet1';\n  Cypress.on('uncaught:exception', (err, runnable) => {\n    if (err.message.includes('ResizeObserver loop completed with undelivered notifications.')) {\n      return false;\n    }\n  });\n  //############################################################################\n  const firstName = _faker.faker.name.firstName(); // B2\n  const lastName = _faker.faker.name.lastName(); // C2\n  const phoneNumber = _faker.faker.number.int({\n    min: 1000000000,\n    max: 9999999999\n  }).toString(); // 10-digit\n  const email = `${firstName.toLowerCase()}@yopmail.com`; // N2 - short, simple\n  //################################################################################\n  const data = {\n    'A2': 'FOS',\n    'B2': firstName,\n    'C2': lastName,\n    'D2': '10004',\n    'E2': '',\n    'F2': '435454',\n    'G2': '',\n    'H2': '',\n    'I2': '',\n    'J2': 'Agency Frontend',\n    'K2': 'Agent',\n    'L2': '18-10-1979',\n    'M2': phoneNumber,\n    'N2': email,\n    'O2': 'yop',\n    'P2': 'bakori',\n    'Q2': '765523',\n    'R2': '19-10-2022',\n    'S2': '19-10-2023',\n    'T2': '10-10-2033',\n    'U2': 'resr'\n  };\n  const downloadsFolder = Cypress.config('downloadsFolder');\n  const fixturesFolder = 'cypress/fixtures';\n  const excelFileName = 'AgentTemplate.xlsx';\n  const sourceFilePath = path.join(downloadsFolder, excelFileName);\n  const destFilePath = path.join(fixturesFolder, excelFileName);\n  // Update Excel File\n  cy.task('updateAgentTemplateCell', {\n    filePath: sourceFilePath,\n    sheetName: sheetName,\n    data: data\n  }).then(() => {\n    cy.log('Excel file updated successfully with new data');\n  });\n  cy.task('moveAllDownloadsToFixtures').then(result => {\n    cy.log(result);\n  });\n  // Upload the file from `fixtures/`\n  usercreationpage.UserCreationAgentTemplate_upload_01();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.user-management > :nth-child(2) > :nth-child(4) > a.ng-star-inserted`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.user-management > :nth-child(2) > :nth-child(4) > a.ng-star-inserted`, but never found it.\n    at UserCreationPage.UserCreationAgentTemplate_download (webpack:///./cypress/e2e/pages/UserCreationPage.js:13:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/UserCreationTestPage_01.cy.js:28:29)\n    at getRet (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "22632d0c-f51c-459c-ae79-38b287f7323f",
+              "parentUUID": "06aae23d-393c-4d51-b093-2525ef89cdca",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "22632d0c-f51c-459c-ae79-38b287f7323f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 53913,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

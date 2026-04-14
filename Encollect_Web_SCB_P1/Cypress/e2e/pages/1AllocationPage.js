@@ -481,7 +481,7 @@ class AllocationPage {
   ClickonallocationSUS(Status) {
     cy.get(this.locators.allocation).click();
     cy.wait(2000);
-    cy.get('.allocation > :nth-child(2) > :nth-child(3) > a.ng-star-inserted').click();
+    cy.get('#nav-item-2-allocation-owner-bulk-upload').click();
     cy.get("a[title='Allocation Owner Upload Status']").click().click();
     cy.wait(2000);
     cy.get(this.locators.clickonSUSFailed).select("Processed");
@@ -2234,7 +2234,7 @@ class AllocationPage {
     const filePath = 'Cypress/downloads/AllocationToOwner.xlsx'
     cy.get(this.locators.allocation).click();
     cy.wait(2000);
-    cy.get('.allocation > :nth-child(2) > :nth-child(3) > a.ng-star-inserted').click();
+    cy.get('#nav-item-2-allocation-owner-bulk-upload').click();
     cy.wait(2000);
     cy.get("a[title='Allocation Owner Upload']").click().click();
     cy.wait(2000);
@@ -2314,7 +2314,7 @@ class AllocationPage {
     const filePath = 'Cypress/downloads/AllocationToOwner.xlsx'
     cy.get("").click({force: true});
     cy.wait(2000);
-    cy.get("a[title='Agency Bulk Upload']").click({force: true});
+    cy.get("#nav-item-2-agency-bulk-upload").click({force: true});
     cy.wait(2000);
     cy.get(this.locators.UnAllocation_Batch).click();
     cy.wait(2000);
@@ -2741,7 +2741,7 @@ class AllocationPage {
     cy.wait(2000);
     cy.get('.allocation > :nth-child(2) > :nth-child(1) > a.ng-star-inserted').click();
     cy.wait(2000);
-    cy.get('.allocation > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(1) > a').click();
+    cy.get('#nav-item-2-allocation-owner-bulk-upload').click();
     //cy.get(this.locators.Upload_Agency_Allocation_Owner).click().click();
     cy.wait(2000);
     cy.get(this.locators.PrimaryAllocationTmplt).select('Allocation Template For Allocation Owner');

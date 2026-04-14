@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-03-31T15:15:17.242Z",
+    "end": "2026-03-31T15:16:22.158Z",
+    "duration": 64916,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b9c726e0-5ae0-4922-9087-fa44480eabed",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPage_0199.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPage_0199.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bb0604fc-aaab-4b96-8728-509aeb753981",
+          "title": "Agent Bulk Allocation | Customer Level | Credit Card | Staff | 0199",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "0199 | Valid xlsx | Upload enable validation",
+              "fullTitle": "Agent Bulk Allocation | Customer Level | Credit Card | Staff | 0199 0199 | Valid xlsx | Upload enable validation",
+              "timedOut": null,
+              "duration": 60480,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\AllocationPage_0199.cy.js\\\\Agent Bulk Allocation  Customer Level  Credit Card  Staff  0199 -- 0199  Valid xlsx  Upload enable validation (failed).png\"\n    ]\n  ]\n}",
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login2').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.Agent_Bulk_allocation_customer_credit_card_account_staff_staff_0199();\n});",
+              "err": {
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `Encollect_Project\\Web_Testing\\SCB\\Frameworks\\SCB\\Allocation_Page\\cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `Encollect_Project\\Web_Testing\\SCB\\Frameworks\\SCB\\Allocation_Page\\cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:134221:64)\n    at <unknown> (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:135215:16)\n    at tryCatcher (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at <unknown> (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:4156:41)\n    at tryCatcher (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/pages/LoginPage.js:20:9)\n    at getRet (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "567abe9c-9698-4a33-85cd-e57853c888f1",
+              "parentUUID": "bb0604fc-aaab-4b96-8728-509aeb753981",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "567abe9c-9698-4a33-85cd-e57853c888f1"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 60480,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

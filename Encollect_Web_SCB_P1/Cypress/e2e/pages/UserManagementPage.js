@@ -685,7 +685,7 @@ cy.wait(2000);
   DisabledAgent(){
     cy.get(this.locators.clickonusermanagement).click();
     cy.wait(2000);
-    cy.get('.user-management > :nth-child(2) > :nth-child(2) > a.ng-star-inserted').click();
+    cy.get('#nav-item-2-agent-empanelment').click();
     cy.wait(2000);
     cy.get('.user-management > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(2) > a').click();
     cy.wait(2000);

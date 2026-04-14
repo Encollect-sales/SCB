@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-31T13:42:05.806Z",
+    "end": "2026-03-31T13:43:01.440Z",
+    "duration": 55634,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d2f55601-2b5c-440f-862a-46f0daf57fe5",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPage_0123.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPage_0123.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fe7e2fc4-897d-47c5-a306-d932baca8ff5",
+          "title": "TC_0123 | Credit Card | Staff to Telecaller | Invalid file format",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should display error message for invalid file format",
+              "fullTitle": "TC_0123 | Credit Card | Staff to Telecaller | Invalid file format Should display error message for invalid file format",
+              "timedOut": null,
+              "duration": 52052,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login2').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.Agent_Bulk_allocation_account_level_credit_card_staff_telecaller_0123();\n});",
+              "err": {},
+              "uuid": "9d7181a7-a4ad-4191-8581-5386a317545e",
+              "parentUUID": "fe7e2fc4-897d-47c5-a306-d932baca8ff5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9d7181a7-a4ad-4191-8581-5386a317545e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 52052,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

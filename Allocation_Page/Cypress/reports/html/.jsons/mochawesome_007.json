@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-03-31T13:11:45.952Z",
+    "end": "2026-03-31T13:13:22.869Z",
+    "duration": 96917,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8fffaf7a-218c-4465-9b16-f9d67b3b0a29",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPage_0105.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPage_0105.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "36c9030d-397e-4fd3-9f0a-bf2ff778ed94",
+          "title": "Agent Bulk Allocation - Account Level Loan (Telecaller → Agent) - File size validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should show error when file exceeds maximum allowed size",
+              "fullTitle": "Agent Bulk Allocation - Account Level Loan (Telecaller → Agent) - File size validation Should show error when file exceeds maximum allowed size",
+              "timedOut": null,
+              "duration": 89793,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\AllocationPage_0105.cy.js\\\\Agent Bulk Allocation - Account Level Loan (Telecaller → Agent) - File size validation -- Should show error when file exceeds maximum allowed size (failed).png\"\n    ]\n  ]\n}",
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login2').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.Agent_Bulk_allocation_account_level_loan_account_telecaller_agent_0105();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'The file you've chosen is too large (max 2MB). Please try again' but never did.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'The file you've chosen is too large (max 2MB). Please try again' but never did.\n    at AllocationPage.Agent_Bulk_allocation_account_level_loan_account_telecaller_agent_0105 (webpack:///./cypress/e2e/pages/AllocationPage.js:2811:4)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPage_0105.cy.js:21:23)\n    at getRet (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "e652e30e-395f-493f-ac13-69f2bd92b421",
+              "parentUUID": "36c9030d-397e-4fd3-9f0a-bf2ff778ed94",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "e652e30e-395f-493f-ac13-69f2bd92b421"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 89793,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-03-31T13:15:22.789Z",
+    "end": "2026-03-31T13:16:39.247Z",
+    "duration": 76458,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "17a21831-f5d9-44d1-bd8a-799988c69531",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\Communication_010.cy.js",
+      "file": "cypress\\e2e\\tests\\Communication_010.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "24b03997-b5c4-423b-bf31-156c81b2faf2",
+          "title": "Communication - Body Length Boundary Validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify body with exactly 100 characters is allowed",
+              "fullTitle": "Communication - Body Length Boundary Validation Verify body with exactly 100 characters is allowed",
+              "timedOut": null,
+              "duration": 65946,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\Communication_010.cy.js\\\\Communication - Body Length Boundary Validation -- Verify body with exactly 100 characters is allowed (failed).png\"\n    ]\n  ]\n}",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  communicationPage.Communication_10(); // COM-NOT-010\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.communication > .sub-nav-list > :nth-child(2) > .ng-star-inserted`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.communication > .sub-nav-list > :nth-child(2) > .ng-star-inserted`, but never found it.\n    at CommunicationPage.Communication_10 (webpack:///./cypress/e2e/pages/CommunicationPage.js:305:5)\n    at Context.eval (webpack:///./cypress/e2e/tests/Communication_010.cy.js:26:30)\n    at getRet (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "85f56a21-48a0-4c40-b774-45436ace082b",
+              "parentUUID": "24b03997-b5c4-423b-bf31-156c81b2faf2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "85f56a21-48a0-4c40-b774-45436ace082b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 65946,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

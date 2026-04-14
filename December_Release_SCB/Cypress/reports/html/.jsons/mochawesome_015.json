@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-03-31T13:27:03.815Z",
+    "end": "2026-03-31T13:28:04.281Z",
+    "duration": 60466,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c018b5d7-59bb-4b8f-baef-2152abf25680",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\Communication_018.cy.js",
+      "file": "cypress\\e2e\\tests\\Communication_018.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e723a73a-1a7c-450b-853d-7521777332bc",
+          "title": "COM-TRG-018 | Recipient type is dynamic for Entry Point = Account",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Recipient Type shows Agent & Customer for Account entry point",
+              "fullTitle": "COM-TRG-018 | Recipient type is dynamic for Entry Point = Account Verify Recipient Type shows Agent & Customer for Account entry point",
+              "timedOut": null,
+              "duration": 53212,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\Communication_018.cy.js\\\\COM-TRG-018  Recipient type is dynamic for Entry Point = Account -- Verify Recipient Type shows Agent & Customer for Account entry point (failed).png\"\n    ]\n  ]\n}",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  communicationPage.Communication_18();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.communication > .sub-nav-list > :nth-child(4) > .ng-star-inserted`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.communication > .sub-nav-list > :nth-child(4) > .ng-star-inserted`, but never found it.\n    at CommunicationPage.Communication_18 (webpack:///./cypress/e2e/pages/CommunicationPage.js:636:5)\n    at Context.eval (webpack:///./cypress/e2e/tests/Communication_018.cy.js:25:27)\n    at getRet (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "a97402d3-aeae-4a08-a116-3246b587a651",
+              "parentUUID": "e723a73a-1a7c-450b-853d-7521777332bc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a97402d3-aeae-4a08-a116-3246b587a651"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 53212,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-03-31T13:16:52.767Z",
+    "end": "2026-03-31T13:18:02.045Z",
+    "duration": 69278,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4a42cd9c-dd0f-4617-b8de-3f04adcb1d2a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\Communication_011.cy.js",
+      "file": "cypress\\e2e\\tests\\Communication_011.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6c98fe4b-910d-4e72-8454-cc2ec3f00a80",
+          "title": "Communication - Body Length Boundary Validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "COM-NOT-011 | Body length boundary - 101 characters should be rejected",
+              "fullTitle": "Communication - Body Length Boundary Validation COM-NOT-011 | Body length boundary - 101 characters should be rejected",
+              "timedOut": null,
+              "duration": 60352,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\Communication_011.cy.js\\\\Communication - Body Length Boundary Validation -- COM-NOT-011  Body length boundary - 101 characters should be rejected (failed).png\"\n    ]\n  ]\n}",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  // Login\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  // Execute test case\n  communicationPage.Communication_11();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.communication > .sub-nav-list > :nth-child(2) > .ng-star-inserted`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.communication > .sub-nav-list > :nth-child(2) > .ng-star-inserted`, but never found it.\n    at CommunicationPage.Communication_11 (webpack:///./cypress/e2e/pages/CommunicationPage.js:351:5)\n    at Context.eval (webpack:///./cypress/e2e/tests/Communication_011.cy.js:35:24)\n    at getRet (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "bf5770be-0e8d-45f3-adb3-a854129f0911",
+              "parentUUID": "6c98fe4b-910d-4e72-8454-cc2ec3f00a80",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "bf5770be-0e8d-45f3-adb3-a854129f0911"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 60352,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

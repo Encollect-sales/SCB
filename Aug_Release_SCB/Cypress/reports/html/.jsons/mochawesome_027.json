@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-03-31T13:43:18.377Z",
+    "end": "2026-03-31T13:44:21.226Z",
+    "duration": 62849,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5e88d155-df05-42d2-86df-34120501c76d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AccountDetailsPageTest_028.cy.js",
+      "file": "cypress\\e2e\\tests\\AccountDetailsPageTest_028.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c32a81f0-6973-4380-90ab-4fcec5b2e117",
+          "title": "TC_028 Account Details CC - View Account Details and check Show/Hide Empty Values and DemographicDetails",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC_028 Account Details CC - View Account Details and check Show/Hide Empty Values and DemographicDetails",
+              "fullTitle": "TC_028 Account Details CC - View Account Details and check Show/Hide Empty Values and DemographicDetails TC_028 Account Details CC - View Account Details and check Show/Hide Empty Values and DemographicDetails",
+              "timedOut": null,
+              "duration": 59000,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\AccountDetailsPageTest_028.cy.js\\\\TC_028 Account Details CC - View Account Details and check ShowHide Empty Values and DemographicDetails -- TC_028 Account Details CC - View Account Details and check ShowHide Empty Values and DemographicDetails (failed).png\"\n    ]\n  ]\n}",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  accountdetailsPage.ViewAccountDetails028();\n  //loginPage.logout();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tbody > :nth-child(1) > :nth-child(4) > a`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tbody > :nth-child(1) > :nth-child(4) > a`, but never found it.\n    at AccountDetailsPage.ViewAccountDetails028 (webpack:///./cypress/e2e/pages/AccountDetailsPage.js:1674:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AccountDetailsPageTest_028.cy.js:27:35)\n    at getRet (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:119652:20)\n    at tryCatcher (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:119663:66)\n    at Context.then (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:119914:21)\n    at wrapped (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:140191:19)",
+                "diff": null
+              },
+              "uuid": "5e859b53-2d6d-43cb-87a8-7385112ebd00",
+              "parentUUID": "c32a81f0-6973-4380-90ab-4fcec5b2e117",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "5e859b53-2d6d-43cb-87a8-7385112ebd00"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 59000,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

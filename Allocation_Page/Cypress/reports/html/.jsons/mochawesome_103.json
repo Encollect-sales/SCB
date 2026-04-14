@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-03-31T15:07:21.386Z",
+    "end": "2026-03-31T15:08:25.104Z",
+    "duration": 63718,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "69ef5210-1652-494b-9968-5cb33b5ff863",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPage_0192.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPage_0192.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "39e6657f-c985-4aae-aab6-ef5303a98e71",
+          "title": "Agent Bulk Allocation | Customer Level | Loan | Telecaller | Agent | 0192",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "0192 | Empty file upload | Should fail in allocation status",
+              "fullTitle": "Agent Bulk Allocation | Customer Level | Loan | Telecaller | Agent | 0192 0192 | Empty file upload | Should fail in allocation status",
+              "timedOut": null,
+              "duration": 59329,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\AllocationPage_0192.cy.js\\\\Agent Bulk Allocation  Customer Level  Loan  Telecaller  Agent  0192 -- 0192  Empty file upload  Should fail in allocation status (failed).png\"\n    ]\n  ]\n}",
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login2').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.Agent_Bulk_allocation_customer_Level_loan_account_telecaller_agent_0192();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tbody > .ng-star-inserted > :nth-child(4)`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tbody > .ng-star-inserted > :nth-child(4)`, but never found it.\n    at AllocationPage.Agent_Bulk_allocation_customer_Level_loan_account_telecaller_agent_0192 (webpack:///./cypress/e2e/pages/AllocationPage.js:5236:4)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPage_0192.cy.js:25:13)\n    at getRet (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://qa.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "7a196298-8a91-440e-b220-279cda913dd2",
+              "parentUUID": "39e6657f-c985-4aae-aab6-ef5303a98e71",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "7a196298-8a91-440e-b220-279cda913dd2"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 59329,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -959,7 +959,7 @@ cy.get('.ng-dropdown-panel .ng-option').each(($option, index) => {
   ClickonallocationSUS(Status) {
     cy.get(this.locators.allocation).click();
     cy.wait(2000);
-    cy.get('.allocation > :nth-child(2) > :nth-child(3) > a.ng-star-inserted').click();
+    cy.get('#nav-item-2-allocation-owner-bulk-upload').click();
     cy.get("a[title='Allocation Owner Upload Status']").click().click();
     cy.wait(2000);
     cy.get(this.locators.clickonSUSFailed).select("Processed");
@@ -2838,7 +2838,7 @@ cy.get('[heading="  Geography Filter"] > .panel > .panel-heading > .panel-title 
     cy.wait(2000);
     cy.get(this.locators.ClickOnABAL).click();
     cy.wait(2000);
-    cy.get('.allocation > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(1) > a').click()
+    cy.get('#nav-item-2-allocation-owner-bulk-upload').click()
     cy.wait(2000);
     cy.get('#downloadAccounts').click({ force: true });
     cy.wait(2000);
@@ -2851,7 +2851,7 @@ cy.get('[heading="  Geography Filter"] > .panel > .panel-heading > .panel-title 
   ClickonUAABvalidationCheck() {
     cy.get(this.locators.allocation).click();
     cy.wait(2000);
-    cy.get('.allocation > :nth-child(2) > :nth-child(3) > a.ng-star-inserted').click();
+    cy.get('#nav-item-2-allocation-owner-bulk-upload').click();
     cy.wait(2000);
     cy.get('.allocation > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(1) > a').click({force: true} );
     cy.wait(2000);
@@ -2927,7 +2927,7 @@ cy.get('.ng-dropdown-panel .ng-option').then($options => {
     cy.wait(2000);
     cy.get(this.locators.ClickOnABAL).click();
     cy.wait(2000);
-    cy.get('.allocation > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(1) > a').click()
+    cy.get('#nav-item-2-allocation-owner-bulk-upload').click()
     cy.wait(2000);
     cy.get(this.locators.UAABUpload).should('exist').attachFile('AllocationToOwner.xlsx');
     cy.wait(2000);
@@ -2967,7 +2967,7 @@ cy.get('.ng-dropdown-panel .ng-option').then($options => {
   downloadAgencyallocationbatch() {
     cy.get(this.locators.allocation).click();
     cy.wait(2000);
-    cy.get(".allocation > :nth-child(2) > :nth-child(3) > a.ng-star-inserted").click();
+    cy.get("#nav-item-2-allocation-owner-bulk-upload").click();
     cy.wait(2000);
     // cy.get(this.locators.Clickallocationownerbulkupload).click();
     // cy.wait(2000);
@@ -2983,7 +2983,7 @@ cy.get('.ng-dropdown-panel .ng-option').then($options => {
     const filePath = 'Cypress/downloads/AllocationToOwner.xlsx'
     cy.get(this.locators.allocation).click();
     cy.wait(2000);
-    cy.get('.allocation > :nth-child(2) > :nth-child(3) > a.ng-star-inserted').click();
+    cy.get('#nav-item-2-allocation-owner-bulk-upload').click();
     cy.wait(2000);
     cy.get(".allocation > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(1) > a").click().click();
     cy.wait(2000);
@@ -3065,7 +3065,7 @@ cy.get('.ng-dropdown-panel .ng-option').then($options => {
     const filePath = 'Cypress/downloads/AllocationToOwner.xlsx'
     cy.get("").click({force: true});
     cy.wait(2000);
-    cy.get("a[title='Agency Bulk Upload']").click({force: true});
+    cy.get("#nav-item-2-agency-bulk-upload").click({force: true});
     cy.wait(2000);
     cy.get(this.locators.UnAllocation_Batch).click();
     cy.wait(2000);
@@ -3456,7 +3456,7 @@ cy.get('[heading="  Geography Filter"] > .panel > .panel-heading > .panel-title 
   ClickonUAAOvalidationCheck_49() {
     cy.get(this.locators.allocation).click();
     cy.wait(2000);
-    cy.get('.allocation > :nth-child(2) > :nth-child(3) > a.ng-star-inserted').click();
+    cy.get('#nav-item-2-allocation-owner-bulk-upload').click();
     cy.wait(2000);
     cy.get(this.locators.Uploadallstatus).click();
     cy.wait(2000);
@@ -3469,7 +3469,7 @@ cy.get('[heading="  Geography Filter"] > .panel > .panel-heading > .panel-title 
   ClickonUAAOvalidationCheck_50() {
     cy.get(this.locators.allocation).click();
     cy.wait(2000);
-    cy.get('.allocation > :nth-child(2) > :nth-child(3) > a.ng-star-inserted').click();
+    cy.get('#nav-item-2-allocation-owner-bulk-upload').click();
     cy.wait(2000);
     cy.get(this.locators.Uploadallstatus).click();
     cy.wait(2000);
@@ -3485,7 +3485,7 @@ cy.get('[heading="  Geography Filter"] > .panel > .panel-heading > .panel-title 
   ClickonUAAOvalidationCheck_51() {
     cy.get(this.locators.allocation).click();
     cy.wait(2000);
-    cy.get('.allocation > :nth-child(2) > :nth-child(3) > a.ng-star-inserted').click();
+    cy.get('#nav-item-2-allocation-owner-bulk-upload').click();
     cy.wait(2000);
     cy.get(this.locators.Uploadallstatus).click();
     cy.wait(2000);
@@ -3500,7 +3500,7 @@ cy.get('[heading="  Geography Filter"] > .panel > .panel-heading > .panel-title 
   ClickonUAAOvalidationCheck_52() {
     cy.get(this.locators.allocation).click();
     cy.wait(2000);
-    cy.get('.allocation > :nth-child(2) > :nth-child(3) > a.ng-star-inserted').click();
+    cy.get('#nav-item-2-allocation-owner-bulk-upload').click();
     cy.wait(2000);
     cy.get(this.locators.Uploadallstatus).click();
     cy.wait(2000);
@@ -3555,7 +3555,7 @@ cy.get('[heading="  Geography Filter"] > .panel > .panel-heading > .panel-title 
     cy.wait(2000);
     cy.get('.allocation > :nth-child(2) > :nth-child(1) > a.ng-star-inserted').click();
     cy.wait(2000);
-    cy.get('.allocation > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(1) > a').click();
+    cy.get('#nav-item-2-allocation-owner-bulk-upload').click();
     //cy.get(this.locators.Upload_Agency_Allocation_Owner).click().click();
     cy.wait(2000);
     cy.get(':nth-child(1) > .enc-card > .card-content > :nth-child(1) > .form-radio-group > :nth-child(1)').click();

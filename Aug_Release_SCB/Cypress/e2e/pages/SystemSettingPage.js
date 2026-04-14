@@ -9,10 +9,10 @@ class SystemSettingPage {
 
   systemSettingModule(){
     cy.wait(2000);
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
   }
   SystemSettingTestPage_1091(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click();
     cy.wait(2000);
@@ -67,7 +67,7 @@ class SystemSettingPage {
 
   }
   SystemSettingTestPage_1195(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -81,7 +81,7 @@ class SystemSettingPage {
    
   }
   SystemSettingTestPage_1227(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -93,7 +93,7 @@ class SystemSettingPage {
     cy.wait(2000);
   }
   SystemSettingTestPage_1092(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click();
     cy.wait(2000);
@@ -198,7 +198,7 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1342(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -229,7 +229,7 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1343(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -258,7 +258,7 @@ cy.wait(2000);
         
   }
   SystemSettingTestPage_1341(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -287,7 +287,7 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1345(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -319,7 +319,7 @@ cy.wait(2000);
 
   
   SystemSettingTestPage_1119(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click();
     cy.wait(2000);
@@ -333,7 +333,7 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1102(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -363,7 +363,7 @@ cy.wait(2000);
 
   
   SystemSettingTestPage_1118(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click();
     cy.wait(2000);
@@ -395,7 +395,7 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1327(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -426,7 +426,7 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1331(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -470,7 +470,7 @@ cy.wait(2000);
 
   }
   SystemSettingTest_1104(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click();
     cy.wait(2000);
@@ -499,7 +499,7 @@ cy.wait(2000);
       
   }
     SystemSettingTestPage_1213(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click();
     cy.wait(2000);
@@ -524,7 +524,7 @@ cy.wait(2000);
         
       }
     SystemSettingTest_1148(){
-      cy.get(this.locators.clickOnSystemSetting).click();
+      cy.contains("System Settings").click();
       cy.wait(2000);
       cy.get(this.locators.accountImportMaster).click();
       cy.wait(2000);
@@ -549,7 +549,7 @@ cy.wait(2000);
           
     }   
     SystemSettingTest_1198(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -561,7 +561,7 @@ cy.wait(2000);
     cy.wait(2000);
     }
     SystemSettingTestPage_1181(){
-      cy.get(this.locators.clickOnSystemSetting).click();
+      cy.contains("System Settings").click();
       cy.wait(2000);
       cy.get(this.locators.ClicOnMU).click();
       cy.wait(2000);
@@ -586,7 +586,7 @@ cy.wait(2000);
           
  
     SystemSettingTestPage_1120(){
-      cy.get(this.locators.clickOnSystemSetting).click();
+      cy.contains("System Settings").click();
       cy.wait(2000);
       cy.get(this.locators.accountImportMaster).click();
       cy.wait(2000);
@@ -599,7 +599,7 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1121(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click();
     cy.wait(2000);
@@ -631,7 +631,7 @@ cy.wait(2000);
     }
 
     SystemSettingTestPage_1122(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click();
     cy.wait(2000);
@@ -658,7 +658,7 @@ cy.wait(2000);
       cy.wait(2000);
     }
      SystemSettingTestPage_1208(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click();
     cy.wait(2000);
@@ -687,7 +687,7 @@ cy.wait(2000);
 
     }
     SystemSettingTestPage_1209(){
-      cy.get(this.locators.clickOnSystemSetting).click();
+      cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click();
     cy.wait(2000);
@@ -718,7 +718,7 @@ cy.wait(2000);
 
     }
     SystemSettingTestPage_1207(){
-      cy.get(this.locators.clickOnSystemSetting).click();
+      cy.contains("System Settings").click();
       cy.wait(2000);
       cy.get(this.locators.ClicOnMU).click();
       cy.wait(2000);
@@ -750,7 +750,7 @@ cy.wait(2000);
 
     }
     SystemSettingTestPage_1206(){
-      cy.get(this.locators.clickOnSystemSetting).click();
+      cy.contains("System Settings").click();
       cy.wait(2000);
       cy.get(this.locators.ClicOnMU).click();
       cy.wait(2000);
@@ -781,7 +781,7 @@ cy.wait(2000);
     
         }
     SystemSettingTestPage_1199(){
-      cy.get(this.locators.clickOnSystemSetting).click();
+      cy.contains("System Settings").click();
       cy.wait(2000);
       cy.get(this.locators.ClicOnMU).click();
       cy.wait(2000);
@@ -810,7 +810,7 @@ cy.wait(2000);
         
     }
     SystemSettingTestPage_1211(){
-      cy.get(this.locators.clickOnSystemSetting).click();
+      cy.contains("System Settings").click();
       cy.wait(2000);
       cy.get(this.locators.ClicOnMU).click();
       cy.wait(2000);
@@ -839,7 +839,7 @@ cy.wait(2000);
 
     }
     SystemSettingTestPage_1216(){
-      cy.get(this.locators.clickOnSystemSetting).click();
+      cy.contains("System Settings").click();
       cy.wait(2000);
       cy.get(this.locators.ClicOnMU).click();
       cy.wait(2000);
@@ -869,7 +869,7 @@ cy.wait(2000);
 
     }
     SystemSettingTestPage_1179(){
-      cy.get(this.locators.clickOnSystemSetting).click();
+      cy.contains("System Settings").click();
       cy.wait(2000);
       cy.get(this.locators.ClicOnMU).click();
       cy.wait(2000);
@@ -915,7 +915,7 @@ cy.wait(2000);
     
     
   SystemSettingTestPage_1135(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click();
     cy.wait(2000);
@@ -928,7 +928,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1136(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click({force:true});
     cy.wait(2000);
@@ -948,7 +948,7 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1162(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -960,7 +960,7 @@ cy.wait(2000);
     cy.wait(2000);
   }
   SystemSettingTestPage_1163(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click({force:true});
     cy.wait(2000);
@@ -980,7 +980,7 @@ cy.wait(2000);
     // cy.wait(800);
   }
   SystemSettingTestPage_1229(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click({force:true});
     cy.wait(2000);
@@ -993,7 +993,7 @@ cy.wait(2000);
     
   }
   SystemSettingTestPage_1196(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click({force:true});
     cy.wait(2000);
@@ -1008,7 +1008,7 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1228(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click({force:true});
     cy.wait(2000);
@@ -1022,7 +1022,7 @@ cy.wait(2000);
     // cy.wait(800);
   }
   SystemSettingTestPage_1229(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click({force:true});
     cy.wait(2000);
@@ -1036,7 +1036,7 @@ cy.wait(2000);
     // cy.wait(800);
   }
   SystemSettingTestPage_1305(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
       cy.wait(2000);
       cy.get(this.locators.accountImportMaster).click();
       cy.wait(2000);
@@ -1067,7 +1067,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1306(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -1127,7 +1127,7 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1102(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click();
     cy.wait(2000);
@@ -1154,7 +1154,7 @@ cy.wait(2000);
       cy.wait(2000);
       }
   SystemSettingTestPage_1316(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -1182,7 +1182,7 @@ cy.wait(2000);
       
   }
   SystemSettingTestPage_1318(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -1208,7 +1208,7 @@ cy.wait(2000);
   
   
   SystemSettingTestPage_1351(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -1236,7 +1236,7 @@ cy.wait(2000);
       
   }
   SystemSettingTestPage_1352(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -1282,7 +1282,7 @@ cy.wait(2000);
 
   
   SystemSettingTestPage_1303(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click({force:true});
     cy.wait(2000);
@@ -1296,7 +1296,7 @@ cy.wait(2000);
     // cy.wait(800);
   }
   SystemSettingTestPage_1304(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click({force:true});
     cy.wait(2000);
@@ -1310,7 +1310,7 @@ cy.wait(2000);
   //   cy.wait(800);
   }
   SystemSettingTestPage_1333(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click({force:true});
     cy.wait(2000);
@@ -1324,7 +1324,7 @@ cy.wait(2000);
     // cy.wait(800); 
   }
   SystemSettingTestPage_1332(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -1337,7 +1337,7 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1334(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click({force:true});
     cy.wait(2000);
@@ -1352,7 +1352,7 @@ cy.wait(2000);
   
   }
   SystemSettingTestPage_1357(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -1364,7 +1364,7 @@ cy.wait(2000);
     //cy.wait(2000);
   }
   SystemSettingTestPage_1358(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click({force:true});
     cy.wait(2000);
@@ -1379,7 +1379,7 @@ cy.wait(2000);
   
   }
   SystemSettingTestPage_1359(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click({force:true});
     cy.wait(2000);
@@ -1427,7 +1427,7 @@ cy.wait(2000);
     cy.wait(800);
   }
   SystemSettingTestPage_1097(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -1461,7 +1461,7 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1100(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -1494,7 +1494,7 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1335(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(800);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(800);
@@ -1507,7 +1507,7 @@ cy.wait(2000);
     cy.log('File downloaded Sucessfully');
   }
   SystemSettingTestPage_1120(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(800);
     cy.get(this.locators.ClickOnMasterUpload).click();
     cy.wait(800);
@@ -1531,7 +1531,7 @@ cy.wait(2000);
   
 
   SystemSettingTestPage_1164(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -1546,7 +1546,7 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/GeomasterMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -1570,7 +1570,7 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/GeomasterMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -1606,7 +1606,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1169(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -1638,7 +1638,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1170(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -1669,7 +1669,7 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1171(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -1699,7 +1699,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1172(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -1729,7 +1729,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1173(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -1759,7 +1759,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1174(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -1789,7 +1789,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1175(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -1821,7 +1821,7 @@ cy.wait(2000);
 
 
   SystemSettingTestPage_1176(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -1852,7 +1852,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1177(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -1882,7 +1882,7 @@ cy.wait(2000);
 
   SystemSettingTestPage_1178(){
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -1913,7 +1913,7 @@ cy.wait(2000);
 
 
   SystemSettingTestPage_1182(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -1943,7 +1943,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1183(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -1973,7 +1973,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1186(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -2003,7 +2003,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1294(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -2032,7 +2032,7 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1287(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -2062,7 +2062,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1295(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -2092,7 +2092,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1296(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -2122,7 +2122,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1297(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -2151,7 +2151,7 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1298(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -2181,7 +2181,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1299(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -2211,7 +2211,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1200(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -2241,7 +2241,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1301(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -2271,7 +2271,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1302(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -2290,7 +2290,7 @@ cy.wait(2000);
     
 
   SystemSettingTestPage_1305(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -2319,7 +2319,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1306(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -2348,7 +2348,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1307(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -2408,7 +2408,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1310(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -2440,7 +2440,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1311(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -2473,7 +2473,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1312(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -2505,7 +2505,7 @@ cy.wait(2000);
   }
   
   SystemSettingTestPage_1313(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -2538,7 +2538,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1314(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -2570,7 +2570,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1315(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -2602,7 +2602,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1093(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click();
     cy.wait(2000);
@@ -2655,7 +2655,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1096(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click();
     cy.wait(2000);
@@ -2706,7 +2706,7 @@ cy.wait(2000);
    }
 
   SystemSettingTestPage_1097(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click();
     cy.wait(2000);
@@ -2735,7 +2735,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1098(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click();
     cy.wait(2000);
@@ -2766,7 +2766,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1099(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click();
     cy.wait(2000);
@@ -2797,7 +2797,7 @@ cy.wait(2000);
       cy.wait(2000);
   }
   SystemSettingTestPage_1100(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click();
     cy.wait(2000);
@@ -2828,7 +2828,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1101(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click();
     cy.wait(2000);
@@ -2860,7 +2860,7 @@ cy.wait(2000);
 
 
   SystemSettingTestPage_1103(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click();
     cy.wait(2000);
@@ -2891,7 +2891,7 @@ cy.wait(2000);
 
 
   SystemSettingTestPage_1105(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click();
     cy.wait(2000);
@@ -2937,7 +2937,7 @@ cy.wait(2000);
 
 
   SystemSettingTestPage_1199(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -2965,7 +2965,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_12000(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -2992,7 +2992,7 @@ cy.wait(2000);
       cy.wait(2000);
   }
   SystemSettingTestPage_1203(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -3019,7 +3019,7 @@ cy.wait(2000);
       cy.wait(2000);
   }
   SystemSettingTestPage_1204(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -3047,7 +3047,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1205(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -3075,7 +3075,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1208(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -3103,7 +3103,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1210(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -3131,7 +3131,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1216(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -3159,7 +3159,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1217(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
     cy.get(this.locators.ClickBLUM).click({force:true});
@@ -3186,7 +3186,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1218(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -3214,7 +3214,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1219(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -3242,7 +3242,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1220(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -3269,7 +3269,7 @@ cy.wait(2000);
       // cy.wait(2000);
   }
   SystemSettingTestPage_1221(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -3296,7 +3296,7 @@ cy.wait(2000);
       //cy.wait(2000);
   }
   SystemSettingTestPage_1222(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -3324,7 +3324,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1223(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -3352,7 +3352,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1224(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -3380,7 +3380,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1225(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -3409,7 +3409,7 @@ cy.wait(2000);
 
 
   SystemSettingTestPage_1226(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -3437,7 +3437,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1335(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -3453,7 +3453,7 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/DepositBankMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -3470,7 +3470,7 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/DepositBankMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -3488,7 +3488,7 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/DepositBankMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -3508,7 +3508,7 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/DepositBankMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -3532,7 +3532,7 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/DepositBankMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -3553,7 +3553,7 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/DepartmentAndDesiginationMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -3573,7 +3573,7 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/DepartmentAndDesiginationMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -3593,7 +3593,7 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/DepartmentAndDesiginationMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMaster).click();
     cy.wait(2000);
@@ -3612,7 +3612,7 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/BaseBranchMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(600);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -3632,7 +3632,7 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/BaseBranchMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(600);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -3652,7 +3652,7 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/BaseBranchMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(600);
     cy.get(this.locators.ClicOnMU).click();
     cy.wait(2000);
@@ -3669,7 +3669,7 @@ cy.wait(2000);
   }
   systemSettingModule(){
     cy.wait(2000);
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
   }
 
   BucketMaster1126(){
@@ -3732,7 +3732,7 @@ cy.wait(2000);
 
   BucketMaster1134(){
     cy.wait(600);
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click();
     cy.wait(2000);
@@ -4653,7 +4653,7 @@ cy.wait(2000);
 
 
   BucketMaster1132(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click();
     cy.wait(2000);
@@ -4694,7 +4694,7 @@ cy.wait(2000);
 
 
   // DefineACM1377(){
-  //   cy.get(this.locators.clickOnSystemSetting).click();
+  //   cy.contains("System Settings").click();
 
   //   cy.wait(2000);
   //   cy.get(this.locators.web_submodule).click({force : true});
@@ -4709,7 +4709,7 @@ cy.wait(2000);
   // }
 
   // DefineACM1378(){
-  //   cy.get(this.locators.clickOnSystemSetting).click();
+  //   cy.contains("System Settings").click();
   //   cy.wait(2000);
   //   cy.get(this.locators.defineACM).click();
   //   cy.wait(2000);
@@ -4731,7 +4731,7 @@ cy.wait(2000);
   // }
 
   // DefineACM1379(){
-  //   cy.get(this.locators.clickOnSystemSetting).click();
+  //   cy.contains("System Settings").click();
   //   cy.wait(2000);
   //   cy.get(this.locators.defineACM).click();
   //   cy.wait(2000);
@@ -4777,7 +4777,7 @@ cy.wait(2000);
 
 
   // DefineACM1380(){
-  //   cy.get(this.locators.clickOnSystemSetting).click();
+  //   cy.contains("System Settings").click();
   //   cy.wait(2000);
   //   cy.wait(2000);
   //   cy.get(this.locators.defineACM).click();
@@ -4818,7 +4818,7 @@ cy.wait(2000);
   // }
 
   // DefineACM1381(){
-  //   cy.get(this.locators.clickOnSystemSetting).click();
+  //   cy.contains("System Settings").click();
   //   cy.wait(2000);
   //   cy.get(this.locators.defineACM).click();
   //   cy.wait(2000);
@@ -4861,7 +4861,7 @@ cy.wait(2000);
 
 
   // DefineACM1382(){
-  //   cy.get(this.locators.clickOnSystemSetting).click();
+  //   cy.contains("System Settings").click();
   //   cy.wait(2000);
   //   cy.get(this.locators.defineACM).click();
   //   cy.wait(2000);
@@ -4906,7 +4906,7 @@ cy.wait(2000);
 
 
   // DefineACM1384(){
-  //   cy.get(this.locators.clickOnSystemSetting).click();
+  //   cy.contains("System Settings").click();
   //   cy.wait(2000);
   //   cy.get(this.locators.defineACM).click();
   //   cy.wait(2000);
@@ -4956,7 +4956,7 @@ cy.wait(2000);
   // }
 
   DefineACM1385(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.defineACM).click();
     cy.wait(2000);
@@ -4972,7 +4972,7 @@ cy.wait(2000);
 
 
   DefineACM1386(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.defineACM).click();
     cy.wait(2000);
@@ -4993,7 +4993,7 @@ cy.wait(2000);
 
 
   DefineACM1387(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.defineACM).click();
     cy.wait(2000);
@@ -5021,7 +5021,7 @@ cy.wait(2000);
 
 
   DefineACM1388(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.defineACM).click();
     cy.wait(2000);
@@ -5055,7 +5055,7 @@ cy.wait(2000);
 
 
   DefineACM1389(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+    cy.contains("System Settings").click();
     cy.wait(2000);
     cy.get(this.locators.defineACM).click();
     cy.wait(2000);

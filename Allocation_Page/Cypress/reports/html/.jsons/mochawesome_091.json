@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-31T14:53:46.659Z",
+    "end": "2026-03-31T14:54:54.503Z",
+    "duration": 67844,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "950e2349-c32f-425c-89a2-d28b62ea7991",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPage_0181.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPage_0181.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "287109f4-9de0-4e81-9a0a-b2c8f6ea7e59",
+          "title": "Agent Bulk Allocation | Customer Level | Loan | Agent | Telecaller | 0181",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "0181 | File size greater than 2MB | Should fail",
+              "fullTitle": "Agent Bulk Allocation | Customer Level | Loan | Agent | Telecaller | 0181 0181 | File size greater than 2MB | Should fail",
+              "timedOut": null,
+              "duration": 63578,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login2').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.Agent_Bulk_allocation_customer_Level_loan_account_agent_telecaller_0181();\n});",
+              "err": {},
+              "uuid": "436ac677-ed9c-49c4-b9fe-4b403b8badb0",
+              "parentUUID": "287109f4-9de0-4e81-9a0a-b2c8f6ea7e59",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "436ac677-ed9c-49c4-b9fe-4b403b8badb0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 63578,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

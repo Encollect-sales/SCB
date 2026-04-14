@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-31T13:39:49.051Z",
+    "end": "2026-03-31T13:40:47.372Z",
+    "duration": 58321,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2712978b-2cc8-4fd3-bf37-98abedc45c7f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPage_0121.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPage_0121.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8d44b72c-7c3d-4431-a38f-5b724c28498a",
+          "title": "TC_0121 | Credit Card | Staff to Agent | Empty file upload",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should show Failed status for empty file upload",
+              "fullTitle": "TC_0121 | Credit Card | Staff to Agent | Empty file upload Should show Failed status for empty file upload",
+              "timedOut": null,
+              "duration": 54886,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login2').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.Agent_Bulk_allocation_account_level_credit_card_staff_agent_0121();\n});",
+              "err": {},
+              "uuid": "2b4a8c5d-ac19-4510-8349-753ee987391d",
+              "parentUUID": "8d44b72c-7c3d-4431-a38f-5b724c28498a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2b4a8c5d-ac19-4510-8349-753ee987391d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 54886,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

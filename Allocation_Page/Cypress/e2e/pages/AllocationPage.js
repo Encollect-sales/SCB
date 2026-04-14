@@ -5,7 +5,7 @@ class AllocationPage {
   
 Allocation_loan_account_01(){
     const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -20,7 +20,7 @@ Allocation_loan_account_01(){
 
 Allocation_loan_account_02(){
     const filePath = 'PrimaryAgency_Accountlevel.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -40,7 +40,7 @@ Allocation_loan_account_02(){
 
 Allocation_loan_account_03(){
      const filePath = 'PrimaryTeleCallingAgency_Accountlevel.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -59,7 +59,7 @@ Allocation_loan_account_03(){
 }
 Allocation_loan_account_04(){
      const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -78,7 +78,7 @@ Allocation_loan_account_04(){
 }
 Allocation_loan_account_05(){
     const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -96,7 +96,7 @@ Allocation_loan_account_05(){
 
 Allocation_Agency_Bulk_Allocation_Customer_Level_loan_account_06(){
    const filePath = 'PrimaryAgency.xlsx'; 
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -110,7 +110,7 @@ Allocation_Agency_Bulk_Allocation_Customer_Level_loan_account_06(){
 
 Allocation_Agency_Bulk_Allocation_Customer_Level_loan_account_07(){
     const filePath = 'PrimaryTelecallingAgency_Customerlevel.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -127,7 +127,7 @@ Allocation_Agency_Bulk_Allocation_Customer_Level_loan_account_07(){
 Allocation_Agency_Bulk_Allocation_Customer_Level_loan_account_08(){
 
 const filePath = 'PrimaryTeleCallingAgency.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -144,7 +144,7 @@ const filePath = 'PrimaryTeleCallingAgency.xlsx';
 }
 Allocation_Agency_Bulk_Allocation_Customer_Level_loan_account_09(){
      const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -163,7 +163,7 @@ Allocation_Agency_Bulk_Allocation_Customer_Level_loan_account_09(){
 Allocation_Agency_Bulk_Allocation_Customer_Level_loan_account_010(){
  const filePath = '3mbnew.xlsx';
     cy.wait(2000);
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -181,7 +181,7 @@ Allocation_Agency_Bulk_Allocation_Customer_Level_loan_account_010(){
 
 Allocation_Agency_Bulk_Allocation_Customer_Level_loan_account_011(){
   const filePath = 'empty.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -223,7 +223,7 @@ Allocation_Agency_Bulk_Allocation_Customer_Level_loan_account_011(){
 Allocation_creditcard_012(){
    
     const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -242,7 +242,7 @@ Allocation_creditcard_012(){
 Allocation_creditcard_013(){
   
     const filePath = 'PrimaryAgency_Accountlevel.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -260,7 +260,7 @@ Allocation_creditcard_013(){
 }
 Allocation_creditcard_014(){
     const filePath = 'Staff(1).xlsx'
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -281,7 +281,7 @@ Allocation_creditcard_014(){
 Allocation_creditcard_015(){
   
    const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -302,7 +302,7 @@ Allocation_creditcard_015(){
 Allocation_creditcard_016(){
  
   const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -322,7 +322,7 @@ Allocation_creditcard_016(){
 Allocation_creditcard_017(){
   
  const filePath = 'empty.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -366,7 +366,7 @@ Allocation_creditcard_017(){
 
   Allocation_Agency_bulk_allocation_customer_level_credit_card_018(){
       const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -382,7 +382,7 @@ Allocation_creditcard_017(){
   }
    Allocation_Agency_bulk_allocation_customer_level_credit_card_019(){
       const filePath = 'PrimaryAgency_Accountlevel.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -400,7 +400,7 @@ Allocation_creditcard_017(){
    }
       Allocation_Agency_bulk_allocation_customer_level_credit_card_020(){
         const filePath = 'PrimaryTeleCallingAgency.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -420,7 +420,7 @@ Allocation_creditcard_017(){
       }
   Allocation_Agency_bulk_allocation_customer_level_credit_card_021(){
     const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -440,7 +440,7 @@ Allocation_creditcard_017(){
   }
   Allocation_Agency_Bulk_Allocation_customer_level_loan_account_022(){
     const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -460,7 +460,7 @@ Allocation_creditcard_017(){
 
   AllocationPage_credit_card_023(){
      const filePath = 'empty.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -502,7 +502,7 @@ Allocation_creditcard_017(){
 
   AllocationPage_agnecy_level_loan_account_024(){
     const filePath = 'empty.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -547,7 +547,7 @@ Allocation_creditcard_017(){
   DealloctionPage_025(){
 
      const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -562,7 +562,7 @@ Allocation_creditcard_017(){
   }
   DealloctionPage_026(){
      const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -582,7 +582,7 @@ Allocation_creditcard_017(){
   }
   DealloctionPage_027(){
     const filePath = 'empty.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -624,7 +624,7 @@ Allocation_creditcard_017(){
 
   DealloctionPage_028(){
       const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -646,7 +646,7 @@ Allocation_creditcard_017(){
    
 
      const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -663,7 +663,7 @@ Allocation_creditcard_017(){
 
   DealloctionPage_030(){
      const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -683,7 +683,7 @@ Allocation_creditcard_017(){
   }
   DealloctionPage_031(){
     const filePath = 'empty.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -724,7 +724,7 @@ Allocation_creditcard_017(){
   }
   DealloctionPage_032(){
        const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -745,7 +745,7 @@ Allocation_creditcard_017(){
   }
  Agency_Bulk_Deallocation_Customer_Level_033(){
   const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -762,7 +762,7 @@ Allocation_creditcard_017(){
 
    Agency_Bulk_Deallocation_Customer_Level_034(){
       const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -783,7 +783,7 @@ Allocation_creditcard_017(){
 
    Agency_Bulk_Deallocation_Customer_Level_035(){
      const filePath = 'empty.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -823,7 +823,7 @@ Allocation_creditcard_017(){
   }
   Agency_Bulk_Deallocation_Customer_Level_036(){
     const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agency Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -843,7 +843,7 @@ Allocation_creditcard_017(){
    
    Agent_Bulk_Deallocation_Account_Level_037(){
     const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -858,7 +858,7 @@ Allocation_creditcard_017(){
    Agent_Bulk_Deallocation_Account_Level_038(){
  
     const filePath = 'Aadhar.png';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -874,7 +874,7 @@ Allocation_creditcard_017(){
 
    Agent_Bulk_Deallocation_Account_Level_039(){
      const filePath = 'Staff(1).xlsx';
-      cy.get('[title="Allocation"]').click({force:true});
+      cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -894,7 +894,7 @@ Allocation_creditcard_017(){
    Agent_Bulk_Deallocation_Account_Level_040(){
     
   const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -914,7 +914,7 @@ Allocation_creditcard_017(){
    }
    Agent_Bulk_Deallocation_Account_Level_041(){
     const filePath = 'empty.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -953,7 +953,7 @@ Allocation_creditcard_017(){
    }
    Agent_Bulk_Deallocation_account_level_agent_042(){
      const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -969,7 +969,7 @@ Allocation_creditcard_017(){
    }
    Agent_Bulk_Deallocation_account_level_agent_043(){
       const filePath = 'Aadhar.png';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -986,7 +986,7 @@ Allocation_creditcard_017(){
    }
   Agent_Bulk_Deallocation_account_level_agent_044(){
      const filePath = 'Staff(1).xlsx';
-      cy.get('[title="Allocation"]').click({force:true});
+      cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -1006,7 +1006,7 @@ Allocation_creditcard_017(){
    }
    Agent_Bulk_Deallocation_account_level_agent_045(){
     const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -1029,7 +1029,7 @@ Allocation_creditcard_017(){
     Agent_Bulk_Deallocation_account_level_agent_046(){
       const filePath = 'empty.xlsx';
    
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -1072,7 +1072,7 @@ Allocation_creditcard_017(){
     //  ##################################################################
 Agent_Bulk_Deallocation_account_level_telecaller_047(){
      const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -1088,7 +1088,7 @@ Agent_Bulk_Deallocation_account_level_telecaller_047(){
    }
    Agent_Bulk_Deallocation_account_level_telecaller_048(){
       const filePath = 'Aadhar.png';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -1105,7 +1105,7 @@ Agent_Bulk_Deallocation_account_level_telecaller_047(){
    }
   Agent_Bulk_Deallocation_account_level_telecaller_049(){
      const filePath = 'Staff(1).xlsx';
-      cy.get('[title="Allocation"]').click({force:true});
+      cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -1125,7 +1125,7 @@ Agent_Bulk_Deallocation_account_level_telecaller_047(){
    }
    Agent_Bulk_Deallocation_account_level_telecaller_050(){
     const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -1148,7 +1148,7 @@ Agent_Bulk_Deallocation_account_level_telecaller_047(){
     Agent_Bulk_Deallocation_account_level_telecaller_051(){
       const filePath = 'empty.xlsx';
    
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -1191,7 +1191,7 @@ Agent_Bulk_Deallocation_account_level_telecaller_047(){
 // ########################################################################
 Agent_Bulk_Deallocation_customer_level_staff_052(){
      const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -1207,7 +1207,7 @@ Agent_Bulk_Deallocation_customer_level_staff_052(){
    }
    Agent_Bulk_Deallocation_customer_level_staff_053(){
       const filePath = 'Aadhar.png';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -1222,7 +1222,7 @@ Agent_Bulk_Deallocation_customer_level_staff_052(){
    }
   Agent_Bulk_Deallocation_customer_level_staff_054(){
      const filePath = 'Staff(1).xlsx';
-      cy.get('[title="Allocation"]').click({force:true});
+      cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -1240,7 +1240,7 @@ Agent_Bulk_Deallocation_customer_level_staff_052(){
    }
    Agent_Bulk_Deallocation_customer_level_staff_055(){
     const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -1261,7 +1261,7 @@ Agent_Bulk_Deallocation_customer_level_staff_052(){
     Agent_Bulk_Deallocation_customer_level_staff_056(){
       const filePath = 'empty.xlsx';
    
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -1302,7 +1302,7 @@ Agent_Bulk_Deallocation_customer_level_staff_052(){
 
    Agent_Bulk_Deallocation_customer_level_agent_057(){
      const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -1318,7 +1318,7 @@ cy.get(this.locators.agent).click({force:true});
    }
    Agent_Bulk_Deallocation_customer_level_agent_058(){
       const filePath = 'Aadhar.png';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -1335,7 +1335,7 @@ cy.get(this.locators.agent).click({force:true});
    }
   Agent_Bulk_Deallocation_customer_level_agent_059(){
      const filePath = 'Staff(1).xlsx';
-      cy.get('[title="Allocation"]').click({force:true});
+      cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -1355,7 +1355,7 @@ cy.get(this.locators.agent).click({force:true});
    }
    Agent_Bulk_Deallocation_customer_level_agent_060(){
     const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -1378,7 +1378,7 @@ cy.get(this.locators.agent).click({force:true});
     Agent_Bulk_Deallocation_customer_level_agent_061(){
       const filePath = 'empty.xlsx';
    
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({force:true});
     cy.wait(2000);
@@ -1424,7 +1424,7 @@ cy.get(this.locators.agent).click({force:true});
 Agent_Bulk_Deallocation_customer_level_telecaller_062() {
   const filePath = 'AgencyTemplate.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -1448,7 +1448,7 @@ Agent_Bulk_Deallocation_customer_level_telecaller_062() {
 Agent_Bulk_Deallocation_customer_level_telecaller_063() {
   const filePath = 'Aadhar.png';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -1474,7 +1474,7 @@ Agent_Bulk_Deallocation_customer_level_telecaller_063() {
 Agent_Bulk_Deallocation_customer_level_telecaller_064() {
   const filePath = 'Staff(1).xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -1506,7 +1506,7 @@ Agent_Bulk_Deallocation_customer_level_telecaller_064() {
 Agent_Bulk_Deallocation_customer_level_telecaller_065() {
   const filePath = '3mbnew.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -1541,7 +1541,7 @@ cy.wait(5000);
 Agent_Bulk_Deallocation_customer_level_telecaller_066() {
   const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -1596,7 +1596,7 @@ Agent_Bulk_Deallocation_customer_level_telecaller_066() {
 
 Agent_Bulk_allocation_account_level_loan_account_staff_staff_067(){
     const filePath = 'empty.xlsx';
-   cy.get('[title="Allocation"]').click({ force: true });
+   cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -1617,7 +1617,7 @@ cy.contains('button', 'Upload').should('be.disabled');
 Agent_Bulk_allocation_account_level_loan_account_staff_staff_068() {
   const filePath = 'Aadhar.png';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -1640,7 +1640,7 @@ Agent_Bulk_allocation_account_level_loan_account_staff_staff_068() {
 Agent_Bulk_allocation_account_level_loan_account_staff_staff_069() {
   const filePath = 'Staff(1).xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -1666,7 +1666,7 @@ Agent_Bulk_allocation_account_level_loan_account_staff_staff_069() {
 // 070 - File size validation
 Agent_Bulk_allocation_account_level_loan_account_staff_staff_070() {
   const filePath = '3mbnew.xlsx';
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -1690,7 +1690,7 @@ cy.wait(20000);
 Agent_Bulk_allocation_account_level_loan_account_staff_staff_071() {
   const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -1739,7 +1739,7 @@ cy.wait(2000);
 // ###################################staff_agent
 Agent_Bulk_allocation_account_level_loan_account_staff_agent_072(){
    const filePath = 'empty.xlsx';
-   cy.get('[title="Allocation"]').click({ force: true });
+   cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -1766,7 +1766,7 @@ cy.contains('button', 'Upload').should('be.disabled');
 Agent_Bulk_allocation_account_level_loan_account_staff_agent_073() {
   const filePath = 'Aadhar.png';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -1791,7 +1791,7 @@ Agent_Bulk_allocation_account_level_loan_account_staff_agent_073() {
 Agent_Bulk_allocation_account_level_loan_account_staff_agent_074() {
   const filePath = 'ENCollectSecondaryAllocationCollectionStaff_Accountlevel(1).xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -1820,7 +1820,7 @@ cy.wait(2000);
 Agent_Bulk_allocation_account_level_loan_account_staff_agent_075() {
   const filePath = '3mbnew.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -1853,7 +1853,7 @@ cy.wait(2000);
 Agent_Bulk_allocation_account_level_loan_account_staff_agent_076() {
   const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -1879,7 +1879,7 @@ cy.wait(2000);
 
 Agent_Bulk_allocation_account_level_loan_account_staff_telecaller_077(){
   const filePath = "ENCollectSecondaryAllocationCollectionStaff.xlsx"
-   cy.get('[title="Allocation"]').click({ force: true });
+   cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -1903,7 +1903,7 @@ cy.contains('button', 'Upload').should('be.disabled');
 Agent_Bulk_allocation_account_level_loan_account_staff_telecaller_078() {
   const filePath = 'Aadhar.png';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -1928,7 +1928,7 @@ Agent_Bulk_allocation_account_level_loan_account_staff_telecaller_078() {
 Agent_Bulk_allocation_account_level_loan_account_staff_telecaller_079() {
   const filePath = 'ENCollectSecondaryAllocationTelecaller_(1)Accountlevel.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -1957,7 +1957,7 @@ cy.wait(2000);
 Agent_Bulk_allocation_account_level_loan_account_staff_telecaller_080() {
   const filePath = '3mbnew.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -1987,7 +1987,7 @@ cy.wait(2000);
 Agent_Bulk_allocation_account_level_loan_account_staff_telecaller_081() {
   const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -2019,7 +2019,7 @@ cy.contains(
 
 Agent_Bulk_allocation_account_level_loan_account_agent_staff_082(){
   const filePath = 'ENCollectSecondaryAllocationCollectionStaff.xlsx'
-   cy.get('[title="Allocation"]').click({ force: true });
+   cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -2048,7 +2048,7 @@ cy.contains('button', 'Upload').should('be.disabled');
 Agent_Bulk_allocation_account_level_loan_account_agent_staff_083() {
   const filePath = 'Aadhar.png';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -2073,7 +2073,7 @@ Agent_Bulk_allocation_account_level_loan_account_agent_staff_083() {
 Agent_Bulk_allocation_account_level_loan_account_agent_staff_084() {
   const filePath = 'Staff(1).xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -2102,7 +2102,7 @@ cy.wait(2000);
 Agent_Bulk_allocation_account_level_loan_account_agent_staff_085() {
   const filePath = '3mbnew.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -2135,7 +2135,7 @@ cy.wait(5000);
 Agent_Bulk_allocation_account_level_loan_account_agent_staff_086() {
   const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -2185,7 +2185,7 @@ cy.wait(2000);
 
 Agent_Bulk_allocation_account_level_loan_account_agent_agent_087(){
   const filePath = 'ENCollectSecondaryAllocationTelecaller.xlsx'
-   cy.get('[title="Allocation"]').click({ force: true });
+   cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -2210,7 +2210,7 @@ cy.contains('button', 'Upload').should('be.disabled');
 Agent_Bulk_allocation_account_level_loan_account_agent_agent_088() {
   const filePath = 'Aadhar.png';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -2237,7 +2237,7 @@ cy.wait(2000);
 Agent_Bulk_allocation_account_level_loan_account_agent_agent_089() {
   const filePath = 'Staff(1).xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -2268,7 +2268,7 @@ cy.wait(2000);
 Agent_Bulk_allocation_account_level_loan_account_agent_agent_090() {
   const filePath = '3mbnew.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -2303,7 +2303,7 @@ cy.wait(5000);
 Agent_Bulk_allocation_account_level_loan_account_agent_agent_091() {
   const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -2355,7 +2355,7 @@ cy.wait(2000);
 
 Agent_Bulk_allocation_account_level_loan_account_agent_telecaller_092(){
   const filePath = 'StaffTemplate.xlsx'
-   cy.get('[title="Allocation"]').click({ force: true });
+   cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -2380,7 +2380,7 @@ cy.contains('button', 'Upload').should('be.disabled');
 Agent_Bulk_allocation_account_level_loan_account_agent_telecaller_093() {
   const filePath = 'Aadhar.png';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -2407,7 +2407,7 @@ cy.wait(2000);
 Agent_Bulk_allocation_account_level_loan_account_agent_telecaller_094() {
   const filePath = 'Staff(1).xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -2438,7 +2438,7 @@ cy.wait(2000);
 Agent_Bulk_allocation_account_level_loan_account_agent_telecaller_095() {
   const filePath = '3mbnew.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -2473,7 +2473,7 @@ cy.wait(5000);
 Agent_Bulk_allocation_account_level_loan_account_agent_telecaller_096() {
   const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -2526,7 +2526,7 @@ cy.wait(2000);
 
 Agent_Bulk_allocation_account_level_loan_account_telecaller_staff_097(){
   const filePath = 'AgencyTemplate.xlsx'
-   cy.get('[title="Allocation"]').click({ force: true });
+   cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -2551,7 +2551,7 @@ cy.contains('button', 'Upload').should('be.disabled');
 Agent_Bulk_allocation_account_level_loan_account_telecaller_staff_098() {
   const filePath = 'Aadhar.png';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -2578,7 +2578,7 @@ cy.wait(2000);
 Agent_Bulk_allocation_account_level_loan_account_telecaller_staff_099() {
   const filePath = 'Staff(1).xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -2609,7 +2609,7 @@ cy.wait(2000);
 Agent_Bulk_allocation_account_level_loan_account_telecaller_staff_0100() {
   const filePath = '3mbnew.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -2644,7 +2644,7 @@ cy.wait(5000);
 Agent_Bulk_allocation_account_level_loan_account_telecaller_staff_0101() {
   const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -2698,7 +2698,7 @@ cy.wait(2000);
 
 Agent_Bulk_allocation_account_level_loan_account_telecaller_agent_0102(){
   const filePath = 'Bulktrail.xlsx'
-   cy.get('[title="Allocation"]').click({ force: true });
+   cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -2723,7 +2723,7 @@ cy.contains('button', 'Upload').should('be.disabled');
 Agent_Bulk_allocation_account_level_loan_account_telecaller_agent_0103() {
   const filePath = 'Aadhar.png';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -2750,7 +2750,7 @@ cy.wait(2000);
 Agent_Bulk_allocation_account_level_loan_account_telecaller_agent_0104() {
   const filePath = 'Staff(1).xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -2781,7 +2781,7 @@ cy.wait(2000);
 Agent_Bulk_allocation_account_level_loan_account_telecaller_agent_0105() {
   const filePath = '3mbnew.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -2816,7 +2816,7 @@ cy.wait(5000);
 Agent_Bulk_allocation_account_level_loan_account_telecaller_agent_0106() {
   const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -2867,7 +2867,7 @@ cy.wait(2000);
 
 Agent_Bulk_allocation_account_level_loan_account_telecaller_telecaller_0107(){
   const filePath = 'AgentTemplate.xlsx'
-   cy.get('[title="Allocation"]').click({ force: true });
+   cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -2892,7 +2892,7 @@ cy.contains('button', 'Upload').should('be.disabled');
 Agent_Bulk_allocation_account_level_loan_account_telecaller_telecaller_0108() {
   const filePath = 'Aadhar.png';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -2919,7 +2919,7 @@ cy.wait(2000);
 Agent_Bulk_allocation_account_level_loan_account_telecaller_telecaller_0109() {
   const filePath = 'Staff(1).xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -2950,7 +2950,7 @@ cy.wait(2000);
 Agent_Bulk_allocation_account_level_loan_account_telecaller_telecaller_0110() {
   const filePath = '3mbnew.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -2985,7 +2985,7 @@ cy.wait(3000);
 Agent_Bulk_allocation_account_level_loan_account_telecaller_telecaller_0111() {
   const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
 
   cy.contains('Agent Bulk Upload').click({ force: true });
@@ -3038,7 +3038,7 @@ Agent_Bulk_allocation_account_level_loan_credit_card_staff_staff_0112(){
   // cy.get('#account-type-cc').click({force:true});
   // cy.wait(2000);
     const filePath = 'empty.xlsx';
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3057,7 +3057,7 @@ Agent_Bulk_allocation_account_level_loan_credit_card_staff_staff_0112(){
 Agent_Bulk_allocation_account_level_credit_card_staff_staff_0113() {
   const filePath = 'Aadhar.png';
  
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3079,7 +3079,7 @@ Agent_Bulk_allocation_account_level_credit_card_staff_staff_0113() {
 Agent_Bulk_allocation_account_level_credit_card_staff_staff_0114() {
   const filePath = 'Staff(1).xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3105,7 +3105,7 @@ Agent_Bulk_allocation_account_level_credit_card_staff_staff_0114() {
 Agent_Bulk_allocation_account_level_credit_card_staff_staff_0115() {
   const filePath = '3mbnew.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3135,7 +3135,7 @@ cy.wait(5000);
 Agent_Bulk_allocation_account_level_credit_card_staff_staff_0116() {
   const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3183,7 +3183,7 @@ cy.wait(2000);
 // 102 - Upload button enable check
 Agent_Bulk_allocation_account_level_credit_card_staff_agent_0117() {
   const filePath = 'StaffTemplate.xlsx'
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3206,7 +3206,7 @@ Agent_Bulk_allocation_account_level_credit_card_staff_agent_0117() {
 Agent_Bulk_allocation_account_level_credit_card_staff_agent_0118() {
   const filePath = 'Aadhar.png';
  
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3230,7 +3230,7 @@ Agent_Bulk_allocation_account_level_credit_card_staff_agent_0118() {
 Agent_Bulk_allocation_account_level_credit_card_staff_agent_0119() {
   const filePath = 'ENCollectSecondaryAllocationCollection#Staff_Accountlevel.xlsx';
   
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3257,7 +3257,7 @@ Agent_Bulk_allocation_account_level_credit_card_staff_agent_0119() {
 // 105 - File size validation
 Agent_Bulk_allocation_account_level_credit_card_staff_agent_0120() {
   const filePath = '3mbnew.xlsx';
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3282,7 +3282,7 @@ Agent_Bulk_allocation_account_level_credit_card_staff_agent_0121() {
   const filePath = 'empty.xlsx';
   // cy.get('#account-type-cc').click({force:true});
   // cy.wait(2000);
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3307,7 +3307,7 @@ Agent_Bulk_allocation_account_level_credit_card_staff_telecaller_0122() {
   //   cy.get('#account-type-cc').click({force:true});
   // cy.wait(2000);
       const filePath = 'empty.xlsx';
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3329,7 +3329,7 @@ Agent_Bulk_allocation_account_level_credit_card_staff_telecaller_0123() {
   const filePath = 'Aadhar.png';
   
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3352,7 +3352,7 @@ Agent_Bulk_allocation_account_level_credit_card_staff_telecaller_0123() {
 // 109 - Special character filename
 Agent_Bulk_allocation_account_level_credit_card_staff_telecaller_0124() {
   const filePath = 'Staff(1).xlsx';
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3376,7 +3376,7 @@ Agent_Bulk_allocation_account_level_credit_card_staff_telecaller_0124() {
 // 110 - File size validation
 Agent_Bulk_allocation_account_level_credit_card_staff_telecaller_0125() {
   const filePath = 'ENCollectSecondaryAllocationTelecaller_Accountlevel.xlsx';
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3399,7 +3399,7 @@ Agent_Bulk_allocation_account_level_credit_card_staff_telecaller_0125() {
 Agent_Bulk_allocation_account_level_credit_card_staff_telecaller_0126() {
   const filePath = 'empty.xlsx';
  
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3422,7 +3422,7 @@ Agent_Bulk_allocation_account_level_credit_card_staff_telecaller_0126() {
 // 112
 Agent_Bulk_allocation_account_level_credit_card_agent_staff_0127() {
    
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3442,7 +3442,7 @@ Agent_Bulk_allocation_account_level_credit_card_agent_staff_0127() {
 Agent_Bulk_allocation_account_level_credit_card_agent_staff_0128() {
   const filePath = 'Aadhar.png';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3464,7 +3464,7 @@ Agent_Bulk_allocation_account_level_credit_card_agent_staff_0128() {
 Agent_Bulk_allocation_account_level_credit_card_agent_staff_0129() {
   const filePath = 'Staff(1).xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3487,7 +3487,7 @@ Agent_Bulk_allocation_account_level_credit_card_agent_staff_0129() {
 Agent_Bulk_allocation_account_level_credit_card_agent_staff_0130() {
   const filePath = '3mbnew.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3510,7 +3510,7 @@ Agent_Bulk_allocation_account_level_credit_card_agent_staff_0130() {
 Agent_Bulk_allocation_account_level_credit_card_agent_staff_0131() {
   const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3554,7 +3554,7 @@ Agent_Bulk_allocation_account_level_credit_card_agent_staff_0131() {
 Agent_Bulk_allocation_account_level_credit_card_agent_agent_0132(){
 
   const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
  cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3577,7 +3577,7 @@ Agent_Bulk_allocation_account_level_credit_card_agent_agent_0133(){
 
  const filePath = 'Aadhar.png';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3599,7 +3599,7 @@ Agent_Bulk_allocation_account_level_credit_card_agent_agent_0133(){
 Agent_Bulk_allocation_account_level_credit_card_agent_agent_0134(){
 
  const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
      cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3623,7 +3623,7 @@ Agent_Bulk_allocation_account_level_credit_card_agent_agent_0134(){
 }
 Agent_Bulk_allocation_account_level_credit_card_agent_agent_0135(){
   const filePath = '3mbnew.xlsx';
-  cy.get('[title="Allocation"]').click({force:true});
+  cy.get('[title="Allocation"] > span').click({force:true});
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3646,7 +3646,7 @@ Agent_Bulk_allocation_account_level_credit_card_agent_agent_0135(){
       }
 Agent_Bulk_allocation_account_level_credit_card_agent_agent_0136(){
 const filePath = 'empty.xlsx';
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3694,7 +3694,7 @@ const filePath = 'empty.xlsx';
 Agent_Bulk_allocation_account_level_credit_card_agent_telecaller_0137(){
   
   const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.contains('Agent Bulk Upload').click({ force: true });
     cy.wait(2000);
@@ -3713,7 +3713,7 @@ Agent_Bulk_allocation_account_level_credit_card_agent_telecaller_0137(){
 }
 Agent_Bulk_allocation_account_level_credit_card_agent_telecaller_0138(){
   const filePath = 'Aadhar.png';
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3737,7 +3737,7 @@ Agent_Bulk_allocation_account_level_credit_card_agent_telecaller_0138(){
 Agent_Bulk_allocation_account_level_credit_card_agent_telecaller_0139(){
   
  const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
      cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3763,7 +3763,7 @@ Agent_Bulk_allocation_account_level_credit_card_agent_telecaller_0139(){
 Agent_Bulk_allocation_account_level_credit_card_agent_telecaller_0140(){
 
     const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
    cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3789,7 +3789,7 @@ Agent_Bulk_allocation_account_level_credit_card_agent_telecaller_0141(){
   
         const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3834,7 +3834,7 @@ Agent_Bulk_allocation_account_level_credit_card_agent_telecaller_0141(){
 Agent_Bulk_allocation_account_level_credit_card_telecaller_staff_0142(){
   
   const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
  cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3857,7 +3857,7 @@ Agent_Bulk_allocation_account_level_credit_card_telecaller_staff_0142(){
 Agent_Bulk_allocation_account_level_credit_card_telecaller_staff_0143(){
   const filePath = 'Aadhar.png';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3885,7 +3885,7 @@ Agent_Bulk_allocation_account_level_credit_card_telecaller_staff_0144(){
 
   
  const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
      cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3908,7 +3908,7 @@ Agent_Bulk_allocation_account_level_credit_card_telecaller_staff_0144(){
 }
 Agent_Bulk_allocation_account_level_credit_card_telecaller_staff_0145(){
     const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
    cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3931,7 +3931,7 @@ Agent_Bulk_allocation_account_level_credit_card_telecaller_staff_0146(){
    
         const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -3976,7 +3976,7 @@ Agent_Bulk_allocation_account_level_credit_card_telecaller_staff_0146(){
 Agent_Bulk_allocation_account_level_credit_card_telecaller_agent_0147(){
   
   const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
  cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4002,7 +4002,7 @@ Agent_Bulk_allocation_account_level_credit_card_telecaller_agent_0148(){
 const filePath = 'Aadhar.png';
   // cy.get('#account-type-cc').click({force:true});
   // cy.wait(2000);
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4025,7 +4025,7 @@ const filePath = 'Aadhar.png';
 Agent_Bulk_allocation_account_level_credit_card_telecaller_agent_0245(){
 
    const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
      cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4050,7 +4050,7 @@ Agent_Bulk_allocation_account_level_credit_card_telecaller_agent_0245(){
 }
 Agent_Bulk_allocation_account_level_credit_card_telecaller_agent_0246(){
     const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
    cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4075,7 +4075,7 @@ Agent_Bulk_allocation_account_level_credit_card_telecaller_agent_0246(){
 Agent_Bulk_allocation_account_level_credit_card_telecaller_agent_0247(){
   
   const filePath = 'empty.xlsx';
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4117,7 +4117,7 @@ Agent_Bulk_allocation_account_level_credit_card_telecaller_agent_0247(){
 Agent_Bulk_allocation_account_level_credit_card_telecaller_telecaller_0244(){
   
   const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
  cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4143,7 +4143,7 @@ Agent_Bulk_allocation_account_level_credit_card_telecaller_telecaller_0149(){
   
 const filePath = 'Aadhar.png';
  
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4168,7 +4168,7 @@ Agent_Bulk_allocation_account_level_credit_card_telecaller_telecaller_0150(){
   
 
  const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
      cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4194,7 +4194,7 @@ Agent_Bulk_allocation_account_level_credit_card_telecaller_telecaller_0150(){
 Agent_Bulk_allocation_account_level_credit_card_telecaller_telecaller_0151(){
 
     const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
    cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4221,7 +4221,7 @@ Agent_Bulk_allocation_account_level_credit_card_telecaller_telecaller_0151(){
 Agent_Bulk_allocation_account_level_credit_card_telecaller_telecaller_0152(){
         const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4267,7 +4267,7 @@ Agent_Bulk_allocation_account_level_credit_card_telecaller_telecaller_0152(){
 // ######################################cl_la
 Agent_Bulk_allocation_customer_Level_loan_account_staff_staff_0153(){
   const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agent Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -4283,7 +4283,7 @@ Agent_Bulk_allocation_customer_Level_loan_account_staff_staff_0153(){
 Agent_Bulk_allocation_customer_Level_loan_account_staff_staff_0154(){
 const filePath = 'Aadhar.png';
  
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4302,7 +4302,7 @@ const filePath = 'Aadhar.png';
 Agent_Bulk_allocation_customer_Level_loan_account_staff_staff_0155(){
 
  const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agent Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -4321,7 +4321,7 @@ Agent_Bulk_allocation_customer_Level_loan_account_staff_staff_0155(){
       Agent_Bulk_allocation_customer_Level_loan_account_staff_staff_0156(){
         
   const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agent Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -4342,7 +4342,7 @@ Agent_Bulk_allocation_customer_Level_loan_account_staff_staff_0155(){
       Agent_Bulk_allocation_customer_Level_loan_account_staff_staff_0157(){
         const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4385,7 +4385,7 @@ Agent_Bulk_allocation_customer_Level_loan_account_staff_staff_0155(){
       Agent_Bulk_allocation_customer_Level_loan_account_staff_agent_0158(){
 
 const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agent Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -4407,7 +4407,7 @@ const filePath = 'AgencyTemplate.xlsx';
 
 const filePath = 'Aadhar.png';
  
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4428,7 +4428,7 @@ const filePath = 'Aadhar.png';
 
         
  const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
      cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4448,7 +4448,7 @@ const filePath = 'Aadhar.png';
       }
        Agent_Bulk_allocation_customer_Level_loan_account_staff_agent_0161(){
           const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
    cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4470,7 +4470,7 @@ const filePath = 'Aadhar.png';
 
          const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4490,7 +4490,7 @@ const filePath = 'Aadhar.png';
 
 const filePath = 'Aadhar.png';
  
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4511,7 +4511,7 @@ const filePath = 'Aadhar.png';
 
 
   const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
  cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4529,7 +4529,7 @@ const filePath = 'Aadhar.png';
      Agent_Bulk_allocation_customer_Level_loan_account_staff_telecaller_0165(){
 
  const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
      cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4552,7 +4552,7 @@ const filePath = 'Aadhar.png';
 
         
   const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
    cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4574,7 +4574,7 @@ const filePath = 'Aadhar.png';
      
      Agent_Bulk_allocation_customer_Level_loan_account_staff_telecaller_0167(){
         const filePath = 'empty.xlsx';
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4593,7 +4593,7 @@ const filePath = 'Aadhar.png';
      }
    Agent_Bulk_allocation_customer_Level_loan_account_agent_staff_0168(){
   const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
  cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4609,7 +4609,7 @@ const filePath = 'Aadhar.png';
    }
    Agent_Bulk_allocation_customer_Level_loan_account_agent_staff_0169(){
     const filePath = 'Aadhar.png';
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4628,7 +4628,7 @@ const filePath = 'Aadhar.png';
 
     
  const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
      cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4649,7 +4649,7 @@ const filePath = 'Aadhar.png';
    Agent_Bulk_allocation_customer_Level_loan_account_agent_staff_0171(){
 
       const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
    cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4673,7 +4673,7 @@ const filePath = 'Aadhar.png';
     
         const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4716,7 +4716,7 @@ const filePath = 'Aadhar.png';
 
         
   const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
  cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4736,7 +4736,7 @@ const filePath = 'Aadhar.png';
         Agent_Bulk_allocation_customer_Level_loan_account_agent_agent_0174(){
           
 const filePath = 'Aadhar.png';
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4758,7 +4758,7 @@ const filePath = 'Aadhar.png';
 
 
  const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
      cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4783,7 +4783,7 @@ const filePath = 'Aadhar.png';
 
         
   const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
    cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4807,7 +4807,7 @@ const filePath = 'Aadhar.png';
         Agent_Bulk_allocation_customer_Level_loan_account_agent_agent_0177(){
        const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4848,7 +4848,7 @@ Agent_Bulk_allocation_customer_Level_loan_account_agent_telecaller_0178(){
 
 
   const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
  cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4868,7 +4868,7 @@ Agent_Bulk_allocation_customer_Level_loan_account_agent_telecaller_0178(){
 Agent_Bulk_allocation_customer_Level_loan_account_agent_telecaller_0179(){
   const filePath = 'Aadhar.png';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4889,7 +4889,7 @@ Agent_Bulk_allocation_customer_Level_loan_account_agent_telecaller_0179(){
 }
 Agent_Bulk_allocation_customer_Level_loan_account_agent_telecaller_0180(){
    const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
      cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4913,7 +4913,7 @@ Agent_Bulk_allocation_customer_Level_loan_account_agent_telecaller_0180(){
 Agent_Bulk_allocation_customer_Level_loan_account_agent_telecaller_0181(){
 
     const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
    cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4939,7 +4939,7 @@ Agent_Bulk_allocation_customer_Level_loan_account_agent_telecaller_0182(){
       
         const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -4983,7 +4983,7 @@ Agent_Bulk_allocation_customer_Level_loan_account_telecaller_staff_0183(){
 
 
   const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
  cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5004,7 +5004,7 @@ Agent_Bulk_allocation_customer_Level_loan_account_telecaller_staff_0184(){
 
 const filePath = 'Aadhar.png';
   
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5023,7 +5023,7 @@ const filePath = 'Aadhar.png';
 Agent_Bulk_allocation_customer_Level_loan_account_telecaller_staff_0185(){
   
  const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
      cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5044,7 +5044,7 @@ Agent_Bulk_allocation_customer_Level_loan_account_telecaller_staff_0185(){
 Agent_Bulk_allocation_customer_Level_loan_account_telecaller_staff_0186(){
           
   const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
    cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5068,7 +5068,7 @@ Agent_Bulk_allocation_customer_Level_loan_account_telecaller_staff_0186(){
 Agent_Bulk_allocation_customer_Level_loan_account_telecaller_staff_0187(){    
         const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5107,7 +5107,7 @@ Agent_Bulk_allocation_customer_Level_loan_account_telecaller_staff_0187(){
 Agent_Bulk_allocation_customer_Level_loan_account_telecaller_agent_0188(){
   
   const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
  cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5128,7 +5128,7 @@ Agent_Bulk_allocation_customer_Level_loan_account_telecaller_agent_0189(){
 
 const filePath = 'Aadhar.png';
   
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5150,7 +5150,7 @@ Agent_Bulk_allocation_customer_Level_loan_account_telecaller_agent_0190(){
 
 
  const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
      cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5174,7 +5174,7 @@ Agent_Bulk_allocation_customer_Level_loan_account_telecaller_agent_0190(){
 }
 Agent_Bulk_allocation_customer_Level_loan_account_telecaller_agent_0191(){
   const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
    cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5199,7 +5199,7 @@ Agent_Bulk_allocation_customer_Level_loan_account_telecaller_agent_0192(){
      
         const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5241,7 +5241,7 @@ Agent_Bulk_allocation_customer_Level_loan_account_telecaller_agent_0192(){
 }
 Agent_Bulk_allocation_customer_Level_loan_account_telecaller_telecaller_0193(){
   const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
  cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5262,7 +5262,7 @@ Agent_Bulk_allocation_customer_Level_loan_account_telecaller_telecaller_0194(){
   
 const filePath = 'Aadhar.png';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5286,7 +5286,7 @@ Agent_Bulk_allocation_customer_Level_loan_account_telecaller_telecaller_0195(){
 
   
  const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
      cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5311,7 +5311,7 @@ Agent_Bulk_allocation_customer_Level_loan_account_telecaller_telecaller_0196(){
 
           
   const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
    cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5334,7 +5334,7 @@ Agent_Bulk_allocation_customer_Level_loan_account_telecaller_telecaller_0197(){
 
       const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5376,7 +5376,7 @@ Agent_Bulk_allocation_customer_Level_loan_account_telecaller_telecaller_0197(){
 }
 Agent_Bulk_allocation_customer_credit_card_account_staff_staff_0199(){
   const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agent Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -5394,7 +5394,7 @@ Agent_Bulk_allocation_customer_credit_card_account_staff_staff_0199(){
 Agent_Bulk_allocation_customer_credit_card_account_staff_staff_0200(){
 const filePath = 'Aadhar.png';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5413,7 +5413,7 @@ cy.wait(2000);
 Agent_Bulk_allocation_customer_credit_card_account_staff_staff_0201(){
 
  const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agent Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -5435,7 +5435,7 @@ Agent_Bulk_allocation_customer_credit_card_account_staff_staff_0201(){
       Agent_Bulk_allocation_customer_credit_card_account_staff_staff_0202(){
         
   const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agent Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -5458,7 +5458,7 @@ Agent_Bulk_allocation_customer_credit_card_account_staff_staff_0201(){
       Agent_Bulk_allocation_customer_credit_card_account_staff_staff_0203(){
         const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5498,7 +5498,7 @@ Agent_Bulk_allocation_customer_credit_card_account_staff_staff_0201(){
       Agent_Bulk_allocation_customer_credit_card_account_staff_agent_0204(){
 
 const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
     cy.get("a[title='Agent Bulk Upload']").click({force:true});
     cy.wait(2000);
@@ -5519,7 +5519,7 @@ const filePath = 'AgencyTemplate.xlsx';
 
        Agent_Bulk_allocation_customer_credit_card_account_staff_agent_0205(){
 const filePath = 'Aadhar.png';
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5543,7 +5543,7 @@ const filePath = 'Aadhar.png';
 
         
  const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
      cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5566,7 +5566,7 @@ const filePath = 'Aadhar.png';
       }
        Agent_Bulk_allocation_customer_credit_card_account_staff_agent_0207(){
           const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
    cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5589,7 +5589,7 @@ const filePath = 'Aadhar.png';
       }
        Agent_Bulk_allocation_customer_credit_card_account_staff_agent_0208(){
          const filePath = 'empty.xlsx';
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5616,7 +5616,7 @@ const filePath = 'Aadhar.png';
 const filePath = 'Aadhar.png';
   // cy.get('#account-type-cc').click({force:true});
   // cy.wait(2000);
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5637,7 +5637,7 @@ const filePath = 'Aadhar.png';
      
      Agent_Bulk_allocation_customer_credit_card_account_staff_telecaller_0210(){
   const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
  cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5657,7 +5657,7 @@ const filePath = 'Aadhar.png';
      Agent_Bulk_allocation_customer_credit_card_account_staff_telecaller_0211(){
 
  const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
      cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5684,7 +5684,7 @@ const filePath = 'Aadhar.png';
 
         
   const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
    cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5708,7 +5708,7 @@ const filePath = 'Aadhar.png';
      
      Agent_Bulk_allocation_customer_credit_card_account_staff_telecaller_0213(){
         const filePath = 'empty.xlsx';
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5731,7 +5731,7 @@ const filePath = 'Aadhar.png';
    Agent_Bulk_allocation_customer_credit_card_account_agent_staff_0214(){
 
   const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
  cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5751,7 +5751,7 @@ const filePath = 'Aadhar.png';
     const filePath = 'Aadhar.png';
   // cy.get('#account-type-cc').click({force:true});
   // cy.wait(2000);
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5773,7 +5773,7 @@ const filePath = 'Aadhar.png';
 
     
  const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
      cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5796,7 +5796,7 @@ const filePath = 'Aadhar.png';
    Agent_Bulk_allocation_customer_credit_card_account_agent_staff_0217(){
 
       const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
    cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5820,7 +5820,7 @@ const filePath = 'Aadhar.png';
    }
    Agent_Bulk_allocation_customer_credit_card_account_agent_staff_0218(){   
         const filePath = 'empty.xlsx';
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5862,7 +5862,7 @@ cy.wait(2000);
 
         
   const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
  cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5886,7 +5886,7 @@ cy.wait(2000);
 const filePath = 'Aadhar.png';
   // cy.get('#account-type-cc').click({force:true});
   // cy.wait(2000);
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5912,7 +5912,7 @@ const filePath = 'Aadhar.png';
 
 
  const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
      cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5939,7 +5939,7 @@ const filePath = 'Aadhar.png';
 
         
   const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
    cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -5965,7 +5965,7 @@ const filePath = 'Aadhar.png';
         Agent_Bulk_allocation_customer_credit_card_account_agent_agent_0223(){
        const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -6010,7 +6010,7 @@ Agent_Bulk_allocation_customer_credit_card_account_agent_telecaller_0224(){
 
 
   const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
  cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -6033,7 +6033,7 @@ Agent_Bulk_allocation_customer_credit_card_account_agent_telecaller_0225(){
   const filePath = 'Aadhar.png';
   // cy.get('#account-type-cc').click({force:true});
   // cy.wait(2000);
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -6056,7 +6056,7 @@ Agent_Bulk_allocation_customer_credit_card_account_agent_telecaller_0225(){
 }
 Agent_Bulk_allocation_customer_credit_card_account_agent_telecaller_0226(){
    const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
      cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -6082,7 +6082,7 @@ Agent_Bulk_allocation_customer_credit_card_account_agent_telecaller_0226(){
 Agent_Bulk_allocation_customer_credit_card_account_agent_telecaller_0227(){
 
     const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
    cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -6110,7 +6110,7 @@ Agent_Bulk_allocation_customer_credit_card_account_agent_telecaller_0228(){
       
         const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -6159,7 +6159,7 @@ Agent_Bulk_allocation_customer_credit_card_account_telecaller_staff_0229(){
 
 
   const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
  cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -6183,7 +6183,7 @@ Agent_Bulk_allocation_customer_credit_card_account_telecaller_staff_0230(){
 const filePath = 'Aadhar.png';
   // cy.get('#account-type-cc').click({force:true});
   // cy.wait(2000);
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -6204,7 +6204,7 @@ const filePath = 'Aadhar.png';
 Agent_Bulk_allocation_customer_credit_card_account_telecaller_staff_0231(){
   
  const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
      cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -6227,7 +6227,7 @@ Agent_Bulk_allocation_customer_credit_card_account_telecaller_staff_0231(){
 Agent_Bulk_allocation_customer_credit_card_account_telecaller_staff_0232(){
           
   const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
    cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -6258,7 +6258,7 @@ Agent_Bulk_allocation_customer_credit_card_account_telecaller_staff_0233(){
     
         const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -6303,7 +6303,7 @@ Agent_Bulk_allocation_customer_credit_card_account_telecaller_staff_0233(){
 Agent_Bulk_allocation_customer_credit_card_account_telecaller_agent_0234(){
   
   const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
  cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -6327,7 +6327,7 @@ Agent_Bulk_allocation_customer_credit_card_account_telecaller_agent_0235(){
 const filePath = 'Aadhar.png';
   // cy.get('#account-type-cc').click({force:true});
   // cy.wait(2000);
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -6351,7 +6351,7 @@ Agent_Bulk_allocation_customer_credit_card_account_telecaller_agent_0236(){
 
 
  const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
      cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -6377,7 +6377,7 @@ Agent_Bulk_allocation_customer_credit_card_account_telecaller_agent_0236(){
 }
 Agent_Bulk_allocation_customer_credit_card_account_telecaller_agent_0237(){
   const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
    cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -6404,7 +6404,7 @@ Agent_Bulk_allocation_customer_credit_card_account_telecaller_agent_0238(){
      
         const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -6450,7 +6450,7 @@ Agent_Bulk_allocation_customer_credit_card_account_telecaller_agent_0238(){
 }
 Agent_Bulk_allocation_customer_credit_card_account_telecaller_telecaller_0239(){
   const filePath = 'AgencyTemplate.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
  cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -6473,7 +6473,7 @@ Agent_Bulk_allocation_customer_credit_card_account_telecaller_telecaller_0240(){
   
 const filePath = 'Aadhar.png';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -6501,7 +6501,7 @@ Agent_Bulk_allocation_customer_credit_card_account_telecaller_telecaller_0241(){
 
   
  const filePath = 'Staff(1).xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
      cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -6528,7 +6528,7 @@ Agent_Bulk_allocation_customer_credit_card_account_telecaller_telecaller_0242(){
 
           
   const filePath = '3mbnew.xlsx';
-    cy.get('[title="Allocation"]').click({force:true});
+    cy.get('[title="Allocation"] > span').click({force:true});
     cy.wait(2000);
    cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -6553,7 +6553,7 @@ Agent_Bulk_allocation_customer_credit_card_account_telecaller_telecaller_0243(){
 
       const filePath = 'empty.xlsx';
 
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.contains('Agent Bulk Upload').click({ force: true });
   cy.wait(2000);
@@ -6598,7 +6598,7 @@ Agent_Bulk_allocation_customer_credit_card_account_telecaller_telecaller_0243(){
 
 Allocation_Owner_Bulk_Upload_248(){
     const filePath = 'empty.xlsx';
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Allocation_Owner_Bulk_Upload).click({force:true});
   cy.wait(2000);
@@ -6611,7 +6611,7 @@ Allocation_Owner_Bulk_Upload_248(){
 }
 Allocation_Owner_Bulk_Upload_249(){
   const filePath = 'Aadhar.png';
-    cy.get('[title="Allocation"]').click({ force: true });
+    cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
     cy.get(this.locators.Allocation_Owner_Bulk_Upload).click({force:true});
   cy.wait(2000);
@@ -6626,7 +6626,7 @@ Allocation_Owner_Bulk_Upload_249(){
 
 Allocation_Owner_Bulk_Upload_250(){
    const filePath = 'Staff(1).xlsx';
-     cy.get('[title="Allocation"]').click({ force: true });
+     cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
    cy.get(this.locators.Allocation_Owner_Bulk_Upload).click({force:true});
   cy.wait(2000);
@@ -6648,7 +6648,7 @@ Allocation_Owner_Bulk_Upload_250(){
 
 Allocation_Owner_Bulk_Upload_251(){
    const filePath = '3mbnew.xlsx';
-     cy.get('[title="Allocation"]').click({ force: true });
+     cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Allocation_Owner_Bulk_Upload).click({force:true});
   cy.wait(2000);
@@ -6669,7 +6669,7 @@ Allocation_Owner_Bulk_Upload_251(){
 
 Allocation_Owner_Bulk_Upload_252(){
 const filePath = 'empty.xlsx';
-  cy.get('[title="Allocation"]').click({ force: true });
+  cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Allocation_Owner_Bulk_Upload).click({force:true});
   cy.wait(2000);
@@ -6713,7 +6713,7 @@ const filePath = 'empty.xlsx';
 
 Allocation_Owner_Bulk_Upload_253(){
    const filePath = 'AgencyTemplate.xlsx';
-     cy.get('[title="Allocation"]').click({ force: true });
+     cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Allocation_Owner_Bulk_Upload).click({force:true});
   cy.wait(2000);
@@ -6727,7 +6727,7 @@ Allocation_Owner_Bulk_Upload_253(){
 }
 Allocation_Owner_Bulk_Upload_254(){
   const filePath = 'Aadhar.png';
-    cy.get('[title="Allocation"]').click({ force: true });
+    cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Allocation_Owner_Bulk_Upload).click({force:true});
   cy.wait(2000);
@@ -6742,7 +6742,7 @@ Allocation_Owner_Bulk_Upload_254(){
 }
 Allocation_Owner_Bulk_Upload_255(){
  const filePath = 'Staff(1).xlsx';
-   cy.get('[title="Allocation"]').click({ force: true });
+   cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Allocation_Owner_Bulk_Upload).click({force:true});
   cy.wait(2000);
@@ -6760,7 +6760,7 @@ Allocation_Owner_Bulk_Upload_255(){
 }
 Allocation_Owner_Bulk_Upload_256(){
     const filePath = '3mbnew.xlsx';
-      cy.get('[title="Allocation"]').click({ force: true });
+      cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
     cy.get(this.locators.Allocation_Owner_Bulk_Upload).click({force:true});
   cy.wait(2000);
@@ -6780,7 +6780,7 @@ Allocation_Owner_Bulk_Upload_256(){
 Allocation_Owner_Bulk_Upload_0198(){
 
     const filePath = 'empty.xlsx';
- cy.get('[title="Allocation"]').click({ force: true });
+ cy.get('[title="Allocation"] > span').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Allocation_Owner_Bulk_Upload).click({force:true});
   cy.wait(2000);

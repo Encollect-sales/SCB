@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-31T13:08:06.149Z",
+    "end": "2026-03-31T13:09:21.586Z",
+    "duration": 75437,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "460f3c91-97b3-44a6-a754-165bca38852c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AccountDetailsPageTest_004.cy.js",
+      "file": "cypress\\e2e\\tests\\AccountDetailsPageTest_004.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6a140e84-99eb-4c18-b0c1-79b646398fe2",
+          "title": "TC_004 Account Details - View Account Details and click on 360 view buttom and click on Demographic Details and check for Show/Hide Empty Values",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC_004 Account Details - View Account Details and click on 360 view buttom and click on Demographic Details and check for Show/Hide Empty Values",
+              "fullTitle": "TC_004 Account Details - View Account Details and click on 360 view buttom and click on Demographic Details and check for Show/Hide Empty Values TC_004 Account Details - View Account Details and click on 360 view buttom and click on Demographic Details and check for Show/Hide Empty Values",
+              "timedOut": null,
+              "duration": 69560,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  accountdetailsPage.ViewAccountDetails004();\n  //loginPage.logout();\n});",
+              "err": {},
+              "uuid": "1d6e26ad-3445-46e4-8d96-4d4ebca2fa33",
+              "parentUUID": "6a140e84-99eb-4c18-b0c1-79b646398fe2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1d6e26ad-3445-46e4-8d96-4d4ebca2fa33"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 69560,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-31T14:00:41.119Z",
+    "end": "2026-03-31T14:01:41.352Z",
+    "duration": 60233,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "13a515d3-e0bc-41c3-9cad-dcaf60fb102e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPage_0138.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPage_0138.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fd0e2b38-9bfb-4505-b775-b5b8f51cfa76",
+          "title": "TC-0138 | Agent Bulk Allocation - Account Level | Credit Card | Agent → Telecaller | Invalid File Format",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should show error when non-xlsx file is uploaded",
+              "fullTitle": "TC-0138 | Agent Bulk Allocation - Account Level | Credit Card | Agent → Telecaller | Invalid File Format Should show error when non-xlsx file is uploaded",
+              "timedOut": null,
+              "duration": 55984,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login2').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(1000);\n  allocationPage.Agent_Bulk_allocation_account_level_credit_card_agent_telecaller_0138();\n});",
+              "err": {},
+              "uuid": "ebda7fa5-e65c-4e0d-8098-0b05fcbbf617",
+              "parentUUID": "fd0e2b38-9bfb-4505-b775-b5b8f51cfa76",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ebda7fa5-e65c-4e0d-8098-0b05fcbbf617"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 55984,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

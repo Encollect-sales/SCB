@@ -7,7 +7,7 @@ class PaymentsPage {
   }
 
   PaymentModule001() {
-    cy.get(this.locators.payments).click();
+    cy.contains("Payments").click();
     cy.wait(2000);
     cy.get(this.locators.onlinePaymentRequest).click();
     cy.wait(1000);
@@ -16,7 +16,7 @@ class PaymentsPage {
   }
 
   PaymentModule002() {
-    cy.get(this.locators.payments).click();
+    cy.contains("Payments").click();
     cy.wait(2000);
     cy.get(this.locators.onlinePaymentRequest).click();
     cy.wait(1000);
@@ -27,7 +27,7 @@ class PaymentsPage {
   }
 
   PaymentModule003() {
-    cy.get(this.locators.payments).click();
+    cy.contains("Payments").click();
     cy.wait(2000);
     cy.get(this.locators.onlinePaymentRequest).click();
     cy.wait(1000);
@@ -48,7 +48,7 @@ class PaymentsPage {
   }
 
   PaymentModule004() {
-    cy.get(this.locators.payments).click();
+    cy.contains("Payments").click();
     cy.wait(2000);
     cy.get(this.locators.onlinePaymentRequest).click();
     cy.wait(1000);
@@ -71,7 +71,7 @@ class PaymentsPage {
   }
 
   PaymentModule005() {
-    cy.get(this.locators.payments).click();
+    cy.contains("Payments").click();
     cy.wait(2000);
     cy.get(this.locators.onlinePaymentRequest).click();
     cy.wait(1000);
@@ -133,7 +133,7 @@ class PaymentsPage {
 
 
     PaymentModule006() {
-    cy.get(this.locators.payments).click();
+    cy.contains("Payments").click();
     cy.wait(2000);
     cy.get(this.locators.onlinePaymentRequest).click();
     cy.wait(1000);
@@ -196,7 +196,7 @@ class PaymentsPage {
   }
 
     PaymentModule007() {
-    cy.get(this.locators.payments).click();
+    cy.contains("Payments").click();
     cy.wait(2000);
     cy.get(this.locators.onlinePaymentRequest).click();
     cy.wait(1000);
@@ -261,7 +261,7 @@ class PaymentsPage {
   }
 
     PaymentModule008() {
-    cy.get(this.locators.payments).click();
+    cy.contains("Payments").click();
     cy.wait(2000);
     cy.get(this.locators.onlinePaymentRequest).click();
     cy.wait(1000);
@@ -324,7 +324,7 @@ class PaymentsPage {
 }
 
 PaymentModule009() {
-    cy.get(this.locators.payments).click();
+    cy.contains("Payments").click();
     cy.wait(2000);
     cy.get(this.locators.onlinePaymentRequest).click();
     cy.wait(1000);
@@ -389,7 +389,7 @@ PaymentModule009() {
 }
   
     PaymentModule010() {
-    cy.get(this.locators.payments).click();
+    cy.contains("Payments").click();
     cy.wait(2000);
     cy.get(this.locators.onlinePaymentRequest).click();
     cy.wait(1000);
@@ -456,7 +456,7 @@ PaymentModule009() {
   }  
 
   PaymentModule011() {
-    cy.get(this.locators.payments).click();
+    cy.contains("Payments").click();
     cy.wait(2000);
     cy.get(this.locators.onlinePaymentRequest).click();
     cy.wait(1000);

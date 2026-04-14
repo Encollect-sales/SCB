@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-31T13:37:35.581Z",
+    "end": "2026-03-31T13:38:34.595Z",
+    "duration": 59014,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a187e4ce-e7d0-46cc-8d18-e631e758d0de",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPage_012.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPage_012.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0a2fd31a-8d6b-4e54-921f-ea37861b3374",
+          "title": "Allocation - Credit card option - Primary Allocation Upload - Upload button validation (download file - field agency, upload field - field agency)",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Upload button should be disabled until file is selected",
+              "fullTitle": "Allocation - Credit card option - Primary Allocation Upload - Upload button validation (download file - field agency, upload field - field agency) Upload button should be disabled until file is selected",
+              "timedOut": null,
+              "duration": 54219,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login2').then(user => {\n  // Login\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(1000);\n  // Navigate to Allocation → Bulk Upload\n  allocationPage.Allocation_creditcard_012();\n});",
+              "err": {},
+              "uuid": "581d33c1-b6a8-4c5e-abb8-7034a63d0108",
+              "parentUUID": "0a2fd31a-8d6b-4e54-921f-ea37861b3374",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "581d33c1-b6a8-4c5e-abb8-7034a63d0108"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 54219,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
