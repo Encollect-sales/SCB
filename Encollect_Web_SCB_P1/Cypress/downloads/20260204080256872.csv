@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1f38abc08cf1e1208068f5ba892099,Telecaller,51384,Clint,Mertz,clint@yopmail.com,6291962005,Audit and Risk,Arun Audit Manager,Bangalore,True, | Designation is invalid

@@ -14,7 +14,7 @@
 
   "UserManagementPage":{
 
-  "ClickOnUserManagement":"[title='User Management'] > span.ng-star-inserted",
+  "ClickOnUserManagement":"#nav-item-1-user-management > span",
   "ClickOnAgentEmpanel":".user-management > :nth-child(2) > :nth-child(2) > a.ng-star-inserted",
   "ClickOnAddAgent":".user-management > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(1) > a",
   "ClickOnLocalAddressDetails":":nth-child(4) > .nav-link > span",
@@ -36,9 +36,9 @@
 
   "UserCreationPage":{
 
-  "ClickOnUserManagement":"[title='User Management'] > span.ng-star-inserted",
-  "ClickOnBulkUpload":".user-management > :nth-child(2) > :nth-child(4) > a.ng-star-inserted",
-  "ClickOnUserCreationUpload":".user-management > :nth-child(2) > :nth-child(4) > .sub-nav-list > :nth-child(1) > a",
+  "ClickOnUserManagement":"#nav-item-1-user-management > span",
+  "ClickOnBulkUpload":"#nav-item-2-bulk-upload",
+  "ClickOnUserCreationUpload":"#nav-item-3-user-creation-upload",
   "ClickOnDownloadAgentRadioBtn":":nth-child(1) > .enc-card > .card-content > .form-control-group > .form-radio-group > :nth-child(1) > .ng-untouched",
   "ClickOnDownloadAgencyRadioBtn":":nth-child(1) > .enc-card > .card-content > .form-control-group > .form-radio-group > :nth-child(2) > .ng-untouched",
   "ClickOnDownloadStaffRadioBtn":":nth-child(1) > .enc-card > .card-content > .form-control-group > .form-radio-group > .ng-star-inserted > .ng-valid",

@@ -1,0 +1,4 @@
+AgreementId,AddressType,Address,MobileNumber,WorkRequestId,UploadStatus,ErrorMessage
+1667,Residential,5160 Felton Cape,8835389401,02152026042014210,Success,
+9999999,Mobile,8742 Lakin Extensions,1578172031,02152026042014210,Error,AgreementId does not exist
+8888888,Mobile,4438 W Monroe Street,,02152026042014210,Error,AgreementId does not exist

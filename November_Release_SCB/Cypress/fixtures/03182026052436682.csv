@@ -1,0 +1,4 @@
+AgreementId,AddressType,Address,MobileNumber,WorkRequestId,UploadStatus,ErrorMessage
+1667,Residential,,,03182026052436682,Error,Provide Address or MobileNumber
+9999999,Mobile,54416 S State Street,7368651440,03182026052436682,Error,AgreementId does not exist
+8888888,,,,03182026052436682,Error,AgreementId does not exist

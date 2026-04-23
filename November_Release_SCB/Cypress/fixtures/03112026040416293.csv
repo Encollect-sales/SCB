@@ -1,0 +1,2 @@
+AgreementId,AddressType,Address,MobileNumber,WorkRequestId,UploadStatus,ErrorMessage
+1667,InvalidType,6267 S Maple Street,7420260489,03112026040416293,Error,AddressType is invalid

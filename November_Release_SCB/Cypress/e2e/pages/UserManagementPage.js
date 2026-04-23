@@ -9,7 +9,7 @@ class UserManagementPage {
 
   RM_001_Agency_Reporting_Manager_Dropdown() {
 
-  cy.get('[title="User Management"]').click({force:true});
+ cy.get('#nav-item-1-user-management').click({force:true});
   cy.wait(2000);
   cy.get(this.locators.agent).click({ force: true });
   cy.contains('Add Agent').click({ force: true });
@@ -58,7 +58,7 @@ class UserManagementPage {
 
  RM_002_No_Approved_Users_Agency() {
   cy.wait(2000);
-  cy.get('[title="User Management"]').click({ force: true });
+ cy.get('#nav-item-1-user-management').click({ force: true });
   cy.wait(2000);
 
   cy.get(this.locators.agent).click({ force: true });
@@ -89,7 +89,7 @@ class UserManagementPage {
 }
 
 TC_DD_001(){
-  cy.get('[title="User Management"]').click({ force: true });
+ cy.get('#nav-item-1-user-management').click({ force: true });
   cy.wait(2000);
 
   cy.get(this.locators.agent).click({ force: true });
@@ -110,7 +110,7 @@ TC_DD_001(){
 
 }
 TC_DD_003(){
-  cy.get('[title="User Management"]').click({ force: true });
+ cy.get('#nav-item-1-user-management').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.staff).click({ force: true });
   cy.wait(2000);
@@ -134,7 +134,7 @@ cy.get('.ng-dropdown-panel-items .ng-option-label')
 
 }
 TC_DD_020(){
-  cy.get('[title="User Management"]').click({ force: true });
+ cy.get('#nav-item-1-user-management').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.agent).click({ force: true });
   cy.wait(2000);
@@ -143,7 +143,7 @@ TC_DD_020(){
   cy.get(this.locators.Manager).should('be.visible');
 }
 TC_DD_021(){
-  cy.get('[title="User Management"]').click({ force: true });
+ cy.get('#nav-item-1-user-management').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.agent).click({ force: true });
   cy.wait(2000);
@@ -156,7 +156,7 @@ TC_DD_021(){
 }
 TC_DD_022(){
   cy.wait(3000);
-  cy.get('[title="User Management"]').click({ force: true });
+ cy.get('#nav-item-1-user-management').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.agent).click({ force: true });
   cy.wait(2000);
@@ -175,7 +175,7 @@ cy.get('.ng-option-label')
 
 }
 TC_DD_023(){
-  cy.get('[title="User Management"]').click({ force: true });
+ cy.get('#nav-item-1-user-management').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.staff).click({ force: true });
   cy.wait(2000);

@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test:group1:QA": "cypress run --spec 'cypress/e2e/tests/CollectionIntensityTestPage*.cy.js' --env ENV=QA",
+    "test:group1:QA": "cypress run --spec 'cypress/e2e/tests/SettlementTestPage_*.cy.js' --env ENV=QA",
     "test:group2:QA": "cypress run --spec 'cypress/e2e/tests/CollectionTrendTestPage_*.cy.js' --env ENV=QA",
     "test:group3:QA": "cypress run --spec 'cypress/e2e/tests/VisitIntensityTestPage*.cy.js' --env ENV=QA",
     "test:group4:QA": "cypress run --spec 'cypress/e2e/tests/InsightsTestPage*.cy.js' --env ENV=QA",

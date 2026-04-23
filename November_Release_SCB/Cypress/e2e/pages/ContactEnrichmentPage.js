@@ -8,7 +8,7 @@ class ContactEnrichmentPage {
   }
 
 CE_BCU_002(){
-  cy.get('[title="Contact Enrichment"]').click({force:true});
+ cy.get('#nav-item-1-contact-enrichment').click({force:true});
   cy.wait(2000);
   cy.get(this.locators.bulk_Contact_upload).click({force:true});
   cy.wait(2000);
@@ -88,9 +88,9 @@ contacttemplate_processed_001(){
     cy.wait(2000);
     cy.get('#bulk-trail-search-button').click();
     cy.wait(3000);
-    cy.get('tbody > .ng-star-inserted > :nth-child(4)').contains('Processed').should('be.visible');
+     cy.get('tbody > tr > :nth-child(4)').contains('Processed').should('be.visible');
     cy.wait(2000);
-    cy.get("tbody > .ng-star-inserted > :nth-child(5) > a").click();
+  cy.get('tbody > tr > :nth-child(5)').click();
     cy.wait(3000);
  
 }
@@ -98,7 +98,7 @@ contacttemplate_processed_001(){
 
 CE_BCU_003() {
  
-  cy.get('[title="Contact Enrichment"]').click({force:true});
+ cy.get('#nav-item-1-contact-enrichment').click({force:true});
   cy.wait(2000);
   cy.get(this.locators.bulk_Contact_upload).click({force:true});
   cy.wait(2000);
@@ -166,7 +166,7 @@ CE_BCU_005(){
 
 }
 CE_BCU_006(){
-  cy.get('[title="Contact Enrichment"]').click({force:true});
+ cy.get('#nav-item-1-contact-enrichment').click({force:true});
   cy.wait(2000);
   cy.get(this.locators.contact_Upload_Status).click({force:true});
   cy.wait(2000);
@@ -196,7 +196,7 @@ CE_BCU_006(){
 }
 CE_BCU_007(){
   const fileName = 'BulkContactLargeValid.xlsx'; 
-  cy.get('[title="Contact Enrichment"]').click({force:true});
+ cy.get('#nav-item-1-contact-enrichment').click({force:true});
   cy.wait(2000);
  cy.get(this.locators.bulk_Contact_upload).click({force:true});
    cy.wait(2000);
@@ -223,7 +223,7 @@ CE_BCU_007(){
       });
 }
 CE_BCU_008(){
- cy.get('[title="Contact Enrichment"]').click({ force: true });
+cy.get('#nav-item-1-contact-enrichment').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.bulk_Contact_upload).click({ force: true });
   cy.wait(2000);
@@ -282,7 +282,7 @@ contacttemplate_partiallyprocessed(){
 
 
 CE_BCU_0030(){
-  cy.get('[title="Contact Enrichment"]').click({force:true});
+ cy.get('#nav-item-1-contact-enrichment').click({force:true});
   cy.wait(2000);
   cy.get(this.locators.bulk_Contact_upload).click({force:true});
   cy.wait(2000);
@@ -367,14 +367,14 @@ CE_CUS_001(){
 }
 CE_CUS_002() {
 
-  cy.get('[title="Contact Enrichment"]').click({ force: true });
+ cy.get('#nav-item-1-contact-enrichment').click({ force: true });
 
   cy.get(this.locators.contact_Upload_Status).click({ force: true });
 
   // Enter date and search
   cy.get(this.locators.bulk_trail_upload)
     .clear()
-    .type('18-12-2025');
+    .type('18-Dec-25');
 
   cy.get(this.locators.search).click({ force: true });
 
@@ -406,7 +406,7 @@ CE_CUS_002() {
 
 CE_CUS_003() {
 
- cy.get('[title="Contact Enrichment"]').click({ force: true });
+cy.get('#nav-item-1-contact-enrichment').click({ force: true });
 
   cy.get(this.locators.contact_Upload_Status).click({ force: true });
 
@@ -457,7 +457,7 @@ clickRandomLinkFromColumn(columnIndex = 4) {
 
    CE_CUS_004() {
 
-    cy.get('[title="Contact Enrichment"]').click({ force: true });
+   cy.get('#nav-item-1-contact-enrichment').click({ force: true });
     cy.wait(2000);
     cy.get(this.locators.contact_Upload_Status).click({ force: true });
     cy.wait(2000);
@@ -467,7 +467,7 @@ clickRandomLinkFromColumn(columnIndex = 4) {
     
   }
   CE_CUS_005(){
-  cy.get('[title="Contact Enrichment"]').click({ force: true });
+ cy.get('#nav-item-1-contact-enrichment').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.contact_Upload_Status).click({ force: true });
   cy.wait(2000);
@@ -479,7 +479,7 @@ clickRandomLinkFromColumn(columnIndex = 4) {
   }
 
     CE_CUS_006(){
-  cy.get('[title="Contact Enrichment"]').click({ force: true });
+ cy.get('#nav-item-1-contact-enrichment').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.contact_Upload_Status).click({ force: true });
   cy.wait(2000);
@@ -487,7 +487,7 @@ clickRandomLinkFromColumn(columnIndex = 4) {
 
   }
 CE_CUS_007(){
-  cy.get('[title="Contact Enrichment"]').click({ force: true });
+ cy.get('#nav-item-1-contact-enrichment').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.contact_Upload_Status).click({ force: true });
   cy.wait(2000);
@@ -509,13 +509,13 @@ CE_CUS_007(){
 
 CE_CUS_008() {
   cy.wait(5000);
-  cy.get('[title="Contact Enrichment"]').click({ force: true });
+ cy.get('#nav-item-1-contact-enrichment').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.contact_Upload_Status).click({ force: true });
   cy.wait(2000);
   // Enter date and search
   cy.get(this.locators.bulk_trail_upload)
-    .type('18-12-2025');
+    .type('18-Dec-25');
   
   cy.get(this.locators.search).click({ force: true });
 
@@ -588,7 +588,7 @@ CE_CUS_009() {
 
 
   // ---------- Navigate to Contact Enrichment ----------
-  cy.get('[title="Contact Enrichment"]').click({ force: true });
+ cy.get('#nav-item-1-contact-enrichment').click({ force: true });
   cy.wait(2000);
 
   cy.get(this.locators.contact_Upload_Status).click({ force: true });
@@ -640,11 +640,11 @@ CE_CUS_009() {
 }
 
 CE_CUS_0010(){
-  cy.get('[title="Contact Enrichment"]').click({ force: true });
+ cy.get('#nav-item-1-contact-enrichment').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.contact_Upload_Status).click({ force: true });
   cy.wait(2000);
-  cy.get(this.locators.bulk_trail_upload).type('18-12-2025');
+  cy.get(this.locators.bulk_trail_upload).type('18-Dec-25');
   cy.wait(2000);
   cy.get(this.locators.search).click({ force: true });
   cy.wait(2000);
@@ -656,7 +656,7 @@ CE_CUS_0010(){
  
 }
 CE_CUS_0011(){
- cy.get('[title="Contact Enrichment"]').click({ force: true });
+cy.get('#nav-item-1-contact-enrichment').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.contact_Upload_Status).click({ force: true });
   cy.wait(2000);
@@ -668,7 +668,7 @@ CE_CUS_0011(){
 
 }
 CE_CUS_0012(){
- cy.get('[title="Contact Enrichment"]').click({ force: true });
+cy.get('#nav-item-1-contact-enrichment').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.contact_Upload_Status).click({ force: true });
   cy.wait(2000);
@@ -842,9 +842,9 @@ cy.get('#flip-scroll .scrollable-table .table tbody tr')
     cy.wait(2000);
     cy.get('#bulk-trail-search-button').click();
     cy.wait(3000);
-    cy.get('tbody > .ng-star-inserted > :nth-child(4)').contains('Failed').should('be.visible');
+    cy.get('tbody > tr > :nth-child(4)').contains('Failed').should('be.visible');
     cy.wait(2000);
-    cy.get("tbody > .ng-star-inserted > :nth-child(5) > a").click();
+    cy.get("tbody > tr > :nth-child(5)").click();
     cy.wait(3000);
     cy.get(this.locators.accountsearch).click({force:true});
     cy.wait(2000);
@@ -852,7 +852,7 @@ cy.get('#flip-scroll .scrollable-table .table tbody tr')
     cy.wait(2000);
     cy.get(this.locators.submit).click({force:true});
     cy.wait(2000);
-    cy.get("tbody tr[class='ng-star-inserted'] td:nth-child(4) a:nth-child(1)").click({force:true});
+    cy.get('[style="text-wrap-mode: nowrap; position: relative;"] > span').click({force:true});
     cy.wait(2000);
     cy.get(this.locators.toggleButton).click({force:true});
     cy.wait(2000);
@@ -920,9 +920,9 @@ cy.get('#flip-scroll > .scrollable-table > .table > tbody > tr')
     cy.wait(2000);
     cy.get('#bulk-trail-search-button').click();
     cy.wait(3000);
-    cy.get('tbody > .ng-star-inserted > :nth-child(4)').contains('Failed').should('be.visible');
+   cy.get('tbody > tr > :nth-child(4)').contains('Failed').should('be.visible');
     cy.wait(2000);
-    cy.get("tbody > .ng-star-inserted > :nth-child(5) > a").click();
+    cy.get('tbody > tr > :nth-child(5)').click();
     cy.wait(3000);
     cy.get(this.locators.accountsearch).click({force:true});
     cy.wait(2000);
@@ -930,7 +930,7 @@ cy.get('#flip-scroll > .scrollable-table > .table > tbody > tr')
     cy.wait(2000);
     cy.get(this.locators.submit).click({force:true});
     cy.wait(2000);
-    cy.get("tbody tr[class='ng-star-inserted'] td:nth-child(4) a:nth-child(1)").click({force:true});
+    cy.get('[style="text-wrap-mode: nowrap; position: relative;"] > span').click({force:true});
     cy.wait(2000);
     cy.get(this.locators.toggleButton).click({force:true});
     cy.wait(2000);
@@ -965,7 +965,7 @@ cy.get(':nth-child(2) > .col-md-6 > .enc-card > .card-header > h3').scrollIntoVi
     cy.wait(2000);
     cy.get(this.locators.submit).click({force:true});
     cy.wait(2000);
-    cy.get("tbody tr[class='ng-star-inserted'] td:nth-child(4) a:nth-child(1)").click({force:true});
+    cy.get('[style="text-wrap-mode: nowrap; position: relative;"] > span').click({force:true});
     cy.wait(2000);
     cy.get(this.locators.toggleButton).click({force:true});
     cy.wait(2000);
@@ -1034,7 +1034,7 @@ cy.get(':nth-child(2) > .col-md-6 > .enc-card > .card-header > h3').scrollIntoVi
     cy.wait(2000);
     cy.get(this.locators.submit).click({force:true});
     cy.wait(2000);
-    cy.get("tbody tr[class='ng-star-inserted'] td:nth-child(4) a:nth-child(1)").click({force:true});
+   cy.get('[style="text-wrap-mode: nowrap; position: relative;"] > span').click({force:true});
     cy.wait(2000);
     cy.get(this.locators.toggleButton).click({force:true});
     cy.wait(2000);
@@ -1110,7 +1110,7 @@ cy.get(':nth-child(2) > .col-md-6 > .enc-card > .card-header > h3').scrollIntoVi
 }
 
 CE_BCU_015(){
-    cy.get('[title="Contact Enrichment"]').click({force:true});
+   cy.get('#nav-item-1-contact-enrichment').click({force:true});
     cy.wait(2000);
     cy.get(this.locators.bulk_Contact_upload).click({force:true});
     cy.wait(2000);

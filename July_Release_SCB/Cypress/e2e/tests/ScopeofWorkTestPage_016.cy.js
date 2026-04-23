@@ -20,7 +20,7 @@ describe('ScopeofWork - user will click on Trail History report and check the sc
     });
 
     it('ScopeofWork- TC_ID_016', () => {
-        getTestData('loginData', 'login2').then(user => {
+        getTestData('loginData', 'login1').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
                 cy.wait(7000);
                 scopeofworkpage.ScopeofWorkTestPage_016();            

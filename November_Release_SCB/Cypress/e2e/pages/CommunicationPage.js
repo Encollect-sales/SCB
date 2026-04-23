@@ -9,7 +9,7 @@ class CommunicationPage {
  CFG_001_Collections_EntryPoint_RecipientType() {
 
   // Navigate to Communication Module
-  cy.get('[title="Communication"]').click({ force: true });
+ cy.get('#nav-item-1-communication').click({ force: true });
   cy.contains('Create Communication Template').click({ force: true });
 
   // Select Entry Point = Collection
@@ -29,7 +29,7 @@ class CommunicationPage {
 
 CFG_002_Collections_TriggerType_OnXDaysDelayedDeposit() {
 
-  cy.get('[title="Communication"]').click({ force: true });
+ cy.get('#nav-item-1-communication').click({ force: true });
   cy.wait(2000);
   cy.contains('Create Communication Trigger').click({ force: true });
   cy.wait(2000);
@@ -56,7 +56,7 @@ CFG_002_Collections_TriggerType_OnXDaysDelayedDeposit() {
 CFG_003_Collections_XValue_Mandatory_Positive() {
 
   // Navigate to Create Communication Trigger
-  cy.get('[title="Communication"]').click({ force: true });
+ cy.get('#nav-item-1-communication').click({ force: true });
   cy.contains('Create Communication Trigger').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.triggertype).click({force:true});
@@ -79,7 +79,7 @@ CFG_003_Collections_XValue_Mandatory_Positive() {
 CFG_004_Collections_XValue_Blank_Or_NonNumeric_NotAllowed() {
 
   // Navigate to Create Communication Trigger
-  cy.get('[title="Communication"]').click({ force: true });
+ cy.get('#nav-item-1-communication').click({ force: true });
   cy.contains('Create Communication Trigger').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.triggertype).click({force:true});

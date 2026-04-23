@@ -20,7 +20,7 @@ describe('ScopeofWork - user will click on Trail Intensity report and check the 
     });
 
     it('ScopeofWork- TC_ID_019', () => {
-        getTestData('loginData', 'login2').then(user => {
+        getTestData('loginData', 'login1').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
                 cy.wait(7000);
                 scopeofworkpage.ScopeofWorkTestPage_019();            

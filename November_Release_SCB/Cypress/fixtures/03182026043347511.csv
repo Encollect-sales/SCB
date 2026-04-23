@@ -1,0 +1,2 @@
+AgreementId,AddressType,Address,MobileNumber,WorkRequestId,UploadStatus,ErrorMessage
+1667,InvalidType,8039 W Main,9651508259,03182026043347511,Error,AddressType is invalid

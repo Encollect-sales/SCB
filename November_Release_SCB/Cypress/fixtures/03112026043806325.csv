@@ -1,0 +1,3 @@
+AgreementId,AddressType,Address,MobileNumber,WorkRequestId,UploadStatus,ErrorMessage
+1667,Residential,"شارع الملك فهد، مبنى رقم 12
+        Apt #45, @Business-Center!",8826972290,03112026043806325,Error,Duplicate contact

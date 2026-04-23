@@ -1,0 +1,3 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+DMI0009590352,1174,yes,PTP,PTP,2026-12-26,78,,Bulk upload Aug29,8766297945,btm,banglore,Izaiah.Sanford75@gmail.com,permanent,new,03182026084456489,Success,
+DMI0009590352,118974,yes,PTP,PTP,2026-12-26,78,,Bulk upload Aug29,8766297945,btm,banglore,Izaiah.Sanford75@gmail.com,permanent,new,03182026084456489,Error,Agent code is invalid

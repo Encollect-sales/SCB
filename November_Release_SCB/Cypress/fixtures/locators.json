@@ -11,7 +11,7 @@
   },
  
 "accountsearch":{
- "accountsearch_btn":"a[title='Account Search']",
+ "accountsearch_btn":"#nav-item-1-account-search",
  "customer_name":"#search-customer-name",
  "search_btn":"#search-submit-button",
  "pagecount_dropdown":"select[name='itemsPerPage']",
@@ -26,14 +26,14 @@
 
 },
 "contactenrichment":{
-  "bulk_Contact_upload":".contact-enrichment > .sub-nav-list > :nth-child(1) > .ng-star-inserted",
+  "bulk_Contact_upload":"#nav-item-2-bulk-contact-upload",
   "Uploadbtn":"#bulk-trail-file",
   "ClickOnUploadBtn":"#bulk-trail-upload-button",
   "ClickOnOkay":"#confirm-dialog-okay",
   "ClickOnDownload":"#bulk-trail-download-template",
-  "contact_Upload_Status":".contact-enrichment > .sub-nav-list > :nth-child(2) > .ng-star-inserted",
+  "contact_Upload_Status":"#nav-item-2-contact-upload-status",
   "status":"#bulk-trail-status",
-  "accountsearch_btn":".account-search > a.ng-star-inserted",
+  "accountsearch_btn":".account-search > a",
   "search_customer_name":"#search-customer-name",
   "search_submit_button":"#search-submit-button",
   "bulk_trail_file":"#bulk-trail-file-name",
@@ -45,7 +45,7 @@
   "first_page":".pagination-first",
   "account_no":"#search-account-number",
   "submit":"#search-submit-button",
-  "accountsearch":".account-search > a.ng-star-inserted",
+  "accountsearch":".account-search > a",
   "toggleButton":"#toggleButton",
   "customer_hub":":nth-child(11) > .dropdown-item",
   "mobile":":nth-child(1) > :nth-child(1) > .enc-card > .card-header > h3",
@@ -117,8 +117,8 @@
 },
 "communication":{
 
-  "ClickOn_Communication":"[title='Communication'] > span.ng-star-inserted",
-  "ClickOn_CreateTemplate":".communication > .sub-nav-list > :nth-child(2) > .ng-star-inserted",
+  "ClickOn_Communication":"#nav-item-1-communication",
+  "ClickOn_CreateTemplate":"#nav-item-2-create-communication-template",
    "Select_Entrypoint":":nth-child(3) > .h-100 > .form-control-group > .form-select",
    "Select_ReceiptType":":nth-child(4) > .h-100 > .form-control-group > .form-select",
 
@@ -132,15 +132,15 @@
   "triggertype":"#trigger-type-7"
 },
 "reports":{
-"Delayed_Reports":"a[title='Delayed Deposits Report']",
+"Delayed_Reports":"#nav-item-2-delayed-deposits-report",
 "receiptDate_from":"#receiptDate_from",
 "receiptDate_to":"#receiptDate_to",
 "submit":"#generate-report-button",
 "download":".btn-outline-dark"
 },
 "trails":{
-  "trail":"a[title='Trails']",
-  "bulk_trail_upload":"a[title='Bulk Trail Upload']",
+  "trail":"#nav-item-1-trails",
+  "bulk_trail_upload":"#nav-item-2-bulk-trail-upload",
   "download_button":"#bulk-trail-download-template",
   "ClickOnUploadBtn":"#bulk-trail-upload-button",
   "ClickOnOkay":"#confirm-dialog-okay",

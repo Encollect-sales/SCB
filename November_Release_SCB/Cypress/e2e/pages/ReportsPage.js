@@ -8,7 +8,7 @@ class ReportsPage {
   }
   RPT_S_001_Open_Delayed_Deposits_Staff_Report() {
 
-  cy.get('[title="Reports"]').click({ force: true });
+cy.get('#nav-item-1-reports').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Delayed_Reports).click({force:true});
   cy.wait(2000);
@@ -22,7 +22,7 @@ class ReportsPage {
 RPT_S_002_Verify_Delayed_Deposits_Staff_Report_Data() {
 
   // Open Reports module
-  cy.get('[title="Reports"]').click({ force: true });
+cy.get('#nav-item-1-reports').click({ force: true });
   cy.wait(2000);
 
   // Open Delayed Deposits (Staff) report
@@ -66,7 +66,7 @@ RPT_S_002_Verify_Delayed_Deposits_Staff_Report_Data() {
 RPT_S_003_Date_Range_Greater_Than_31_Days_Not_Allowed() {
 
   // Navigate to Reports → Delayed Deposits (Staff)
-  cy.get('[title="Reports"]').click({ force: true });
+cy.get('#nav-item-1-reports').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Delayed_Reports).click({ force: true });
   cy.wait(2000);
@@ -97,7 +97,7 @@ cy.get(this.locators.submit)
 RPT_S_004_Verify_Sorting_And_Download_Delayed_Deposits_Report() {
 
   // Navigate to Reports → Delayed Deposits (Staff)
-  cy.get('[title="Reports"]').click({ force: true });
+cy.get('#nav-item-1-reports').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Delayed_Reports).click({ force: true });
   cy.wait(2000);
@@ -130,7 +130,7 @@ cy.wait(2000);
 }
 RPT_S_005_Verify_No_Data_Scenario_Delayed_Deposits_Report() {
 
-  cy.get('[title="Reports"]').click({ force: true });
+cy.get('#nav-item-1-reports').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Delayed_Reports).click({ force: true });
   cy.wait(2000);
@@ -157,7 +157,7 @@ RPT_S_005_Verify_No_Data_Scenario_Delayed_Deposits_Report() {
 
 RPT_S_0014_verifyUndepositedDurationCalculation() {
 
-  cy.get('[title="Reports"]').click({ force: true });
+cy.get('#nav-item-1-reports').click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Delayed_Reports).click({ force: true });
   cy.wait(2000);

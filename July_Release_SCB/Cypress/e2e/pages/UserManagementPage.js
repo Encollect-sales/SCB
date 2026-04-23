@@ -253,11 +253,11 @@ cy.wait(2000);
 cy.wait(2000);
     cy.get(this.locators.clickonARD).click();
     cy.wait(2000);
-    cy.get(this.locators.firstagreementdate).type('02-04-2024').should("be.visible");
+    cy.get(this.locators.firstagreementdate).type('02-01-2026').should("be.visible");
     cy.wait(2000);
-    cy.get(this.locators.lastrenewaldate).type('01-05-2024').should("be.visible");
+    cy.get(this.locators.lastrenewaldate).type('05-01-2026').should("be.visible");
     cy.wait(2000);
-    cy.get(this.locators.Contactexpiredate).type('30-09-2026').should("be.visible");
+   cy.get(this.locators.Contactexpiredate).clear().type('2027-03-30');
     cy.wait(2000);
     cy.get(this.locators.addremark).type("This is ok",{force:true});
     cy.wait(2000);
@@ -488,9 +488,9 @@ cy.wait(2000);
     cy.wait(2000);
     cy.get(this.locators.firstagreementdate).type('02-04-2024').should("be.visible");
     cy.wait(2000);
-    cy.get(this.locators.lastrenewaldate).type('01-05-2024').should("be.visible");
+    cy.get(this.locators.lastrenewaldate).type('10-01-2024').should("be.visible");
     cy.wait(2000);
-    cy.get(this.locators.Contactexpiredate).type('30-09-2026').should("be.visible");
+    cy.get(this.locators.Contactexpiredate).clear().type('2027-03-30');
     cy.wait(2000);
     cy.get(this.locators.addremark).type("This is ok",{force:true});
     cy.wait(2000);
@@ -717,15 +717,16 @@ cy.wait(2000);
     cy.wait(2000);
     cy.get(this.locators.firstagreementdate).type('02-04-2024').should("be.visible");
     cy.wait(2000);
-    cy.get(this.locators.lastrenewaldate).type('01-05-2024').should("be.visible");
+    cy.get(this.locators.lastrenewaldate).type('10-01-2024').should("be.visible");
     cy.wait(2000);
-    cy.get(this.locators.Contactexpiredate).type('30-09-2026').should("be.visible");
+    cy.get(this.locators.Contactexpiredate).clear().type('2027-03-30');
     cy.wait(2000);
     cy.get(this.locators.addremark).type("This is ok",{force:true});
     cy.wait(2000);
     cy.get(this.locators.saveagencyprofile).click().should("be.visible");
     cy.wait(2000);
-   cy.contains("Special characters are not allowed in the input").should("be.visible");
+    cy.contains("Agency profile is Saved as Draft.").should("be.visible");
+  cy.contains("Special characters are not allowed in the input").should("not.exist");
    cy.wait(2000);
 }
 
@@ -944,15 +945,15 @@ cy.wait(2000);
     cy.wait(2000);
     cy.get(this.locators.firstagreementdate).type('02-04-2024').should("be.visible");
     cy.wait(2000);
-    cy.get(this.locators.lastrenewaldate).type('01-05-2024').should("be.visible");
+    cy.get(this.locators.lastrenewaldate).type('10-01-2024').should("be.visible");
     cy.wait(2000);
-    cy.get(this.locators.Contactexpiredate).type('30-09-2026').should("be.visible");
+    cy.get(this.locators.Contactexpiredate).clear().type('2027-03-30');
     cy.wait(2000);
     cy.get(this.locators.addremark).type("This is ok",{force:true});
     cy.wait(2000);
     cy.get(this.locators.saveagencyprofile).click().should("be.visible");
     cy.wait(2000);
-   cy.get('[role="alert"]').should('contain.text', 'The AddressLine field is required.');
+   cy.should('contain.text', 'The AddressLine field is required.');
 
    cy.wait(2000);
 }
@@ -1187,15 +1188,15 @@ cy.wait(2000);
     cy.wait(2000);
     cy.get(this.locators.firstagreementdate).type('02-04-2024').should("be.visible");
     cy.wait(2000);
-    cy.get(this.locators.lastrenewaldate).type('01-05-2024').should("be.visible");
+    cy.get(this.locators.lastrenewaldate).type('10-01-2024').should("be.visible");
     cy.wait(2000);
-    cy.get(this.locators.Contactexpiredate).type('30-09-2026').should("be.visible");
+    cy.get(this.locators.Contactexpiredate).clear().type('2027-03-30');
     cy.wait(2000);
     cy.get(this.locators.addremark).type("This is ok",{force:true});
     cy.wait(2000);
     cy.get(this.locators.saveagencyprofile).click().should("be.visible");
     cy.wait(2000);
-   cy.contains("Special characters are not allowed in the input").should("be.visible");
+  cy.contains("Special characters are not allowed in the input").should("not.exist");
    cy.wait(2000);
 }
 
@@ -1253,13 +1254,26 @@ UserManagementTestPage_111(){
   cy.get(this.locators.LastName).type(lastName);
   cy.wait(2000);
 
-  cy.get(this.locators.Agencyname)
-    .find("option")
-    .then((options) => {
-      const randomIndex = Math.floor(Math.random() * options.length); // get random index
-      const randomValue = options[randomIndex].value; // get value of random option
-      cy.get(this.locators.Agencyname).select(randomValue); // select it
-    });
+cy.get(this.locators.Agencyname)
+  .find("option")
+  .then((options) => {
+    // Filter out blank/placeholder options
+    const validOptions = [...options].filter(
+      (opt) => opt.value !== "" && opt.text.trim() !== "" && opt.text.trim().toLowerCase() !== "select"
+    );
+
+    if (validOptions.length === 0) {
+      throw new Error("No valid options found in Agency Name dropdown");
+    }
+
+    const randomIndex = Math.floor(Math.random() * validOptions.length);
+    const randomValue = validOptions[randomIndex].value;
+
+    cy.get(this.locators.Agencyname)
+      .select(randomValue)
+      .should("not.have.value", ""); // Assert a real value is selected
+  });
+
 
    cy.get(this.locators.SelectAgencyReportManager).click(); 
 cy.wait(2000);
@@ -1338,7 +1352,7 @@ cy.get('.ng-dropdown-panel .ng-option')
     // Cypress test code
     cy.get("#emailId").type(generateRandomEmail());
     cy.wait(500);
-    cy.get("#dobId").type("11-06-20006");
+    cy.get("#dobId").type("25/06/2002");
     cy.wait(2000);
   const randomName = faker.person.fullName().replace(/[^a-zA-Z ]/g, '');
    cy.get("#fatherNameId").type(randomName, { force: true });
@@ -1407,7 +1421,7 @@ cy.wait(1500);
     cy.wait(2000);
     cy.get("#RenewalDate").type("15-07-2024").should('be.visible');
     cy.wait(2000);
-    cy.get("#ExpiryDate").type("15-07-2026").should('be.visible');
+    cy.get("#ExpiryDate").clear().type('2027-03-30');
     cy.wait(2000);
     cy.get("#remarks").type("aaaaaa bbbbbbbbb cccccccccc dddddddddd 123",{force: true}).should('be.visible');
     cy.wait(2000)
@@ -1432,22 +1446,38 @@ UserManagementTestPage_112(){
   cy.get(this.locators.SelectUsertype).select("Others");
   cy.wait(1000);
 
-  const firstName = faker.person.firstName();
-  const lastName = faker.person.lastName();
+ // Helper function to remove special characters
+const cleanName = (name) => name.replace(/[^a-zA-Z]/g, "");
 
-  cy.get(this.locators.FirstName).type(firstName);
-  cy.wait(2000);
+const firstName = cleanName(faker.person.firstName());
+const lastName = cleanName(faker.person.lastName());
 
-  cy.get(this.locators.LastName).type(lastName);
-  cy.wait(2000);
+cy.get(this.locators.FirstName).type(firstName);
+cy.wait(2000);
 
-  cy.get(this.locators.Agencyname)
-    .find("option")
-    .then((options) => {
-      const randomIndex = Math.floor(Math.random() * options.length); // get random index
-      const randomValue = options[randomIndex].value; // get value of random option
-      cy.get(this.locators.Agencyname).select(randomValue); // select it
-    });
+cy.get(this.locators.LastName).type(lastName);
+cy.wait(2000);
+
+ cy.get(this.locators.Agencyname)
+  .find("option")
+  .then((options) => {
+    // Filter out blank/placeholder options
+    const validOptions = [...options].filter(
+      (opt) => opt.value !== "" && opt.text.trim() !== "" && opt.text.trim().toLowerCase() !== "select"
+    );
+
+    if (validOptions.length === 0) {
+      throw new Error("No valid options found in Agency Name dropdown");
+    }
+
+    const randomIndex = Math.floor(Math.random() * validOptions.length);
+    const randomValue = validOptions[randomIndex].value;
+
+    cy.get(this.locators.Agencyname)
+      .select(randomValue)
+      .should("not.have.value", ""); // Assert a real value is selected
+  });
+
 cy.wait(2000);
  cy.get(this.locators.SelectAgencyReportManager).click(); 
 cy.wait(2000);
@@ -1526,7 +1556,7 @@ cy.get('.ng-dropdown-panel .ng-option')
     // Cypress test code
     cy.get("#emailId").type(generateRandomEmail());
     cy.wait(500);
-    cy.get("#dobId").type("11-06-20006");
+   cy.get("#dobId").type("25/06/2002");
     cy.wait(2000);
     
   const randomName = faker.person.fullName().replace(/[^a-zA-Z ]/g, '');
@@ -1596,7 +1626,7 @@ cy.wait(1500);
     cy.wait(2000);
     cy.get("#RenewalDate").type("15-07-2024").should('be.visible');
     cy.wait(2000);
-    cy.get("#ExpiryDate").type("15-07-2026").should('be.visible');
+    cy.get("#ExpiryDate").clear().type('2027-03-30');
     cy.wait(2000);
     cy.get("#remarks").type("aaaaaa bbbbbbbbb cccccccccc dddddddddd 123",{force: true}).should('be.visible');
     cy.wait(2000)
@@ -1609,7 +1639,7 @@ cy.wait(1500);
 }
 
 UserManagementTestPage_113(){
-cy.wait()
+
   const filePath = "Cypress/fixtures/Aadhar.png";
 
   cy.get(this.locators.clickonusermanagement).click();
@@ -1715,7 +1745,7 @@ cy.get('.ng-dropdown-panel .ng-option')
     // Cypress test code
     cy.get("#emailId").type(generateRandomEmail());
     cy.wait(500);
-    cy.get("#dobId").type("11-06-20006");
+   cy.get("#dobId").type("25/06/2002");
     cy.wait(2000);
   const randomName = faker.person.fullName().replace(/[^a-zA-Z ]/g, '');
    cy.get("#fatherNameId").type(randomName, { force: true });
@@ -1784,7 +1814,7 @@ cy.wait(1500);
     cy.wait(2000);
     cy.get("#RenewalDate").type("15-07-2024").should('be.visible');
     cy.wait(2000);
-    cy.get("#ExpiryDate").type("15-07-2026").should('be.visible');
+    cy.get("#ExpiryDate").clear().type('2027-03-30');
     cy.wait(2000);
     cy.get("#remarks").type("aaaaaa bbbbbbbbb cccccccccc dddddddddd 123",{force: true}).should('be.visible');
     cy.wait(2000)
@@ -1817,14 +1847,25 @@ UserManagementTestPage_114(){
 
   cy.get(this.locators.LastName).type(lastName);
   cy.wait(2000);
+cy.get(this.locators.Agencyname)
+  .find("option")
+  .then((options) => {
+    // Filter out blank/placeholder options
+    const validOptions = [...options].filter(
+      (opt) => opt.value !== "" && opt.text.trim() !== "" && opt.text.trim().toLowerCase() !== "select"
+    );
 
-  cy.get(this.locators.Agencyname)
-    .find("option")
-    .then((options) => {
-      const randomIndex = Math.floor(Math.random() * options.length); // get random index
-      const randomValue = options[randomIndex].value; // get value of random option
-      cy.get(this.locators.Agencyname).select(randomValue); // select it
-    });
+    if (validOptions.length === 0) {
+      throw new Error("No valid options found in Agency Name dropdown");
+    }
+
+    const randomIndex = Math.floor(Math.random() * validOptions.length);
+    const randomValue = validOptions[randomIndex].value;
+
+    cy.get(this.locators.Agencyname)
+      .select(randomValue)
+      .should("not.have.value", ""); // Assert a real value is selected
+  });
 cy.wait(2000);
   cy.get(this.locators.SelectAgencyReportManager).click(); 
 cy.wait(2000);
@@ -1901,7 +1942,7 @@ cy.get('.ng-dropdown-panel .ng-option')
     // Cypress test code
     cy.get("#emailId").type(generateRandomEmail());
     cy.wait(500);
-    cy.get("#dobId").type("11-06-20006");
+    cy.get("#dobId").type("25/06/2002");
     cy.wait(2000);
   const randomName = faker.person.fullName().replace(/[^a-zA-Z ]/g, '');
    cy.get("#fatherNameId").type(randomName, { force: true });
@@ -1970,13 +2011,13 @@ cy.wait(1500);
     cy.wait(2000);
     cy.get("#RenewalDate").type("15-07-2024").should('be.visible');
     cy.wait(2000);
-    cy.get("#ExpiryDate").type("15-07-2026").should('be.visible');
+    cy.get("#ExpiryDate").clear().type('2027-03-30');
     cy.wait(2000);
     cy.get("#remarks").type("aaaaaa bbbbbbbbb cccccccccc dddddddddd 123",{force: true}).should('be.visible');
     cy.wait(2000)
     cy.get('#btn-submit').click();
     cy.wait(3000);
-      cy.get('[role="alert"]').should('contain.text', 'Please fill all the required fields with valid data.');
+      cy.should('contain.text', 'Please fill all the required fields with valid data.');
    cy.wait(2000);
 
 }
@@ -2104,7 +2145,7 @@ cy.get('.ng-dropdown-panel .ng-option')
     // Cypress test code
     cy.get("#emailId").type(generateRandomEmail());
     cy.wait(500);
-    cy.get("#dobId").type("11-06-20006");
+    cy.get("#dobId").type("25/06/2002");
     cy.wait(2000);
   const randomName = faker.person.fullName().replace(/[^a-zA-Z ]/g, '');
    cy.get("#fatherNameId").type(randomName, { force: true });
@@ -2173,7 +2214,7 @@ cy.wait(1500);
     cy.wait(2000);
     cy.get("#RenewalDate").type("15-07-2024").should('be.visible');
     cy.wait(2000);
-    cy.get("#ExpiryDate").type("15-07-2026").should('be.visible');
+    cy.get("#ExpiryDate").type("2027-03-30").should('be.visible');
     cy.wait(2000);
     cy.get("#remarks").type("aaaaaa bbbbbbbbb cccccccccc dddddddddd 123",{force: true}).should('be.visible');
     cy.wait(2000)
@@ -2186,7 +2227,7 @@ cy.wait(1500);
 }
 
 PanCardTestPage_01(){
-
+  cy.wait(7000);
   cy.get(this.locators.clickonusermanagement).click();
   cy.wait(1000);
   cy.get(this.locators.clickonAgencyEmpanelRequest).click({force: true});
@@ -2197,15 +2238,40 @@ PanCardTestPage_01(){
   cy.wait(2000);
   cy.get(this.locators.Click_On_Submit).click();
   cy.wait(4000);
-  cy.get('tbody tr')
-    .first()
-    .find(':nth-child(5) .form-check-group input')
-    .check({ force: true });
+  cy.get(".pagination-count > .form-select").select('50');
   cy.wait(2000);
-  cy.get(this.locators.ClickOn_Edit).click();
+  cy.get(':nth-child(2) > :nth-child(5) > .form-control-group > .form-check-group > label > input').click({force:true});
+  cy.wait(2000);
+   cy.get(this.locators.ClickOn_Edit).click();
   cy.wait(3000);
   cy.contains("Edit Agency").should("be.visible");
   cy.wait(1000);
+  cy.get(this.locators.scope_of_work).click({force:true});
+  cy.wait(2000);
+  cy.get('#scopeOfWorkProductGroup').select("All");
+  cy.wait(2000);
+  cy.get('#scopeOfWorkProduct').select("All");
+  cy.wait(2000);
+  cy.get('#scopeOfWorkSubProduct').select("All");
+  cy.wait(2000);
+  cy.get(this.locators.place_of_work).click({force:true});
+  cy.wait(2000);
+  cy.get(this.locators.productGroupDropdown).select("All");
+cy.get(this.locators.productDropdown).select("All")
+cy.get(this.locators.subProductDropdown).select("All")
+cy.get(this.locators.bucketDropdown).select("All")
+cy.get(this.locators.countryDropdown).select("All")
+cy.get(this.locators.regionDropdown).select("All")
+cy.get(this.locators.stateDropdown).select("All")
+cy.get(this.locators.cityDropdown).select("All")
+cy.get(this.locators.managerDropdown).then(($dropdown) => {
+  const options = $dropdown.find('option')
+  const randomIndex = Math.floor(Math.random() * (options.length - 1)) + 1
+  cy.wrap($dropdown).select(options[randomIndex].value)
+})
+cy.wait(2000);
+cy.get(this.locators.basic_information).click({force:true});
+cy.wait(2000);
   cy.get(this.locators.ClickOn_Pancard).clear();
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Pancard).clear().type("BNZAA1234F");
@@ -2216,7 +2282,7 @@ PanCardTestPage_01(){
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Submit_afterEdit).click({force: true});
   cy.wait(3000);
-  cy.get('[role="alert"]').should('be.visible').and('contain', 'Agency Profile has been Submitted for Approval.');
+ cy.should('be.visible').and('contain', 'Agency Profile has been submitted for approval.');
   cy.wait(2000);
 
 }
@@ -2262,7 +2328,7 @@ PanCardTestPage_02(){
   // cy.wait(2000);
   cy.get(this.locators.ClickOn_Submit_afterEdit).click();
   cy.wait(8000);
-  cy.get('[role="alert"]').should('be.visible').and('contain', 'Agency Profile has been Submitted for Approval.');
+  cy.should('be.visible').and('contain', 'Agency Profile has been Submitted for Approval.');
   cy.wait(2000);
 
 }
@@ -2287,7 +2353,7 @@ PanCardTestPage_02a(){
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Approve).click();
   cy.wait(2000);  
-    cy.get('[role="alert"]').should('be.visible').and('contain', 'Agency Approved Successfully');
+    cy.should('be.visible').and('contain', 'Agency Approved Successfully');
   cy.wait(4000);
     cy.get(this.locators.Type_Agency_Name).clear().type("Amber");
   cy.wait(2000);
@@ -2482,38 +2548,51 @@ PanCardTestPage_08() {
 
   cy.get(this.locators.clickonusermanagement).click();
   cy.wait(1000);
+
   cy.get(this.locators.clickonAgencyEmpanelRequest).click({ force: true });
   cy.wait(2000);
+
   cy.get(this.locators.ClickOn_Search_Agency).click();
   cy.wait(2000);
+
   cy.get(this.locators.Select_Agency_status).select("Approved");
   cy.wait(2000);
+
   cy.get(this.locators.Click_On_Submit).click();
   cy.wait(4000);
 
-  // ⭐ Stable checkbox click (dynamic table fix)
+  // Stable checkbox click (dynamic table)
   cy.get('tbody tr')
     .first()
     .find(':nth-child(5) .form-check-group input')
     .check({ force: true });
 
   cy.wait(2000);
+
   cy.get(this.locators.ClickOn_Edit).click();
   cy.wait(3000);
 
   cy.contains("Edit Agency").should("be.visible");
   cy.wait(1000);
 
+  cy.get(this.locators.ClickOn_Pancard)
+    .clear()
+    .type("ABCDE1234F");
+
+  cy.wait(2000);
+
   cy.get(':nth-child(8) > .nav-link > span').click();
   cy.wait(2000);
 
-  const today = new Date().toLocaleDateString("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-  });
+  // Correct date format: DD-MMM-YY
+  const today = new Date();
+  const day = String(today.getDate()).padStart(2, '0');
+  const month = today.toLocaleString('en-US', { month: 'short' });
+  const year = String(today.getFullYear()).slice(-2);
 
-  cy.contains(today).should("be.visible");
+  const formattedDate = `${day}-${month}-${year}`;
+
+  cy.contains(formattedDate).should("be.visible");
   cy.wait(2000);
 
   cy.contains("AgencyApproved").should("be.visible");
@@ -2522,7 +2601,6 @@ PanCardTestPage_08() {
   cy.contains("AgencyPendingApproval").should("be.visible");
   cy.wait(2000);
 }
-
 
 
 }

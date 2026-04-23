@@ -12,14 +12,14 @@
 
   "UserManagement":{
 
-    "clickonusermanagement":"[title='User Management'] > span.ng-star-inserted",
-    "clickonAgencyEmpanelRequest":".user-management > :nth-child(2) > :nth-child(1) > a.ng-star-inserted",
-    "ClickOnAddAgency":".user-management > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(1) > a",
+    "clickonusermanagement":"#nav-item-1-user-management",
+    "clickonAgencyEmpanelRequest":"#nav-item-2-agency-empanelment",
+    "ClickOnAddAgency":"#nav-item-3-add-agency",
     "ClickOnAgency_Address_Details":":nth-child(2) > .nav-link > span",
     "Type_Agency_Address":"#agencyAddress",
 
-    "clickonAgentEmpanelRequest":".user-management > :nth-child(2) > :nth-child(2) > a.ng-star-inserted",
-    "ClickOn_AddAgent":".user-management > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(1) > a",
+    "clickonAgentEmpanelRequest":"#nav-item-2-agent-empanelment",
+    "ClickOn_AddAgent":"#nav-item-3-add-agent",
     "ClickOnAgent_Address_Details":":nth-child(4) > .nav-link > span",
     "Type_Agent_Address":"#addressId",
 
@@ -153,7 +153,8 @@
       "bbrm" : "[heading='Base Branch And Reporting Manager'] > .panel > .panel-heading > .panel-title > .accordion-toggle",
       "basebranch" : "[heading='Base Branch And Reporting Manager'] > .panel > .panel-collapse > .panel-body > :nth-child(1) > :nth-child(1) > .form-control",
       "sprm" : ".col-md-6 > #Select",
-    
+      "page_count":".pagination-count > .form-select",
+
       "areapincode" : ".active > .row > .col-md-6 > .form-control",
       "apc" : ".ng2-menu-item",
       "apcv": ".tag__text",
@@ -177,9 +178,9 @@
       "logout": ".dropdown-menu > :nth-child(2) > a",
       "errormessage" : "#toast-container > .ng-trigger",
       "dashboard": ":nth-child(1) > .nav-item-hold > a > .nav-text",
-      "usermngt" : "a[title='User Management'] span[class='ng-star-inserted']",
-      "AgentEntReqst" : "a[title='Agent Empanelment']",
-      "AddAgent":"a[title='Add Agent']",
+      "usermngt" : "#nav-item-1-user-management",
+      "AgentEntReqst" : "#nav-item-2-agent-empanelment",
+      "AddAgent":"#nav-item-3-add-agent",
       "Val_error" : "div[class='col-md-3 form-group'] div[class='ng-star-inserted']",
       "text_code":":nth-child(5) > .row > :nth-child(3) > .form-control",
       "locl_number": ".col-md-4 > :nth-child(2) > .form-control",
@@ -216,10 +217,10 @@
 
   "PanCard":{
 
-  "clickonusermanagement":"[title='User Management'] > span.ng-star-inserted",
-    "clickonAgencyEmpanelRequest":".user-management > :nth-child(2) > :nth-child(1) > a.ng-star-inserted",
-    "ClickOnAddAgency":".user-management > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(1) > a",
-    "ClickOn_Search_Agency":".user-management > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(2) > a",
+  "clickonusermanagement":"#nav-item-1-user-management",
+    "clickonAgencyEmpanelRequest":"#nav-item-2-agency-empanelment",
+    "ClickOnAddAgency":"#nav-item-3-add-agency",
+    "ClickOn_Search_Agency":"#nav-item-3-search-agency",
     "Select_Agency_status":"#empStatus",
     "Click_On_Submit":"#btn-search",
     "ClickOn_Edit":"#btn-edit",
@@ -229,7 +230,20 @@
     "Clickon_Cancel_afteredit":"#btn-cancel",
 
     "Type_Agency_Name":"#agencyName",
-    "ClickOn_Approve":"#btn-approve"
+    "ClickOn_Approve":"#btn-approve",
+    "scope_of_work":":nth-child(5) > .nav-link > span",
+    "place_of_work":":nth-child(6) > .nav-link > span",
+    "productGroupDropdown": "#productGroup-0",
+"productDropdown": "#product-0",
+"subProductDropdown": "#subProduct-0",
+"bucketDropdown": "#bucket-0",
+"countryDropdown": "#country-0",
+"regionDropdown": "#region-0",
+"stateDropdown": "#state-0",
+"cityDropdown": "#city-0",
+"managerDropdown": "#manager-0",
+"basic_information":":nth-child(1) > .nav-link > span"
+
 
 
   },
@@ -254,8 +268,8 @@
 
   "SettlementPage":{
 
-    "ClickOn_Settlement":"[title='Settlement'] > span.ng-star-inserted",
-    "ClickOn_MyRequest":".settlement > .sub-nav-list > :nth-child(3) > a",
+    "ClickOn_Settlement":"#nav-item-1-settlement",
+    "ClickOn_MyRequest":":nth-child(3) > #nav-item-2-my-requests",
     "CLick_to_OpenSettlement":":nth-child(1) > .enc-card-content > .table > tbody > :nth-child(1) > .w-50 > .status-link",
     "ClickOn_Action_Btn":":nth-child(1) > .actions > .d-flex > .action-icon-button",
 
@@ -269,49 +283,49 @@
 
   "ScopeofWork":{
 
-    "ClickOn_Allocation":"[title='Allocation'] > span.ng-star-inserted",
-    "ClickOn_Agency_Bulkupload":".allocation > :nth-child(2) > :nth-child(1) > a.ng-star-inserted",
-    "ClickOn_Agency_AccLevel":".allocation > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(1) > a",
+    "ClickOn_Allocation":"#nav-item-1-allocation",
+    "ClickOn_Agency_Bulkupload":"#nav-item-2-agency-bulk-upload",
+    "ClickOn_Agency_AccLevel":"#nav-item-3-agency-bulk-allocation-account-level",
     "ClickOn_Product_group":":nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
 
-    "CLickOn_Reports":"[title='Reports'] > span.ng-star-inserted",
-    "ClickOn_AllocationReports":".reports > :nth-child(2) > :nth-child(1) > a.ng-star-inserted",
+    "CLickOn_Reports":"#nav-item-1-reports",
+    "ClickOn_AllocationReports":"#nav-item-2-allocation-reports",
 
-    "Click_Agent_Alloc_GapReport":".reports > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(2) > a",
+    "Click_Agent_Alloc_GapReport":"#nav-item-3-agent-allocation-gap-report",
     "Click_AgentAlloc_Productgroup":":nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container",
     "Click_AgentAlloc_Bucket":":nth-child(4) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Click_AgentAlloc_Branch":":nth-child(5) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
 
-    "ClickOn_Agency_Alloc_GapReport":".reports > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(1) > a",
+    "ClickOn_Agency_Alloc_GapReport":"#nav-item-3-agency-allocation-gap-report",
      "Click_AgencyAlloc_Productgroup":".row > :nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Click_AgencyAlloc_Bucket":":nth-child(4) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Click_AgencyAlloc_Branch":":nth-child(5) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
 
-    "ClickOn_AllocVSAchieved_Report":".reports > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(3) > a",
+    "ClickOn_AllocVSAchieved_Report":"#nav-item-3-allocated-vs-achieved-report",
      "Click_AllocVSAchieve_Productgroup":":nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Click_AllocVSAchieve_Bucket":":nth-child(4) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Click_AllocVSAchieve_Branch":":nth-child(5) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
 
-    "ClickOn_TrailReports":".reports > :nth-child(2) > :nth-child(2) > a.ng-star-inserted",
+    "ClickOn_TrailReports":"#nav-item-2-trail-reports",
 
-    "ClickOn_trailGap_Report":".reports > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(1) > a",
+    "ClickOn_trailGap_Report":"#nav-item-3-trail-gap-report",
      "Click_trailGap_Productgroup":":nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Click_trailGap_Bucket":":nth-child(4) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Click_trailGap_Branch":":nth-child(5) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
 
 
-    "ClickOn_trailHistory_Report":".reports > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(2) > a",
+    "ClickOn_trailHistory_Report":"#nav-item-3-trail-history-report",
      "Click_trailHistory_Productgroup":":nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Click_trailHistory_Bucket":":nth-child(4) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Click_trailHistory_Branch":":nth-child(5) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
 
 
-    "ClickOn_TrailIntensity_Report":".reports > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(3) > a",
+    "ClickOn_TrailIntensity_Report":"#nav-item-3-trail-intensity-report",
      "Click_TrailIntensity_Productgroup":":nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Click_TrailIntensity_Bucket":":nth-child(4) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Click_TrailIntensity_Branch":":nth-child(5) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
 
-    "ClickOn_PaymentReport":".reports > :nth-child(2) > :nth-child(3) > .ng-star-inserted",
+    "ClickOn_PaymentReport":"#nav-item-2-payment-report",
 
      "Click_PaymentReport_Productgroup":":nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Click_PaymentReport_Bucket":":nth-child(4) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
@@ -323,7 +337,7 @@
     "Click_PaymentReport_Agency_Branch":":nth-child(5) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
 
 
-    "ClickOn_Moneymovement_Report":".reports > :nth-child(2) > :nth-child(4) > .ng-star-inserted",
+    "ClickOn_Moneymovement_Report":"#nav-item-2-money-movement-report",
 
       "Click_Moneymovement_Productgroup":":nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Click_Moneymovement_Bucket":":nth-child(4) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
@@ -335,31 +349,31 @@
     "Click_AccountDashboard_Bucket":":nth-child(8) > .form-select",
     "Click_AccountDashboard_Branch":":nth-child(7) > .form-control",
 
-    "ClickOn_Performance_Report":":nth-child(2) > :nth-child(8) > .ng-star-inserted",
+    "ClickOn_Performance_Report":"#nav-item-2-performance-reports",
 
      "Click_Performance_Productgroup":":nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Click_Performance_Bucket":":nth-child(4) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Click_Performance_Report":":nth-child(2) > :nth-child(6) > .sub-nav-list > :nth-child(1) > a",
     "Click_Performance_Branch":":nth-child(5) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
-    "ClickOn_Supervisory_Report":":nth-child(2) > :nth-child(9) > .ng-star-inserted",
+    "ClickOn_Supervisory_Report":"#nav-item-2-supervisory-report",
 
       "Click_Supervisory_Productgroup":":nth-child(1) > .form-select",
     "Click_Supervisory_Bucket":":nth-child(8) > .form-select",
     "Click_Supervisory_Branch":":nth-child(7) > .form-control",
 
-    "ClickOn_CollectionIntensity_Report":":nth-child(2) > :nth-child(10) > .ng-star-inserted",
+    "ClickOn_CollectionIntensity_Report":"#nav-item-2-collection-intensity-report",
 
     "Click_CollectionIntensity_Productgroup":":nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Click_CollectionIntensity_Bucket":":nth-child(4) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Click_CollectionIntensity_Branch":":nth-child(5) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
 
-    "ClickOn_CollectionTrend_Report":":nth-child(2) > :nth-child(11) > .ng-star-inserted",
+    "ClickOn_CollectionTrend_Report":"#nav-item-2-collection-trend-report",
 
     "Click_CollectionTrend_Productgroup":":nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Click_CollectionTrend_Bucket":":nth-child(4) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Click_CollectionTrend_Branch":":nth-child(5) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
 
-    "ClickOn_VisitIntensity_report":":nth-child(2) > :nth-child(12) > .ng-star-inserted",
+    "ClickOn_VisitIntensity_report":"#nav-item-2-visit-intensity-report",
 
      "Click_VisitIntensity_Productgroup":":nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "Click_VisitIntensity_Bucket":":nth-child(4) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
@@ -369,7 +383,12 @@
 
      "Click_CustomerContact_Productgroup":":nth-child(1) > .form-select",
     "Click_CustomerContact_Bucket":":nth-child(8) > .form-select",
-    "Click_CustomerContact_Branch":":nth-child(7) > .form-control"
+    "Click_CustomerContact_Branch":":nth-child(7) > .form-control",
+    "Click_monthly_performance_report":":nth-child(6) > .sub-nav-list > :nth-child(2) > a",
+    "Click_monthly_performance_report_product_grp":":nth-child(2) > :nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "Click_monthly_performance_report_region":":nth-child(5) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "Click_monthly_performance_report_month":".card-content > :nth-child(2) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input"
+
   }
 
  
