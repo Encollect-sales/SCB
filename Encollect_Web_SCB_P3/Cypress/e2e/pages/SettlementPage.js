@@ -9,9 +9,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_01() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnFindEligibleCases).click();
+     cy.contains("Find Eligible Cases").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.contains("Current DPD").should("be.visible");
     cy.wait(1000);
@@ -28,9 +28,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_02() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnFindEligibleCases).click();
+     cy.contains("Find Eligible Cases").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickOnSearchBtn).click();
     cy.wait(5000);
@@ -40,9 +40,9 @@ class SettlementPage {
 
   SettlementTestPage_03() {
 
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnFindEligibleCases).click();
+     cy.contains("Find Eligible Cases").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickOnSearchBtn).click();
     cy.wait(5000);
@@ -63,9 +63,9 @@ class SettlementPage {
 
   SettlementTestPage_04() {
 
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnFindEligibleCases).click();
+     cy.contains("Find Eligible Cases").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickOnSearchBtn).click();
     cy.wait(5000);
@@ -78,9 +78,9 @@ class SettlementPage {
 
   SettlementTestPage_05() {
 
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnFindEligibleCases).click();
+     cy.contains("Find Eligible Cases").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickOnSearchBtn).click();
     cy.wait(5000);
@@ -91,9 +91,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_06() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnFindEligibleCases).click();
+     cy.contains("Find Eligible Cases").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickOnSearchBtn).click();
     cy.wait(5000);
@@ -106,9 +106,9 @@ class SettlementPage {
 
   SettlementTestPage_07() {
 
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnFindEligibleCases).click();
+     cy.contains("Find Eligible Cases").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.SelectFlagedAsEligible).should('contain', 'No');
     cy.wait(5000);
@@ -122,9 +122,9 @@ class SettlementPage {
 
   SettlementTestPage_08() {
 
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnFindEligibleCases).click();
+     cy.contains("Find Eligible Cases").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.TypeCustomerID).type(1234);
     cy.wait(1000);
@@ -136,9 +136,9 @@ class SettlementPage {
 
   SettlementTestPage_09() {
 
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnFindEligibleCases).click();
+     cy.contains("Find Eligible Cases").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.TypeCustomerID).type(1234);
     cy.wait(1000);
@@ -152,9 +152,9 @@ class SettlementPage {
 
   SettlementTestPage_10() {
 
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnFindEligibleCases).click();
+     cy.contains("Find Eligible Cases").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickOnSearchBtn).click();
     cy.wait(5000);
@@ -172,9 +172,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_11() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnFindEligibleCases).click();
+     cy.contains("Find Eligible Cases").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.SelectFlagedAsEligible).select("--Select--");
     cy.wait(2000);
@@ -182,13 +182,23 @@ class SettlementPage {
     cy.wait(2000);
   }
 
-  SettlementTestPage_12() { }
+  SettlementTestPage_12() {
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
+    cy.wait(1000);
+     cy.contains("Find Eligible Cases").scrollIntoView().should("be.visible").click();
+    cy.wait(1000);
+    cy.get(this.locators.SelectFlagedAsEligible).select("--Select--");
+    cy.wait(2000);
+    cy.get(this.locators.ClickOnSearchBtn).click({ force: true });
+    cy.wait(2000);
+
+   }
 
   SettlementTestPage_13() {
 
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnFindEligibleCases).click();
+     cy.contains("Find Eligible Cases").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickOnSearchBtn).click();
     cy.wait(5000);
@@ -207,9 +217,9 @@ class SettlementPage {
 
   SettlementTestPage_14() {
 
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnFindEligibleCases).click();
+     cy.contains("Find Eligible Cases").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickOnSearchBtn).click();
     cy.wait(5000);
@@ -228,9 +238,9 @@ class SettlementPage {
 
   SettlementTestPage_15() {
 
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnFindEligibleCases).click();
+     cy.contains("Find Eligible Cases").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.TypeCurrentDPDFrom).type(1);
     cy.wait(1000);
@@ -249,9 +259,9 @@ class SettlementPage {
 
   SettlementTestPage_16() {
 
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnFindEligibleCases).click();
+     cy.contains("Find Eligible Cases").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     // cy.get(this.locators.TypeCurrentDPDFrom).type(1);
     // cy.wait(1000);
@@ -267,9 +277,9 @@ class SettlementPage {
 
   SettlementTestPage_17() {
 
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnFindEligibleCases).click();
+     cy.contains("Find Eligible Cases").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.TypeCurrentDPDFrom).type(1);
     cy.wait(1000);
@@ -284,15 +294,15 @@ class SettlementPage {
   }
 
   SettlementTestPage_18() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnFindEligibleCases).click();
+     cy.contains("Find Eligible Cases").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.TypeCurrentDPDFrom).type(1);
     cy.wait(1000);
     cy.get(this.locators.TypeCurrentDPDTo).type(100);
     cy.wait(1000);
-    cy.get(this.locators.ClickOnFindEligibleCases).click();
+     cy.contains("Find Eligible Cases").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.SelectFlagedAsEligible).select("Yes");
     cy.wait(5000);
@@ -303,9 +313,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_19() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -363,17 +373,17 @@ class SettlementPage {
   }
 
   SettlementTestPage_20() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
   }
   SettlementTestPage_21() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -431,9 +441,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_22() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -494,9 +504,9 @@ class SettlementPage {
 
   SettlementTestPage_23() {
 
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -554,9 +564,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_24() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -566,9 +576,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_25() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -633,9 +643,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_26() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -735,9 +745,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_27() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -839,9 +849,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_28() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -934,9 +944,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_29() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -1047,9 +1057,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_30() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -1122,9 +1132,9 @@ class SettlementPage {
 
 
   SettlementTestPage_31() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -1189,9 +1199,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_32() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -1258,9 +1268,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_33() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -1329,9 +1339,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_34() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -1396,9 +1406,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_35() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -1463,9 +1473,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_36() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -1534,9 +1544,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_37() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -1611,9 +1621,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_38() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -1688,9 +1698,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_39() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -1786,9 +1796,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_40() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -1873,9 +1883,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_41() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -1963,9 +1973,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_42() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -2052,9 +2062,9 @@ class SettlementPage {
 
 
   SettlementTestPage_43() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -2147,9 +2157,9 @@ class SettlementPage {
   }
 
   SettlementTestPage_44() {
-    cy.get(this.locators.ClickOnSettlement).click();
+      cy.contains("Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.requestSettlement).click();
+     cy.contains("Request Settlement").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.clickOnSearch).click();
     cy.wait(1000);
@@ -2240,7 +2250,7 @@ class SettlementPage {
       cy.writeFile('cypress/fixtures/requestId.json', { requestId: id });
     });
     cy.wait(4000);
-    cy.get(this.locators.myRequest).click();
+      cy.contains("My Requests").scrollIntoView().should("be.visible").click();
     cy.wait(4000);
     cy.get(this.locators.underevaluation).click();
     cy.wait(1000);
@@ -2257,9 +2267,9 @@ class SettlementPage {
   SettlementTestPage_45() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myActionQueue).click();
+        cy.contains("My Action Queue").scrollIntoView().should("be.visible").click();
       cy.wait(4000);
       cy.get(this.locators.clickOnUnderEvaluation).click();
       cy.wait(1000);
@@ -2296,9 +2306,9 @@ class SettlementPage {
   SettlementTestPage_46() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myActionQueue).click();
+        cy.contains("My Action Queue").scrollIntoView().should("be.visible").click();
       cy.wait(4000);
       cy.get(this.locators.clickOnUnderEvaluation).click();
       cy.wait(1000);
@@ -2340,9 +2350,9 @@ class SettlementPage {
   SettlementTestPage_47() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myActionQueue).click();
+        cy.contains("My Action Queue").scrollIntoView().should("be.visible").click();
       cy.wait(4000);
       cy.get(this.locators.clickOnUnderEvaluation).click();
       cy.wait(1000);
@@ -2379,9 +2389,9 @@ class SettlementPage {
   SettlementTestPage_48() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myActionQueue).click();
+        cy.contains("My Action Queue").scrollIntoView().should("be.visible").click();
       cy.wait(4000);
       cy.get(this.locators.clickOnUnderEvaluation).click();
       cy.wait(1000);
@@ -2418,9 +2428,9 @@ class SettlementPage {
   SettlementTestPage_49() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myActionQueue).click();
+        cy.contains("My Action Queue").scrollIntoView().should("be.visible").click();
       cy.wait(4000);
       cy.get(this.locators.clickOnUnderEvaluation).click();
       cy.wait(1000);
@@ -2457,9 +2467,9 @@ class SettlementPage {
   SettlementTestPage_50() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myActionQueue).click();
+        cy.contains("My Action Queue").scrollIntoView().should("be.visible").click();
       cy.wait(4000);
       cy.get(this.locators.clickOnUnderEvaluation).click();
       cy.wait(1000);
@@ -2496,9 +2506,9 @@ class SettlementPage {
   SettlementTestPage_51() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myActionQueue).click();
+        cy.contains("My Action Queue").scrollIntoView().should("be.visible").click();
       cy.wait(4000);
       cy.get(this.locators.clickOnUnderEvaluation).click();
       cy.wait(1000);
@@ -2540,9 +2550,9 @@ class SettlementPage {
   SettlementTestPage_52() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myActionQueue).click();
+        cy.contains("My Action Queue").scrollIntoView().should("be.visible").click();
       cy.wait(4000);
       cy.get(this.locators.clickOnUnderEvaluation).click();
       cy.wait(1000);
@@ -2584,9 +2594,9 @@ class SettlementPage {
   SettlementTestPage_53() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myActionQueue).click();
+        cy.contains("My Action Queue").scrollIntoView().should("be.visible").click();
       cy.wait(4000);
       cy.get(this.locators.clickOnUnderEvaluation).click();
       cy.wait(1000);
@@ -2623,9 +2633,9 @@ class SettlementPage {
   SettlementTestPage_54() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myRequest).click();
+        cy.contains("My Requests").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.contains('Settlement').should('be.visible');
       cy.wait(1000);
@@ -2645,9 +2655,9 @@ class SettlementPage {
   SettlementTestPage_55() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myRequest).click();
+        cy.contains("My Requests").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.contains('Settlement').should('be.visible');
       cy.wait(1000);
@@ -2667,9 +2677,9 @@ class SettlementPage {
   SettlementTestPage_56() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myRequest).click();
+        cy.contains("My Requests").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.contains('Settlement').should('be.visible');
       cy.wait(1000);
@@ -2689,9 +2699,9 @@ class SettlementPage {
   SettlementTestPage_57() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myRequest).click();
+        cy.contains("My Requests").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.contains('Settlement').should('be.visible');
       cy.wait(1000);
@@ -2711,9 +2721,9 @@ class SettlementPage {
   SettlementTestPage_58() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myRequest).click();
+        cy.contains("My Requests").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(':nth-child(1) > .card-header > .info-icon > img').click();
       cy.wait(1000);
@@ -2730,9 +2740,9 @@ class SettlementPage {
   SettlementTestPage_59() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myRequest).click();
+        cy.contains("My Requests").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(':nth-child(1) > .card-header > .info-icon > img').click();
       cy.wait(1000);
@@ -2749,9 +2759,9 @@ class SettlementPage {
   SettlementTestPage_60() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myRequest).click();
+        cy.contains("My Requests").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(':nth-child(1) > .card-header > .info-icon > img').click();
       cy.wait(1000);
@@ -2764,9 +2774,9 @@ class SettlementPage {
   SettlementTestPage_61() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myRequest).click();
+        cy.contains("My Requests").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(':nth-child(1) > .card-header > .info-icon > img').click();
       cy.wait(1000);
@@ -2779,9 +2789,9 @@ class SettlementPage {
   SettlementTestPage_62() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myRequest).click();
+        cy.contains("My Requests").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(':nth-child(1) > .card-header > .info-icon > img').click();
       cy.wait(1000);
@@ -2794,9 +2804,9 @@ class SettlementPage {
   SettlementTestPage_63() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myRequest).click();
+        cy.contains("My Requests").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(':nth-child(1) > .card-header > .info-icon > img').click();
       cy.wait(1000);
@@ -2816,9 +2826,9 @@ class SettlementPage {
   SettlementTestPage_64() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.searchSettlement).click();
+        cy.contains("Search Settlements").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.applicationStatus).select('Customer Accepted Offer');
       cy.wait(1000);
@@ -2830,9 +2840,9 @@ class SettlementPage {
   SettlementTestPage_65() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.searchSettlement).click();
+        cy.contains("Search Settlements").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.applicationStatus).select('Customer Accepted Offer');
       cy.wait(1000);
@@ -2852,9 +2862,9 @@ class SettlementPage {
   SettlementTestPage_66() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.searchSettlement).click();
+        cy.contains("Search Settlements").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.applicationStatus).select('Customer Accepted Offer');
       cy.wait(1000);
@@ -2872,9 +2882,9 @@ class SettlementPage {
   SettlementTestPage_67() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.searchSettlement).click();
+        cy.contains("Search Settlements").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.applicationStatus).select('Customer Accepted Offer');
       cy.wait(1000);
@@ -2892,9 +2902,9 @@ class SettlementPage {
   SettlementTestPage_68() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.searchSettlement).click();
+        cy.contains("Search Settlements").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.applicationStatus).select('Customer Accepted Offer');
       cy.wait(1000);
@@ -2910,9 +2920,9 @@ class SettlementPage {
   SettlementTestPage_69() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myRequest).click();
+        cy.contains("My Requests").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
       cy.contains('Summary Of Open Settlements').should('be.visible');
       cy.wait(1000);
@@ -2926,9 +2936,9 @@ class SettlementPage {
   SettlementTestPage_70() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.searchSettlement).click();
+        cy.contains("Search Settlements").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.agingStatus).select('>10');
       cy.wait(1000);
@@ -2941,9 +2951,9 @@ class SettlementPage {
     SettlementTestPage_71() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myActionQueue).click();
+        cy.contains("My Action Queue").scrollIntoView().should("be.visible").click();
       cy.wait(4000);
       cy.get(this.locators.clickOnUnderEvaluation1).click();
       cy.wait(1000);
@@ -2980,9 +2990,9 @@ class SettlementPage {
     SettlementTestPage_72() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myActionQueue).click();
+        cy.contains("My Action Queue").scrollIntoView().should("be.visible").click();
       cy.wait(4000);
       cy.get(this.locators.clickOnUnderEvaluation1).click();
       cy.wait(1000);
@@ -3019,9 +3029,9 @@ class SettlementPage {
     SettlementTestPage_73() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myActionQueue).click();
+        cy.contains("My Action Queue").scrollIntoView().should("be.visible").click();
       cy.wait(4000);
       cy.get(this.locators.clickOnUnderEvaluation1).click();
       cy.wait(1000);
@@ -3058,9 +3068,9 @@ class SettlementPage {
    SettlementTestPage_74() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myActionQueue).click();
+        cy.contains("My Action Queue").scrollIntoView().should("be.visible").click();
       cy.wait(4000);
       cy.get(this.locators.clickOnUnderEvaluation1).click();
       cy.wait(1000);
@@ -3097,9 +3107,9 @@ class SettlementPage {
   SettlementTestPage_75() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myActionQueue).click();
+        cy.contains("My Action Queue").scrollIntoView().should("be.visible").click();
       cy.wait(4000);
       cy.get(this.locators.clickOnUnderEvaluation).click();
       cy.wait(1000);
@@ -3134,9 +3144,9 @@ class SettlementPage {
     SettlementTestPage_76() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myRequest).click();
+        cy.contains("My Requests").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.customerAcceptedOffer).click();
       cy.wait(2000);
@@ -3156,9 +3166,9 @@ class SettlementPage {
     SettlementTestPage_77() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myRequest).click();
+        cy.contains("My Requests").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.customerAcceptedOffer).click();
       cy.wait(2000);
@@ -3182,9 +3192,9 @@ class SettlementPage {
    SettlementTestPage_78() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.searchSettlement).click();
+        cy.contains("Search Settlements").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.applicationStatus).select('Under Evaluation');
       cy.wait(1000);
@@ -3198,9 +3208,9 @@ class SettlementPage {
      SettlementTestPage_79() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.searchSettlement).click();
+        cy.contains("Search Settlements").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.applicationStatus).select('Pending Customer Acceptance');
       cy.wait(1000);
@@ -3214,9 +3224,9 @@ class SettlementPage {
      SettlementTestPage_80() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.searchSettlement).click();
+        cy.contains("Search Settlements").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.applicationStatus).select('Request Rejected');
       cy.wait(1000);
@@ -3230,9 +3240,9 @@ class SettlementPage {
   SettlementTestPage_81() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.searchSettlement).click();
+        cy.contains("Search Settlements").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.applicationStatus).select('Customer Accepted Offer');
       cy.wait(1000);
@@ -3247,9 +3257,9 @@ class SettlementPage {
    SettlementTestPage_82() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myRequest).click();
+        cy.contains("My Requests").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.dayrangeonetofive).click();
       cy.wait(1000);
@@ -3262,9 +3272,9 @@ class SettlementPage {
    SettlementTestPage_83() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myRequest).click();
+        cy.contains("My Requests").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.dayrangesixtoten).click();
       cy.wait(1000);
@@ -3277,9 +3287,9 @@ class SettlementPage {
    SettlementTestPage_84() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myRequest).click();
+        cy.contains("My Requests").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.dayrangemorethanten).click();
       cy.wait(1000);
@@ -3292,9 +3302,9 @@ class SettlementPage {
    SettlementTestPage_85() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myRequest).click();
+        cy.contains("My Requests").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.lastactiondayrangeonetofive).click();
       cy.wait(1000);
@@ -3307,9 +3317,9 @@ class SettlementPage {
    SettlementTestPage_86() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myRequest).click();
+        cy.contains("My Requests").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.lastactiondayrangesixtoten).click();
       cy.wait(1000);
@@ -3321,9 +3331,9 @@ class SettlementPage {
    SettlementTestPage_87() {
     cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myRequest).click();
+        cy.contains("My Requests").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(':nth-child(1) > .card-header > .info-icon > img').click();
       cy.wait(1000);
@@ -3336,9 +3346,9 @@ class SettlementPage {
    SettlementTestPage_88() {
       cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myRequest).click();
+        cy.contains("My Requests").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.lastactiondayrangemorethanten).click();
       cy.wait(1000);
@@ -3350,9 +3360,9 @@ class SettlementPage {
    SettlementTestPage_89() {
        cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myRequest).click();
+        cy.contains("My Requests").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.requestRejected).click();
       cy.wait(1000);
@@ -3365,9 +3375,9 @@ class SettlementPage {
    SettlementTestPage_90() {
       cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myRequest).click();
+        cy.contains("My Requests").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.pendingCustomerAcceptance).click();
       cy.wait(1000);
@@ -3380,9 +3390,9 @@ class SettlementPage {
    SettlementTestPage_91() {
       cy.readFile('cypress/fixtures/requestId.json').then((data) => {
       const requestId = data.requestId;
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.myRequest).click();
+        cy.contains("My Requests").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.nderNuegotiation).click();
       cy.wait(1000);
@@ -3393,9 +3403,9 @@ class SettlementPage {
   }
 
    SettlementTestPage_92() {
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.searchSettlement).click();
+        cy.contains("Search Settlements").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
       cy.get(this.locators.clickOnSearch).click();
       cy.wait(1000);
@@ -3404,9 +3414,9 @@ class SettlementPage {
   }
 
    SettlementTestPage_93() {
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.searchSettlement).click();
+        cy.contains("Search Settlements").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
       cy.get(this.locators.clickOnSearch).click();
       cy.wait(1000);
@@ -3421,9 +3431,9 @@ class SettlementPage {
   }
 
    SettlementTestPage_94() {
-       cy.get(this.locators.ClickOnSettlement).click();
+         cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.searchSettlement).click();
+        cy.contains("Search Settlements").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
       cy.get(this.locators.clickOnSearch).click();
       cy.wait(1000);
@@ -3436,9 +3446,9 @@ class SettlementPage {
   }
 
    SettlementTestPage_95() {
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.searchSettlement).click();
+        cy.contains("Search Settlements").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
       cy.get(this.locators.clickOnSearch).click();
       cy.wait(1000);
@@ -3451,9 +3461,9 @@ class SettlementPage {
   }
 
    SettlementTestPage_96() {
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.searchSettlement).click();
+        cy.contains("Search Settlements").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
       cy.get(this.locators.clickOnSearch).click();
       cy.wait(1000);
@@ -3466,9 +3476,9 @@ class SettlementPage {
   }
 
    SettlementTestPage_97() {
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.searchSettlement).click();
+        cy.contains("Search Settlements").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
       cy.get(this.locators.clickOnSearch).click();
       cy.wait(1000);
@@ -3481,9 +3491,9 @@ class SettlementPage {
   }
 
    SettlementTestPage_98() {
-       cy.get(this.locators.ClickOnSettlement).click();
+         cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.searchSettlement).click();
+        cy.contains("Search Settlements").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
       cy.get(this.locators.clickOnSearch).click();
       cy.wait(1000);
@@ -3497,9 +3507,9 @@ class SettlementPage {
   }
 
    SettlementTestPage_99() {
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.searchSettlement).click();
+        cy.contains("Search Settlements").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
       cy.get(this.locators.clickOnSearch).click();
       cy.wait(1000);
@@ -3517,9 +3527,9 @@ class SettlementPage {
   }
 
    SettlementTestPage_100() {
-      cy.get(this.locators.ClickOnSettlement).click();
+        cy.contains("Settlement").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
-      cy.get(this.locators.searchSettlement).click();
+        cy.contains("Search Settlements").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
       cy.get(this.locators.clickOnSearch).click();
       cy.wait(1000);

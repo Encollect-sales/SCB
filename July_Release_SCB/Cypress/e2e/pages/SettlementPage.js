@@ -9,11 +9,11 @@ class SettlementPage {
 
 SettlementTestPage_001(){
 
-  cy.get(this.locators.ClickOn_Settlement).click();
+ cy.contains("Settlement").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
-  cy.get(this.locators.ClickOn_MyRequest).click();
+ cy.contains("My Requests").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
-  cy.contains("My Requests").should("be.visible");
+cy.get('.page-title').contains("My Requests").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
    cy.get(this.locators.CLick_to_OpenSettlement).click();
   cy.wait(2000);
@@ -28,11 +28,11 @@ SettlementTestPage_001(){
 
 SettlementTestPage_002(){
 
-    cy.get(this.locators.ClickOn_Settlement).click();
+   cy.contains("Settlement").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
-  cy.get(this.locators.ClickOn_MyRequest).click();
+ cy.contains("My Requests").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
-  cy.contains("My Requests").should("be.visible");
+cy.get('.page-title').contains("My Requests").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
    cy.get(this.locators.CLick_to_OpenSettlement).click();
   cy.wait(2000);
@@ -53,11 +53,11 @@ SettlementTestPage_002(){
 
 SettlementTestPage_003(){
 
-   cy.get(this.locators.ClickOn_Settlement).click();
+  cy.contains("Settlement").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
-  cy.get(this.locators.ClickOn_MyRequest).click();
+ cy.contains("My Requests").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
-  cy.contains("My Requests").should("be.visible");
+cy.get('.page-title').contains("My Requests").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
    cy.get(this.locators.CLick_to_OpenSettlement).click();
   cy.wait(2000);
@@ -98,11 +98,11 @@ cy.contains('Customer Name:')
 
 SettlementTestPage_004(){
 
-   cy.get(this.locators.ClickOn_Settlement).click();
+  cy.contains("Settlement").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
-  cy.get(this.locators.ClickOn_MyRequest).click();
+ cy.contains("My Requests").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
-  cy.contains("My Requests").should("be.visible");
+cy.get('.page-title').contains("My Requests").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
    cy.get(this.locators.CLick_to_OpenSettlement).click();
   cy.wait(2000);
@@ -127,7 +127,7 @@ cy.get('app-currently-in-queue > .overflow-auto > .table > tbody > .ng-star-inse
 
 SettlementTestPage_005(){
 
-  cy.get(this.locators.ClickOn_Settlement).click();
+ cy.contains("Settlement").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
   cy.get(this.locators.ClickOn_MyAction_queue).click();
   cy.wait(2000);

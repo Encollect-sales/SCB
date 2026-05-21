@@ -46,7 +46,7 @@ describe('Trails - NextActionCode with Alphanumeric Value', () => {
             const data = {
                   
                 'A2':'18765',
-                'B2': '10031',
+                'B2': '67609',
                 'C2': 'yes',
                 'D2': 'PTP',
                 'E2': 'PTP',

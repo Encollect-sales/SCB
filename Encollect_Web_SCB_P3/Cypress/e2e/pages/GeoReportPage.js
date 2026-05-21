@@ -8,9 +8,9 @@ class DbsToScb {
   }
 
 GeoReportTestPage_1370(){
-cy.get(this.locators.ClickGeoReport).click();
+cy.contains("Geo Report").scrollIntoView().should("be.visible").click();
 cy.wait(1000);
-cy.get(this.locators.ClickUTR).click({force: true});
+cy.contains("User Travel Report").scrollIntoView().should("be.visible").click();
 cy.wait(1000);
 cy.contains('User Travel Report').should('be.visible')
 cy.wait(800);
@@ -19,9 +19,9 @@ cy.wait(800);
 
 
   GeoReportTestPage_1371(){
-    cy.get(this.locators.ClickGeoReport).click();
+    cy.contains("Geo Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickUTR).click({force: true});
+    cy.contains("User Travel Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.SelectAgencyname).select('agency 1',{force: true});
     cy.wait(800);
@@ -37,9 +37,9 @@ cy.wait(800);
 
   }
   GeoReportTestPage_1372(){
-    cy.get(this.locators.ClickGeoReport).click();
+    cy.contains("Geo Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickUTR).click({force: true});
+    cy.contains("User Travel Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.SelectAgencyname).select('agency 1',{force: true});
     cy.wait(800);
@@ -56,9 +56,9 @@ cy.wait(800);
   }
   GeoReportTestPage_1374(){
 
-    cy.get(this.locators.ClickGeoReport).click();
+    cy.contains("Geo Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickUTR).click({force: true});
+    cy.contains("User Travel Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.SelectAgencyname).select('agency 1',{force: true});
     cy.wait(800);
@@ -74,9 +74,9 @@ cy.wait(800);
 
   }
   GeoReportTestPage_1376(){
-     cy.get(this.locators.ClickGeoReport).click();
+     cy.contains("Geo Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickUTR).click({force: true});
+    cy.contains("User Travel Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.SelectAgencyname).select('agency 1',{force: true});
     cy.wait(800);

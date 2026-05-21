@@ -11,22 +11,22 @@ class PermissionPage {
   }
 
   PermissionTestPage_01() {
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOndefinePermissionScheme).click();
+  cy.contains("Define Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.contains("Define Permission Schemes").should("be.visible");
     cy.wait(2000);
   }
 
   PermissionTestPage_02() {
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOndefinePermissionScheme).click();
+  cy.contains("Define Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.contains("Permission Scheme Name").should("be.visible");
     cy.wait(2000);
@@ -41,11 +41,11 @@ class PermissionPage {
   PermissionTestPage_03() {
     const schemeName = faker.word.noun(); // unique saheme names
 
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOndefinePermissionScheme).click();
+  cy.contains("Define Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.TypeSchemeName).type(schemeName);
     cy.wait(1000);
@@ -60,11 +60,11 @@ class PermissionPage {
   PermissionTestPage_04() {
     const schemeName = faker.word.noun(); // unique scheme names
 
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOndefinePermissionScheme).click();
+  cy.contains("Define Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.TypeSchemeName).type(schemeName);
     cy.wait(1000);
@@ -81,11 +81,11 @@ class PermissionPage {
   }
 
   PermissionTestPage_05() {
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOndefinePermissionScheme).click();
+  cy.contains("Define Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnProceed).click();
     cy.wait(2000);
@@ -98,11 +98,11 @@ class PermissionPage {
   PermissionTestPage_06() {
     const schemeName = faker.word.noun(); // unique scheme names
 
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOndefinePermissionScheme).click();
+  cy.contains("Define Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.TypeSchemeName).type(schemeName);
     cy.wait(1000);
@@ -121,11 +121,11 @@ class PermissionPage {
   PermissionTestPage_07() {
     const schemeName = faker.word.noun(); // unique saheme names
 
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOndefinePermissionScheme).click();
+  cy.contains("Define Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.TypeSchemeName).type(schemeName);
     cy.wait(1000);
@@ -142,11 +142,11 @@ class PermissionPage {
   }
 
   PermissionTestPage_08() {
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOndefinePermissionScheme).click();
+  cy.contains("Define Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.TypeSchemeName).type("AAAA");
     cy.wait(1000);
@@ -165,11 +165,11 @@ class PermissionPage {
   PermissionTestPage_09() {
     const schemeName = faker.word.noun(); // unique saheme names
 
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOndefinePermissionScheme).click();
+  cy.contains("Define Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.TypeSchemeName).type(schemeName);
     cy.wait(1000);
@@ -195,11 +195,11 @@ class PermissionPage {
   PermissionTestPage_10() {
     const schemeName = faker.word.noun(); // unique saheme names
 
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOndefinePermissionScheme).click();
+  cy.contains("Define Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.TypeSchemeName).type(schemeName);
     cy.wait(1000);
@@ -220,11 +220,11 @@ class PermissionPage {
   PermissionTestPage_11() {
     const schemeName = faker.word.noun(); // unique saheme names
 
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOndefinePermissionScheme).click();
+  cy.contains("Define Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.TypeSchemeName).type(schemeName);
     cy.wait(1000);
@@ -245,11 +245,11 @@ class PermissionPage {
   }
 
   PermissionTestPage_12() {
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOndefinePermissionScheme).click();
+  cy.contains("Define Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickOn_create_existing_Permissionscheme).click();
     cy.wait(2000);
@@ -264,13 +264,13 @@ class PermissionPage {
   PermissionTestPage_13() {
     const schemeName = faker.word.noun(); // unique scheme names
 
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
 
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
 
-    cy.get(this.locators.ClickOndefinePermissionScheme).click();
+  cy.contains("Define Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
 
     cy.get(this.locators.ClickOn_create_existing_Permissionscheme).click();
@@ -297,13 +297,13 @@ class PermissionPage {
   }
 
   PermissionTestPage_14() {
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
 
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
 
-    cy.get(this.locators.ClickOndefinePermissionScheme).click();
+  cy.contains("Define Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
 
     cy.get(this.locators.ClickOn_create_existing_Permissionscheme).click();
@@ -332,13 +332,13 @@ class PermissionPage {
   PermissionTestPage_15() {
     const schemeName = faker.word.noun(); // unique scheme names
 
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
 
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
 
-    cy.get(this.locators.ClickOndefinePermissionScheme).click();
+  cy.contains("Define Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
 
     cy.get(this.locators.ClickOn_create_existing_Permissionscheme).click();
@@ -378,13 +378,13 @@ class PermissionPage {
   PermissionTestPage_16() {
     const schemeName = faker.word.noun(); // unique scheme names
 
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
 
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
 
-    cy.get(this.locators.ClickOndefinePermissionScheme).click();
+  cy.contains("Define Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
 
     cy.get(this.locators.ClickOn_create_existing_Permissionscheme).click();
@@ -422,13 +422,13 @@ class PermissionPage {
   PermissionTestPage_17() {
     const schemeName = faker.word.noun(); // unique scheme names
 
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
 
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
 
-    cy.get(this.locators.ClickOndefinePermissionScheme).click();
+  cy.contains("Define Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
 
     cy.get(this.locators.ClickOn_create_existing_Permissionscheme).click();
@@ -464,13 +464,13 @@ class PermissionPage {
   }
 
   PermissionTestPage_18() {
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
 
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
 
-    cy.get(this.locators.ClickOndefinePermissionScheme).click();
+  cy.contains("Define Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
 
     cy.get(this.locators.ClickOn_create_existing_Permissionscheme).click();
@@ -503,9 +503,9 @@ class PermissionPage {
 
   PermissionTestPage_19() {
 
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.contains("Define Permission Schemes").should("be.visible");
     cy.wait(2000);
@@ -514,9 +514,9 @@ class PermissionPage {
 
   PermissionTestPage_20() {
 
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.contains("Search Permission Schemes").should("be.visible");
     cy.wait(2000);
@@ -525,11 +525,11 @@ class PermissionPage {
 
   PermissionTestPage_21(){
 
-     cy.get(this.locators.ClickOnSystemSetting).click();
+      cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.Click_SearchPermissionScheme).click();
+    cy.contains("Search Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
      cy.contains("Permission Scheme Name").should("be.visible");
     cy.wait(2000);
@@ -542,11 +542,11 @@ class PermissionPage {
 
   PermissionTestPage_22(){
 
-     cy.get(this.locators.ClickOnSystemSetting).click();
+      cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.Click_SearchPermissionScheme).click();
+    cy.contains("Search Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
      cy.contains("Search Permission Schemes").should("be.visible");
     cy.wait(2000);
@@ -555,11 +555,11 @@ class PermissionPage {
   }
   PermissionTestPage_23(){
 
-     cy.get(this.locators.ClickOnSystemSetting).click();
+      cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.Click_SearchPermissionScheme).click();
+    cy.contains("Search Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickON_plus).click();
     cy.wait(3000);
@@ -570,11 +570,11 @@ class PermissionPage {
 
   PermissionTestPage_24(){
 
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.Click_SearchPermissionScheme).click();
+    cy.contains("Search Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickOn_Search).type("AAAA");
     cy.wait(2000);
@@ -583,11 +583,11 @@ class PermissionPage {
 
   PermissionTestPage_25(){
 
-   cy.get(this.locators.ClickOnSystemSetting).click();
+    cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.Click_SearchPermissionScheme).click();
+    cy.contains("Search Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickOn_Search).type("AAAA");
     cy.wait(2000);
@@ -598,11 +598,11 @@ class PermissionPage {
 
   PermissionTestPage_26(){
 
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.Click_SearchPermissionScheme).click();
+    cy.contains("Search Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickOn_Search).type("AAAA");
     cy.wait(2000);
@@ -615,11 +615,11 @@ class PermissionPage {
 
   PermissionTestPage_27(){
 
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.Click_SearchPermissionScheme).click();
+    cy.contains("Search Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get('select[name="itemsPerPage"]').select('50');
     cy.wait(5000);
@@ -628,11 +628,11 @@ class PermissionPage {
 
   PermissionTestPage_28(){
 
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.Click_SearchPermissionScheme).click();
+    cy.contains("Search Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
      cy.get(this.locators.ClickonNextPage).click();
     cy.wait(1000);
@@ -647,11 +647,11 @@ class PermissionPage {
 
   PermissionTestPage_29(){
 
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.Click_SearchPermissionScheme).click();
+    cy.contains("Search Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickFull_Next).click();
     cy.wait(2000);
@@ -662,11 +662,11 @@ class PermissionPage {
 
   PermissionTestPage_30(){
 
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.Click_SearchPermissionScheme).click();
+    cy.contains("Search Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
@@ -675,11 +675,11 @@ class PermissionPage {
 
   PermissionTestPage_31(){
 
-   cy.get(this.locators.ClickOnSystemSetting).click();
+    cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.Click_SearchPermissionScheme).click();
+    cy.contains("Search Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
        cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
@@ -695,11 +695,11 @@ class PermissionPage {
   PermissionTestPage_32(){
 
     
-   cy.get(this.locators.ClickOnSystemSetting).click();
+    cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.Click_SearchPermissionScheme).click();
+    cy.contains("Search Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
        cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
@@ -712,11 +712,11 @@ class PermissionPage {
 
   PermissionTestPage_33(){
 
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.Click_SearchPermissionScheme).click();
+    cy.contains("Search Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
        cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
@@ -741,11 +741,11 @@ class PermissionPage {
 
   PermissionTestPage_34(){
 
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.Click_SearchPermissionScheme).click();
+    cy.contains("Search Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
        cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
@@ -762,11 +762,11 @@ class PermissionPage {
 
   PermissionTestPage_35(){
 
-     cy.get(this.locators.ClickOnSystemSetting).click();
+      cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.Click_SearchPermissionScheme).click();
+    cy.contains("Search Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
        cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
@@ -779,11 +779,11 @@ class PermissionPage {
 
   PermissionTestPage_36(){
 
-   cy.get(this.locators.ClickOnSystemSetting).click();
+    cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.Click_SearchPermissionScheme).click();
+    cy.contains("Search Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
        cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
@@ -805,11 +805,11 @@ class PermissionPage {
 
   PermissionTestPage_37(){
 
-   cy.get(this.locators.ClickOnSystemSetting).click();
+    cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.Click_SearchPermissionScheme).click();
+    cy.contains("Search Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
        cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
@@ -822,11 +822,11 @@ class PermissionPage {
 
   PermissionTestPage_38(){
 
-   cy.get(this.locators.ClickOnSystemSetting).click();
+    cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.Click_SearchPermissionScheme).click();
+    cy.contains("Search Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
        cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
@@ -843,11 +843,11 @@ class PermissionPage {
 
   PermissionTestPage_39(){
 
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.Click_SearchPermissionScheme).click();
+    cy.contains("Search Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
        cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
@@ -862,11 +862,11 @@ class PermissionPage {
 
   PermissionTestPage_40(){
 
-   cy.get(this.locators.ClickOnSystemSetting).click();
+    cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.Click_SearchPermissionScheme).click();
+    cy.contains("Search Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
        cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
@@ -881,11 +881,11 @@ class PermissionPage {
 
    PermissionTestPage_41(){
 
-   cy.get(this.locators.ClickOnSystemSetting).click();
+    cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.Click_SearchPermissionScheme).click();
+    cy.contains("Search Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
        cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
@@ -902,11 +902,11 @@ class PermissionPage {
 
    PermissionTestPage_42(){
 
-   cy.get(this.locators.ClickOnSystemSetting).click();
+    cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.Click_SearchPermissionScheme).click();
+    cy.contains("Search Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
        cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
@@ -927,11 +927,11 @@ class PermissionPage {
 
   PermissionTestPage_43(){
 
-   cy.get(this.locators.ClickOnSystemSetting).click();
+    cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.Click_SearchPermissionScheme).click();
+    cy.contains("Search Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
        cy.get(':nth-child(1) > .actions > .d-flex > .action-icon-button').click({force: true});
     cy.wait(1000);
@@ -952,11 +952,11 @@ class PermissionPage {
 
  PermissionTestPage_44(){
 
-   cy.get(this.locators.ClickOnSystemSetting).click();
+    cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.Click_SearchPermissionScheme).click();
+    cy.contains("Search Permission Schemes").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
      cy.get(this.locators.ClickOn_Search).type("AAAA");
     cy.wait(2000);
@@ -992,24 +992,23 @@ class PermissionPage {
 
 PermissionTestPage_44() {
   
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOn_Assign_Permission).click();
+     cy.contains("Assign Permission Scheme to Designation").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-     cy.contains("Assign Permission Scheme to Designation").should("be.visible");
-    cy.wait(2000);
-  
+     cy.get('.title').should('have.text', 'Assign Permission Scheme to Designation');
+   cy.wait(1000);
 }
 
 PermissionTestPage_45() {
   
-    cy.get(this.locators.ClickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOn_Assign_Permission).click();
+     cy.contains("Assign Permission Scheme to Designation").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.Type_Designation_Search).type("Agent");
     cy.wait(2000);
@@ -1020,11 +1019,11 @@ PermissionTestPage_45() {
 
 PermissionTestPage_46() {
   
-  cy.get(this.locators.ClickOnSystemSetting).click();
+   cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOn_Assign_Permission).click();
+     cy.contains("Assign Permission Scheme to Designation").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Department").should("be.visible");
     cy.wait(2000);
@@ -1037,11 +1036,11 @@ PermissionTestPage_46() {
 
 PermissionTestPage_47() {
   
-   cy.get(this.locators.ClickOnSystemSetting).click();
+    cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOn_Assign_Permission).click();
+     cy.contains("Assign Permission Scheme to Designation").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(3) > :nth-child(3) > .d-flex > .me-2').click({force: true });
     cy.wait(2000);
@@ -1051,11 +1050,11 @@ PermissionTestPage_47() {
 
 PermissionTestPage_48() {
   
-  cy.get(this.locators.ClickOnSystemSetting).click();
+   cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOn_Assign_Permission).click();
+     cy.contains("Assign Permission Scheme to Designation").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(3) > :nth-child(3) > .d-flex > .me-2').click({force: true });
     cy.wait(2000);
@@ -1080,11 +1079,11 @@ cy.wait(2000);
 
 PermissionTestPage_49() {
   
-  cy.get(this.locators.ClickOnSystemSetting).click();
+   cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOn_Assign_Permission).click();
+     cy.contains("Assign Permission Scheme to Designation").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(3) > :nth-child(3) > .d-flex > .me-2').click({force: true });
     cy.wait(2000);
@@ -1106,11 +1105,11 @@ cy.get('.ng-dropdown-panel .ng-option')
 
 PermissionTestPage_50() {
   
-   cy.get(this.locators.ClickOnSystemSetting).click();
+    cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOn_Assign_Permission).click();
+     cy.contains("Assign Permission Scheme to Designation").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
 
     const expectedOptions = ['All', 'Assigned', 'Unassigned'];
@@ -1130,11 +1129,11 @@ cy.get('select.form-select')
 PermissionTestPage_51() {
   
   
-   cy.get(this.locators.ClickOnSystemSetting).click();
+    cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOn_Assign_Permission).click();
+     cy.contains("Assign Permission Scheme to Designation").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('select.form-select').eq(0).select(1);
     cy.wait(2000);
@@ -1143,11 +1142,11 @@ PermissionTestPage_51() {
 
 PermissionTestPage_52() {
   
-   cy.get(this.locators.ClickOnSystemSetting).click();
+    cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOn_Assign_Permission).click();
+     cy.contains("Assign Permission Scheme to Designation").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('select.form-select').eq(0).select(2);
     cy.wait(2000);
@@ -1156,11 +1155,11 @@ PermissionTestPage_52() {
 
 PermissionTestPage_53() {
   
-  cy.get(this.locators.ClickOnSystemSetting).click();
+   cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOn_Assign_Permission).click();
+     cy.contains("Assign Permission Scheme to Designation").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('select.form-select').eq(0).select(2);
     cy.wait(2000);
@@ -1173,11 +1172,11 @@ PermissionTestPage_53() {
 
 PermissionTestPage_54() {
   
-  cy.get(this.locators.ClickOnSystemSetting).click();
+   cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOn_Assign_Permission).click();
+     cy.contains("Assign Permission Scheme to Designation").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('select.form-select').eq(0).select(2);
     cy.wait(2000);
@@ -1204,11 +1203,11 @@ cy.wait(2000);
 
 PermissionTestPage_55() {
   
-  cy.get(this.locators.ClickOnSystemSetting).click();
+   cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOn_Assign_Permission).click();
+     cy.contains("Assign Permission Scheme to Designation").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
      cy.get('select[name="itemsPerPage"]').select('50');
     cy.wait(2000);
@@ -1218,11 +1217,11 @@ PermissionTestPage_55() {
 
 PermissionTestPage_56() {
   
-  cy.get(this.locators.ClickOnSystemSetting).click();
+   cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnPermissions).click();
+   cy.contains("Permissions").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOn_Assign_Permission).click();
+     cy.contains("Assign Permission Scheme to Designation").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
      cy.get(this.locators.ClickonNextPage).click();
     cy.wait(1000);

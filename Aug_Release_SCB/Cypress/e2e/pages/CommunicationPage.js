@@ -10,7 +10,8 @@ class CommunicationPage {
 
   communicationModule() {
     cy.wait(2000);
-    cy.get(this.locators.clickoncommunication).click();
+    cy.contains("Communication").scrollIntoView().should("be.visible").click();
+     cy.wait(1000);
   }
 
   dashboardModule() {
@@ -23,7 +24,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -49,7 +50,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -77,7 +78,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -115,7 +116,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 5 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -141,7 +142,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -166,7 +167,7 @@ class CommunicationPage {
     const randomname = "Template_" + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = "Template_" + Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -223,7 +224,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -262,7 +263,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -300,7 +301,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("Letter");
     cy.wait(1000);
@@ -320,7 +321,7 @@ class CommunicationPage {
 
 
   Communication165() {
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.searchcommunicationtemplate).click();
     cy.wait(1000);
@@ -336,7 +337,7 @@ class CommunicationPage {
 
 
   Communication169() {
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.searchcommunicationtemplate).click();
     cy.wait(1000);
@@ -351,7 +352,7 @@ class CommunicationPage {
   }
 
   Communication175() {
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.createcommunicationtemplate).click();
     cy.wait(1000);
@@ -373,7 +374,7 @@ class CommunicationPage {
   }
 
   Communication176() {
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.createcommunicationtemplate).click();
     cy.wait(1000);
@@ -441,7 +442,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("Letter");
     cy.wait(1000);
@@ -475,7 +476,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 4 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -531,7 +532,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -583,7 +584,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -635,7 +636,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -690,7 +691,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -744,7 +745,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -798,7 +799,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -850,7 +851,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -902,7 +903,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -954,7 +955,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -1010,7 +1011,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -1068,7 +1069,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -1124,7 +1125,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -1178,7 +1179,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -1230,7 +1231,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -1282,7 +1283,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -1338,7 +1339,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -1394,7 +1395,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -1450,7 +1451,7 @@ class CommunicationPage {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -1501,7 +1502,7 @@ cy.wait(1000);
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -1550,7 +1551,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -1599,7 +1600,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -1651,7 +1652,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -1702,7 +1703,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -1754,7 +1755,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("Letter");
     cy.wait(1000);
@@ -1802,7 +1803,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("Letter");
     cy.wait(1000);
@@ -1850,7 +1851,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("Letter");
     cy.wait(1000);
@@ -1898,7 +1899,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("Letter");
     cy.wait(1000);
@@ -1950,7 +1951,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("Letter");
     cy.wait(1000);
@@ -2002,7 +2003,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("Letter");
     cy.wait(1000);
@@ -2054,7 +2055,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("Letter");
     cy.wait(1000);
@@ -2115,7 +2116,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("Letter");
     cy.wait(1000);
@@ -2176,7 +2177,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("Letter");
     cy.wait(1000);
@@ -2237,7 +2238,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("Letter");
     cy.wait(1000);
@@ -2302,7 +2303,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("Letter");
     cy.wait(1000);
@@ -2367,7 +2368,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("Letter");
     cy.wait(1000);
@@ -2432,7 +2433,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("Letter");
     cy.wait(1000);
@@ -2506,7 +2507,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("Letter");
     cy.wait(1000);
@@ -2580,7 +2581,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("Letter");
     cy.wait(1000);
@@ -2654,7 +2655,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("Letter");
     cy.wait(1000);
@@ -2732,7 +2733,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("Letter");
     cy.wait(1000);
@@ -2810,7 +2811,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("Letter");
     cy.wait(1000);
@@ -2884,7 +2885,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
   }
 
   CreateCommunicationTemplate204() {
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.comminicationTrigger).click();
     cy.wait(1000);
@@ -2893,7 +2894,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
   }
 
     CreateCommunicationTemplate205() {
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.comminicationTrigger).click();
     cy.wait(1000);
@@ -2905,7 +2906,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
   }
 
     CreateCommunicationTemplate206() {
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.comminicationTrigger).click();
     cy.wait(1000);
@@ -2918,7 +2919,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
 
 
     CreateCommunicationTemplate207() {
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.comminicationTrigger).click();
     cy.wait(1000);
@@ -2933,7 +2934,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
   }
 
    CreateCommunicationTemplate208() {
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.comminicationTrigger).click();
     cy.wait(1000);
@@ -2943,7 +2944,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
   }
 
     CreateCommunicationTemplate209() {
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.comminicationTrigger).click();
     cy.wait(1000);
@@ -2956,7 +2957,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
   }
 
     CreateCommunicationTemplate210() {
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.comminicationTrigger).click();
     cy.wait(1000);
@@ -2971,7 +2972,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
   }
 
     CreateCommunicationTemplate211() {
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.comminicationTrigger).click();
     cy.wait(1000);
@@ -2986,7 +2987,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
   }
 
     CreateCommunicationTemplate212() {
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.comminicationTrigger).click();
     cy.wait(1000);
@@ -3015,7 +3016,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
   }
 
   CreateCommunicationTemplate213() {
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.comminicationTrigger).click();
     cy.wait(1000);
@@ -3050,7 +3051,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
   }
 
     CreateCommunicationTemplate214() {
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.comminicationTrigger).click();
     cy.wait(1000);
@@ -3097,7 +3098,7 @@ const marathisentences = marathiSentences[Math.floor(Math.random() * marathiSent
   }
 
     CreateCommunicationTemplate215() {
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.comminicationTrigger).click();
     cy.wait(1000);
@@ -3502,7 +3503,7 @@ Communication226() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 5 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("SMS");
     cy.wait(1000);
@@ -3527,7 +3528,7 @@ Communication226() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -3553,7 +3554,7 @@ Communication226() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -3583,7 +3584,7 @@ Communication226() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -3614,7 +3615,7 @@ Communication226() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -3646,7 +3647,7 @@ Communication226() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -3673,7 +3674,7 @@ Communication226() {
     const randomname = Array.from({ length: 10 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 5 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -3698,7 +3699,7 @@ Communication226() {
     const randomname = Array.from({ length: 10 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 5 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -3723,7 +3724,7 @@ Communication226() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -3750,7 +3751,7 @@ Communication226() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -3779,7 +3780,7 @@ Communication226() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -3808,7 +3809,7 @@ Communication226() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -3839,7 +3840,7 @@ Communication226() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -3874,7 +3875,7 @@ Communication226() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -3910,7 +3911,7 @@ Communication226() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -3949,7 +3950,7 @@ Communication226() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -3989,7 +3990,7 @@ Communication226() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -4051,7 +4052,7 @@ Communication226() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -4123,7 +4124,7 @@ Communication226() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -4200,7 +4201,7 @@ Communication226() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -4279,7 +4280,7 @@ Communication226() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -4357,7 +4358,7 @@ Communication246() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -4381,7 +4382,7 @@ Communication247() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -4410,7 +4411,7 @@ Communication247() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -4440,7 +4441,7 @@ Communication247() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -4465,7 +4466,7 @@ Communication247() {
     const randomname = Array.from({ length: 10 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 5 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -4488,7 +4489,7 @@ Communication247() {
     const randomname = Array.from({ length: 10 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 5 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -4511,7 +4512,7 @@ Communication247() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -4536,7 +4537,7 @@ Communication247() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -4563,7 +4564,7 @@ Communication247() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -4590,7 +4591,7 @@ Communication247() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -4619,7 +4620,7 @@ Communication247() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -4652,7 +4653,7 @@ Communication247() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -4686,7 +4687,7 @@ Communication247() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -4723,7 +4724,7 @@ Communication247() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -4761,7 +4762,7 @@ Communication247() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -4819,7 +4820,7 @@ Communication247() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -4887,7 +4888,7 @@ Communication247() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -4960,7 +4961,7 @@ Communication247() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -5035,7 +5036,7 @@ Communication247() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -5109,7 +5110,7 @@ Communication247() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -5184,7 +5185,7 @@ Communication247() {
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
@@ -5282,7 +5283,7 @@ Communication247() {
   CreateCommunicationTask177() {
     const letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.createcommunicationtemplate).click();
     cy.wait(1000);
@@ -5315,13 +5316,13 @@ Communication247() {
   }
 
   CreateCommunicationTask178() {
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.createcommunicationtemplate).click();
     cy.wait(1000);
    const letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.createcommunicationtemplate).click();
     cy.wait(1000);
@@ -5352,7 +5353,7 @@ Communication247() {
   }
 
   CreateCommunicationTask179() {
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.createcommunicationtemplate).click();
     cy.wait(1000);
@@ -5363,7 +5364,7 @@ Communication247() {
     const randomname = "Template_" + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     const subjectline = "Template_" + Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
     cy.wait(1000);
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.channelType).select("Letter");
     cy.wait(1000);
@@ -5419,7 +5420,7 @@ Communication247() {
   }
 
   SearchCommunicationTemplate168() {
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.searchcommunicationtemplate).click();
     cy.wait(1000);
@@ -5441,7 +5442,7 @@ Communication247() {
   }
 
   SearchCommunicationTemplate170() {
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.searchcommunicationtemplate).click();
     cy.wait(1000);
@@ -5457,7 +5458,7 @@ Communication247() {
 
 
   SearchCommunicationTemplate171() {
-    cy.get(this.locators.communicationtemplate).click();
+    cy.contains("Create Communication Template").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.searchcommunicationtemplate).click();
     cy.wait(1000);

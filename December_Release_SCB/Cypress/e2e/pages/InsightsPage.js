@@ -359,9 +359,8 @@ PerformanceInsight_07() {
 
 cy.get('[title="Insights"]').click({ force: true });
 
-    cy.get(this.locators.performanceInsight)
-      .should('exist')
-      .click({ force: true });
+  cy.contains("Performance Insight").scrollIntoView().click({force:true});
+cy.wait(3000);
 
     cy.get(this.locators.filter)
       .should('exist')
@@ -402,9 +401,8 @@ PerformanceInsight_08(){
     
 cy.get('[title="Insights"]').click({ force: true });
 cy.wait(2000);
-    cy.get(this.locators.performanceInsight)
-      .should('exist')
-      .click({ force: true });
+  cy.contains("Performance Insight").scrollIntoView().click({force:true});
+cy.wait(3000);
 cy.wait(2000);
     cy.get(this.locators.filter)
       .should('exist')
@@ -457,9 +455,8 @@ cy.wait(2000);
 PerformanceInsight_09() {
   cy.get('[title="Insights"]').click({ force: true });
 cy.wait(2000);
-    cy.get(this.locators.performanceInsight)
-      .should('exist')
-      .click({ force: true });
+  cy.contains("Performance Insight").scrollIntoView().click({force:true});
+cy.wait(3000);
 cy.wait(2000);
     cy.get(this.locators.filter)
       .should('exist')
@@ -516,9 +513,8 @@ PerformanceInsight_010() {
   // Navigate to Insights
     cy.get('[title="Insights"]').click({ force: true });
 cy.wait(2000);
-    cy.get(this.locators.performanceInsight)
-      .should('exist')
-      .click({ force: true });
+  cy.contains("Performance Insight").scrollIntoView().click({force:true});
+cy.wait(3000);
 cy.wait(2000);
     cy.get(this.locators.filter)
       .should('exist')
@@ -580,9 +576,8 @@ cy.get(':nth-child(2) > .card-header > .d-flex > .btn-group > [btnradio="bottom"
 PerformanceInsight_011(){
    cy.get('[title="Insights"]').click({ force: true });
 cy.wait(2000);
-    cy.get(this.locators.performanceInsight)
-      .should('exist')
-      .click({ force: true });
+  cy.contains("Performance Insight").scrollIntoView().click({force:true});
+cy.wait(3000);
 cy.wait(2000);
     cy.get(this.locators.filter)
       .should('exist')
@@ -642,9 +637,8 @@ cy.get('bs-dropdown-container > div.dropdown > ul.dropdown-menu')   // 🔁 repl
 PerformanceInsight_012(){
    cy.get('[title="Insights"]').click({ force: true });
 cy.wait(2000);
-    cy.get(this.locators.performanceInsight)
-      .should('exist')
-      .click({ force: true });
+  cy.contains("Performance Insight").scrollIntoView().click({force:true});
+cy.wait(3000);
 cy.wait(2000);
     cy.get(this.locators.filter)
       .should('exist')
@@ -671,9 +665,8 @@ cy.get('#accordion-performanceStatus > .panel > .panel-collapse > .panel-body > 
 PerformanceInsight_013(){
   cy.get('[title="Insights"]').click({ force: true });
 cy.wait(2000);
-    cy.get(this.locators.performanceInsight)
-      .should('exist')
-      .click({ force: true });
+  cy.contains("Performance Insight").scrollIntoView().click({force:true});
+cy.wait(3000);
 cy.wait(2000);
     cy.get(this.locators.filter)
       .should('exist')
@@ -731,9 +724,8 @@ cy.wait(1000);
 PerformanceInsight_014(){
    cy.get('[title="Insights"]').click({ force: true });
 cy.wait(2000);
-    cy.get(this.locators.performanceInsight)
-      .should('exist')
-      .click({ force: true });
+  cy.contains("Performance Insight").scrollIntoView().click({force:true});
+cy.wait(3000);
 cy.wait(2000);
     cy.get(this.locators.filter)
       .should('exist')
@@ -770,9 +762,8 @@ cy.wait(1000);
 PerformanceInsight_015(){
    cy.get('[title="Insights"]').click({ force: true });
 cy.wait(2000);
-    cy.get(this.locators.performanceInsight)
-      .should('exist')
-      .click({ force: true });
+  cy.contains("Performance Insight").scrollIntoView().click({force:true});
+cy.wait(3000);
 cy.wait(2000);
     cy.get(this.locators.filter)
       .should('exist')
@@ -841,9 +832,8 @@ cy.wait(1000);
 PerformanceInsight_016(){
   cy.get('[title="Insights"]').click({ force: true });
 cy.wait(2000);
-    cy.get(this.locators.performanceInsight)
-      .should('exist')
-      .click({ force: true });
+  cy.contains("Performance Insight").scrollIntoView().click({force:true});
+cy.wait(3000);
 cy.wait(2000);
     cy.get(this.locators.filter)
       .should('exist')
@@ -879,9 +869,8 @@ cy.get('#accordion-performanceStatus > .panel > .panel-collapse > .panel-body > 
 PerformanceInsight_017(){
   cy.get('[title="Insights"]').click({ force: true });
 cy.wait(2000);
-    cy.get(this.locators.performanceInsight)
-      .should('exist')
-      .click({ force: true });
+  cy.contains("Performance Insight").scrollIntoView().click({force:true});
+cy.wait(3000);
 cy.wait(2000);
     cy.get(this.locators.filter)
       .should('exist')
@@ -948,9 +937,8 @@ cy.wait(1000);
 PerformanceInsight_018(){
   cy.get('[title="Insights"]').click({ force: true });
 cy.wait(2000);
-    cy.get(this.locators.performanceInsight)
-      .should('exist')
-      .click({ force: true });
+  cy.contains("Performance Insight").scrollIntoView().click({force:true});
+cy.wait(3000);
 cy.wait(2000);
     cy.get(this.locators.filter)
       .should('exist')
@@ -996,9 +984,8 @@ cy.wait(1000);
 PerformanceInsight_019(){
    cy.get('[title="Insights"]').click({ force: true });
 cy.wait(2000);
-    cy.get(this.locators.performanceInsight)
-      .should('exist')
-      .click({ force: true });
+  cy.contains("Performance Insight").scrollIntoView().click({force:true});
+cy.wait(3000);
 cy.wait(2000);
     cy.get(this.locators.filter)
       .should('exist')
@@ -1076,9 +1063,8 @@ cy.wait(1000);
 PerformanceInsight_020(){
    cy.get('[title="Insights"]').click({ force: true });
 cy.wait(2000);
-    cy.get(this.locators.performanceInsight)
-      .should('exist')
-      .click({ force: true });
+  cy.contains("Performance Insight").scrollIntoView().click({force:true});
+cy.wait(3000);
 cy.wait(2000);
     cy.get(this.locators.filter)
       .should('exist')
@@ -1126,9 +1112,8 @@ cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-un
     PerformanceInsight_021(){
    cy.get('[title="Insights"]').click({ force: true });
 cy.wait(2000);
-    cy.get(this.locators.performanceInsight)
-      .should('exist')
-      .click({ force: true });
+  cy.contains("Performance Insight").scrollIntoView().click({force:true});
+cy.wait(3000);
 cy.wait(2000);
     cy.get(this.locators.filter)
       .should('exist')
@@ -1346,9 +1331,8 @@ newColumns.forEach((col) => {
 
   cy.get('[title="Insights"]').click({ force: true });
 cy.wait(2000);
-    cy.get(this.locators.performanceInsight)
-      .should('exist')
-      .click({ force: true });
+  cy.contains("Performance Insight").scrollIntoView().click({force:true});
+cy.wait(3000);
 
   // -----------------------------
   // Open Detailed Analysis
@@ -1404,9 +1388,8 @@ cy.get('.ng-dropdown-panel')
  PerformanceInsight_024(){
   cy.get('[title="Insights"]').click({ force: true });
 cy.wait(2000);
-    cy.get(this.locators.performanceInsight)
-      .should('exist')
-      .click({ force: true });
+  cy.contains("Performance Insight").scrollIntoView().click({force:true});
+cy.wait(3000);
 cy.contains('Total').should('be.visible');
 cy.contains('Resolution').should('be.visible');
 cy.contains('Normalization').should('be.visible');
@@ -1431,9 +1414,8 @@ sectionHeadings.forEach((heading) => {
 PerformanceInsight_025(){
   cy.get('[title="Insights"]').click({ force: true });
 cy.wait(2000);
-    cy.get(this.locators.performanceInsight)
-      .should('exist')
-      .click({ force: true });
+  cy.contains("Performance Insight").scrollIntoView().click({force:true});
+cy.wait(3000);
       cy.wait(2000);
       cy.get(this.locators.geography_tab).click({force:true});
       cy.wait(2000);
@@ -1451,9 +1433,8 @@ cy.wait(2000);
 PerformanceInsight_026(){
    cy.get('[title="Insights"]').click({ force: true });
 cy.wait(2000);
-    cy.get(this.locators.performanceInsight)
-      .should('exist')
-      .click({ force: true });
+  cy.contains("Performance Insight").scrollIntoView().click({force:true});
+cy.wait(3000);
 cy.wait(2000);
 cy.get(':nth-child(3) > .nav-link').click({force:true});
 cy.wait(2000);

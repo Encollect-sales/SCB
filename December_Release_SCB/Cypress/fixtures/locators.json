@@ -76,8 +76,8 @@
 "accounts":{
  "Account_number":"#search-account-number",
  "Search_Button":"#search-submit-button",
- "click_number":"tr.ng-star-inserted > :nth-child(4) > a",
- "Account_search":".account-search > a.ng-star-inserted",
+ "click_number":"[style='text-wrap-mode: nowrap; position: relative;'] > span",
+ "Account_search":"#search-account-number",
  "Button":"#toggleButton",
  "Payment_History_page":":nth-child(13) > .dropdown-item",
  "Settings_Page":".w-100 > .btn-outline-dark",

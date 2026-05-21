@@ -12,33 +12,33 @@
 
   "Allocation":{
 
-    "ClickOn_Allocation":"[title='Allocation'] > span.ng-star-inserted",
+    "ClickOn_Allocation":"#nav-item-1-allocation",
     "ClickOn_CC_RadioBtn":"#account-type-cc",
 
-    "ClickOn_Agency_Bulkupload":".allocation > :nth-child(2) > :nth-child(1) > a.ng-star-inserted",
-    "ClickOn_Agency_Bulkalloc_Acclevel":".allocation > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(1) > a",
-    "ClickOn_Agency_Bulkalloc_Cuslevel":".allocation > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(2) > a",
-    "ClickOn_Agency_Dealloc_Acclevel":".allocation > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(3) > a",
-    "ClickOn_Agency_Dealloc_Cuslevel":":nth-child(1) > .sub-nav-list > :nth-child(4) > a",
+    "ClickOn_Agency_Bulkupload":"#nav-item-2-agency-bulk-upload",
+    "ClickOn_Agency_Bulkalloc_Acclevel":"#nav-item-3-agency-bulk-allocation-account-level",
+    "ClickOn_Agency_Bulkalloc_Cuslevel":"#nav-item-3-agency-bulk-allocation-customer-level",
+    "ClickOn_Agency_Dealloc_Acclevel":"#nav-item-3-agency-bulk-deallocation-account-level",
+    "ClickOn_Agency_Dealloc_Cuslevel":"#nav-item-3-agency-bulk-deallocation-customer-level",
 
-    "ClickOn_Agent_Bulkupload":".allocation > :nth-child(2) > :nth-child(2) > a.ng-star-inserted",
-    "ClickOn_Agent_Bulkalloc_Acclevel":".allocation > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(1) > a",
-    "ClickOn_Agent_Bulkalloc_Cuslevel":".allocation > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(2) > a",
-    "ClickOn_Agent_Dealloc_Acclevel":".allocation > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(3) > a",
-    "ClickOn_Agent_Dealloc_Cuslevel":".allocation > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(4) > a",
+    "ClickOn_Agent_Bulkupload":"#nav-item-2-agent-bulk-upload",
+    "ClickOn_Agent_Bulkalloc_Acclevel":"#nav-item-3-agent-bulk-allocation-account-level",
+    "ClickOn_Agent_Bulkalloc_Cuslevel":"#nav-item-3-agent-bulk-allocation-customer-level",
+    "ClickOn_Agent_Dealloc_Acclevel":"#nav-item-3-agent-bulk-deallocation-account-level",
+    "ClickOn_Agent_Dealloc_Cuslevel":"#nav-item-3-agent-bulk-deallocation-customer-level",
 
-    "ClickOn_Owner_Bulkupload":".allocation > :nth-child(2) > :nth-child(3) > a.ng-star-inserted",
-    "ClickOn_Owner_Bulkalloc_Acclevel":".allocation > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(1) > a",
-    "ClickOn_Owner_Bulkalloc_Cuslevel":".allocation > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(2) > a",
+    "ClickOn_Owner_Bulkupload":"#nav-item-2-allocation-owner-bulk-upload",
+    "ClickOn_Owner_Bulkalloc_Acclevel":"#nav-item-3-allocation-owner-bulk-upload-account-level",
+    "ClickOn_Owner_Bulkalloc_Cuslevel":"#nav-item-3-allocation-owner-bulk-upload-customer-level",
 
     "ClickOn_Productgroup":":nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "ClickOn_Bucket":":nth-child(5) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "ClickOn_Branch":":nth-child(6) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
 
-    "ClickOn_Alloc_Filters":".allocation > :nth-child(2) > :nth-child(4) > a.ng-star-inserted",
+    "ClickOn_Alloc_Filters":"#nav-item-2-allocation-filters",
 
-    "CLickOn_Agency_Allocfilter":".allocation > :nth-child(2) > :nth-child(4) > .sub-nav-list > :nth-child(1) > a",
-    "CLickOn_Agent_Allocfilter":".allocation > :nth-child(2) > :nth-child(4) > .sub-nav-list > :nth-child(2) > a",
+    "CLickOn_Agency_Allocfilter":"#nav-item-3-agency-allocation-by-filters",
+    "CLickOn_Agent_Allocfilter":"#nav-item-3-agent-allocation-by-filters",
     "ClickOn_Bucketfilter":"[heading='Bucket Filter'] > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn",
     "ClickOn_Geofilter":"[heading= 'Geography Filter'] > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn",
 
@@ -98,9 +98,9 @@
     "confirm":"#confirm-dialog-okay",
     "fileuploadone":".card-content > :nth-child(1) > .form-control",
     "fileuploadtwo":".ng-star-inserted > .form-control",
-    "payment":"a[title='Payments']",
-    "Deposit_slip":"a[title='Deposit Slip']",
-    "searchandview":"a[title='Search and View Deposit Slip']",
+    "payment":"#nav-item-1-payments",
+    "Deposit_slip":"#nav-item-2-deposit-slip",
+    "searchandview":"#nav-item-3-search-and-view-deposit-slip",
     "Mode_of_Payment":"select[name='paymentMode']",
     "submit":"button[type='submit']",
     "account_page":"a[title='Account Search']",
@@ -119,8 +119,8 @@
 
 
   "reports":{
-    "clickreports":"a[title='Reports']",
-    "Performance":"a[title='Performance Report']",
+    "clickreports":"#nav-item-1-reports",
+    "Performance":"#nav-item-2-performance-reports",
     "productGroup":":nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container",
     "dropdown":"div[aria-label='Options List']",
     "buckets":":nth-child(4) > .form-control-group > .form-ng-select > .ng-select-container",
@@ -141,7 +141,7 @@
 
 
   "insights":{  
-    "primary_insights":".insights > .sub-nav-list > :nth-child(1) > .ng-star-inserted",
+    "primary_insights":"#nav-item-2-primary-allocation-insights",
     "filterbutton":"div[class='d-flex align-items-center justify-content-between mb-4'] button[class='btn btn-primary btn-filter px-4 py-2 h-auto rounded-4']",
     "clickonproduct":"#accordion-product > .panel > .panel-heading > .panel-title",
     "secondary_insights":".insights > .sub-nav-list > :nth-child(2) > .ng-star-inserted",
@@ -154,9 +154,9 @@
 
   "Repo":{
 
-   "ClickOn_Repo":"[title='Repossession'] > span.ng-star-inserted",
+   "ClickOn_Repo":"#nav-item-1-repossession",
 
-   "ClickOn_RequestRepo":".repossession > .sub-nav-list > :nth-child(1) > .ng-star-inserted",
+   "ClickOn_RequestRepo":"#nav-item-2-request-repossession",
    "TypeAccNumber":"#accountNumber",
    "Type_Vehicle_Regnum":"#vehicleNumber",
    "ClickOn_SubmitBtn":"#search-submit-button",

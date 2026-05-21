@@ -8,7 +8,8 @@ class AllocationPage {
   }
 
   Allocation_sow_TestPage_01() {
-
+    cy.wait(5000);
+    cy.wait(2000);
     cy.get(this.locators.ClickOn_Allocation).click();
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Agency_Bulkupload).click();

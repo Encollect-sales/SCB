@@ -45,7 +45,7 @@ describe('Trails - PTP Amount Empty with Action Code and Result Code as BPTP', (
 
             const data = {
                 'A2':'18765',
-                'B2': '10031',
+                'B2': '67609',
                 'C2': 'yes',
                 'D2': 'BPTP',
                 'E2': 'BPTP',

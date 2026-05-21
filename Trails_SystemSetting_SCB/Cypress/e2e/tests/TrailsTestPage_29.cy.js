@@ -50,8 +50,8 @@ describe('Trails - Invalid Agreement ID. Special characters are not allowed.', (
             //################################################################################
 
             const data = {
-                'A2':'18765',
-                'B2': '10031',
+                'A2':'187@#65',
+                'B2': '67609',
                 'C2': 'yes',
                 'D2': 'PTP',
                 'E2': 'PTP',

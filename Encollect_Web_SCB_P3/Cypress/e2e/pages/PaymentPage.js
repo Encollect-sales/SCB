@@ -8,9 +8,9 @@ this.locators = locators;
          
 PaymentTestPage_01(){
 
- cy.get(this.locators.ClickOnPayment).click();
+ cy.contains("Payments").scrollIntoView().should("be.visible").click();
  cy.wait(1000);
- cy.get(this.locators.ClickOnBulkPaymentsUploadhead).click();
+ cy.contains("Bulk Payments Upload").scrollIntoView().should("be.visible").click();
  cy.wait(1000);
  cy.contains("Bulk Payments Upload").should("be.visible");
  cy.wait(1000);
@@ -22,11 +22,11 @@ PaymentTestPage_01(){
 
 PaymentTestPage_02(){
     
-    cy.get(this.locators.ClickOnPayment).click();
+    cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnBulkPaymentsUploadhead).click();
+    cy.contains("Bulk Payments Upload").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnBulkPaymentUpload).click();
+  cy.contains("Bulk Payments Upload").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickOnDownloadTemplate).click();
     cy.wait(3000);
@@ -36,11 +36,11 @@ PaymentTestPage_02(){
 
 PaymentTestPage_download_03(){
 
-    cy.get(this.locators.ClickOnPayment).click();
+    cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnBulkPaymentsUploadhead).click();
+    cy.contains("Bulk Payments Upload").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnBulkPaymentUpload).click();
+  cy.contains("Bulk Payments Upload").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickOnDownloadTemplate).click();
     cy.wait(3000);
@@ -72,7 +72,7 @@ PaymentTestPage_03_upload(){
       });
   
 
-      cy.get(this.locators.ClickOnBulkpaymentUploadStatus).click();
+    cy.contains("Bulk Payments Upload Status").scrollIntoView().should("be.visible").click();
       cy.wait(1000);
       cy.then(() => {
         const transactionId = Cypress.env('transactionID');
@@ -92,11 +92,11 @@ PaymentTestPage_03_upload(){
 
 PaymentTestPage_04(){
 
-    cy.get(this.locators.ClickOnPayment).click();
+    cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnBulkPaymentsUploadhead).click();
+    cy.contains("Bulk Payments Upload").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnBulkpaymentUploadStatus).click();
+  cy.contains("Bulk Payments Upload Status").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get('#bulk-trail-status').select("Uploaded");
     cy.wait(2000);
@@ -107,11 +107,11 @@ PaymentTestPage_04(){
 
 PaymentTestPage_05(){
 
-    cy.get(this.locators.ClickOnPayment).click();
+    cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnBulkPaymentsUploadhead).click();
+    cy.contains("Bulk Payments Upload").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnBulkpaymentUploadStatus).click();
+  cy.contains("Bulk Payments Upload Status").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickOnSubmitBtn).click({force: true});
     cy.wait(2000);                      
@@ -122,11 +122,11 @@ PaymentTestPage_05(){
 
 PaymentTestPage_06(){
 
-    cy.get(this.locators.ClickOnPayment).click();
+    cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnBulkPaymentsUploadhead).click();
+    cy.contains("Bulk Payments Upload").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnBulkPaymentUpload).click();
+  cy.contains("Bulk Payments Upload").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickOnDownloadTemplate).click();
     cy.wait(3000);
@@ -160,9 +160,9 @@ PaymentTestPage_06(){
 
 PaymentTestPage_07(){
     
-    cy.get(this.locators.ClickOnPayment).click();
+    cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnReceiveMoneyCollector).click();
+   cy.contains("Receive Money From Collector").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnCollectorcode).type(2, {force: true});
     cy.wait(2000);
@@ -202,9 +202,9 @@ PaymentTestPage_07(){
 
 PaymentTestPage_08(){
 
-    cy.get(this.locators.ClickOnPayment).click();
+    cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnReceiveMoneyCollector).click();
+   cy.contains("Receive Money From Collector").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnCollectorcode).type(2163);
     cy.wait(1000);
@@ -226,9 +226,9 @@ PaymentTestPage_08(){
 
 PaymentTestPage_09(){
 
-    cy.get(this.locators.ClickOnPayment).click();
+    cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnReceiveMoneyCollector).click();
+   cy.contains("Receive Money From Collector").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnCollectorcode).type(2163);
     cy.wait(1000);

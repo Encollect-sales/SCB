@@ -11,9 +11,9 @@
   },
 
   "Trails": {
-    "Clickontrials": "[title='Trails']",
-    "Clickontrailuploadstatus": ".trails > .sub-nav-list > :nth-child(2) > .ng-star-inserted",
-    "bulk_upload":".trails > .sub-nav-list > :nth-child(1) > .ng-star-inserted",
+    "Clickontrials": "#nav-item-1-trails",
+    "Clickontrailuploadstatus": "#nav-item-2-trail-upload-status",
+    "bulk_upload":"#nav-item-2-bulk-trail-upload",
     "Clickonsearch":"#bulk-trail-search-button",
     "Clickoncancel":"#bulk-trail-cancel-button",
     "Clickonstatus":"#bulk-trail-status",
@@ -31,15 +31,15 @@
     
   },
   "SystemSettings":{
-    "Account_upload":".system-settings > :nth-child(2) > :nth-child(1) > a.ng-star-inserted",
-    "Account_upload_bulk":".system-settings > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(1) > a",
+    "Account_upload":"#nav-item-2-account-upload",
+    "Account_upload_bulk":"#nav-item-3-bulk-account-upload",
     "cc_download":"#radio-download-template-card",
     "cc_upload":"#radio-upload-template-card",
     "loan_download":"#radio-download-template-account",
     "clickokbutton":"#confirm-dialog-okay",
     "cancelbutton":"#confirm-dialog-cancel",
-    "masters_upload":".system-settings > :nth-child(2) > :nth-child(4) > a.ng-star-inserted",
-    "bulk_upload_master":".system-settings > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(1) > a",
+    "masters_upload":"#nav-item-2-masters-upload",
+    "bulk_upload_master":"#nav-item-3-bulk-upload-masters",
     "download_template_bank_master":"#download-template-type",
     "upload_template_bank_master":"#upload-template-type",
     "download_template_button":"#download-template-button",

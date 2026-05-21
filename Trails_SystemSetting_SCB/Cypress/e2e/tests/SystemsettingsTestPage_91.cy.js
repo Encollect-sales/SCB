@@ -29,7 +29,7 @@ describe(
         // Login
         loginPage.login(user.Companyname, user.email, user.password);
         cy.wait(1000);
-     systemSettingsPage.SystemsettingsPage_09();
+     systemSettingsPage.Systemsettings_BulkMasters_08();
 
         
       });

@@ -11,9 +11,9 @@ class UserManagementPage {
 
   UserManagementTestPage_01(){
  
-    cy.get(this.locators.ClickOnUserManagement).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnBulkUpload).click();
+    cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.contains('Bulk Enable/Disable Users').should("be.visible");
     cy.wait(1000);
@@ -24,9 +24,9 @@ class UserManagementPage {
 
   UserManagementTestPage_02(){
  
-    cy.get(this.locators.ClickOnUserManagement).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnBulkUpload).click();
+    cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickonEnableDisableUsers).click();
     cy.wait(1000);
@@ -39,9 +39,9 @@ class UserManagementPage {
 
   UserManagementTestPage_download_03(){
 
-    cy.get(this.locators.ClickOnUserManagement).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnBulkUpload).click();
+    cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickonEnableDisableUsers).click();
     cy.wait(1000);
@@ -91,9 +91,9 @@ class UserManagementPage {
     cy.wait(1000);
     cy.get(this.locators.ClickOnStatusSearchBtn).click();
     cy.wait(3000);
-   cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
+   cy.get('tbody > tr > :nth-child(3)').contains('Failed').should('be.visible');
     cy.wait(2000);
-    cy.get('tbody > .ng-star-inserted > :nth-child(4) > a').click();
+    cy.get('tr > :nth-child(4) > a').click();
     cy.wait(3000);
 
 
@@ -101,9 +101,9 @@ class UserManagementPage {
 
  UserManagementTestPage_download_04(){
 
-  cy.get(this.locators.ClickOnUserManagement).click();
+ cy.contains("User Management").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnBulkUpload).click();
+  cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickonEnableDisableUsers).click();
   cy.wait(1000);
@@ -155,7 +155,7 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
   cy.wait(3000);
   cy.get('tr.ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
    cy.wait(2000);
-  cy.get('tbody > .ng-star-inserted > :nth-child(4) > a').click();
+  cy.get('tr > :nth-child(4) > a').click();
   cy.wait(3000);
 
 
@@ -163,9 +163,9 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
 
 UserManagementTestPage_download_05(){
 
-  cy.get(this.locators.ClickOnUserManagement).click();
+ cy.contains("User Management").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnBulkUpload).click();
+  cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickonEnableDisableUsers).click();
   cy.wait(1000);
@@ -217,7 +217,7 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
   cy.wait(3000);
   cy.get('tr.ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
   cy.wait(2000);
-  cy.get('tbody > .ng-star-inserted > :nth-child(4) > a').click();
+  cy.get('tr > :nth-child(4) > a').click();
   cy.wait(3000);
 
 
@@ -225,9 +225,9 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
 
 UserManagementTestPage_download_06(){
 
-  cy.get(this.locators.ClickOnUserManagement).click();
+ cy.contains("User Management").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnBulkUpload).click();
+  cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickonEnableDisableUsers).click();
   cy.wait(1000);
@@ -279,7 +279,7 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
   cy.wait(3000);
   cy.get('tr.ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
   cy.wait(2000);
-  cy.get('tbody > .ng-star-inserted > :nth-child(4) > a').click();
+  cy.get('tr > :nth-child(4) > a').click();
   cy.wait(3000);
 
 
@@ -287,9 +287,9 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
 
 UserManagementTestPage_download_07(){
 
-  cy.get(this.locators.ClickOnUserManagement).click();
+ cy.contains("User Management").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnBulkUpload).click();
+  cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickonEnableDisableUsers).click();
   cy.wait(1000);
@@ -341,7 +341,7 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
   cy.wait(3000);
    cy.get('tr.ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
   cy.wait(2000);
-  cy.get('tbody > .ng-star-inserted > :nth-child(4) > a').click();
+  cy.get('tr > :nth-child(4) > a').click();
   cy.wait(3000);
 
 
@@ -349,9 +349,9 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
 
 UserManagementTestPage_download_08(){
 
-  cy.get(this.locators.ClickOnUserManagement).click();
+ cy.contains("User Management").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnBulkUpload).click();
+  cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickonEnableDisableUsers).click();
   cy.wait(1000);
@@ -403,7 +403,7 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
   cy.wait(3000);
    cy.get('tr.ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
   cy.wait(2000);
-  cy.get('tbody > .ng-star-inserted > :nth-child(4) > a').click();
+  cy.get('tr > :nth-child(4) > a').click();
   cy.wait(3000);
 
 
@@ -411,9 +411,9 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
 
 UserManagementTestPage_download_09(){
 
-  cy.get(this.locators.ClickOnUserManagement).click();
+ cy.contains("User Management").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnBulkUpload).click();
+  cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickonEnableDisableUsers).click();
   cy.wait(1000);
@@ -465,7 +465,7 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
   cy.wait(3000);
   cy.get('tr.ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
   cy.wait(2000);
-  cy.get('tbody > .ng-star-inserted > :nth-child(4) > a').click();
+  cy.get('tr > :nth-child(4) > a').click();
   cy.wait(3000);
 
 
@@ -473,9 +473,9 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
 
 UserManagementTestPage_download_10(){
 
-  cy.get(this.locators.ClickOnUserManagement).click();
+ cy.contains("User Management").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnBulkUpload).click();
+  cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickonEnableDisableUsers).click();
   cy.wait(1000);
@@ -527,7 +527,7 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
   cy.wait(3000);
   cy.get('tr.ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
   cy.wait(2000);
-  cy.get('tbody > .ng-star-inserted > :nth-child(4) > a').click();
+  cy.get('tr > :nth-child(4) > a').click();
   cy.wait(3000);
 
 
@@ -538,9 +538,9 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
 
   UserManagementTestPage_11(){
  
-    cy.get(this.locators.ClickOnUserManagement).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnBulkUpload).click();
+    cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickonEnableDisableUsers).click();
     cy.wait(1000);
@@ -569,9 +569,9 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
 
 UserManagementTestPage_12(){
  
-  cy.get(this.locators.ClickOnUserManagement).click();
+ cy.contains("User Management").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnBulkUpload).click();
+  cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickonEnableDisableUsers).click();
   cy.wait(1000);
@@ -593,9 +593,9 @@ cy.wait(2000)
 
 UserManagementTestPage_13(){
  
-  cy.get(this.locators.ClickOnUserManagement).click();
+ cy.contains("User Management").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnBulkUpload).click();
+  cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickonEnableDisableUsers).click();
   cy.wait(1000);
@@ -609,9 +609,9 @@ UserManagementTestPage_13(){
 
 UserManagementTestPage_download_14(){
 
-  cy.get(this.locators.ClickOnUserManagement).click();
+ cy.contains("User Management").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnBulkUpload).click();
+  cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickonEnableDisableUsers).click();
   cy.wait(1000);
@@ -663,7 +663,7 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
   cy.wait(3000);
    cy.get('tr.ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
   cy.wait(2000);
-  cy.get('tbody > .ng-star-inserted > :nth-child(4) > a').click();
+  cy.get('tr > :nth-child(4) > a').click();
   cy.wait(3000);
 
 
@@ -671,9 +671,9 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
 
 UserManagementTestPage_download_15(){
 
-  cy.get(this.locators.ClickOnUserManagement).click();
+ cy.contains("User Management").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnBulkUpload).click();
+  cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickonEnableDisableUsers).click();
   cy.wait(1000);
@@ -725,7 +725,7 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
   cy.wait(3000);
   cy.get('tr.ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
   cy.wait(2000);
-  cy.get('tbody > .ng-star-inserted > :nth-child(4) > a').click();
+  cy.get('tr > :nth-child(4) > a').click();
   cy.wait(3000);
 
 
@@ -733,9 +733,9 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
 
 UserManagementTestPage_download_16(){
 
-  cy.get(this.locators.ClickOnUserManagement).click();
+ cy.contains("User Management").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnBulkUpload).click();
+  cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickonEnableDisableUsers).click();
   cy.wait(1000);
@@ -787,7 +787,7 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
   cy.wait(3000);
   cy.get('tr.ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
   cy.wait(2000);
-  cy.get('tbody > .ng-star-inserted > :nth-child(4) > a').click();
+  cy.get('tr > :nth-child(4) > a').click();
   cy.wait(3000);
 
 
@@ -795,9 +795,9 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
 
 UserManagementTestPage_download_17(){
 
-  cy.get(this.locators.ClickOnUserManagement).click();
+ cy.contains("User Management").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnBulkUpload).click();
+  cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickonEnableDisableUsers).click();
   cy.wait(1000);
@@ -849,7 +849,7 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
   cy.wait(3000);
    cy.get('tr.ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
   cy.wait(2000);
-  cy.get('tbody > .ng-star-inserted > :nth-child(4) > a').click();
+  cy.get('tr > :nth-child(4) > a').click();
   cy.wait(3000);
 
 
@@ -857,9 +857,9 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
 
 UserManagementTestPage_download_18(){
 
-  cy.get(this.locators.ClickOnUserManagement).click();
+ cy.contains("User Management").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnBulkUpload).click();
+  cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickonEnableDisableUsers).click();
   cy.wait(1000);
@@ -911,7 +911,7 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
   cy.wait(3000);
   cy.get('tr.ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
   cy.wait(2000);
-  cy.get('tbody > .ng-star-inserted > :nth-child(4) > a').click();
+  cy.get('tr > :nth-child(4) > a').click();
   cy.wait(3000);
 
 
@@ -920,9 +920,9 @@ cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
 
 UserManagementTestPage_19(){
  
-  cy.get(this.locators.ClickOnUserManagement).click();
+ cy.contains("User Management").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnBulkUpload).click();
+  cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickonEnableDisableUsers).click();
   cy.wait(1000);
@@ -950,9 +950,9 @@ cy.wait(2000);
 
 UserManagementTestPage_20(){
  
-  cy.get(this.locators.ClickOnUserManagement).click();
+ cy.contains("User Management").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnBulkUpload).click();
+  cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickonEnableDisableUsers).click();
   cy.wait(1000);
@@ -974,9 +974,9 @@ cy.wait(2000)
 
 UserManagementTestPage_21(){
  
-  cy.get(this.locators.ClickOnUserManagement).click();
+ cy.contains("User Management").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnBulkUpload).click();
+  cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
   cy.wait(1000);
@@ -993,9 +993,9 @@ UserManagementTestPage_21(){
 
 UserManagementTestPage_22(){
  
-  cy.get(this.locators.ClickOnUserManagement).click();
+ cy.contains("User Management").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnBulkUpload).click();
+  cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickonEnableDisableUsersStatus).click();
   cy.wait(1000);
@@ -1007,7 +1007,7 @@ UserManagementTestPage_22(){
 }
 UserManagementTestPage_23(){
 
-    cy.get(this.locators.ClickOnUserManagement).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickOnAgentEmpanel).click();
     cy.wait(1000);
@@ -1024,7 +1024,7 @@ UserManagementTestPage_23(){
 
   UserManagementTestPage_25(){
 
-    cy.get(this.locators.ClickOnUserManagement).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickOnAgentEmpanel).click();
     cy.wait(1000);
@@ -1043,7 +1043,7 @@ UserManagementTestPage_23(){
 
 UserManagementTestPage_24(){
 
-  cy.get(this.locators.ClickOnUserManagement).click();
+ cy.contains("User Management").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickOnAgentEmpanel).click();
   cy.wait(1000);
@@ -1061,7 +1061,7 @@ UserManagementTestPage_24(){
 
 UserManagementTestPage_26(){
 
-  cy.get(this.locators.ClickOnUserManagement).click();
+ cy.contains("User Management").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickOnAgentEmpanel).click();
   cy.wait(1000);

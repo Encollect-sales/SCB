@@ -45,7 +45,7 @@ describe('Trails - Verify validation when an invalid Agreement ID is entered. ',
 
             const data = {
                 'A2':'8768657',
-                'B2': '10031',
+                'B2': '67609',
                 'C2': 'yes',
                 'D2': 'PTP',
                 'E2': 'PTP',

@@ -5119,16 +5119,16 @@ SearchAgent80() {
     cy.wait(2000);
     cy.get(this.locators.click).click();
     cy.wait(2000);
-    cy.get('[class="ng-star-inserted"]').should(
+    cy.get(':nth-child(2) > .form-error > div').should(
       "contain.text",
-      " First name is required "
+      "First name is required"
     )
     
 
     cy.wait(1000);
     cy.get(this.locators.fname).type('Darshana@');
     cy.wait(2000);
-    cy.get('[class="ng-star-inserted"]').should(
+    cy.get(':nth-child(2) > .form-error > div').should(
       "contain.text",
       " Please enter characters only. "
     )
@@ -5144,7 +5144,7 @@ SearchAgent80() {
     cy.wait(2000);
     cy.get(this.locators.fname).type('a');
     cy.wait(2000);
-    cy.get('[class="ng-star-inserted"]').should(
+    cy.get(':nth-child(2) > .form-error > div').should(
       "contain.text",
       " Name must be at least 2 characters long. "
     )
@@ -5163,7 +5163,7 @@ SearchAgent80() {
     cy.wait(2000);
     cy.get(this.locators.dialer_id).type('1234@#');
     cy.wait(1000);
-    cy.get('.form-error > .ng-star-inserted').should(
+    cy.get(':nth-child(2) > .form-error > div').should(
       "contain.text",
       " Please enter Valid Dialer ID "
     )
@@ -5285,9 +5285,9 @@ SearchAgent80() {
     cy.wait(2000);
     cy.get("#product-scope-HL01").click();
     cy.wait(2000);
-    cy.get(".col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container").type("Loan Products");
+    cy.get(".col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container").type("Loans Products");
     cy.wait(2000);
-    cy.contains(".ng-option-label","Loan Products").click({ force: true });
+    cy.contains(".ng-option-label","Loans Products").click({ force: true });
     cy.wait(2000);
     cy.get('[heading="Bucket"] > .panel > .panel-heading').click();
     cy.wait(500);
@@ -5375,9 +5375,9 @@ SearchAgent80() {
     cy.wait(2000);
     cy.get("#product-scope-HL01").click();
     cy.wait(2000);
-    cy.get(".col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container").type("Loan Products");
+    cy.get(".col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container").type("Loans Products");
     cy.wait(2000);
-    cy.contains(".ng-option-label","Loan Products").click({ force: true });
+    cy.contains(".ng-option-label","Loans Products").click({ force: true });
     cy.wait(2000);
     cy.get('[heading="Bucket"] > .panel > .panel-heading').click();
     cy.wait(500);
@@ -5435,7 +5435,7 @@ SearchAgent80() {
     cy.wait(2000);
     cy.get('#btn-save').click();
     cy.wait(2000);
-    cy.get('[class="ng-star-inserted"]').should(
+    cy.get('.form-error > div').should(
       "contain.text",
       " Last name is required "
     )
@@ -5448,7 +5448,7 @@ SearchAgent80() {
     cy.wait(1000);
     cy.get(this.locators.lname).type('Darshana@');
     cy.wait(2000);
-    cy.get('[class="ng-star-inserted"]').should(
+    cy.get('.form-error > div').should(
       "contain.text",
       " Please enter characters only. "
     )
@@ -5480,7 +5480,7 @@ SearchAgent80() {
     cy.wait(2000);
     cy.get(this.locators.click).click();
     cy.wait(2000);
-    cy.get('[class="ng-star-inserted"]').should(
+    cy.get('.form-error > div').should(
       "contain.text",
       " Agency name is required "
     )
@@ -5500,6 +5500,8 @@ SearchAgent80() {
     cy.get(':nth-child(4) > .nav-link > span').click({force:true});
     cy.wait(2000);
     cy.get('#emailId').type('darshan@gmail');
+    cy.wait(2000);
+    cy.get(':nth-child(11) > .d-flex > .btn').click({force:true});
     cy.wait(2000);
     cy.contains("Enter a valid email").should("be.visible");
     
@@ -5522,7 +5524,7 @@ SearchAgent80() {
     cy.wait(2000);
     cy.get(this.locators.Landmark).click();
     cy.wait(2000);
-    cy.get('[class="ng-star-inserted"]').should("contain.text"," Pin Code is required ")
+    cy.get('.form-error > div').should("contain.text"," Pin Code is required ")
     // cy.get(this.locators.Pinerror).then(($el) => {
     //   const text = $el.text();
     //   cy.log(text);
@@ -5530,7 +5532,7 @@ SearchAgent80() {
     cy.wait(2000);
     cy.get(this.locators.PostalCode).type("@");
     cy.wait(2000);
-    cy.get('[class="ng-star-inserted"]').should("contain.text"," Enter valid 6 digit pincode ")
+    cy.get('.form-error > div').should("contain.text"," Enter valid 6 digit pincode ")
     // cy.get(this.locators.Pinerror).then(($el) => {
     //   const text = $el.text();
     //   cy.log(text);
@@ -5538,7 +5540,7 @@ SearchAgent80() {
     cy.wait(2000);
     cy.get(this.locators.PostalCode).type("122");
     cy.wait(2000);
-    cy.get('[class="ng-star-inserted"]').should("contain.text"," Enter valid 6 digit pincode ")
+    cy.get('.form-error > div').should("contain.text"," Enter valid 6 digit pincode ")
   //   cy.get(this.locators.Pinerror).then(($el) => {
   //     const text = $el.text();
   //     cy.log(text);
@@ -5557,7 +5559,7 @@ SearchAgent80() {
     cy.wait(2000);
     cy.get(this.locators.dob).click();
     cy.wait(2000);
-    cy.get('.form-error > .ng-star-inserted').should("contain.text"," Email is required ")
+    cy.get('.form-error > div').should("contain.text"," Email is required ")
     // cy.get(this.locators.mailerror).then(($el) => {
     //   const text = $el.text();
     //   cy.log(text);
@@ -5565,7 +5567,7 @@ SearchAgent80() {
     cy.wait(2000);
     cy.get(this.locators.mail).type("abc@yop.c", { force: true });
     cy.wait(2000);
-    cy.get('.form-error > .ng-star-inserted').should("contain.text"," Enter a valid email ")
+    cy.get('.form-error > div').should("contain.text"," Enter a valid email ")
     // cy.get(this.locators.mailerror).then(($el) => {
     //   const text = $el.text();
     //   cy.log(text);
@@ -5632,8 +5634,10 @@ SearchAgent80() {
     cy.wait(2000);
     cy.get('#mobileNumberId').type("@#$%");
     cy.wait(2000);
-    cy.contains("Only numbers allowed and must be 10 digits").should("be.visible");
     cy.wait(2000);
+    cy.get('body').click(0, 0);
+    cy.contains("Only numbers allowed and must be 10 digits").scrollIntoView().should("be.visible");
+    
 
    
     
@@ -5659,7 +5663,7 @@ SearchAgent80() {
     // Type invalid input (special characters or alphabets) into DRA Unique Registration Number field
     cy.get(this.locators.DRAUnique).type('123@');
   
-    cy.get('[class="ng-star-inserted"]').should("contain.text"," Please enter Valid DRA Unique Registration Number. ")
+    cy.get('.form-error > div').should("contain.text"," Please enter Valid DRA Unique Registration Number. ")
     // cy.get(this.locators.DRAUniquegname_errmsg).then(($el) => {
     //   const text = $el.text();
     //   cy.log(text);
@@ -5730,7 +5734,7 @@ UserManagement_888(){
   cy.wait(800);
   cy.get(this.locators.LandMark).click({force: true});
   cy.wait(800);
-  cy.get('[class="ng-star-inserted"]').should("contain.text"," Address is required ")
+  cy.get('.form-error > div').should("contain.text"," Address is required ")
     // cy.get(this.locators.Addressmsg_errmsg).then(($el) => {
     //   const text = $el.text();
     //   cy.log(text);
@@ -5752,7 +5756,7 @@ UserManagement_888(){
     cy.wait(800);
     
 
-    cy.get('[class="ng-star-inserted"]').should("contain.text"," State is required ")
+    cy.get('.form-error > div').should("contain.text"," State is required ")
     // cy.get(this.locators.Addressmsg_errmsg1).then(($el) => {
     //   const text = $el.text();
     //   cy.log(text);
@@ -5772,7 +5776,7 @@ UserManagement_888(){
     cy.wait(800);
     cy.get(this.locators.LocalReAdress).click();
     cy.wait(800);
-    cy.get('[class="ng-star-inserted"]').should("contain.text"," City is required ")
+    cy.get('.form-error > div').should("contain.text"," City is required ")
     // cy.get(this.locators.errmsg2).then(($el) => {
     //   const text = $el.text();
     //   cy.log(text);
@@ -5807,6 +5811,7 @@ UserManagement_888(){
 
     cy.get("#areaCodeId").type("@");
     cy.wait(2000);
+    cy.get('body').click(0, 0);
    cy.contains("Only numbers are allowed").should("be.visible");
  
 
@@ -5828,6 +5833,7 @@ UserManagement_888(){
     cy.wait(2000);
     cy.get(this.locators.loc_number).type("@&*$%#");
     cy.wait(2000);
+     cy.get('body').click(0, 0);
     cy.contains("Only numbers allowed and must be 10 digits").should("be.visible");
     cy.wait(2000);
     cy.get(this.locators.loc_number).clear();
@@ -5838,6 +5844,7 @@ UserManagement_888(){
     cy.wait(2000);
     cy.get(this.locators.loc_number).type("23456");
     cy.wait(2000);
+     cy.get('body').click(0, 0);
     cy.contains("Only numbers allowed and must be 10 digits").should("be.visible");
 
    }
@@ -5982,7 +5989,7 @@ UserManagement_888(){
     cy.get('#fileTypeStaff').click();
     //cy.get(this.locators.TemplateForUpload).select("Template for Staff");
     cy.wait(2000);
-    cy.get(this.locators.AgentTemplateDownload).click();
+    cy.get("#downloadStaffTemplateBtn").click();
     cy.wait(2000);
     cy.get('#uploadFileTypeStaff').click();
     cy.wait(2000);
@@ -6010,7 +6017,7 @@ UserManagement_888(){
     cy.get('#fileTypeStaff').click();
     //cy.get(this.locators.TemplateForUpload).select("Template for Staff");
     cy.wait(2000);
-    cy.get(this.locators.AgentTemplateDownload).click();
+    cy.get("#downloadStaffTemplateBtn").click();
     cy.wait(2000);
     cy.get('#uploadFileTypeStaff').click();
     cy.wait(2000);
@@ -6136,9 +6143,9 @@ UserManagement_888(){
     cy.wait(2000);
     cy.get("#product-scope-HL01").click();
     cy.wait(2000);
-    cy.get(".col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container").type("Loan Products");
+    cy.get(".col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container").type("Loans Products");
     cy.wait(2000);
-    cy.contains(".ng-option-label","Loan Products").click({ force: true });
+    cy.contains(".ng-option-label","Loans Products").click({ force: true });
     cy.wait(2000);
     cy.get('[heading="Bucket"] > .panel > .panel-heading').click();
     cy.wait(500);
@@ -6351,9 +6358,9 @@ AgentEnpalmentRequest905(){
     cy.wait(2000);
     cy.get("#product-scope-HL01").click();
     cy.wait(2000);
-    cy.get(".col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container").type("Loan Products");
+    cy.get(".col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container").type("Loans Products");
     cy.wait(2000);
-    cy.contains(".ng-option-label","Loan Products").click({ force: true });
+    cy.contains(".ng-option-label","Loans Products").click({ force: true });
     cy.wait(2000);
     cy.get('[heading="Bucket"] > .panel > .panel-heading').click();
     cy.wait(500);
@@ -6371,29 +6378,7 @@ AgentEnpalmentRequest905(){
     cy.wait(500);
     cy.get(":nth-child(7) > .nav-link > span").click();
     cy.wait(2000);
-    // cy.get("#areaPin").type("845438");
-    // cy.wait(2000);
-
-    // cy.get(':nth-child(8) > .nav-link > span').click();
-    // cy.wait(2000);
-    // cy.get("#maxAccounts").type("2");
-    // cy.wait(2000);
-
-    // cy.get(':nth-child(8) > .nav-link > span').click();
-    // cy.wait(2000);
-    // cy.get("#maxAccounts").type("2").should('be.visible');
-    // cy.wait(2000);
-    // cy.get(':nth-child(9) > .nav-link > span').click();
-    // cy.wait(2000);
-    // cy.get("#expYears").type("2").should('be.visible');
-    // cy.wait(2000);
-    // cy.get("select[name='cutomerPersona']").select("Self-cure customer").should('be.visible');
-    // cy.wait(2000);
-    // cy.get('#lanKnown').select("Hindi").should('be.visible');
-    // cy.wait(2000);
-    // cy.get('#perBand').select("LH").should('be.visible');
-    // cy.wait(2000);
-
+   
 
     //#############################Document&Details######################################### 
     cy.get(':nth-child(7) > .nav-link > span').click().should('be.visible');
@@ -6463,7 +6448,9 @@ cy.contains("Agent Profile has been Submitted for Approval.").should("be.visible
 
 AgentEnpalmentRequest906(){
   cy.wait(2000);
-  cy.get(this.locators.agentEmpanelmentRequest).click({force: true} );
+  cy.get(this.locators.usermanagement).click({force:true});
+  cy.wait(2000);
+  cy.get(this.locators.agentempanelment).click({force: true} );
   cy.wait(2000);
   cy.get(this.locators.searchagent).click().should("be.visible");
   cy.wait(2000);
@@ -6477,10 +6464,11 @@ AgentEnpalmentRequest906(){
 }
 
 AgentEnpalmentRequest907(){
+   cy.wait(2000);
+
+  cy.get(this.locators.agentempanelmentnew).click({force: true} );
   cy.wait(2000);
-  cy.get(this.locators.agentEmpanelmentRequest).click({force: true} );
-  cy.wait(2000);
-  cy.get(this.locators.searchagent).click().should("be.visible");
+  cy.get(this.locators.searchagentnew).click().should("be.visible");
   cy.wait(2000);
   cy.get(this.locators.SelectEPStatus).select("Approved").should("be.visible");
   cy.wait(2000);
@@ -6499,9 +6487,10 @@ AgentEnpalmentRequest907(){
 
 AgentEnpalmentRequest908(){
   cy.wait(2000);
-  cy.get(this.locators.agentEmpanelmentRequest).click({force: true} );
+   cy.get(this.locators.agentempanelmentnew).click({force: true} );
   cy.wait(2000);
-  cy.get(this.locators.searchagent).click().should("be.visible");
+  cy.get(this.locators.searchagentnew).click().should("be.visible");
+  cy.wait(2000);
   cy.wait(2000);
   cy.get(this.locators.SearcButton).click();
   cy.wait(2000);
@@ -6511,9 +6500,10 @@ AgentEnpalmentRequest908(){
 
 AgentEnpalmentRequest909(){
   cy.wait(2000);
-  cy.get(this.locators.agentEmpanelmentRequest).click({force: true} );
+    cy.get(this.locators.agentempanelmentnew).click({force: true} );
   cy.wait(2000);
-  cy.get(this.locators.searchagent).click().should("be.visible");
+  cy.get(this.locators.searchagentnew).click().should("be.visible");
+  cy.wait(2000);
   cy.wait(2000);
   cy.get(this.locators.EnterAgentName).type("a")
   cy.wait(2000);
@@ -6524,9 +6514,10 @@ AgentEnpalmentRequest909(){
 }
 AgentEnpalmentRequest910(){
   cy.wait(2000);
-  cy.get(this.locators.agentEmpanelmentRequest).click({force: true} );
+  cy.get(this.locators.agentempanelmentnew).click({force: true} );
   cy.wait(2000);
-  cy.get(this.locators.searchagent).click().should("be.visible");
+  cy.get(this.locators.searchagentnew).click().should("be.visible");
+  cy.wait(2000);
   cy.wait(2000);
   cy.get(this.locators.EnterAgentName).type("@#$%^@#$%")
   cy.wait(2000);
@@ -6538,9 +6529,9 @@ AgentEnpalmentRequest910(){
 
 AgentEnpalmentRequest911(){
   cy.wait(2000);
-  cy.get(this.locators.agentEmpanelmentRequest).click({force: true} );
+   cy.get(this.locators.agentempanelmentnew).click({force: true} );
   cy.wait(2000);
-  cy.get(this.locators.searchagent).click().should("be.visible");
+  cy.get(this.locators.searchagentnew).click().should("be.visible");
   cy.wait(2000);
   cy.get(this.locators.phonenumber).type("123456789876")
   cy.wait(2000);

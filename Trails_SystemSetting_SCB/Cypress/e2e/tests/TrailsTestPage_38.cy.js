@@ -45,7 +45,7 @@ describe('Trails - Action Code with Wrong / Invalid Value', () => {
 
             const data = {
                 'A2':'18765',
-                'B2': '10031',
+                'B2': '67609',
                 'C2': 'yes',
                 'D2': 'Kamna',
                 'E2': 'PTP',

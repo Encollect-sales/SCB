@@ -8,7 +8,7 @@ class ReportsPage {
   }
 
   ReportTestPage_01(){
-    cy.get('a[title="Reports"]').click({force:true});
+    cy.contains("Reports").scrollIntoView.click({force:true});
     cy.wait(2000);
     cy.get('a[href="#/reports/communication-report"][title="Communication History Report"]').click({force:true});
     cy.wait(2000);
@@ -29,7 +29,7 @@ class ReportsPage {
 
   }
 ReportTestPage_02(){
-  cy.get('a[title="Reports"]').click({force:true});
+  cy.contains("Reports").scrollIntoView.click({force:true});
   cy.wait(2000);
   cy.get('a[href="#/reports/communication-report"][title="Communication History Report"]').click({force:true});
   cy.wait(2000);

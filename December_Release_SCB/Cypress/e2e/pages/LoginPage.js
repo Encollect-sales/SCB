@@ -81,7 +81,7 @@ Clikcompanyname() {
       this.fillPassword(password);
       this.submit();
       cy.wait(3000);
-      this.enterotp();
+      // this.enterotp();
       // this.verifyLoginSuccess();
   }
 

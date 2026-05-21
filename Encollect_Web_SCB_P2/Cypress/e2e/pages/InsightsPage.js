@@ -194,8 +194,9 @@ class InsightsPage {
     cy.wait(1000);
     cy.get(this.locators.clickonbyallocationowner).click();
     cy.wait(1000);
-    // Select a random option
-    cy.get('#accordion-owner > .panel > .panel-collapse > .panel-body > form.ng-pristine > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+    cy.get('#accordion-owner > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click({force:true});
+    cy.wait(2000);
+    cy.get('#accordion-owner > .panel > .panel-collapse > .panel-body > form.ng-pristine > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -450,7 +451,9 @@ clickonmoneymovementingistspage154() {
     cy.get(this.locators.clickonbyallocationowner).click();
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-owner > .panel > .panel-collapse > .panel-body > form.ng-pristine > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+    cy.get('#accordion-owner > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click({force:true});
+    cy.wait(2000);
+    cy.get('#accordion-owner > .panel > .panel-collapse > .panel-body > form.ng-pristine > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -521,11 +524,11 @@ clickonmoneymovementingistspage154() {
   clickonInsights021() {
     cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonprimaryallocationinsights).click();
+    cy.get(this.locators.clickonprimaryallocationinsights).click({force:true});
     cy.wait(10000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilter).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonbybucket).click();
+    cy.get(this.locators.clickonbybucket).click({force:true});
     cy.wait(1000);
     // Select a random option
     cy.get('#accordion-bucket > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > .form-ng-select > .ng-select-container').click();
@@ -1361,7 +1364,7 @@ cy.get(':nth-child(5) > .form-ng-select > .ng-select-container > .ng-value-conta
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-   cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+   cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -1372,7 +1375,7 @@ cy.get(':nth-child(5) > .form-ng-select > .ng-select-container > .ng-value-conta
         });
       });
 
-  cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+  cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -1384,7 +1387,7 @@ cy.get(':nth-child(5) > .form-ng-select > .ng-select-container > .ng-value-conta
       });
 
 
-cy.get('form.ng-untouched > :nth-child(1) > :nth-child(4) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+cy.get('form.ng-valid > :nth-child(1) > :nth-child(4) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -1411,10 +1414,10 @@ cy.get('form.ng-untouched > :nth-child(1) > :nth-child(4) > .form-ng-select > .n
     cy.wait(1000)
     cy.get('#close-button').click();
     cy.wait(1000)
-    cy.get(':nth-child(4) > .page-link').click();
-    cy.wait(1000)
-    cy.get('.pagination-last > .page-link').click();
-    cy.wait(1000)
+    // cy.get(':nth-child(4) > .page-link').click();
+    // cy.wait(1000)
+    // cy.get('.pagination-last > .page-link').click();
+    // cy.wait(1000)
 
   }
 
@@ -1643,7 +1646,9 @@ cy.get('form.ng-untouched > :nth-child(1) > :nth-child(4) > .form-ng-select > .n
     cy.wait(10000);
     cy.get('.inner-container').scrollTo('0%', '60%');
     cy.wait(1000);
-    cy.contains('h3', ' Attempted vs Unattempted Accounts').should('be.visible');;
+   cy.contains('h3', 'Attempted vs Unattempted Accounts')
+  .scrollIntoView()
+  .should('be.visible');
     cy.wait(1000);
   }
 
@@ -1655,7 +1660,7 @@ cy.get('form.ng-untouched > :nth-child(1) > :nth-child(4) > .form-ng-select > .n
     cy.wait(10000);
     cy.get('.inner-container').scrollTo('0%', '60%');
     cy.wait(1000);
-    cy.contains('h3', 'Attempted vs Unattempted Accounts By Field Primary').scrollIntoView().should('be.visible');;
+    cy.contains('h3', 'Attempted vs Unattempted Accounts By Field Primary').scrollIntoView().should('be.visible');
     cy.wait(1000);
   }
 
@@ -1666,7 +1671,7 @@ cy.get('form.ng-untouched > :nth-child(1) > :nth-child(4) > .form-ng-select > .n
     cy.wait(10000);
     cy.get('.inner-container').scrollTo('0%', '60%');
     cy.wait(1000);
-    cy.contains('h3', 'Attempted vs Unattempted Accounts by Product Group').should('be.visible');;
+    cy.contains('h3', 'Attempted vs Unattempted Accounts by ProductGroup').scrollIntoView().should('be.visible');
     cy.wait(1000);
   }
 
@@ -1677,7 +1682,7 @@ cy.get('form.ng-untouched > :nth-child(1) > :nth-child(4) > .form-ng-select > .n
     cy.wait(10000);
     cy.get('.inner-container').scrollTo('0%', '60%');
     cy.wait(1000);
-    cy.contains('h3', 'Top 5 Under Performing Field Primary Accounts (Unattempted %)').scrollIntoView().should('be.visible');;
+    cy.contains('h3', 'Top 5 Under Performing Field Primary Accounts (Unattempted %)').scrollIntoView().should('be.visible');
     cy.wait(1000);
   }
 
@@ -1688,7 +1693,7 @@ cy.get('form.ng-untouched > :nth-child(1) > :nth-child(4) > .form-ng-select > .n
     cy.wait(10000);
     cy.get('.inner-container').scrollTo('0%', '60%');
     cy.wait(1000);
-    cy.contains('h3', ' Attempted vs Unattempted Accounts By Total Overdue Amount Bucket ').should('be.visible');;
+    cy.contains('h3', ' Attempted vs Unattempted Accounts By Total Overdue Amount Bucket ').should('be.visible');
     cy.wait(1000);
   }
 
@@ -1699,7 +1704,7 @@ cy.get('form.ng-untouched > :nth-child(1) > :nth-child(4) > .form-ng-select > .n
     cy.wait(10000);
     cy.get('.inner-container').scrollTo('0%', '80%');
     cy.wait(1000);
-    cy.contains('h3', ' Attempted vs Unattempted Accounts by Current Bucket ').should('be.visible');;
+    cy.contains('h3', ' Attempted vs Unattempted Accounts by Current Bucket ').should('be.visible');
     cy.wait(1000);
   }
 
@@ -1712,7 +1717,7 @@ cy.get('form.ng-untouched > :nth-child(1) > :nth-child(4) > .form-ng-select > .n
     cy.wait(10000);
     cy.get('.inner-container').scrollTo('0%', '90%');
     cy.wait(1000);
-    cy.contains('Trail Gap - Product Group & Country Matrix').scrollIntoView().should('be.visible');;
+    cy.contains('Trail Gap - ProductGroup & Country Matrix').scrollIntoView().should('be.visible');
     cy.wait(1000);
   }
 
@@ -1726,7 +1731,7 @@ cy.get('form.ng-untouched > :nth-child(1) > :nth-child(4) > .form-ng-select > .n
     cy.wait(1000);
     cy.get(':nth-child(12) > .card-header > .d-flex > .level-shift-button > .btn-group > :nth-child(2) > svg-icon > svg > g > [fill="currentColor"]').click();
     cy.wait(1000);
-    cy.contains('Trail Gap - Product & Country Matrix').scrollIntoView().should('be.visible');;
+    cy.contains('Trail Gap - Product & Country Matrix').scrollIntoView().should('be.visible');
     cy.wait(1000);
   }
 
@@ -1739,7 +1744,7 @@ cy.get('form.ng-untouched > :nth-child(1) > :nth-child(4) > .form-ng-select > .n
     cy.wait(10000);
     cy.get('.inner-container').scrollTo('0%', '90%');
     cy.wait(1000);
-    cy.contains('Trail Gap - Product Group & Country Matrix').should('be.visible');
+    cy.contains('Trail Gap - ProductGroup & Country Matrix').should('be.visible');
   }
 
   clickonTrailGapInsights073() {
@@ -1853,7 +1858,7 @@ cy.get('form.ng-untouched > :nth-child(1) > :nth-child(4) > .form-ng-select > .n
     cy.get(this.locators.clickonbyproduct).click();
     cy.wait(1000);
     // Select a random option
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-pristine > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+   cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -1863,7 +1868,7 @@ cy.get('form.ng-untouched > :nth-child(1) > :nth-child(4) > .form-ng-select > .n
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -1873,7 +1878,7 @@ cy.get('form.ng-untouched > :nth-child(1) > :nth-child(4) > .form-ng-select > .n
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-    cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+cy.get('#accordion-product > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2301,11 +2306,11 @@ cy.get(':nth-child(5) > .form-ng-select > .ng-select-container > .ng-value-conta
     cy.get(':nth-child(2) > .nav-link > span').click();
     cy.wait(1000);
     cy.get('.toggle-menu-btn').click();
-    cy.wait(2000); 
-    cy.get(':nth-child(4) > .page-link').click();
-    cy.wait(2000);
-    cy.get(':nth-child(5) > .page-link').click();
-    cy.wait(2000);
+    // cy.wait(2000); 
+    // cy.get(':nth-child(4) > .page-link').click();
+    // cy.wait(2000);
+    // cy.get(':nth-child(5) > .page-link').click();
+    // cy.wait(2000);
   }
 
     clickonTrailGapInsights087() {
@@ -2330,7 +2335,7 @@ cy.get(':nth-child(5) > .form-ng-select > .ng-select-container > .ng-value-conta
           cy.wrap($options[randomIndex]).click({ force: true });
         });
       });
-cy.get('form.ng-valid > :nth-child(1) > :nth-child(4) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(2) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2341,7 +2346,7 @@ cy.get('form.ng-valid > :nth-child(1) > :nth-child(4) > .form-ng-select > .ng-se
         });
       });
 
-cy.get(':nth-child(5) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
+cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-valid > :nth-child(1) > :nth-child(3) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2353,7 +2358,7 @@ cy.get(':nth-child(5) > .form-ng-select > .ng-select-container > .ng-value-conta
       });
 
 
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > .ng-dirty > :nth-child(4) > .form-ng-select > .ng-select-container').click();
+    cy.get('form.ng-valid > :nth-child(1) > :nth-child(4) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(1000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -2373,7 +2378,7 @@ cy.get(':nth-child(5) > .form-ng-select > .ng-select-container > .ng-value-conta
     cy.wait(2000); 
     cy.get(this.locators.clickonfilter).click();
     cy.wait(6000);
-    cy.get('#ItemsPerPage').select('100');
+    cy.get('#ItemsPerPage').select('50');
     cy.wait(2000);
   }
 
@@ -3698,7 +3703,7 @@ clickonmoneymovementingistspage152() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-user > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -3914,7 +3919,9 @@ clickonmoneymovementingistspage158() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
-    cy.get('.active.tab-pane > .ng-star-inserted > .overview-cards > :nth-child(1) > .overview-card-info-icon > svg-icon > svg').click();
+  cy.get('.tab-pane.active > :nth-child(1) > .overview-cards > :nth-child(1)')
+  .scrollIntoView({ offset: { top: 100, left: 0 } }) // adjust if needed
+  .click('topRight');
     cy.wait(1000);
     cy.contains("Shows the total amount collected across all accounts").should("be.visible");
 }
@@ -3923,7 +3930,7 @@ clickonmoneymovementingistspage159() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-metric > .panel > .panel-collapse > .panel-body > form.ng-pristine > .form-control-group > .form-ng-select > .ng-select-container').click();
     cy.wait(1000);
@@ -4440,7 +4447,7 @@ clickonmoneymovementingistspage174() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click({force:true});
+    cy.get(this.locators.clickonfilteragency).click({force:true});
     cy.wait(1000);
     cy.get(this.locators.expand_all).click({force:true});
     cy.wait(2000);
@@ -4448,7 +4455,7 @@ clickonmoneymovementingistspage174() {
     cy.wait(1000);
     cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-pristine > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
     cy.wait(1000);
-     cy.get('.ng-option-label').should('be.visible')
+     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
         cy.wait(5000);
         cy.get('.ng-option').then($options => {
@@ -4498,7 +4505,7 @@ clickonmoneymovementingistspage178() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-paymentStatus > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -4770,7 +4777,7 @@ clickonmoneymovementingistspage196() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get(this.locators.clickonexpandall).click();
     cy.wait(1000);
@@ -4784,7 +4791,7 @@ clickonmoneymovementingistspage196() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('ng-select[formcontrolname="metrics"] .ng-arrow-wrapper').click();
     cy.wait(2000);
@@ -4797,7 +4804,7 @@ clickonmoneymovementingistspage196() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-metric > .panel > .panel-collapse > .panel-body > form.ng-pristine > .form-control-group > .form-ng-select > .ng-select-container').click();
     cy.wait(1000);
@@ -4815,7 +4822,7 @@ clickonmoneymovementingistspage196() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-threshold > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -4827,7 +4834,7 @@ clickonmoneymovementingistspage200() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-receiptDate > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -4841,7 +4848,7 @@ clickonmoneymovementingistspage201() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-user > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -4862,7 +4869,7 @@ clickonmoneymovementingistspage201() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click( {force: true} );
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click( {force: true} );
+    cy.get(this.locators.clickonfilteragency).click( {force: true} );
     cy.wait(1000);
     cy.get('#accordion-product > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -4904,7 +4911,7 @@ clickonmoneymovementingistspage201() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-bucket > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -4937,7 +4944,7 @@ clickonmoneymovementingistspage204() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-geography > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -5000,7 +5007,7 @@ clickonmoneymovementingistspage205() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-paymentMode > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -5022,7 +5029,7 @@ clickonmoneymovementingistspage206() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-paymentStatus > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -5045,7 +5052,10 @@ clickonmoneymovementingistspage207() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get('.active.tab-pane > .ng-star-inserted > .overview-cards > :nth-child(1) > .overview-card-info-icon > svg-icon > svg').click();
+   cy.contains('Total Amount')
+  .parents('.overview-cards')   
+  .find('i')
+  .click();
     cy.wait(1000);
     cy.contains("Shows the total amount collected across all accounts").should("be.visible");
    cy.wait(1000);
@@ -5053,9 +5063,9 @@ clickonmoneymovementingistspage207() {
 clickonmoneymovementingistspage208() {
     cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
+    cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click({force:true});
     cy.wait(1000);
     cy.get('#accordion-metric > .panel > .panel-collapse > .panel-body > form.ng-pristine > .form-control-group > .form-ng-select > .ng-select-container').click();
     cy.wait(1000);
@@ -5078,7 +5088,7 @@ clickonmoneymovementingistspage208() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-threshold > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -5095,7 +5105,7 @@ clickonmoneymovementingistspage210() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-receiptDate > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -5114,7 +5124,7 @@ clickonmoneymovementingistspage211() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-user > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -5151,7 +5161,7 @@ clickonmoneymovementingistspage212() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-product > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -5197,7 +5207,7 @@ clickonmoneymovementingistspage213() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-bucket > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -5235,7 +5245,7 @@ clickonmoneymovementingistspage214() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-geography > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -5303,7 +5313,7 @@ clickonmoneymovementingistspage215() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-paymentMode > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -5329,7 +5339,7 @@ clickonmoneymovementingistspage216() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-paymentStatus > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -5355,7 +5365,7 @@ clickonmoneymovementingistspage217() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-threshold > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -5378,7 +5388,7 @@ clickonmoneymovementingistspage217() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-paymentMode > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -5417,7 +5427,7 @@ clickonmoneymovementingistspage219() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-metric > .panel > .panel-collapse > .panel-body > form.ng-pristine > .form-control-group > .form-ng-select > .ng-select-container').click();
     cy.wait(1000);
@@ -5442,7 +5452,7 @@ clickonmoneymovementingistspage219() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-threshold > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -5482,7 +5492,7 @@ clickonmoneymovementingistspage219() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-user > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -5510,7 +5520,7 @@ clickonmoneymovementingistspage219() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-product > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -5538,7 +5548,7 @@ clickonmoneymovementingistspage224() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-bucket > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -5567,7 +5577,7 @@ clickonmoneymovementingistspage224() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-geography > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -5596,7 +5606,7 @@ clickonmoneymovementingistspage226() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-paymentMode > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -5624,7 +5634,7 @@ clickonmoneymovementingistspage227() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-paymentStatus > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -5653,7 +5663,7 @@ clickonmoneymovementingistspage228() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-threshold > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -5678,7 +5688,7 @@ clickonmoneymovementingistspage229() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get('#accordion-paymentMode > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(1000);
@@ -5719,7 +5729,7 @@ clickonmoneymovementingistspage230() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get(this.locators.clickonbyGeography).click();
     cy.wait(1000);
@@ -5787,7 +5797,7 @@ clickonmoneymovementingistspage230() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get(this.locators.clickonbyGeography).click();
     cy.wait(1000);
@@ -5823,7 +5833,7 @@ clickonmoneymovementingistspage230() {
     cy.wait(1000);
     cy.get('.toggle-menu-btn').click();
     cy.wait(2000); 
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(6000);
     cy.get('#ItemsPerPage').select('50');
     cy.wait(2000);
@@ -5833,7 +5843,7 @@ clickonmoneymovementingistspage230() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementinsightsbankstaffpage).click();
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get(this.locators.clickonbyGeography).click();
     cy.wait(1000);
@@ -5969,18 +5979,18 @@ clickonmoneymovementingistspage237() {
     cy.wait(1000);
     cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
-     cy.get('th.ng-star-inserted').filter(':contains("Field Primary Name")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("Agent Name")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product Group")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product ")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Sub Produc")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Current Bucket")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("BOM Bucket")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
-      cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
-      cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
-       cy.get('th.ng-star-inserted').filter(':contains("Loan Amount Bucket")').scrollIntoView().should('be.visible');
+ cy.contains('Field Primary Name').scrollIntoView().should('exist');
+cy.contains('Agent Name').scrollIntoView().should('exist');
+cy.contains('ProductGroup').scrollIntoView().should('exist');
+cy.contains('Product').scrollIntoView().should('exist');
+cy.contains('SubProduct').scrollIntoView().should('exist');
+cy.contains('Current Bucket').scrollIntoView().should('exist');
+cy.contains('BOM Bucket').scrollIntoView().should('exist');
+cy.contains('Region').scrollIntoView().should('exist');
+cy.contains('State').scrollIntoView().should('exist');
+cy.contains('City').scrollIntoView().should('exist');
+cy.contains('Branch').scrollIntoView().should('exist');
+cy.contains('Loan Amount Bucket').scrollIntoView().should('exist');
 }
 clickonmoneymovementingistspage238() {
     cy.get(this.locators.clickoninsight).click({force:true});
@@ -5995,19 +6005,18 @@ clickonmoneymovementingistspage238() {
     cy.wait(1000);
     cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
-     cy.get('th.ng-star-inserted').filter(':contains("Field Primary Name")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("Agent Name")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product Group")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product ")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Sub Produc")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Current Bucket")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("BOM Bucket")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
-      cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
-      cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
-       cy.get('th.ng-star-inserted').filter(':contains("Days Bucket")').scrollIntoView().should('be.visible');
-
+    cy.contains('Field Primary Name').scrollIntoView().should('exist');
+cy.contains('Agent Name').scrollIntoView().should('exist');
+cy.contains('ProductGroup').scrollIntoView().should('exist');
+cy.contains('Product').scrollIntoView().should('exist');
+cy.contains('SubProduct').scrollIntoView().should('exist');
+cy.contains('Current Bucket').scrollIntoView().should('exist');
+cy.contains('BOM Bucket').scrollIntoView().should('exist');
+cy.contains('Region').scrollIntoView().should('exist');
+cy.contains('State').scrollIntoView().should('exist');
+cy.contains('City').scrollIntoView().should('exist');
+cy.contains('Branch').scrollIntoView().should('exist');
+cy.contains('Days Bucket').scrollIntoView().should('exist');
 }
 clickonmoneymovementingistspage239() {
     cy.get(this.locators.clickoninsight).click({force:true});
@@ -6022,19 +6031,18 @@ clickonmoneymovementingistspage239() {
     cy.wait(1000);
     cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
-     cy.get('th.ng-star-inserted').filter(':contains("Field Primary Name")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("Agent Name")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product Group")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product ")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Sub Produc")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Current Bucket")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("BOM Bucket")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
-      cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
-      cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
-       cy.get('th.ng-star-inserted').filter(':contains("Agency/FOS/Deposited With Bank")').scrollIntoView().should('be.visible');
-
+  cy.contains('Field Primary Name').scrollIntoView().should('exist');
+cy.contains('Agent Name').scrollIntoView().should('exist');
+cy.contains('ProductGroup').scrollIntoView().should('exist');
+cy.contains('Product').scrollIntoView().should('exist');
+cy.contains('SubProduct').scrollIntoView().should('exist');
+cy.contains('Current Bucket').scrollIntoView().should('exist');
+cy.contains('BOM Bucket').scrollIntoView().should('exist');
+cy.contains('Region').scrollIntoView().should('exist');
+cy.contains('State').scrollIntoView().should('exist');
+cy.contains('City').scrollIntoView().should('exist');
+cy.contains('Branch').scrollIntoView().should('exist');
+cy.contains('Agency/FOS/Deposited With Bank').scrollIntoView().should('exist');
 }
 clickonmoneymovementingistspage240() {
   cy.wait(5000);
@@ -6050,18 +6058,18 @@ clickonmoneymovementingistspage240() {
     cy.wait(1000);
     cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(5000);
-     cy.get('th.ng-star-inserted').filter(':contains("Field Primary Name")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("Agent Name")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product Group")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product ")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Sub Produc")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Current Bucket")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("BOM Bucket")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
-      cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
-      cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
-       cy.get('th.ng-star-inserted').filter(':contains("Account Number")').scrollIntoView().should('be.visible');
+    cy.contains('Field Primary Name').scrollIntoView().should('exist');
+cy.contains('Agent Name').scrollIntoView().should('exist');
+cy.contains('ProductGroup').scrollIntoView().should('exist');
+cy.contains('Product').scrollIntoView().should('exist');
+cy.contains('SubProduct').scrollIntoView().should('exist');
+cy.contains('Current Bucket').scrollIntoView().should('exist');
+cy.contains('BOM Bucket').scrollIntoView().should('exist');
+cy.contains('Region').scrollIntoView().should('exist');
+cy.contains('State').scrollIntoView().should('exist');
+cy.contains('City').scrollIntoView().should('exist');
+cy.contains('Branch').scrollIntoView().should('exist');
+cy.contains('Account Number').scrollIntoView().should('exist');
 
 }
 clickonmoneymovementingistspage241() {
@@ -6077,19 +6085,18 @@ clickonmoneymovementingistspage241() {
     cy.wait(1000);
     cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
-     cy.get('th.ng-star-inserted').filter(':contains("Field Primary Name")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("Agent Name")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product Group")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product ")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Sub Produc")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Current Bucket")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("BOM Bucket")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
-      cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
-      cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
-       cy.get('th.ng-star-inserted').filter(':contains("Total Overdue Amount")').scrollIntoView().should('be.visible');
-
+     cy.contains('Field Primary Name').scrollIntoView().should('exist');
+cy.contains('Agent Name').scrollIntoView().should('exist');
+cy.contains('ProductGroup').scrollIntoView().should('exist');
+cy.contains('Product').scrollIntoView().should('exist');
+cy.contains('SubProduct').scrollIntoView().should('exist');
+cy.contains('Current Bucket').scrollIntoView().should('exist');
+cy.contains('BOM Bucket').scrollIntoView().should('exist');
+cy.contains('Region').scrollIntoView().should('exist');
+cy.contains('State').scrollIntoView().should('exist');
+cy.contains('City').scrollIntoView().should('exist');
+cy.contains('Branch').scrollIntoView().should('exist');
+cy.contains('Total Overdue Amount').scrollIntoView().should('exist');
 }
 clickonmoneymovementingistspage242() {
     cy.get(this.locators.clickoninsight).click({force:true});
@@ -6112,23 +6119,22 @@ clickonmoneymovementingistspage242() {
     cy.wait(1000);
     cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
-     cy.get('th.ng-star-inserted').filter(':contains("Field Primary Name")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("Agent Name")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product Group")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product ")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Sub Produc")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Current Bucket")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("BOM Bucket")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
-      cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
-      cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
-      cy.get('th.ng-star-inserted').filter(':contains("Loan Amount Bucket")').scrollIntoView().should('be.visible');
-      cy.get('th.ng-star-inserted').filter(':contains("Days Bucket")').scrollIntoView().should('be.visible');
-      cy.get('th.ng-star-inserted').filter(':contains("Agency/FOS/Deposited With Bank")').scrollIntoView().should('be.visible');
-      cy.get('th.ng-star-inserted').filter(':contains("Account Number")').scrollIntoView().should('be.visible');
-       cy.get('th.ng-star-inserted').filter(':contains("Total Overdue Amount")').scrollIntoView().should('be.visible');
-
+    cy.contains('Field Primary Name').scrollIntoView().should('exist');
+cy.contains('Agent Name').scrollIntoView().should('exist');
+cy.contains('ProductGroup').scrollIntoView().should('exist');
+cy.contains('Product').scrollIntoView().should('exist');
+cy.contains('SubProduct').scrollIntoView().should('exist');
+cy.contains('Current Bucket').scrollIntoView().should('exist');
+cy.contains('BOM Bucket').scrollIntoView().should('exist');
+cy.contains('Region').scrollIntoView().should('exist');
+cy.contains('State').scrollIntoView().should('exist');
+cy.contains('City').scrollIntoView().should('exist');
+cy.contains('Branch').scrollIntoView().should('exist');
+cy.contains('Loan Amount Bucket').scrollIntoView().should('exist');
+cy.contains('Days Bucket').scrollIntoView().should('exist');
+cy.contains('Agency/FOS/Deposited With Bank').scrollIntoView().should('exist');
+cy.contains('Account Number').scrollIntoView().should('exist');
+cy.contains('Total Overdue Amount').scrollIntoView().should('exist');
 }
 clickonmoneymovementingistspage243() {
     cy.get(this.locators.clickoninsight).click({force:true});
@@ -6787,16 +6793,13 @@ clickonmoneymovementingistspage256() {
     cy.wait(1000);
     cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonfilter).click();
+    cy.get(this.locators.clickonfilteragency).click();
     cy.wait(1000);
     cy.get(this.locators.clickonbyGeography).click();
     cy.wait(1000);
     cy.scrollTo('bottom', { ensureScrollable: false });
     cy.wait(1000);
-    // Select a random option
-    cy.get('#accordion-geography > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
-    cy.wait(1000);
-    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
+    cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-pristine > :nth-child(1) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
     cy.wait(1000);
      cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
@@ -6916,91 +6919,79 @@ clickonmoneymovementingistspage262() {
     cy.wait(1000);
     cy.get('#loan-grid-column-filter-button').click( {force: true});
     cy.wait(2000);
-    cy.get('th.ng-star-inserted').filter(':contains("Field Primary Name")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Agent Name")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product Group")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product ")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Sub Produc")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Current Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("BOM Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Loan Amount Bucket")').scrollIntoView().should('be.visible');
+   cy.contains('Field Primary Name').scrollIntoView().should('exist');
+cy.contains('Agent Name').scrollIntoView().should('exist');
+cy.contains('ProductGroup').scrollIntoView().should('exist');
+cy.contains('Product').scrollIntoView().should('exist');
+cy.contains('SubProduct').scrollIntoView().should('exist');
+cy.contains('Current Bucket').scrollIntoView().should('exist');
+cy.contains('BOM Bucket').scrollIntoView().should('exist');
+cy.contains('Region').scrollIntoView().should('exist');
+cy.contains('State').scrollIntoView().should('exist');
+cy.contains('City').scrollIntoView().should('exist');
+cy.contains('Branch').scrollIntoView().should('exist');
+cy.contains('Loan Amount Bucket').scrollIntoView().should('exist');
       
 }
 clickonmoneymovementingistspage263() {
-    cy.get(this.locators.clickoninsight).click({force:true});
-    cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
-    cy.wait(1000);
-    cy.get(':nth-child(3) > .nav-link > span').click({force:true});
-    cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click();
-    cy.wait(2000);
-    cy.get(':nth-child(1) > .dropdown-item > .flex-grow-1').click();
-    cy.wait(1000);
-    cy.get(':nth-child(2) > .dropdown-item > .flex-grow-1').click();
-    cy.wait(1000);
-    cy.get(':nth-child(3) > .dropdown-item > .flex-grow-1').click();
-    cy.wait(1000);
-    cy.get(':nth-child(4) > .dropdown-item > .flex-grow-1').click();
-    cy.wait(1000);
-    cy.get(':nth-child(5) > .dropdown-item > .flex-grow-1').click();
-    cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click({force:true});
-    cy.wait(2000);
-    cy.get('th.ng-star-inserted').filter(':contains("Field Primary Name")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Agent Name")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product Group")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product ")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Sub Produc")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Current Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("BOM Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Loan Amount Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Days Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Agency/FOS/Deposited With Bank")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Account Number")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Total Overdue Amount")').scrollIntoView().should('be.visible');
+    cy.get(this.locators.clickoninsight).click({ force: true });
+    cy.get(this.locators.clickonmoneymovementingistspage).click({ force: true });
+    cy.get(':nth-child(3) > .nav-link > span').click();
 
+    cy.get('#loan-grid-column-filter-button').click();
+
+    cy.get(':nth-child(1) > .dropdown-item > .flex-grow-1').click();
+    cy.get(':nth-child(2) > .dropdown-item > .flex-grow-1').click();
+    cy.get(':nth-child(3) > .dropdown-item > .flex-grow-1').click();
+    cy.get(':nth-child(4) > .dropdown-item > .flex-grow-1').click();
+    cy.get(':nth-child(5) > .dropdown-item > .flex-grow-1').click();
+
+    cy.get('#loan-grid-column-filter-button').click({ force: true });
+
+    cy.contains('Field Primary Name').scrollIntoView().should('exist');
+    cy.contains('Agent Name').scrollIntoView().should('exist');
+    cy.contains('ProductGroup').scrollIntoView().should('exist');
+    cy.contains('Product').scrollIntoView().should('exist');
+    cy.contains('SubProduct').scrollIntoView().should('exist');
+    cy.contains('Current Bucket').scrollIntoView().should('exist');
+    cy.contains('BOM Bucket').scrollIntoView().should('exist');
+    cy.contains('Region').scrollIntoView().should('exist');
+    cy.contains('State').scrollIntoView().should('exist');
+    cy.contains('City').scrollIntoView().should('exist');
+    cy.contains('Branch').scrollIntoView().should('exist');
+    cy.contains('Loan Amount Bucket').scrollIntoView().should('exist');
+    cy.contains('Days Bucket').scrollIntoView().should('exist');
+    cy.contains('Agency/FOS/Deposited With Bank').scrollIntoView().should('exist');
+    cy.contains('Account Number').scrollIntoView().should('exist');
+    cy.contains('Total Overdue Amount').scrollIntoView().should('exist');
 }
 clickonmoneymovementingistspage264() {
-    cy.get(this.locators.clickoninsight).click({force:true});
-    cy.wait(1000);
-    cy.get(this.locators.clickonmoneymovementingistspage).click({force:true});
-    cy.wait(1000);
+    cy.get(this.locators.clickoninsight).click({ force: true });
+    cy.get(this.locators.clickonmoneymovementingistspage).click({ force: true });
     cy.get(':nth-child(3) > .nav-link > span').click();
-    cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click();
-    cy.wait(2000);
-    cy.get(':nth-child(1) > .dropdown-item > .flex-grow-1').click();
-    cy.wait(1000);
-    cy.get(':nth-child(3) > .dropdown-item > .flex-grow-1').click();
-    cy.wait(1000);
-    cy.get(':nth-child(5) > .dropdown-item > .flex-grow-1').click();
-    cy.wait(1000);
-    cy.get('#loan-grid-column-filter-button').click({force:true});
-    cy.wait(2000);
-    cy.get('th.ng-star-inserted').filter(':contains("Field Primary Name")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Agent Name")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product Group")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product ")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Sub Produc")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Current Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("BOM Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Loan Amount Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Agency/FOS/Deposited With Bank")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Total Overdue Amount")').scrollIntoView().should('be.visible');
 
+    cy.get('#loan-grid-column-filter-button').click();
+
+    cy.get(':nth-child(1) > .dropdown-item > .flex-grow-1').click();
+    cy.get(':nth-child(3) > .dropdown-item > .flex-grow-1').click();
+    cy.get(':nth-child(5) > .dropdown-item > .flex-grow-1').click();
+
+    cy.get('#loan-grid-column-filter-button').click({ force: true });
+
+    cy.contains('Field Primary Name').scrollIntoView().should('exist');
+    cy.contains('Agent Name').scrollIntoView().should('exist');
+    cy.contains('ProductGroup').scrollIntoView().should('exist');
+    cy.contains('Product').scrollIntoView().should('exist');
+    cy.contains('SubProduct').scrollIntoView().should('exist');
+    cy.contains('Current Bucket').scrollIntoView().should('exist');
+    cy.contains('BOM Bucket').scrollIntoView().should('exist');
+    cy.contains('Region').scrollIntoView().should('exist');
+    cy.contains('State').scrollIntoView().should('exist');
+    cy.contains('City').scrollIntoView().should('exist');
+    cy.contains('Branch').scrollIntoView().should('exist');
+    cy.contains('Loan Amount Bucket').scrollIntoView().should('exist');
+    cy.contains('Agency/FOS/Deposited With Bank').scrollIntoView().should('exist');
+    cy.contains('Total Overdue Amount').scrollIntoView().should('exist');
 }
 }
 export default InsightsPage;

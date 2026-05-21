@@ -16,9 +16,9 @@ class ReportsPage {
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonpaymentreport).click();
+    cy.contains("Payment Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Product_group).click();
     cy.wait(2000);
@@ -68,9 +68,9 @@ class ReportsPage {
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonpaymentreport).click();
+    cy.contains("Payment Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Product_group).click();
     cy.wait(2000);
@@ -118,9 +118,9 @@ class ReportsPage {
       console.error('Uncaught exception:', err.message);
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonpaymentreport).click();
+    cy.contains("Payment Report").scrollIntoView().should("be.visible").click();
     cy.wait(400);
     cy.get(this.locators.ClickOn_Product_group).click();
     cy.wait(2000);
@@ -167,9 +167,9 @@ class ReportsPage {
       console.error('Uncaught exception:', err.message);
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonpaymentreport).click();
+    cy.contains("Payment Report").scrollIntoView().should("be.visible").click();
     cy.wait(400);
     cy.get('#agencyUserRadio').click();
     cy.wait(1000);
@@ -217,9 +217,9 @@ class ReportsPage {
       console.error('Uncaught exception:', err.message);
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonpaymentreport).click();
+    cy.contains("Payment Report").scrollIntoView().should("be.visible").click();
     cy.wait(400);
     cy.get(this.locators.ClickOn_Product_group).click();
     cy.wait(2000);
@@ -274,9 +274,9 @@ class ReportsPage {
       console.error('Uncaught exception:', err.message);
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonpaymentreport).click();
+    cy.contains("Payment Report").scrollIntoView().should("be.visible").click();
     cy.wait(400);
     cy.get('#agencyUserRadio').click();
     cy.wait(1000);
@@ -327,9 +327,9 @@ class ReportsPage {
   }
 
   ReportPaymentTestPage_308() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonpaymentreport).click();
+    cy.contains("Payment Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Product_group).click();
     cy.wait(2000);
@@ -388,9 +388,9 @@ class ReportsPage {
   }
 
   ReportPaymentTestPage_309() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonpaymentreport).click();
+    cy.contains("Payment Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('#agencyUserRadio').click();
     cy.get(this.locators.ClickOn_Product_group).click();
@@ -451,9 +451,9 @@ class ReportsPage {
 
 
   ReportPaymentTestPage_310() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonpaymentreport).click();
+    cy.contains("Payment Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Product_group).click();
     cy.wait(2000);
@@ -521,9 +521,9 @@ class ReportsPage {
 
 
   ReportPaymentTestPage_311() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonpaymentreport).click();
+    cy.contains("Payment Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('#agencyUserRadio').click();
     cy.get(this.locators.ClickOn_Product_group).click();
@@ -589,9 +589,9 @@ class ReportsPage {
     //cy.wait(2000);
   }
   ReportPaymentTestPage_312() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonpaymentreport).click();
+    cy.contains("Payment Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Product_group).click();
     cy.wait(2000);
@@ -662,9 +662,9 @@ class ReportsPage {
     //cy.wait(2000);
   }
   ReportPaymentTestPage_313() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonpaymentreport).click();
+    cy.contains("Payment Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('#agencyUserRadio').click();
     cy.get(this.locators.ClickOn_Product_group).click();
@@ -738,9 +738,9 @@ class ReportsPage {
   }
 
   ReportPaymentTestPage_314() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonpaymentreport).click();
+    cy.contains("Payment Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('#agencyUserRadio').click();
     cy.get(this.locators.ClickOn_Product_group).click();
@@ -810,9 +810,9 @@ class ReportsPage {
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonpaymentreport).click();
+    cy.contains("Payment Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Product_group).click();
     cy.wait(2000);
@@ -888,9 +888,9 @@ class ReportsPage {
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonpaymentreport).click();
+    cy.contains("Payment Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('#agencyUserRadio').click();
     cy.get(this.locators.ClickOn_Product_group).click();
@@ -967,9 +967,9 @@ class ReportsPage {
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonpaymentreport).click();
+    cy.contains("Payment Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Product_group).click();
     cy.wait(2000);
@@ -1045,9 +1045,9 @@ class ReportsPage {
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonpaymentreport).click();
+    cy.contains("Payment Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('#agencyUserRadio').click();
     cy.get(this.locators.ClickOn_Product_group).click();
@@ -1131,9 +1131,9 @@ class ReportsPage {
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonpaymentreport).click();
+    cy.contains("Payment Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Product_group).click();
     cy.wait(2000);
@@ -1217,9 +1217,9 @@ class ReportsPage {
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonpaymentreport).click();
+    cy.contains("Payment Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('#agencyUserRadio').click();
     cy.get(this.locators.ClickOn_Product_group).click();
@@ -1270,9 +1270,9 @@ class ReportsPage {
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonpaymentreport).click();
+    cy.contains("Payment Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Product_group).click();
     cy.wait(2000);
@@ -1323,9 +1323,9 @@ class ReportsPage {
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonpaymentreport).click();
+    cy.contains("Payment Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('#agencyUserRadio').click();
     cy.get(this.locators.ClickOn_Product_group).click();
@@ -1375,9 +1375,9 @@ class ReportsPage {
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonpaymentreport).click();
+    cy.contains("Payment Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Product_group).click();
     cy.wait(2000);
@@ -1426,9 +1426,9 @@ class ReportsPage {
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonpaymentreport).click();
+    cy.contains("Payment Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Product Group").should("be.visible");
     cy.wait(1000);
@@ -1466,9 +1466,11 @@ class ReportsPage {
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonperformance).click();
+  cy.contains("Performance Reports").scrollIntoView().should("be.visible").click();
+cy.wait(1000);
+  cy.contains("Performance Report (MTD)").should("be.visible").click()
     cy.wait(300)
     cy.get(this.locators.ClickOn_Product_group).click();
     cy.wait(2000);
@@ -1487,9 +1489,11 @@ class ReportsPage {
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonperformance).click();
+  cy.contains("Performance Reports").scrollIntoView().should("be.visible").click();
+cy.wait(1000);
+  cy.contains("Performance Report (MTD)").should("be.visible").click()
     cy.get(this.locators.ClickOn_Country).click();
     cy.wait(2000);
     cy.get('.ng-option').each(($el) => {
@@ -1510,9 +1514,11 @@ class ReportsPage {
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonperformance).click();
+  cy.contains("Performance Reports").scrollIntoView().should("be.visible").click();
+cy.wait(1000);
+  cy.contains("Performance Report (MTD)").should("be.visible").click()
     cy.wait(300)
     cy.get(this.locators.ClickOn_Country).click();
     cy.wait(2000);
@@ -1547,9 +1553,11 @@ class ReportsPage {
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonperformance).click();
+  cy.contains("Performance Reports").scrollIntoView().should("be.visible").click();
+cy.wait(1000);
+  cy.contains("Performance Report (MTD)").should("be.visible").click()
     cy.wait(300)
       / cy.get(this.locators.ClickOn_Country).click();
     cy.wait(2000);
@@ -1589,9 +1597,11 @@ class ReportsPage {
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonperformance).click();
+  cy.contains("Performance Reports").scrollIntoView().should("be.visible").click();
+cy.wait(1000);
+  cy.contains("Performance Report (MTD)").should("be.visible").click()
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Agency_RadioBtn).click();
     cy.wait(2000);
@@ -1605,9 +1615,11 @@ class ReportsPage {
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonperformance).click();
+  cy.contains("Performance Reports").scrollIntoView().should("be.visible").click();
+cy.wait(1000);
+  cy.contains("Performance Report (MTD)").should("be.visible").click()
     cy.wait(300)
     cy.get(this.locators.ClickOn_Agency_RadioBtn).click();
     cy.wait(1000);
@@ -1628,9 +1640,11 @@ class ReportsPage {
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonperformance).click();
+  cy.contains("Performance Reports").scrollIntoView().should("be.visible").click();
+cy.wait(1000);
+  cy.contains("Performance Report (MTD)").should("be.visible").click()
     cy.wait(300)
     cy.get(this.locators.ClickOn_Country).click();
     cy.wait(2000);
@@ -1648,9 +1662,11 @@ class ReportsPage {
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonperformance).click();
+  cy.contains("Performance Reports").scrollIntoView().should("be.visible").click();
+cy.wait(1000);
+  cy.contains("Performance Report (MTD)").should("be.visible").click()
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Product_group).click();
     cy.wait(2000);
@@ -1684,9 +1700,11 @@ class ReportsPage {
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonperformance).click();
+  cy.contains("Performance Reports").scrollIntoView().should("be.visible").click();
+cy.wait(1000);
+  cy.contains("Performance Report (MTD)").should("be.visible").click()
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Product_group).click();
     cy.wait(2000);
@@ -1720,9 +1738,11 @@ class ReportsPage {
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonperformance).click();
+  cy.contains("Performance Reports").scrollIntoView().should("be.visible").click();
+cy.wait(1000);
+  cy.contains("Performance Report (MTD)").should("be.visible").click()
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Product_group).click();
     cy.get('.ng-option').each(($el) => {
@@ -1777,9 +1797,11 @@ class ReportsPage {
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonperformance).click();
+  cy.contains("Performance Reports").scrollIntoView().should("be.visible").click();
+cy.wait(1000);
+  cy.contains("Performance Report (MTD)").should("be.visible").click()
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Product_group).click();
     cy.get('.ng-option').each(($el) => {
@@ -1823,9 +1845,11 @@ class ReportsPage {
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonperformance).click();
+  cy.contains("Performance Reports").scrollIntoView().should("be.visible").click();
+cy.wait(1000);
+  cy.contains("Performance Report (MTD)").should("be.visible").click()
     cy.wait(2000);
    cy.get(this.locators.ClickOn_Agency_RadioBtn).click();
    cy.wait(2000);
@@ -1871,9 +1895,11 @@ cy.wait(4000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonperformance).click();
+  cy.contains("Performance Reports").scrollIntoView().should("be.visible").click();
+cy.wait(1000);
+  cy.contains("Performance Report (MTD)").should("be.visible").click()
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Agency_RadioBtn).click();
     cy.wait(2000);
@@ -1943,9 +1969,11 @@ cy.wait(4000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonperformance).click();
+  cy.contains("Performance Reports").scrollIntoView().should("be.visible").click();
+cy.wait(1000);
+  cy.contains("Performance Report (MTD)").should("be.visible").click()
     cy.wait(2000);
   cy.get(this.locators.ClickOn_Agency_RadioBtn).click();
     cy.wait(2000);
@@ -1981,11 +2009,11 @@ cy.wait(4000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(5000);
-    cy.get(this.locators.ClickAgencyAllGap).click();
+     cy.contains("Agency Allocation Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(5000);
     //cy.get(this.locators.click_productgroup).select('All', { force: true });
     //cy.wait(1000);
@@ -1997,7 +2025,7 @@ cy.wait(4000);
     //cy.wait(1000);
     //cy.get(this.locators.ClickongenerateBtn).click({ force: true });
     //cy.wait(1000);
-    //  cy.get(this.locators.clickonreport).click();
+    //    cy.contains("Reports").scrollIntoView().should("be.visible").click();
     //  cy.wait(2000);
     //cy.get(this.locators.clickonAllocationreoprt).click().scrollIntoView();
     //cy.wait(300);
@@ -2014,11 +2042,11 @@ cy.wait(4000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAgencyAllGap).click();
+     cy.contains("Agency Allocation Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -2037,11 +2065,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAgencyAllGap).click();
+     cy.contains("Agency Allocation Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -2067,11 +2095,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAgencyAllGap).click();
+     cy.contains("Agency Allocation Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -2104,11 +2132,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAgencyAllGap).click();
+     cy.contains("Agency Allocation Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -2146,11 +2174,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAgencyAllGap).click();
+     cy.contains("Agency Allocation Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -2197,11 +2225,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAgencyAllGap).click();
+     cy.contains("Agency Allocation Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -2254,11 +2282,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAgencyAllGap).click();
+     cy.contains("Agency Allocation Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -2319,11 +2347,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAgencyAllGap).click();
+     cy.contains("Agency Allocation Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -2383,11 +2411,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAgencyAllGap).click();
+     cy.contains("Agency Allocation Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -2457,11 +2485,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickAgencyAllGap).click();
+     cy.contains("Agency Allocation Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.Clickon_Onwer).click();
     cy.wait(2000);
@@ -2479,11 +2507,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAgencyAllGap).click();
+     cy.contains("Agency Allocation Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -2522,11 +2550,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAgencyAllGap).click();
+     cy.contains("Agency Allocation Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -2567,11 +2595,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAgencyAllGap).click();
+     cy.contains("Agency Allocation Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -2618,11 +2646,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAgencyAllGap).click();
+     cy.contains("Agency Allocation Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -2662,11 +2690,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAgencyAllGap).click();
+     cy.contains("Agency Allocation Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -2716,11 +2744,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAgencyAllGap).click();
+     cy.contains("Agency Allocation Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -2772,11 +2800,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAgencyAllGap).click();
+     cy.contains("Agency Allocation Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -2835,11 +2863,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAgencyAllGap).click();
+     cy.contains("Agency Allocation Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(2000);
@@ -2884,11 +2912,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAgencyAllGap).click();
+     cy.contains("Agency Allocation Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(2000);
@@ -2933,11 +2961,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAgencyAllGap).click();
+     cy.contains("Agency Allocation Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(2000);
@@ -2985,11 +3013,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickAgencyAllGap).click();
+     cy.contains("Agency Allocation Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -3038,11 +3066,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickTrailGapReport).click();
+     cy.contains("Trail Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
 
 
@@ -3055,11 +3083,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickTrailGapReport).click();
+     cy.contains("Trail Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -3077,11 +3105,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickTrailGapReport).click();
+     cy.contains("Trail Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -3108,11 +3136,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickTrailGapReport).click();
+     cy.contains("Trail Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -3145,11 +3173,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickTrailGapReport).click();
+     cy.contains("Trail Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -3187,11 +3215,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickTrailGapReport).click();
+     cy.contains("Trail Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -3229,11 +3257,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickTrailGapReport).click();
+     cy.contains("Trail Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -3279,11 +3307,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickTrailGapReport).click();
+     cy.contains("Trail Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -3327,11 +3355,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickTrailGapReport).click();
+     cy.contains("Trail Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(2000);
@@ -3378,11 +3406,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickTrailGapReport).click();
+     cy.contains("Trail Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(2000);
@@ -3423,11 +3451,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickTrailGapReport).click();
+     cy.contains("Trail Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(2000);
@@ -3472,12 +3500,12 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonreport).click();
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickTrailGapReport).click({ force: true });
+     cy.contains("Trail Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('[for="agencyUserRadio"]').click();
 
@@ -3491,12 +3519,12 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickonreport).click();
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickTrailGapReport).click({ force: true });
+     cy.contains("Trail Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('[for="agencyUserRadio"]').click();
     cy.get(this.locators.Clickon_Productgroup).click();
@@ -3542,11 +3570,11 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickTrailGapReport).click();
+     cy.contains("Trail Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(2000);
@@ -3585,11 +3613,11 @@ cy.wait(2000);
       return false;
     });
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickTrailGapReport).click();
+     cy.contains("Trail Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(2000);
@@ -3631,10 +3659,10 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickTrailGapReport).click({ force: true });
+     cy.contains("Trail Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(2000);
@@ -3680,8 +3708,8 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
+    
     cy.wait(2000);
     cy.contains("Money Movement Report").click({ force: true });
     cy.get(this.locators.Clickon_Productgroup).click();
@@ -3735,9 +3763,7 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
-    cy.wait(2000);
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Money Movement Report").click({ force: true });
     cy.wait(400);
@@ -3793,16 +3819,10 @@ cy.wait(2000);
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Money Movement Report").click({ force: true });
     cy.wait(2000);
-    cy.get(this.locators.clickonreport).click();
-    cy.wait(2000);
-    cy.get(this.locators.clickonreport).click();
-    cy.wait(2000);
-    cy.contains("Money Movement Report").click({ force: true });
-    cy.wait(400);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(2000);
     cy.get('.ng-dropdown-panel .ng-option')
@@ -3855,7 +3875,7 @@ cy.get('#generate-report-button').click();
   
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Money Movement Report").click({ force: true });
     cy.wait(2000);
@@ -3908,7 +3928,7 @@ cy.get('#generate-report-button').click();
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Money Movement Report").click({ force: true });
     cy.wait(2000);
@@ -3960,9 +3980,9 @@ cy.get('#generate-report-button').click();
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get("a[title='Supervisory Report']").click({ force: true });
+    cy.contains("Supervisory Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('[heading="Product Filter"] > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(2000);
@@ -4015,9 +4035,9 @@ cy.get('#generate-report-button').click();
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get("a[title='Supervisory Report']").click({ force: true });
+    cy.contains("Supervisory Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('[heading="Product Filter"] > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(2000);
@@ -4062,9 +4082,9 @@ cy.get('#generate-report-button').click();
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get("a[title='Supervisory Report']").click({ force: true });
+    cy.contains("Supervisory Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('[heading="Product Filter"] > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn').click();
     cy.wait(2000);
@@ -4144,10 +4164,10 @@ cy.get('#generate-report-button').click();
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickTrailGapReport).should('be.visible');
+      cy.contains("Trail Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
 
   }
@@ -4159,10 +4179,10 @@ cy.get('#generate-report-button').click();
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickTrailGapReport).click({ force: true });
+     cy.contains("Trail Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.Select_trailGap_BUcket).click();
     cy.wait(2000);
@@ -4186,10 +4206,10 @@ cy.get('#generate-report-button').click();
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickTrailGapReport).click({ force: true });
+     cy.contains("Trail Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
      cy.get(this.locators.Select_trailGap_Country).click();
     cy.wait(2000);
@@ -4211,10 +4231,10 @@ cy.get('#generate-report-button').click();
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickTrailGapReport).click({ force: true });
+     cy.contains("Trail Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     //cy.get('#inlineRadio2').click();
 
@@ -4288,10 +4308,10 @@ cy.get('#generate-report-button').click();
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickTrailGapReport).click({ force: true });
+     cy.contains("Trail Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('#agencyUserRadio').click();
     cy.wait(2000);
@@ -4313,10 +4333,10 @@ cy.get('#generate-report-button').click();
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickTrailGapReport).click({ force: true });
+     cy.contains("Trail Gap Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('#agencyUserRadio').click();
     cy.get(':nth-child(10) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
@@ -4338,7 +4358,7 @@ cy.get('#generate-report-button').click();
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Money Movement Report").click({ force: true });
     cy.wait(400);
@@ -4352,7 +4372,7 @@ cy.get('#generate-report-button').click();
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Money Movement Report").click({ force: true });
     cy.wait(400);
@@ -4399,7 +4419,7 @@ cy.get('#generate-report-button').click();
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Money Movement Report").click({ force: true });
     cy.wait(400);
@@ -4462,7 +4482,7 @@ cy.get('#generate-report-button').click();
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Money Movement Report").click({ force: true });
     cy.wait(400);
@@ -4517,7 +4537,7 @@ cy.get('#generate-report-button').click();
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Money Movement Report").click({ force: true });
     cy.get(this.locators.ClickOn_Product_group).click();
@@ -4591,7 +4611,7 @@ cy.get('#generate-report-button').click();
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Money Movement Report").click({ force: true });
     cy.get(this.locators.ClickOn_Product_group).click();
@@ -4665,7 +4685,7 @@ cy.get('#generate-report-button').click();
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Money Movement Report").click({ force: true });
     cy.get(this.locators.ClickOn_Product_group).click();
@@ -4743,7 +4763,7 @@ cy.get('#generate-report-button').click();
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Money Movement Report").click({ force: true });
     cy.get(this.locators.ClickOn_Product_group).click();
@@ -4827,7 +4847,7 @@ cy.get('#generate-report-button').click();
       // Returning false prevents Cypress from failing the test
       return false;
     });
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Money Movement Report").click({ force: true });
     cy.wait(400);
@@ -4893,10 +4913,10 @@ cy.get('#generate-report-button').click();
   }
 
   SupervisoryReportTestPage_425() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.wait(2000);
-    cy.get("a[title='Supervisory Report']").click({ force: true });
+    cy.contains("Supervisory Report").scrollIntoView().should("be.visible").click();
     cy.wait(400);
     cy.get('accordion-group[heading="Product Filter"] div[role="button"]').click();
     cy.wait(400);
@@ -4928,10 +4948,10 @@ cy.get('#generate-report-button').click();
   }
 
   SupervisoryReportTestPage_426() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.wait(2000);
-    cy.get("a[title='Supervisory Report']").click({ force: true });
+    cy.contains("Supervisory Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('accordion-group[heading="Product Filter"] div[role="button"]').click();
     cy.wait(400);
@@ -4972,7 +4992,7 @@ cy.get('#generate-report-button').click();
       }
     });
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(3000);
     cy.contains("Collection Intensity Report").scrollIntoView().should("be.visible");
     cy.wait(1000);
@@ -4981,9 +5001,9 @@ cy.get('#generate-report-button').click();
 
   CollectionIntensityTestPage_02() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionIntensity).click();
+      cy.contains("Collection Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClickBankStaff_Radio).click();
     cy.wait(2000);
@@ -5016,9 +5036,9 @@ cy.get('#generate-report-button').click();
   }
 
   CollectionIntensityTestPage_03() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionIntensity).click();
+      cy.contains("Collection Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickBankStaff_Radio).click();
     cy.wait(1000);
@@ -5043,9 +5063,9 @@ cy.get('#generate-report-button').click();
   }
 
   CollectionIntensityTestPage_04() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionIntensity).click();
+      cy.contains("Collection Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickBankStaff_Radio).click();
     cy.wait(1000);
@@ -5104,9 +5124,9 @@ cy.get('#generate-report-button').click();
 
   CollectionIntensityTestPage_05() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionIntensity).click();
+      cy.contains("Collection Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickBankStaff_Radio).click();
     cy.wait(1000);
@@ -5133,9 +5153,9 @@ cy.get('#generate-report-button').click();
 
   CollectionIntensityTestPage_06() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionIntensity).click();
+      cy.contains("Collection Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickBankStaff_Radio).click();
     cy.wait(1000);
@@ -5161,9 +5181,9 @@ cy.get('#generate-report-button').click();
 
   CollectionIntensityTestPage_07() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionIntensity).click();
+      cy.contains("Collection Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickBankStaff_Radio).click();
     cy.wait(1000);
@@ -5189,9 +5209,9 @@ cy.get('#generate-report-button').click();
 
   CollectionIntensityTestPage_08() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionIntensity).click();
+      cy.contains("Collection Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickBankStaff_Radio).click();
     cy.wait(1000);
@@ -5217,9 +5237,9 @@ cy.get('#generate-report-button').click();
 
   CollectionIntensityTestPage_09() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionIntensity).click();
+      cy.contains("Collection Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickAgencyStaff_Radio).click();
     cy.wait(1000);
@@ -5272,9 +5292,9 @@ cy.get('#generate-report-button').click();
 
   CollectionIntensityTestPage_10() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionIntensity).click();
+      cy.contains("Collection Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickAgencyStaff_Radio).click();
     cy.wait(1000);
@@ -5297,9 +5317,9 @@ cy.get('#generate-report-button').click();
 
   CollectionIntensityTestPage_11() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionIntensity).click();
+      cy.contains("Collection Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickAgencyStaff_Radio).click();
     cy.wait(1000);
@@ -5357,9 +5377,9 @@ cy.get('#generate-report-button').click();
 
   CollectionIntensityTestPage_12() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionIntensity).click();
+      cy.contains("Collection Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickAgencyStaff_Radio).click();
     cy.wait(1000);
@@ -5386,9 +5406,9 @@ cy.get('#generate-report-button').click();
 
   CollectionIntensityTestPage_13() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionIntensity).click();
+      cy.contains("Collection Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickAgencyStaff_Radio).click();
     cy.wait(1000);
@@ -5409,9 +5429,9 @@ cy.get('#generate-report-button').click();
 
   CollectionIntensityTestPage_14() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionIntensity).click();
+      cy.contains("Collection Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickAgencyStaff_Radio).click();
     cy.wait(1000);
@@ -5438,9 +5458,9 @@ cy.get('#generate-report-button').click();
   CollectionIntensityTestPage_15() {
 
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionIntensity).click();
+      cy.contains("Collection Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickAgencyStaff_Radio).click();
     cy.wait(1000);
@@ -5473,7 +5493,7 @@ cy.get('#generate-report-button').click();
       }
     });
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(3000);
     cy.contains("Collection Trend Report").scrollIntoView().should("be.visible");
     cy.wait(1000);
@@ -5482,9 +5502,9 @@ cy.get('#generate-report-button').click();
 
   CollectionTrendTestPage_02() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(3000);
-    cy.get(this.locators.ClickOnCollectionTrend).click();
+    cy.contains("Collection Trend Report").scrollIntoView().should("be.visible").click();
     cy.wait(3000);
     cy.get(this.locators.ClickBankStaff_Radio).click();
     cy.wait(1000);
@@ -5537,9 +5557,9 @@ cy.get('#generate-report-button').click();
 
   CollectionTrendTestPage_03() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionTrend).click();
+    cy.contains("Collection Trend Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickBankStaff_Radio).click();
     cy.wait(1000);
@@ -5564,9 +5584,9 @@ cy.get('#generate-report-button').click();
 
   CollectionTrendTestPage_04() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionTrend).click();
+    cy.contains("Collection Trend Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickAgencyStaff_Radio).click();
     cy.wait(1000);
@@ -5624,9 +5644,9 @@ cy.get('#generate-report-button').click();
 
   CollectionTrendTestPage_05() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionTrend).click();
+    cy.contains("Collection Trend Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickBankStaff_Radio).click();
     cy.wait(1000);
@@ -5652,9 +5672,9 @@ cy.get('#generate-report-button').click();
 
   CollectionTrendTestPage_06() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionTrend).click();
+    cy.contains("Collection Trend Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickBankStaff_Radio).click();
     cy.wait(1000);
@@ -5680,9 +5700,9 @@ cy.get('#generate-report-button').click();
 
   CollectionTrendTestPage_07() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionTrend).click();
+    cy.contains("Collection Trend Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickBankStaff_Radio).click();
     cy.wait(1000);
@@ -5708,9 +5728,9 @@ cy.get('#generate-report-button').click();
 
   CollectionTrendTestPage_08() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionTrend).click();
+    cy.contains("Collection Trend Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickBankStaff_Radio).click();
     cy.wait(1000);
@@ -5736,9 +5756,9 @@ cy.get('#generate-report-button').click();
 
   CollectionTrendTestPage_09() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionTrend).click();
+    cy.contains("Collection Trend Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickBankStaff_Radio).click();
     cy.wait(1000);
@@ -5766,9 +5786,9 @@ cy.get('#generate-report-button').click();
 
   CollectionTrendTestPage_10() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionTrend).click();
+    cy.contains("Collection Trend Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickBankStaff_Radio).click();
     cy.wait(1000);
@@ -5793,9 +5813,9 @@ cy.get('#generate-report-button').click();
 
   CollectionTrendTestPage_11() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionTrend).click();
+    cy.contains("Collection Trend Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickAgencyStaff_Radio).click();
     cy.wait(1000);
@@ -5849,9 +5869,9 @@ cy.get('#generate-report-button').click();
 
   CollectionTrendTestPage_12() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionTrend).click();
+    cy.contains("Collection Trend Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickAgencyStaff_Radio).click();
     cy.wait(1000);
@@ -5877,9 +5897,9 @@ cy.get('#generate-report-button').click();
 
   CollectionTrendTestPage_13() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionTrend).click();
+    cy.contains("Collection Trend Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickAgencyStaff_Radio).click();
     cy.wait(1000);
@@ -5937,9 +5957,9 @@ cy.get('#generate-report-button').click();
 
   CollectionTrendTestPage_14() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionTrend).click();
+    cy.contains("Collection Trend Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickAgencyStaff_Radio).click();
     cy.wait(1000);
@@ -5965,9 +5985,9 @@ cy.get('#generate-report-button').click();
 
   CollectionTrendTestPage_15() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionTrend).click();
+    cy.contains("Collection Trend Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickAgencyStaff_Radio).click();
     cy.wait(1000);
@@ -5993,9 +6013,9 @@ cy.get('#generate-report-button').click();
 
   CollectionTrendTestPage_16() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionTrend).click();
+    cy.contains("Collection Trend Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickAgencyStaff_Radio).click();
     cy.wait(1000);
@@ -6021,9 +6041,9 @@ cy.get('#generate-report-button').click();
 
   CollectionTrendTestPage_17() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionTrend).click();
+    cy.contains("Collection Trend Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickAgencyStaff_Radio).click();
     cy.wait(1000);
@@ -6049,9 +6069,9 @@ cy.get('#generate-report-button').click();
 
   CollectionTrendTestPage_18() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionTrend).click();
+    cy.contains("Collection Trend Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickAgencyStaff_Radio).click();
     cy.wait(1000);
@@ -6079,9 +6099,9 @@ cy.get('#generate-report-button').click();
 
   CollectionTrendTestPage_19() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnCollectionTrend).click();
+    cy.contains("Collection Trend Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickAgencyStaff_Radio).click();
     cy.wait(1000);
@@ -6106,7 +6126,7 @@ cy.get('#generate-report-button').click();
 
   VisitIntensityTestPage_01() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(3000);
     cy.contains("Visit Intensity Report").scrollIntoView().should("be.visible");
     cy.wait(1000);
@@ -6115,9 +6135,9 @@ cy.get('#generate-report-button').click();
 
   VisitIntensityTestPage_02() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(3000);
-    cy.get(this.locators.ClickOnVisitIntensity).click();
+    cy.contains("Visit Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(3000);
     cy.get(this.locators.ClickBankStaff_Radio).click();
     cy.wait(1000);
@@ -6157,9 +6177,9 @@ cy.get('#generate-report-button').click();
 
   VisitIntensityTestPage_03() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnVisitIntensity).click();
+    cy.contains("Visit Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickBankStaff_Radio).click();
     cy.wait(1000);
@@ -6174,9 +6194,9 @@ cy.get('#generate-report-button').click();
 
   VisitIntensityTestPage_04() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnVisitIntensity).click();
+    cy.contains("Visit Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickBankStaff_Radio).click();
     cy.wait(1000);
@@ -6219,9 +6239,9 @@ cy.get('#generate-report-button').click();
 
   VisitIntensityTestPage_05() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnVisitIntensity).click();
+    cy.contains("Visit Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickBankStaff_Radio).click();
     cy.wait(1000);
@@ -6236,9 +6256,9 @@ cy.get('#generate-report-button').click();
 
   VisitIntensityTestPage_06() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnVisitIntensity).click();
+    cy.contains("Visit Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickBankStaff_Radio).click();
     cy.wait(1000);
@@ -6253,9 +6273,9 @@ cy.get('#generate-report-button').click();
 
   VisitIntensityTestPage_07() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnVisitIntensity).click();
+    cy.contains("Visit Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickBankStaff_Radio).click();
     cy.wait(1000);
@@ -6270,9 +6290,9 @@ cy.get('#generate-report-button').click();
 
   VisitIntensityTestPage_08() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnVisitIntensity).click();
+    cy.contains("Visit Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickBankStaff_Radio).click();
     cy.wait(1000);
@@ -6286,9 +6306,9 @@ cy.get('#generate-report-button').click();
 
   VisitIntensityTestPage_09() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnVisitIntensity).click();
+    cy.contains("Visit Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickBankStaff_Radio).click();
     cy.wait(1000);
@@ -6303,9 +6323,9 @@ cy.get('#generate-report-button').click();
 
   VisitIntensityTestPage_10() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnVisitIntensity).click();
+    cy.contains("Visit Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickAgencyStaff_Radio).click();
     cy.wait(1000);
@@ -6320,9 +6340,9 @@ cy.get('#generate-report-button').click();
 
   VisitIntensityTestPage_11() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnVisitIntensity).click();
+    cy.contains("Visit Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickAgencyStaff_Radio).click();
     cy.wait(1000);
@@ -6364,9 +6384,9 @@ cy.get('#generate-report-button').click();
 
   VisitIntensityTestPage_12() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnVisitIntensity).click();
+    cy.contains("Visit Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickAgencyStaff_Radio).click();
     cy.wait(1000);
@@ -6381,9 +6401,9 @@ cy.get('#generate-report-button').click();
 
   VisitIntensityTestPage_13() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnVisitIntensity).click();
+    cy.contains("Visit Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickAgencyStaff_Radio).click();
     cy.wait(1000);
@@ -6398,9 +6418,9 @@ cy.get('#generate-report-button').click();
 
   VisitIntensityTestPage_14() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnVisitIntensity).click();
+    cy.contains("Visit Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickAgencyStaff_Radio).click();
     cy.wait(1000);
@@ -6415,9 +6435,9 @@ cy.get('#generate-report-button').click();
 
   VisitIntensityTestPage_15() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnVisitIntensity).click();
+    cy.contains("Visit Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickAgencyStaff_Radio).click();
     cy.wait(1000);
@@ -6432,9 +6452,9 @@ cy.get('#generate-report-button').click();
 
   VisitIntensityTestPage_16() {
 
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnVisitIntensity).click();
+    cy.contains("Visit Intensity Report").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickAgencyStaff_Radio).click();
     cy.wait(1000);
@@ -6448,21 +6468,23 @@ cy.get('#generate-report-button').click();
   }
 
   allocatedVsAchievedReports_001() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.clickOnAllocatedVsAchievedReport).click();
+  cy.contains("Allocated vs Achieved Report").scrollIntoView().should("be.visible").click();
+cy.wait(2000);
     cy.wait(2000);
   }
 
 
   allocatedVsAchievedReports_002() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.clickOnAllocatedVsAchievedReport).click();
+  cy.contains("Allocated vs Achieved Report").scrollIntoView().should("be.visible").click();
+cy.wait(2000);
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Product_group).click();
     cy.wait(2000);
@@ -6496,11 +6518,12 @@ cy.get('#generate-report-button').click();
   }
 
   allocatedVsAchievedReports_003() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.clickOnAllocatedVsAchievedReport).click();
+  cy.contains("Allocated vs Achieved Report").scrollIntoView().should("be.visible").click();
+cy.wait(2000);
     cy.wait(2000);
     cy.get('#agencyUserRadio').click();
     cy.wait(1000);
@@ -6540,11 +6563,12 @@ cy.get('#generate-report-button').click();
   }
 
   allocatedVsAchievedReports_004() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.clickOnAllocatedVsAchievedReport).click();
+  cy.contains("Allocated vs Achieved Report").scrollIntoView().should("be.visible").click();
+cy.wait(2000);
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Product_group).click();
     cy.wait(2000);
@@ -6582,11 +6606,12 @@ cy.get('#generate-report-button').click();
   }
 
   allocatedVsAchievedReports_005() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.clickOnAllocatedVsAchievedReport).click();
+  cy.contains("Allocated vs Achieved Report").scrollIntoView().should("be.visible").click();
+cy.wait(2000);
     cy.wait(2000);
     cy.get('#agencyUserRadio').click();
     cy.get(this.locators.ClickOn_Product_group).click();
@@ -6626,11 +6651,12 @@ cy.get('#generate-report-button').click();
 
 
   allocatedVsAchievedReports_006() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.clickOnAllocatedVsAchievedReport).click();
+  cy.contains("Allocated vs Achieved Report").scrollIntoView().should("be.visible").click();
+cy.wait(2000);
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Product_group).click();
     cy.wait(2000);
@@ -6674,11 +6700,12 @@ cy.get('#generate-report-button').click();
   }
 
   allocatedVsAchievedReports_007() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.clickOnAllocatedVsAchievedReport).click();
+  cy.contains("Allocated vs Achieved Report").scrollIntoView().should("be.visible").click();
+cy.wait(2000);
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Product_group).click();
     cy.wait(2000);
@@ -6738,11 +6765,12 @@ cy.get('#generate-report-button').click();
 
 
   allocatedVsAchievedReports_008() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.clickOnAllocatedVsAchievedReport).click();
+  cy.contains("Allocated vs Achieved Report").scrollIntoView().should("be.visible").click();
+cy.wait(2000);
     cy.wait(2000);
     cy.get('#agencyUserRadio').click();
     cy.get(this.locators.ClickOn_Product_group).click();
@@ -6803,11 +6831,12 @@ cy.get('#generate-report-button').click();
   }
 
   allocatedVsAchievedReports_009() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.clickOnAllocatedVsAchievedReport).click();
+  cy.contains("Allocated vs Achieved Report").scrollIntoView().should("be.visible").click();
+cy.wait(2000);
     cy.wait(2000);
     cy.get('#agencyUserRadio').click();
     cy.get(this.locators.ClickOn_Product_group).click();
@@ -6858,11 +6887,12 @@ cy.get('#generate-report-button').click();
   }
 
   allocatedVsAchievedReports_010() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickAllocReport).click();
+      cy.contains("Allocation Reports").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.clickOnAllocatedVsAchievedReport).click();
+  cy.contains("Allocated vs Achieved Report").scrollIntoView().should("be.visible").click();
+cy.wait(2000);
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Product_group).click();
     cy.wait(2000);
@@ -6912,22 +6942,22 @@ cy.get('#generate-report-button').click();
   }
 
   trailHistoryReport_001() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickTrailHistoryReport).click({ force: true });
+    cy.contains("Trail History Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('#agencyUserRadio').click();
 
   }
 
   trailHistoryReport_002() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickTrailHistoryReport).click({ force: true });
+    cy.contains("Trail History Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('#agencyUserRadio').click();
     cy.wait(2000);
@@ -6948,11 +6978,11 @@ cy.get('#generate-report-button').click();
 
 
   trailHistoryReport_003() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickTrailHistoryReport).click({ force: true });
+    cy.contains("Trail History Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('#agencyUserRadio').click();
     cy.wait(2000);
@@ -6985,11 +7015,11 @@ cy.get('#generate-report-button').click();
   }
 
   trailHistoryReport_004() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickTrailHistoryReport).click({ force: true });
+    cy.contains("Trail History Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(1000);
@@ -7050,11 +7080,11 @@ cy.wait(2000);
   }
 
   trailHistoryReport_005() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickTrailHistoryReport).click({ force: true });
+    cy.contains("Trail History Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(2000);
@@ -7118,11 +7148,11 @@ cy.wait(2000);
 
 
   trailHistoryReport_006() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickTrailHistoryReport).click({ force: true });
+    cy.contains("Trail History Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('#agencyUserRadio').click();
     cy.wait(2000);
@@ -7184,11 +7214,11 @@ cy.wait(2000);
   }
 
   trailHistoryReport_007() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickTrailHistoryReport).click({ force: true });
+    cy.contains("Trail History Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('#agencyUserRadio').click();
     cy.wait(2000);
@@ -7251,11 +7281,11 @@ cy.wait(2000);
   }
 
   trailHistoryReport_008() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickTrailHistoryReport).click({ force: true });
+    cy.contains("Trail History Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('#agencyUserRadio').click();
     cy.wait(2000);
@@ -7319,11 +7349,11 @@ cy.wait(2000);
   }
 
   trailHistoryReport_009() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickTrailHistoryReport).click({ force: true });
+    cy.contains("Trail History Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.wait(2000);
     cy.get('#agencyUserRadio').click();
@@ -7389,11 +7419,11 @@ cy.wait(2000);
   }
 
   trailHistoryReport_010() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickTrailHistoryReport).click({ force: true });
+    cy.contains("Trail History Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(2000);
@@ -7459,11 +7489,11 @@ cy.wait(2000);
   }
 
   trailHistoryReport_011() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickTrailHistoryReport).click({ force: true });
+    cy.contains("Trail History Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(2000);
@@ -7528,11 +7558,11 @@ cy.wait(2000);
   }
 
   trailHistoryReport_012() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickTrailHistoryReport).click({ force: true });
+    cy.contains("Trail History Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.Clickon_Productgroup).click();
     cy.wait(2000);
@@ -7605,11 +7635,11 @@ cy.wait(2000);
   }
 
   trailHistoryReport_013() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickTrailHistoryReport).click({ force: true });
+    cy.contains("Trail History Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
    
    cy.get('#trailDate_from').click();
@@ -7643,11 +7673,11 @@ cy.wait(2000);
   }
 
   trailHistoryReport_014() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickTrailHistoryReport).click({ force: true });
+    cy.contains("Trail History Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
    
    cy.get('#trailDate_from').click();
@@ -7681,11 +7711,11 @@ cy.wait(2000);
   }
 
   trailHistoryReport_015() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickTrailHistoryReport).click({ force: true });
+    cy.contains("Trail History Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
    
    cy.get('#trailDate_from').click();
@@ -7721,9 +7751,9 @@ cy.wait(2000);
   trailHistoryReport_016() {
     cy.get(this.locators.clickonreport).click({force:true});
     cy.wait(2000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickTrailHistoryReport).click({ force: true });
+    cy.contains("Trail History Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     // cy.get(this.locators.Product_Group).click({force:true});
     // cy.wait(2000);
@@ -7768,11 +7798,11 @@ cy.get('#trailDate_from').click();
   }
 
   trailHistoryReport_017() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickTrailHistoryReport).click({ force: true });
+    cy.contains("Trail History Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOn_TrailHistory_Bucket).click();
     cy.wait(2000);
@@ -7812,11 +7842,11 @@ cy.get('#trailDate_from').click();
   }
 
   trailHistoryReport_018() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickTrailHistoryReport).click({ force: true });
+    cy.contains("Trail History Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
      cy.get(this.locators.ClickOn_TrailHistory_Bucket).click();
     cy.wait(2000);
@@ -7856,11 +7886,11 @@ cy.get('#trailDate_from').click();
   }
 
   trailHistoryReport_019() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickTrailHistoryReport).click({ force: true });
+    cy.contains("Trail History Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
      cy.get(this.locators.ClickOn_TrailHistory_Bucket).click();
     cy.wait(2000);
@@ -7900,11 +7930,11 @@ cy.get('#trailDate_from').click();
   }
 
   trailHistoryReport_020() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicktrailReport).click({ force: true });
+      cy.contains("Trail Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.clickTrailHistoryReport).click({ force: true });
+    cy.contains("Trail History Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
    cy.get(this.locators.ClickOn_TrailHistory_Bucket).click();
     cy.wait(2000);
@@ -7944,9 +7974,9 @@ cy.get('#trailDate_from').click();
   }
 
   attendanceReport_001() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnAttendenceReport).click({ force: true });
+      cy.contains("Attendance Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(5) > .form-control').click();
     cy.wait(2000);
@@ -7970,9 +8000,9 @@ cy.get('#trailDate_from').click();
   }
 
   attendanceReport_002() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnAttendenceReport).click({ force: true });
+      cy.contains("Attendance Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(5) > .form-control').click();
     cy.wait(2000);
@@ -7999,9 +8029,9 @@ cy.get('#trailDate_from').click();
 
 
   attendanceReport_003() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnAttendenceReport).click({ force: true });
+      cy.contains("Attendance Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('.form-radio-group > :nth-child(2) > #reportType-1').click();
     cy.wait(2000);
@@ -8031,9 +8061,9 @@ cy.get('#trailDate_from').click();
   }
 
   attendanceReport_004() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnAttendenceReport).click({ force: true });
+      cy.contains("Attendance Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('.form-radio-group > :nth-child(2) > #reportType-1').click();
     cy.wait(2000);
@@ -8063,9 +8093,9 @@ cy.get('#trailDate_from').click();
   }
 
   attendanceReport_005() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnAttendenceReport).click({ force: true });
+      cy.contains("Attendance Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(5) > .form-control').click();
     cy.wait(2000);
@@ -8096,9 +8126,9 @@ cy.get('#trailDate_from').click();
 
 
   attendanceReport_006() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnAttendenceReport).click({ force: true });
+      cy.contains("Attendance Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('.form-radio-group > :nth-child(2) > #reportType-1').click();
     cy.wait(2000);
@@ -8132,9 +8162,9 @@ cy.get('#trailDate_from').click();
   }
 
   attendanceReport_007() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnAttendenceReport).click({ force: true });
+      cy.contains("Attendance Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('.form-radio-group > :nth-child(2) > #reportType-1').click();
     cy.wait(2000);
@@ -8164,9 +8194,9 @@ cy.get('#trailDate_from').click();
   }
 
   attendanceReport_008() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnAttendenceReport).click({ force: true });
+      cy.contains("Attendance Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('.form-radio-group > :nth-child(2) > #reportType-1').click();
     cy.wait(2000);
@@ -8197,9 +8227,9 @@ cy.get('#trailDate_from').click();
 
 
   attendanceReport_009() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnAttendenceReport).click({ force: true });
+      cy.contains("Attendance Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('.form-radio-group > :nth-child(2) > #reportType-1').click();
     cy.wait(2000);
@@ -8230,9 +8260,9 @@ cy.get('#trailDate_from').click();
 
 
   attendanceReport_010() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnAttendenceReport).click({ force: true });
+      cy.contains("Attendance Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('.form-radio-group > :nth-child(2) > #reportType-1').click();
     cy.wait(2000);
@@ -8261,7 +8291,7 @@ cy.get('#trailDate_from').click();
 
   }
   CashWalletLimitReportPage01() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Cash Wallet Limit Report").click();
     cy.wait(2000);
@@ -8269,7 +8299,7 @@ cy.get('#trailDate_from').click();
     cy.wait(2000);
   }
   CashWalletLimitReportPage02() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Cash Wallet Limit Report").click();
     cy.wait(2000);
@@ -8277,7 +8307,7 @@ cy.get('#trailDate_from').click();
     cy.wait(2000);
   }
   CashWalletLimitReportPage03() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Cash Wallet Limit Report").click();
     cy.wait(2000);
@@ -8285,7 +8315,7 @@ cy.get('#trailDate_from').click();
     cy.wait(2000);
   }
   CashWalletLimitReportPage04() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Cash Wallet Limit Report").click();
     cy.wait(2000);
@@ -8293,7 +8323,7 @@ cy.get('#trailDate_from').click();
     cy.wait(2000);
   }
   CashWalletLimitReportPage05() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Cash Wallet Limit Report").click();
     cy.wait(2000);
@@ -8301,7 +8331,7 @@ cy.get('#trailDate_from').click();
     cy.wait(2000);
   }
   CashWalletLimitReportPage06() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Cash Wallet Limit Report").click();
     cy.wait(2000);
@@ -8310,7 +8340,7 @@ cy.get('#trailDate_from').click();
     cy.get('.btn-secondary').click();
   }
   CashWalletLimitReportPage07() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Cash Wallet Limit Report").click();
     cy.wait(2000);
@@ -8319,7 +8349,7 @@ cy.get('#trailDate_from').click();
 
   }
   CashWalletLimitReportPage08() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Cash Wallet Limit Report").click();
     cy.wait(2000);
@@ -8330,7 +8360,7 @@ cy.get('#trailDate_from').click();
     cy.get('.btn-secondary').click();
   }
   CashWalletLimitReportPage09() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Cash Wallet Limit Report").click();
     cy.wait(2000);
@@ -8341,7 +8371,7 @@ cy.get('#trailDate_from').click();
     cy.get('.btn-secondary').click();
   }
   CashWalletLimitReportPage10() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Cash Wallet Limit Report").click();
     cy.wait(2000);
@@ -8352,7 +8382,7 @@ cy.get('#trailDate_from').click();
     cy.get('.btn-secondary').click();
   }
   CashWalletLimitReportPage11() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Cash Wallet Limit Report").click();
     cy.wait(2000);
@@ -8363,7 +8393,7 @@ cy.get('#trailDate_from').click();
     cy.get('.btn-secondary').click();
   }
   CashWalletLimitReportPage12() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Cash Wallet Limit Report").click();
     cy.wait(2000);
@@ -8378,7 +8408,7 @@ cy.get('#trailDate_from').click();
     cy.get('.btn-secondary').click();
   }
   CashWalletLimitReportPage13() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Cash Wallet Limit Report").click();
     cy.wait(2000);
@@ -8394,7 +8424,7 @@ cy.get('#trailDate_from').click();
     cy.wait(2000);
   }
   CashWalletLimitReportPage14() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Cash Wallet Limit Report").click();
     cy.wait(2000);
@@ -8410,7 +8440,7 @@ cy.get('#trailDate_from').click();
     //cy.wait(400);
   }
   CashWalletLimitReportPage15() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Cash Wallet Limit Report").click();
     cy.wait(2000);
@@ -8420,24 +8450,24 @@ cy.get('#trailDate_from').click();
 
   }
   Customercontactreport16() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonCustomerContactReport).click();
+      cy.contains("Customer Contact Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
 
   }
   Customercontactreport17() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonCustomerContactReport).click();
+      cy.contains("Customer Contact Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(1) > .form-select').select("All");
     cy.wait(2000);
   }
   Customercontactreport18() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonCustomerContactReport).click();
+      cy.contains("Customer Contact Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(1) > .form-select').select("All");
     cy.wait(2000);
@@ -8445,9 +8475,9 @@ cy.get('#trailDate_from').click();
     cy.wait(2000);
   }
   Customercontactreport19() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonCustomerContactReport).click();
+      cy.contains("Customer Contact Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(1) > .form-select').select("All");
     cy.wait(2000);
@@ -8457,17 +8487,17 @@ cy.get('#trailDate_from').click();
     cy.wait(2000);
   }
   Customercontactreport20() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonCustomerContactReport).click();
+      cy.contains("Customer Contact Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(4) > .form-select').select("India");
     cy.wait(2000);
   }
   Customercontactreport21() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonCustomerContactReport).click();
+      cy.contains("Customer Contact Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(4) > .form-select').select("India");
     cy.wait(2000);
@@ -8475,9 +8505,9 @@ cy.get('#trailDate_from').click();
     cy.wait(2000);
   }
   Customercontactreport22() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonCustomerContactReport).click();
+      cy.contains("Customer Contact Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(4) > .form-select').select("India");
     cy.wait(2000);
@@ -8489,9 +8519,9 @@ cy.get('#trailDate_from').click();
 
   }
   Customercontactreport23() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonCustomerContactReport).click();
+      cy.contains("Customer Contact Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(4) > .form-select').select("India");
     cy.wait(2000);
@@ -8506,9 +8536,9 @@ cy.get('#trailDate_from').click();
 
   }
   Customercontactreport24() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonCustomerContactReport).click();
+      cy.contains("Customer Contact Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(8) > .form-select').select("All");
     cy.wait(2000);
@@ -8522,9 +8552,9 @@ cy.get('#trailDate_from').click();
     cy.wait(2000);
   }
   Customercontactreport25() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonCustomerContactReport).click();
+      cy.contains("Customer Contact Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(9) > .form-control').click();
     cy.wait(2000);
@@ -8532,9 +8562,9 @@ cy.get('#trailDate_from').click();
     cy.wait(2000);
   }
   Customercontactreport26() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonCustomerContactReport).click();
+      cy.contains("Customer Contact Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.wait(2000); cy.get(':nth-child(9) > .form-control').click();
     cy.wait(2000);
@@ -8546,9 +8576,9 @@ cy.get('#trailDate_from').click();
     cy.wait(2000);
   }
   Customercontactreport27() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonCustomerContactReport).click();
+      cy.contains("Customer Contact Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(1) > .form-select').select("All");
     cy.wait(2000);
@@ -8576,9 +8606,9 @@ cy.get('#trailDate_from').click();
     cy.wait(2000);
   }
   Customercontactreport28() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonCustomerContactReport).click();
+      cy.contains("Customer Contact Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(1) > .form-select').select("All");
     cy.wait(2000);
@@ -8608,9 +8638,9 @@ cy.get('#trailDate_from').click();
     cy.wait(2000);
   }
   Customercontactreport29() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonCustomerContactReport).click();
+      cy.contains("Customer Contact Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(8) > .form-select').select("All");
     cy.wait(2000);
@@ -8626,9 +8656,9 @@ cy.get('#trailDate_from').click();
     cy.wait(2000);
   }
   Customercontactreport30() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonCustomerContactReport).click();
+      cy.contains("Customer Contact Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(4) > .form-select').select("India");
     cy.wait(2000);
@@ -8646,9 +8676,9 @@ cy.get('#trailDate_from').click();
     cy.wait(2000);
   }
   Customercontactreport31() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonCustomerContactReport).click();
+      cy.contains("Customer Contact Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(4) > .form-select').select("India");
     cy.wait(2000);
@@ -8668,9 +8698,9 @@ cy.get('#trailDate_from').click();
     cy.wait(2000);
   }
   Customercontactreport32() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonCustomerContactReport).click();
+      cy.contains("Customer Contact Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(4) > .form-select').select("India");
     cy.wait(2000);
@@ -8692,9 +8722,9 @@ cy.get('#trailDate_from').click();
     cy.wait(2000);
   }
   Customercontactreport33() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonCustomerContactReport).click();
+      cy.contains("Customer Contact Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(4) > .form-select').select("India");
     cy.wait(2000);
@@ -8718,9 +8748,9 @@ cy.get('#trailDate_from').click();
     cy.wait(2000);
   }
   Customercontactreport34() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonCustomerContactReport).click();
+      cy.contains("Customer Contact Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(1) > .form-select').select("All");
     cy.wait(2000);
@@ -8738,9 +8768,9 @@ cy.get('#trailDate_from').click();
     cy.wait(2000);
   }
   Customercontactreport35() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonCustomerContactReport).click();
+      cy.contains("Customer Contact Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(1) > .form-select').select("Consumer Loan");
     cy.wait(2000);
@@ -8761,9 +8791,9 @@ cy.get('#trailDate_from').click();
     cy.wait(2000);
   }
   Customercontactreport36() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonCustomerContactReport).click();
+      cy.contains("Customer Contact Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(':nth-child(1) > .form-select').select("Consumer Loan");
     cy.wait(2000);
@@ -8785,9 +8815,9 @@ cy.get('#trailDate_from').click();
     cy.wait(2000);
   }
   Customercontactreport37() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonCustomerContactReport).click();
+      cy.contains("Customer Contact Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('.search-batch > :nth-child(2)');
     cy.wait(2000);
@@ -8796,9 +8826,9 @@ cy.get('#trailDate_from').click();
 
   }
   Customercontactreport38() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonCustomerContactReport).click();
+      cy.contains("Customer Contact Report").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('.title');
     cy.wait(2000);
@@ -8807,9 +8837,9 @@ cy.get('#trailDate_from').click();
 
   }
   VisitIntensityReport39() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonVisitIntensityReport).click();
+     cy.contains("Visit Intensity Report").scrollIntoView().should("be.visible").click();
     cy.get(1000);
     cy.get(':nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(2000);
@@ -8827,9 +8857,9 @@ cy.get('#trailDate_from').click();
 
   }
   VisitIntensityReport40() {
-    cy.get(this.locators.clickonreport).click();
+      cy.contains("Reports").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickonVisitIntensityReport).click();
+     cy.contains("Visit Intensity Report").scrollIntoView().should("be.visible").click();
     cy.get(1000);
     cy.get(':nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click();
     cy.wait(2000);

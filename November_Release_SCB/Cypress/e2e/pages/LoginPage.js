@@ -68,8 +68,9 @@ fillPassword(password) {
     cy.get('#otp-input').type(560062);
     cy.wait(2000);
     cy.get('.btn-success').click();
+    cy.wait(8000);
     cy.wait(5000);
-  
+    cy.wait(2000);
   }
  
   login(Companyname, email, password) {

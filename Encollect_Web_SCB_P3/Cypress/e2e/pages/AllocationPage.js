@@ -11,9 +11,9 @@ class AllocationPage {
  
 AllocationTestPage_01(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+ cy.contains("Agency Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.contains("Agency Bulk Allocation Account Level").should("be.visible");
   cy.wait(1000);
@@ -28,23 +28,23 @@ AllocationTestPage_01(){
   
 AllocationTestPage_02(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+ cy.contains("Agency Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkAllocAccountLevel).click();
+ cy.contains("Agency Bulk Allocation Account Level").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
-
+ cy.get('.title').should('have.text', 'Agency Bulk Allocation Account Level');
 
 }
 
 AllocationTestPage_03_download(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+ cy.contains("Agency Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkAllocCustomerLevel).click();
+  cy.contains("Agency Bulk Allocation Customer Level").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.clickOnFieldAgencyTemplate_Radio).click();
   cy.wait(1000);
@@ -69,11 +69,11 @@ AllocationTestPage_03_upload(){
 
 AllocationTestPage_04_download(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+ cy.contains("Agency Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkAllocCustomerLevel).click();
+ cy.contains("Agency Bulk Allocation Customer Level").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.clickOnFieldAgencyTemplate_Radio).click();
   cy.wait(1000);
@@ -94,7 +94,7 @@ AllocationTestPage_04_upload(){
   cy.wait(2000);
   cy.get('#confirm-dialog-okay').click();
   cy.wait(6000);
-  cy.get(this.locators.ClickOnAgencyAllocStstus).click();
+  cy.contains("Agency Allocation Status").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickOnAllocFileUploadDate).click();
   cy.wait(1000);
@@ -106,11 +106,11 @@ AllocationTestPage_04_upload(){
 
 AllocationTestPage_05(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+ cy.contains("Agency Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkAllocCustomerLevel).click();
+ cy.contains("Agency Bulk Allocation Customer Level").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.clickOnFieldAgencyTemplate_Radio).click();
   cy.wait(1000);
@@ -141,11 +141,11 @@ AllocationTestPage_05(){
 
 AllocationTestPage_06_download(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+ cy.contains("Agency Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkAllocCustomerLevel).click();
+ cy.contains("Agency Bulk Allocation Customer Level").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.clickOnFieldAgencyTemplate_Radio).click();
   cy.wait(1000);
@@ -165,7 +165,7 @@ AllocationTestPage_06_upload(){
   cy.wait(2000);
   cy.get('#confirm-dialog-okay').click();
   cy.wait(6000);
-  cy.get(this.locators.ClickOnAgencyAllocStstus).click();
+  cy.contains("Agency Allocation Status").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickOnAllocFileUploadDate).click();
   cy.wait(1000);
@@ -182,11 +182,11 @@ AllocationTestPage_06_upload(){
 
 AllocationTestPage_07(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+ cy.contains("Agency Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyAllocStstus).click();
+  cy.contains("Agency Allocation Status").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.AllocStstus).select("Processed");
   cy.wait(1000);
@@ -199,9 +199,9 @@ AllocationTestPage_07(){
 
 AllocationTestPage_08(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+cy.contains("Agent Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.contains("Agent Bulk Allocation Account Level").should("be.visible");
   cy.wait(1000);
@@ -216,9 +216,9 @@ AllocationTestPage_08(){
 
 AllocationTestPage_09(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+cy.contains("Agent Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickOnAgentBulkAllocAccountLevel).click();
   cy.wait(2000);
@@ -227,11 +227,11 @@ AllocationTestPage_09(){
 
 AllocationTestPage_10_download(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+cy.contains("Agent Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentBulkAllocCustomerLevel).click();
+ cy.contains("Agent Bulk Allocation Customer Level").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickOnAgent_Staff_radio).click();
   cy.wait(1000);
@@ -256,11 +256,11 @@ AllocationTestPage_10_upload(){
 
 AllocationTestPage_11_download(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+cy.contains("Agent Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentBulkAllocCustomerLevel).click();
+ cy.contains("Agent Bulk Allocation Customer Level").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickOnAgent_Staff_radio).click();
   cy.wait(1000);
@@ -293,11 +293,11 @@ AllocationTestPage_11_upload(){
 
 AllocationTestPage_12(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+cy.contains("Agent Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentBulkAllocCustomerLevel).click();
+ cy.contains("Agent Bulk Allocation Customer Level").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickOnAgent_Staff_radio).click();
   cy.wait(1000);
@@ -329,11 +329,11 @@ cy.get('.form-control').attachFile('ENCollectSecondaryAllocationCollectionStaff_
 
 AllocationTestPage_13_download(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+cy.contains("Agent Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentBulkAllocCustomerLevel).click();
+ cy.contains("Agent Bulk Allocation Customer Level").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickOnAgent_Staff_radio).click();
   cy.wait(1000);
@@ -371,11 +371,11 @@ AllocationTestPage_13_upload(){
 
 AllocationTestPage_14(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+cy.contains("Agent Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgent_AllocStatus).click();
+  cy.contains("Agent Allocation Status").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.clickOnAgent_Status).select("Processed");
   cy.wait(1000);
@@ -390,9 +390,9 @@ AllocationTestPage_14(){
 
 AllocationTestPage_15(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnOwnerBulkUpload).click();
+cy.contains("Owner Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.contains("Allocation Owner Bulk Upload Account Level").should("be.visible");
   cy.wait(1000);
@@ -405,9 +405,9 @@ AllocationTestPage_15(){
 
 AllocationTestPage_16(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnOwnerBulkUpload).click();
+cy.contains("Owner Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickOnOwnerAllocAccountlevel).click();
   cy.wait(2000);
@@ -417,11 +417,11 @@ AllocationTestPage_16(){
 
 AllocationTestPage_17_download(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnOwnerBulkUpload).click();
+cy.contains("Owner Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnOwnerAllocCustomerLevel).click();
+cy.contains("Owner Allocation Customer Level").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickOnOwner_DownloadTemp).click();
   cy.wait(3000);
@@ -442,11 +442,11 @@ AllocationTestPage_17_upload(){
 
 AllocationTestPage_18_download(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnOwnerBulkUpload).click();
+cy.contains("Owner Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnOwnerAllocCustomerLevel).click();
+cy.contains("Owner Allocation Customer Level").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickOnOwner_DownloadTemp).click();
   cy.wait(3000);
@@ -462,7 +462,7 @@ AllocationTestPage_18_upload(){
  cy.wait(2000);
  cy.get('#confirm-dialog-okay').click();
  cy.wait(10000);
- cy.get(this.locators.ClickOnOwnerAllocStstusHead).click();
+cy.contains("Owner Allocation Status").scrollIntoView().should("be.visible").click();
  cy.wait(1000);
  cy.get(this.locators.ClickOnOwner_ststus_fileUploadDate).click();
  cy.wait(1000);
@@ -475,11 +475,11 @@ AllocationTestPage_18_upload(){
 
 AllocationTestPage_19_download(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnOwnerBulkUpload).click();
+cy.contains("Owner Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnOwnerAllocCustomerLevel).click();
+cy.contains("Owner Allocation Customer Level").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickOnOwner_DownloadTemp).click();
   cy.wait(3000);
@@ -495,7 +495,7 @@ AllocationTestPage_19_upload(){
  cy.wait(2000);
  cy.get('#confirm-dialog-okay').click();
  cy.wait(10000);
- cy.get(this.locators.ClickOnOwnerAllocStstusHead).click();
+cy.contains("Owner Allocation Status").scrollIntoView().should("be.visible").click();
  cy.wait(1000);
  cy.get(this.locators.ClickOnOwner_ststus_fileUploadDate).click();
  cy.wait(1000);
@@ -514,11 +514,11 @@ AllocationTestPage_19_upload(){
 
 AllocationTestPage_20(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnOwnerBulkUpload).click();
+cy.contains("Owner Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnOwnerAllocStstusHead).click();
+ cy.contains("Owner Allocation Status").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.OwnerAllocStatus_status).select("Processed");
   cy.wait(1000);
@@ -531,11 +531,11 @@ AllocationTestPage_20(){
 
 AllocationTestPage_21(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
-  cy.get(this.locators.ClickOnAllocFilters).click();
+cy.contains("Allocation Filters").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
-  cy.get(this.locators.AgencyAllocFilter).click();
+ cy.contains("Agency Allocation by Filters").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
   cy.get(this.locators.ClickOn_ProductGroup_AgencyFilter).click();
   cy.wait(1000);
@@ -593,11 +593,11 @@ cy.wait(2000);
 
 AllocationTestPage_22(){
   
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
-  cy.get(this.locators.ClickOnAllocFilters).click();
+cy.contains("Allocation Filters").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
-  cy.get(this.locators.AgentAllocFilters).click();
+ cy.contains("Agent Allocation by Filters").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
   cy.get('#Productgroup').select("All");
   cy.wait(1000);
@@ -622,11 +622,11 @@ AllocationTestPage_22(){
 
 AllocationTestPage_23(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
-  cy.get(this.locators.ClickOnAllocFilters).click();
+cy.contains("Allocation Filters").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
-  cy.get(this.locators.AgencyAllocFilter).click();
+ cy.contains("Agency Allocation by Filters").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
   cy.get('#Productgroup').select("All");
   cy.wait(1000);
@@ -684,11 +684,11 @@ AllocationTestPage_23(){
 
 AllocationTestPage_24(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
-  cy.get(this.locators.ClickOnAllocFilters).click();
+cy.contains("Allocation Filters").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
-  cy.get(this.locators.AgentAllocFilters).click();
+ cy.contains("Agent Allocation by Filters").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
   cy.get('#Productgroup').select("All");
   cy.wait(1000);
@@ -743,9 +743,9 @@ AllocationTestPage_24(){
 
 AllocationTestPage_101(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+ cy.contains("Agency Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.contains("Agency Bulk Deallocation Account Level").should("be.visible");
   cy.wait(1000);
@@ -756,23 +756,23 @@ AllocationTestPage_101(){
 
 AllocationTestPage_102(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+ cy.contains("Agency Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkUnAllocAccountlevel).click();
+cy.contains("Agency Bulk Deallocation Account Level").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
-
-
+ cy.get('.title').should('have.text', 'Agency Bulk Deallocation Account Level');
+ cy.wait(2000);
 }
 
 AllocationTestPage_103_download(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+ cy.contains("Agency Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkUnAllocCustomerlevel).click();
+ cy.contains("Agency Bulk Deallocation Customer Level").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickAgencyUnallocDownloadTemp).click();
   cy.wait(3000);
@@ -795,11 +795,11 @@ AllocationTestPage_103_upload(){
 
 AllocationTestPage_104_download(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+ cy.contains("Agency Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkUnAllocCustomerlevel).click();
+ cy.contains("Agency Bulk Deallocation Customer Level").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickAgencyUnallocDownloadTemp).click();
   cy.wait(3000);
@@ -817,7 +817,7 @@ AllocationTestPage_104_upload(){
   cy.wait(2000);
   cy.get('#confirm-dialog-okay').click();
   cy.wait(6000);
-  cy.get(this.locators.ClickAgencyDeAllocStatus_head).click();
+ cy.contains("Agency Deallocation Status").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get('#FileuploadDate').click();
   cy.wait(500);
@@ -829,11 +829,11 @@ AllocationTestPage_104_upload(){
 }
 AllocationTestPage_105_download(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+ cy.contains("Agency Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkUnAllocCustomerlevel).click();
+ cy.contains("Agency Bulk Deallocation Customer Level").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickAgencyUnallocDownloadTemp).click();
   cy.wait(3000);
@@ -851,7 +851,7 @@ AllocationTestPage_105_upload(){
   cy.wait(2000);
   cy.get('#confirm-dialog-okay').click();
   cy.wait(6000);
-  cy.get(this.locators.ClickAgencyDeAllocStatus_head).click();
+ cy.contains("Agency Deallocation Status").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get('#FileuploadDate').click();
   cy.wait(500);
@@ -863,11 +863,11 @@ AllocationTestPage_105_upload(){
 }
 AllocationTestPage_106_download(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+ cy.contains("Agency Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkUnAllocCustomerlevel).click();
+ cy.contains("Agency Bulk Deallocation Customer Level").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickAgencyUnallocDownloadTemp).click();
   cy.wait(3000);
@@ -885,7 +885,7 @@ AllocationTestPage_106_upload(){
   cy.wait(2000);
   cy.get('#confirm-dialog-okay').click();
   cy.wait(10000);
-  cy.get(this.locators.ClickAgencyDeAllocStatus_head).click();
+ cy.contains("Agency Deallocation Status").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get('#FileuploadDate').click();
   cy.wait(500);
@@ -902,11 +902,11 @@ AllocationTestPage_106_upload(){
 
 AllocationTestPage_107(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+ cy.contains("Agency Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickAgencyDeAllocStatus_head).click();
+ cy.contains("Agency Deallocation Status").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.AllocStstus).select("Processed");
   cy.wait(1000);
@@ -919,9 +919,9 @@ AllocationTestPage_107(){
 
 AllocationTestPage_108(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+cy.contains("Agent Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.contains("Agent Bulk Deallocation Account Level").should("be.visible");
   cy.wait(1000);
@@ -933,22 +933,22 @@ AllocationTestPage_108(){
 
 AllocationTestPage_109(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+cy.contains("Agent Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentBulkDeAllocAccountLevel).click();
+ cy.contains("Agent Bulk Deallocation Account Level").scrollIntoView().should("be.visible").click();
   cy.wait(2000);
 
 }
 
 AllocationTestPage_110_download(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+cy.contains("Agent Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentBulkUnAllocCustomerlevel).click();
+cy.contains("Agent Bulk Deallocation Customer Level").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickAgentUnallocDownloadTemp).click();
   cy.wait(3000);
@@ -971,11 +971,11 @@ cy.wait(6000);
 
 AllocationTestPage_111_download(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+cy.contains("Agent Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentBulkUnAllocCustomerlevel).click();
+cy.contains("Agent Bulk Deallocation Customer Level").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickAgentUnallocDownloadTemp).click();
   cy.wait(3000);
@@ -1010,7 +1010,7 @@ cy.contains('File Uploaded Successfully', { timeout: 7000 }).invoke('text').then
 });
 
 
-cy.get(this.locators.ClickOnAgentDeAllocStatus_head).click();
+cy.contains("Agent Deallocation Status").scrollIntoView().should("be.visible").click();
 cy.wait(2000);
 cy.then(() => {
   const transactionId = Cypress.env('transactionID');
@@ -1027,11 +1027,11 @@ cy.wait(4000);
 }
 AllocationTestPage_112_download(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+cy.contains("Agent Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentBulkUnAllocCustomerlevel).click();
+cy.contains("Agent Bulk Deallocation Customer Level").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickAgentUnallocDownloadTemp).click();
   cy.wait(3000);
@@ -1049,7 +1049,7 @@ cy.get('#upload').click();
 cy.wait(2000);
 cy.get('#confirm-dialog-okay').click();
 cy.wait(10000);
-cy.get(this.locators.ClickOnAgentDeAllocStatus_head).click();
+cy.contains("Agent Deallocation Status").scrollIntoView().should("be.visible").click();
 cy.wait(500);
 cy.get('#Fileuploaddate').click();
 cy.wait(1000);
@@ -1064,11 +1064,11 @@ cy.wait(4000);
 
 AllocationTestPage_113_download(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+cy.contains("Agent Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentBulkUnAllocCustomerlevel).click();
+cy.contains("Agent Bulk Deallocation Customer Level").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get(this.locators.ClickAgentUnallocDownloadTemp).click();
   cy.wait(3000);
@@ -1086,7 +1086,7 @@ cy.get('#upload').click();
 cy.wait(2000);
 cy.get('#confirm-dialog-okay').click();
 cy.wait(15000);
-cy.get(this.locators.ClickOnAgentDeAllocStatus_head).click();
+cy.contains("Agent Deallocation Status").scrollIntoView().should("be.visible").click();
 cy.wait(500);
 cy.get('#Fileuploaddate').click();
 cy.wait(1000);
@@ -1103,11 +1103,11 @@ cy.wait(4000);
 
 AllocationTestPage_114(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+cy.contains("Agent Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentDeAllocStatus_head).click();
+  cy.contains("Agent Deallocation Status").scrollIntoView().should("be.visible").click();
   cy.wait(500);
   cy.get(this.locators.AllocStstus).select("Processed");
   cy.wait(1000);
@@ -1120,11 +1120,11 @@ AllocationTestPage_114(){
 
 AllocationTestPage_115(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgencyBulkUpload).click();
+ cy.contains("Agency Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickAgencyDeAllocStatus_head).click();
+ cy.contains("Agency Deallocation Status").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
   cy.get("select[name='UnAllocationType']").select("Customer ID Level");
   cy.wait(1000);
@@ -1135,11 +1135,11 @@ AllocationTestPage_115(){
 
 AllocationTestPage_116(){
 
-  cy.get(this.locators.ClickOnAllocation).click();
+  cy.contains("Allocation").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentBulkUpload).click();
+cy.contains("Agent Bulk Upload").scrollIntoView().should("be.visible").click();
   cy.wait(1000);
-  cy.get(this.locators.ClickOnAgentDeAllocStatus_head).click();
+  cy.contains("Agent Deallocation Status").scrollIntoView().should("be.visible").click();
   cy.wait(500);
   cy.get("select[name='UnAllocationType']").select("Customer ID Level");
   cy.wait(1000);

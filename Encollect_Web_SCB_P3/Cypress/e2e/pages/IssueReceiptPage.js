@@ -10,11 +10,11 @@ class IssueReceiptPage {
 
 IssueReceiptTestPage_01(){
 
-    cy.get(this.locators.ClickOnPayment).click();
+    cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnReceipts).click();
+   cy.contains("Receipts").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnWalk_in_cus).click();
+   cy.contains("Issue Receipt to Walk-in Customer").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
 
  const randomNumber = faker.number.int({ min: 1000, max: 999999 });
@@ -82,18 +82,18 @@ cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
     cy.wait(2000);
     cy.get(this.locators.ClickOnOkay).click();
     cy.wait(4000);
-    cy.get(this.locators.ClickOnPayment).click();
+    cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(3000); 
 
 }
 
 IssueReceiptTestPage_02(){
 
-     cy.get(this.locators.ClickOnPayment).click();
+     cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnReceipts).click();
+   cy.contains("Receipts").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnWalk_in_cus).click();
+   cy.contains("Issue Receipt to Walk-in Customer").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     const randomNumber = faker.number.int({ min: 1000, max: 999999 });
 
@@ -129,17 +129,17 @@ cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
     cy.get('[role="alert"]')
       .should('be.visible')
       .and('contain', 'As per RBI guidelines, you are not permitted to collect a total amount of more than Rs. 1,99,999 in cash in a day or in a single transaction. Your pending limit for today is Rs. 199999.');
-    cy.get(this.locators.ClickOnPayment).click();
+    cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(3000); 
 }
 
 IssueReceiptTestPage_03(){
 
-      cy.get(this.locators.ClickOnPayment).click();
+      cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnReceipts).click();
+   cy.contains("Receipts").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnWalk_in_cus).click();
+   cy.contains("Issue Receipt to Walk-in Customer").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     const randomNumber = faker.number.int({ min: 1000, max: 999999 });
 
@@ -181,11 +181,11 @@ cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
 
 IssueReceiptTestPage_04(){
 
-    cy.get(this.locators.ClickOnPayment).click();
+    cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnReceipts).click();
+   cy.contains("Receipts").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnWalk_in_cus).click();
+   cy.contains("Issue Receipt to Walk-in Customer").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     const randomNumber = faker.number.int({ min: 1000, max: 999999 });
 
@@ -220,7 +220,7 @@ cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
     cy.wait(4000);
     cy.get('.card-content').should("be.visible");
     cy.wait(3000);
-    cy.get(this.locators.ClickOnPayment).click();
+    cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(3000);
 
 
@@ -228,11 +228,11 @@ cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
 
 IssueReceiptTestPage_05(){
 
-     cy.get(this.locators.ClickOnPayment).click();
+     cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnReceipts).click();
+   cy.contains("Receipts").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnWalk_in_cus).click();
+   cy.contains("Issue Receipt to Walk-in Customer").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     const randomNumber = faker.number.int({ min: 1000, max: 999999 });
 
@@ -297,18 +297,18 @@ cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
     cy.wait(2000);
     cy.get(this.locators.ClickOnOkay).click();
     cy.wait(9000);
-    cy.get(this.locators.ClickOnPayment).click();
+    cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(3000); 
 
 }
 
 IssueReceiptTestPage_06(){
 
- cy.get(this.locators.ClickOnPayment).click();
+ cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnReceipts).click();
+   cy.contains("Receipts").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnWalk_in_cus).click();
+   cy.contains("Issue Receipt to Walk-in Customer").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
    const randomNumber = faker.number.int({ min: 1000, max: 999999 });
 
@@ -343,18 +343,18 @@ cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
     cy.wait(2000);
     cy.get(this.locators.ClickOnOkay).click();
     cy.wait(3000);
-    cy.get(this.locators.ClickOnPayment).click();
+    cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(3000);
 
 }
 
 IssueReceiptTestPage_07(){
 
-    cy.get(this.locators.ClickOnPayment).click();
+    cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnReceipts).click();
+   cy.contains("Receipts").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnWalk_in_cus).click();
+   cy.contains("Issue Receipt to Walk-in Customer").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
    const randomNumber = faker.number.int({ min: 1000, max: 999999 });
 
@@ -389,18 +389,18 @@ cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
     cy.wait(2000);
     cy.get(this.locators.ClickOnOkay).click();
     cy.wait(3000);
-    cy.get(this.locators.ClickOnPayment).click();
+    cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(3000);
 
 }
 
 IssueReceiptTestPage_08(){
 
-    cy.get(this.locators.ClickOnPayment).click();
+    cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnReceipts).click();
+   cy.contains("Receipts").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnWalk_in_cus).click();
+   cy.contains("Issue Receipt to Walk-in Customer").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
    const randomNumber = faker.number.int({ min: 1000, max: 999999 });
 
@@ -437,18 +437,18 @@ cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
     cy.wait(3000);
     cy.get(this.locators.ClickOn_Home).click();
     cy.wait(3000);
-    cy.get(this.locators.ClickOnPayment).click();
+    cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(3000);
 
 }
 
 IssueReceiptTestPage_09(){
 
-cy.get(this.locators.ClickOnPayment).click();
+cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnReceipts).click();
+   cy.contains("Receipts").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnWalk_in_cus).click();
+   cy.contains("Issue Receipt to Walk-in Customer").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
    const randomNumber = faker.number.int({ min: 1000, max: 999999 });
 
@@ -486,11 +486,11 @@ cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
 
 IssueReceiptTestPage_10(){
 
-cy.get(this.locators.ClickOnPayment).click();
+cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnReceipts).click();
+   cy.contains("Receipts").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnWalk_in_cus).click();
+   cy.contains("Issue Receipt to Walk-in Customer").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     const randomNumber = faker.number.int({ min: 1000, max: 999999 });
 
@@ -525,7 +525,7 @@ cy.get(this.locators.ClickOnCus_Acc_Num).type("68210000012749");
     cy.wait(2000);
     cy.get(this.locators.ClickOnOkay).click();
     cy.wait(3000);
-    cy.get(this.locators.ClickOnPayment).click();
+    cy.contains("Payments").scrollIntoView().should("be.visible").click();
     cy.wait(3000);
 
 

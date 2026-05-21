@@ -9,11 +9,11 @@ class UserManagementPage {
 
 UserManagementTestPage_01(){
 
- cy.get(this.locators.ClickOnUserManagement).click();
+cy.contains("User Management").scrollIntoView().should("be.visible").click();
  cy.wait(1000);
- cy.get(this.locators.ClickOnAgentEmpanelment).click();
+ cy.contains("Agent Empanelment").scrollIntoView().should("be.visible").click();
  cy.wait(1000);
- cy.get(this.locators.ClickOnAddAgent).click();
+cy.contains("Add Agent").scrollIntoView().should("be.visible").click();
  cy.wait(1000);
 //  cy.contains("Wallet Limit").should("be.visible");
 //  cy.wait(1000);
@@ -35,11 +35,11 @@ UserManagementTestPage_01(){
 
 UserManagementTestPage_02(){
 
-    cy.get(this.locators.ClickOnUserManagement).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnStaffEmpanelment).click();
+    cy.contains("Staff Empanelment").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get('.user-management > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(1) > a').click();
+   cy.contains("Add Staff ").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     //cy.contains("Wallet Limit").should("be.visible");
     cy.wait(1000);
@@ -59,11 +59,11 @@ UserManagementTestPage_02(){
 
 UserManagementTestPage_03(){
 
-    cy.get(this.locators.ClickOnUserManagement).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnAgencyEmpanelment).click();
+cy.contains("Agency Empanelment ").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnAgencyAdd).click();
+    cy.contains("Add Agency").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickOnAddressDetails).click();
     cy.wait(1000);
@@ -80,11 +80,11 @@ UserManagementTestPage_03(){
 
 UserManagementTestPage_04(){
 
-    cy.get(this.locators.ClickOnUserManagement).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnAgentEmpanelment).click();
+    cy.contains("Agent Empanelment").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnAddAgent).click();
+   cy.contains("Add Agent").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.contains("Middle Name").should("be.visible");
     cy.wait(1000);
@@ -104,11 +104,11 @@ UserManagementTestPage_04(){
 
 UserManagementTestPage_05(){
 
-    cy.get(this.locators.ClickOnUserManagement).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnStaffEmpanelment).click();
+    cy.contains("Staff Empanelment").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get('.user-management > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(1) > a').click();
+   cy.contains("Add Staff ").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.contains("Middle Name").should("be.visible");
     cy.wait(1000);
@@ -128,11 +128,11 @@ UserManagementTestPage_05(){
 
 UserManagementTestPage_1082(){
 
-  cy.get(this.locators.ClickOnUserManagement).click();
+ cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnAgentEmpanelment).click();
+    cy.contains("Agent Empanelment").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnAddAgent).click();
+   cy.contains("Add Agent").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.contains("Middle Name").should("be.visible");
     cy.wait(1000);
@@ -151,11 +151,11 @@ UserManagementTestPage_1082(){
 
 UserManagementTestPage_1083(){
 
-    cy.get(this.locators.ClickOnUserManagement).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnStaffEmpanelment).click();
+    cy.contains("Staff Empanelment").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get('.user-management > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(1) > a').click();
+   cy.contains("Add Staff ").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
     cy.contains("Middle Name").should("be.visible");
     cy.wait(1000);

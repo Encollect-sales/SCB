@@ -6,7 +6,8 @@ class CommunicationPage {
   Communication_01(){
   cy.get('[title="Communication"]').click({ force: true });
   cy.wait(1000);
-  cy.get(this.locators.create_communication_template).click({ force: true });
+ cy.contains("Create Communication Template").scrollIntoView().click({force:true});
+
   cy.wait(2000);
   cy.get(this.locators.Channel_Type).select('Notification');
   }
@@ -16,7 +17,8 @@ class CommunicationPage {
     cy.get('[title="Communication"]').click({ force: true });
     cy.wait(1000);
 
-    cy.get(this.locators.create_communication_template).click({ force: true });
+   cy.contains("Create Communication Template").scrollIntoView().click({force:true});
+
     cy.wait(2000);
 
     // Select Channel Type = Notification
@@ -34,7 +36,8 @@ class CommunicationPage {
     cy.get('[title="Communication"]').click({ force: true });
     cy.wait(1000);
 
-    cy.get(this.locators.create_communication_template).click({ force: true });
+   cy.contains("Create Communication Template").scrollIntoView().click({force:true});
+
     cy.wait(2000);
 
     // Select Channel Type = Notification
@@ -59,7 +62,8 @@ class CommunicationPage {
   cy.get('[title="Communication"]').click({ force: true });
   cy.wait(1000);
 
-  cy.get(this.locators.create_communication_template).click({ force: true });
+ cy.contains("Create Communication Template").scrollIntoView().click({force:true});
+
   cy.wait(2000);
 
   // Select Channel Type = Notification
@@ -94,7 +98,8 @@ class CommunicationPage {
     cy.get('[title="Communication"]').click({ force: true });
     cy.wait(1000);
 
-    cy.get(this.locators.create_communication_template).click({ force: true });
+   cy.contains("Create Communication Template").scrollIntoView().click({force:true});
+
     cy.wait(2000);
 
     // Select Channel Type = Notification
@@ -129,7 +134,8 @@ class CommunicationPage {
     cy.get('[title="Communication"]').click({ force: true });
     cy.wait(1000);
 
-    cy.get(this.locators.create_communication_template).click({ force: true });
+   cy.contains("Create Communication Template").scrollIntoView().click({force:true});
+
     cy.wait(2000);
 
     // Select Channel Type = Notification
@@ -169,7 +175,8 @@ class CommunicationPage {
     cy.get('[title="Communication"]').click({ force: true });
     cy.wait(1000);
 
-    cy.get(this.locators.create_communication_template).click({ force: true });
+   cy.contains("Create Communication Template").scrollIntoView().click({force:true});
+
     cy.wait(2000);
 
     // Select Channel Type = Notification
@@ -215,7 +222,8 @@ cy.wait(1000);
     cy.get('[title="Communication"]').click({ force: true });
     cy.wait(1000);
 
-    cy.get(this.locators.create_communication_template).click({ force: true });
+   cy.contains("Create Communication Template").scrollIntoView().click({force:true});
+
     cy.wait(2000);
 
     // Select Channel Type = Notification
@@ -257,7 +265,8 @@ Communication_09() {
     cy.get('[title="Communication"]').click({ force: true });
     cy.wait(1000);
 
-    cy.get(this.locators.create_communication_template).click({ force: true });
+   cy.contains("Create Communication Template").scrollIntoView().click({force:true});
+
     cy.wait(2000);
 
     // Select Channel Type = Notification
@@ -302,7 +311,8 @@ Communication_09() {
   cy.get('[title="Communication"]').click({ force: true });
   cy.wait(1000);
 
-  cy.get(this.locators.create_communication_template).click({ force: true });
+ cy.contains("Create Communication Template").scrollIntoView().click({force:true});
+
   cy.wait(2000);
 
   // Select Channel Type = Notification
@@ -481,7 +491,8 @@ CommunicationPage_14(){
     cy.get('[title="Communication"]').click({ force: true });
     cy.wait(1000);
 
-    cy.get(this.locators.create_communication_template).click({ force: true });
+   cy.contains("Create Communication Template").scrollIntoView().click({force:true});
+
     cy.wait(2000);
 
     // Select Channel Type = Notification
@@ -1239,7 +1250,8 @@ Communication_33() {
   cy.get('[title="Communication"]').click({ force: true });
   cy.wait(1000);
 
-  cy.get(this.locators.create_communication_template).click({ force: true });
+ cy.contains("Create Communication Template").scrollIntoView().click({force:true});
+
   cy.wait(2000);
 
   // Select Channel Type = Notification
@@ -1549,7 +1561,8 @@ Communication_41(){
 CommunicationPage_42(){
   cy.get('[title="Communication"]').click({ force: true });
   cy.wait(1000);
-  cy.get(this.locators.create_communication_template).click({ force: true });
+ cy.contains("Create Communication Template").scrollIntoView().click({force:true});
+
   cy.wait(2000);
    cy.contains('button', 'Create Template').scrollIntoView()
       .should('be.visible')
@@ -1710,7 +1723,8 @@ CommunicationPage_44() {
   cy.get('[title="Communication"]').click({ force: true });
   cy.wait(1000);
 
-  cy.get(this.locators.create_communication_template).click({ force: true });
+ cy.contains("Create Communication Template").scrollIntoView().click({force:true});
+
   cy.wait(2000);
 
   // Select Channel Type = Notification
@@ -1769,7 +1783,8 @@ CommunicationPage_46(){
   // Navigate to Create Communication Template (partial setup for upload focus)
   cy.get('[title="Communication"]').click({ force: true });
   cy.wait(1000);
-  cy.get(this.locators.create_communication_template).click({ force: true });
+ cy.contains("Create Communication Template").scrollIntoView().click({force:true});
+
   cy.wait(2000);
   cy.get(this.locators.Channel_Type).select('Letter');
   cy.wait(1000);
@@ -1802,7 +1817,8 @@ CommunicationPage_47(){
   // Navigate to Create Communication Template (partial setup for upload focus)
   cy.get('[title="Communication"]').click({ force: true });
   cy.wait(1000);
-  cy.get(this.locators.create_communication_template).click({ force: true });
+ cy.contains("Create Communication Template").scrollIntoView().click({force:true});
+
   cy.wait(2000);
   cy.get(this.locators.Channel_Type).select('Letter');
   cy.wait(1000);

@@ -9,14 +9,15 @@ class SystemSettingPage {
 
   systemSettingModule(){
     cy.wait(2000);
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
   }
   SystemSettingTestPage_1091(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click();
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -48,7 +49,7 @@ class SystemSettingPage {
 
   }
     SystemSettingTestPage_1141(){
-    cy.get(this.locators.UsermanagementModule).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Staff Empanelment ").click();
     cy.wait(2000);
@@ -67,11 +68,11 @@ class SystemSettingPage {
 
   }
   SystemSettingTestPage_1195(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportStatus).click({force:true});
+   cy.contains("Masters Upload Status").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ImportStatusSearchbtn).click({force:true});
     cy.wait(2000);
@@ -81,11 +82,11 @@ class SystemSettingPage {
    
   }
   SystemSettingTestPage_1227(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportStatus).click({force:true});
+   cy.contains("Masters Upload Status").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ImportStatusSearchbtn).click({force:true});
     cy.wait(2000);
@@ -93,11 +94,12 @@ class SystemSettingPage {
     cy.wait(2000);
   }
   SystemSettingTestPage_1092(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -127,11 +129,11 @@ class SystemSettingPage {
     
   }
   SystemSettingTestPage_1094(){
-    cy.get(this.locators.UsermanagementModule).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicKAgencyEnpl).click();
+    cy.contains("Agency Empanelment").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickAddAgency).click({force:true});
+    cy.contains("Add Agency").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get("a.nav-link").contains("Scope of Work").click();
     cy.wait(2000);
@@ -145,11 +147,11 @@ class SystemSettingPage {
 
   }
   SystemSettingTestPage_1289(){
-    cy.get(this.locators.UsermanagementModule).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickAgentEnplm).click();
+    cy.contains("Agent Empanelment").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickAddAgent).click();
+    cy.contains("Add Agent").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Departments & Designations").click({force:true});
     cy.wait(2000);
@@ -183,11 +185,11 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1095(){
-    cy.get(this.locators.UsermanagementModule).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicKAgencyEnpl).click();
+    cy.contains("Agency Empanelment").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickAddAgency).click({force:true});
+    cy.contains("Add Agency").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get("a.nav-link").contains("Scope of Work").click();
     cy.wait(2000);
@@ -198,11 +200,11 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1342(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Deposit Bank Master',{force:true});
     cy.wait(2000);
@@ -229,11 +231,11 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1343(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Deposit Bank Master',{force:true});
     cy.wait(2000);
@@ -258,11 +260,11 @@ cy.wait(2000);
         
   }
   SystemSettingTestPage_1341(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Deposit Bank Master',{force:true});
     cy.wait(2000);
@@ -287,11 +289,11 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1345(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Deposit Bank Master',{force:true});
     cy.wait(2000);
@@ -319,11 +321,12 @@ cy.wait(2000);
 
   
   SystemSettingTestPage_1119(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportStatus).click({force:true});
+   cy.contains("Masters Upload Status").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('select[name="fileType"]').select('Bank Master',{force:true});
     cy.wait(2000);
@@ -333,11 +336,11 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1102(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -363,11 +366,12 @@ cy.wait(2000);
 
   
   SystemSettingTestPage_1118(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportStatus).click({force:true});
+   cy.contains("Masters Upload Status").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ImportStatusSearchbtn).click({force:true});
     cy.wait(2000);
@@ -375,11 +379,11 @@ cy.wait(2000);
     cy.wait(2000);
   }
   SystemSettingTestPage_1290(){
-    cy.get(this.locators.UsermanagementModule).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickAgentEnplm).click();
+    cy.contains("Agent Empanelment").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickAddAgent).click();
+    cy.contains("Add Agent").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Departments & Designations").click({force:true});
     cy.wait(2000);
@@ -395,11 +399,11 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1327(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -426,11 +430,11 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1331(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -453,9 +457,9 @@ cy.wait(2000);
         });
       //cy.get('.ng-trigger').should('contain','File Uploaded Successfully. Transaction ID :',{force:true});
       cy.wait(2000);
-      cy.get(this.locators.UsermanagementModule).click();
+     cy.contains("User Management").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
-      cy.get(this.locators.ClicKAgencyEnpl).click();
+      cy.contains("Agency Empanelment").scrollIntoView().should("be.visible").click();
       cy.wait(8000);
       cy.get(this.locators.ClickAddAgency).click();
       cy.wait(2000);
@@ -470,11 +474,12 @@ cy.wait(2000);
 
   }
   SystemSettingTest_1104(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bucket Master',{force:true});
     cy.wait(2000);
@@ -499,11 +504,12 @@ cy.wait(2000);
       
   }
     SystemSettingTestPage_1213(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Disposition Master')
     cy.wait(2000);
@@ -524,11 +530,11 @@ cy.wait(2000);
         
       }
     SystemSettingTest_1148(){
-      cy.get(this.locators.clickOnSystemSetting).click();
+       cy.contains("System Settings").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
-      cy.get(this.locators.accountImportMaster).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
-      cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+      cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.selectMasterTemplate).select('Base Branch Master')
       cy.wait(2000);
@@ -549,11 +555,11 @@ cy.wait(2000);
           
     }   
     SystemSettingTest_1198(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
     cy.wait(2000);
@@ -561,11 +567,11 @@ cy.wait(2000);
     cy.wait(2000);
     }
     SystemSettingTestPage_1181(){
-      cy.get(this.locators.clickOnSystemSetting).click();
+       cy.contains("System Settings").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
-      cy.get(this.locators.ClicOnMU).click();
+     cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
-      cy.get(this.locators.ClickBLUM).click({force:true});
+     cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.selectMasterTemplate).select('Bank Master')
       cy.wait(2000);
@@ -586,11 +592,11 @@ cy.wait(2000);
           
  
     SystemSettingTestPage_1120(){
-      cy.get(this.locators.clickOnSystemSetting).click();
+       cy.contains("System Settings").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
-      cy.get(this.locators.accountImportMaster).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
-      cy.get(this.locators.uploadAccountImportStatus).click({force:true});
+     cy.contains("Masters Upload Status").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get('select[name="fileType"]').select('Bank Master',{force:true});
       cy.wait(2000);
@@ -599,11 +605,12 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1121(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bucket Master',{force:true});
     cy.wait(2000);
@@ -631,11 +638,12 @@ cy.wait(2000);
     }
 
     SystemSettingTestPage_1122(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bucket Master',{force:true});
     cy.wait(2000);
@@ -658,11 +666,12 @@ cy.wait(2000);
       cy.wait(2000);
     }
      SystemSettingTestPage_1208(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
     cy.wait(2000);
@@ -687,11 +696,12 @@ cy.wait(2000);
 
     }
     SystemSettingTestPage_1209(){
-      cy.get(this.locators.clickOnSystemSetting).click();
+       cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
     cy.wait(2000);
@@ -718,11 +728,11 @@ cy.wait(2000);
 
     }
     SystemSettingTestPage_1207(){
-      cy.get(this.locators.clickOnSystemSetting).click();
+       cy.contains("System Settings").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
-      cy.get(this.locators.ClicOnMU).click();
+     cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
-      cy.get(this.locators.ClickBLUM).click({force:true});
+     cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
       cy.wait(2000);
@@ -750,11 +760,11 @@ cy.wait(2000);
 
     }
     SystemSettingTestPage_1206(){
-      cy.get(this.locators.clickOnSystemSetting).click();
+       cy.contains("System Settings").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
-      cy.get(this.locators.ClicOnMU).click();
+     cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
-      cy.get(this.locators.ClickBLUM).click({force:true});
+     cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
       cy.wait(2000);
@@ -781,11 +791,11 @@ cy.wait(2000);
     
         }
     SystemSettingTestPage_1199(){
-      cy.get(this.locators.clickOnSystemSetting).click();
+       cy.contains("System Settings").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
-      cy.get(this.locators.ClicOnMU).click();
+     cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
-      cy.get(this.locators.ClickBLUM).click({force:true});
+     cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
       cy.wait(2000);
@@ -810,11 +820,11 @@ cy.wait(2000);
         
     }
     SystemSettingTestPage_1211(){
-      cy.get(this.locators.clickOnSystemSetting).click();
+       cy.contains("System Settings").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
-      cy.get(this.locators.ClicOnMU).click();
+     cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
-      cy.get(this.locators.ClickBLUM).click({force:true});
+     cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
       cy.wait(2000);
@@ -839,11 +849,11 @@ cy.wait(2000);
 
     }
     SystemSettingTestPage_1216(){
-      cy.get(this.locators.clickOnSystemSetting).click();
+       cy.contains("System Settings").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
-      cy.get(this.locators.ClicOnMU).click();
+     cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
-      cy.get(this.locators.ClickBLUM).click({force:true});
+     cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
       cy.wait(2000);
@@ -869,11 +879,11 @@ cy.wait(2000);
 
     }
     SystemSettingTestPage_1179(){
-      cy.get(this.locators.clickOnSystemSetting).click();
+       cy.contains("System Settings").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
-      cy.get(this.locators.ClicOnMU).click();
+     cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
-      cy.get(this.locators.ClickBLUM).click({force:true});
+     cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
       cy.wait(2000);
@@ -898,9 +908,9 @@ cy.wait(2000);
     }
     SystemSettingTestPage_1125(){
       cy.wait(2000)
-      cy.get(this.locators.UsermanagementModule).click();
+     cy.contains("User Management").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
-      cy.get(this.locators.ClicKAgencyEnpl).click();
+      cy.contains("Agency Empanelment").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.ClickAddAgency).click();
       cy.wait(2000);
@@ -915,9 +925,10 @@ cy.wait(2000);
     
     
   SystemSettingTestPage_1135(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
     cy.get(this.locators.uploadAccountImportStatus).click({force : true});
     cy.wait(2000);
@@ -928,11 +939,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1136(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnMasterUpload).click({force:true});
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportStatus).click({force:true});
+   cy.contains("Masters Upload Status").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get('select[name="fileType"]').select('Bucket Master',{force:true});
     cy.wait(2000);
@@ -948,9 +959,9 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1162(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMasterstatus).click({force:true});
     cy.wait(2000);
@@ -960,7 +971,7 @@ cy.wait(2000);
     cy.wait(2000);
   }
   SystemSettingTestPage_1163(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click({force:true});
     cy.wait(2000);
@@ -980,9 +991,9 @@ cy.wait(2000);
     // cy.wait(800);
   }
   SystemSettingTestPage_1229(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click({force:true});
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMasterstatus).click({force:true});
     cy.wait(2000);
@@ -993,7 +1004,7 @@ cy.wait(2000);
     
   }
   SystemSettingTestPage_1196(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClicOnMU).click({force:true});
     cy.wait(2000);
@@ -1010,7 +1021,7 @@ cy.wait(2000);
   SystemSettingTestPage_1228(){
     cy.get(this.locators.clickOnSystemSetting).click({force:true});
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click({force:true});
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMasterstatus).click({force:true});
     cy.wait(2000);
@@ -1022,9 +1033,9 @@ cy.wait(2000);
     // cy.wait(800);
   }
   SystemSettingTestPage_1229(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click({force:true});
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMasterstatus).click({force:true});
     cy.wait(2000);
@@ -1038,9 +1049,9 @@ cy.wait(2000);
   SystemSettingTestPage_1305(){
     cy.get('[title="System Settings"]').click({force:true});
       cy.wait(2000);
-      cy.get(this.locators.accountImportMaster).click({force:true});
+     cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
-      cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+      cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
       cy.wait(2000);
@@ -1067,11 +1078,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1306(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -1106,7 +1117,7 @@ cy.wait(2000);
   
 
   SystemSettingTestPage_1309(){
-    cy.get(this.locators.UsermanagementModule).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.clickonagenceyimplimentatinReq).click();
       cy.wait(2000);
@@ -1116,7 +1127,7 @@ cy.wait(2000);
       cy.wait(2000);
   }
   SystemSettingTestPage_1308(){
-    cy.get(this.locators.UsermanagementModule).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
       cy.wait(2000);
       cy.get(this.locators.clickonagenceyimplimentatinReq).click();
       cy.wait(2000);
@@ -1127,11 +1138,12 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1102(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -1154,11 +1166,11 @@ cy.wait(2000);
       cy.wait(2000);
       }
   SystemSettingTestPage_1316(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -1182,11 +1194,11 @@ cy.wait(2000);
       
   }
   SystemSettingTestPage_1318(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Bank Master')
     cy.wait(2000);
@@ -1208,11 +1220,11 @@ cy.wait(2000);
   
   
   SystemSettingTestPage_1351(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Deposit Bank Master',{force:true});
     cy.wait(2000);
@@ -1236,11 +1248,11 @@ cy.wait(2000);
       
   }
   SystemSettingTestPage_1352(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Deposit Bank Master',{force:true});
     cy.wait(2000);
@@ -1282,9 +1294,9 @@ cy.wait(2000);
 
   
   SystemSettingTestPage_1303(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click({force:true});
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMasterstatus).click({force:true});
     cy.wait(2000);
@@ -1296,9 +1308,9 @@ cy.wait(2000);
     // cy.wait(800);
   }
   SystemSettingTestPage_1304(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click({force:true});
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMasterstatus).click({force:true});
     cy.wait(2000);
@@ -1310,9 +1322,9 @@ cy.wait(2000);
   //   cy.wait(800);
   }
   SystemSettingTestPage_1333(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click({force:true});
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMasterstatus).click({force:true});
     cy.wait(2000);
@@ -1324,11 +1336,11 @@ cy.wait(2000);
     // cy.wait(800); 
   }
   SystemSettingTestPage_1332(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportStatus).click({force:true});
+   cy.contains("Masters Upload Status").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ImportStatusSearchbtn).click({force:true});
     cy.wait(2000);
@@ -1337,9 +1349,9 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1334(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click({force:true});
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMasterstatus).click({force:true});
     cy.wait(2000);
@@ -1352,11 +1364,11 @@ cy.wait(2000);
   
   }
   SystemSettingTestPage_1357(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportStatus).click({force:true});
+   cy.contains("Masters Upload Status").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ImportStatusSearchbtn).click({force:true});
     cy.wait(2000);
@@ -1364,9 +1376,9 @@ cy.wait(2000);
     //cy.wait(2000);
   }
   SystemSettingTestPage_1358(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click({force:true});
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMasterstatus).click({force:true});
     cy.wait(2000);
@@ -1379,9 +1391,9 @@ cy.wait(2000);
   
   }
   SystemSettingTestPage_1359(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click({force:true});
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.accountImportMasterstatus).click({force:true});
     cy.wait(2000);
@@ -1427,11 +1439,11 @@ cy.wait(2000);
     cy.wait(800);
   }
   SystemSettingTestPage_1097(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Product Master',{force:true});
     cy.wait(2000);
@@ -1461,11 +1473,11 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1100(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Product Master',{force:true});
     cy.wait(2000);
@@ -1494,9 +1506,9 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1335(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(800);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(800);
     cy.get('body > app-root:nth-child(1) > div:nth-child(1) > div:nth-child(2) > app-navbar:nth-child(1) > div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(2) > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(2)').click({force:true});
     cy.wait(800);
@@ -1507,11 +1519,12 @@ cy.wait(2000);
     cy.log('File downloaded Sucessfully');
   }
   SystemSettingTestPage_1120(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(800);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(800);
-    cy.get(this.locators.uploadAccountImportStatus).click({force:true});
+   cy.contains("Masters Upload Status").scrollIntoView().should("be.visible").click();
     cy.wait(800);
     cy.get(this.locators.EnterFileType).select('Bank Master',{force:true});
     cy.wait(800);
@@ -1531,11 +1544,11 @@ cy.wait(2000);
   
 
   SystemSettingTestPage_1164(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -1546,9 +1559,9 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/GeomasterMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClickBLUM).click();
     cy.wait(2000);
@@ -1570,9 +1583,9 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/GeomasterMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClickBLUM).click();
     cy.wait(2000);
@@ -1586,7 +1599,7 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1167(){
-    cy.get(this.locators.UsermanagementModule).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Agency Empanelment").click();
     cy.wait(2000);
@@ -1596,7 +1609,7 @@ cy.wait(2000);
     
   }
   SystemSettingTestPage_1168(){
-    cy.get(this.locators.UsermanagementModule).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Agency Empanelment").click();
     cy.wait(2000);
@@ -1606,11 +1619,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1169(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -1638,11 +1651,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1170(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -1669,11 +1682,11 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1171(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -1699,11 +1712,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1172(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -1729,11 +1742,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1173(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -1759,11 +1772,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1174(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -1789,11 +1802,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1175(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -1821,11 +1834,11 @@ cy.wait(2000);
 
 
   SystemSettingTestPage_1176(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -1852,11 +1865,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1177(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(5000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -1882,11 +1895,11 @@ cy.wait(2000);
 
   SystemSettingTestPage_1178(){
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -1913,11 +1926,11 @@ cy.wait(2000);
 
 
   SystemSettingTestPage_1182(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -1943,11 +1956,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1183(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -1973,11 +1986,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1186(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Geo Master',{force:true});
     cy.wait(2000);
@@ -2003,11 +2016,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1294(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Department and Designation Master',{force:true});
     cy.wait(2000);
@@ -2032,11 +2045,11 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1287(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Department and Designation Master',{force:true});
     cy.wait(2000);
@@ -2062,11 +2075,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1295(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Department and Designation Master',{force:true});
     cy.wait(2000);
@@ -2092,11 +2105,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1296(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Department and Designation Master',{force:true});
     cy.wait(2000);
@@ -2122,11 +2135,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1297(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Department and Designation Master',{force:true});
     cy.wait(2000);
@@ -2151,11 +2164,11 @@ cy.wait(2000);
 
   }
   SystemSettingTestPage_1298(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Department and Designation Master',{force:true});
     cy.wait(2000);
@@ -2181,11 +2194,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1299(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Department and Designation Master',{force:true});
     cy.wait(2000);
@@ -2211,11 +2224,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1200(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Department and Designation Master',{force:true});
     cy.wait(2000);
@@ -2241,11 +2254,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1301(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Department and Designation Master',{force:true});
     cy.wait(2000);
@@ -2271,11 +2284,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1302(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportStatus).click({force:true});
+   cy.contains("Masters Upload Status").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ImportStatusSearchbtn).click({force:true});
     cy.wait(2000);
@@ -2292,9 +2305,9 @@ cy.wait(2000);
   SystemSettingTestPage_1305(){
     cy.get('[title="System Settings"]').click({force:true});
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click({force:true});
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -2319,11 +2332,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1306(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -2348,11 +2361,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1307(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -2382,11 +2395,11 @@ cy.wait(2000);
   SystemSettingTestPage_1308(){
 
     cy.wait(100);
-    cy.get(this.locators.UsermanagementModule).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicKAgencyEnpl).click();
+    cy.contains("Agency Empanelment").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickAddAgency).click({force:true});
+    cy.contains("Add Agency").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Banking Details").click();
     cy.get("select[name='bankName']").select("ADCC BANK");
@@ -2396,11 +2409,11 @@ cy.wait(2000);
   SystemSettingTestPage_1309(){
 
     cy.wait(100);
-    cy.get(this.locators.UsermanagementModule).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicKAgencyEnpl).click();
+    cy.contains("Agency Empanelment").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickAddAgency).click({force:true});
+    cy.contains("Add Agency").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.contains("Banking Details").click();
     cy.get("select[name='bankName']").select("ADCC BANK");
@@ -2408,11 +2421,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1310(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -2440,11 +2453,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1311(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -2473,11 +2486,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1312(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -2505,11 +2518,11 @@ cy.wait(2000);
   }
   
   SystemSettingTestPage_1313(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -2538,11 +2551,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1314(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -2570,11 +2583,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1315(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -2602,11 +2615,12 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1093(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -2655,11 +2669,12 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1096(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -2706,11 +2721,12 @@ cy.wait(2000);
    }
 
   SystemSettingTestPage_1097(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -2735,11 +2751,12 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1098(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -2766,11 +2783,12 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1099(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -2797,11 +2815,12 @@ cy.wait(2000);
       cy.wait(2000);
   }
   SystemSettingTestPage_1100(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -2828,11 +2847,12 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1101(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -2860,11 +2880,12 @@ cy.wait(2000);
 
 
   SystemSettingTestPage_1103(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -2891,11 +2912,12 @@ cy.wait(2000);
 
 
   SystemSettingTestPage_1105(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Bank Master',{force:true});
     cy.wait(2000);
@@ -2922,9 +2944,9 @@ cy.wait(2000);
 
   SystemSettingTestPage_1124(){
     cy.wait(2000)
-    cy.get(this.locators.UsermanagementModule).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicKAgencyEnpl).click();
+    cy.contains("Agency Empanelment").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClickAddAgency).click();
     cy.wait(2000);
@@ -2937,11 +2959,11 @@ cy.wait(2000);
 
 
   SystemSettingTestPage_1199(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
     cy.wait(2000);
@@ -2965,11 +2987,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_12000(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
     cy.wait(2000);
@@ -2992,11 +3014,11 @@ cy.wait(2000);
       cy.wait(2000);
   }
   SystemSettingTestPage_1203(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
     cy.wait(2000);
@@ -3019,11 +3041,11 @@ cy.wait(2000);
       cy.wait(2000);
   }
   SystemSettingTestPage_1204(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
     cy.wait(2000);
@@ -3047,11 +3069,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1205(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
     cy.wait(2000);
@@ -3075,11 +3097,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1208(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
     cy.wait(2000);
@@ -3103,11 +3125,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1210(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
     cy.wait(2000);
@@ -3131,11 +3153,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1216(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
     cy.wait(2000);
@@ -3159,10 +3181,10 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1217(){
-    cy.get(this.locators.clickOnSystemSetting).click();
-    cy.get(this.locators.ClicOnMU).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
     cy.wait(2000);
@@ -3186,11 +3208,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1218(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
     cy.wait(2000);
@@ -3214,11 +3236,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1219(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
     cy.wait(2000);
@@ -3242,11 +3264,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1220(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
     cy.wait(2000);
@@ -3269,11 +3291,11 @@ cy.wait(2000);
       // cy.wait(2000);
   }
   SystemSettingTestPage_1221(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
     cy.wait(2000);
@@ -3296,11 +3318,11 @@ cy.wait(2000);
       //cy.wait(2000);
   }
   SystemSettingTestPage_1222(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
     cy.wait(2000);
@@ -3324,11 +3346,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1223(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
     cy.wait(2000);
@@ -3352,11 +3374,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1224(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
     cy.wait(2000);
@@ -3380,11 +3402,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1225(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
     cy.wait(2000);
@@ -3409,11 +3431,11 @@ cy.wait(2000);
 
 
   SystemSettingTestPage_1226(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
     cy.wait(2000);
@@ -3437,11 +3459,11 @@ cy.wait(2000);
   }
 
   SystemSettingTestPage_1335(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.uploadAccountImportMaster).click({force:true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Disposition Master',{force:true});
     cy.wait(2000);
@@ -3453,11 +3475,11 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/DepositBankMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectPWUF).select("Deposit Bank Master");
     cy.wait(2000);
@@ -3470,11 +3492,11 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/DepositBankMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.wait(2000);
     cy.get(this.locators.SelectPWUF).select("Deposit Bank Master");
@@ -3488,11 +3510,11 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/DepositBankMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Deposit Bank Master',{force:true});
     cy.wait(2000);
@@ -3508,11 +3530,11 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/DepositBankMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Deposit Bank Master',{force:true});
     cy.wait(2000);
@@ -3532,11 +3554,11 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/DepositBankMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectMaster).select('Deposit Bank Master',{force:true});
     cy.wait(2000);
@@ -3553,11 +3575,11 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/DepartmentAndDesiginationMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectPWUF).select("Department and Designation Master");
     cy.wait(2000);
@@ -3573,11 +3595,11 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/DepartmentAndDesiginationMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectPWUF).select("Department and Designation Master");
     cy.wait(2000);
@@ -3593,11 +3615,11 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/DepartmentAndDesiginationMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.accountImportMaster).click();
+    cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force:true});
+   cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.SelectPWUF).select("Department and Designation Master");
     cy.wait(2000);
@@ -3612,11 +3634,11 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/BaseBranchMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(600);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     
     cy.get("#upload-template-type").select("Base Branch Master");
@@ -3632,11 +3654,11 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/BaseBranchMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(600);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     
     cy.get("#upload-template-type").select("Base Branch Master");
@@ -3652,11 +3674,11 @@ cy.wait(2000);
 
     const filePath = 'Cypress/fixtures/BaseBranchMasterTemplate.xlsx'
 
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(600);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     
     cy.get("#upload-template-type").select("Base Branch Master");
@@ -3669,14 +3691,15 @@ cy.wait(2000);
   }
   systemSettingModule(){
     cy.wait(2000);
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
   }
 
   BucketMaster1126(){
     cy.wait(600);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Bucket Master')
     cy.wait(2000);
@@ -3704,9 +3727,10 @@ cy.wait(2000);
 
   BucketMaster1128(){
     cy.wait(600);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Bucket Master')
     cy.wait(2000);
@@ -3732,9 +3756,10 @@ cy.wait(2000);
 
   BucketMaster1134(){
     cy.wait(600);
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
     cy.get(this.locators.uploadAccountImportStatus).click({force : true});
     cy.wait(2000);
@@ -3749,9 +3774,10 @@ cy.wait(2000);
 
   BucketMaster1129(){
     cy.wait(600);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Bucket Master')
     cy.wait(2000);
@@ -3785,9 +3811,9 @@ cy.wait(2000);
 
   BaseBranchMaster1137(){
     cy.wait(600);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Base Branch Master');
     cy.wait(2000);
@@ -3817,9 +3843,9 @@ cy.wait(2000);
 
   BaseBranchMaster1138(){
     cy.wait(600);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Base Branch Master');
     cy.wait(2000);
@@ -3847,9 +3873,9 @@ cy.wait(2000);
   }
   BaseBranchMaster1146(){
     cy.wait(600);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Base Branch Master');
     cy.wait(2000);
@@ -3880,9 +3906,9 @@ cy.wait(2000);
 
   BaseBranchMaster1150(){
     cy.wait(600);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Base Branch Master');
     cy.wait(2000);
@@ -3911,7 +3937,7 @@ cy.wait(2000);
 
   BaseBranchMaster1161(){
     cy.wait(600);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.bulkUploadMasterStatus).click({force : true});
     cy.wait(2000);
@@ -3926,9 +3952,10 @@ cy.wait(2000);
 
   BucketMaster1130(){
     cy.wait(600);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Bucket Master')
     cy.wait(2000);
@@ -3997,9 +4024,10 @@ cy.wait(2000);
 
   BucketMaster1133(){
     cy.wait(600);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Bucket Master')
     cy.wait(2000);
@@ -4034,9 +4062,10 @@ cy.wait(2000);
 
   BaseBranchMaster1148(){
     cy.wait(600);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Bucket Master')
     cy.wait(2000);
@@ -4062,9 +4091,10 @@ cy.wait(2000);
 
   BaseBranchMaster1149(){
     cy.wait(600);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Bucket Master')
     cy.wait(2000);
@@ -4099,9 +4129,10 @@ cy.wait(2000);
 
   DispositionCodeMaster1214(){
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Disposition Master')
     cy.wait(2000);
@@ -4136,9 +4167,10 @@ cy.wait(2000);
 
   DispositionCodeMaster1215(){
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Disposition Master')
     cy.wait(2000);
@@ -4173,9 +4205,10 @@ cy.wait(2000);
 
   DepartmentAndDesignationMaster1286(){
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.get(this.locators.selectMasterTemplate).select('Department and Designation Master')
     cy.wait(2000);
     cy.get(this.locators.downloadBucketMaster).click();
@@ -4209,9 +4242,10 @@ cy.wait(2000);
 
   DepositeBankMaster1346(){
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Deposit Bank Master')
     cy.wait(2000);
@@ -4245,9 +4279,10 @@ cy.wait(2000);
 
   DepositeBankMaster1348(){
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Deposit Bank Master')
     cy.wait(2000);
@@ -4272,9 +4307,10 @@ cy.wait(2000);
 
   DepositeBankMaster1336(){
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Deposit Bank Master')
     cy.wait(2000);
@@ -4309,9 +4345,10 @@ cy.wait(2000);
 
   DepositeBankMaster1337(){
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Deposit Bank Master')
     cy.wait(2000);
@@ -4346,9 +4383,10 @@ cy.wait(2000);
 
   DepositeBankMaster1349(){
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Deposit Bank Master')
     cy.wait(2000);
@@ -4383,9 +4421,10 @@ cy.wait(2000);
 
   DepositeBankMaster1350(){
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Deposit Bank Master')
     cy.wait(2000);
@@ -4419,9 +4458,9 @@ cy.wait(2000);
 
   BankMaster1318(){
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Bank Master')
     cy.wait(2000);
@@ -4447,9 +4486,9 @@ cy.wait(2000);
 
   BankMaster1319(){
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.get(this.locators.selectMasterTemplate).select('Bank Master')
     cy.wait(2000);
     cy.get(this.locators.downloadBucketMaster).click();
@@ -4477,9 +4516,9 @@ cy.wait(2000);
 
   BankMaster1320(){
     cy.wait(2000);
-    cy.get(this.locators.ClicOnMU).click();
+   cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickBLUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Bank Master')
     cy.wait(2000);
@@ -4577,9 +4616,10 @@ cy.wait(2000);
 
   ProductMaster1106(){
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Bank Master')
     cy.wait(2000);
@@ -4615,9 +4655,10 @@ cy.wait(2000);
 
   BucketMaster1123(){
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Bucket Master')
     cy.wait(2000);
@@ -4653,11 +4694,12 @@ cy.wait(2000);
 
 
   BucketMaster1132(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnMasterUpload).click();
+      cy.contains("Masters Upload").scrollIntoView().should("be.visible").click();
+ 
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBUM).click({force : true});
+    cy.contains("Bulk Upload Masters").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.selectMasterTemplate).select('Bucket Master')
     cy.wait(2000);
@@ -4694,7 +4736,7 @@ cy.wait(2000);
 
 
   // DefineACM1377(){
-  //   cy.get(this.locators.clickOnSystemSetting).click();
+  //    cy.contains("System Settings").scrollIntoView().should("be.visible").click();
 
   //   cy.wait(2000);
   //   cy.get(this.locators.web_submodule).click({force : true});
@@ -4709,7 +4751,7 @@ cy.wait(2000);
   // }
 
   // DefineACM1378(){
-  //   cy.get(this.locators.clickOnSystemSetting).click();
+  //    cy.contains("System Settings").scrollIntoView().should("be.visible").click();
   //   cy.wait(2000);
   //   cy.get(this.locators.defineACM).click();
   //   cy.wait(2000);
@@ -4731,7 +4773,7 @@ cy.wait(2000);
   // }
 
   // DefineACM1379(){
-  //   cy.get(this.locators.clickOnSystemSetting).click();
+  //    cy.contains("System Settings").scrollIntoView().should("be.visible").click();
   //   cy.wait(2000);
   //   cy.get(this.locators.defineACM).click();
   //   cy.wait(2000);
@@ -4777,7 +4819,7 @@ cy.wait(2000);
 
 
   // DefineACM1380(){
-  //   cy.get(this.locators.clickOnSystemSetting).click();
+  //    cy.contains("System Settings").scrollIntoView().should("be.visible").click();
   //   cy.wait(2000);
   //   cy.wait(2000);
   //   cy.get(this.locators.defineACM).click();
@@ -4818,7 +4860,7 @@ cy.wait(2000);
   // }
 
   // DefineACM1381(){
-  //   cy.get(this.locators.clickOnSystemSetting).click();
+  //    cy.contains("System Settings").scrollIntoView().should("be.visible").click();
   //   cy.wait(2000);
   //   cy.get(this.locators.defineACM).click();
   //   cy.wait(2000);
@@ -4861,7 +4903,7 @@ cy.wait(2000);
 
 
   // DefineACM1382(){
-  //   cy.get(this.locators.clickOnSystemSetting).click();
+  //    cy.contains("System Settings").scrollIntoView().should("be.visible").click();
   //   cy.wait(2000);
   //   cy.get(this.locators.defineACM).click();
   //   cy.wait(2000);
@@ -4906,7 +4948,7 @@ cy.wait(2000);
 
 
   // DefineACM1384(){
-  //   cy.get(this.locators.clickOnSystemSetting).click();
+  //    cy.contains("System Settings").scrollIntoView().should("be.visible").click();
   //   cy.wait(2000);
   //   cy.get(this.locators.defineACM).click();
   //   cy.wait(2000);
@@ -4956,7 +4998,7 @@ cy.wait(2000);
   // }
 
   DefineACM1385(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.defineACM).click();
     cy.wait(2000);
@@ -4972,7 +5014,7 @@ cy.wait(2000);
 
 
   DefineACM1386(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.defineACM).click();
     cy.wait(2000);
@@ -4993,7 +5035,7 @@ cy.wait(2000);
 
 
   DefineACM1387(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.defineACM).click();
     cy.wait(2000);
@@ -5021,7 +5063,7 @@ cy.wait(2000);
 
 
   DefineACM1388(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.defineACM).click();
     cy.wait(2000);
@@ -5055,7 +5097,7 @@ cy.wait(2000);
 
 
   DefineACM1389(){
-    cy.get(this.locators.clickOnSystemSetting).click();
+     cy.contains("System Settings").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.defineACM).click();
     cy.wait(2000);

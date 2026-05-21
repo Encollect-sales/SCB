@@ -11,7 +11,7 @@ describe('Allocation - User Type - User Click on agency account level, loan acco
     before(() => {
         // Load and set locators before any tests run
         getLocators('loginPage').then(locators => {
-            loginPage = new LoginPage(locators);s
+            loginPage = new LoginPage(locators);
         });
 
         getLocators('Allocation').then(locators => {  

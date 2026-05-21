@@ -46,7 +46,7 @@ describe('Trails - Agreement ID – Alphanumeric Value is Allowed ', () => {
 
             const data = {
                 'A2':'DMI0009590352',
-                'B2': '10031',
+                'B2': '67609',
                 'C2': 'yes',
                 'D2': 'PTP',
                 'E2': 'PTP',

@@ -7,18 +7,18 @@ class PaymentsPage {
   }
 
   PaymentModule001() {
-    cy.contains("Payments").click();
+     cy.contains("Payments").scrollIntoView().click();
     cy.wait(2000);
-    cy.get(this.locators.onlinePaymentRequest).click();
+   cy.contains("Online Payment Requests").scrollIntoView().click();
     cy.wait(1000);
     cy.contains('Online Payment Requests').should('be.visible');
     cy.wait(1000);
   }
 
   PaymentModule002() {
-    cy.contains("Payments").click();
+     cy.contains("Payments").scrollIntoView().click();
     cy.wait(2000);
-    cy.get(this.locators.onlinePaymentRequest).click();
+   cy.contains("Online Payment Requests").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.agencyUser).click();
     cy.wait(1000);
@@ -27,9 +27,9 @@ class PaymentsPage {
   }
 
   PaymentModule003() {
-    cy.contains("Payments").click();
+     cy.contains("Payments").scrollIntoView().click();
     cy.wait(2000);
-    cy.get(this.locators.onlinePaymentRequest).click();
+   cy.contains("Online Payment Requests").scrollIntoView().click();
     cy.wait(1000);
     cy.contains('Online Payment Requests').should('be.visible');
     cy.wait(1000);
@@ -48,9 +48,9 @@ class PaymentsPage {
   }
 
   PaymentModule004() {
-    cy.contains("Payments").click();
+     cy.contains("Payments").scrollIntoView().click();
     cy.wait(2000);
-    cy.get(this.locators.onlinePaymentRequest).click();
+   cy.contains("Online Payment Requests").scrollIntoView().click();
     cy.wait(1000);
    cy.contains('Online Payment Requests').should('be.visible');
     cy.wait(1000);
@@ -71,9 +71,9 @@ class PaymentsPage {
   }
 
   PaymentModule005() {
-    cy.contains("Payments").click();
+     cy.contains("Payments").scrollIntoView().click();
     cy.wait(2000);
-    cy.get(this.locators.onlinePaymentRequest).click();
+   cy.contains("Online Payment Requests").scrollIntoView().click();
     cy.wait(1000);
     cy.get('#receiptDate_from').click(); // open datepicker
     cy.wait(1000);
@@ -133,9 +133,9 @@ class PaymentsPage {
 
 
     PaymentModule006() {
-    cy.contains("Payments").click();
+     cy.contains("Payments").scrollIntoView().click();
     cy.wait(2000);
-    cy.get(this.locators.onlinePaymentRequest).click();
+   cy.contains("Online Payment Requests").scrollIntoView().click();
     cy.wait(1000);
     cy.get('#receiptDate_from').click(); // open datepicker
     cy.wait(1000);
@@ -196,9 +196,9 @@ class PaymentsPage {
   }
 
     PaymentModule007() {
-    cy.contains("Payments").click();
+     cy.contains("Payments").scrollIntoView().click();
     cy.wait(2000);
-    cy.get(this.locators.onlinePaymentRequest).click();
+   cy.contains("Online Payment Requests").scrollIntoView().click();
     cy.wait(1000);
     cy.get('#receiptDate_from').click(); // open datepicker
     cy.wait(1000);
@@ -261,9 +261,9 @@ class PaymentsPage {
   }
 
     PaymentModule008() {
-    cy.contains("Payments").click();
+     cy.contains("Payments").scrollIntoView().click();
     cy.wait(2000);
-    cy.get(this.locators.onlinePaymentRequest).click();
+   cy.contains("Online Payment Requests").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.agencyUser).click();
     cy.get('#receiptDate_from').click(); // open datepicker
@@ -324,9 +324,9 @@ class PaymentsPage {
 }
 
 PaymentModule009() {
-    cy.contains("Payments").click();
+     cy.contains("Payments").scrollIntoView().click();
     cy.wait(2000);
-    cy.get(this.locators.onlinePaymentRequest).click();
+   cy.contains("Online Payment Requests").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.agencyUser).click();
     cy.get('#receiptDate_from').click(); // open datepicker
@@ -389,9 +389,9 @@ PaymentModule009() {
 }
   
     PaymentModule010() {
-    cy.contains("Payments").click();
+     cy.contains("Payments").scrollIntoView().click();
     cy.wait(2000);
-    cy.get(this.locators.onlinePaymentRequest).click();
+   cy.contains("Online Payment Requests").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.agencyUser).click();
     cy.wait(1000);
@@ -456,9 +456,9 @@ PaymentModule009() {
   }  
 
   PaymentModule011() {
-    cy.contains("Payments").click();
+     cy.contains("Payments").scrollIntoView().click();
     cy.wait(2000);
-    cy.get(this.locators.onlinePaymentRequest).click();
+   cy.contains("Online Payment Requests").scrollIntoView().click();
     cy.wait(1000);
     cy.get(this.locators.agencyUser).click();
     cy.wait(1000);

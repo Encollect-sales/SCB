@@ -45,7 +45,7 @@ describe('Trails - Verify system behavior when special characters are entered in
 
             const data = {
                 'A2':'@#&*#$%()',
-                'B2': '10031',
+                'B2': '67609',
                 'C2': 'yes',
                 'D2': 'PTP',
                 'E2': 'PTP',

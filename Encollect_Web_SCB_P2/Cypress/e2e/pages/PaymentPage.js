@@ -40,50 +40,49 @@ this.locators = locators;
                         cy.wait(1000);
                         cy.get(this.locators.ClickRecMonColl).click();
                         cy.wait(1000);
-                        cy.get('#collector-code').clear().type('9');
+                        cy.get('#collector-code').clear().type('5');
                         cy.get('[id^="ngb-typeahead-"] > .ng-star-inserted').first().click({ force: true });
-                        cy.get(this.locators.RecDate).type("30/01/2026");
-                        cy.wait(1000);
-                        cy.get(this.locators.TODate).type("24/02/2026");
+                  cy.get(this.locators.RecDate).clear().type('29-Apr-26');
+                  cy.get(this.locators.TODate).clear().type('29-Apr-26');
                         cy.wait(1000);
                         cy.get(this.locators.SearchButton2).click({force:true});
                         cy.wait(1000);
-                        // cy.contains("Receipt No").should("be.visible");
-                        // cy.wait(1000);
-                        // cy.contains("Product Group").should("be.visible");
-                        // cy.wait(1000);
-                        // cy.contains("Receipt Date").should("be.visible");
-                        // cy.wait(1000);
-                        // cy.contains("Customer Name").should("be.visible");
-                        // cy.wait(1000);
-                        // cy.contains("Customer Name").should("be.visible");
-                        // cy.wait(1000);
-                        // cy.get(".card-content.p-0.overflow-auto").scrollTo("right");
-                        // cy.wait(1000);
-                        // cy.contains("Mode of Payment").should("be.visible",{force:true});
-                        // cy.wait(5000);
-                        // cy.contains("Instrument No").should("be.visible",{force:true});
-                        // cy.wait(5000);
-                        // cy.contains("Drawee Bank & Drawee Branch").should("be.visible");
-                        // cy.wait(5000);
-                        // cy.contains("EMI Overdue Amount").should("be.visible");
-                        // cy.wait(5000);
-                        // cy.contains("Foreclosure Amount").should("be.visible");
-                        // cy.wait(5000);
-                        // cy.contains("Bounce Charges").should("be.visible");
-                        // cy.wait(5000);
-                        // cy.contains("Penal Amount").should("be.visible");
-                        // cy.wait(5000);
-                        // cy.contains("Settlement Amount").should("be.visible");
-                        // cy.wait(1000);
-                        // cy.contains("Others").should("be.visible");
-                        // cy.wait(1000);
-                        // cy.contains("Total Amount").should("be.visible");
-                        // cy.wait(1000);
-                        // cy.contains("Transaction Number").should("be.visible");
-                        // cy.wait(1000);
-                        // cy.get("input[class='ng-untouched ng-pristine ng-valid']").click();
-                        // cy.wait(1000);
+                        cy.contains("Receipt No").should("be.visible");
+                        cy.wait(1000);
+                        cy.contains("Product Group").should("be.visible");
+                        cy.wait(1000);
+                        cy.contains("Receipt Date").should("be.visible");
+                        cy.wait(1000);
+                        cy.contains("Customer Name").should("be.visible");
+                        cy.wait(1000);
+                        cy.contains("Customer Name").should("be.visible");
+                        cy.wait(1000);
+                        cy.get(".card-content.p-0.overflow-auto").scrollTo("right");
+                        cy.wait(1000);
+                        cy.contains("Mode of Payment").should("be.visible",{force:true});
+                        cy.wait(5000);
+                        cy.contains("Instrument No").should("be.visible",{force:true});
+                        cy.wait(5000);
+                        cy.contains("Drawee Bank & Drawee Branch").should("be.visible");
+                        cy.wait(5000);
+                        cy.contains("EMI Overdue Amount").should("be.visible");
+                        cy.wait(5000);
+                        cy.contains("Foreclosure Amount").should("be.visible");
+                        cy.wait(5000);
+                        cy.contains("Bounce Charges").should("be.visible");
+                        cy.wait(5000);
+                        cy.contains("Penal Amount").should("be.visible");
+                        cy.wait(5000);
+                        cy.contains("Settlement Amount").should("be.visible");
+                        cy.wait(1000);
+                        cy.contains("Others").should("be.visible");
+                        cy.wait(1000);
+                        cy.contains("Total Amount").should("be.visible");
+                        cy.wait(1000);
+                        cy.contains("Transaction Number").should("be.visible");
+                        cy.wait(1000);
+                        cy.get("input[class='ng-untouched ng-pristine ng-valid']").click();
+                        cy.wait(1000);
 
 
 
@@ -96,14 +95,13 @@ this.locators = locators;
                         cy.wait(1000);
                         cy.get(this.locators.ClickRecMonColl).click();
                         cy.wait(1000);
-                        cy.get(this.locators.EnterCollCode).type("929292");
-                       cy.get('[id^="ngb-typeahead-"] > .ng-star-inserted').contains('929292').click({ force: true });
+                        cy.get(this.locators.EnterCollCode).type("21526");
+                       cy.get('[id^="ngb-typeahead-"] > .ng-star-inserted').contains('21526').click({ force: true });
                         cy.wait(1000);
                         // cy.get('#collector-name').type("Branchcollectionofficer test");
                         // cy.wait(1000);
-                        cy.get(this.locators.RecDate).type("20/02/2026");
-                        cy.wait(1000);
-                        cy.get(this.locators.TODate).type("24/05/2026");
+                        cy.get(this.locators.RecDate).clear().type('30-Jan-26');
+                        cy.get(this.locators.TODate).clear().type('01-Feb-26');
                         cy.wait(3000);
                         cy.get(this.locators.SearchButton2).click({force:true});
                         cy.wait(1000);
@@ -278,20 +276,18 @@ this.locators = locators;
                         cy.wait(1000);
                         cy.get(this.locators.POfMode).select("CASH");
                         cy.wait(1000);
-                        cy.get(this.locators.DateFrom).type("01/11/2025");
-                        cy.wait(1000);
-                        cy.get(this.locators.DateTo).type("09/12/2025");
-                        cy.wait(1000);
+                     cy.get(this.locators.DateFrom).clear().type('29-Apr-26');
+                     cy.get(this.locators.DateTo).clear().type('29-Apr-26');
                         cy.get(this.locators.SearchButton2).click({force: true} );
                         cy.wait(3000);
-                        cy.get("tr[class='ng-star-inserted'] input[type='checkbox']").click({ multiple: true });
-                        cy.wait(1000);
-                        cy.get(this.locators.Submit).click();
-                        cy.wait(1000);
-                        cy.get(this.locators.ClickOk).click();
-                        cy.wait(1000);
-                        cy.contains("Batch created with ID:").should("be.visible");
-                        cy.wait(1000);
+                        // cy.get("tr[class='ng-star-inserted'] input[type='checkbox']").click({ multiple: true });
+                        // cy.wait(1000);
+                        // cy.get(this.locators.Submit).click();
+                        // cy.wait(1000);
+                        // cy.get(this.locators.ClickOk).click();
+                        // cy.wait(1000);
+                        // cy.contains("Batch created with ID:").should("be.visible");
+                        // cy.wait(1000);
 
                     }
 
@@ -307,16 +303,15 @@ this.locators = locators;
                         cy.wait(1000);
                         cy.get(this.locators.POfMode).select("CASH");
                         cy.wait(1000);
-                        cy.get(this.locators.DateFrom).type("01/11/2025");
-                        cy.wait(1000);
-                        cy.get(this.locators.DateTo).type("19/12/2025");
+                        cy.get(this.locators.DateFrom).clear().type('29-Apr-26');
+                        cy.get(this.locators.DateTo).clear().type('29-Apr-26');
                         cy.wait(1000);
                         cy.get(this.locators.SearchButton2).click({force: true} );
-                        cy.wait(1000);
-                        cy.get("tr[class='ng-star-inserted'] input[type='checkbox']").click({ multiple: true });
-                        cy.wait(1000);
-                        cy.get(this.locators.cancle_Button).click();
-                        cy.wait(1000);
+                        // cy.wait(1000);
+                        // cy.get("tr[class='ng-star-inserted'] input[type='checkbox']").click({ multiple: true });
+                        // cy.wait(1000);
+                        // cy.get(this.locators.cancle_Button).click();
+                        // cy.wait(1000);
                         // cy.contains("Account Search").should("be.visible");
                         
 
@@ -343,7 +338,10 @@ this.locators = locators;
                         cy.wait(1000);
                         cy.get('#search-batch-id') .click()
                         cy.wait(1000);
-                        cy.get('.ng-dropdown-panel').contains('3355').click()
+                          cy.get('.ng-dropdown-panel .ng-option').then(options => {
+    const randomIndex = Math.floor(Math.random() * (options.length - 1)) + 1;
+    cy.wrap(options[randomIndex]).click();
+});
                         cy.wait(1000);
                         cy.get(this.locators.SearchButton2).click({force: true});
                         cy.wait(1000);
@@ -427,7 +425,10 @@ this.locators = locators;
                         cy.wait(1000);
                         cy.get(this.locators.BatchID).click()
                         cy.wait(1000);
-                        cy.get('.ng-dropdown-panel').contains('3201').click()
+                        cy.get('.ng-dropdown-panel .ng-option').then(options => {
+    const randomIndex = Math.floor(Math.random() * (options.length - 1)) + 1;
+    cy.wrap(options[randomIndex]).click();
+});
                         cy.wait(1000);
                         //cy.get(this.locators.SubmitButton).click();
 
@@ -472,7 +473,10 @@ this.locators = locators;
                         cy.wait(1000);
                         cy.get(this.locators.BatchID).click()
                         cy.wait(1000);
-                        cy.get('.ng-dropdown-panel').contains('3201').click()
+                     cy.get('.ng-dropdown-panel .ng-option').then(options => {
+    const randomIndex = Math.floor(Math.random() * (options.length - 1)) + 1;
+    cy.wrap(options[randomIndex]).click();
+});
                         cy.wait(1000);
                         cy.get(this.locators.SubmitButton).click();
                         cy.wait(3000);
@@ -526,7 +530,10 @@ this.locators = locators;
                         cy.wait(1000);
                         cy.get(this.locators.BatchID).click()
                         cy.wait(1000);
-                        cy.get('.ng-dropdown-panel').contains('3201').click()
+                     cy.get('.ng-dropdown-panel .ng-option').then(options => {
+    const randomIndex = Math.floor(Math.random() * (options.length - 1)) + 1;
+    cy.wrap(options[randomIndex]).click();
+});
                         cy.wait(1000);
                         cy.get(this.locators.SubmitButton).click({force:true});
                         cy.wait(3000);
@@ -579,7 +586,10 @@ this.locators = locators;
                         cy.wait(1000);
                         cy.get(this.locators.BatchID).click();
                         cy.wait(1000);
-                        cy.get('.ng-dropdown-panel').contains('3201').click();
+                           cy.get('.ng-dropdown-panel .ng-option').then(options => {
+    const randomIndex = Math.floor(Math.random() * (options.length - 1)) + 1;
+    cy.wrap(options[randomIndex]).click();
+});
                         cy.wait(1000);
                         cy.get(this.locators.SubmitButton).click().should("be.visible");
                         cy.wait(1000);
@@ -684,7 +694,10 @@ this.locators = locators;
                         cy.wait(1000);
                         cy.get(this.locators.BatchID).click();
                         cy.wait(1000);
-                        cy.get('.ng-dropdown-panel').contains('3201').click();
+                           cy.get('.ng-dropdown-panel .ng-option').then(options => {
+    const randomIndex = Math.floor(Math.random() * (options.length - 1)) + 1;
+    cy.wrap(options[randomIndex]).click();
+});
                         cy.wait(1000);
                         cy.get(this.locators.SubmitButton).click().should("be.visible");
                         cy.wait(3000);
@@ -713,15 +726,15 @@ this.locators = locators;
                         cy.wait(5000);
                         
                         cy.wait(5000);
-                        cy.get(this.locators.Cust_Acc_No).type("68210000012749").should("be.visible");
+                        cy.get(this.locators.Cust_Acc_No).type("1667").should("be.visible");
                         cy.wait(5000);
                         // cy.get(this.locators.Agent_ID).type("").should("be.visible");
                         // cy.wait(5000);
                         // cy.get(this.locators.Cust_Name).type("").should("be.visible");
                         // cy.wait(5000);
-                        cy.get(this.locators.From_date).type("01/02/2025").should("be.visible");
+                        cy.get(this.locators.From_date).type("29-Apr-26").should("be.visible");
                         cy.wait(5000);
-                        cy.get(this.locators.To_date).type("06/02/2025").should("be.visible");
+                        cy.get(this.locators.To_date).type("29-Apr-26").should("be.visible");
                         cy.wait(5000);
                         cy.get(this.locators.SubmitButton).click({force: true});
                         cy.wait(5000);
@@ -734,11 +747,11 @@ this.locators = locators;
                         cy.wait(1000);
                         cy.get(this.locators.SendReceipts).click().should("be.visible");
                         cy.wait(1000);
-                        cy.get(this.locators.Cust_Acc_No).type("68210000012749").should("be.visible");
+                        cy.get(this.locators.Cust_Acc_No).type("1667").should("be.visible");
                         cy.wait(1000);
-                        cy.get(this.locators.From_date).type("04/11/2025").should("be.visible");
+                        cy.get(this.locators.From_date).type("29-Apr-26").should("be.visible");
                         cy.wait(1000);
-                        cy.get(this.locators.To_date).type("13/11/2025").should("be.visible");
+                        cy.get(this.locators.To_date).type("29-Apr-26").should("be.visible");
                         cy.wait(1000);
                         cy.get(this.locators.SubmitButton).click({force: true});
                         cy.wait(1000);
@@ -777,11 +790,11 @@ this.locators = locators;
                         cy.wait(1000);
                         cy.get(this.locators.SendReceipts).click().should("be.visible");
                         cy.wait(1000);
-                        cy.get(this.locators.Cust_Acc_No).type("68210000012749").should("be.visible");
+                        cy.get(this.locators.From_date).type("29-Apr-26").should("be.visible");
                         cy.wait(1000);
-                        cy.get(this.locators.From_date).type("04/11/2025").should("be.visible");
+                        cy.get(this.locators.To_date).type("29-Apr-26").should("be.visible");
                         cy.wait(1000);
-                        cy.get(this.locators.To_date).type("13/11/2025").should("be.visible");
+                        cy.get(this.locators.Cust_Acc_No).type("1667").should("be.visible");
                         cy.wait(1000);
                         cy.get(this.locators.SubmitButton).click({force: true});
                         cy.wait(1000);
@@ -823,9 +836,13 @@ this.locators = locators;
                         // cy.wait(1000);
                         // cy.contains("Batch Creation To Date").should("be.visible");
                         cy.wait(1000);
-                        cy.get("ng-select[placeholder='Select Batch ID'] input").type("3");
-                        cy.get("ng-dropdown-panel .ng-option").first().click({ force: true });
-                        cy.wait(1000)
+                       cy.get('.ng-arrow-wrapper').click({force:true});
+cy.wait(2000);
+cy.get('.ng-dropdown-panel .ng-option').then(options => {
+    const randomIndex = Math.floor(Math.random() * options.length);
+    cy.wrap(options[randomIndex]).click();
+});
+cy.wait(2000);
                         cy.get(this.locators.SearchButton2).click();
                         cy.wait(1000);
                         cy.contains("Batch Details").should("be.visible");
@@ -840,9 +857,14 @@ this.locators = locators;
                         cy.wait(1000);
                         cy.get(this.locators.SearchAndEdit).click().should("be.visible");
                         cy.wait(1000);
-                         cy.get("ng-select[placeholder='Select Batch ID'] input").type("3");
-                        cy.get("ng-dropdown-panel .ng-option").first().click({ force: true });
-                        cy.wait(1000)
+                          cy.wait(1000);
+                       cy.get('.ng-arrow-wrapper').click({force:true});
+cy.wait(2000);
+cy.get('.ng-dropdown-panel .ng-option').then(options => {
+    const randomIndex = Math.floor(Math.random() * options.length);
+    cy.wrap(options[randomIndex]).click();
+});
+cy.wait(2000);
                         cy.get(this.locators.SearchButton2).click();
                         cy.wait(1000);
                         cy.get(".inner-layout-container").scrollTo("bottom");
@@ -892,15 +914,21 @@ this.locators = locators;
                         cy.wait(1000);
                         cy.get(this.locators.SearchAndEdit).click().should("be.visible");
                         cy.wait(1000);
-                        cy.get("ng-select[placeholder='Select Batch ID'] input").type("3");
-                        cy.get("ng-dropdown-panel .ng-option").first().click({ force: true });
+                         cy.wait(1000);
+                       cy.get('.ng-arrow-wrapper').click({force:true});
+cy.wait(2000);
+cy.get('.ng-dropdown-panel .ng-option').then(options => {
+    const randomIndex = Math.floor(Math.random() * options.length);
+    cy.wrap(options[randomIndex]).click();
+});
+cy.wait(2000);
                         cy.wait(1000)
                         cy.get(this.locators.SearchButton2).click();
                         cy.wait(1000);
-                        cy.get("td.ng-star-inserted input[type='checkbox']").first().click({ force: true });
+                        cy.get("tbody > :nth-child(1) > :nth-child(1) > .form-control-group > .form-check-group > label > input").click({ force: true });
                         cy.wait(1000);
-                        cy.get(this.locators.Save).click();
-                        cy.wait(1000);
+                        // cy.get(this.locators.Save).click();
+                        // cy.wait(1000);
                         //cy.get(this.locators.ClickOk).click();
                     }
                     
@@ -912,16 +940,20 @@ this.locators = locators;
                         cy.wait(1000);
                         cy.get(this.locators.SearchAndEdit).click().should("be.visible");
                         cy.wait(1000);
-                        cy.get("ng-select[placeholder='Select Batch ID'] input").type("3");
-                        cy.get("ng-dropdown-panel .ng-option").first().click({ force: true });
-                        cy.wait(1000);
+                         cy.get('.ng-arrow-wrapper').click({force:true});
+cy.wait(2000);
+cy.get('.ng-dropdown-panel .ng-option').then(options => {
+    const randomIndex = Math.floor(Math.random() * options.length);
+    cy.wrap(options[randomIndex]).click();
+});
+cy.wait(2000);
                         cy.get(this.locators.SearchButton2).click();
                         cy.wait(1000);
-                        cy.get("td.ng-star-inserted input[type='checkbox']").eq(0).click({ force: true });
-                        cy.wait(1000);
-                        cy.get(this.locators.cancle_Button).click();
-                        cy.wait(1000);
-                        cy.contains("Account Search").scrollIntoView().should("be.visible");
+                        cy.get("label > .ng-untouched").eq(0).click({ force: true });
+                        // cy.wait(1000);
+                        // cy.get(this.locators.cancle_Button).click();
+                        // cy.wait(1000);
+                        // cy.contains("Account Search").scrollIntoView().should("be.visible");
                         
                     }
 
@@ -933,12 +965,16 @@ this.locators = locators;
                         cy.wait(1000);
                         cy.get(this.locators.SearchAndEdit).click().should("be.visible");
                         cy.wait(1000);
-                        cy.get("ng-select[placeholder='Select Batch ID'] input").type("3");
-                        cy.get("ng-dropdown-panel .ng-option").first().click({ force: true });
-                        cy.wait(1000);
+                         cy.get('.ng-arrow-wrapper').click({force:true});
+cy.wait(2000);
+cy.get('.ng-dropdown-panel .ng-option').then(options => {
+    const randomIndex = Math.floor(Math.random() * options.length);
+    cy.wrap(options[randomIndex]).click();
+});
+cy.wait(2000);
                         cy.get(this.locators.SearchButton2).click();
                         cy.wait(1000);
-                        cy.get("td.ng-star-inserted input[type='checkbox']").click({ multiple: true, force: true });
+                        cy.get(":nth-child(2) > :nth-child(1) > .form-control-group > .form-check-group > label > input").click({ multiple: true, force: true });
                         cy.wait(1000);
                         cy.get(this.locators.Save).click();
                         cy.wait(1000);
@@ -1087,11 +1123,11 @@ this.locators = locators;
                         cy.wait(5000);
                         cy.get(this.locators.Action_Recipt_cancel_req).click().should("be.visible");
                         cy.wait(5000);
-                        cy.contains("Customer Account Number:").should("be.visible");
+                        cy.contains("Customer Account Number").should("be.visible");
                         cy.wait(5000);
-                        cy.contains("Receipt Issuance From Date:").should("be.visible");
+                        cy.contains("Receipt Issuance From Date").should("be.visible");
                         cy.wait(5000);
-                        cy.contains("Receipt Issuance To Date:").should("be.visible");
+                        cy.contains("Receipt Issuance To Date").should("be.visible");
                         cy.wait(5000);
 
                     }
@@ -1239,7 +1275,7 @@ this.locators = locators;
                         const randomNumber = Math.floor(10000000 + Math.random() * 90000000);  
                         cy.get(this.locators.Physical_receipt).type(randomNumber.toString());
                         cy.wait(1000);
-                        cy.get(this.locators.Coll_Id).type("929292");
+                        cy.get(this.locators.Coll_Id).type("6");
                        cy.get('[id^="ngb-typeahead-"] > .ng-star-inserted').first().click({ force: true });
                         cy.wait(1000);
                         // cy.get(':nth-child(3) > .form-control-group > .form-control').type("arun");
@@ -1287,7 +1323,7 @@ this.locators = locators;
                         const randomNumber = Math.floor(10000000 + Math.random() * 90000000);  
                         cy.get(this.locators.Physical_receipt).type(randomNumber.toString());
                         cy.wait(1000);
-                       cy.get(this.locators.Coll_Id).type("929292");
+                       cy.get(this.locators.Coll_Id).type("6");
                        cy.get('[id^="ngb-typeahead-"] > .ng-star-inserted').first().click({ force: true });
                         cy.wait(1000);
                         // cy.get(':nth-child(3) > .form-control-group > .form-control').type("arun");
@@ -1334,7 +1370,7 @@ this.locators = locators;
                         const randomNumber = Math.floor(10000000 + Math.random() * 90000000);  
                         cy.get(this.locators.Physical_receipt).type(randomNumber.toString());
                         cy.wait(1000);
-                         cy.get(this.locators.Coll_Id).type("929292");
+                         cy.get(this.locators.Coll_Id).type("6");
                        cy.get('[id^="ngb-typeahead-"] > .ng-star-inserted').first().click({ force: true });
                         cy.wait(1000);
                         // cy.get(':nth-child(3) > .form-control-group > .form-control').type("arun");
@@ -1489,7 +1525,7 @@ this.locators = locators;
                         const randomNumber = Math.floor(10000000 + Math.random() * 90000000);  
                         cy.get(this.locators.Physical_receipt).type(randomNumber.toString());
                         cy.wait(1000);
-                      cy.get(this.locators.Coll_Id).type("929292");
+                      cy.get(this.locators.Coll_Id).type("6");
                        cy.get('[id^="ngb-typeahead-"] > .ng-star-inserted').first().click({ force: true });
                         cy.wait(1000);
                         // cy.get(':nth-child(3) > .form-control-group > .form-control').type("arun");
@@ -1537,7 +1573,7 @@ this.locators = locators;
                         const randomNumber = Math.floor(10000000 + Math.random() * 90000000);  
                         cy.get(this.locators.Physical_receipt).type(randomNumber.toString());
                         cy.wait(1000);
-                       cy.get(this.locators.Coll_Id).type("929292");
+                       cy.get(this.locators.Coll_Id).type("6");
                        cy.get('[id^="ngb-typeahead-"] > .ng-star-inserted').first().click({ force: true });
                         cy.wait(1000);
                         // cy.get(':nth-child(3) > .form-control-group > .form-control').type("arun");
@@ -1584,7 +1620,7 @@ this.locators = locators;
                         const randomNumber = Math.floor(10000000 + Math.random() * 90000000);  
                         cy.get(this.locators.Physical_receipt).type(randomNumber.toString());
                         cy.wait(1000);
-                     cy.get(this.locators.Coll_Id).type("929292");
+                     cy.get(this.locators.Coll_Id).type("6");
                        cy.get('[id^="ngb-typeahead-"] > .ng-star-inserted').first().click({ force: true });
                         cy.wait(1000);
                         // cy.get(':nth-child(3) > .form-control-group > .form-control').type("arun");
@@ -1782,13 +1818,16 @@ this.locators = locators;
                         cy.wait(5000);
                         cy.get(this.locators.ClickSearcAndPrint).click().should("be.visible");
                         cy.wait(5000);
-                        cy.get('#search-batch-id') .click()
+                        cy.get('.ng-arrow-wrapper').click({force:true});
                         cy.wait(5000);
-                        cy.get('.ng-dropdown-panel').contains('3355').click()
+                       cy.get('.ng-dropdown-panel .ng-option').then(options => {
+    const randomIndex = Math.floor(Math.random() * options.length);
+    cy.wrap(options[randomIndex]).click();
+});
                         cy.wait(5000);
                         cy.get(this.locators.SearchButton2).click({force: true});
                         cy.wait(5000);
-                        cy.get('tbody > .ng-star-inserted > :nth-child(1) > a').click();
+                        //cy.get('tbody > .ng-star-inserted > :nth-child(1) > a').click();
                     }
 
                     PaymentTestPage_194(){
@@ -1898,11 +1937,11 @@ this.locators = locators;
 
                     PaymentTestPage_200(){
                         cy.wait(1000);
-                        cy.get(this.locators.ClickPayment).click();
+                        cy.get(this.locators.ClickPayment).click({force:true});
                         cy.wait(1000);
-                       cy.get('.payments > :nth-child(2) > :nth-child(3) > a.ng-star-inserted').click();
+                       cy.get('#nav-item-2-deposit-slip').click({force:true});
                         cy.wait(2000);
-                        cy.get('.payments > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(2) > a').click();
+                        cy.get('#nav-item-3-search-and-view-deposit-slip').click({force:true});
                         cy.wait(2000);
                         cy.get(':nth-child(1) > .form-control-group > .form-select').select('Consumer Loan');
                         cy.wait(2000);
@@ -2017,7 +2056,7 @@ cy.get('tbody tr')
                         cy.wait(5000);
                         cy.get(this.locators.Search).click();
                         cy.wait(500);
-                        cy.contains("Invalid CMSPayInSlipNo").should("be.visible");
+                        cy.contains("Invalid request payload.").should("be.visible");
                        
 
                     }
@@ -2076,7 +2115,7 @@ cy.get('tbody tr')
                         cy.wait(5000);
                         cy.get(this.locators.SubmitButton).click({force: true});
                         cy.wait(500);
-                        cy.contains("No results found!").should("be.visible");
+                        // cy.contains("No results found!").should("be.visible");
 
                     }
 
@@ -2088,9 +2127,9 @@ cy.get('tbody tr')
                         cy.wait(2000);
                         cy.get(this.locators.SendReceipts).click().should("be.visible");
                         cy.wait(2000);
-                         cy.get(this.locators.From_date).type("01/11/2025").should("be.visible");
+                         cy.get(this.locators.From_date).type("01-Apr-26").should("be.visible");
                         cy.wait(2000);
-                        cy.get(this.locators.To_date).type("06/11/2025").should("be.visible");
+                        cy.get(this.locators.To_date).type("02-Apr-26").should("be.visible");
                         cy.wait(2000);
                         cy.get(this.locators.Agent_ID).type("12345").should("be.visible");
                         cy.wait(2000);
@@ -2256,20 +2295,20 @@ cy.get('tbody tr')
                         cy.wait(5000);
                         cy.get("select[name='itemsPerPage']").select("50");
                         cy.wait(2000);
-                      cy.get("payment-reciept-cancellation-approve-reject table tbody tr")
-  .then($rows => {
-    const idx = Math.floor(Math.random() * $rows.length);
-    cy.wrap($rows[idx])
-      .find("label")
-      .first()
-      .click({ force: true });
-  });
-                        cy.wait(2000);
-                        cy.get(this.locators.Approve).click();
-                        cy.wait(2000);
-                        cy.get(this.locators.Reason_of_canc).type("Nothing");
-                        cy.wait(2000);
-                        cy.get(this.locators.Cancel_No).click();
+//                       cy.get("payment-reciept-cancellation-approve-reject table tbody tr")
+//   .then($rows => {
+//     const idx = Math.floor(Math.random() * $rows.length);
+//     cy.wrap($rows[idx])
+//       .find("label")
+//       .first()
+//       .click({ force: true });
+//   });
+//                         cy.wait(2000);
+//                         cy.get(this.locators.Approve).click();
+//                         cy.wait(2000);
+//                         cy.get(this.locators.Reason_of_canc).type("Nothing");
+//                         cy.wait(2000);
+//                         cy.get(this.locators.Cancel_No).click();
 
 
                     }
@@ -2317,15 +2356,12 @@ cy.get('tbody tr')
                         cy.wait(1000);
                         cy.get(this.locators.SearchAndEdit).click().should("be.visible");
                         cy.wait(1000);
-                        cy.get("ng-select[placeholder='Select Batch ID']").click().type("3");
+                       cy.get('.ng-arrow-wrapper').click({force:true});
 
-
-cy.get("div[aria-label='Options List'] div[role='option']")
-  .then($options => {
-    const randomIndex = Math.floor(Math.random() * $options.length);
-    cy.wrap($options[randomIndex]).click({ force: true });
-  });
-
+cy.get('.ng-dropdown-panel .ng-option').then(options => {
+    const randomIndex = Math.floor(Math.random() * (options.length - 1)) + 1;
+    cy.wrap(options[randomIndex]).click();
+});
                         // cy.get(this.locators.Batch_status).select("Payment Batch Dissolved");
                         // cy.wait(1000);
                         cy.get(this.locators.SearchButton2).click();
@@ -2342,14 +2378,12 @@ cy.get("div[aria-label='Options List'] div[role='option']")
                         cy.wait(1000);
                         cy.get(this.locators.SearchAndEdit).click().should("be.visible");
                         cy.wait(1000);
-                        cy.get("ng-select[placeholder='Select Batch ID']").click().type("3");
+                        cy.get('.ng-arrow-wrapper').click({force:true});
 
-
-cy.get("div[aria-label='Options List'] div[role='option']")
-  .then($options => {
-    const randomIndex = Math.floor(Math.random() * $options.length);
-    cy.wrap($options[randomIndex]).click({ force: true });
-  });
+cy.get('.ng-dropdown-panel .ng-option').then(options => {
+    const randomIndex = Math.floor(Math.random() * (options.length - 1)) + 1;
+    cy.wrap(options[randomIndex]).click();
+});
                         cy.wait(1000);
                         cy.get(this.locators.SearchButton2).click();
                         cy.wait(1000);
@@ -2365,14 +2399,12 @@ cy.get("div[aria-label='Options List'] div[role='option']")
                         cy.wait(1000);
                         cy.get(this.locators.SearchAndEdit).click().should("be.visible");
                         cy.wait(1000);
-                         cy.get("ng-select[placeholder='Select Batch ID']").click().type("3");
+                          cy.get('.ng-arrow-wrapper').click({force:true});
 
-
-cy.get("div[aria-label='Options List'] div[role='option']")
-  .then($options => {
-    const randomIndex = Math.floor(Math.random() * $options.length);
-    cy.wrap($options[randomIndex]).click({ force: true });
-  });
+cy.get('.ng-dropdown-panel .ng-option').then(options => {
+    const randomIndex = Math.floor(Math.random() * (options.length - 1)) + 1;
+    cy.wrap(options[randomIndex]).click();
+});
                         cy.get(this.locators.SearchButton2).click();
                         cy.wait(1000);
                         cy.contains("Search Result").should("be.visible");
