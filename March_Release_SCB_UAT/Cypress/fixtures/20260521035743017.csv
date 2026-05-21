@@ -1,0 +1,2 @@
+Id,IsParentAgency,ParentAgencyCode,AgencyCode,AgencyName,RecommendingOfficer,AgencyType,AgencySubType,TINNumber,PanCard,PrimaryOwnerFirstName,PrimaryOwnerLastName,RegisteredAgencyAddress,Landmark,MobileNo,EmailID,FirstAgreementDate,LastRenewalDate,ContractExpiryDate,Remarks,IsFailed,FailureReason
+3a215c40820734c2d47512a2514249b9,Yes,,936960,Ivy,4408,,Field Agents,12345321,PANCA9614B,hamad,P,Pune,wiki field,1461616006,ivy@yopmail.com,12-10-2022,13-10-2023,10-10-2032,Bulk upload,True, | Agency Type is Required
