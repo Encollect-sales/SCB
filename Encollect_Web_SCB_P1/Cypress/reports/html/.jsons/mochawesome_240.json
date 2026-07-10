@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T19:15:45.684Z",
+    "end": "2026-06-16T19:16:26.237Z",
+    "duration": 40553,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0e3e3791-e334-4337-b996-15cb7796b125",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_827.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_827.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "38b497d6-9123-4e0f-b241-b06f57979f0b",
+          "title": "Allocation - Primary Allocation By Filters - User entered special characters in account number field, then system should throw an error as \"Invalid accountno\" in the pop up",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Product Filter - TC_ID_827",
+              "fullTitle": "Allocation - Primary Allocation By Filters - User entered special characters in account number field, then system should throw an error as \"Invalid accountno\" in the pop up Product Filter - TC_ID_827",
+              "timedOut": null,
+              "duration": 34894,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonPABFotherField();\n});",
+              "err": {},
+              "uuid": "656c3f2f-9afb-4b47-8ce9-f042fa05a418",
+              "parentUUID": "38b497d6-9123-4e0f-b241-b06f57979f0b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "656c3f2f-9afb-4b47-8ce9-f042fa05a418"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 34894,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

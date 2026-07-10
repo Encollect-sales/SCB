@@ -1,18 +1,18 @@
 {
   "login": {
     "Companyname": "ENCollect",
-      "email": "staffautomationfour@yopmail.com",
+      "email": "staffautomationseven@yopmail.com",
     "password": "123@mdMD" 
   },
 
   "login1": {
     "Companyname": "ENCollect",
-      "email": "branchmanageruat1@yopmail.com",
-    "password": "123@mdMD"
+      "email": "testinginsightuat@yopmail.com",
+    "password": "123@mdMD" 
   },
   "login2": {
     "Companyname": "ENCollect",
-     "email": "staffautomationfour@yopmail.com",
+     "email": "testinginsightuat@yopmail.com",
     "password": "123@mdMD" 
   },
     "login3": {

@@ -1,5 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI9999999999,999999,Yes,PTP,PTP,2025-12-26,45,,Invalid agent ID,886-457-1886 x706,BTM,Bangalore,Tom_Lehner21@hotmail.com,Permanent,New,02042026061123567,Error,Next action date cannot be less than current date
-DMI0009801002,1907,Yes,PTP,PTP,2025-12-26,45,,Pending approval,439-766-1456,Whitefield,Bangalore,Clara.Watsica@hotmail.com,Permanent,New,02042026061123567,Error,Next action date cannot be less than current date
-DMI0009801001,1515,Yes,PTP,PTP,2025-12-26,45,,Disabled agent,906-408-5072 x95122,HSR,Bangalore,Heaven_Renner3@gmail.com,Permanent,New,02042026061123567,Error,Next action date cannot be less than current date
-DMI0009801003,2005,Yes,PTP,PTP,2025-12-26,45,,Rejected agent,770.952.4997 x81917,Indiranagar,Bangalore,Shemar3@hotmail.com,Permanent,New,02042026061123567,Error,Next action date cannot be less than current date

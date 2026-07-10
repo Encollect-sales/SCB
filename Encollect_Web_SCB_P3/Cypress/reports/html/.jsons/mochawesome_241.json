@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T18:14:15.837Z",
+    "end": "2026-06-16T18:15:48.200Z",
+    "duration": 92363,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "91b5cb55-d06a-4c7e-8dd2-ff34e316215e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\ReoprtPaymentTestPage_366.cy.js",
+      "file": "cypress\\e2e\\tests\\ReoprtPaymentTestPage_366.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8e72fe36-5b30-42c1-9c92-695871744bd6",
+          "title": "Report - Agency Allocation Gap  - To check the Country field drop down value",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Agency Allocation Gap  - TC_ID_366",
+              "fullTitle": "Report - Agency Allocation Gap  - To check the Country field drop down value Agency Allocation Gap  - TC_ID_366",
+              "timedOut": null,
+              "duration": 84571,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  reportpage.ReoprtPaymentTestPage_366();\n});",
+              "err": {},
+              "uuid": "eb611a59-5bab-4f6e-96a4-01c2653589fd",
+              "parentUUID": "8e72fe36-5b30-42c1-9c92-695871744bd6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "eb611a59-5bab-4f6e-96a4-01c2653589fd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 84571,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

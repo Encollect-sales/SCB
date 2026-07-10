@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T20:26:12.681Z",
+    "end": "2026-06-16T20:26:52.289Z",
+    "duration": 39608,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "73d6bf07-7ada-4b47-987f-ed89ec558f2a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\PaymentsPageTest_065.cy.js",
+      "file": "cypress\\e2e\\tests\\PaymentsPageTest_065.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ea50b37e-c994-4733-8d3a-7446ba6ff8c0",
+          "title": "Payments Module - Search and edit batch - Logged in user to stop the workflow by clicking on cancel button or no button in the pop up",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Payment - TC_ID_065",
+              "fullTitle": "Payments Module - Search and edit batch - Logged in user to stop the workflow by clicking on cancel button or no button in the pop up Payment - TC_ID_065",
+              "timedOut": null,
+              "duration": 34550,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  paymentsPage.SearchandEditBatch_065();\n});",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is `disabled`:\n\n`<button id=\"search-button\" type=\"submit\" class=\"btn btn-secondary mw-150px\" disabled=\"\">Search</button>`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is `disabled`:\n\n`<button id=\"search-button\" type=\"submit\" class=\"btn btn-secondary mw-150px\" disabled=\"\">Search</button>`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at Object.isNotDisabled (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:144923:58)\n    at runAllChecks (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:113250:26)\n    at retryActionability (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:113339:16)\n    at tryCatcher (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise.attempt.Promise.try (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:4338:29)\n    at whenStable (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:143744:68)\n    at <unknown> (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:143685:14)\n    at tryCatcher (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1724:18)\n    at Promise._fulfill (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1668:18)\n    at <unknown> (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:5473:46)\nFrom Your Spec Code:\n    at PaymentsPage.SearchandEditBatch_065 (webpack:///./cypress/e2e/pages/PaymentsPage.js:572:41)\n    at Context.eval (webpack:///./cypress/e2e/tests/PaymentsPageTest_065.cy.js:27:29)",
+                "diff": null
+              },
+              "uuid": "29b9bed0-6afe-4f8a-bddb-97974314145f",
+              "parentUUID": "ea50b37e-c994-4733-8d3a-7446ba6ff8c0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "29b9bed0-6afe-4f8a-bddb-97974314145f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 34550,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -13,29 +13,49 @@ class DashboardPage {
     cy.get('#cc-account-type').click();
   }
 
-  AccountDashboardScreen468(){
+  AccountDashboardScreen468() {
 
     cy.get('.ng-arrow-wrapper').click();
+    cy.wait(2000);
+    cy.contains('.ng-option', 'Credit Card Last 4 Digits')
+      .click({ force: true });
+    cy.wait(2000);
+    cy.get('.ng-arrow-wrapper').click();
+    cy.wait(2000);
+    cy.get('body').click(0, 0);
+    cy.wait(2000);
+    cy.get('#search-cc-number')
+      .should('be.visible')
+      .click()
+      .clear()
+      .type('7990');
+
     cy.wait(1000);
-    cy.contains('span.ng-option-label', 'Credit Card Last 4 Digits').click();
-    cy.wait(1000);
-    cy.get("#search-cc-number").type("7990");
-    cy.wait(1000);
+
     cy.get('.btn-secondary').click();
-  } 
+}
 
   Dashboard982(){
     cy.get('#cc-account-type').click();
     cy.wait(2000);
      cy.get('.ng-arrow-wrapper').click();
+    cy.wait(2000);
+    cy.contains('.ng-option', 'Credit Card Last 4 Digits')
+      .click({ force: true });
+    cy.wait(2000);
+    cy.get('.ng-arrow-wrapper').click();
+    cy.wait(2000);
+    cy.get('body').click(0, 0);
+    cy.wait(2000);
+    cy.get('#search-cc-number')
+      .should('be.visible')
+      .click()
+      .clear()
+      .type('7990');
+
     cy.wait(1000);
-    cy.contains('span.ng-option-label','Credit Card Last 4 Digits').click();
-    cy.wait(2000);
-  cy.get('#search-cc-number').type('7990');
-    cy.wait(500);
-    cy.get(this.locators.search_btn).click();
-    cy.wait(2000);
-  cy.contains("Search Results").should("be.visible");
+
+    cy.get('.btn-secondary').click();
   }
   
   Accountloan_563(){
@@ -51,9 +71,7 @@ class DashboardPage {
 
   } 
   Dashboard1517(){
-    cy.wait(5000);
     cy.get('[role="alert"]').should('contain.text', 'Last Successful Login :');
-
      cy.wait(500);
      cy.log("Last Successful Login :   +00:00. Last Failed Login :  +00:00.");
    

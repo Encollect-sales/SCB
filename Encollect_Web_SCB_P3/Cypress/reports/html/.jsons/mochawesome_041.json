@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T14:34:11.129Z",
+    "end": "2026-06-16T14:34:43.439Z",
+    "duration": 32310,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7d1a9d0c-87dd-4919-8211-e12e8e98faf7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationTestPage_16.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationTestPage_16.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "da98d245-e094-45da-b07a-4ab7fedcbb8f",
+          "title": "Allocation - User to click on Account level sub menu which is under upload Owner allocation owner.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Allocation Module - TC_ID_16",
+              "fullTitle": "Allocation - User to click on Account level sub menu which is under upload Owner allocation owner. Allocation Module - TC_ID_16",
+              "timedOut": null,
+              "duration": 25993,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  allocationpage.AllocationTestPage_16();\n});",
+              "err": {},
+              "uuid": "eaa1235b-9c9d-4d2b-885b-36b374ad87ba",
+              "parentUUID": "da98d245-e094-45da-b07a-4ab7fedcbb8f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "eaa1235b-9c9d-4d2b-885b-36b374ad87ba"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 25993,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

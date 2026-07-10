@@ -49,8 +49,8 @@ describe('BULKTRL_010 - Failure Reason Text Validation (Mixed Entries)', () => {
       // ---------------- Excel Data (BOTH Entries) ----------------
       const data = {
         // ✅ Approved Agent
-        'A2': 'LXMUM33020211742684',
-        'B2': '1936',               // Approved
+        'A2': '1667',
+        'B2': '54535',               // Approved
         'C2': 'Yes',
         'D2': 'PTP',
         'E2': 'PTP',

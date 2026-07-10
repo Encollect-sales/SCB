@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1f38a204358c4352df23e376f3a0fb,Telecaller,73806,Margaretta,Cummerata,,8513605687,Audit and Risk,Audit Manager,Bangalore,True, | Email id is required

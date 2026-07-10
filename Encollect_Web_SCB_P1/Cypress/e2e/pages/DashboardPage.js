@@ -8,7 +8,7 @@ class DashboardPage {
 
   DashboardTestPage_018() {
 
-    cy.wait(2000);
+    cy.wait(8000);
     cy.contains("Account Search").should("be.visible");
     cy.wait(2000);
     //  cy.get('.ng-arrow-wrapper').click();
@@ -25,7 +25,9 @@ class DashboardPage {
     cy.wait(2000);
     cy.contains("Account Number:").should("be.visible");
     cy.wait(2000);
-    cy.contains('span.ng-option-label', 'Partner ID').click();
+    cy.get('.ng-arrow-wrapper').click({force:true});
+    cy.wait(2000);
+    cy.get('.ng-option').contains('Partner ID').click();
     cy.wait(1000);
     cy.contains("Partner ID:").should("be.visible");
     cy.wait(2000);
@@ -80,7 +82,7 @@ class DashboardPage {
     cy.wait(2000);
     cy.contains("Account Search").should("be.visible");
     cy.wait(2000);
-    cy.get(':nth-child(4) > .form-control-group > .form-control').type("41174").should("be.visible");
+    cy.get(':nth-child(5) > .form-control-group > .form-control').type("41174").should("be.visible");
     cy.wait(2000);
     cy.get(this.locators.SearchButton).click({ force: true }).should("be.visible");
     cy.wait(2000);
@@ -172,7 +174,7 @@ class DashboardPage {
     cy.wait(2000);
     cy.get(this.locators.ClickToggal).click();
     cy.wait(2000);
-    cy.get(this.locators.ClickNoteHistory).click({ force: true });
+    cy.contains('Note History').click({ force: true });
     cy.wait(2000);
     cy.get(this.locators.ClickOnAdd).click();
     cy.wait(2000);
@@ -202,7 +204,7 @@ class DashboardPage {
     cy.wait(2000);
     cy.get(this.locators.ClickToggal).click();
     cy.wait(2000);
-    cy.get(this.locators.ClickNoteHistory).click({ force: true });
+    cy.contains('Note History').click({ force: true });
     cy.wait(2000);
     cy.get(this.locators.ClickOnAdd).click();
     cy.wait(2000);
@@ -232,7 +234,7 @@ class DashboardPage {
     cy.wait(2000);
     cy.get(this.locators.ClickToggal).click();
     cy.wait(2000);
-    cy.get(this.locators.ClickNoteHistory).click({ force: true });
+    cy.contains('Note History').click({ force: true });
     cy.wait(2000);
     cy.get(this.locators.ClickOnAdd).click();
     cy.wait(2000);
@@ -262,7 +264,7 @@ class DashboardPage {
     cy.wait(2000);
     cy.get(this.locators.ClickToggal).click();
     cy.wait(2000);
-    cy.get(this.locators.ClickNoteHistory).click({ force: true });
+      cy.contains('Note History').click({ force: true });
     cy.wait(2000);
     cy.get(this.locators.ClickOnAdd).click();
     cy.wait(2000);
@@ -291,7 +293,7 @@ class DashboardPage {
     cy.wait(2000);
     cy.get(this.locators.ClickToggal).click();
     cy.wait(2000);
-    cy.get(this.locators.ClickNoteHistory).click({ force: true });
+      cy.contains('Note History').click({ force: true });
     cy.wait(2000);
     cy.get(this.locators.ClickOnAdd).click();
     cy.wait(2000);
@@ -327,7 +329,7 @@ class DashboardPage {
     cy.wait(2000);
     cy.get(this.locators.ClickToggal).click();
     cy.wait(2000);
-    cy.get(this.locators.ClickNoteHistory).click({ force: true });
+      cy.contains('Note History').click({ force: true });
     cy.wait(2000);
     cy.get(this.locators.ClickOnAdd).click();
     cy.wait(2000);
@@ -357,7 +359,7 @@ class DashboardPage {
     cy.wait(2000);
     cy.get(this.locators.ClickToggal).click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnflag).click();
+   cy.contains("Flags").click({force:true});
     cy.wait(2000);
     cy.contains("Flags").should("be.visible");
     cy.wait(2000);
@@ -379,7 +381,7 @@ class DashboardPage {
     cy.wait(2000);
     cy.get(this.locators.ClickToggal).click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnflag).click();
+    cy.contains('Flags').click({force:true});
     cy.wait(2000);
     cy.get(this.locators.ClickOnAdd).click();
     cy.wait(2000);
@@ -409,7 +411,7 @@ class DashboardPage {
     cy.wait(2000);
     cy.get(this.locators.ClickToggal).click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnflag).click();
+    cy.contains('Flags').click({force:true});
     cy.wait(2000);
     cy.get(this.locators.ClickOnAdd).click();
     cy.wait(2000);
@@ -439,7 +441,7 @@ class DashboardPage {
     cy.wait(2000);
     cy.get(this.locators.ClickToggal).click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnflag).click();
+    cy.contains('Flags').click({force:true});
     cy.wait(2000);
     cy.get(this.locators.ClickOnAdd).click();
     cy.wait(2000);
@@ -467,7 +469,7 @@ class DashboardPage {
     cy.wait(2000);
     cy.get(this.locators.ClickToggal).click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnflag).click();
+    cy.contains('Flags').click({force:true});
     cy.wait(2000);
     cy.get(this.locators.ClickOnAdd).click();
     cy.wait(2000);
@@ -497,7 +499,7 @@ class DashboardPage {
     cy.wait(2000);
     cy.get(this.locators.ClickToggal).click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnflag).click();
+    cy.contains('Flags').click({force:true});
     cy.wait(2000);
     cy.get(this.locators.ClickOnAdd).click();
     cy.wait(2000);
@@ -529,7 +531,7 @@ class DashboardPage {
     cy.wait(2000);
     cy.get(this.locators.ClickToggal).click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnflag).click();
+    cy.contains('Flags').click({force:true});
     cy.wait(2000);
     cy.get(this.locators.ClickOnAdd).click();
     cy.wait(2000);
@@ -556,7 +558,7 @@ class DashboardPage {
     cy.wait(2000);
     cy.get(this.locators.ClickToggal).click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnflag).click();
+    cy.contains('Flags').click({force:true});
     cy.wait(2000);
     cy.get(this.locators.ClickOnAdd).click();
     cy.wait(2000);
@@ -590,7 +592,7 @@ class DashboardPage {
     cy.wait(2000);
     cy.get(this.locators.ClickToggal).click();
     cy.wait(2000);
-    cy.get(this.locators.ClicktrailHist).click();
+    cy.get(':nth-child(17) > .dropdown-item').contains('Trail History').click();
     cy.wait(2000);
     cy.get(this.locators.ClickFilter).click();
     cy.wait(2000);
@@ -620,7 +622,7 @@ class DashboardPage {
     cy.wait(2000);
     cy.get(this.locators.ClickToggal).click();
     cy.wait(2000);
-    cy.get(this.locators.ClicktrailHist).click();
+    cy.get(':nth-child(17) > .dropdown-item').contains('Trail History').click();
     cy.wait(2000);
     cy.get(this.locators.ClickFilter).click();
     cy.wait(2000);
@@ -647,7 +649,7 @@ class DashboardPage {
     cy.wait(2000);
     cy.get(this.locators.ClickToggal).click();
     cy.wait(2000);
-    cy.get(this.locators.ClicktrailHist).click();
+    cy.get(':nth-child(17) > .dropdown-item').contains('Trail History').click();
     cy.wait(2000);
     cy.get(this.locators.ClickFilter).click();
     cy.wait(2000);

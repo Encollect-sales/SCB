@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T20:29:25.967Z",
+    "end": "2026-06-16T20:30:10.345Z",
+    "duration": 44378,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3aa79d06-220e-4bf8-9dff-dc97902e55b2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\PaymentsPageTest_069.cy.js",
+      "file": "cypress\\e2e\\tests\\PaymentsPageTest_069.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8dd5f239-2be5-4f21-80b8-b43081b61fe9",
+          "title": "Payments Module - Search & View Pay-in-Slip Id - For example: Logged in user to select mode of payment, payin slip from date and payin slip to date to view the payin slips which are already created.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Payment - TC_ID_071",
+              "fullTitle": "Payments Module - Search & View Pay-in-Slip Id - For example: Logged in user to select mode of payment, payin slip from date and payin slip to date to view the payin slips which are already created. Payment - TC_ID_071",
+              "timedOut": null,
+              "duration": 38020,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  paymentsPage.SearchandViewPayinSlip071();\n});",
+              "err": {},
+              "uuid": "4e97614b-d57e-4533-a2b3-a0a8a4b9bf8e",
+              "parentUUID": "8dd5f239-2be5-4f21-80b8-b43081b61fe9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4e97614b-d57e-4533-a2b3-a0a8a4b9bf8e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 38020,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

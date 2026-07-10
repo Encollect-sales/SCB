@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T17:04:21.632Z",
+    "end": "2026-06-16T17:05:39.533Z",
+    "duration": 77901,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8bfd1367-8359-4c82-ae47-55ad5bcb3008",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\ReoprtPaymentTestPage_303.cy.js",
+      "file": "cypress\\e2e\\tests\\ReoprtPaymentTestPage_303.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1ee3eaa0-5433-4d53-a680-2b5469600d4e",
+          "title": "Report - Payment Report - To Download and extract the complete detailed data in an xls file",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Payment Report - TC_ID_303",
+              "fullTitle": "Report - Payment Report - To Download and extract the complete detailed data in an xls file Payment Report - TC_ID_303",
+              "timedOut": null,
+              "duration": 68541,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  reportpage.ReoprtPaymentTestPage_303();\n});",
+              "err": {},
+              "uuid": "65ad6b6a-c244-4576-91d7-ab93bfd8fb28",
+              "parentUUID": "1ee3eaa0-5433-4d53-a680-2b5469600d4e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "65ad6b6a-c244-4576-91d7-ab93bfd8fb28"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 68541,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

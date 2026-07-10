@@ -13,7 +13,9 @@ class AccountDetailsPage {
     cy.wait(2000);
     cy.get(this.locators.toggle_button).click({force:true});
     cy.wait(2000);
-    cy.get(this.locators.Dailer).click({force:true});
+     cy.contains('Dialer')
+  .scrollIntoView()
+  .click({force:true});
     cy.wait(2000);
    cy.get('#mobile_number option').each(($el) => {
   const text = $el.text().trim();
@@ -35,7 +37,9 @@ class AccountDetailsPage {
     cy.wait(2000);
     cy.get(this.locators.toggle_button).click({force:true});
     cy.wait(2000);
-    cy.get(this.locators.Dailer).click({force:true});
+     cy.contains('Dialer')
+  .scrollIntoView()
+  .click({force:true});
     cy.wait(2000);
 cy.get('#mobile_number')
   .should('be.visible')
@@ -327,13 +331,15 @@ cy.get('#contact_number option').each(($el) => {
     cy.wait(2000);
     cy.get(this.locators.toggle_button).click({force:true});
     cy.wait(2000);
-    cy.get(this.locators.trail_history).click({force:true});
+    cy.get(':nth-child(17) > .dropdown-item').click({force:true});
     cy.wait(2000);
     cy.get(this.locators.select_count).select('50');
     cy.wait(2000);
     cy.get(this.locators.gear).click({force:true});
     cy.wait(2000);
-    cy.get(this.locators.phone_number).click({force:true});
+     cy.contains('New contact no.#')
+  .scrollIntoView()
+  .click({force:true});
     cy.wait(2000);
     cy.get(this.locators.gear).click({force:true});
     cy.wait(2000);

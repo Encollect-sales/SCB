@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T18:39:17.341Z",
+    "end": "2026-06-16T18:40:04.480Z",
+    "duration": 47139,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d1663b16-252f-4712-8a26-c338d6a12ed6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_782.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_782.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "de23f707-07c3-4f33-9a56-264dca9504f6",
+          "title": "Allocation - Primary Allocation by filters",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Product Filter - TC_ID_258",
+              "fullTitle": "Allocation - Primary Allocation by filters Product Filter - TC_ID_258",
+              "timedOut": null,
+              "duration": 41553,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonallocationPAF();\n  allocationPage.fillproductgroupPAF();\n  allocationPage.fillproductPAF();\n  allocationPage.fillsubproductPAF();\n});",
+              "err": {},
+              "uuid": "94bd79f4-84ba-41da-945c-28313ecf27d3",
+              "parentUUID": "de23f707-07c3-4f33-9a56-264dca9504f6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "94bd79f4-84ba-41da-945c-28313ecf27d3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 41553,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -46,16 +46,21 @@ describe('CE_BCU_014 - Negative – Mobile number with incorrect length', () => 
       });
 
       // ---------------- Test Data ----------------
-      const shortMobileNumber = '123';          // ❌ Too short
-      // const longMobileNumber = '1234567890123'; // ❌ Too long (use this if needed)
+
+      // Generate random invalid mobile number (1–9 digits)
+      const shortMobileNumber = faker.string.numeric(
+        faker.number.int({ min: 1, max: 9 })
+      );
 
       const randomAddress = faker.location.streetAddress();
 
+      cy.log(`Generated Invalid Mobile Number: ${shortMobileNumber}`);
+
       const data = {
-        'A2': '1667',            // Agreement ID
+        'A2': '1667',             // Agreement ID
         'B2': 'Office',           // Contact Type
-        'C2': randomAddress,      // Address (faker)
-        'D2': shortMobileNumber   // ❌ Invalid mobile length
+        'C2': randomAddress,      // Address
+        'D2': shortMobileNumber   // Invalid mobile length
       };
 
       // ---------------- Excel Handling ----------------
@@ -77,8 +82,6 @@ describe('CE_BCU_014 - Negative – Mobile number with incorrect length', () => 
 
       // ---------------- Step 3: Upload Excel ----------------
       contactenrichmentpage.contacttemplate_failed();
-
-    
 
     });
 

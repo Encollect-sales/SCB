@@ -1,2 +1,0 @@
-Id,IsParentAgency,ParentAgencyCode,AgencyCode,AgencyName,RecommendingOfficer,AgencyType,AgencySubType,TINNumber,PanCard,PrimaryOwnerFirstName,PrimaryOwnerLastName,RegisteredAgencyAddress,Landmark,MobileNo,EmailID,FirstAgreementDate,LastRenewalDate,ContractExpiryDate,Remarks,IsFailed,FailureReason
-3a215c627e281c3f58edb4db71c58bfa,Yes,,857857,Shany,4408,Collections,Field Agents,12345321,PANCA9614B,hamad,P,Pune,wiki field,7451536450,shany@yopmail.com,12-10-2022,13-10-2023,10-10-2022,Bulk upload,True, | Contract expiry date cannot be past date.

@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1f38aa82210c807146775a7f60e72e,FOS,97987,Grant,White,grant@yopmail.com,2526627577,Branch Backend,,Bangalore,True, | Designation is Required

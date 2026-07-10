@@ -1,3 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009001515,1515,Yes,PTP,PTP,2025-12-26,19,,Approved agent record,(554) 483-9744,BTM,Bangalore,Bulah_Berge@gmail.com,Permanent,New,01272026085301900,Error,Next action date cannot be less than current date
-DMI0009001907,1907,Yes,PTP,PTP,2025-12-26,19,,Non-approved agent,1-215-498-9211 x15735,BTM,Bangalore,Graciela30@yahoo.com,Permanent,New,01272026085301900,Error,Next action date cannot be less than current date

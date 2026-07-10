@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T19:19:48.797Z",
+    "end": "2026-06-16T19:20:31.629Z",
+    "duration": 42832,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1be31731-b47e-459c-aaf7-6fc43af17f89",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\SettlementTestPage_05.cy.js",
+      "file": "cypress\\e2e\\tests\\SettlementTestPage_05.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "89ffe134-5b05-4389-9e7d-b1616a505f40",
+          "title": "TC_ID_05 - Settlement - Verify clicking on the \"Customer ID\" filters the search results based on the selected Customer ID.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC_ID_05 - Settlement",
+              "fullTitle": "TC_ID_05 - Settlement - Verify clicking on the \"Customer ID\" filters the search results based on the selected Customer ID. TC_ID_05 - Settlement",
+              "timedOut": null,
+              "duration": 34626,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  settlementpage.SettlementTestPage_05();\n});",
+              "err": {},
+              "uuid": "67fe357a-6359-48aa-8de0-8e690598ff7a",
+              "parentUUID": "89ffe134-5b05-4389-9e7d-b1616a505f40",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "67fe357a-6359-48aa-8de0-8e690598ff7a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 34626,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

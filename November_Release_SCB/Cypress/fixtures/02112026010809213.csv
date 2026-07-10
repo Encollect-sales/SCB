@@ -1,5 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009810001,,Yes,PTP,PTP,2025-12-26,80,,Blank agent ID,(873) 204-7034 x40964,Indiranagar,Bangalore,Nathen_McClure91@yahoo.com,Permanent,New,02112026010809213,Error,Next action date cannot be less than current date
-DMI0009590352,1936,Yes,PTP,PTP,2025-12-26,80,,Approved agent,473.310.9340 x028,BTM,Bangalore,Coty_Daniel@hotmail.com,Permanent,New,02112026010809213,Error,Next action date cannot be less than current date
-DMI9999999999,999999,Yes,PTP,PTP,2025-12-26,80,,Invalid agent ID,806.606.7988 x004,Whitefield,Bangalore,Josianne_Ernser@hotmail.com,Permanent,New,02112026010809213,Error,Next action date cannot be less than current date
-DMI0009801001,1515,Yes,PTP,PTP,2025-12-26,80,,Disabled agent,857-969-8566 x74164,HSR,Bangalore,Mateo_Schowalter12@yahoo.com,Permanent,New,02112026010809213,Error,Next action date cannot be less than current date

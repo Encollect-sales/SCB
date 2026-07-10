@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T18:31:40.267Z",
+    "end": "2026-06-16T18:32:20.601Z",
+    "duration": 40334,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3b73ba9e-b2e5-4979-a11c-e3cf3f12486d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_772.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_772.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "691d0f9e-7dbd-4d5e-932c-9a1b7607027e",
+          "title": "Allocation - Upload Agency Allocation Owner - .File will get downloaded and usee can see the list of accounts which are allocated to any of the agency, so that user can take those accounts and do the allocation to agencies accordingly",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Download Allocation - TC_ID_772",
+              "fullTitle": "Allocation - Upload Agency Allocation Owner - .File will get downloaded and usee can see the list of accounts which are allocated to any of the agency, so that user can take those accounts and do the allocation to agencies accordingly Download Allocation - TC_ID_772",
+              "timedOut": null,
+              "duration": 34461,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonallocationUAAOAA();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input`, but never found it.\n    at AllocationPage.ClickonallocationUAAOAA (webpack:///./cypress/e2e/pages/AllocationPage.js:3105:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_772.cy.js:27:26)",
+                "diff": null
+              },
+              "uuid": "c5681dd7-698e-449d-80e5-8a1a7d981cac",
+              "parentUUID": "691d0f9e-7dbd-4d5e-932c-9a1b7607027e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "c5681dd7-698e-449d-80e5-8a1a7d981cac"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 34461,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T18:57:51.996Z",
+    "end": "2026-06-16T18:58:32.680Z",
+    "duration": 40684,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e84a8708-dcff-4a09-b6d4-7c474c6df0d0",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_804.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_804.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "be959291-b12c-4885-ad4f-272f55b7aec4",
+          "title": "Allocation - Upload Collector Allocation Batch - If the file, that the user is trying to upload, is other than .xls or .xlsx extension, when user clicked on upload button user will not be able to see other file extensions file.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Download Accounts - TC_ID_804",
+              "fullTitle": "Allocation - Upload Collector Allocation Batch - If the file, that the user is trying to upload, is other than .xls or .xlsx extension, when user clicked on upload button user will not be able to see other file extensions file. Download Accounts - TC_ID_804",
+              "timedOut": null,
+              "duration": 34310,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.uploadCollectorUnallocationBatchInvalidFileFormat();\n});",
+              "err": {},
+              "uuid": "73310d47-edb1-4709-999d-95c0db8ebf69",
+              "parentUUID": "be959291-b12c-4885-ad4f-272f55b7aec4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "73310d47-edb1-4709-999d-95c0db8ebf69"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 34310,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

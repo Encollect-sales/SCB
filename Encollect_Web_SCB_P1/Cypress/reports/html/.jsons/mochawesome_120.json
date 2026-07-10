@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T17:29:31.705Z",
+    "end": "2026-06-16T17:30:16.495Z",
+    "duration": 44790,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "95b7f903-afea-4b73-919c-50b635d7a28a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_706.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_706.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8b098204-69f2-44cd-8a17-3dbada62a704",
+          "title": "Allocation - Primary Allocation Status - user should be able to see all failed allocation files in the result grid.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC_ID_223",
+              "fullTitle": "Allocation - Primary Allocation Status - user should be able to see all failed allocation files in the result grid. TC_ID_223",
+              "timedOut": null,
+              "duration": 36798,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonallocationPAS();\n  allocationPage.fillfailedstatus();\n  allocationPage.clickonSearch();\n});",
+              "err": {},
+              "uuid": "a30752b3-abf7-4195-9f05-6b73109d628b",
+              "parentUUID": "8b098204-69f2-44cd-8a17-3dbada62a704",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a30752b3-abf7-4195-9f05-6b73109d628b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 36798,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

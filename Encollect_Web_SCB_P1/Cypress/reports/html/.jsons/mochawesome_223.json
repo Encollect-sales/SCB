@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T19:01:04.711Z",
+    "end": "2026-06-16T19:01:49.906Z",
+    "duration": 45195,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5e53788b-6fce-411f-b5a0-7a6271ce595a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_809.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_809.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "040d2530-30e5-4643-89e0-bdb4fb3439b6",
+          "title": "Allocation - Upload Collector Unallocation batch - User clicked on upload button and selected the allocation file without selecting anyone of the radio button under \"Proceed with allocation for \" then system should throw an error as \"Please select proceed with allocation for before uploading the file\" in the pop up",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Collector Level Unallocation - TC_ID_325",
+              "fullTitle": "Allocation - Upload Collector Unallocation batch - User clicked on upload button and selected the allocation file without selecting anyone of the radio button under \"Proceed with allocation for \" then system should throw an error as \"Please select proceed with allocation for before uploading the file\" in the pop up Collector Level Unallocation - TC_ID_325",
+              "timedOut": null,
+              "duration": 39643,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.uploadCollectorUnallocationBatchWithoutUnAllocation();\n});",
+              "err": {},
+              "uuid": "98816a29-8f09-40de-a9a3-0851037beac3",
+              "parentUUID": "040d2530-30e5-4643-89e0-bdb4fb3439b6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "98816a29-8f09-40de-a9a3-0851037beac3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 39643,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

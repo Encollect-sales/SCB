@@ -1,2 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009590352,tryuyr,ss,PTP,PTP,2025-12-26,7,,Bulk upload Aug29,7964930823,btm,banglore,Aylin_Schimmel35@yahoo.com,permanent,new,02042026062639831,Error,Next action date cannot be less than current date

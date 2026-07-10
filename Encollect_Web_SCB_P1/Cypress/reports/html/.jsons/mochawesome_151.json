@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T18:00:17.318Z",
+    "end": "2026-06-16T18:01:07.178Z",
+    "duration": 49860,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6d9c6a03-848d-48e9-9551-9231f62202a5",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_736.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_736.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2db3088f-ca9a-4922-a9e6-ffa36c39ae5c",
+          "title": "Allocation - Secondary Allocation Status",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Product Filter - TC_ID_336",
+              "fullTitle": "Allocation - Secondary Allocation Status Product Filter - TC_ID_336",
+              "timedOut": null,
+              "duration": 42371,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonallocationUAAOS3('3: Processed');\n});",
+              "err": {},
+              "uuid": "d8dcf9c0-d2b9-4aee-a4cd-6eb125abc26c",
+              "parentUUID": "2db3088f-ca9a-4922-a9e6-ffa36c39ae5c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d8dcf9c0-d2b9-4aee-a4cd-6eb125abc26c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 42371,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T20:09:36.769Z",
+    "end": "2026-06-16T20:10:08.474Z",
+    "duration": 31705,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "544febd3-abdf-46cd-bd5f-fd134060e17b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\SettlementTestPage_67.cy.js",
+      "file": "cypress\\e2e\\tests\\SettlementTestPage_67.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1cd9d999-eec1-4155-9d61-681e631131d1",
+          "title": "TC_ID_67 - Settlement - Verify that the logged-in user cannot edit any details on the My Closed Settlement Cases page.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC_ID_67 - Settlement",
+              "fullTitle": "TC_ID_67 - Settlement - Verify that the logged-in user cannot edit any details on the My Closed Settlement Cases page. TC_ID_67 - Settlement",
+              "timedOut": null,
+              "duration": 24155,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login2').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  settlementpage.SettlementTestPage_67();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Settlement' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Settlement' but never did.\n    at Context.eval (webpack://encollect_web/./cypress/e2e/pages/SettlementPage.js:2885:11)\n    at getRet (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "21e2ceeb-efbb-4478-a748-120fce97b416",
+              "parentUUID": "1cd9d999-eec1-4155-9d61-681e631131d1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "21e2ceeb-efbb-4478-a748-120fce97b416"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 24155,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

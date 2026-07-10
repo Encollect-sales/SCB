@@ -1,2 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009590352,tryuyr,ss,PTP,PTP,2025-12-26,53,,Bulk upload Aug29,8119848068,btm,banglore,Janick.Lesch@gmail.com,permanent,new,12302025110702764,Error,Next action date cannot be less than current date

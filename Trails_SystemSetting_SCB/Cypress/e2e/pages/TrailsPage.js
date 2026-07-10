@@ -358,9 +358,9 @@ Bulktrail_Processed(){
     cy.wait(3000);
     cy.get(this.locators.ClickOnStatusSearchBtn).click();
     cy.wait(3000);
-  cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Processed').should('be.visible');
+  cy.get('tbody > tr > :nth-child(3)').contains('Processed').should('be.visible');
     cy.wait(2000);
-    cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
+    cy.get("tbody > tr > :nth-child(4)").click();
     cy.wait(3000);
 
 }
@@ -402,9 +402,9 @@ Bulktrail_Failed(){
     cy.wait(3000);
     cy.get(this.locators.ClickOnStatusSearchBtn).click();
     cy.wait(3000);
-  cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
+  cy.get('tbody > tr > :nth-child(3)').contains('Failed').should('be.visible');
     cy.wait(2000);
-    cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
+    cy.get("tbody > tr > :nth-child(4)").click();
     cy.wait(3000);
 
 }
@@ -448,9 +448,9 @@ BulkTrail_Partially_Processed() {
     cy.wait(3000);
     cy.get(this.locators.ClickOnStatusSearchBtn).click();
     cy.wait(3000);
-  cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Partially Processed').should('be.visible');
+  cy.get('tbody > tr > :nth-child(3)').contains('Partially Processed').should('be.visible');
     cy.wait(2000);
-    cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
+    cy.get("tbody > tr > :nth-child(4)").click();
     cy.wait(3000);
 
 }
@@ -517,9 +517,9 @@ Bulktrail_Failed_empty_file(){
     cy.wait(3000);
     cy.get(this.locators.ClickOnStatusSearchBtn).click();
     cy.wait(3000);
-  cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
+  cy.get('tbody > tr > :nth-child(3)').contains('Failed').should('be.visible');
     cy.wait(2000);
-    cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
+    cy.get("tbody > tr > :nth-child(4)").click();
     cy.wait(3000);
   
 }
@@ -562,9 +562,9 @@ Bulktrail_Empty_with_headers(){
     cy.wait(3000);
     cy.get(this.locators.ClickOnStatusSearchBtn).click();
     cy.wait(3000);
-  cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
+  cy.get('tbody > tr > :nth-child(3)').contains('Failed').should('be.visible');
     cy.wait(2000);
-    cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
+    cy.get("tbody > tr > :nth-child(4)").click();
     cy.wait(3000);
   
 
@@ -619,9 +619,9 @@ Bulktrail_Reupload_While_Processing(){
     cy.wait(3000);
     cy.get(this.locators.ClickOnStatusSearchBtn).click();
     cy.wait(3000);
-  cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Processed').should('be.visible');
+  cy.get('tbody > tr > :nth-child(3)').contains('Processed').should('be.visible');
     cy.wait(2000);
-    cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
+    cy.get("tbody > tr > :nth-child(4)").click();
     cy.wait(3000);
   
 

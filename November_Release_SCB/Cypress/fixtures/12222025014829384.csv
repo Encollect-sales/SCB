@@ -1,2 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009602001,10032,Yes,PTP,PTP,2025-12-26,33,,Saved as Draft agent test,531.943.5675,BTM,Bangalore,Sterling14@yahoo.com,Permanent,New,12222025014829384,Error,Account number does not exist in database

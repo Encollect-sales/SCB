@@ -1,3 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009810002,,Yes,PTP,PTP,2025-12-26,82,,Null agent ID,(419) 237-0752 x20108,HSR,Bangalore,Alivia38@yahoo.com,Permanent,New,12302025105443593,Error,Next action date cannot be less than current date
-DMI0009810001,,Yes,PTP,PTP,2025-12-26,82,,Blank agent ID,(382) 958-9876 x531,BTM,Bangalore,Kolby.Deckow@yahoo.com,Permanent,New,12302025105443593,Error,Next action date cannot be less than current date

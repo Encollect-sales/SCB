@@ -11,7 +11,7 @@
   },
 
   "PerformancePage":{
-    "PerformancePagereport":"#nav-item-2-performance-insights",
+    "PerformancePagereport":"#nav-item-2-performance-reports",
     "Reports":"#nav-item-1-reports",
     "MontlyReport":":nth-child(6) > .sub-nav-list > :nth-child(2) > a')",
     "monthfield":".card-content > :nth-child(2) > :nth-child(1) > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",

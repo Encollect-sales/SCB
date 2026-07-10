@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T14:45:03.023Z",
+    "end": "2026-06-16T14:46:35.822Z",
+    "duration": 92799,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5edb5df6-6902-4b5b-873e-b5c61ba3156a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AddStaffPageTest_682.cy.js",
+      "file": "cypress\\e2e\\tests\\AddStaffPageTest_682.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "72c36114-c6b0-42e7-8733-91a85fc1030a",
+          "title": "User Management - Add Staff-Once staff submitted for approval, email notification to be received on the provided email id.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add Staff - TC_ID_682",
+              "fullTitle": "User Management - Add Staff-Once staff submitted for approval, email notification to be received on the provided email id. Add Staff - TC_ID_682",
+              "timedOut": null,
+              "duration": 84768,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.task('getExcelData', '../fixtures/userManagementData.xlsx').then(excelData => {\n    const firstRow = excelData['Sheet1'][0];\n    cy.wait(2000);\n    addStaffPage.Clikonusermanagement(); // Use the method without click\n    addStaffPage.ClickonSttafEmp();\n    addStaffPage.Clikonaddstaff();\n    addStaffPage.selectUserType();\n    addStaffPage.fillemployeeID(firstRow.EmployeeID); // Correct method name and pass the argument\n    addStaffPage.fillfirstname(firstRow.FirstName);\n    addStaffPage.filllastname(firstRow.LastName);\n    addStaffPage.fillemailid(firstRow.EmailID);\n    addStaffPage.fillmobilenumber(firstRow.MobileNumber);\n    addStaffPage.typeexistingcode();\n    addStaffPage.clickondandd();\n    cy.wait(2000);\n    // addStaffPage.clickOnAdd();\n    // cy.wait(2000);\n    addStaffPage.fillDepartment('Audit and Risk', 0);\n    addStaffPage.fillDesignation('Audit Manager', 0);\n    cy.wait(1000);\n    addStaffPage.clickonWallet();\n    addStaffPage.clickonbbrm();\n    cy.wait(2000);\n    addStaffPage.fillbasebranch();\n    cy.wait(2000);\n    // addStaffPage.clickonPlaceOkWork();\n    // cy.wait(2000);\n    // addStaffPage.ClickOnSkill();\n    // cy.wait(5000);\n    addStaffPage.clickonsubmitstaffprofile();\n    cy.wait(3000);\n    addStaffPage.Sucessmessage();\n    cy.wait(1000);\n  });\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[role=\"alert\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[role=\"alert\"]`, but never found it.\n    at AddStaffPage.Sucessmessage (webpack:///./cypress/e2e/pages/AddStaffPage.js:928:47)\n    at Context.eval (webpack:///./cypress/e2e/tests/AddStaffPageTest_682.cy.js:61:29)",
+                "diff": null
+              },
+              "uuid": "0f383f27-39c9-4eaa-894d-12f9838bb2fd",
+              "parentUUID": "72c36114-c6b0-42e7-8733-91a85fc1030a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "0f383f27-39c9-4eaa-894d-12f9838bb2fd"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 84768,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T21:07:08.427Z",
+    "end": "2026-06-16T21:07:43.340Z",
+    "duration": 34913,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b15cc4ad-423b-4462-8d04-ea9b68fe7055",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\PaymentsPageTest_1414.cy.js",
+      "file": "cypress\\e2e\\tests\\PaymentsPageTest_1414.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "25536b90-5fd5-42c2-9c00-981f2791f79a",
+          "title": "Payments Module - Receive money from collector - Logged in user to click on Cancel button or No button in the pop up to stop the workflow of initiation of receipt cancellation request",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Payment - TC_ID_1414",
+              "fullTitle": "Payments Module - Receive money from collector - Logged in user to click on Cancel button or No button in the pop up to stop the workflow of initiation of receipt cancellation request Payment - TC_ID_1414",
+              "timedOut": null,
+              "duration": 27599,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  paymentsPage.PaymentModule();\n});",
+              "err": {},
+              "uuid": "f8ebcf40-14af-4376-b833-c84ad273a5f5",
+              "parentUUID": "25536b90-5fd5-42c2-9c00-981f2791f79a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f8ebcf40-14af-4376-b833-c84ad273a5f5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 27599,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

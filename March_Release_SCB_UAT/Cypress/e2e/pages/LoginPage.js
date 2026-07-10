@@ -78,7 +78,7 @@ clickcompanyname() {
       this.fillUsername(email);
       this.fillPassword(password);
       this.submit();
-      cy.wait(3000);
+      cy.wait(6000);
       // this.enterotp();
       // this.verifyLoginSuccess();
   }

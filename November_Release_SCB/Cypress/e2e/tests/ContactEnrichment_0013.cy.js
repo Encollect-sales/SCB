@@ -36,15 +36,24 @@ describe('CE_BCU_013 - Negative – Mobile number with non-numeric characters', 
 
       const sheetName = 'Sheet1';
 
-      // ---------------- Test Data ----------------
-      const invalidMobileNumber = '98AB76@#12'; // ❌ Non-numeric
-      const randomAddress = faker.location.streetAddress(); // ✅ Faker address
+      // ---------------- Generate Random Invalid Mobile Number ----------------
+      const invalidMobileNumber =
+        faker.string.numeric(2) +
+        faker.string.alpha(2).toUpperCase() +
+        faker.string.numeric(2) +
+        '@#' +
+        faker.string.numeric(2);
+
+      cy.log(`Generated Invalid Mobile Number: ${invalidMobileNumber}`);
+
+      // ---------------- Generate Random Address ----------------
+      const randomAddress = faker.location.streetAddress();
 
       const data = {
-        'A2': '1667',              // Agreement ID
-        'B2': 'Office',            // Contact Type
-        'C2': randomAddress,       // ✅ Address from faker
-        'D2': invalidMobileNumber  // ❌ Invalid Mobile
+        'A2': '1667',                // Agreement ID
+        'B2': 'Office',              // Contact Type
+        'C2': randomAddress,         // Address
+        'D2': invalidMobileNumber    // Invalid Mobile Number
       };
 
       // ---------------- Excel Handling ----------------
@@ -57,16 +66,15 @@ describe('CE_BCU_013 - Negative – Mobile number with non-numeric characters', 
         sheetName: sheetName,
         data: data
       }).then(() => {
-        cy.log('Excel updated with faker address & invalid mobile number');
+        cy.log('Excel updated with random address and invalid mobile number');
       });
 
-      // Move updated file to fixtures
+      // ---------------- Move File to Fixtures ----------------
       cy.task('moveAllDownloadsToFixtures');
 
       // ---------------- Step 3: Upload File ----------------
       contactenrichmentpage.contacttemplate_failed();
 
-      
     });
 
   });

@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T20:55:35.467Z",
+    "end": "2026-06-16T20:56:26.786Z",
+    "duration": 51319,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "01438b1e-27ea-4ffc-90e3-ca2036a687fc",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\PaymentsPageTest_1400.cy.js",
+      "file": "cypress\\e2e\\tests\\PaymentsPageTest_1400.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d0e1826f-64de-4dab-8032-6170e7dbe530",
+          "title": "Payments Module - Central ops acknowledging payin slip- Logged in user to select \"search by encollect payin slip no \" radio button to acknowledge the payin slip",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Payment - TC_ID_1400",
+              "fullTitle": "Payments Module - Central ops acknowledging payin slip- Logged in user to select \"search by encollect payin slip no \" radio button to acknowledge the payin slip Payment - TC_ID_1400",
+              "timedOut": null,
+              "duration": 44777,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  paymentsPage.PaymentModule();\n  paymentsPage.ClickOnC_opsAcknowledgingPayinSlip_Result_grid();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.form-check-group > label > input`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.form-check-group > label > input`, but never found it.\n    at PaymentsPage.ClickOnC_opsAcknowledgingPayinSlip_Result_grid (webpack:///./cypress/e2e/pages/PaymentsPage.js:1116:8)\n    at Context.eval (webpack:///./cypress/e2e/tests/PaymentsPageTest_1400.cy.js:27:29)",
+                "diff": null
+              },
+              "uuid": "cfc5673a-6366-46d8-8b19-0c735c889d66",
+              "parentUUID": "d0e1826f-64de-4dab-8032-6170e7dbe530",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "cfc5673a-6366-46d8-8b19-0c735c889d66"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 44777,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

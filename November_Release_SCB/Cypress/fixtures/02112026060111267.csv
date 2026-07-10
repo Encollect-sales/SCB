@@ -1,3 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009590352,1936,Yes,PTP,PTP,2025-12-26,83,,Approved agent,308-551-4665,BTM,Bangalore,Clifton76@yahoo.com,Permanent,New,02112026060111267,Error,Next action date cannot be less than current date
-DMI0009801001,1933,Yes,PTP,PTP,2025-12-26,83,,Failure reason validation,(987) 325-0919 x9467,BTM,Bangalore,Alfredo_Collins84@yahoo.com,Permanent,New,02112026060111267,Error,Next action date cannot be less than current date

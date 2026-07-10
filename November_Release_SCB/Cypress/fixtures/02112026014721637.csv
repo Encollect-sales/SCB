@@ -1,3 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009601001,2003,Yes,PTP,PTP,2025-12-26,69,,Pending approval test,(430) 844-4073 x8969,BTM,Bangalore,Nadia_DuBuque19@gmail.com,Permanent,New,02112026014721637,Error,Next action date cannot be less than current date
-DMI0009601002,2003,Yes,PTP,PTP,2025-12-26,69,,Pending approval test,674.460.8625 x10249,BTM,Bangalore,Jodie.Hahn@gmail.com,Permanent,New,02112026014721637,Error,Next action date cannot be less than current date

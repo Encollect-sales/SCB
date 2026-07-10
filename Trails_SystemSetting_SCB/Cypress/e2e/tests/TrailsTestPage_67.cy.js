@@ -45,7 +45,7 @@ describe('Trails - RightPartyContact with value NO', () => {
 
             const data = {
                 'A2':'DMI0009590352',
-                'B2':'1936',
+                'B2':'1668',
                 'C2':'no',          // ✅ ONLY CHANGE DONE HERE
                 'D2':'PTP',
                 'E2':'PTP',

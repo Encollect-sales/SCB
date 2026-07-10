@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T20:33:18.087Z",
+    "end": "2026-06-16T20:33:53.643Z",
+    "duration": 35556,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "51c905ab-2e80-469a-9351-5dfda0189ded",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\PaymentsPageTest_074.cy.js",
+      "file": "cypress\\e2e\\tests\\PaymentsPageTest_074.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5f2a9ba0-9b9f-4a69-bfcf-92c402a9f60e",
+          "title": "Payments Module - Receive money from collector - Logged in user to view Receipt cancellation request approval/rejection sub module under payments module as per ACM.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Payment - TC_ID_076",
+              "fullTitle": "Payments Module - Receive money from collector - Logged in user to view Receipt cancellation request approval/rejection sub module under payments module as per ACM. Payment - TC_ID_076",
+              "timedOut": null,
+              "duration": 29299,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  paymentsPage.ReceiptCancellationRequestApprovalRejection_074();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.payments > :nth-child(2) > :nth-child(4) > a.ng-star-inserted`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.payments > :nth-child(2) > :nth-child(4) > a.ng-star-inserted`, but never found it.\n    at PaymentsPage.ReceiptCancellationRequestApprovalRejection_074 (webpack:///./cypress/e2e/pages/PaymentsPage.js:1562:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/PaymentsPageTest_074.cy.js:26:29)",
+                "diff": null
+              },
+              "uuid": "90d6f8e9-27d6-482b-96bc-b562285122a1",
+              "parentUUID": "5f2a9ba0-9b9f-4a69-bfcf-92c402a9f60e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "90d6f8e9-27d6-482b-96bc-b562285122a1"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 29299,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

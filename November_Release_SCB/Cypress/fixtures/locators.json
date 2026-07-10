@@ -56,11 +56,11 @@
 },
 
 "usermanagement":{
-  "agent":".user-management > :nth-child(2) > :nth-child(2) > a.ng-star-inserted",
+  "agent":"#nav-item-3-add-agent",
   "agency_name_dropdown":"#agencyId",
   "agency_reporting_manager":"#reportingManager > .ng-select-container",
   "staff":".user-management > :nth-child(2) > :nth-child(3) > a.ng-star-inserted",
-  "add_staff":".user-management > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(1) > a",
+  "add_staff":"#nav-item-3-add-staff",
   "Base_Branch ":"#base-branch",
   "Single_Point_Reporting_Manager ":"#spManager > .ng-select-container",
   "Base_Branch_And_Reporting_Manager":":nth-child(5) > .nav-link > span",
@@ -85,14 +85,13 @@
   "wallet_limit_field":"#walletLimit",
   "save_button":"#btn-save",
   "customer_id":"#customId",
-
   "ClickOn_productgroup":"[for='product-scope-HL01']",
       "ClickOn_Product":"[for='product-scope-HL02']",
       "ClickOn_SubProduct":"#product-scope-HL03",
  
       "ClickOn_product_panel":".panel-open > .panel > .panel-heading > .panel-title",
  
-      "Select_product_group":".col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+      "Select_product_group":":nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
       "Select_Product":".col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
       "Select_Sub_product":".col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
  
@@ -109,7 +108,11 @@
     "Product_Panel":".panel-open > .panel > .panel-heading > .panel-title",
     "Bucket_panel_open":".panel-open > .panel > .panel-collapse > .panel-body > .row > .col-md-12 > .form-control-group > .form-ng-select > .ng-select-container > .ng-arrow-wrapper",
     "Geography_panel_open":".panel-open > .panel > .panel-collapse > .panel-body > .row > .col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container",
-    "geography_Panel_close":".panel-open > .panel > .panel-heading > .panel-title"
+    "geography_Panel_close":".panel-open > .panel > .panel-heading > .panel-title",
+    "agent_emp":"#nav-item-2-agent-empanelment",
+    "user_manage":"#nav-item-1-user-management",
+    "staff_emp":"#nav-item-2-staff-empanelment"
+  
  
   
   
@@ -129,7 +132,9 @@
   "save_button":"button[class='btn btn-primary mw-150px me-4']",
   "channel_type":"#channelType",
   "entry_point":"#entryPoint",
-  "triggertype":"#trigger-type-7"
+  "triggertype":"#trigger-type-7",
+  "triggertypexday":"#trigger-type-5"
+  
 },
 "reports":{
 "Delayed_Reports":"#nav-item-2-delayed-deposits-report",
@@ -144,7 +149,7 @@
   "download_button":"#bulk-trail-download-template",
   "ClickOnUploadBtn":"#bulk-trail-upload-button",
   "ClickOnOkay":"#confirm-dialog-okay",
-  "trail_upload_status":".trails > .sub-nav-list > :nth-child(2) > .ng-star-inserted",
+  "trail_upload_status":"#nav-item-2-trail-upload-status",
   "bulk_trans_no":"#bulk-trail-trxn-id",
   "search":"#bulk-trail-search-button"
 }

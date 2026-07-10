@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T18:59:34.450Z",
+    "end": "2026-06-16T19:00:15.120Z",
+    "duration": 40670,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f34fc71d-e4d9-4089-ae76-604bb9a80116",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_806.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_806.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "585e2d4b-b2da-43f8-9474-e4d253823722",
+          "title": "Allocation - Upload Collector Allocation Batch",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Proceed with Allocation For - TC_ID_806",
+              "fullTitle": "Allocation - Upload Collector Allocation Batch Proceed with Allocation For - TC_ID_806",
+              "timedOut": null,
+              "duration": 34482,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.uploadCollectorallocationWithoutAllocation();\n});",
+              "err": {},
+              "uuid": "324cd465-7a57-4ef4-a6b1-4538e87f7fe3",
+              "parentUUID": "585e2d4b-b2da-43f8-9474-e4d253823722",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "324cd465-7a57-4ef4-a6b1-4538e87f7fe3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 34482,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

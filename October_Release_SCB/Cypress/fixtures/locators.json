@@ -1,7 +1,7 @@
 {
   "loginPage": {
     "companynameInput": "#login-company-name",
-    "ClickonCompanyName": ".ng-option-label",
+    "ClickonCompanyName": ".ng-option",
     "usernameInput": "#login-email",
     "passwordInput": "#login-password",
     "signinButton": "#login-submit-button",
@@ -43,10 +43,10 @@
     "ClickOn_Geofilter":"[heading= 'Geography Filter'] > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn",
 
     "ClickOn_Agent_Geofilter":"accordion-group:nth-child(3) div:nth-child(1) div:nth-child(1) div:nth-child(1) div:nth-child(1) button:nth-child(1)",
-     "ClickOn_Agent_Bucketfilter": "[heading='Bucket Filter'] > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn",
+     "ClickOn_Agent_Bucketfilter": ".panel-open > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn",
     
     "ClickOn_Filter_Productgroup":".panel-open > .panel > .panel-collapse > .panel-body > .row > :nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
-    "ClickOn_Filter_Bucket":".panel-open > .panel > .panel-collapse > .panel-body > .row > .col-lg-4.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "ClickOn_Filter_Bucket":".panel-open > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn",
     "ClickOn_Filter_Geo":".panel-open > .panel > .panel-collapse > .panel-body > .row > .col-lg-4 > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
 
     "ClickOn_UserType":"#AccountType",
@@ -67,7 +67,7 @@
     "Product_Group":"select[name='productGroup']",
     "CMS_PayIn_Slip_id":"input[name='cmsPayInSlipNo']",
     "Payment_mode":":nth-child(3) > .form-control-group > .form-select",
-    "Deposit_account_number":":nth-child(4) > .form-control-group > .form-select",
+    "Deposit_account_number":".form-control-with-icon > .form-select",
     "Account_holder_name":":nth-child(5) > .form-control-group > .form-select",
     "Deposit_bank_name":":nth-child(6) > .form-control-group > .form-select",
     "Deposit_branch":":nth-child(7) > .form-control-group > .form-select",
@@ -81,9 +81,9 @@
     "pagination_count_dropdown":".pagination-count > .form-select",
     "search_btn":"#search-button",
     "search_edit_payment":".payments > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(3) > a",
-    "receipts":".payments > :nth-child(2) > :nth-child(4) > a.ng-star-inserted",
+    "receipts":"#nav-item-2-receipts",
     "walkin_cust":".payments > :nth-child(2) > :nth-child(4) > .sub-nav-list > :nth-child(1) > a",
-    "Customer_Account_Number":":nth-child(5) > .form-control-group > .form-control",
+    "Customer_Account_Number":":nth-child(5) > .form-control-group > .form-control-with-icon > .form-control",
     "Physical_Receipt_No":":nth-child(2) > :nth-child(1) > .form-control-group > .form-control",
     "Collector_ID":".card-content > :nth-child(2) > :nth-child(2) > .form-control-group > .form-control",
     "Relationship_With_Customer":".form-control-group > .form-select",
@@ -113,7 +113,9 @@
     "firstaccount":"tbody > :nth-child(1) > :nth-child(4) > a",
     "lastaccount":"tbody > :nth-child(2) > :nth-child(4) > a",
     "next_button":"#nextButton",
-    "Previous_Button":"#PreviousButton"
+    "Previous_Button":"#PreviousButton",
+    "batch_of_payments":"#nav-item-2-batch-of-payments",
+    "search_and_edit":"#nav-item-3-search-and-edit-batch"
   
   },
 
@@ -144,9 +146,9 @@
     "primary_insights":"#nav-item-2-primary-allocation-insights",
     "filterbutton":"div[class='d-flex align-items-center justify-content-between mb-4'] button[class='btn btn-primary btn-filter px-4 py-2 h-auto rounded-4']",
     "clickonproduct":"#accordion-product > .panel > .panel-heading > .panel-title",
-    "secondary_insights":".insights > .sub-nav-list > :nth-child(2) > .ng-star-inserted",
-    "Trail_Gap_Insights":".insights > .sub-nav-list > :nth-child(3) > .ng-star-inserted",
-    "Accountvsallocated":".insights > .sub-nav-list > :nth-child(4) > .ng-star-inserted",
+    "secondary_insights":"#nav-item-2-secondary-allocation-insights",
+    "Trail_Gap_Insights":"#nav-item-2-trail-gap-insights",
+    "Accountvsallocated":"#nav-item-2-allocated-vs-achieved-insights",
     "MoneymovementinsightsAgencystaff":".insights > .sub-nav-list > :nth-child(5) > .ng-star-inserted",
     "MoneymovementinsightsBankstaff":".insights > .sub-nav-list > :nth-child(5) > .ng-star-inserted"
   

@@ -1,32 +1,43 @@
-import { readExcelFile } from '../utils/excelutils';
 import { getTestData } from '../utils/testDataUtils';
 import LoginPage from '../pages/LoginPage';
 import { getLocators } from '../utils/locatorUtils';
-import AllocationPage from '../pages/AllocationPage';
 import InsightsPage from '../pages/InsightsPage';
 
-describe('Primary Allocation Insights' - 'Verify that Product Hierarchy allows adding Product Group, Product, and Sub Product', () => {
+describe('Primary Allocation Insights - Verify that Product Hierarchy allows adding Product Group, Product, and Sub Product', () => {
+
     let loginPage;
-    let allocationpage; 
-    //let paymentspage;
     let insightspage;
 
-    before(() => {
-        // Load and set locators before any tests run
+    it('Insights - TC_Ins_01', () => {
+
         getLocators('loginPage').then(locators => {
             loginPage = new LoginPage(locators);
         });
 
-        getLocators('insights').then(locators => {  
-            insightspage = new InsightsPage(locators); 
+        getLocators('insights').then(locators => {
+            insightspage = new InsightsPage(locators);
         });
+
+        getTestData('loginData', 'login2').then(user => {
+
+            // ✅ Log to verify exact keys coming from Excel
+            cy.log('Full user object: ' + JSON.stringify(user));
+            cy.log('Companyname: ' + user.Companyname);
+            cy.log('email: ' + user.email);
+            cy.log('password: ' + user.password);
+
+            loginPage.login(
+                user.Companyname,
+                user.email,
+                user.password
+            );
+
+            cy.wait(2000);
+
+            insightspage.TC_Ins_01();
+
+        });
+
     });
 
-    it('Insights -TC_Ins_01', () => {
-        getTestData('loginData', 'login2').then(user => {
-            loginPage.login(user.Companyname, user.email, user.password);
-                cy.wait(2000);
-                insightspage.TC_Ins_01();            
-            });
-        });
-    });
+});

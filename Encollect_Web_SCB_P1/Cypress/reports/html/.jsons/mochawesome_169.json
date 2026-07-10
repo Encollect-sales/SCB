@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T18:16:10.696Z",
+    "end": "2026-06-16T18:16:44.788Z",
+    "duration": 34092,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a64b4459-9fad-44b9-904b-6733b2471879",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_754.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_754.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "232b5007-ec0a-42fc-95b9-eff9732db319",
+          "title": "Allocation - Upload Agency Allocation Owner",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Agency Level Allocation - TC_ID_363",
+              "fullTitle": "Allocation - Upload Agency Allocation Owner Agency Level Allocation - TC_ID_363",
+              "timedOut": null,
+              "duration": 28061,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  // Download the batch file\n  allocationPage.downloadAgencyAllocationOwner();\n  // Update the Excel file\n  const sheetName = 'Sheet1';\n  const data = {\n    'A2': 'DMI0010811195'\n  };\n  const excelFileName = 'AllocationToOwner.xlsx';\n  const downloadsFolder = Cypress.config('downloadsFolder');\n  const filePath = `${downloadsFolder}\\\\${excelFileName}`;\n  cy.task('updateExcelCell', {\n    filePath: filePath,\n    sheetName: sheetName,\n    data: data\n  }).then(() => {\n    cy.log('Account number updated successfully in the Excel file');\n    allocationPage.uploadAgencyAllocationBatchWrongAccountNo();\n  });\n});\nallocationPage.uploadAgencyAllocationOwnerAccountNo();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(1) > a.ng-star-inserted`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(1) > a.ng-star-inserted`, but never found it.\n    at AllocationPage.downloadAgencyAllocationOwner (webpack:///./cypress/e2e/pages/AllocationPage.js:3556:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_754.cy.js:25:21)",
+                "diff": null
+              },
+              "uuid": "9ca8ef66-5410-48eb-8198-9fc1f648c141",
+              "parentUUID": "232b5007-ec0a-42fc-95b9-eff9732db319",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9ca8ef66-5410-48eb-8198-9fc1f648c141"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 28061,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -21,7 +21,7 @@ describe('Performance Report (MTD) - Verify Bank Staff option is hidden for tele
 
     it('Verify Bank Staff option is hidden for telecaller Agency user', () => {
 
-        getTestData('loginData', 'login1').then(user => {
+        getTestData('loginData', 'login2').then(user => {
 
             loginPage.login(
                 user.Companyname,

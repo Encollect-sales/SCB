@@ -44,12 +44,12 @@ describe('Trails - Agent ENCollect Code with Special Characters ', () => {
             //################################################################################
 
             const data = {
-                'A2':'18765',
+                'A2':'1667',
                 'B2': '$%^%^&*#%',
                 'C2': 'yes',
                 'D2': 'PTP',
                 'E2': 'PTP',
-                'F2': '2027/12/22',
+                'F2': '2027-12-22',
                 'G2': '109',
                 'H2':' ',
                 'I2':'Bulk upload',
@@ -86,7 +86,7 @@ describe('Trails - Agent ENCollect Code with Special Characters ', () => {
                                         });
                 
                 // Upload the file from `fixtures/`
-                trailspage.Bulktrail_Processed();
+                trailspage.Bulktrail_Failed();
             });
         });
     });

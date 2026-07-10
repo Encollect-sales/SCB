@@ -1,2 +1,0 @@
-Id,UserType,FirstName,LastName,AgencyCode,SupervisorEmailId,DialerId,DRACertificationDate,DRATrainingDate,DRAUniqueRegistrationNumber,Department,Designation,DateOfBirth,MobileNo,EmailId,FathersName,LocalResidentialAddress,PostalCode,CollectionEmploymentDate,LastRenewalDate,AuthorizationCardExpiryDate,Remarks,IsFailed,FailureReason
-3a215c0a16e455ae0c93d284f3680163,FOS,Eloisa,Blick,13332,,435454,10-10-2020,10-10-2020,23577359447,,Agent,18-10-1979,2080329735,eloisa@yopmail.com,yop,bakori,765523,19-10-2022,19-10-2023,10-10-2033,resr,True, | Department is Required

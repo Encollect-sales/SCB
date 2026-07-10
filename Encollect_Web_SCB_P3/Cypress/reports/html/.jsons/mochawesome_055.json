@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T14:46:34.087Z",
+    "end": "2026-06-16T14:47:15.463Z",
+    "duration": 41376,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e44b86bc-9a90-4044-893f-a1bac4a6bea6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\CashWalletLimitReportPage06.cy.js",
+      "file": "cypress\\e2e\\tests\\CashWalletLimitReportPage06.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "abad714c-e2c5-4992-8ba7-f0a2044ba43f",
+          "title": "T06 - CashWalletLimitReport-Click on Rejected and generate Report",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "T06- CashWalletLimitReport-Click on Rejected and generate Report",
+              "fullTitle": "T06 - CashWalletLimitReport-Click on Rejected and generate Report T06- CashWalletLimitReport-Click on Rejected and generate Report",
+              "timedOut": null,
+              "duration": 28957,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  reportpage.CashWalletLimitReportPage06();\n});",
+              "err": {},
+              "uuid": "8987cec2-465a-4093-aa9a-0d3aefe5eef6",
+              "parentUUID": "abad714c-e2c5-4992-8ba7-f0a2044ba43f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8987cec2-465a-4093-aa9a-0d3aefe5eef6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28957,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

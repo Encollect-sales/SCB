@@ -7,9 +7,11 @@ class PaymentsPage {
   }
 
   PaymentModule() {
+    cy.wait(2000);
+    cy.wait(6000);
     cy.get(this.locators.payments).click();
     cy.wait(2000);
-    cy.contains('Receive Money from Collector ').should('be.visible');
+    cy.contains('Receive Money from Collector').should('be.visible');
   }
 
   PaymentModule_38() {
@@ -65,7 +67,9 @@ class PaymentsPage {
   }
 
   PaymentModule_39() {
-    cy.get('.account-search > a.ng-star-inserted > span.ng-star-inserted').click();
+    cy.get('#nav-item-1-payments').click({force:true});
+    cy.wait(2000);
+    cy.get('#nav-item-2-receive-money-from-collector').click({force:true});
     cy.wait(2000);
     cy.get(this.locators.payments).click();
     cy.wait(2000);
@@ -99,22 +103,21 @@ class PaymentsPage {
     const formattedPastDate = formatDate(pastDate);
     const formattedToday = formatDate(today);
 
-    cy.get(this.locators.EnterRecDate).type(formattedPastDate);
-    cy.wait(2000);
-    cy.get('#receipt-to-date').type(formattedToday);
-    cy.wait(2000);
+cy.get(this.locators.EnterRecDate).invoke('removeAttr', 'readonly').clear().type(formattedPastDate);
+cy.wait(2000);
+cy.get('#receipt-to-date').invoke('removeAttr', 'readonly').clear().type(formattedToday);
     // cy.get(this.locators.EnterRecDate).type("01/05/2025");
     // cy.wait(2000);
     // cy.get('#receipt-to-date').type("27/05/2025");
-    // cy.wait(2000);
+    cy.wait(2000);
     cy.get(this.locators.ClickOnSearch).click({ force: true });
     cy.wait(5000);
 
   }
   PaymentModule_40() {
-    cy.get('.account-search > a.ng-star-inserted > span.ng-star-inserted').click();
+    cy.get('#nav-item-1-payments').click();
     cy.wait(2000);
-    cy.get(this.locators.payments).click();
+    cy.get('#nav-item-2-receive-money-from-collector')
     cy.wait(2000);
     cy.get(this.locators.CliCkRMFC).click({ force: true });
     cy.wait(5000);
@@ -146,22 +149,21 @@ class PaymentsPage {
     const formattedPastDate = formatDate(pastDate);
     const formattedToday = formatDate(today);
 
-    cy.get(this.locators.EnterRecDate).type(formattedPastDate);
-    cy.wait(2000);
-    cy.get('#receipt-to-date').type(formattedToday);
-    cy.wait(2000);
+cy.get(this.locators.EnterRecDate).invoke('removeAttr', 'readonly').clear().type(formattedPastDate);
+cy.wait(2000);
+cy.get('#receipt-to-date').invoke('removeAttr', 'readonly').clear().type(formattedToday);
     // cy.get(this.locators.EnterRecDate).type("01/05/2025");
     // cy.wait(2000);
     // cy.get('#receipt-to-date').type("27/05/2025");
-    // cy.wait(2000);
+    cy.wait(2000);
     cy.get(this.locators.ClickOnSearch).click({ force: true });
     cy.wait(5000);
 
   }
   PaymentModule_41() {
-    cy.get('.account-search > a.ng-star-inserted > span.ng-star-inserted').click();
+     cy.get('#nav-item-1-payments').click();
     cy.wait(2000);
-    cy.get(this.locators.payments).click();
+    cy.get('#nav-item-2-receive-money-from-collector')
     cy.wait(2000);
     cy.get(this.locators.CliCkRMFC).click({ force: true });
     cy.wait(5000);
@@ -193,10 +195,15 @@ class PaymentsPage {
     const formattedPastDate = formatDate(pastDate);
     const formattedToday = formatDate(today);
 
-    cy.get(this.locators.EnterRecDate).type(formattedPastDate);
-    cy.wait(2000);
-    cy.get('#receipt-to-date').type(formattedToday);
-    cy.wait(2000);
+   cy.get(this.locators.EnterRecDate)
+  .invoke('removeAttr', 'readonly')
+  .clear()
+  .type(formattedPastDate);
+cy.wait(2000);
+cy.get('#receipt-to-date')
+  .invoke('removeAttr', 'readonly')
+  .clear()
+  .type(formattedToday);
     // cy.get(this.locators.EnterRecDate).type("01/05/2025");
     // cy.wait(2000);
     // cy.get('#receipt-to-date').type("27/05/2025");
@@ -205,9 +212,9 @@ class PaymentsPage {
     cy.wait(5000);
   }
   PaymentModule_42() {
-    cy.get('.account-search > a.ng-star-inserted > span.ng-star-inserted').click();
+    cy.get('#nav-item-1-payments').click();
     cy.wait(2000);
-    cy.get(this.locators.payments).click();
+    cy.get('#nav-item-2-receive-money-from-collector')
     cy.wait(2000);
     cy.get(this.locators.CliCkRMFC).click({ force: true });
     cy.wait(5000);
@@ -253,10 +260,12 @@ class PaymentsPage {
   }
 
   PaymentModule_43() {
-    cy.get('.account-search > a.ng-star-inserted > span.ng-star-inserted').click();
+    cy.get('#nav-item-1-payments').click({force:true});
     cy.wait(2000);
-    cy.get(this.locators.payments).click();
+    cy.get('#nav-item-2-receive-money-from-collector').click({force:true});
     cy.wait(2000);
+    // cy.get(this.locators.payments).click();
+    // cy.wait(2000);
     // cy.get(this.locators.payments).click();
     // cy.wait(2000);
     cy.get(this.locators.ClickBOP).click();
@@ -268,9 +277,9 @@ class PaymentsPage {
   }
 
   PaymentModule_44() {
-    cy.get('.account-search > a.ng-star-inserted > span.ng-star-inserted').click();
+     cy.get('#nav-item-1-payments').click();
     cy.wait(2000);
-    cy.get(this.locators.payments).click();
+    cy.get('#nav-item-2-receive-money-from-collector')
     cy.wait(2000);
     // cy.get(this.locators.payments).click();
     // cy.wait(2000);
@@ -362,10 +371,13 @@ class PaymentsPage {
 
   SearchandPrintBatch051() {
     cy.get(this.locators.payments).click();
+    cy.wait(2000);
     cy.get(this.locators.ClickBOP).click();
-    cy.get(this.locators.SearchandPrintBatch).click().click();
-     cy.get(this.locators.fillbranchid).click();   // open the ng-select dropdown
-cy.wait(1000);
+    cy.wait(2000);
+    cy.get(this.locators.SearchandPrintBatch).click({force: true}).click({force: true});
+    cy.wait(2000);
+    cy.get(this.locators.fillbranchid).click();   // open the ng-select dropdown
+    cy.wait(2000);
 
 cy.get('.ng-dropdown-panel .ng-option').then(($options) => {
   const randomIndex = Math.floor(Math.random() * $options.length); // pick random index
@@ -374,7 +386,7 @@ cy.get('.ng-dropdown-panel .ng-option').then(($options) => {
 
    cy.wait(2000);
     cy.get(this.locators.clickonsearchPBL).click({ force: true });
-    cy.get('.breadcrumb > :nth-child(3)').invoke('text').then((text) => {
+    cy.get("body app-root a:nth-child(4)").invoke('text').then((text) => {
       cy.log(`Extracted Text: ${text}`);
       expect(text.trim()).to.equal('Print Batch List');
     });
@@ -412,17 +424,18 @@ cy.get('.ng-dropdown-panel .ng-option').then(($options) => {
   }
 
   SearchandPrintBatch061() {
-    cy.get(this.locators.payments).click();
+    cy.get('#nav-item-1-payments').click();
     cy.wait(2000);
-    cy.get('.payments > :nth-child(2) > :nth-child(4) > a.ng-star-inserted').click();
+    cy.get('#nav-item-2-batch-of-payments').click();
+    cy.wait(2000);
+    cy.get('#nav-item-3-search-and-edit-batch').click();
     cy.wait(2000);
     cy.get(this.locators.EmailandSMS).click().click();
     cy.wait(2000);
     cy.get(this.locators.fillcustomreaccountnumber).type('IDRID17000203');
     cy.wait(2000);
-    cy.get(this.locators.ClickFromDate).type("01/10/2024");
+    cy.get(this.locators.ClickFromDate).type("01-Jan-2024");
     cy.wait(2000);
-
     cy.get(this.locators.ClickToDate).click().click();
     cy.wait(2000);
 
@@ -674,6 +687,12 @@ cy.get('.ng-dropdown-panel .ng-option').then(($options) => {
 
   }
   ClickOnCreateBatchOfPayment() {
+    cy.wait(2000);
+    cy.wait(6000);
+    cy.get(this.locators.payments).click();
+    cy.wait(2000);
+    cy.contains('Receive Money from Collector').should('be.visible').click({force:true});
+    cy.wait(2000);
     cy.get(this.locators.Create_batch_of_payment).click({ force: true });
   }
 
@@ -700,26 +719,38 @@ cy.get('.ng-dropdown-panel .ng-option').then(($options) => {
   }
 
   ClickOnCreateBatchOfPayment_SearchBtnClick() {
+    cy.get('#nav-item-1-payments').click({force:true});
+    cy.wait(2000);
+    cy.get('#nav-item-2-batch-of-payments').click({force:true});
+    cy.wait(2000);
+    cy.get('#nav-item-3-create-batch-of-payments').click({force:true});
+    cy.wait(2000);
     cy.get(this.locators.CB_Product_group).select('All');
     cy.wait(2000);
     cy.get(this.locators.CB_Payment_mode).select('CASH');
     cy.wait(2000);
-    cy.get(this.locators.CB_From_date).type('10/01/202');
+    cy.get(this.locators.CB_From_date).clear().type('10-Jan-01', { force: true });
     cy.wait(2000);
-    cy.get(this.locators.CB_To_date).type('22/03/2024');
+    cy.get(this.locators.CB_To_date).clear().type('22-Mar-26', { force: true });
     cy.wait(2000);
     cy.get(this.locators.CB_search_btn).click({ force: true });
 
   }
 
   ClickOnCreateBatchOfPayment_ConfirmBatchCreation() {
+      cy.get('#nav-item-1-payments').click({force:true});
+    cy.wait(2000);
+    cy.get('#nav-item-2-batch-of-payments').click({force:true});
+    cy.wait(2000);
+    cy.get('#nav-item-3-create-batch-of-payments').click({force:true});
+    cy.wait(2000);
     cy.get(this.locators.CB_Product_group).select('All');
     cy.wait(2000);
     cy.get(this.locators.CB_Payment_mode).select('CASH');
     cy.wait(2000);
-    cy.get(this.locators.CB_From_date).type('01/02/2025');
+    cy.get(this.locators.CB_From_date).type('01-Feb-2025');
     cy.wait(2000);
-    cy.get(this.locators.CB_To_date).type('27/02/2025');
+    cy.get(this.locators.CB_To_date).type('27-Feb-2025');
     cy.wait(2000);
     cy.get(this.locators.CB_search_btn).click({ force: true });
     cy.wait(2000);
@@ -1030,6 +1061,7 @@ cy.get('.ng-dropdown-panel .ng-option').then(($options) => {
     cy.get(this.locators.WCR_Customer_ACC_number).click();
     cy.wait(2000);
     cy.get(this.locators.WCR_collector_name).click();
+    cy.wait(2000);
     cy.get(this.locators.WCR_Customer_ACC_number_Err).then(($el) => {
       const text = $el.text();
       cy.log(text);
@@ -1511,7 +1543,7 @@ cy.wait(2000);
     cy.wait(2000);
     cy.get(this.locators.SearchandViewPayinSlip069).click().click();
     cy.wait(2000);
-    cy.get(this.locators.selectproductgroup071).select('CreditCard', { force: true });
+    cy.get(this.locators.selectproductgroup071).select('Credit Card', { force: true });
     cy.wait(2000);
     cy.get(this.locators.selectmodeofpayment071).select('CASH');
     cy.wait(2000);
@@ -1647,10 +1679,13 @@ cy.wait(1000);
 
   sendduplicateemailereceiptSMS1412() {
     cy.get(this.locators.payments).click();
+    cy.wait(2000);
     cy.get(this.locators.receipts).click();
     cy.wait(2000);
     cy.get(this.locators.sendduplicateemailereceiptSMS1412).click().click();
-    cy.get(this.locators.customreaccountnumber1412).type('1434545646');
+    cy.wait(2000);
+    cy.get(this.locators.customreaccountnumber1412).type('1667');
+    cy.wait(2000);
     cy.get("input[name='fromdate']").click();
     cy.get('.previous > span').click();
     cy.get('.previous > span').click();
@@ -1674,23 +1709,39 @@ cy.wait(1000);
     //  })
   }
 
-  sendduplicateemailereceiptSMS1413() {
+ sendduplicateemailereceiptSMS1413() {
     cy.get(this.locators.payments).click();
     cy.wait(2000);
+
     cy.get(this.locators.receipts).click();
     cy.wait(2000);
 
-    cy.wait(2000);
-    cy.get(this.locators.sendduplicateemailereceiptSMS1412).click().click();
+    cy.get(this.locators.sendduplicateemailereceiptSMS1412)
+      .click({ force: true });
+
     cy.wait(2000);
 
-    cy.get(this.locators.customreaccountnumber1412).click();
-    cy.get(this.locators.clickonsearch1399).click({ force: true });
-    cy.get(this.locators.Customrenumberisrequired).then(($el) => {
-      const text = $el.text();
-      cy.log(text);
-    })
-  }
+    cy.get(this.locators.customreaccountnumber1412)
+      .click()
+      .clear()
+      .type('1434545646');
+
+    // Select the first Agent ID field (since the locator matches 2 elements)
+    cy.get(this.locators.agentid1414)
+      .first()
+      .should('be.visible')
+      .clear()
+      .type('@123#12');
+
+    cy.get(this.locators.clickonsearch1399)
+      .click({ force: true });
+
+    cy.get(this.locators.Customrenumberisrequired)
+      .should('be.visible')
+      .then(($el) => {
+        cy.log($el.text().trim());
+      });
+}
 
   sendduplicateemailereceiptSMS1414() {
     cy.get(this.locators.payments).click();

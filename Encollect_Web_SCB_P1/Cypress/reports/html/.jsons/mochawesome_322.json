@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T20:26:59.638Z",
+    "end": "2026-06-16T20:27:40.827Z",
+    "duration": 41189,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0320468a-5e15-45ff-a054-d6711bdc9792",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\PaymentsPageTest_066.cy.js",
+      "file": "cypress\\e2e\\tests\\PaymentsPageTest_066.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "55c323d4-5824-4ed8-9394-396cb37358e6",
+          "title": "Payments Module - Search and edit batch - Logged in user to get error message as This batch was acknowledged already and it cannot be edited when clicked on save button whose batch status is \"Collection batch acknowledged\"",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Payment - TC_ID_066",
+              "fullTitle": "Payments Module - Search and edit batch - Logged in user to get error message as This batch was acknowledged already and it cannot be edited when clicked on save button whose batch status is \"Collection batch acknowledged\" Payment - TC_ID_066",
+              "timedOut": null,
+              "duration": 35636,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  paymentsPage.SearchandEditBatch068();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[role=\"alert\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[role=\"alert\"]`, but never found it.\n    at PaymentsPage.SearchandEditBatch068 (webpack:///./cypress/e2e/pages/PaymentsPage.js:665:29)\n    at Context.eval (webpack:///./cypress/e2e/tests/PaymentsPageTest_066.cy.js:27:29)",
+                "diff": null
+              },
+              "uuid": "a4914612-37aa-4263-9391-778a3a818e64",
+              "parentUUID": "55c323d4-5824-4ed8-9394-396cb37358e6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a4914612-37aa-4263-9391-778a3a818e64"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 35636,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

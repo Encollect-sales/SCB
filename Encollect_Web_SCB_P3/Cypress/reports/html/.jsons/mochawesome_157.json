@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T16:18:35.312Z",
+    "end": "2026-06-16T16:19:32.279Z",
+    "duration": 56967,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8fb359f6-e060-40d7-ae60-f1725a9f7dbc",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\PermissionTestPage_15.cy.js",
+      "file": "cypress\\e2e\\tests\\PermissionTestPage_15.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ec87563e-d34e-4528-9a08-516b9f95ffd4",
+          "title": "System Settings - permissions - user give permissions for the scheme in the user management",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "System Settings - permissions - TC_ID_15",
+              "fullTitle": "System Settings - permissions - user give permissions for the scheme in the user management System Settings - permissions - TC_ID_15",
+              "timedOut": null,
+              "duration": 47055,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  permissionpage.PermissionTestPage_15();\n});",
+              "err": {},
+              "uuid": "29d4b699-f96a-466b-bd2a-f738955779c6",
+              "parentUUID": "ec87563e-d34e-4528-9a08-516b9f95ffd4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "29d4b699-f96a-466b-bd2a-f738955779c6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 47055,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

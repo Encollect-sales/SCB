@@ -1,2 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009602001,10032,Yes,PTP,PTP,2025-12-26,73,,Saved as Draft agent test,(324) 573-8749,BTM,Bangalore,Everardo49@yahoo.com,Permanent,New,02042026064940199,Error,Next action date cannot be less than current date

@@ -60,11 +60,11 @@ describe('Trail Scenarios - PTP Bulk Upload', () => {
       // ---------------- Excel Cell Data ----------------
       const data = {
         'A2': '68190000222635',      // Agreement id
-        'B2': '1936',               // Agent ENCollect Code
+        'B2': '54535',               // Agent ENCollect Code
         'C2': 'yes',                 // RightPartyContact
         'D2': 'PTP',                // Action Code
         'E2': 'PTP',                // ResultCode
-        'F2': '2026/02/26',         // Next Action Date
+        'F2': '2027/01/29',         // Next Action Date
         'G2': ptpAmount,            // ✅ Random PTP Amount (1–100)
         'H2': '',                   // NextActionCode
         'I2': 'Bulk upload Aug29',  // Remarks

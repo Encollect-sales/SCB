@@ -1,3 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009601002,2003,Yes,PTP,PTP,2025-12-26,64,,Pending approval test,583-727-9577,BTM,Bangalore,Rosalyn97@hotmail.com,Permanent,New,01272026092700841,Error,Next action date cannot be less than current date
-DMI0009601001,2003,Yes,PTP,PTP,2025-12-26,64,,Pending approval test,815-583-7125 x6860,BTM,Bangalore,Eliezer_Emard@hotmail.com,Permanent,New,01272026092700841,Error,Next action date cannot be less than current date

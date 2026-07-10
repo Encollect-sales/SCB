@@ -1,3 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009001515,1515,Yes,PTP,PTP,2025-12-26,84,,Approved agent record,511.974.0577 x6518,BTM,Bangalore,Elody21@gmail.com,Permanent,New,12302025105200214,Error,Next action date cannot be less than current date
-DMI0009001907,1907,Yes,PTP,PTP,2025-12-26,84,,Non-approved agent,870-671-9297 x37818,BTM,Bangalore,Earnest_Prosacco12@gmail.com,Permanent,New,12302025105200214,Error,Next action date cannot be less than current date

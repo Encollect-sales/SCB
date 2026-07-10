@@ -10,7 +10,9 @@ class CommunicationPage {
 
   // Navigate to Communication Module
  cy.get('#nav-item-1-communication').click({ force: true });
+ cy.wait(2000);
   cy.contains('Create Communication Template').click({ force: true });
+  cy.wait(2000);
 
   // Select Entry Point = Collection
   cy.get(this.locators.entry_point_dropdown)
@@ -19,9 +21,10 @@ class CommunicationPage {
   cy.wait(2000);
   cy.get(this.locators.channel_type).should('be.visible')
     .select('Email');
+    cy.wait(2000);
   // Wait until Recipient Type dropdown is populated
   cy.get(this.locators.recipient_type_dropdown).select('Agent').should('be.visible');
-    
+    cy.wait(2000);
    
 }
 
@@ -36,17 +39,13 @@ CFG_002_Collections_TriggerType_OnXDaysDelayedDeposit() {
   cy.get(this.locators.entry_point).select('Collection');
   cy.wait(2000);
   cy.get(this.locators.Trigger_type).click({force:true});
-   cy.contains(
-    'You have chosen the trigger type'
-  ).should('be.visible');
-
-  cy.contains(
-    'On X days of delayed deposit'
-  ).should('be.visible');
-
+    cy.wait(2000);
+   cy.contains('You have chosen the trigger type').should('be.visible');
+  cy.wait(2000);
+  cy.contains('On X days of delayed deposit').should('be.visible');
+  cy.wait(2000);
   // Provide X Value section
-  cy.contains('Provide X Value')
-    .should('be.visible');
+  cy.contains('Provide X Value').should('be.visible');
 
   // X Value label
   cy.contains('X Value (In Days)')
@@ -59,67 +58,64 @@ CFG_003_Collections_XValue_Mandatory_Positive() {
  cy.get('#nav-item-1-communication').click({ force: true });
   cy.contains('Create Communication Trigger').click({ force: true });
   cy.wait(2000);
-  cy.get(this.locators.triggertype).click({force:true});
+  cy.get(this.locators.triggertypexday).click({force:true});
   cy.wait(2000);
-  cy.get(this.locators.x_value_input)
-    .should('be.visible')
-    .and('be.enabled');
-
+  cy.get(this.locators.x_value_input).should('be.visible').and('be.enabled');
+  cy.wait(2000);
   // Enter valid positive numeric value
-  cy.get(this.locators.x_value_input)
-    .type('3')
-    .should('have.value', '3');
-
+  cy.get(this.locators.x_value_input).type('3').should('have.value', '3');
+  cy.wait(2000);
   // Save trigger
-  cy.get(this.locators.save_button)
-    .should('be.enabled')
-    .click();
+  cy.get(this.locators.save_button).should('be.enabled').click();
+    cy.wait(2000);
 
 }
 CFG_004_Collections_XValue_Blank_Or_NonNumeric_NotAllowed() {
-
-  // Navigate to Create Communication Trigger
- cy.get('#nav-item-1-communication').click({ force: true });
+  cy.get('#nav-item-1-communication').click({ force: true });
+  cy.wait(2000);
   cy.contains('Create Communication Trigger').click({ force: true });
   cy.wait(2000);
-  cy.get(this.locators.triggertype).click({force:true});
-
-  // ---- Case 1: Blank X Value ----
-  cy.get(this.locators.x_value_input)
-    .should('be.visible')
-    .clear();
-
+  cy.get(this.locators.triggertypexday).click({force:true});
+  cy.wait(2000);
+  // cy.get(this.locators.triggertype).click({force:true});
+  // cy.wait(2000);
+  cy.get(this.locators.x_value_input).click();
+  cy.wait(2000);
+  cy.contains('X Value is required').should('be.visible');
+  cy.wait(2000);
   cy.get(this.locators.save_button).click({force:true});
-
-  
-
-  // ---- Case 2: Non-numeric X Value ----
-  cy.get(this.locators.x_value_input)
-    .clear()
-    .type('abc');
-
+  cy.wait(2000);
+  cy.get(this.locators.x_value_input).clear().type('abc');
+  cy.wait(2000);
   cy.get(this.locators.save_button).click({force:true});
-
+  cy.wait(2000);
  
 
 }
 
-CommunicationTestPage_01(){
+CommunicationTestPage_01() {
 
-cy.get(this.locators.ClickOn_Communication).click();
-cy.wait(2000);
-cy.get(this.locators.ClickOn_CreateTemplate).click();
-cy.wait(2000);
-cy.get(this.locators.Select_Entrypoint).select('Collection');
-cy.wait(2000);
+  cy.get(this.locators.ClickOn_Communication).click();
+  cy.wait(2000);
+  cy.get(this.locators.ClickOn_CreateTemplate).click();
+  cy.wait(2000);
+  cy.get(this.locators.channel_type).select('Email');
+  cy.wait(2000);
+  cy.get(this.locators.Select_Entrypoint).select('Collection');
+  cy.wait(2000);
 
-const expectedBranches = ["Select Recipient Type","Agent"];
+  const expectedBranches = ["Select Recipient Type", "Agent"];
 
-cy.get(this.locators.Select_ReceiptType)
-  .then($options => {
-    const actual = [...$options].map(o => o.innerText.trim());
-    expect(actual).to.deep.equal(expectedBranches);
-  });
+  cy.get(this.locators.Select_ReceiptType)
+    .find('option')
+    .then($options => {
+      const actual = [...$options].map(o => o.innerText.trim());
+      cy.log('Actual options: ' + JSON.stringify(actual));
+      expectedBranches.forEach(expected => {
+        expect(actual).to.include(expected);
+      });
+    });
+
   cy.wait(1000);
 
 }

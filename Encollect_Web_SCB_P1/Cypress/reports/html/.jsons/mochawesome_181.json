@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T18:26:33.904Z",
+    "end": "2026-06-16T18:27:11.029Z",
+    "duration": 37125,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7e09a781-f181-43ac-a06c-c8bbd34c89f6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_766.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_766.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "535b0f8b-be59-471c-b082-ff8eba39240a",
+          "title": "Allocation - Secondary Allocation by filters - In the result grid, user should be able to see list of accounts which are allocated and not allocated.User should be able to select one or more loan accounts to allocate account to TC agent or field agent",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Allocate Button - TC_ID_766",
+              "fullTitle": "Allocation - Secondary Allocation by filters - In the result grid, user should be able to see list of accounts which are allocated and not allocated.User should be able to select one or more loan accounts to allocate account to TC agent or field agent Allocate Button - TC_ID_766",
+              "timedOut": null,
+              "duration": 32139,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  //allocationPage.ClickOnAllocateButtonSAF();\n  allocationPage.ClickOnSearchResultAllocationSAF();\n});",
+              "err": {},
+              "uuid": "bfe40bf1-6c5a-41b6-a42e-c600285a4f19",
+              "parentUUID": "535b0f8b-be59-471c-b082-ff8eba39240a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bfe40bf1-6c5a-41b6-a42e-c600285a4f19"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 32139,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

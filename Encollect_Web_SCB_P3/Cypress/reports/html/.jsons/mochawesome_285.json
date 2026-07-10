@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T19:18:53.047Z",
+    "end": "2026-06-16T19:19:36.152Z",
+    "duration": 43105,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ceec783a-a02f-437f-aa45-7234ddda12b7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\SettlementTestPage_04.cy.js",
+      "file": "cypress\\e2e\\tests\\SettlementTestPage_04.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0469c8f3-2d4e-4efc-8fbd-e5a04f83f1a7",
+          "title": "TC_ID_04 - Settlement - Verify clicking on the \"Account NO\" redirects to the Account Details screen.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC_ID_04 - Settlement",
+              "fullTitle": "TC_ID_04 - Settlement - Verify clicking on the \"Account NO\" redirects to the Account Details screen. TC_ID_04 - Settlement",
+              "timedOut": null,
+              "duration": 35353,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  settlementpage.SettlementTestPage_04();\n});",
+              "err": {},
+              "uuid": "051379cb-2732-407d-b187-532d0d7d9b8f",
+              "parentUUID": "0469c8f3-2d4e-4efc-8fbd-e5a04f83f1a7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "051379cb-2732-407d-b187-532d0d7d9b8f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 35353,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

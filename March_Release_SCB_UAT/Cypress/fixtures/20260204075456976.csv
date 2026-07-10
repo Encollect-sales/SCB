@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1f38a46d91c748114b8b7779e0ceff,Telecaller,35063,Marie,Corwin,marie@yopmail.com,,Branch Backend,Branch Manager,Bangalore,True, | Mobile Number is required

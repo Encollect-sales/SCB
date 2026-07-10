@@ -39,8 +39,8 @@ describe('Trails - New Address Alphanumeric', () => {
             const email = `${faker.string.alpha({ length: 8 }).toLowerCase()}@yopmail.com`;
 
             const data = {
-                'A2':'18765',
-                'B2':'1936',
+                'A2':'1667',
+                'B2':'1668',
                 'C2':'yes',
                 'D2':'PTP',
                 'E2':'PTP',

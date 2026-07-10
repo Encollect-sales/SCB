@@ -4,7 +4,7 @@ class ReportsPage {
     this.locators = locators;
   }
 TC_POS_001(){
-  cy.get(this.locators.clickreports).click({force:true});
+  cy.contains("Reports").click({force:true});
   cy.wait(2000);
   cy.get(this.locators.Performance).click({ force: true });
   cy.wait(2000);
@@ -35,7 +35,7 @@ TC_POS_001(){
 
 }
 TC_POS_002(){
-   cy.get(this.locators.clickreports).click({force:true});
+   cy.contains("Reports").click({force:true});
   cy.wait(2000);
   cy.get(this.locators.Performance).click({ force: true });
   cy.wait(2000);
@@ -65,7 +65,7 @@ TC_POS_002(){
 
 }
 TC_POS_006(){
-  cy.get(this.locators.clickreports).click({force:true});
+  cy.contains("Reports").click({force:true});
   cy.wait(2000);
   cy.get(this.locators.Performance).click({ force: true });
   cy.wait(2000);
@@ -78,7 +78,7 @@ TC_POS_006(){
 }
 
 TC_POS_008(){
-   cy.get(this.locators.clickreports).click({force:true});
+   cy.contains("Reports").click({force:true});
   cy.wait(2000);
   cy.get(this.locators.Performance).click({ force: true });
   cy.wait(2000);
@@ -107,7 +107,7 @@ TC_POS_008(){
 }
 
 TC_POS_009(){
-   cy.get(this.locators.clickreports).click({force:true});
+   cy.contains("Reports").click({force:true});
   cy.wait(2000);
   cy.get(this.locators.Performance).click({ force: true });
   cy.wait(2000);
@@ -134,7 +134,7 @@ TC_POS_009(){
 }
 
 TC_POS_010(){
-  cy.get(this.locators.clickreports).click({force:true});
+  cy.contains("Reports").click({force:true});
   cy.wait(2000);
   cy.get(this.locators.Performance).click({ force: true });
   cy.wait(2000);
@@ -183,7 +183,7 @@ TC_POS_010(){
 }
 
 TC_POS_011(){
-  cy.get(this.locators.clickreports).click({force:true});
+  cy.contains("Reports").click({force:true});
   cy.wait(2000);
   cy.get(this.locators.Performance).click({ force: true });
   cy.wait(2000);
@@ -232,7 +232,7 @@ TC_POS_011(){
 }
 
 TC_POS_003(){
-  cy.get(this.locators.clickreports).click({force:true});
+  cy.contains("Reports").click({force:true});
   cy.wait(2000);
   cy.get(this.locators.Performance).click({ force: true });
   cy.wait(2000);
@@ -260,7 +260,7 @@ TC_POS_003(){
 
 }
 TC_POS_004(){
-  cy.get(this.locators.clickreports).click({force:true});
+  cy.contains("Reports").click({force:true});
   cy.wait(2000);
   cy.get(this.locators.Performance).click({ force: true });
   cy.wait(2000);
@@ -290,7 +290,7 @@ TC_POS_004(){
 
 }
 TC_POS_012(){
-  cy.get(this.locators.clickreports).click({force:true});
+  cy.contains("Reports").click({force:true});
   cy.wait(2000);
   cy.get(this.locators.Performance).click({ force: true });
   cy.wait(2000);
@@ -312,7 +312,7 @@ TC_POS_012(){
 
 }
 TC_POS_017(){
-  cy.get(this.locators.clickreports).click({force:true});
+  cy.contains("Reports").click({force:true});
   cy.wait(2000);
   cy.get(this.locators.Performance).click({ force: true });
   cy.wait(2000);
@@ -369,7 +369,7 @@ TC_POS_017(){
 
 }
 TC_POS_015(){
-  cy.get(this.locators.clickreports).click({force:true});
+  cy.contains("Reports").click({force:true});
   cy.wait(2000);
   cy.get(this.locators.Performance).click({ force: true });
   cy.wait(2000);
@@ -431,7 +431,7 @@ TC_POS_015(){
 }
 
 TC_NGS_026(){
-  cy.get(this.locators.clickreports).click({force:true});
+  cy.contains("Reports").click({force:true});
   cy.wait(2000);
   cy.get(this.locators.Performance).click({ force: true });
   cy.wait(2000);
@@ -446,9 +446,9 @@ TC_NGS_026(){
 
 
 TC_001(){
-  cy.get(this.locators.clickreports).click({force:true});
+  cy.contains("Reports").click({force:true});
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({force:true});
+cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Communication_From_Date).type("01/12/2025");
   cy.wait(2000);
@@ -463,9 +463,9 @@ TC_001(){
 }
 
 TC_002(){
-  cy.get(this.locators.clickreports).click({force:true});
+  cy.contains("Reports").click({force:true});
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({force:true});
+cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Communication_From_Date).type("01/12/2025");
   cy.wait(2000);
@@ -482,9 +482,9 @@ TC_002(){
 }
 
 TC_006(){
-  cy.get(this.locators.clickreports).click({force:true});
+  cy.contains("Reports").click({force:true});
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({force:true});
+cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
   cy.contains('Communication From Date').should('exist');
   cy.contains('Communication To Date').should('exist');
@@ -498,17 +498,20 @@ TC_006(){
 }
 
 TC_007(){
-  cy.get(this.locators.clickreports).click({force:true});
+
+  cy.contains("Reports").click({force:true});
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({force:true});
+  cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
-  cy.get(this.locators.clickreports).click({force:true});
-  cy.wait(2000);
-  cy.get(this.locators.Communication).click({force:true});
-  cy.wait(2000);
-  cy.get(this.locators.Communication_From_Date).type("01/12/2025");
-  cy.wait(2000);
-  cy.get(this.locators.Communication_To_Date).type("03/12/2025");
+  cy.get(this.locators.Communication_From_Date)
+  .first()
+  .clear()
+  .type("01/12/2025", { force: true });
+
+cy.get(this.locators.Communication_To_Date)
+  .last()
+  .clear()
+  .type("03/12/2025", { force: true });
   cy.wait(2000);
   cy.get(this.locators.Triggertype).select("On X days of delayed deposit");
   cy.wait(2000);
@@ -519,9 +522,9 @@ TC_007(){
 
 
 TC_008(){
-  cy.get(this.locators.clickreports).click({force:true});
+  cy.contains("Reports").click({force:true});
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({force:true});
+cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Communication_From_Date).type("01/12/2025");
   cy.wait(2000);
@@ -535,9 +538,9 @@ TC_008(){
 }
 
 TC_009(){
-   cy.get(this.locators.clickreports).click({force:true});
+   cy.contains("Reports").click({force:true});
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({force:true});
+cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Communication_From_Date).type("03/12/2025");
   cy.wait(2000);
@@ -551,15 +554,23 @@ TC_009(){
 }
 
 TC_012(){
-    cy.get(this.locators.clickreports).click({force:true});
+    cy.contains("Reports").click({force:true});
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({force:true});
+cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Communication_From_Date).type("01/12/2025");
   cy.wait(2000);
   cy.get(this.locators.Communication_To_Date).type("03/12/2025");
   cy.wait(2000);
-  cy.get(this.locators.Triggertype).select("On PTP Date");
+  cy.get(this.locators.Triggertype)
+  .first()
+  .find('option')
+  .then(options => {
+    [...options].forEach(option => {
+      cy.log(option.text);
+      cy.log(option.value);
+    });
+  });
   cy.wait(2000);
   cy.get(this.locators.Generate_button).click({force:true});
   cy.wait(2000);
@@ -569,9 +580,9 @@ TC_012(){
 }
 
 TC_013(){
-   cy.get(this.locators.clickreports).click({force:true});
+   cy.contains("Reports").click({force:true});
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({force:true});
+cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
    cy.get("select[id='triggerType'] option:nth-child(1)").click({force: true});
   const options = [
@@ -591,9 +602,9 @@ options.forEach(option => {
 
 }
 TC_014(){
-   cy.get(this.locators.clickreports).click({force:true});
+   cy.contains("Reports").click({force:true});
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({force:true});
+cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
    cy.get("select[id='triggerType'] option:nth-child(1)").click({force: true});
   const options = [
@@ -614,9 +625,9 @@ options.forEach(option => {
 }
 
 TC_015(){
-  cy.get(this.locators.clickreports).click({force:true});
+  cy.contains("Reports").click({force:true});
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({force:true});
+cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Communication_From_Date).type("01/12/2025");
   cy.wait(2000);
@@ -635,9 +646,9 @@ TC_015(){
 }
 
 TC_016(){
-  cy.get(this.locators.clickreports).click({force:true});
+  cy.contains("Reports").click({force:true});
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({force:true});
+cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Communication_From_Date).type("01/12/202578");
   cy.wait(2000);
@@ -648,9 +659,9 @@ TC_016(){
 
 }
 TC_017(){
-  cy.get(this.locators.clickreports).click({force:true});
+  cy.contains("Reports").click({force:true});
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({force:true});
+cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Communication_From_Date).type("01/12/2025");
   cy.wait(2000);
@@ -692,9 +703,9 @@ columns.forEach(col => {
 }
 
 TC_018(){
-  cy.get(this.locators.clickreports).click({force:true});
+  cy.contains("Reports").click({force:true});
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({force:true});
+cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Communication_From_Date).type("01/12/2025");
   cy.wait(2000);
@@ -710,9 +721,9 @@ TC_018(){
 }
 
 TC_019(){
-  cy.get(this.locators.clickreports).click({force:true});
+  cy.contains("Reports").click({force:true});
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({force:true});
+cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Communication_From_Date).type("01/12/2025", { force: true });
   cy.wait(2000);
@@ -729,8 +740,7 @@ TC_019(){
 TC_020() {
   cy.get(this.locators.clickreports).click({ force: true });
   cy.wait(2000);
-
-  cy.get(this.locators.Communication).click({ force: true });
+ cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
 
   cy.get(this.locators.Communication_From_Date)
@@ -780,7 +790,7 @@ TC_020() {
   cy.get(this.locators.clickreports).click({ force: true });
   cy.wait(2000);
 
-  cy.get(this.locators.Communication).click({ force: true });
+ cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
 
   cy.get(this.locators.Communication_From_Date)
@@ -820,7 +830,7 @@ TC_022() {
   cy.get(this.locators.clickreports).click({ force: true });
   cy.wait(2000);
 
-  cy.get(this.locators.Communication).click({ force: true });
+ cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
 
   cy.get(this.locators.Communication_From_Date)
@@ -870,7 +880,7 @@ TC_023() {
   cy.get(this.locators.clickreports).click({ force: true });
   cy.wait(2000);
 
-  cy.get(this.locators.Communication).click({ force: true });
+ cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
 
   cy.get(this.locators.Communication_From_Date)
@@ -922,7 +932,7 @@ TC_024() {
   cy.get(this.locators.clickreports).click({ force: true });
   cy.wait(2000);
 
-  cy.get(this.locators.Communication).click({ force: true });
+ cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
 
   cy.get(this.locators.Communication_From_Date)
@@ -963,7 +973,7 @@ TC_030() {
   cy.get(this.locators.clickreports).click({ force: true });
   cy.wait(2000);
 
-  cy.get(this.locators.Communication).click({ force: true });
+ cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
 
   cy.get(this.locators.Communication_From_Date).type("01/12/2025", { force: true });
@@ -1008,7 +1018,7 @@ cy.contains('Average Pending Delivery Rate').scrollIntoView().should('be.visible
 TC_032() {
   cy.get(this.locators.clickreports).click({ force: true });
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({ force: true });
+ cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
   cy.contains('Summary Details').should('not.exist');
   cy.get(this.locators.Communication_From_Date).type("01/12/2025", { force: true });
@@ -1022,9 +1032,9 @@ TC_032() {
   cy.contains('Summary Details').scrollIntoView().should('be.visible');
 }
 TC_033() {
-    cy.get(this.locators.clickreports).click({force:true});
+    cy.contains("Reports").click({force:true});
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({force:true});
+cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Communication_From_Date).type("01/12/2025");
   cy.wait(2000);
@@ -1040,7 +1050,7 @@ TC_033() {
 TC_043() {
   cy.get(this.locators.clickreports).click({ force: true });
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({ force: true });
+ cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Communication_From_Date).type("01/12/2025", { force: true });
   cy.wait(2000);
@@ -1055,7 +1065,7 @@ TC_043() {
 TC_047() {
   cy.get(this.locators.clickreports).click({ force: true });
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({ force: true });
+ cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Communication_From_Date).type("01/12/2025", { force: true });
   cy.wait(2000);
@@ -1074,7 +1084,7 @@ TC_047() {
   cy.get(this.locators.clickreports).click({ force: true });
   cy.wait(2000);
 
-  cy.get(this.locators.Communication).click({ force: true });
+ cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
 
   cy.get(this.locators.Communication_From_Date)
@@ -1118,7 +1128,7 @@ TC_047() {
  TC_049() {
   cy.get(this.locators.clickreports).click({ force: true });
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({ force: true });
+ cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
  cy.get(this.locators.Communication_From_Date)
   .closest('div')
@@ -1144,7 +1154,7 @@ cy.get(this.locators.Triggertype)
   cy.get(this.locators.clickreports).click({ force: true });
   cy.wait(2000);
 
-  cy.get(this.locators.Communication).click({ force: true });
+ cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
 
   cy.get(this.locators.Generate_button).then(($generate) => {
@@ -1163,7 +1173,7 @@ cy.get(this.locators.Triggertype)
 
   cy.get(this.locators.clickreports).click({ force: true });
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({ force: true });
+ cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
 cy.get(this.locators.Communication_From_Date).click({ force: true });
 cy.get('.bs-datepicker-body')
@@ -1177,7 +1187,7 @@ cy.get('.bs-datepicker-body')
  TC_053(){
   cy.get(this.locators.clickreports).click({ force: true });
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({ force: true });
+ cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
   cy.get('label').each(($label) => {
     cy.wrap($label)
@@ -1190,7 +1200,7 @@ cy.get('.bs-datepicker-body')
   
   cy.get(this.locators.clickreports).click({ force: true });
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({ force: true });
+ cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Communication_From_Date)
     .type('01/12/2025', { force: true });
@@ -1215,7 +1225,7 @@ cy.get('.bs-datepicker-body')
  TC_026(){
   cy.get(this.locators.clickreports).click({ force: true });
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({ force: true });
+ cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
   cy.get(this.locators.Communication_From_Date)
     .type('01/12/2025', { force: true });
@@ -1243,7 +1253,7 @@ cy.get('.bs-datepicker-body')
 
  TC_027(){
    cy.get(this.locators.clickreports).click({ force: true });
-  cy.get(this.locators.Communication).click({ force: true });
+ cy.contains("Communication History Report").click({ force: true });
 
  cy.get('.card-content')
   .find(':nth-child(1) > .row > :nth-child(1) input.form-control')
@@ -1300,7 +1310,7 @@ cy.get('.card-content')
   let avgReadRate = 0;
   cy.get(this.locators.clickreports).click({ force: true });
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({ force: true });
+ cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
   cy.get('.card-content')
   .find(':nth-child(1) > .row > :nth-child(1) input.form-control')
@@ -1345,7 +1355,7 @@ cy.contains('Average Read Rate')
   cy.get(this.locators.clickreports).click({ force: true });
   cy.wait(2000);
 
-  cy.get(this.locators.Communication).click({ force: true });
+ cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
    cy.get('.card-content')
   .find(':nth-child(1) > .row > :nth-child(1) input.form-control')
@@ -1392,7 +1402,7 @@ cy.get('.card-content')
   let avgPendingRate = 0;
   cy.get(this.locators.clickreports).click({ force: true });
   cy.wait(2000);
-  cy.get(this.locators.Communication).click({ force: true });
+  cy.contains("Communication History Report").click({ force: true });
   cy.wait(2000);
   cy.get('.card-content')
   .find(':nth-child(1) > .row > :nth-child(1) input.form-control')

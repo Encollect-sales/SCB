@@ -1,3 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009810002,,Yes,PTP,PTP,2025-12-26,88,,Null agent ID,(942) 564-9601 x8510,HSR,Bangalore,Adam11@hotmail.com,Permanent,New,01272026085537488,Error,Next action date cannot be less than current date
-DMI0009810001,,Yes,PTP,PTP,2025-12-26,88,,Blank agent ID,(526) 829-3467,BTM,Bangalore,Kolby.Carter5@hotmail.com,Permanent,New,01272026085537488,Error,Next action date cannot be less than current date

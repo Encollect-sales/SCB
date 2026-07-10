@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T20:41:52.272Z",
+    "end": "2026-06-16T20:42:44.845Z",
+    "duration": 52573,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ccdc6a2c-b721-471c-9eb5-8508e27a4b1e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\SystemSettingPageTest_1130.cy.js",
+      "file": "cypress\\e2e\\tests\\SystemSettingPageTest_1130.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "21faebd1-1360-4cee-9828-40d7e988564c",
+          "title": "System Setting - Master Upload",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Bucket Master - TC_ID_1130 - Admin entered 10 records in standard bucket master file with all mandatory data and the file size is 3MB(Threshold)",
+              "fullTitle": "System Setting - Master Upload Bucket Master - TC_ID_1130 - Admin entered 10 records in standard bucket master file with all mandatory data and the file size is 3MB(Threshold)",
+              "timedOut": null,
+              "duration": 45462,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  systemsettingPage.systemSettingModule();\n  systemsettingPage.BucketMaster1130();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[role=\"alert\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[role=\"alert\"]`, but never found it.\n    at SystemSettingPage.BucketMaster1130 (webpack://encollect_web/./cypress/e2e/pages/SystemSettingPage.js:3979:30)\n    at Context.eval (webpack://encollect_web/./cypress/e2e/tests/SystemSettingPageTest_1130.cy.js:27:34)\n    at getRet (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "afdf2e28-eab0-4745-9aa1-d05308d3d98b",
+              "parentUUID": "21faebd1-1360-4cee-9828-40d7e988564c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "afdf2e28-eab0-4745-9aa1-d05308d3d98b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 45462,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

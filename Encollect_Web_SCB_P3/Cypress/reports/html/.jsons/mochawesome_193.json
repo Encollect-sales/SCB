@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T16:56:07.527Z",
+    "end": "2026-06-16T16:57:02.914Z",
+    "duration": 55387,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "64d09583-52c3-451e-a7af-1e384ba2a6fd",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\PermissionTestPage_51.cy.js",
+      "file": "cypress\\e2e\\tests\\PermissionTestPage_51.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4adfd0e2-24de-424b-a8af-2c2e3370536b",
+          "title": "System Settings - permissions - user can select the Assigned filter in the assigned permission scheme ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "System Settings - permissions - TC_ID_51",
+              "fullTitle": "System Settings - permissions - user can select the Assigned filter in the assigned permission scheme  System Settings - permissions - TC_ID_51",
+              "timedOut": null,
+              "duration": 33583,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  permissionpage.PermissionTestPage_51();\n});",
+              "err": {},
+              "uuid": "0bb4344b-41ec-4551-88c6-357577815a66",
+              "parentUUID": "4adfd0e2-24de-424b-a8af-2c2e3370536b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0bb4344b-41ec-4551-88c6-357577815a66"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 33583,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

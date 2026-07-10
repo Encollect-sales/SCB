@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T19:35:55.139Z",
+    "end": "2026-06-16T19:36:39.248Z",
+    "duration": 44109,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "31f7f988-1b38-4e56-b941-9d928aad22ce",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_850.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_850.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3b687209-1bdc-4437-b1e9-f451c81b4aa8",
+          "title": "Allocation - Upload Agency Allocation Owner Status - User entered alphabets or special characters in transaction id field and clicked on search button, system should throw an error as \"Invalid Transaction ID \"",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Product Filter - TC_ID_850",
+              "fullTitle": "Allocation - Upload Agency Allocation Owner Status - User entered alphabets or special characters in transaction id field and clicked on search button, system should throw an error as \"Invalid Transaction ID \" Product Filter - TC_ID_850",
+              "timedOut": null,
+              "duration": 37458,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  //allocationPage.ClickonallocationUAAOS('2: Invalid File Format');\n  allocationPage.ClickonUAAOvalidationCheck_50();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Invalid TransactionId' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Invalid TransactionId' but never did.\n    at AllocationPage.ClickonUAAOvalidationCheck_50 (webpack:///./cypress/e2e/pages/AllocationPage.js:3480:41)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_850.cy.js:27:26)",
+                "diff": null
+              },
+              "uuid": "6943297b-ba44-4a9d-8e1d-067a4a591741",
+              "parentUUID": "3b687209-1bdc-4437-b1e9-f451c81b4aa8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "6943297b-ba44-4a9d-8e1d-067a4a591741"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 37458,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

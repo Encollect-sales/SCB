@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T17:49:03.403Z",
+    "end": "2026-06-16T17:49:52.908Z",
+    "duration": 49505,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "136b88b9-4a41-4136-ae11-8155f3f11290",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_725.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_725.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f0fe8732-5337-4e56-af97-70013c8d7df6",
+          "title": "Allocation - Upload Collector Unallocation batch -  Once after uploading the allocation file, the file status will change to processed then user should receive email notification",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Collector Level UnAllocation - TC_ID_725",
+              "fullTitle": "Allocation - Upload Collector Unallocation batch -  Once after uploading the allocation file, the file status will change to processed then user should receive email notification Collector Level UnAllocation - TC_ID_725",
+              "timedOut": null,
+              "duration": 37334,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const sheetName = 'Sheet1';\nconst data = {\n  'A2': '68200000021940'\n};\nconst excelFileName = 'UnAllocation.xlsx';\n(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.downloadCollectorUnallocationbatch();\n  const downloadsFolder = Cypress.config('downloadsFolder');\n  const filePath = `${downloadsFolder}\\\\${excelFileName}`;\n  cy.task('updateExcelCell', {\n    filePath: filePath,\n    sheetName: sheetName,\n    data: data\n  }).then(() => {\n    cy.log('Cells updated successfully in the Excel file');\n  });\n});",
+              "err": {},
+              "uuid": "65998504-6926-4168-ac1a-48c7ef78ab96",
+              "parentUUID": "f0fe8732-5337-4e56-af97-70013c8d7df6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "65998504-6926-4168-ac1a-48c7ef78ab96"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 37334,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

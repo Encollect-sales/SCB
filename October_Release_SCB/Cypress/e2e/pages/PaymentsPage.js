@@ -16,7 +16,7 @@ class PaymentsPage {
     const randomNumber = Math.floor(1000 + Math.random() * 90000); 
     cy.get(this.locators.Physical_Receipt_No).clear().type(randomNumber.toString(), { force: true });
     cy.wait(1000);
-    cy.get(this.locators.Collector_ID).type('System', { force: true });
+    cy.get(this.locators.Collector_ID).type('6', { force: true });
     cy.get('[id^="ngb-typeahead"] .ng-star-inserted').should('be.visible');
     cy.get('[id^="ngb-typeahead"] .ng-star-inserted').first().click({ force: true });
 
@@ -39,8 +39,10 @@ fields.forEach(selector => {
   cy.get(selector).clear().type(randomTwoDigit.toString(), { force: true });
 });
 
-cy.get(this.locators.Customer_Account_Number).type('68210000012749', { force: true });
+cy.get(this.locators.Customer_Account_Number).type('1667', { force: true });
 cy.wait(1000);
+cy.get('.btn-secondary').click();
+cy.wait(2000);
 cy.get(this.locators.button).click();
 cy.wait(1000);
 cy.get(this.locators.confirm).click();
@@ -216,53 +218,85 @@ TC_Pay_06(){
   TC_Pay_07(){
     cy.get('[title="Payments"]').click({force:true});
     cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(3) > a.ng-star-inserted").click({force:true});
+    cy.get("#nav-item-2-deposit-slip").click({force:true});
     cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(1) > a").click({force:true});
+    cy.get("#nav-item-3-create-deposit-slip").click({force:true});
     cy.wait(1000);
     cy.get(this.locators.Product_Group).select("All");
     cy.wait(1000);
     const randomFourDigit = Math.floor(1000 + Math.random() * 9000); 
     cy.get(this.locators.CMS_PayIn_Slip_id).type(randomFourDigit.toString());
     cy.wait(1000);
-    cy.get(":nth-child(3) > .form-control-group > .form-select").select("CASH");
+    cy.get(":nth-child(3) > .form-control-group > .form-select")
+  .scrollIntoView()
+  .select("CASH", { force: true });
     cy.wait(1000);
-    cy.get(this.locators.Deposit_account_number).select("324550");
-    cy.wait(1000);
-    cy.get(this.locators.Account_holder_name).select("My Bank");
-    cy.wait(1000);
-    cy.get(this.locators.Deposit_bank_name).select("Mpesa Paybill Number");
-    cy.wait(1000);
-    cy.get(this.locators.Deposit_branch).select("Across the globe");
-    cy.wait(1000);
-    const today = new Date();
-const day = String(today.getDate()).padStart(2, '0');
-const month = String(today.getMonth() + 1).padStart(2, '0');
-const year = today.getFullYear();
+    cy.get(this.locators.Deposit_account_number)
+  .find('option')
+  .then($options => {
 
-const formattedDate = `${day}/${month}/${year}`;
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1; // skips first option
 
-cy.get(this.locators.Date_of_deposit).clear().type(formattedDate);
+    const randomValue = $options[randomIndex].value;
 
-    cy.wait(1000);    
-    
+    cy.get(this.locators.Deposit_account_number)
+      .select(randomValue);
+
+  });
+    cy.wait(1000);
+   // Account Holder Name
+cy.get(this.locators.Account_holder_name)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Account_holder_name)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Deposit Bank Name
+cy.get(this.locators.Deposit_bank_name)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Deposit_bank_name)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Deposit Branch
+cy.get(this.locators.Deposit_branch)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Deposit_branch)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+cy.get(this.locators.Date_of_deposit)
+  .click({ force: true });
+
+cy.get('.bs-datepicker-body')
+  .should('be.visible');
+
+cy.get('.bs-datepicker-body td span')
+  .not('.is-other-month')
+  .first()
+  .click({ force: true });
+
+cy.wait(1000);    
 cy.get('.ng-select-container').click({ force: true });
-
-
-cy.get('.ng-input > input')
-  .clear()
-  .type("31", { force: true });
-
-
+cy.wait(2000);
+cy.get('.ng-input > input').click({force:true});
+cy.wait(2000);  
 cy.get('.ng-dropdown-panel-items .ng-option-label')
   .should('be.visible')
   .then($options => {
     const count = $options.length;
-
-  
     const randomIndex = Math.floor(Math.random() * count);
-
-
     cy.wrap($options[randomIndex]).click({ force: true });
   });
 
@@ -283,54 +317,99 @@ cy.get('.ng-dropdown-panel-items .ng-option-label')
     TC_Pay_010(){
     cy.get('[title="Payments"]').click({force:true});
     cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(3) > a.ng-star-inserted").click({force:true});
+    cy.get("#nav-item-2-deposit-slip").click({force:true});
     cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(1) > a").click({force:true});
+    cy.get("#nav-item-3-create-deposit-slip").click({force:true});
     cy.wait(1000);
     cy.get(this.locators.Product_Group).select("All");
     cy.wait(1000);
     const randomFourDigit = Math.floor(1000 + Math.random() * 9000); 
     cy.get(this.locators.CMS_PayIn_Slip_id).type(randomFourDigit.toString());
     cy.wait(1000);
-    cy.get(":nth-child(3) > .form-control-group > .form-select").select("CASH");
+cy.get(":nth-child(3) > .form-control-group > .form-select")
+  .scrollIntoView()
+  .select("CASH", { force: true });
     cy.wait(1000);
-    cy.get(this.locators.Deposit_account_number).select("324550");
-    cy.wait(1000);
-    cy.get(this.locators.Account_holder_name).select("My Bank");
-    cy.wait(1000);
-    cy.get(this.locators.Deposit_bank_name).select("Mpesa Paybill Number");
-    cy.wait(1000);
-    cy.get(this.locators.Deposit_branch).select("Across the globe");
-    cy.wait(1000);
-  const today = new Date();
+ // Select random Deposit Account Number
+cy.get(this.locators.Deposit_account_number)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Deposit_account_number)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Select random Account Holder Name
+cy.get(this.locators.Account_holder_name)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Account_holder_name)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Select random Deposit Bank Name
+cy.get(this.locators.Deposit_bank_name)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Deposit_bank_name)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Select random Deposit Branch
+cy.get(this.locators.Deposit_branch)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Deposit_branch)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Current date in DD-MMM-YY format (e.g. 16-Jun-26)
+const today = new Date();
+
 const day = String(today.getDate()).padStart(2, '0');
-const month = String(today.getMonth() + 1).padStart(2, '0');
-const year = today.getFullYear();
 
-const formattedDate = `${day}/${month}/${year}`;
+const months = [
+  'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+];
 
-cy.get(this.locators.Date_of_deposit).clear().type(formattedDate);
+const month = months[today.getMonth()];
+const year = String(today.getFullYear()).slice(-2);
 
-    cy.wait(1000);    
-   cy.get('.ng-select-container').click({ force: true });
+const formattedDate = `${day}-${month}-${year}`;
 
-
-cy.get('.ng-input > input')
+cy.get(this.locators.Date_of_deposit)
+  .invoke('removeAttr', 'readonly')
   .clear()
-  .type("31", { force: true });
+  .type(formattedDate, { force: true });
 
+cy.wait(1000);
 
+// Open Batch ID dropdown
+cy.get('.ng-select-container').click({ force: true });
+
+// Select random Batch ID
 cy.get('.ng-dropdown-panel-items .ng-option-label')
   .should('be.visible')
   .then($options => {
     const count = $options.length;
-
-  
     const randomIndex = Math.floor(Math.random() * count);
-
 
     cy.wrap($options[randomIndex]).click({ force: true });
   });
+
+cy.wait(1000);
     cy.wait(1000);
     cy.get(this.locators.submit_button).click();
     cy.wait(1000);
@@ -346,58 +425,99 @@ cy.get('.ng-dropdown-panel-items .ng-option-label')
         TC_Pay_08(){
     cy.get('[title="Payments"]').click({force:true});
     cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(3) > a.ng-star-inserted").click({force:true});
+    cy.get("#nav-item-2-deposit-slip").click({force:true});
     cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(1) > a").click({force:true});
+    cy.get("#nav-item-3-create-deposit-slip").click({force:true});
     cy.wait(1000);
     cy.get(this.locators.Product_Group).select("All");
     cy.wait(1000);
     const randomFourDigit = Math.floor(1000 + Math.random() * 9000); 
     cy.get(this.locators.CMS_PayIn_Slip_id).type(randomFourDigit.toString());
     cy.wait(1000);
-    cy.get(":nth-child(3) > .form-control-group > .form-select").select("CASH");
-    cy.wait(1000);
-    cy.get(this.locators.Deposit_account_number).select("324550");
-    cy.wait(1000);
-    cy.get(this.locators.Account_holder_name).select("My Bank");
-    cy.wait(1000);
-    cy.get(this.locators.Deposit_bank_name).select("Mpesa Paybill Number");
-    cy.wait(1000);
-    cy.get(this.locators.Deposit_branch).select("Across the globe");
-    cy.wait(1000);
-  const today = new Date();
+cy.get(":nth-child(3) > .form-control-group > .form-select")
+  .scrollIntoView()
+  .select("CASH", { force: true });
+   cy.get(this.locators.Deposit_account_number)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Deposit_account_number)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Select random Account Holder Name
+cy.get(this.locators.Account_holder_name)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Account_holder_name)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Select random Deposit Bank Name
+cy.get(this.locators.Deposit_bank_name)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Deposit_bank_name)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Select random Deposit Branch
+cy.get(this.locators.Deposit_branch)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Deposit_branch)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Current date in DD-MMM-YY format (e.g. 16-Jun-26)
+const today = new Date();
+
 const day = String(today.getDate()).padStart(2, '0');
-const month = String(today.getMonth() + 1).padStart(2, '0');
-const year = today.getFullYear();
 
-const formattedDate = `${day}/${month}/${year}`;
+const months = [
+  'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+];
 
-cy.get(this.locators.Date_of_deposit).clear().type(formattedDate);
+const month = months[today.getMonth()];
+const year = String(today.getFullYear()).slice(-2);
 
-    cy.wait(1000);    
-   cy.get('.ng-select-container').click({ force: true });
+const formattedDate = `${day}-${month}-${year}`;
 
-
-cy.get('.ng-input > input')
+cy.get(this.locators.Date_of_deposit)
+  .invoke('removeAttr', 'readonly')
   .clear()
-  .type("31", { force: true });
+  .type(formattedDate, { force: true });
 
+cy.wait(1000);
 
+// Open Batch ID dropdown
+cy.get('.ng-select-container').click({ force: true });
+
+// Select random Batch ID
 cy.get('.ng-dropdown-panel-items .ng-option-label')
   .should('be.visible')
   .then($options => {
     const count = $options.length;
-
-  
     const randomIndex = Math.floor(Math.random() * count);
-
 
     cy.wrap($options[randomIndex]).click({ force: true });
   });
     cy.wait(1000);
     cy.get(this.locators.submit_button).click();
     cy.wait(1000);
-    const fileName = "2mboptimized.png";
+    const fileName = "report.png";
     cy.get(this.locators.fileupload).attachFile(fileName);
     //cy.wait(6000);
     cy.get(".col-12 > .btn-secondary").click();
@@ -409,16 +529,18 @@ cy.get('.ng-dropdown-panel-items .ng-option-label')
      TC_Pay_09(){
     cy.get('[title="Payments"]').click({force:true});
     cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(3) > a.ng-star-inserted").click({force:true});
+   cy.get("#nav-item-2-deposit-slip").click({force:true});
     cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(1) > a").click({force:true});
+    cy.get("#nav-item-3-create-deposit-slip").click({force:true});
     cy.wait(1000);
     cy.get(this.locators.Product_Group).select("All");
     cy.wait(1000);
     const randomFourDigit = Math.floor(1000 + Math.random() * 9000); 
     cy.get(this.locators.CMS_PayIn_Slip_id).type(randomFourDigit.toString());
     cy.wait(1000);
-    cy.get(":nth-child(3) > .form-control-group > .form-select").select("CASH");
+cy.get(":nth-child(3) > .form-control-group > .form-select")
+  .scrollIntoView()
+  .select("CASH", { force: true });
     cy.wait(1000);
     cy.get(this.locators.Deposit_account_number).select("324550");
     cy.wait(1000);
@@ -467,121 +589,230 @@ cy.get('.ng-dropdown-panel-items .ng-option-label')
     cy.get(this.locators.generate).click();
 
   }
-  TC_Pay_011(){
-    cy.get('[title="Payments"]').click({force:true});
-    cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(3) > a.ng-star-inserted").click({force:true});
-    cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(1) > a").click({force:true});
-    cy.wait(1000);
-    cy.get(this.locators.Product_Group).select("All");
-    cy.wait(1000);
-    const randomFourDigit = Math.floor(1000 + Math.random() * 9000); 
-    cy.get(this.locators.CMS_PayIn_Slip_id).type(randomFourDigit.toString());
-    cy.wait(1000);
-    cy.get(":nth-child(3) > .form-control-group > .form-select").select("CASH");
-    cy.wait(1000);
-    cy.get(this.locators.Deposit_account_number).select("324550");
-    cy.wait(1000);
-    cy.get(this.locators.Account_holder_name).select("My Bank");
-    cy.wait(1000);
-    cy.get(this.locators.Deposit_bank_name).select("Mpesa Paybill Number");
-    cy.wait(1000);
-    cy.get(this.locators.Deposit_branch).select("Across the globe");
-    cy.wait(1000);
-    const today = new Date();
-const day = String(today.getDate()).padStart(2, '0');
-const month = String(today.getMonth() + 1).padStart(2, '0');
-const year = today.getFullYear();
+ TC_Pay_011() {
 
-const formattedDate = `${day}/${month}/${year}`;
+  cy.get('[title="Payments"]').click({ force: true });
+  cy.wait(1000);
 
-cy.get(this.locators.Date_of_deposit).clear().type(formattedDate);
+  cy.get("#nav-item-2-deposit-slip").click({ force: true });
+  cy.wait(1000);
 
-    cy.wait(1000);    
-   cy.get('.ng-select-container').click({ force: true });
+  cy.get("#nav-item-3-create-deposit-slip").click({ force: true });
+  cy.wait(1000);
 
+  cy.get(this.locators.Product_Group).select("All");
+  cy.wait(1000);
 
-cy.get('.ng-input > input')
-  .clear()
-  .type("31", { force: true });
+  // Generate random 4-digit Pay-In Slip ID
+  const randomFourDigit = Math.floor(1000 + Math.random() * 9000);
+  cy.get(this.locators.CMS_PayIn_Slip_id).type(randomFourDigit.toString());
 
+  cy.wait(1000);
 
-cy.get('.ng-dropdown-panel-items .ng-option-label')
-  .should('be.visible')
-  .then($options => {
-    const count = $options.length;
+  cy.get(":nth-child(3) > .form-control-group > .form-select")
+    .scrollIntoView()
+    .select("CASH", { force: true });
 
-  
-    const randomIndex = Math.floor(Math.random() * count);
+  cy.wait(1000);
 
+  // Select random Deposit Account Number
+  cy.get(this.locators.Deposit_account_number)
+    .find('option')
+    .then(options => {
+      const randomOption = options[Math.floor(Math.random() * (options.length - 1)) + 1];
+      cy.get(this.locators.Deposit_account_number).select(randomOption.value);
+    });
 
-    cy.wrap($options[randomIndex]).click({ force: true });
-  });
-    cy.wait(1000);
-    cy.get(this.locators.submit_button).click();
-    cy.wait(1000);
-    const fileName = "payinslip.jpg";
-    cy.get(this.locators.fileupload).attachFile(fileName);
-    cy.wait(5000);
-    cy.get(".d-flex > .btn").should('be.visible').and('not.be.disabled');
-    cy.wait(5000);
-    cy.get(this.locators.generate).click({force: true});
-    // cy.wait(500);
-    //cy.contains("Warning!").should('be.visible');
+  cy.wait(1000);
 
+  // Select random Account Holder Name
+  cy.get(this.locators.Account_holder_name)
+    .find('option')
+    .then(options => {
+      const randomOption = options[Math.floor(Math.random() * (options.length - 1)) + 1];
+      cy.get(this.locators.Account_holder_name).select(randomOption.value);
+    });
 
-  }
+  cy.wait(1000);
+
+  // Select random Deposit Bank Name
+  cy.get(this.locators.Deposit_bank_name)
+    .find('option')
+    .then(options => {
+      const randomOption = options[Math.floor(Math.random() * (options.length - 1)) + 1];
+      cy.get(this.locators.Deposit_bank_name).select(randomOption.value);
+    });
+
+  cy.wait(1000);
+
+  // Select random Deposit Branch
+  cy.get(this.locators.Deposit_branch)
+    .find('option')
+    .then(options => {
+      const randomOption = options[Math.floor(Math.random() * (options.length - 1)) + 1];
+      cy.get(this.locators.Deposit_branch).select(randomOption.value);
+    });
+
+  cy.wait(1000);
+
+  // Enter current date in DD-MMM-YY format (e.g. 16-Jun-26)
+  const today = new Date();
+
+  const day = String(today.getDate()).padStart(2, '0');
+
+  const months = [
+    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+  ];
+
+  const month = months[today.getMonth()];
+  const year = String(today.getFullYear()).slice(-2);
+
+  const formattedDate = `${day}-${month}-${year}`;
+
+  cy.log(`Date Entered: ${formattedDate}`);
+
+  cy.get(this.locators.Date_of_deposit)
+    .invoke('removeAttr', 'readonly')
+    .clear()
+    .type(formattedDate, { force: true });
+
+  cy.wait(1000);
+
+  // Open Batch ID dropdown
+  cy.get('.ng-select-container').click({ force: true });
+
+  // Select random Batch ID
+  cy.get('.ng-dropdown-panel-items .ng-option')
+    .should('have.length.greaterThan', 0)
+    .then($options => {
+      const randomIndex = Math.floor(Math.random() * $options.length);
+
+      cy.wrap($options[randomIndex])
+        .scrollIntoView()
+        .click({ force: true });
+    });
+
+  cy.wait(1000);
+
+  // Submit
+  cy.get(this.locators.submit_button)
+    .should('be.visible')
+    .click({ force: true });
+
+  cy.wait(1000);
+
+  // Upload file
+  const fileName = "payinslip.jpg";
+  cy.get(this.locators.fileupload)
+    .attachFile(fileName);
+
+  cy.wait(5000);
+
+  // Verify upload success button
+  cy.get(".d-flex > .btn")
+    .should('be.visible')
+    .and('not.be.disabled');
+
+  cy.wait(5000);
+
+  // Generate
+  cy.get(this.locators.generate)
+    .should('be.visible')
+    .click({ force: true });
+
+}
 
    TC_Pay_012(){
     cy.get('[title="Payments"]').click({force:true});
     cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(3) > a.ng-star-inserted").click({force:true});
+    cy.get("#nav-item-2-deposit-slip").click({force:true});
     cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(1) > a").click({force:true});
+    cy.get("#nav-item-3-create-deposit-slip").click({force:true});
     cy.wait(1000);
     cy.get(this.locators.Product_Group).select("All");
     cy.wait(1000);
     const randomFourDigit = Math.floor(1000 + Math.random() * 9000); 
     cy.get(this.locators.CMS_PayIn_Slip_id).type(randomFourDigit.toString());
     cy.wait(1000);
-    cy.get(":nth-child(3) > .form-control-group > .form-select").select("CASH");
+cy.get(":nth-child(3) > .form-control-group > .form-select")
+  .scrollIntoView()
+  .select("CASH", { force: true });
     cy.wait(1000);
-    cy.get(this.locators.Deposit_account_number).select("324550");
-    cy.wait(1000);
-    cy.get(this.locators.Account_holder_name).select("My Bank");
-    cy.wait(1000);
-    cy.get(this.locators.Deposit_bank_name).select("Mpesa Paybill Number");
-    cy.wait(1000);
-    cy.get(this.locators.Deposit_branch).select("Across the globe");
-    cy.wait(1000);
-    const today = new Date();
+   cy.get(this.locators.Deposit_account_number)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Deposit_account_number)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Select random Account Holder Name
+cy.get(this.locators.Account_holder_name)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Account_holder_name)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Select random Deposit Bank Name
+cy.get(this.locators.Deposit_bank_name)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Deposit_bank_name)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Select random Deposit Branch
+cy.get(this.locators.Deposit_branch)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Deposit_branch)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Current date in DD-MMM-YY format (e.g. 16-Jun-26)
+const today = new Date();
+
 const day = String(today.getDate()).padStart(2, '0');
-const month = String(today.getMonth() + 1).padStart(2, '0');
-const year = today.getFullYear();
 
-const formattedDate = `${day}/${month}/${year}`;
+const months = [
+  'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+];
 
-cy.get(this.locators.Date_of_deposit).clear().type(formattedDate);
+const month = months[today.getMonth()];
+const year = String(today.getFullYear()).slice(-2);
 
-    cy.wait(1000);    
-    
+const formattedDate = `${day}-${month}-${year}`;
+
+cy.get(this.locators.Date_of_deposit)
+  .invoke('removeAttr', 'readonly')
+  .clear()
+  .type(formattedDate, { force: true });
+
+cy.wait(1000);
+
+// Open Batch ID dropdown
 cy.get('.ng-select-container').click({ force: true });
 
-
-cy.get('.ng-input > input')
-  .clear()
-  .type("31", { force: true });
-
-
+// Select random Batch ID
 cy.get('.ng-dropdown-panel-items .ng-option-label')
   .should('be.visible')
   .then($options => {
     const count = $options.length;
-
-  
     const randomIndex = Math.floor(Math.random() * count);
-
 
     cy.wrap($options[randomIndex]).click({ force: true });
   });
@@ -589,7 +820,7 @@ cy.get('.ng-dropdown-panel-items .ng-option-label')
     cy.wait(1000);
     cy.get(this.locators.submit_button).click();
     cy.wait(1000);
-    const fileName = "payinslip.jpg";
+    const fileName = "Aadhar.png";
     cy.get(this.locators.fileupload).attachFile(fileName);
     cy.wait(1000);
     cy.get(this.locators.generate).click();
@@ -604,52 +835,93 @@ cy.get('.ng-dropdown-panel-items .ng-option-label')
 TC_Pay_013(){
     cy.get('[title="Payments"]').click({force:true});
     cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(3) > a.ng-star-inserted").click({force:true});
+    cy.get("#nav-item-2-deposit-slip").click({force:true});
     cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(1) > a").click({force:true});
+    cy.get("#nav-item-3-create-deposit-slip").click({force:true});
     cy.wait(1000);
     cy.get(this.locators.Product_Group).select("All");
     cy.wait(1000);
     const randomFourDigit = Math.floor(1000 + Math.random() * 9000); 
     cy.get(this.locators.CMS_PayIn_Slip_id).type(randomFourDigit.toString());
     cy.wait(1000);
-    cy.get(":nth-child(3) > .form-control-group > .form-select").select("CASH");
+cy.get(":nth-child(3) > .form-control-group > .form-select")
+  .scrollIntoView()
+  .select("CASH", { force: true });
     cy.wait(1000);
-    cy.get(this.locators.Deposit_account_number).select("324550");
-    cy.wait(1000);
-    cy.get(this.locators.Account_holder_name).select("My Bank");
-    cy.wait(1000);
-    cy.get(this.locators.Deposit_bank_name).select("Mpesa Paybill Number");
-    cy.wait(1000);
-    cy.get(this.locators.Deposit_branch).select("Across the globe");
-    cy.wait(1000);
-    const today = new Date();
+   cy.get(this.locators.Deposit_account_number)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Deposit_account_number)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Select random Account Holder Name
+cy.get(this.locators.Account_holder_name)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Account_holder_name)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Select random Deposit Bank Name
+cy.get(this.locators.Deposit_bank_name)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Deposit_bank_name)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Select random Deposit Branch
+cy.get(this.locators.Deposit_branch)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Deposit_branch)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Current date in DD-MMM-YY format (e.g. 16-Jun-26)
+const today = new Date();
+
 const day = String(today.getDate()).padStart(2, '0');
-const month = String(today.getMonth() + 1).padStart(2, '0');
-const year = today.getFullYear();
 
-const formattedDate = `${day}/${month}/${year}`;
+const months = [
+  'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+];
 
-cy.get(this.locators.Date_of_deposit).clear().type(formattedDate);
+const month = months[today.getMonth()];
+const year = String(today.getFullYear()).slice(-2);
 
-    cy.wait(1000);    
-    
+const formattedDate = `${day}-${month}-${year}`;
+
+cy.get(this.locators.Date_of_deposit)
+  .invoke('removeAttr', 'readonly')
+  .clear()
+  .type(formattedDate, { force: true });
+
+cy.wait(1000);
+
+// Open Batch ID dropdown
 cy.get('.ng-select-container').click({ force: true });
 
-
-cy.get('.ng-input > input')
-  .clear()
-  .type("31", { force: true });
-
-
+// Select random Batch ID
 cy.get('.ng-dropdown-panel-items .ng-option-label')
   .should('be.visible')
   .then($options => {
     const count = $options.length;
-
-  
     const randomIndex = Math.floor(Math.random() * count);
-
 
     cy.wrap($options[randomIndex]).click({ force: true });
   });
@@ -657,7 +929,7 @@ cy.get('.ng-dropdown-panel-items .ng-option-label')
     cy.wait(1000);
     cy.get(this.locators.submit_button).click();
     cy.wait(1000);
-    const fileName = "payinslip.jpg";
+    const fileName = "website.jpg";
     cy.get(this.locators.fileupload).attachFile(fileName);
     cy.wait(1000);
     cy.contains('Submit').should('be.visible').and('not.be.disabled');
@@ -676,52 +948,93 @@ cy.get('.ng-dropdown-panel-items .ng-option-label')
   TC_Pay_014(){
     cy.get('[title="Payments"]').click({force:true});
     cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(3) > a.ng-star-inserted").click({force:true});
+    cy.get("#nav-item-2-deposit-slip").click({force:true});
     cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(1) > a").click({force:true});
+    cy.get("#nav-item-3-create-deposit-slip").click({force:true});
     cy.wait(1000);
     cy.get(this.locators.Product_Group).select("All");
     cy.wait(1000);
     const randomFourDigit = Math.floor(1000 + Math.random() * 9000); 
     cy.get(this.locators.CMS_PayIn_Slip_id).type(randomFourDigit.toString());
     cy.wait(1000);
-    cy.get(":nth-child(3) > .form-control-group > .form-select").select("CASH");
+cy.get(":nth-child(3) > .form-control-group > .form-select")
+  .scrollIntoView()
+  .select("CASH", { force: true });
     cy.wait(1000);
-    cy.get(this.locators.Deposit_account_number).select("324550");
-    cy.wait(1000);
-    cy.get(this.locators.Account_holder_name).select("My Bank");
-    cy.wait(1000);
-    cy.get(this.locators.Deposit_bank_name).select("Mpesa Paybill Number");
-    cy.wait(1000);
-    cy.get(this.locators.Deposit_branch).select("Across the globe");
-    cy.wait(1000);
-    const today = new Date();
+    cy.get(this.locators.Deposit_account_number)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Deposit_account_number)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Select random Account Holder Name
+cy.get(this.locators.Account_holder_name)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Account_holder_name)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Select random Deposit Bank Name
+cy.get(this.locators.Deposit_bank_name)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Deposit_bank_name)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Select random Deposit Branch
+cy.get(this.locators.Deposit_branch)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Deposit_branch)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Current date in DD-MMM-YY format (e.g. 16-Jun-26)
+const today = new Date();
+
 const day = String(today.getDate()).padStart(2, '0');
-const month = String(today.getMonth() + 1).padStart(2, '0');
-const year = today.getFullYear();
 
-const formattedDate = `${day}/${month}/${year}`;
+const months = [
+  'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+];
 
-cy.get(this.locators.Date_of_deposit).clear().type(formattedDate);
+const month = months[today.getMonth()];
+const year = String(today.getFullYear()).slice(-2);
 
-    cy.wait(1000);    
-    
+const formattedDate = `${day}-${month}-${year}`;
+
+cy.get(this.locators.Date_of_deposit)
+  .invoke('removeAttr', 'readonly')
+  .clear()
+  .type(formattedDate, { force: true });
+
+cy.wait(1000);
+
+// Open Batch ID dropdown
 cy.get('.ng-select-container').click({ force: true });
 
-
-cy.get('.ng-input > input')
-  .clear()
-  .type("31", { force: true });
-
-
+// Select random Batch ID
 cy.get('.ng-dropdown-panel-items .ng-option-label')
   .should('be.visible')
   .then($options => {
     const count = $options.length;
-
-  
     const randomIndex = Math.floor(Math.random() * count);
-
 
     cy.wrap($options[randomIndex]).click({ force: true });
   });
@@ -742,56 +1055,96 @@ cy.get('.ng-dropdown-panel-items .ng-option-label')
    TC_Pay_015(){
     cy.get('[title="Payments"]').click({force:true});
     cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(3) > a.ng-star-inserted").click({force:true});
+    cy.get("#nav-item-2-deposit-slip").click({force:true});
     cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(1) > a").click({force:true});
+    cy.get("#nav-item-3-create-deposit-slip").click({force:true});
     cy.wait(1000);
     cy.get(this.locators.Product_Group).select("All");
     cy.wait(1000);
     const randomFourDigit = Math.floor(1000 + Math.random() * 9000); 
     cy.get(this.locators.CMS_PayIn_Slip_id).type(randomFourDigit.toString());
     cy.wait(1000);
-    cy.get(":nth-child(3) > .form-control-group > .form-select").select("CASH");
+cy.get(":nth-child(3) > .form-control-group > .form-select")
+  .scrollIntoView()
+  .select("CASH", { force: true });
     cy.wait(1000);
-    cy.get(this.locators.Deposit_account_number).select("324550");
-    cy.wait(1000);
-    cy.get(this.locators.Account_holder_name).select("My Bank");
-    cy.wait(1000);
-    cy.get(this.locators.Deposit_bank_name).select("Mpesa Paybill Number");
-    cy.wait(1000);
-    cy.get(this.locators.Deposit_branch).select("Across the globe");
-    cy.wait(1000);
-    const today = new Date();
+    cy.get(this.locators.Deposit_account_number)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Deposit_account_number)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Select random Account Holder Name
+cy.get(this.locators.Account_holder_name)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Account_holder_name)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Select random Deposit Bank Name
+cy.get(this.locators.Deposit_bank_name)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Deposit_bank_name)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Select random Deposit Branch
+cy.get(this.locators.Deposit_branch)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+    cy.get(this.locators.Deposit_branch)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(1000);
+
+// Current date in DD-MMM-YY format (e.g. 16-Jun-26)
+const today = new Date();
+
 const day = String(today.getDate()).padStart(2, '0');
-const month = String(today.getMonth() + 1).padStart(2, '0');
-const year = today.getFullYear();
 
-const formattedDate = `${day}/${month}/${year}`;
+const months = [
+  'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+];
 
-cy.get(this.locators.Date_of_deposit).clear().type(formattedDate);
+const month = months[today.getMonth()];
+const year = String(today.getFullYear()).slice(-2);
 
-    cy.wait(1000);    
-    
+const formattedDate = `${day}-${month}-${year}`;
+
+cy.get(this.locators.Date_of_deposit)
+  .invoke('removeAttr', 'readonly')
+  .clear()
+  .type(formattedDate, { force: true });
+
+cy.wait(1000);
+
+// Open Batch ID dropdown
 cy.get('.ng-select-container').click({ force: true });
 
-
-cy.get('.ng-input > input')
-  .clear()
-  .type("31", { force: true });
-
-
+// Select random Batch ID
 cy.get('.ng-dropdown-panel-items .ng-option-label')
   .should('be.visible')
   .then($options => {
     const count = $options.length;
-
-  
     const randomIndex = Math.floor(Math.random() * count);
-
 
     cy.wrap($options[randomIndex]).click({ force: true });
   });
-
     cy.wait(1000);
     cy.get(this.locators.submit_button).click();
     cy.wait(1000);
@@ -1027,9 +1380,9 @@ cy.get('.ng-dropdown-panel-items .ng-option-label')
   TC_Pay_041(){
    cy.get('[title="Payments"]').click({force:true});
    cy.wait(1000);
-   cy.get(".payments > :nth-child(2) > :nth-child(2) > a.ng-star-inserted").click({force:true});
+   cy.get(this.locators.batch_of_payments).click({force:true});
    cy.wait(1000); 
-   cy.get(this.locators.search_edit_payment).click({force:true});
+   cy.get(this.locators.search_and_edit).click({force:true});
    cy.wait(5000);
    cy.get('.ng-select-container input').type('31', { force: true });
    cy.get('.ng-dropdown-panel-items').should('be.visible');
@@ -1047,11 +1400,11 @@ cy.get('.ng-dropdown-panel-items .ng-option-label')
   }
 
   TC_Pay_042(){
-   cy.get('[title="Payments"]').click({force:true});
+      cy.get('[title="Payments"]').click({force:true});
    cy.wait(1000);
-   cy.get(".payments > :nth-child(2) > :nth-child(2) > a.ng-star-inserted").click({force:true});
+   cy.get(this.locators.batch_of_payments).click({force:true});
    cy.wait(1000); 
-   cy.get(this.locators.search_edit_payment).click({force:true});
+   cy.get(this.locators.search_and_edit).click({force:true});
    cy.wait(5000);
    cy.get('.ng-select-container input').type('3', { force: true });
    cy.get('.ng-dropdown-panel-items').should('be.visible');
@@ -1070,18 +1423,17 @@ cy.get('.ng-dropdown-panel-items .ng-option-label')
   TC_Pay_044(){
    cy.get('[title="Payments"]').click({force:true});
    cy.wait(1000);
-   cy.get(".payments > :nth-child(2) > :nth-child(2) > a.ng-star-inserted").click({force:true});
+   cy.get(this.locators.batch_of_payments).click({force:true});
    cy.wait(1000); 
-   cy.get(this.locators.search_edit_payment).click({force:true});
+   cy.get(this.locators.search_and_edit).click({force:true});
    cy.wait(5000);
-   cy.get('.ng-select-container input').type('3', { force: true });
-   cy.get('.ng-dropdown-panel-items').should('be.visible');
-   cy.get('.ng-dropdown-panel-items .ng-option-label').then($options => {
-   const count = $options.length;
-   const randomIndex = Math.floor(Math.random() * count);
+  cy.get('.ng-select-container').click({ force: true });
 
-    cy.wrap($options[randomIndex]).click();
-});
+cy.get('.ng-dropdown-panel-items .ng-option')
+  .should('have.length.greaterThan', 0)
+  .first()
+  .click({ force: true });
+  cy.wait(2000);
    cy.get(this.locators.search_btn).click({force: true});
    cy.wait(5000);
    cy.contains('Batch Details').should('be.visible');
@@ -1098,9 +1450,9 @@ cy.get('.ng-dropdown-panel-items .ng-option-label')
   TC_Pay_046(){
    cy.get('[title="Payments"]').click({force:true});
    cy.wait(1000);
-   cy.get(".payments > :nth-child(2) > :nth-child(2) > a.ng-star-inserted").click({force:true});
+   cy.get(this.locators.batch_of_payments).click({force:true});
    cy.wait(1000); 
-   cy.get(this.locators.search_edit_payment).click({force:true});
+   cy.get(this.locators.search_and_edit).click({force:true});
    cy.wait(5000);
    cy.get(this.locators.search_btn).click({force: true});
    cy.wait(500);
@@ -1409,18 +1761,17 @@ TC_Pay_062(){
  TC_Pay_033(){
     cy.get('[title="Payments"]').click({force:true});
     cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(2) > a.ng-star-inserted").click({force:true});
+    cy.get("#nav-item-2-deposit-slip").click({force:true});
     cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(2) > a").click({force:true});
-    cy.wait(1000);
-    cy.get('input').type('2');   
-    cy.get('.ng-dropdown-panel-items').should('be.visible');
-    cy.get('.ng-dropdown-panel-items .ng-option-label').then($options => {
-    const count = $options.length;
-    const randomIndex = Math.floor(Math.random() * count);
+    cy.get("#nav-item-3-search-and-print-batch").click({force:true});
+    cy.wait(2000);
+   // Open dropdown
+   cy.get('.ng-arrow-wrapper')
+  .click({ force: true });
 
-    cy.wrap($options[randomIndex]).click();
-});
+cy.get('.ng-option-label')
+  .first()
+  .click({ force: true });
    cy.get(this.locators.search_btn).click({force: true});
    cy.wait(1000);
    cy.contains('Batch Status').should('be.visible');
@@ -1430,18 +1781,28 @@ TC_Pay_062(){
   TC_Pay_035(){
     cy.get('[title="Payments"]').click({force:true});
     cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(2) > a.ng-star-inserted").click({force:true});
+     cy.get("#nav-item-2-deposit-slip").click({force:true});
     cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(2) > a").click({force:true});
-    cy.wait(1000);
-    cy.get('input').type('2');   
-    cy.get('.ng-dropdown-panel-items').should('be.visible');
-    cy.get('.ng-dropdown-panel-items .ng-option-label').then($options => {
-    const count = $options.length;
-    const randomIndex = Math.floor(Math.random() * count);
+    cy,get("#nav-item-3-search-and-print-batch").click({force:true});
+    cy.wait(2000);
+   // Open dropdown
+    cy.get('.ng-select-container').click({ force: true });
 
-    cy.wrap($options[randomIndex]).click();
-});
+    // Select random option
+    cy.get('.ng-option-label')
+        .should('have.length.greaterThan', 0)
+        .then($options => {
+
+            const maxOptions = Math.min(12, $options.length); // first 12 options
+            const randomIndex = Math.floor(Math.random() * maxOptions);
+
+            const optionText = $options.eq(randomIndex).text().trim();
+
+            cy.contains('.ng-option-label', optionText)
+                .click({ force: true });
+
+        });
+
    cy.get(this.locators.search_btn).click({force: true});
    cy.wait(1000);
    cy.contains('Batch Status').should('be.visible');
@@ -1450,101 +1811,128 @@ TC_Pay_062(){
 
 
 
-TC_Pay_034(){
-    cy.get('[title="Payments"]').click({force:true});
-    cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(2) > a.ng-star-inserted").click({force:true});
-    cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(2) > a").click({force:true});
-    cy.wait(1000);
-    cy.get('.ng-select-container input').type('2', { force: true });
-    cy.get('.ng-dropdown-panel-items').should('be.visible');
-    cy.get('.ng-dropdown-panel-items .ng-option-label').then($options => {
-    const count = $options.length;
-    const randomIndex = Math.floor(Math.random() * count);
+TC_Pay_034() {
 
-    cy.wrap($options[randomIndex]).click();
-});
-   cy.get(this.locators.search_btn).click({force: true});
-   cy.wait(1000);
-   cy.contains("Staff Code", { timeout: 10000 })
-  .scrollIntoView()
-  .should("exist")
-  .and(($el) => {
-    expect($el.is(':visible')).to.be.true;
+    cy.get('[title="Payments"]').click({ force: true });
+    cy.wait(1000);
+
+    cy.get("#nav-item-2-deposit-slip").click({ force: true });
+    cy.wait(1000);
+
+    cy.get("#nav-item-3-search-and-print-batch").click({ force: true });
+    cy.wait(2000);
+
+    cy.get('.ng-arrow-wrapper')
+  .click({ force: true });
+
+cy.get('.ng-option-label')
+  .should('have.length.greaterThan', 0)
+  .then($options => {
+
+    const maxOptions = Math.min(12, $options.length); // first 12 options
+    const randomIndex = Math.floor(Math.random() * maxOptions);
+
+    cy.wrap($options[randomIndex])
+      .scrollIntoView()
+      .click({ force: true });
   });
-   cy.wait(1000);
-   cy.contains("Staff Name").should("be.visible");
-   cy.get('tr.ng-star-inserted > :nth-child(7)').each(($cell) => {
-    const fullName = $cell.text().trim();          
+    cy.wait(1000);
 
-    const parts = fullName.split(" ");             
-    const firstName = parts[0];                     
-    const lastName = parts.slice(1).join(" ");      
+    // Click Search
+    cy.get(this.locators.search_btn).click({ force: true });
+    cy.wait(1000);
 
-    cy.log("First Name: " + firstName);
-    cy.log("Last Name: " + lastName);
-});
+    // Verify Staff Code column
+    cy.contains("Staff Code", { timeout: 10000 })
+        .scrollIntoView()
+        .should("be.visible");
+
+    // Verify Staff Name column
+    cy.contains("Staff Name")
+        .should("be.visible");
+
+    // Get First Name and Last Name
+    cy.get('tbody > tr > :nth-child(7)').each(($cell) => {
+
+        const fullName = $cell.text().trim();
+
+        const parts = fullName.split(" ");
+        const firstName = parts[0];
+        const lastName = parts.slice(1).join(" ");
+
+        cy.log(`First Name: ${firstName}`);
+        cy.log(`Last Name: ${lastName}`);
+
+    });
+
 }
-
  TC_Pay_036(){
     cy.get('[title="Payments"]').click({force:true});
     cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(2) > a.ng-star-inserted").click({force:true});
+    cy.get("#nav-item-2-deposit-slip").click({force:true});
     cy.wait(1000);
-    cy.get(".payments > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(2) > a").click({force:true});
-    cy.wait(1000);
-    cy.get('input').type('2');   
-    cy.get('.ng-dropdown-panel-items').should('be.visible');
-    cy.get('.ng-dropdown-panel-items .ng-option-label').then($options => {
-    const count = $options.length;
-    const randomIndex = Math.floor(Math.random() * count);
+    cy,get("#nav-item-3-search-and-print-batch").click({force:true});
+    cy.wait(2000);
+cy.get('.ng-dropdown-panel-items .ng-option')
+  .should('have.length.greaterThan', 0)
+  .first()
+  .click({ force: true });
 
-    cy.wrap($options[randomIndex]).click();
+cy.get(this.locators.search_btn).click({ force: true });
+cy.wait(1000);
+
+const headers = [
+  "Branch ID",
+  "Branch Name",
+  "Batch ID",
+  "Batch Generation Date",
+  "Mode Of Payment",
+  "Batch Amount",
+  "Batch Status",
+  "Staff Code",
+  "Staff Name"
+];
+
+headers.forEach(header => {
+  cy.contains('th', header).should('be.visible');
 });
-   cy.get(this.locators.search_btn).click({force: true});
-   cy.wait(1000);
-   const headers = [
-        "Branch ID",
-        "Branch Name",
-        "Batch ID",
-        "Batch Generation Date",
-        "Mode Of Payment",
-        "Batch Amount",
-        "Batch Status",
-        "Staff Code",
-        "Staff Name"
-    ];
-
-    headers.forEach(header => {
-        cy.contains('th', header).should('be.visible');
-    });
 }
 
+TC_Pay_043() {
 
-TC_Pay_043(){
-   cy.get('[title="Payments"]').click({force:true});
-   cy.wait(1000);
-   cy.get(".payments > :nth-child(2) > :nth-child(2) > a.ng-star-inserted").click({force:true});
-   cy.wait(1000); 
-   cy.get(this.locators.search_edit_payment).click({force:true});
-   cy.wait(5000);
-   cy.get('.ng-select-container input').type('3', { force: true });
-   cy.get('.ng-dropdown-panel-items').should('be.visible');
-   cy.get('.ng-dropdown-panel-items .ng-option-label').then($options => {
-   const count = $options.length;
-   const randomIndex = Math.floor(Math.random() * count);
+    cy.get('[title="Payments"]').click({ force: true });
+    cy.wait(1000);
 
-    cy.wrap($options[randomIndex]).click();
-});
-   cy.get(this.locators.search_btn).click({force: true});
-   cy.wait(1000);
-   cy.contains("CollectionBatchCreated").should("be.visible");
+    cy.get(this.locators.batch_of_payments).click({ force: true });
+    cy.wait(1000);
 
+    cy.get(this.locators.search_and_edit).click({ force: true });
+    cy.wait(5000);
 
+    cy.get('.ng-arrow-wrapper')
+  .click({ force: true });
 
+  cy.get('.ng-option-label')
+  .should('have.length.greaterThan', 0)
+  .then($options => {
 
-  }
+    const maxOptions = Math.min(12, $options.length); // first 12 options
+    const randomIndex = Math.floor(Math.random() * maxOptions);
+
+    cy.wrap($options[randomIndex])
+      .scrollIntoView()
+      .click({ force: true });
+  });
+
+    cy.wait(1000);
+
+    cy.get(this.locators.search_btn).click({ force: true });
+    cy.wait(1000);
+
+    cy.contains("CollectionBatchCreated", { timeout: 10000 })
+        .should("be.visible");
+
+}
 
 
 

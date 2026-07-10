@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T20:30:52.945Z",
+    "end": "2026-06-16T20:31:24.353Z",
+    "duration": 31408,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d322f257-cbde-45ac-bde2-b4b8924d059f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\SettlementTestPage_97.cy.js",
+      "file": "cypress\\e2e\\tests\\SettlementTestPage_97.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "093605eb-0af1-4ba9-8e65-ab1ac4d2b0f0",
+          "title": "TC_ID_97 - configure columns option should be clickable and Requestor should get selected",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC_ID_97 - Settlement",
+              "fullTitle": "TC_ID_97 - configure columns option should be clickable and Requestor should get selected TC_ID_97 - Settlement",
+              "timedOut": null,
+              "duration": 24170,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login2').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  settlementpage.SettlementTestPage_97();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Settlement' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Settlement' but never did.\n    at SettlementPage.SettlementTestPage_97 (webpack://encollect_web/./cypress/e2e/pages/SettlementPage.js:3479:11)\n    at Context.eval (webpack://encollect_web/./cypress/e2e/tests/SettlementTestPage_97.cy.js:25:31)\n    at getRet (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "c7485a6c-c1bb-42dd-87f5-330c3a33f32b",
+              "parentUUID": "093605eb-0af1-4ba9-8e65-ab1ac4d2b0f0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "c7485a6c-c1bb-42dd-87f5-330c3a33f32b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 24170,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

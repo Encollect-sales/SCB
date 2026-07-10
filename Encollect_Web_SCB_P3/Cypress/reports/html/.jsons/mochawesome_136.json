@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T15:59:51.986Z",
+    "end": "2026-06-16T16:00:28.065Z",
+    "duration": 36079,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3de04cc6-05ee-43a5-bc8c-675d17079cf4",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\PaymentTestPage_03.cy.js",
+      "file": "cypress\\e2e\\tests\\PaymentTestPage_03.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "acd0f88b-ad67-4b90-8629-8057a1565e56",
+          "title": "Payment - Bulk Payments Upload - Logged in user to upload the bulk payment file after filling the data in the template.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Payment - Bulk Payments Upload - TC_ID_03",
+              "fullTitle": "Payment - Bulk Payments Upload - Logged in user to upload the bulk payment file after filling the data in the template. Payment - Bulk Payments Upload - TC_ID_03",
+              "timedOut": null,
+              "duration": 30671,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  paymentpage.PaymentTestPage_download_03();\n  const sheetName = 'Sheet1';\n  Cypress.on('uncaught:exception', (err, runnable) => {\n    if (err.message.includes('ResizeObserver loop completed with undelivered notifications.')) {\n      return false;\n    }\n  });\n  const data = {\n    'A2': '212',\n    'B2': '1667',\n    'C2': '2025-03-06',\n    'D2': '100',\n    'E2': 'Cash',\n    'R2': '100'\n  };\n  const downloadsFolder = Cypress.config('downloadsFolder');\n  const fixturesFolder = 'cypress/fixtures';\n  const excelFileName = 'BulkPaymentsUploadTemplate.xlsx';\n  const sourceFilePath = path.join(downloadsFolder, excelFileName);\n  const destFilePath = path.join(fixturesFolder, excelFileName);\n  // Update Excel File\n  cy.task('updateBulkPaymentsUploadTemplateCell', {\n    filePath: sourceFilePath,\n    sheetName: sheetName,\n    data: data\n  }).then(() => {\n    cy.log('Excel file updated successfully with new data');\n  });\n  cy.task('moveAllDownloadsToFixtures').then(result => {\n    cy.log(result);\n  });\n  paymentpage.PaymentTestPage_03_upload();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#bulk-trail-download-template`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#bulk-trail-download-template`, but never found it.\n    at PaymentPage.PaymentTestPage_download_03 (webpack://encollect_web/./cypress/e2e/pages/PaymentPage.js:45:7)\n    at Context.eval (webpack://encollect_web/./cypress/e2e/tests/PaymentTestPage_03.cy.js:28:28)\n    at getRet (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "f0624776-fc60-4495-8892-2b88942799a3",
+              "parentUUID": "acd0f88b-ad67-4b90-8629-8057a1565e56",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f0624776-fc60-4495-8892-2b88942799a3"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 30671,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

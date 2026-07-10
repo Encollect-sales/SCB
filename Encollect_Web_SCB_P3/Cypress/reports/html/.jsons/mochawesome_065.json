@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T14:56:36.582Z",
+    "end": "2026-06-16T14:57:12.270Z",
+    "duration": 35688,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9d5ba2de-9613-4757-b451-8ec79d4d3256",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\DashboardTestPage_01.cy.js",
+      "file": "cypress\\e2e\\tests\\DashboardTestPage_01.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "750265b6-808e-4126-afa5-c7805e01f79f",
+          "title": "Dashboard - Dashboard - Using Customer ID",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User should enter a valid credentials to see their account details - TC_ID_01",
+              "fullTitle": "Dashboard - Dashboard - Using Customer ID User should enter a valid credentials to see their account details - TC_ID_01",
+              "timedOut": null,
+              "duration": 27199,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  dashboardpage.DashboardTestPage_01();\n});",
+              "err": {},
+              "uuid": "8190e0cf-8057-484a-8c97-5264494291ac",
+              "parentUUID": "750265b6-808e-4126-afa5-c7805e01f79f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8190e0cf-8057-484a-8c97-5264494291ac"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 27199,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

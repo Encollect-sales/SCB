@@ -602,21 +602,21 @@ class AllocationPage {
   }
 
   ClickonallocationUAAOS3(Status) {
-    cy.get('[title="Allocation"] > span.ng-star-inserted').click();
+    cy.get('#nav-item-1-allocation').click();
     cy.wait(500);
-    cy.get('.allocation > :nth-child(2) > :nth-child(2) > a.ng-star-inserted').click();
+    cy.get('#nav-item-2-agency-bulk-upload').click();
     cy.wait(1000);
-    cy.get(':nth-child(2) > .sub-nav-list > :nth-child(5) > a').click().click();
+    cy.get('#nav-item-3-agency-allocation-status').click().click();
     cy.wait(500);
     cy.get(this.locators.clickonUAAOSFailed).select("Failed");
     cy.wait(500);
     cy.get('#Filename').type('Mumbai');
     cy.wait(500);
-    cy.get('#FileuploadDate').click();
+  cy.get('#fileuploaddate').click();
     cy.wait(1000);
     cy.get(this.locators.enterdate).click();
     cy.wait(500);
-    cy.get('#Transactionid').type('1234568',{force : true});
+   cy.get('#transactionid').type('1234568',{force : true});
     cy.wait(500);
     cy.get('#search').click();
     cy.wait(500);

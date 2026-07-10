@@ -149,9 +149,9 @@ contacttemplate_failed(){
     cy.wait(2000);
     cy.get('#bulk-trail-search-button').click();
     cy.wait(3000);
-    cy.get('tbody > .ng-star-inserted > :nth-child(4)').contains('Failed').should('be.visible');
+    cy.get('tbody > tr > :nth-child(4)').contains('Failed').should('be.visible');
     cy.wait(2000);
-    cy.get("tbody > .ng-star-inserted > :nth-child(5) > a").click();
+    cy.get("tr > :nth-child(5) > a").click({force:true});
     cy.wait(3000);
  
 }

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T18:48:10.608Z",
+    "end": "2026-06-16T18:49:36.634Z",
+    "duration": 86026,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5a07dbcd-bf00-406d-a709-f1a3c80c3197",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\ReoprtPaymentTestPage_389.cy.js",
+      "file": "cypress\\e2e\\tests\\ReoprtPaymentTestPage_389.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f4f1ea5a-cffa-46f5-84be-41472ad0a1cb",
+          "title": "Report - Trail Gap Report - To check the Bucket field drop down value",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Trail Gap Report  - TC_ID_389",
+              "fullTitle": "Report - Trail Gap Report - To check the Bucket field drop down value Trail Gap Report  - TC_ID_389",
+              "timedOut": null,
+              "duration": 78817,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  reportpage.ReoprtPaymentTestPage_389();\n});",
+              "err": {},
+              "uuid": "e1b62f5a-5e45-401f-a25d-6a0d801c5016",
+              "parentUUID": "f4f1ea5a-cffa-46f5-84be-41472ad0a1cb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e1b62f5a-5e45-401f-a25d-6a0d801c5016"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 78817,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

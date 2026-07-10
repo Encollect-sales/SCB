@@ -4,7 +4,7 @@ import LoginPage from '../pages/LoginPage';
 import { getLocators } from '../utils/locatorUtils';
 import AccountSearchPage from '../pages/AccountSearchPage';
 
-describe('Account Search -Verify Next button is disabled for the last account', () => {
+describe('Account Search - Verify Next button is disabled for the last account', () => {
     let loginPage;
     let accountsearchpage; 
 

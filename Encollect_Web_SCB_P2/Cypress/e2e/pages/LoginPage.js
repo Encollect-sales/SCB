@@ -80,8 +80,8 @@ Clikcompanyname() {
     cy.wait(2000);
     cy.get('.btn-success').click();
     cy.wait(7000);
-    cy.wait(9000);
-   cy.wait(20000)
+  //   cy.wait(9000);
+  //  cy.wait(20000)
 
   }
  
@@ -93,7 +93,7 @@ Clikcompanyname() {
       this.fillUsername(email);
       this.fillPassword(password);
       this.submit();
-      cy.wait(3000);
+      cy.wait(6000);
       // this.enterotp();
       // this.verifyLoginSuccess();
   }

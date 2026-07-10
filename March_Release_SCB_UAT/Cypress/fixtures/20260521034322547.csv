@@ -1,2 +1,0 @@
-Id,IsParentAgency,ParentAgencyCode,AgencyCode,AgencyName,RecommendingOfficer,AgencyType,AgencySubType,TINNumber,PanCard,PrimaryOwnerFirstName,PrimaryOwnerLastName,RegisteredAgencyAddress,Landmark,MobileNo,EmailID,FirstAgreementDate,LastRenewalDate,ContractExpiryDate,Remarks,IsFailed,FailureReason
-3a215c3360e6516860deebb4e3b68c41,Yes,,500137,Breanna,4408,Collections,Field Agents,12345321,PANCA9614B,hamad,P,Pune,wiki field,8366625711,breanna@yopmail.com,12-10-2022,13-10-2023,10-10-2032,Bulk upload,False,

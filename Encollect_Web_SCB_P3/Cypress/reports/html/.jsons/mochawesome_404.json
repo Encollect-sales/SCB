@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T20:54:28.896Z",
+    "end": "2026-06-16T20:55:21.039Z",
+    "duration": 52143,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7a81b252-7113-4d37-a8ce-538beaa318ff",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\SystemSettingPageTest_1286.cy.js",
+      "file": "cypress\\e2e\\tests\\SystemSettingPageTest_1286.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5639e0d3-a095-4bc4-ace7-54aa3895ce25",
+          "title": "System Setting - Master Upload",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Department and Designation Master - TC_ID_1286 - Admin to Upload Department & Designation Master file from frontend by clicking on system setting>>Bulk Upload Master>>Upload Master file",
+              "fullTitle": "System Setting - Master Upload Department and Designation Master - TC_ID_1286 - Admin to Upload Department & Designation Master file from frontend by clicking on system setting>>Bulk Upload Master>>Upload Master file",
+              "timedOut": null,
+              "duration": 47253,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  systemsettingPage.systemSettingModule();\n  systemsettingPage.DepartmentAndDesignationMaster1286();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[role=\"alert\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[role=\"alert\"]`, but never found it.\n    at SystemSettingPage.DepartmentAndDesignationMaster1286 (webpack://encollect_web/./cypress/e2e/pages/SystemSettingPage.js:4233:30)\n    at Context.eval (webpack://encollect_web/./cypress/e2e/tests/SystemSettingPageTest_1286.cy.js:27:34)\n    at getRet (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "8aee8498-0a1a-4da0-9bea-452a431df9f3",
+              "parentUUID": "5639e0d3-a095-4bc4-ace7-54aa3895ce25",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "8aee8498-0a1a-4da0-9bea-452a431df9f3"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 47253,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

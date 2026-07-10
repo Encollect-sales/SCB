@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T19:40:04.387Z",
+    "end": "2026-06-16T19:40:48.155Z",
+    "duration": 43768,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4afc683b-c58e-4f74-b542-56c442f536db",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\DashboardTestPage_020.cy.js",
+      "file": "cypress\\e2e\\tests\\DashboardTestPage_020.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "306d0a34-d3b7-48fd-a794-2b97e600b322",
+          "title": "Dashboard - Search account -Verify whether user is able to search an Loan account by using the Account Number field in search filter criteria on both web and mobile..",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Payment - TC_ID_020",
+              "fullTitle": "Dashboard - Search account -Verify whether user is able to search an Loan account by using the Account Number field in search filter criteria on both web and mobile.. Payment - TC_ID_020",
+              "timedOut": null,
+              "duration": 36499,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  dashboardpage.DashboardTestPage_020();\n});",
+              "err": {},
+              "uuid": "90efe7e1-8fa8-46ea-a3e4-a61a70292376",
+              "parentUUID": "306d0a34-d3b7-48fd-a794-2b97e600b322",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "90efe7e1-8fa8-46ea-a3e4-a61a70292376"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 36499,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

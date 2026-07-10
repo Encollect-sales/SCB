@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T20:55:27.014Z",
+    "end": "2026-06-16T20:56:14.029Z",
+    "duration": 47015,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ca24663d-f05e-4a17-af34-f46ddece7c3d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\SystemSettingPageTest_1318.cy.js",
+      "file": "cypress\\e2e\\tests\\SystemSettingPageTest_1318.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "11f8ecba-f7fc-4ca3-baec-c9c0008187cf",
+          "title": "System Setting - Master Upload",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Bank Master - TC_ID_1318 - Admin while uploading the bank master file into ENCollect should not change the file extension(i.e.xlsx).",
+              "fullTitle": "System Setting - Master Upload Bank Master - TC_ID_1318 - Admin while uploading the bank master file into ENCollect should not change the file extension(i.e.xlsx).",
+              "timedOut": null,
+              "duration": 41032,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  systemsettingPage.systemSettingModule();\n  systemsettingPage.BankMaster1318();\n});",
+              "err": {},
+              "uuid": "233a540d-82a0-4ba5-b857-87156abdf3b7",
+              "parentUUID": "11f8ecba-f7fc-4ca3-baec-c9c0008187cf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "233a540d-82a0-4ba5-b857-87156abdf3b7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 41032,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

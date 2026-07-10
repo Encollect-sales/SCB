@@ -49,7 +49,7 @@ class AccountDetailsPage {
     cy.wait(500)
     cy.get('.btn-secondary').click();
     cy.wait(500);
-    //cy.get('tr.ng-star-inserted > .link').dblclick();
+    //cy.get('[style="text-wrap-mode: nowrap; position: relative;"] > span').dblclick();
     //cy.wait(500);
     //cy.get('#toggleButton > img').click();
     //cy.wait(500);
@@ -71,7 +71,7 @@ class AccountDetailsPage {
     cy.wait(500)
     cy.get('.btn-secondary').click();
     cy.wait(500);
-    cy.get('tr.ng-star-inserted > .link').dblclick();
+    cy.get('[style="text-wrap-mode: nowrap; position: relative;"] > span').dblclick();
     cy.wait(500);
     cy.get('#toggleButton > img').click();
     cy.wait(500);
@@ -94,7 +94,7 @@ class AccountDetailsPage {
     cy.wait(500)
     cy.get('.btn-secondary').click();
     cy.wait(500);
-    cy.get('tr.ng-star-inserted > .link').dblclick();
+    cy.get('[style="text-wrap-mode: nowrap; position: relative;"] > span').dblclick();
     cy.wait(500);
     cy.get('#toggleButton > img').click();
     cy.wait(500);
@@ -116,7 +116,7 @@ class AccountDetailsPage {
     cy.wait(500)
     cy.get('.btn-secondary').click();
     cy.wait(500);
-    cy.get('tr.ng-star-inserted > .link').dblclick();
+    cy.get('[style="text-wrap-mode: nowrap; position: relative;"] > span').dblclick();
     cy.wait(500);
     cy.get('#toggleButton > img').click();
     cy.wait(500);
@@ -141,7 +141,7 @@ class AccountDetailsPage {
     cy.wait(500)
     cy.get('.btn-secondary').click({force:true});
     cy.wait(500);
-    cy.get('tr.ng-star-inserted > .link').dblclick();
+    cy.get('[style="text-wrap-mode: nowrap; position: relative;"] > span').dblclick();
     cy.wait(500);
     cy.get('#toggleButton > img').click();
     cy.wait(500);
@@ -167,7 +167,7 @@ class AccountDetailsPage {
     cy.wait(500)
     cy.get('.btn-secondary').click();
     cy.wait(500);
-    cy.get('tr.ng-star-inserted > .link').dblclick();
+    cy.get('[style="text-wrap-mode: nowrap; position: relative;"] > span').dblclick();
     cy.wait(500);
     cy.get('#toggleButton > img').click();
     cy.wait(500);
@@ -190,7 +190,7 @@ class AccountDetailsPage {
     cy.wait(500)
     cy.get('.btn-secondary').click();
     cy.wait(500);
-    cy.get('tr.ng-star-inserted > .link').dblclick();
+    cy.get('[style="text-wrap-mode: nowrap; position: relative;"] > span').dblclick();
     cy.wait(500);
     cy.get('#toggleButton > img').click();
     cy.wait(500);
@@ -214,7 +214,7 @@ class AccountDetailsPage {
     cy.wait(500)
     cy.get('.btn-secondary').click();
     cy.wait(500);
-    cy.get('tr.ng-star-inserted > .link').dblclick();
+    cy.get('[style="text-wrap-mode: nowrap; position: relative;"] > span').dblclick();
     cy.wait(500);
     cy.get('#toggleButton > img').click();
     cy.wait(500);
@@ -238,7 +238,7 @@ class AccountDetailsPage {
     cy.wait(500)
     cy.get('.btn-secondary').click();
     cy.wait(500);
-    cy.get('tr.ng-star-inserted > .link').dblclick();
+    cy.get('[style="text-wrap-mode: nowrap; position: relative;"] > span').dblclick();
     cy.wait(500);
     cy.get('#toggleButton > img').click();
     cy.wait(500);
@@ -283,7 +283,7 @@ ViewAccountDetailsPageTest_248() {
     .should("be.visible")
     .click();
   cy.wait(2000);  
-  cy.get('[style="text-wrap-mode: nowrap; position: relative;"]').click({force:true});
+ cy.get(':nth-child(1) > :nth-child(4) > a > [style="text-wrap-mode: nowrap; position: relative;"] > span').click({force:true});
   // Add Trail
   cy.wait(2000);
   cy.get('#addTrail')
@@ -367,7 +367,7 @@ ViewAccountDetailsPageTest_248() {
     // Interaction Part 1: Typing and Clicking
     cy.get('.ng-arrow-wrapper').click();
     cy.wait(1000);
-    cy.contains('span.ng-option-label', 'Credit Card Last 4 Digits').click();
+    cy.contains('.ng-option', 'Credit Card Last 4 Digits', { timeout: 10000 }).should('be.visible').click();
     cy.wait(2000);
     cy.get("#search-cc-number").type('7980', { force: true });
     cy.wait(500);
@@ -429,9 +429,9 @@ ViewAccountDetailsPageTest_248() {
     cy.wait(2000);
     cy.get(this.locators.clickonsearchbtn).click();
     cy.wait(4000);
-    cy.get('li[class="pagination-next page-item ng-star-inserted"] a[class="page-link"]').click();
+    cy.get('.pagination-last > .page-link').click();
     cy.wait(1000);
-    cy.get('li[class="pagination-prev page-item ng-star-inserted"] a[class="page-link"]').click();
+   cy.get('.pagination-first > .page-link').click();
 
 
 
@@ -578,7 +578,7 @@ ViewAccountDetailsPageTest_248() {
     cy.wait(500)
     cy.get('.btn-secondary').click();
     cy.wait(500);
-    cy.get('tr.ng-star-inserted > .link').dblclick();
+    cy.get('[style="text-wrap-mode: nowrap; position: relative;"] > span').dblclick();
     cy.wait(500);
     cy.get('#toggleButton > img').click();
     cy.wait(500);
@@ -610,7 +610,7 @@ ViewAccountDetailsPageTest_248() {
     cy.wait(500)
     cy.get('.btn-secondary').click();
     cy.wait(500);
-    cy.get('tr.ng-star-inserted > .link').dblclick();
+    cy.get('[style="text-wrap-mode: nowrap; position: relative;"] > span').dblclick();
     cy.wait(500);
     cy.get('#toggleButton > img').click();
     cy.wait(500);
@@ -724,7 +724,7 @@ ViewAccountDetailsPageTest_248() {
     cy.wait(5000);
     cy.get(this.locators.SearchButton).click();
     cy.wait(7000);
-    cy.get('tr.ng-star-inserted > :nth-child(4) > a').click({ force: true });
+    cy.get('[style="text-wrap-mode: nowrap; position: relative;"] > span').click({ force: true });
     cy.wait(7000);
     cy.get(this.locators.toggle).click().should("be.visible");
     cy.wait(5000);
@@ -754,7 +754,7 @@ ViewAccountDetailsPageTest_248() {
     cy.wait(5000);
     cy.get(this.locators.SearchButton).click();
     cy.wait(7000);
-    cy.get('tr.ng-star-inserted > :nth-child(4) > a').click();
+    cy.get('[style="text-wrap-mode: nowrap; position: relative;"] > span').click();
     cy.wait(7000);
     cy.get(this.locators.UpdateTrailButton).click();
     cy.wait(5000);
@@ -802,7 +802,7 @@ ViewAccountDetailsPageTest_248() {
     cy.wait(5000);
     cy.get(this.locators.SearchButton).click().should("be.visible");
     cy.wait(3000);
-    cy.get('tr.ng-star-inserted > :nth-child(4) > a').click();
+   cy.get('[style="text-wrap-mode: nowrap; position: relative;"] > span').click();
     cy.wait(3000);
   }
   AccountDetailsTestPage_106() {
@@ -812,7 +812,7 @@ ViewAccountDetailsPageTest_248() {
     cy.wait(5000);
     cy.get(this.locators.SearchButton).click();
     cy.wait(3000);
-    cy.get('tr.ng-star-inserted > :nth-child(4) > a').click();
+   cy.get('[style="text-wrap-mode: nowrap; position: relative;"] > span').click();
     cy.wait(3000);
     cy.get(this.locators.UpdateTrailButton).click();
     cy.wait(2000);
@@ -858,7 +858,7 @@ ViewAccountDetailsPageTest_248() {
     cy.wait(5000);
     cy.get(this.locators.SearchButton).click();
     cy.wait(7000);
-    cy.get('tr.ng-star-inserted > :nth-child(4) > a').click();
+   cy.get('[style="text-wrap-mode: nowrap; position: relative;"] > span').click();
     cy.wait(7000);
     cy.get(this.locators.UpdateTrailButton).click().should("be.visible");
     cy.wait(5000);
@@ -870,7 +870,7 @@ ViewAccountDetailsPageTest_248() {
     cy.wait(5000);
     cy.get(this.locators.SearchButton).click();
     cy.wait(7000);
-    cy.get('tr.ng-star-inserted > :nth-child(4) > a').click();
+   cy.get('[style="text-wrap-mode: nowrap; position: relative;"] > span').click();
     cy.wait(7000);
     cy.get(this.locators.toggle).click().should("be.visible");
     cy.wait(5000);
@@ -886,55 +886,84 @@ ViewAccountDetailsPageTest_248() {
     cy.wait(5000);
 
   }
-  AccountDetailsTestPage_110() {
+ AccountDetailsTestPage_110() {
 
-  cy.get(this.locators.Report)
-    .should("be.visible")
-    .click();
-  cy.wait(2000);
-  cy.get(this.locators.Trail_Report)
-    .should("be.visible")
-    .click();
-  cy.wait(2000);
-  cy.get(this.locators.Trail_History_Report)
-    .should("be.visible")
-    .click();
-  cy.wait(2000);
-  // Open multi-select dropdown (FIXED HERE)
-  cy.get("ng-select.ng-select-multiple .ng-input")
-    .first()
-    .should("be.visible")
-    .click();
-  cy.wait(2000);
-  // Verify dropdown options count
-  cy.get('.ng-option-label.ng-star-inserted')
-    .should('have.length', 5);
-   cy.wait(2000);
-  cy.get(this.locators.Trail_from_date)
-    .should("be.visible")
-    .clear()
-    .type("01/02/2025{enter}");
-  cy.wait(2000);
-  cy.get(this.locators.Trail_To_Date)
-    .clear()
-    .type("11/02/2025{enter}");
-  cy.wait(2000);
-  // Dropdowns
-  cy.get(this.locators.DisCode_Group)
-    .should("be.visible")
-    .select("BPTP");
-    cy.wait(2000);
-  cy.get(this.locators.DisCode)
-    .should("be.visible")
-    .select("BPTP");
-    cy.wait(2000);
-  // Generate report
-  cy.get(this.locators.Gene_Report)
-    .should("be.enabled")
+  // Open Reports Menu
+  cy.get(this.locators.Report, { timeout: 10000 })
+    .scrollIntoView()
+    .should('exist')
     .click({ force: true });
 
-}
+  cy.wait(2000);
 
+  // Open Trail Report
+  cy.get(this.locators.Trail_Report, { timeout: 10000 })
+    .scrollIntoView()
+    .should('exist')
+    .click({ force: true });
+
+  cy.wait(2000);
+
+  // Open Trail History Report
+  cy.get(this.locators.Trail_History_Report, { timeout: 10000 })
+    .scrollIntoView()
+    .should('exist')
+    .click({ force: true });
+
+  cy.wait(2000);
+
+  // Open Multi Select Dropdown
+  cy.get(':nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input', { timeout: 10000 })
+    .first()
+    .scrollIntoView()
+    .click({ force: true });
+
+  cy.wait(2000);
+
+  // Verify Options Count
+ cy.get('.ng-option-label', { timeout: 10000 })
+    .should('have.length', 5);
+
+  cy.wait(2000);
+
+  // From Date
+  cy.get(this.locators.Trail_from_date, { timeout: 10000 })
+    .scrollIntoView()
+    .clear({ force: true })
+    .type('01/02/2025{enter}', { force: true });
+
+  cy.wait(2000);
+
+  // To Date
+  cy.get(this.locators.Trail_To_Date, { timeout: 10000 })
+    .scrollIntoView()
+    .clear({ force: true })
+    .type('11/02/2025{enter}', { force: true });
+
+  cy.wait(2000);
+
+  // Dis Code Group
+  cy.get(this.locators.DisCode_Group, { timeout: 10000 })
+    .scrollIntoView()
+    .select('BPTP', { force: true });
+
+  cy.wait(2000);
+
+  // Dis Code
+  cy.get(this.locators.DisCode, { timeout: 10000 })
+    .scrollIntoView()
+    .select('BPTP', { force: true });
+
+  cy.wait(2000);
+
+  // Generate Report
+  cy.get(this.locators.Gene_Report, { timeout: 10000 })
+    .scrollIntoView()
+    .should('not.be.disabled')
+    .click({ force: true });
+
+  cy.wait(3000);
+}
 
 }
 

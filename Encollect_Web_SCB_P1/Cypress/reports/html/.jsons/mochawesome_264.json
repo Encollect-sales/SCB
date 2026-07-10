@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T19:36:47.898Z",
+    "end": "2026-06-16T19:37:26.292Z",
+    "duration": 38394,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4aa53508-5444-4195-bae3-013527b58a56",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_851.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_851.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3e9bda68-c7bb-4c86-a126-95e4689fc196",
+          "title": "Allocation - Upload Agency Allocation Owner Status - .User should be able to select any one of the drop down value from status field. for ex user selected \"Processed\" under status and clicked on search button, in the result grid user should be able to see list of processed allocation files and user should be able to go next page and select showing results upto 50.user should be able to scroll up and select any other drop down value under status field.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Product Filter - TC_ID_851",
+              "fullTitle": "Allocation - Upload Agency Allocation Owner Status - .User should be able to select any one of the drop down value from status field. for ex user selected \"Processed\" under status and clicked on search button, in the result grid user should be able to see list of processed allocation files and user should be able to go next page and select showing results upto 50.user should be able to scroll up and select any other drop down value under status field. Product Filter - TC_ID_851",
+              "timedOut": null,
+              "duration": 32687,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  //allocationPage.ClickonallocationUAAOS('3: Processed');\n  allocationPage.ClickonUAAOvalidationCheck_51();\n});",
+              "err": {},
+              "uuid": "b0ef8f72-412b-4174-9a25-4883d88860fc",
+              "parentUUID": "3e9bda68-c7bb-4c86-a126-95e4689fc196",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b0ef8f72-412b-4174-9a25-4883d88860fc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 32687,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

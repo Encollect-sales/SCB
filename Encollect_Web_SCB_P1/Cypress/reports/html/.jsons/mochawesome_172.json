@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T18:18:32.942Z",
+    "end": "2026-06-16T18:19:08.190Z",
+    "duration": 35248,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c705ec63-44ff-4e9c-8bd4-3739fd7ee6d5",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_757.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_757.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5ab395ad-5f66-4b41-9925-3b3c328f1277",
+          "title": "Allocation - Upload Agency Allocation Owner",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Download Accounts - TC_ID_361",
+              "fullTitle": "Allocation - Upload Agency Allocation Owner Download Accounts - TC_ID_361",
+              "timedOut": null,
+              "duration": 30077,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonUAAOwnerChangedFilterValue();\n});",
+              "err": {
+                "message": "CypressError: `cy.select()` can only be called on a `<select>`. Your subject is a: `<input aria-autocomplete=\"list\" role=\"combobox\" type=\"text\" autocorrect=\"off\" autocapitalize=\"off\" autocomplete=\"off\" aria-expanded=\"false\">`\n\nhttps://on.cypress.io/select",
+                "estack": "CypressError: `cy.select()` can only be called on a `<select>`. Your subject is a: `<input aria-autocomplete=\"list\" role=\"combobox\" type=\"text\" autocorrect=\"off\" autocapitalize=\"off\" autocomplete=\"off\" aria-expanded=\"false\">`\n\nhttps://on.cypress.io/select\n    at Context.select (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:114078:70)\n    at wrapped (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:138092:19)\nFrom Your Spec Code:\n    at AllocationPage.ClickonUAAOwnerChangedFilterValue (webpack:///./cypress/e2e/pages/AllocationPage.js:3527:36)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_757.cy.js:26:27)",
+                "diff": null
+              },
+              "uuid": "8c62a737-5d77-4e01-a948-0f367997f7fd",
+              "parentUUID": "5ab395ad-5f66-4b41-9925-3b3c328f1277",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "8c62a737-5d77-4e01-a948-0f367997f7fd"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 30077,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

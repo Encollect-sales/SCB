@@ -1,3 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009601001,2003,Yes,PTP,PTP,2025-12-26,91,,Pending approval test,(471) 454-5267,BTM,Bangalore,Camille40@gmail.com,Permanent,New,12222025013019537,Error,Account number does not exist in database
-DMI0009601002,2003,Yes,PTP,PTP,2025-12-26,91,,Pending approval test,515-738-5795 x433,BTM,Bangalore,Victoria.Baumbach@gmail.com,Permanent,New,12222025013019537,Error,Account number does not exist in database

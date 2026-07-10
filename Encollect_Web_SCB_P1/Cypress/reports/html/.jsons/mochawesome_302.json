@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T20:09:14.560Z",
+    "end": "2026-06-16T20:09:51.061Z",
+    "duration": 36501,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2464dad0-2229-4833-a935-328105d41708",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\PaymentsPageTest_046.cy.js",
+      "file": "cypress\\e2e\\tests\\PaymentsPageTest_046.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4bd0f239-db93-42b9-b41c-2e5e3d47bb11",
+          "title": "Payments Module - Create batch of payments - Logged in user selected one of the receipt by selecting the check box to create batch of payments.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Payment - TC_ID_046",
+              "fullTitle": "Payments Module - Create batch of payments - Logged in user selected one of the receipt by selecting the check box to create batch of payments. Payment - TC_ID_046",
+              "timedOut": null,
+              "duration": 30211,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  paymentsPage.PaymentModule();\n  paymentsPage.ClickBOP();\n  paymentsPage.ClickOnCreateBatchOfPayment();\n  paymentsPage.ClickOnCreateBatchOfPayment_SearchBtnClick();\n  paymentsPage.checkbox();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#search-product-group`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#search-product-group`, but never found it.\n    at PaymentsPage.ClickOnCreateBatchOfPayment_SearchBtnClick (webpack:///./cypress/e2e/pages/PaymentsPage.js:703:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/PaymentsPageTest_046.cy.js:29:29)",
+                "diff": null
+              },
+              "uuid": "2a18f028-c407-4279-aa67-11d272a2e8d0",
+              "parentUUID": "4bd0f239-db93-42b9-b41c-2e5e3d47bb11",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "2a18f028-c407-4279-aa67-11d272a2e8d0"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 30211,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T20:18:39.680Z",
+    "end": "2026-06-16T20:19:43.611Z",
+    "duration": 63931,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a2a743e4-6273-44d1-8f3d-0390413cd903",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\PaymentsPageTest_056.cy.js",
+      "file": "cypress\\e2e\\tests\\PaymentsPageTest_056.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2959f730-1bfd-402f-8c5f-810908b36679",
+          "title": "Payments Module - Create pay-in slip - Logged in user to review the data which is already entered by scrolling up to the top of the screen.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Payment - TC_ID_056",
+              "fullTitle": "Payments Module - Create pay-in slip - Logged in user to review the data which is already entered by scrolling up to the top of the screen. Payment - TC_ID_056",
+              "timedOut": null,
+              "duration": 58180,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  paymentsPage.PaymentModule();\n  paymentsPage.Depositslip();\n  paymentsPage.ClickOnCreatePayInSlip();\n  paymentsPage.ClickOnCreatePayInSlip_updateData();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.btn-secondary`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.btn-secondary`, but never found it.\n    at PaymentsPage.ClickOnCreatePayInSlip_updateData (webpack:///./cypress/e2e/pages/PaymentsPage.js:1001:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/PaymentsPageTest_056.cy.js:29:29)",
+                "diff": null
+              },
+              "uuid": "337f2956-20c0-46e3-884f-b67b1fbf70c9",
+              "parentUUID": "2959f730-1bfd-402f-8c5f-810908b36679",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "337f2956-20c0-46e3-884f-b67b1fbf70c9"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 58180,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

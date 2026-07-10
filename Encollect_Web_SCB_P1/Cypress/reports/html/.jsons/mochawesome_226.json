@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T19:03:39.399Z",
+    "end": "2026-06-16T19:04:36.655Z",
+    "duration": 57256,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7d1da3af-25a3-49b8-8442-e28bda70106e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_812.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_812.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d1cf18c7-6c3f-40fb-80ed-df859610b51c",
+          "title": "Allocation - Upload Collector Unallocation batch - User downloaded the template and entered incorrect account number and uploaded the file for unallocation, then system should show the status as \"Failed\"",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Collector Level Unallocation - TC_ID_812",
+              "fullTitle": "Allocation - Upload Collector Unallocation batch - User downloaded the template and entered incorrect account number and uploaded the file for unallocation, then system should show the status as \"Failed\" Collector Level Unallocation - TC_ID_812",
+              "timedOut": null,
+              "duration": 52086,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  // Download the batch file\n  allocationPage.downloadCollectorUnallocationbatch();\n  // Update the Excel file\n  const sheetName = 'Sheet1';\n  const data = {\n    'A2': '99990000012749'\n  };\n  const excelFileName = 'UnAllocation.xlsx';\n  const downloadsFolder = Cypress.config('downloadsFolder');\n  const filePath = `${downloadsFolder}\\\\${excelFileName}`;\n  cy.task('updateExcelCell', {\n    filePath: filePath,\n    sheetName: sheetName,\n    data: data\n  }).then(() => {\n    cy.log('Account number updated successfully in the Excel file');\n    allocationPage.uploadCollectorUnallocationBatchWrongAccountNo();\n  });\n});",
+              "err": {},
+              "uuid": "ea3d48c9-9090-4ace-8a8f-cb11aa54ce76",
+              "parentUUID": "d1cf18c7-6c3f-40fb-80ed-df859610b51c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ea3d48c9-9090-4ace-8a8f-cb11aa54ce76"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 52086,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

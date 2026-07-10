@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T17:56:13.588Z",
+    "end": "2026-06-16T17:56:58.410Z",
+    "duration": 44822,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "077ade35-aa92-456d-b803-c33bb9edea10",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_732.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_732.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cc2964e6-2a9d-47a2-833b-ede8beac3619",
+          "title": "Allocation - Secondary Allocation Status - user selected \"invalid file format\" under status field and clicked on search button user should be able to see all invalid file format allocation files in the result grid.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC_ID_732",
+              "fullTitle": "Allocation - Secondary Allocation Status - user selected \"invalid file format\" under status field and clicked on search button user should be able to see all invalid file format allocation files in the result grid. TC_ID_732",
+              "timedOut": null,
+              "duration": 37508,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonallocationSAS();\n  allocationPage.fillinvalidstatus();\n  allocationPage.clickonSearch();\n});",
+              "err": {},
+              "uuid": "3c17c8d9-1f59-496b-b0dd-9815a5ae58fb",
+              "parentUUID": "cc2964e6-2a9d-47a2-833b-ede8beac3619",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3c17c8d9-1f59-496b-b0dd-9815a5ae58fb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 37508,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T14:30:08.066Z",
+    "end": "2026-06-16T14:30:42.990Z",
+    "duration": 34924,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6b50929e-e06c-40b6-b942-4970da9646f6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationTestPage_116.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationTestPage_116.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3198c831-7d1a-4494-baa2-239b5c53fd47",
+          "title": "Allocation -When user does secondary unallocation at customer id level, all accounts which are previously allocated to agent (Field agent/tele calling agent) only those accounts will get unallocated.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Allocation Module - TC_ID_116",
+              "fullTitle": "Allocation -When user does secondary unallocation at customer id level, all accounts which are previously allocated to agent (Field agent/tele calling agent) only those accounts will get unallocated. Allocation Module - TC_ID_116",
+              "timedOut": null,
+              "duration": 28868,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  allocationpage.AllocationTestPage_116();\n});",
+              "err": {},
+              "uuid": "de9f90a8-ad7b-4638-936c-260fa94d19b1",
+              "parentUUID": "3198c831-7d1a-4494-baa2-239b5c53fd47",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "de9f90a8-ad7b-4638-936c-260fa94d19b1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28868,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T17:52:59.550Z",
+    "end": "2026-06-16T17:53:46.028Z",
+    "duration": 46478,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2656923f-2004-4cab-b2a3-4004e9b2bc9e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_729.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_729.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "22a3e284-edb2-4d80-b19a-30d36e3ba8a2",
+          "title": "Allocation - Upload Collector Unallocation batch - user clicked on \"ok\" so that file will get uploaded into the ENCollect system user will see a pop up msg as \"File uploaded successfully\" along with transaction ID. ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Collector Level Allocation - TC_ID_729",
+              "fullTitle": "Allocation - Upload Collector Unallocation batch - user clicked on \"ok\" so that file will get uploaded into the ENCollect system user will see a pop up msg as \"File uploaded successfully\" along with transaction ID.  Collector Level Allocation - TC_ID_729",
+              "timedOut": null,
+              "duration": 38309,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.uploadCollectorUnallocationBatchStaff();\n});",
+              "err": {},
+              "uuid": "a11197da-f033-4eaa-a063-58eae2df0d0e",
+              "parentUUID": "22a3e284-edb2-4d80-b19a-30d36e3ba8a2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a11197da-f033-4eaa-a063-58eae2df0d0e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 38309,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

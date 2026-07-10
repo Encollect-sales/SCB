@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T15:21:28.808Z",
+    "end": "2026-06-16T15:22:06.706Z",
+    "duration": 37898,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "73504c23-8a88-453d-ac64-3794b82400a2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\DashboardTestPage_286.cy.js",
+      "file": "cypress\\e2e\\tests\\DashboardTestPage_286.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "39ba4cc3-5c3d-4d2c-af2d-33de86ed7f34",
+          "title": "Dashboard - Dashboard - Issue Receipt from search account through Dashboard",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User should Issue Receipt from search account through Dashboard - TC_ID_286",
+              "fullTitle": "Dashboard - Dashboard - Issue Receipt from search account through Dashboard User should Issue Receipt from search account through Dashboard - TC_ID_286",
+              "timedOut": null,
+              "duration": 27949,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  dashboardpage.DashboardTestPage_286();\n});",
+              "err": {},
+              "uuid": "499ad701-604a-4ed0-ad5f-59a4bca7f629",
+              "parentUUID": "39ba4cc3-5c3d-4d2c-af2d-33de86ed7f34",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "499ad701-604a-4ed0-ad5f-59a4bca7f629"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 27949,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

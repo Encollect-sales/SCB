@@ -59,9 +59,9 @@ class TrailPage {
     cy.wait(2000);
     cy.get(this.locators.search).click({force:true});
     cy.wait(3000);
-    cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Processed').should('be.visible');
+    cy.get('tbody > tr > :nth-child(3)').contains('Processed').should('be.visible');
     cy.wait(2000);
-    cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
+    cy.get("tbody > tr > :nth-child(4)").click();
     cy.wait(3000);
  
 }
@@ -107,9 +107,9 @@ class TrailPage {
     cy.wait(2000);
     cy.get(this.locators.search).click({force:true});
     cy.wait(3000);
-    cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Partially Processed').should('be.visible');
+    cy.get('tbody > tr > :nth-child(3)').contains('Partially Processed').should('be.visible');
     cy.wait(2000);
-    cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
+    cy.get("tbody > tr > :nth-child(4)").click();
     cy.wait(3000);
  
   }
@@ -154,11 +154,7 @@ class TrailPage {
     cy.wait(2000);
     cy.get(this.locators.search).click({force:true});
     cy.wait(3000);
-   cy.get('tbody tr').first().find('td').eq(2)
-  .invoke('text')
-  .then(text => {
-    expect(text.trim()).to.match(/Error|Failed/);
-  });
+ cy.get('tbody > tr > :nth-child(3)').contains('Failed').should('be.visible');
 
     cy.wait(2000);
     // cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();

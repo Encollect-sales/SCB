@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T18:17:32.963Z",
+    "end": "2026-06-16T18:18:25.176Z",
+    "duration": 52213,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "56e0ef39-dc66-45e9-ba63-addef626813e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_756.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_756.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6000e102-3298-499a-a74d-b3173479e6ca",
+          "title": "Allocation - Secondary Allocation by filters -  User selected Product Group as \"Consumer Loan\", Product as \"Unsecured\" and Sub product as \"Personal Loan\"",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Product Filter - TC_ID_756",
+              "fullTitle": "Allocation - Secondary Allocation by filters -  User selected Product Group as \"Consumer Loan\", Product as \"Unsecured\" and Sub product as \"Personal Loan\" Product Filter - TC_ID_756",
+              "timedOut": null,
+              "duration": 46861,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonallocationSAF();\n  allocationPage.fillproductgroupSAF1();\n  allocationPage.fillproductSAF1();\n  allocationPage.fillsubproductSAF1();\n});",
+              "err": {},
+              "uuid": "9c0dbd8b-63c5-4056-8b93-a0a9380689e6",
+              "parentUUID": "6000e102-3298-499a-a74d-b3173479e6ca",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9c0dbd8b-63c5-4056-8b93-a0a9380689e6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 46861,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

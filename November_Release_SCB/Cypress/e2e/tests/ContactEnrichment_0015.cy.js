@@ -6,7 +6,7 @@ import ContactEnrichmentPage from '../pages/ContactEnrichmentPage';
 import { faker } from '@faker-js/faker';
 const path = require('path');
 
-describe('CE_BCU_015 - Address blank accepted', () => {
+describe('CE_BCU_015 - Clicking Cancel after file upload', () => {
 
   let loginPage;
   let contactenrichmentpage;
@@ -21,7 +21,7 @@ describe('CE_BCU_015 - Address blank accepted', () => {
     });
   });
 
-  it('CE_BCU_0022 - Negative – Blank Address field with no mobile', () => {
+  it('CE_BCU_0022 - Positive – Clicking Cancel after file upload', () => {
 
     getTestData('loginData', 'login').then(user => {
 

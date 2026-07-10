@@ -21,7 +21,7 @@ describe('Performance Report (Monthly) - Verify Field Agency user sees pre-fille
 
     it('Verify Field Agency user sees pre-filled agency name', () => {
 
-        getTestData('loginData', 'login1').then(user => {
+        getTestData('loginData', 'login2').then(user => {
 
             loginPage.login(
                 user.Companyname,

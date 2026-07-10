@@ -39,8 +39,8 @@ describe('Trails - New Area Alphanumeric', () => {
             const address = faker.location.streetAddress();
 
             const data = {
-                'A2':'18765',
-                'B2':'1936',
+                'A2':'1667',
+                'B2':'1668',
                 'C2':'yes',
                 'D2':'PTP',
                 'E2':'PTP',

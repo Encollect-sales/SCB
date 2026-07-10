@@ -39,7 +39,7 @@ describe('Trails - Alphanumeric New Contact Number', () => {
             const address = faker.location.streetAddress();
 
             const data = {
-                'A2':'18765',
+                'A2':'1667',
                 'B2':'10031',
                 'C2':'yes',
                 'D2':'PTP',

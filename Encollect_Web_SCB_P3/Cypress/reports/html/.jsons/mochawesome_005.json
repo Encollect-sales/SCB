@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T14:03:17.869Z",
+    "end": "2026-06-16T14:03:59.780Z",
+    "duration": 41911,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "99dc6565-ff50-4855-8bf2-d385c249d128",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocatedvsAchievedReoprtTestPage_006.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocatedvsAchievedReoprtTestPage_006.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bbe4015a-bd82-42b8-af4c-be512b3d6f5f",
+          "title": "TC_006 Reports - Allocated vs Achieved Report - Search result should display properly",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC_006 Reports - Allocated vs Achieved Report - Search result should display properly",
+              "fullTitle": "TC_006 Reports - Allocated vs Achieved Report - Search result should display properly TC_006 Reports - Allocated vs Achieved Report - Search result should display properly",
+              "timedOut": null,
+              "duration": 30072,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  reportpage.allocatedVsAchievedReports_006();\n});",
+              "err": {
+                "message": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 11 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click",
+                "estack": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 11 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click\n    at mouseAction (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:114097:68)\n    at Context.click (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:114264:14)\n    at wrapped (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)\n    at <unknown> (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:147616:15)\n    at tryCatcher (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromiseCtx (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1583:10)\n    at _drainQueueStep (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:2381:12)\n    at _drainQueue (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:2256:14)",
+                "diff": null
+              },
+              "uuid": "83746037-e7cf-44f8-b849-2c725cbdbc07",
+              "parentUUID": "bbe4015a-bd82-42b8-af4c-be512b3d6f5f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "83746037-e7cf-44f8-b849-2c725cbdbc07"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 30072,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

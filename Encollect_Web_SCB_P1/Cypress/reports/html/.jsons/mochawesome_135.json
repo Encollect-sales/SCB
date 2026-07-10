@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T17:44:09.885Z",
+    "end": "2026-06-16T17:44:56.245Z",
+    "duration": 46360,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c8bd7d56-f682-403d-acab-fc45a1abb006",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_720.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_720.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "093213b0-cfd1-45e5-8deb-06ec58ee3e63",
+          "title": "Allocation - Upload Collector Allocation Batch - If invalid data entered and user uploaded the file for allocation, the status for this allocation will show as failed.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Collector Level Allocation - TC_ID_720",
+              "fullTitle": "Allocation - Upload Collector Allocation Batch - If invalid data entered and user uploaded the file for allocation, the status for this allocation will show as failed. Collector Level Allocation - TC_ID_720",
+              "timedOut": null,
+              "duration": 36371,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.clickonUpldCollectorallocation();\n  allocationPage.fillCAtemplate3();\n  allocationPage.clickonCAdownloadTemplate();\n  allocationPage.clickonCARadioBtntelec();\n  allocationPage.CAuploadfile2();\n  allocationPage.clickonCAconfirmOK();\n});",
+              "err": {},
+              "uuid": "f25c8528-d553-439a-947a-7f1eca2abc38",
+              "parentUUID": "093213b0-cfd1-45e5-8deb-06ec58ee3e63",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f25c8528-d553-439a-947a-7f1eca2abc38"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 36371,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

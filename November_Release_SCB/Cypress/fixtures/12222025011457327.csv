@@ -1,3 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009590402,2002,Yes,PTP,PTP,2025-12-26,72,,Dormant agent test,1-907-885-4797 x0579,BTM,Bangalore,Granville95@gmail.com,Permanent,New,12222025011457327,Error,Account number does not exist in database
-DMI0009590401,2002,Yes,PTP,PTP,2025-12-26,72,,Dormant agent test,7590621845,BTM,Bangalore,Walter_Lang36@gmail.com,Permanent,New,12222025011457327,Error,Account number does not exist in database

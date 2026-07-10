@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T19:13:17.471Z",
+    "end": "2026-06-16T19:13:57.563Z",
+    "duration": 40092,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cd3887b6-094e-45f1-8831-53490e77dc1d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_824.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_824.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0b84fa61-27d8-466e-a974-e94c55cbbe87",
+          "title": "Allocation - Primary Allocation By Filters - User entered alphabets or special characters in current DPD field and clicked on search button then system should throw an error as \"Invalid DPD\"",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Product Filter - TC_ID_824",
+              "fullTitle": "Allocation - Primary Allocation By Filters - User entered alphabets or special characters in current DPD field and clicked on search button then system should throw an error as \"Invalid DPD\" Product Filter - TC_ID_824",
+              "timedOut": null,
+              "duration": 34327,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonPrmryAllocationByFltrsrch();\n});",
+              "err": {},
+              "uuid": "9761533e-8e5e-4c5c-98d8-116764e6a611",
+              "parentUUID": "0b84fa61-27d8-466e-a974-e94c55cbbe87",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9761533e-8e5e-4c5c-98d8-116764e6a611"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 34327,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

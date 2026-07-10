@@ -23,7 +23,7 @@ describe('Payments Module - Create batch of payments - Logged in user to select 
         getTestData('loginData', 'login').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
                 cy.wait(2000);
-                paymentsPage.PaymentModule();
+                //paymentsPage.PaymentModule();
                 paymentsPage.ClickOnCreateBatchOfPayment();
                 paymentsPage.ClickOnCreateBatchOfPayment_DataError();
                 

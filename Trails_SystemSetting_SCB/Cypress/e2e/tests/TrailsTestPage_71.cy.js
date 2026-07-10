@@ -44,8 +44,8 @@ describe('Trails - Re-upload same file while previous upload is processing ', ()
             //################################################################################
 
             const data = {
-                'A2':'18765',
-                'B2': '67609',
+                'A2':'1667',
+                'B2': '1668',
                 'C2': 'yes',
                 'D2': 'PTP',
                 'E2': 'PTP',

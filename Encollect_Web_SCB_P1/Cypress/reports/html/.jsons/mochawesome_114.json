@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T17:23:37.670Z",
+    "end": "2026-06-16T17:24:20.383Z",
+    "duration": 42713,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e4849e34-dc05-4463-bd8d-48fa1034a20f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_700.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_700.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "766caa36-f1f0-457b-a776-1960f0fbbbcf",
+          "title": "Allocation - Upload Agency Allocation Batch -When the user trying to upload the file, but the file name has any special characters, system will throw an error as \"File name should not contain any special characters\" ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Agency Level Allocation - TC_ID_700",
+              "fullTitle": "Allocation - Upload Agency Allocation Batch -When the user trying to upload the file, but the file name has any special characters, system will throw an error as \"File name should not contain any special characters\"  Agency Level Allocation - TC_ID_700",
+              "timedOut": null,
+              "duration": 34414,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.Clickonallocation();\n  allocationPage.filltemplate3();\n  allocationPage.clickondownloadTemplate();\n  allocationPage.clickonRadioBtnAO();\n  allocationPage.uploadfilewithSpclChrctr();\n  allocationPage.clickonOK700();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(1) > .enc-card > .card-content > :nth-child(1) > .form-radio-group > :nth-child(1)`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(1) > .enc-card > .card-content > :nth-child(1) > .form-radio-group > :nth-child(1)`, but never found it.\n    at AllocationPage.filltemplate3 (webpack:///./cypress/e2e/pages/AllocationPage.js:165:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_700.cy.js:28:26)",
+                "diff": null
+              },
+              "uuid": "57012dfc-cd67-4b91-87e3-ceb64b115428",
+              "parentUUID": "766caa36-f1f0-457b-a776-1960f0fbbbcf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "57012dfc-cd67-4b91-87e3-ceb64b115428"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 34414,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

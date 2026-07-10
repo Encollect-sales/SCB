@@ -66,6 +66,8 @@ cy.wait(2000);
     cy.wait(2000);
     cy.get(this.locators.fillTINNumber).type("123456");
     cy.wait(2000);
+    const randomNum = Math.floor(10000 + Math.random() * 90000);
+    cy.get(':nth-child(8) > .form-control').clear().type(randomNum.toString());
    // const encode = faker.number.int({ min: 10000, max: 99999 }).toString();
     //  cy.get('.col-md-6.ng-star-inserted > .form-control').type(encode);
     cy.wait(2000);
@@ -148,31 +150,31 @@ cy.wait(2000);
     cy.wait(2000);
     cy.get('input[type="file"]').eq(0)
     .attachFile(filePath, { force: true });
-    cy.wait(2000);
+    cy.wait(20000);
     cy.get('#agencydocTypeSelect-1').select('Pan Card');
     cy.get('#agencyaddFileBtn-1').click();
-    cy.wait(2000);
+    cy.wait(20000);
     cy.get('input[type="file"]').eq(1)
     .attachFile(filePath1, { force: true });
-    cy.wait(2000);
+    cy.wait(20000);
     cy.get('input[type="file"]').eq(1)
     .attachFile(filePath1, { force: true });
-    cy.wait(2000);
+    cy.wait(20000);
     cy.get('#agencydocTypeSelect-2').select('Aadhar Card');
     cy.get('#agencyaddFileBtn-2').click();
-    cy.wait(2000);
+    cy.wait(20000);
     cy.get('input[type="file"]').eq(2)
     .attachFile(filePath1, { force: true });
-    cy.wait(2000);
+    cy.wait(20000);
     cy.get('input[type="file"]').eq(3)
     .attachFile(filePath1, { force: true });
-    cy.wait(2000);
+    cy.wait(20000);
     cy.get('input[type="file"]').eq(4)
     .attachFile(filePath1, { force: true });
-    cy.wait(2000);
+    cy.wait(20000);
     cy.get('input[type="file"]').eq(5)
     .attachFile(filePath1, { force: true });
-    cy.wait(2000);
+    cy.wait(20000);
     //////-----------------
     cy.get(this.locators.scopeofword).click();
     cy.wait(2000);
@@ -462,14 +464,14 @@ cy.wait(2000);
 cy.wait(1000);     
 
 cy.get(this.locators.selectAgencySubType)
-  .find('option') 
+  .find('option:not(:disabled)')
   .then($options => {
-    const optionsCount = $options.length;
-    const randomIndex = Math.floor(Math.random() * optionsCount); 
-    const randomValue = $options[randomIndex].value; 
+    const randomValue = $options.eq(
+      Math.floor(Math.random() * $options.length)
+    ).val();
 
-cy.wait(1000);
-    cy.get(this.locators.selectAgencySubType).select(randomValue, { force: true });
+    cy.get(this.locators.selectAgencySubType)
+      .select(randomValue, { force: true });
   });
 
 cy.wait(1000);
@@ -637,11 +639,11 @@ cy.wait(2000);
   cy.wait(2000);
     cy.get(this.locators.clickonARD).click();
     cy.wait(2000);
-    cy.get(this.locators.firstagreementdate).type('02-04-2024');
+    cy.get(this.locators.firstagreementdate).type('02-June-24');
     cy.wait(2000);
-    cy.get(this.locators.lastrenewaldate).type('06-05-2024');
+    cy.get(this.locators.lastrenewaldate).type('06-June-24');
     cy.wait(2000);
-    cy.get(this.locators.Contactexpiredate).type('30-09-2026');
+    cy.get(this.locators.Contactexpiredate).type('30-June-26');
     cy.wait(2000);
     cy.get(this.locators.addremark).type("This is ok",{force:true});
     cy.wait(2000);
@@ -906,11 +908,11 @@ cy.wait(2000);
   cy.wait(2000);
     cy.get(this.locators.clickonARD).click();
     cy.wait(2000);
-    cy.get(this.locators.firstagreementdate).type('02-04-2024');
+    cy.get(this.locators.firstagreementdate).type('02-April-24');
     cy.wait(2000);
-    cy.get(this.locators.lastrenewaldate).type('06-05-2024');
+    cy.get(this.locators.lastrenewaldate).type('06-April-24');
     cy.wait(2000);
-    cy.get(this.locators.Contactexpiredate).type('30-09-2026');
+    cy.get(this.locators.Contactexpiredate).type('30-September-26');
     cy.wait(2000);
     cy.get(this.locators.addremark).type("This is ok",{force:true});
     cy.wait(2000);
@@ -929,8 +931,12 @@ cy.wait(2000);
     cy.wait(2000);
     cy.get(this.locators.clickonAER).click();
     cy.wait(2000);
-   const agencyNameRaw = faker.word.sample({ length: { min: 6, max: 12 } });
-const agencyName = agencyNameRaw.charAt(0).toUpperCase() + agencyNameRaw.slice(1);
+const agencyNameRaw = faker.word.sample({ length: { min: 6, max: 12 } })
+  .replace(/[^a-zA-Z]/g, '');
+const agencyName =
+  agencyNameRaw.charAt(0).toUpperCase() + agencyNameRaw.slice(1);
+
+cy.log(agencyName);
 cy.get(this.locators.fillAgencyName).type(agencyName);
 cy.wait(2000);    
 cy.get(this.locators.selectRecommendingOfficer)

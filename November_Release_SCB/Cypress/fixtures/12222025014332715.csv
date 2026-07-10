@@ -1,3 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009602001,2004,Yes,PTP,PTP,2025-12-26,96,,Saved as Draft agent test,734.574.9943 x99048,BTM,Bangalore,Bartholome56@gmail.com,Permanent,New,12222025014332715,Error,Account number does not exist in database
-DMI0009602002,2004,Yes,PTP,PTP,2025-12-26,96,,Saved as Draft agent test,1-667-645-9750,BTM,Bangalore,Lane.Schulist@yahoo.com,Permanent,New,12222025014332715,Error,Account number does not exist in database

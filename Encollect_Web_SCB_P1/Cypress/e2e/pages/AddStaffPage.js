@@ -88,9 +88,8 @@ selectUserType(){
   
 typeexistingcode(){
 
-const randomNum = Math.floor(100000 + Math.random() * 900000);
-cy.get('#customId').type(randomNum);
-cy.wait(2000);
+const randomNum = Math.floor(10000 + Math.random() * 90000);
+cy.get('#customId').type(randomNum.toString());
 
 
 
@@ -128,39 +127,33 @@ cy.wait(2000);
 
   }
 
-  UpdateStaff(){
-    cy.wait(2000);
+ UpdateStaff() {
+
     cy.get('#empStatus').select("Saved As Draft");
     cy.wait(2000);
     cy.get('#btn-search').click();
     cy.wait(2000);
-    cy.get(":nth-child(1) > :nth-child(9) > .form-control-group > .form-check-group > label > input").click();
+    cy.get(':nth-child(1) > :nth-child(9) > .form-control-group > .form-check-group > label > input').click();
     cy.wait(2000);
     cy.get('#btn-edit').click();
     cy.wait(2000);
-    cy.get('#lastName').clear({force: true} ).type("Kumar");
+    cy.get('.global-loader-container', { timeout: 10000 }).should('not.exist');
+    cy.wait(7000);
+    cy.get('#lastName').scrollIntoView().clear().type('Kumar');
     cy.wait(2000);
-    // cy.get('#lastName').type("Kumar");
-    // cy.wait(2000);
     cy.get(':nth-child(5) > .nav-link').click();
     cy.wait(2000);
-     cy.get('#spManager > .ng-select-container > .ng-arrow-wrapper').type("A");
-    cy.wait(3000);
-cy.get('.ng-option-label')
-  .then($options => {
-    const optionsCount = $options.length;
-    const randomIndex = Math.floor(Math.random() * optionsCount);
-    cy.wrap($options[randomIndex]).click({ force: true });
-  });
-  cy.wait(2000);
+    cy.get('#spManager > .ng-select-container > .ng-arrow-wrapper').click();
+    cy.wait(2000);
+    cy.get('.ng-option-label').then($options => {
+        const randomIndex = Math.floor(Math.random() * $options.length);
+        cy.wrap($options[randomIndex]).click();
+    });
 
     cy.get('#btn-update').click();
-    cy.wait(8000);
-    cy.contains("Collection staff updated successfully.").should("be.visible");
     cy.wait(2000);
-
-
-  }
+    cy.contains('Collection staff updated successfully.', { timeout: 10000 }).should('be.visible');
+}
 
   clickcancel(){
 
@@ -273,6 +266,8 @@ cy.get('.ng-option-label')
     cy.wait(3000);
     cy.get(".ng-option").first().click();
     cy.wait(2000);
+    cy.get('.panel-open > .panel > .panel-heading > .panel-title').click({force:true});
+    cy.wait(2000);
     cy.get(this.locators.ClickOnGeography_head).click();
     cy.wait(1000);
     cy.get('#geo-scope-HL04').click();
@@ -287,34 +282,36 @@ cy.get('.ng-option-label')
 
   }
 
-     ScopeOfWorkTestPage_02(){
-
+    ScopeOfWorkTestPage_02() {
     cy.get(this.locators.ClickOn_productgroup).click();
-    cy.wait(1000);
-    cy.get(this.locators.Select_product_group).click();
-    cy.wait(1000);
-    cy.get(".ng-option").eq(1).click();
-    cy.wait(1000);
-    cy.get(this.locators.Product_Panel).click()
     cy.wait(2000);
-     cy.get(this.locators.ClickOnBucket_head).click();
-    cy.wait(1000);
+    cy.get(this.locators.Select_product_group).click();
+    cy.wait(2000);
+    cy.get('.ng-option').eq(1).click();
+    cy.wait(2000);
+    cy.get('body').click(0, 0);
+    cy.wait(2000);
+    cy.get(this.locators.Product_Panel).scrollIntoView().click();
+    cy.wait(2000);
+    cy.get(this.locators.ClickOnBucket_head).click();
+    cy.wait(2000);
     cy.get(this.locators.Bucket_panel_open).click();
-    cy.wait(3000);
-    cy.get(".ng-option").eq(1).click();
+    cy.wait(2000);
+    cy.get('.ng-option').eq(1).click();
+    cy.wait(2000);
+    cy.get('body').click(0, 0);
     cy.wait(2000);
     cy.get(this.locators.ClickOnGeography_head).click();
-    cy.wait(1000);
+    cy.wait(2000);
     cy.get('#geo-scope-HL04').click();
     cy.wait(2000);
     cy.get(this.locators.Geography_panel_open).click();
     cy.wait(2000);
-     cy.get(".ng-option").first().click();
+    cy.get('.ng-option').first().click();
     cy.wait(2000);
-    cy.get(this.locators.geography_Panel_close).click();
-    cy.wait(3000);
-
-     }
+    cy.get('body').click(0, 0);
+    cy.get(this.locators.geography_Panel_close).should('be.visible').click();
+}
 
      ScopeOfWorkTestPage_03(){
 
@@ -331,6 +328,8 @@ cy.get('.ng-option-label')
     cy.get(this.locators.Bucket_panel_open).click();
     cy.wait(3000);
     cy.get(".ng-option").eq(2).click();
+    cy.wait(2000);
+    cy.get('.panel-open > .panel > .panel-heading > .panel-title').click({force:true});
     cy.wait(2000);
     cy.get(this.locators.ClickOnGeography_head).click();
     cy.wait(1000);
@@ -950,7 +949,7 @@ cy.wait(1000);
 
 
     cy.get('#spManager > .ng-select-container > .ng-arrow-wrapper').type("A");
-    cy.wait(3000);
+    cy.wait(9000);
 cy.get('.ng-option-label')
   .then($options => {
     const optionsCount = $options.length;

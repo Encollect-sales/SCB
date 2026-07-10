@@ -1223,7 +1223,7 @@
 
     "ReportsPage" : {
       "clickonreports"  : "#nav-item-1-reports",
-      "clickonAccountDashboardReport":":nth-child(2) > :nth-child(7) > .ng-star-inserted",
+      "clickonAccountDashboardReport":"#nav-item-1-reports",
       "paymentreport" : "#nav-item-2-payment-report",
       "receiptFrom" : "#receiptDate_from",
       "ProductSelect":":nth-child(2) > .form-select",
@@ -1270,7 +1270,7 @@
 
     "CommunicationPage" : {
       "clickoncommunication":"#nav-item-1-communication",
-      "communicationtemplate" : ".communication > .sub-nav-list > :nth-child(2) > .ng-star-inserted",
+      "communicationtemplate" : "#nav-item-2-create-communication-template",
       "createcommunicationtemplate" : ".#nav-item-2-create-communication-template",
       "createnewtemplate" : ":nth-child(3) > .form-control-group > .form-radio-group > :nth-child(2) > .ng-valid",
       "templatename" : "#templateName",
@@ -1335,7 +1335,7 @@
       "clickondropdown" : ".ng-arrow-wrapper",
       "clickonmap" : ".modal-footer > .btn",
       "selectsms" : "#channelTypeSMS",
-      "subjectline" : "#subject",
+      "subjectline" : "#dltTemplateId",
       "smsradio"  : "input[value='sms']",
       "createnewTemp" : "input[value='new']",
       "useexistingtemplate" : ":nth-child(3) > .form-control-group > .form-radio-group > :nth-child(1) > .ng-valid",
@@ -1466,7 +1466,8 @@
       "Notification_header":"#notificationHeader",
       "tempelate":".editor-container",
       "template_id":"#dltTemplateId",
-      "temp_body_sms":".editor-container > .form-control"
+      "temp_body_sms":".editor-container > .form-control",
+      "subject":"#subject"
  
     },
 
@@ -1551,7 +1552,7 @@
       "allocation"  : "#nav-item-1-allocation",
       "uploadAgencyAllocationBatch"   :   "#nav-item-2-agency-bulk-upload",
       "select_template_for_primary_allocation"  :   ".col-md-12 > .form-control",
-      "downloadTemplateOfPrimaryAllocationFile" :   ".btn.btn-secondary.ng-star-inserted",
+      "downloadTemplateOfPrimaryAllocationFile" :   ".card-content > :nth-child(2) > .btn",
       "yesconfirm1" : "#confirm-dialog-okay",
       "uploadCollectorAllocationBatch"  : "body > app-root:nth-child(1) > div:nth-child(1) > div:nth-child(2) > app-navbar:nth-child(1) > div:nth-child(1) > div:nth-child(2) > ul:nth-child(1) > li:nth-child(5) > a:nth-child(1) > span:nth-child(2)",
       "select_template_for_colletor_allocation" : "select[name='template']",
@@ -1628,7 +1629,7 @@
       "Trail_History_Report":"#nav-item-3-trail-history-report",
       "Trail_from_date":"#trailDate_from",
       "Trail_To_Date":"#trailDate_to",
-      "Gene_Report":"#generateReport",
+      "Gene_Report":"#downloadReport",
       "BOM":"#bOMBucket",
       "DisCode_Group":"#discCodeGroup",
       "DisCode":"#discCode",

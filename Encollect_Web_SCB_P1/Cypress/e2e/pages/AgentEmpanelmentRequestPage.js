@@ -379,7 +379,7 @@ cy.wait(2000);
     cy.wait(2000);
     cy.get('#emer_contactNO').type(8838506890);
     cy.wait(2000);
-    cy.get('#bloodGroup').select("A-");
+    cy.get('#bloodGroup').scrollIntoView().select('A-', { force: true });
     cy.wait(2000);
     cy.get("#mobileTypeId").select("MO",{force : true});
     cy.wait(2000);
@@ -820,29 +820,27 @@ cy.wait(2000);
 
     cy.get(':nth-child(7) > .nav-link > span').click().should('be.visible');
 
-    cy.wait(2000);
+    cy.wait(20000);
     cy.get("#docTypeSelect-0").select("Pan Card").should('be.visible');
-    cy.wait(2000);
+    cy.wait(20000);
     cy.get('#addFileBtn-0').click();
+    cy.wait(20000);
     cy.get('input[type="file"]').eq(1).selectFile(filePath, { force: true });
-    cy.wait(2000);
-   
+    cy.wait(20000);
     cy.get('#docTypeSelect-1').select("Aadhar Card").should('be.visible');
-    cy.wait(2000);
+    cy.wait(20000);
     cy.get('#addFileBtn-1').click();
+    cy.wait(20000);
     cy.get('input[type="file"]').eq(2).selectFile(filePath, { force: true });
     cy.wait(2000);
-
     cy.get("#docTypeSelect-2").select("Agency ID Card").should('be.visible');
     cy.wait(2000)
     cy.get('input[type="file"]').eq(3).selectFile(filePath, { force: true });
     cy.wait(2000);
-
     cy.get("#docTypeSelect-3").select("HOC Approval").should('be.visible');
     cy.wait(2000)
     cy.get('input[type="file"]').eq(4).selectFile(filePath, { force: true });
     cy.wait(2000);
-
      cy.get(':nth-child(8) > .nav-link > span').click().should('be.visible');
      cy.wait(2000);
 

@@ -17,8 +17,8 @@ class SendPaymentPage {
     cy.wait(2000);
     cy.get('tbody tr td:nth-child(4) a').first().click({force:true});
     cy.wait(2000);
-    cy.get(this.locators.selectoption).click({force:true});
-    cy.wait(2000);
+    cy.get('#selectOption').click({force:true});
+    cy.wait(5000);
     cy.get(this.locators.send_payment_link).click({force:true});
     cy.wait(2000);
     cy.get(this.locators.razor_pay).click({force:true});

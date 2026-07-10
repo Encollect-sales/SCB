@@ -44,13 +44,13 @@ describe('Trails - PTP Amount Empty with Action Code and Result Code as BPTP', (
             //################################################################################
 
             const data = {
-                'A2':'18765',
-                'B2': '67609',
+                'A2':'1667',
+                'B2': '1668',
                 'C2': 'yes',
                 'D2': 'BPTP',
                 'E2': 'BPTP',
-                'F2': '2027/12/22',
-                'G2': ' ',
+                'F2': '2027-12-22',
+                'G2': '',
                 'H2': ' ',
                 'I2':'Bulk upload',
                 'J2': phoneNumber,
@@ -86,7 +86,7 @@ describe('Trails - PTP Amount Empty with Action Code and Result Code as BPTP', (
                                         });
                 
                 // Upload the file from `fixtures/`
-                trailspage.Bulktrail_Failed();
+                trailspage.Bulktrail_Processed();
             });
         });
     });

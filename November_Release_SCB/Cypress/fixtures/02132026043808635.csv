@@ -1,3 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009801001,1933,Yes,PTP,PTP,2026-12-26,80,,Failure reason validation,891-879-6726,BTM,Bangalore,Cydney_Hettinger-Prosacco@yahoo.com,Permanent,New,02132026043808635,Error,Account number does not exist in database
-LXMUM33020211742684,1936,Yes,PTP,PTP,2026-12-26,80,,Approved agent,838.285.0389 x47030,BTM,Bangalore,Gabe_Konopelski85@yahoo.com,Permanent,New,02132026043808635,Error,Agent ID not approved

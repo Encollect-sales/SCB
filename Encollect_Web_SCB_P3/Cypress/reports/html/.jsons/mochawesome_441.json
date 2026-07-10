@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T21:31:21.834Z",
+    "end": "2026-06-16T21:32:24.311Z",
+    "duration": 62477,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "86445577-4771-4907-a0c9-ff0f933d8715",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\SystemSettingTestPage_1163.cy.js",
+      "file": "cypress\\e2e\\tests\\SystemSettingTestPage_1163.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a40f2d9d-6d70-4021-8170-a756f17c016f",
+          "title": "System Setting - Master Upload - Admin selected Base Branch master from file type and clicked on search button.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Master Upload- TC_ID_1163-  Result grid will appear with transaction id, file name and status.",
+              "fullTitle": "System Setting - Master Upload - Admin selected Base Branch master from file type and clicked on search button. Master Upload- TC_ID_1163-  Result grid will appear with transaction id, file name and status.",
+              "timedOut": null,
+              "duration": 55954,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  systemsettingpage.SystemSettingTestPage_1163();\n});",
+              "err": {},
+              "uuid": "75ae7fe7-c838-4eae-8cd9-9431c01fb2bf",
+              "parentUUID": "a40f2d9d-6d70-4021-8170-a756f17c016f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "75ae7fe7-c838-4eae-8cd9-9431c01fb2bf"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 55954,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T20:02:24.176Z",
+    "end": "2026-06-16T20:03:03.025Z",
+    "duration": 38849,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "abfdfe3d-b470-47ce-a75a-89ff021b2387",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\SettlementTestPage_57.cy.js",
+      "file": "cypress\\e2e\\tests\\SettlementTestPage_57.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d14b4fbb-3d2f-4cf2-b3fd-ed86691e325b",
+          "title": "TC_ID_57 - Settlement - Verify that the Aging in Current Status (Open Cases) table displays the Range of Aging (in days) in Current Status and Settlement #.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC_ID_57 - Settlement",
+              "fullTitle": "TC_ID_57 - Settlement - Verify that the Aging in Current Status (Open Cases) table displays the Range of Aging (in days) in Current Status and Settlement #. TC_ID_57 - Settlement",
+              "timedOut": null,
+              "duration": 28734,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login4').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  settlementpage.SettlementTestPage_57();\n});",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<a _ngcontent-ng-c1685742509=\"\" title=\"Settlement\" id=\"nav-item-1-settlement\">...</a>`\n\nis being covered by another element:\n\n`<div _ngcontent-ng-c3592861308=\"\" class=\"bg-white container px-5 py-4\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<a _ngcontent-ng-c1685742509=\"\" title=\"Settlement\" id=\"nav-item-1-settlement\">...</a>`\n\nis being covered by another element:\n\n`<div _ngcontent-ng-c3592861308=\"\" class=\"bg-white container px-5 py-4\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at ensureIsDescendent (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:114504:68)\n    at ensureDescendents (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:114555:5)\n    at ensureDescendentsAndScroll (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:114561:14)\n    at ensureElIsNotCovered (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:114692:5)\n    at runAllChecks (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:114891:52)\n    at retryActionability (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:114928:16)\n    at tryCatcher (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at whenStable (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:147344:68)\n    at <unknown> (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:147285:14)\n    at tryCatcher (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1671:18)\n    at Promise._fulfill (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1615:18)\n    at <unknown> (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:5420:46)",
+                "diff": null
+              },
+              "uuid": "bb64c038-8aa8-43bf-81e0-9ac882b033b3",
+              "parentUUID": "d14b4fbb-3d2f-4cf2-b3fd-ed86691e325b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "bb64c038-8aa8-43bf-81e0-9ac882b033b3"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 28734,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

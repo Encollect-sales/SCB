@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T19:26:16.711Z",
+    "end": "2026-06-16T19:26:59.703Z",
+    "duration": 42992,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "309d53dc-4131-4608-9a15-db9a36836300",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_839.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_839.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "47e60328-074f-4c40-bac8-5b2098346062",
+          "title": "Allocation -  Secondary Allocation By Filters- User clicked on Allocate button without selecting the accounts in result grid then system should throw an error as \"Please select the accounts\"",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Product Filter - TC_ID_839",
+              "fullTitle": "Allocation -  Secondary Allocation By Filters- User clicked on Allocate button without selecting the accounts in result grid then system should throw an error as \"Please select the accounts\" Product Filter - TC_ID_839",
+              "timedOut": null,
+              "duration": 36851,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonSABF();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.panel-open > .panel > .panel-collapse > .panel-body > .row > .col-lg-4.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.panel-open > .panel > .panel-collapse > .panel-body > .row > .col-lg-4.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input`, but never found it.\n    at AllocationPage.ClickonSABF (webpack:///./cypress/e2e/pages/AllocationPage.js:1509:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_839.cy.js:26:27)",
+                "diff": null
+              },
+              "uuid": "c184d161-a515-4e49-adf3-15a72fb958f1",
+              "parentUUID": "47e60328-074f-4c40-bac8-5b2098346062",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "c184d161-a515-4e49-adf3-15a72fb958f1"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 36851,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

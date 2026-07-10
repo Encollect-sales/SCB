@@ -1,2 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009590352,tryuyr,ss,PTP,PTP,2025-12-26,80,,Bulk upload Aug29,7053179461,btm,banglore,Pete_Berge@yahoo.com,permanent,new,01272026090739349,Error,Next action date cannot be less than current date

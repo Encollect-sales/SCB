@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T18:21:22.617Z",
+    "end": "2026-06-16T18:22:03.942Z",
+    "duration": 41325,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "44adb4ae-9eb1-4468-b4c5-9b58b007b6ea",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_760.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_760.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2d72f2db-d7ec-4e74-86ac-90bbc48a7999",
+          "title": "Allocation - Secondary Allocation by filters - All fields under Product filters are cascading drop down values. The values under dropdown are populated based on item selected by user from another dropdown list.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Product Filter - TC_ID_279",
+              "fullTitle": "Allocation - Secondary Allocation by filters - All fields under Product filters are cascading drop down values. The values under dropdown are populated based on item selected by user from another dropdown list. Product Filter - TC_ID_279",
+              "timedOut": null,
+              "duration": 35101,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonallocationSAF();\n  allocationPage.fillproductgroupSAF4();\n  allocationPage.fillproductSAF4();\n  allocationPage.fillsubproductSAF4();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Loan Products' within the element: <div#a351a67749cc-4.ng-option> but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Loan Products' within the element: <div#a351a67749cc-4.ng-option> but never did.\n    at AllocationPage.fillproductgroupSAF4 (webpack:///./cypress/e2e/pages/AllocationPage.js:929:44)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_760.cy.js:28:26)",
+                "diff": null
+              },
+              "uuid": "28947eb6-5056-438d-9c99-b4fa4d487ac4",
+              "parentUUID": "2d72f2db-d7ec-4e74-86ac-90bbc48a7999",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "28947eb6-5056-438d-9c99-b4fa4d487ac4"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 35101,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

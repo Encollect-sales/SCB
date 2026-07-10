@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T19:09:48.031Z",
+    "end": "2026-06-16T19:10:25.157Z",
+    "duration": 37126,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "eb46052a-7873-42e6-8860-a6900c70e215",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_819.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_819.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9caf15dd-3fb1-4425-8f0d-3fe97a282b43",
+          "title": "Allocation - Secondary Unallocation Status - User clicked on search button without selecting anyone of the filter in Secondary Unallocation status, then system should throw an error as \"Enter atleast one filter value\" in the pop up",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Product Filter - TC_ID_819",
+              "fullTitle": "Allocation - Secondary Unallocation Status - User clicked on search button without selecting anyone of the filter in Secondary Unallocation status, then system should throw an error as \"Enter atleast one filter value\" in the pop up Product Filter - TC_ID_819",
+              "timedOut": null,
+              "duration": 31066,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonallocationSUS1();\n});",
+              "err": {},
+              "uuid": "c18e88eb-d80b-4981-a206-b81bcde81e5c",
+              "parentUUID": "9caf15dd-3fb1-4425-8f0d-3fe97a282b43",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c18e88eb-d80b-4981-a206-b81bcde81e5c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 31066,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,4 +1,0 @@
-AgreementId,AddressType,Address,MobileNumber,WorkRequestId,UploadStatus,ErrorMessage
-1667,Residential,,,02152026083340055,Error,Provide Address or MobileNumber
-9999999,Mobile,948 Third Avenue,4810055347,02152026083340055,Error,AgreementId does not exist
-8888888,,,,02152026083340055,Error,AgreementId does not exist

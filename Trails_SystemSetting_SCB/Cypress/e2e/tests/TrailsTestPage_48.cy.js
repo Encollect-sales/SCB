@@ -45,14 +45,14 @@ describe('Trails - NextActionCode with Alphanumeric Value', () => {
 
             const data = {
                   
-                'A2':'18765',
-                'B2': '67609',
+                'A2':'1667',
+                'B2': '1668',
                 'C2': 'yes',
                 'D2': 'PTP',
                 'E2': 'PTP',
-                'F2': '2027/12/22',
+                'F2': '2027-12-22',
                 'G2': '109',
-                'H2':'SDFD',
+                'H2':'Call',
                 'I2':'Bulk upload',
                 'J2': phoneNumber,
                 'K2': city,

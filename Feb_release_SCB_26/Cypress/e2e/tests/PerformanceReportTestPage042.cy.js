@@ -21,7 +21,7 @@ describe('Performance Report (Monthly) - Verify Bank Staff option is hidden for 
 
     it('Verify Field Agency user sees pre-filled agency name', () => {
 
-        getTestData('loginData', 'login1').then(user => {
+        getTestData('loginData', 'login2').then(user => {
 
             loginPage.login(
                 user.Companyname,

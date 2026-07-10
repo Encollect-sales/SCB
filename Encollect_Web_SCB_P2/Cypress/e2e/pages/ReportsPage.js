@@ -235,7 +235,7 @@ cy.contains("Receipt To Date").should("be.visible");
   PaymentReport313(){
     cy.get(this.locators.clickonAccountDashboardReport).first().click({ force: true });
     cy.wait(400);
-    cy.get(':nth-child(1) > :nth-child(1) > label').should("be.visible");
+    cy.get('#nav-item-2-payment-report').should("be.visible");
     cy.wait(400);
     cy.get(this.locators.ProductGrpoupselect).select("All", {force: true} ).should("be.visible");
     cy.wait(400);
@@ -277,7 +277,7 @@ cy.contains("Receipt To Date").should("be.visible");
   PaymentReport314(){
     cy.get(this.locators.clickonAccountDashboardReport).click();
     cy.wait(400);
-    cy.get(':nth-child(1) > :nth-child(1) > label').should("be.visible");
+    cy.get('#nav-item-2-payment-report').should("be.visible");
     cy.wait(400);
     cy.get(this.locators.ProductGrpoupselect).select("All", {force: true} ).should("be.visible");
     cy.wait(400);

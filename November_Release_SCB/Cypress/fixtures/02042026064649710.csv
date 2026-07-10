@@ -1,2 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009590401,1917,Yes,PTP,PTP,2025-12-26,50,,Dormant agent test,9365931933,BTM,Bangalore,Tyshawn.Welch@yahoo.com,Permanent,New,02042026064649710,Error,Next action date cannot be less than current date

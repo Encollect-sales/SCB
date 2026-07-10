@@ -1,2 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009590352,<script>,ss,PTP,PTP,2025-12-26,29,,Bulk upload Aug29,7962766799,btm,banglore,Rickie24@yahoo.com,permanent,new,02042026064341424,Error,Next action date cannot be less than current date

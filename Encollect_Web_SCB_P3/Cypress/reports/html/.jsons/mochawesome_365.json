@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T20:20:51.176Z",
+    "end": "2026-06-16T20:21:22.466Z",
+    "duration": 31290,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7b84d5a6-c922-4a37-9c01-6d6adb0e35fc",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\SettlementTestPage_83.cy.js",
+      "file": "cypress\\e2e\\tests\\SettlementTestPage_83.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c4c922f2-d5b9-437b-9d9b-7f1735c6dcb4",
+          "title": "TC_ID_83 - Settlement - Settlement - My Request - Check Day range 6-10 from Aging From Requested Date (Open Settlements)",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC_ID_83 - Settlement",
+              "fullTitle": "TC_ID_83 - Settlement - Settlement - My Request - Check Day range 6-10 from Aging From Requested Date (Open Settlements) TC_ID_83 - Settlement",
+              "timedOut": null,
+              "duration": 23546,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login2').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  settlementpage.SettlementTestPage_83();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Settlement' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Settlement' but never did.\n    at Context.eval (webpack://encollect_web/./cypress/e2e/pages/SettlementPage.js:3275:11)\n    at getRet (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "5d1123fa-61d1-41fe-9f43-74a9359eff73",
+              "parentUUID": "c4c922f2-d5b9-437b-9d9b-7f1735c6dcb4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "5d1123fa-61d1-41fe-9f43-74a9359eff73"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 23546,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

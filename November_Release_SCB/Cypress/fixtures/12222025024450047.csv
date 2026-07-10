@@ -1,3 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009001515,1515,Yes,PTP,PTP,2025-12-26,52,,Approved agent record,799.490.6662 x17077,BTM,Bangalore,Rosanna_Marvin@gmail.com,Permanent,New,12222025024450047,Error,Account number does not exist in database
-DMI0009001907,1907,Yes,PTP,PTP,2025-12-26,52,,Non-approved agent,1-585-856-9812 x1667,BTM,Bangalore,Bonnie_Bauch3@gmail.com,Permanent,New,12222025024450047,Error,Account number does not exist in database

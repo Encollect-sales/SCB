@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T14:14:52.582Z",
+    "end": "2026-06-16T14:15:39.254Z",
+    "duration": 46672,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b7ca3b0a-c9ed-4c8f-a4ed-4a37ff4e1f59",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationTestPage_10.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationTestPage_10.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "15a1f9b4-7202-4e55-9251-f194cd2b4101",
+          "title": "Allocation - Logged in user to click on customer id level sub menu to download the secondary allocation templates of field agent or tele calling agent or staff.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Allocation Module - TC_ID_10",
+              "fullTitle": "Allocation - Logged in user to click on customer id level sub menu to download the secondary allocation templates of field agent or tele calling agent or staff. Allocation Module - TC_ID_10",
+              "timedOut": null,
+              "duration": 42453,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  allocationpage.AllocationTestPage_10_download();\n  const sheetName = 'Sheet1';\n  Cypress.on('uncaught:exception', (err, runnable) => {\n    if (err.message.includes('ResizeObserver loop completed with undelivered notifications.')) {\n      return false;\n    }\n  });\n  const data = {\n    'A2': '41174',\n    'B2': '1660',\n    'C2': '2025-20-11'\n  };\n  const downloadsFolder = Cypress.config('downloadsFolder');\n  const fixturesFolder = 'cypress/fixtures';\n  const excelFileName = 'ENCollectSecondaryAllocationCollectionStaff_Customerlevel.xlsx';\n  const sourceFilePath = path.join(downloadsFolder, excelFileName);\n  const destFilePath = path.join(fixturesFolder, excelFileName);\n  // Update Excel File\n  cy.task('updateENCollectSecondaryAllocationCollectionStaff_CustomerlevelCell', {\n    filePath: sourceFilePath,\n    sheetName: sheetName,\n    data: data\n  }).then(() => {\n    cy.log('Excel file updated successfully with new data');\n  });\n  cy.task('moveAllDownloadsToFixtures').then(result => {\n    cy.log(result);\n  });\n  allocationpage.AllocationTestPage_10_upload();\n});",
+              "err": {},
+              "uuid": "6868db9f-7443-4e5c-96d5-92ab5fcce73d",
+              "parentUUID": "15a1f9b4-7202-4e55-9251-f194cd2b4101",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6868db9f-7443-4e5c-96d5-92ab5fcce73d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 42453,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

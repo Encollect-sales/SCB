@@ -11,12 +11,14 @@ class UserManagementPage {
 
  cy.get('#nav-item-1-user-management').click({force:true});
   cy.wait(2000);
+  cy.get(this.locators.agent_emp).click({force:true});
+  cy.wait(2000);
   cy.get(this.locators.agent).click({ force: true });
   cy.contains('Add Agent').click({ force: true });
 
    cy.get(this.locators.agency_name_dropdown)
     .should('be.visible')
-    .select('DRG agency');
+    .select('Tony');
 
   // Validate label
   cy.contains('label', 'Agency Reporting Manager')
@@ -58,12 +60,11 @@ class UserManagementPage {
 
  RM_002_No_Approved_Users_Agency() {
   cy.wait(2000);
- cy.get('#nav-item-1-user-management').click({ force: true });
+  cy.get(this.locators.agent_emp).click({force:true});
   cy.wait(2000);
-
   cy.get(this.locators.agent).click({ force: true });
+  cy.wait(2000);
   cy.contains('Add Agent').click({ force: true });
-
   // Wait until agencies are loaded
   cy.get(this.locators.agency_name_dropdown)
     .should('be.visible')
@@ -77,7 +78,7 @@ class UserManagementPage {
 
   // Select agency WITHOUT approved users (update text after logging)
   cy.get(this.locators.agency_name_dropdown)
-    .select('ABCDEF');
+    .select('ZARA PVT LTD');
 
   // Open Agency Reporting Manager dropdown
   cy.get(this.locators.agency_reporting_manager)
@@ -89,12 +90,12 @@ class UserManagementPage {
 }
 
 TC_DD_001(){
- cy.get('#nav-item-1-user-management').click({ force: true });
+ cy.wait(2000);
+  cy.get(this.locators.agent_emp).click({force:true});
   cy.wait(2000);
-
   cy.get(this.locators.agent).click({ force: true });
+  cy.wait(2000);
   cy.contains('Add Agent').click({ force: true });
-
   cy.get(this.locators.agency_name_dropdown)
     .should('be.visible')
     .find('option')
@@ -110,7 +111,7 @@ TC_DD_001(){
 
 }
 TC_DD_003(){
- cy.get('#nav-item-1-user-management').click({ force: true });
+cy.get(this.locators.agent_emp).click({force:true});
   cy.wait(2000);
   cy.get(this.locators.staff).click({ force: true });
   cy.wait(2000);
@@ -134,7 +135,7 @@ cy.get('.ng-dropdown-panel-items .ng-option-label')
 
 }
 TC_DD_020(){
- cy.get('#nav-item-1-user-management').click({ force: true });
+cy.get(this.locators.agent_emp).click({force:true});
   cy.wait(2000);
   cy.get(this.locators.agent).click({ force: true });
   cy.wait(2000);
@@ -143,7 +144,7 @@ TC_DD_020(){
   cy.get(this.locators.Manager).should('be.visible');
 }
 TC_DD_021(){
- cy.get('#nav-item-1-user-management').click({ force: true });
+cy.get(this.locators.agent_emp).click({force:true});
   cy.wait(2000);
   cy.get(this.locators.agent).click({ force: true });
   cy.wait(2000);
@@ -156,28 +157,54 @@ TC_DD_021(){
 }
 TC_DD_022(){
   cy.wait(3000);
- cy.get('#nav-item-1-user-management').click({ force: true });
+cy.get(this.locators.agent_emp).click({force:true});
   cy.wait(2000);
   cy.get(this.locators.agent).click({ force: true });
   cy.wait(2000);
   cy.contains('Add Agent').click({ force: true });
   cy.wait(2000);
-  cy.get(this.locators.agency_name_dropdown).select('ABCDEF');
-  cy.wait(2000);
- cy.get(this.locators.agency_reporting_manager)
-  .type('Pranshu Raj - 1630');
+  // Select random Agency Name
+cy.get(this.locators.agency_name_dropdown)
+  .find('option')
+  .then($options => {
+    const randomIndex = Math.floor(Math.random() * ($options.length - 1)) + 1;
+
+    cy.get(this.locators.agency_name_dropdown)
+      .select($options[randomIndex].value);
+  });
+
+cy.wait(2000);
+
+// Select random Reporting Manager
+cy.get(this.locators.agency_reporting_manager)
+  .click({ force: true });
+
+cy.get(this.locators.agency_reporting_manager)
+  .click({ force: true });
+
 cy.get('.ng-option-label')
-  .should('not.contain', 'No items found')
-  .and('have.length.greaterThan', 0);
+  .should('have.length.greaterThan', 1)
+  .then($options => {
+
+    const startIndex = 1;
+    const endIndex = Math.min(5, $options.length - 1);
+
+    const randomIndex =
+      Math.floor(Math.random() * (endIndex - startIndex + 1)) + startIndex;
+
+    cy.wrap($options[randomIndex])
+      .click({ force: true });
+  });
+cy.wait(1000);
 
 
 
 
 }
 TC_DD_023(){
- cy.get('#nav-item-1-user-management').click({ force: true });
+  cy.get(this.locators.user_manage).click({force:true});
   cy.wait(2000);
-  cy.get(this.locators.staff).click({ force: true });
+  cy.get(this.locators.staff_emp).click({force:true});
   cy.wait(2000);
   cy.get(this.locators.add_staff).click({ force: true });
   cy.wait(2000);

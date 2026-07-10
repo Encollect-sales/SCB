@@ -48,15 +48,16 @@ RepoTestPage_04(){
   cy.wait(2000);
 }
 
-RepoTestPage_05(){
+RepoTestPage_05() {
 
-   cy.get(this.locators.ClickOn_Repo).click();
+  cy.get(this.locators.ClickOn_Repo).click();
   cy.wait(2000);
   cy.get(this.locators.ClickOn_RequestRepo).click();
   cy.wait(2000);
-   cy.get(this.locators.ClickOn_SubmitBtn).contains("Clear").should("be.visible");
-  cy.wait(2000);
+  cy.contains('button', 'Clear')
+    .should('be.visible');
 
+  cy.wait(2000);
 }
 
 RepoTestPage_06(){
@@ -111,52 +112,79 @@ RepoTestPage_10(){
   cy.wait(2000);
   cy.get(this.locators.TypeAccNumber).type(1667);
   cy.wait(2000);
-  cy.get(this.locators.ClickOn_SubmitBtn).should("be.enabled");
+  cy.get(this.locators.ClickOn_SubmitBtn).should("be.enabled").click();
   cy.wait(2000);
   cy.contains('Search Results').should("be.visible");
   cy.wait(2000);
 
 }
 
-RepoTestPage_11(){
+RepoTestPage_11() {
 
-   cy.get(this.locators.ClickOn_Repo).click();
+  cy.get(this.locators.ClickOn_Repo)
+    .click();
   cy.wait(2000);
-  cy.get(this.locators.ClickOn_RequestRepo).click();
+  cy.get(this.locators.ClickOn_RequestRepo)
+    .click();
   cy.wait(2000);
-  cy.get(this.locators.TypeAccNumber).type(1667);
+  cy.get(this.locators.TypeAccNumber)
+    .type('1667');
   cy.wait(2000);
-  cy.get(this.locators.ClickOn_SubmitBtn).click();
-  cy.wait(2000);
-  cy.contains('Search Results').should("be.visible");
-  cy.wait(2000);
-  cy.contains('Account Number').should("be.visible");
-  cy.wait(2000);
-  cy.contains('Customer ID').should("be.visible");
-  cy.wait(2000);
-  cy.contains('Customer Name').should("be.visible");
-  cy.wait(2000);
-  cy.contains('Total Outstanding (₹)').should("be.visible");
-  cy.wait(2000);
-  cy.contains('Bucket').should("be.visible");
-  cy.wait(2000);
+  cy.get(this.locators.ClickOn_SubmitBtn)
+    .should('be.enabled')
+    .click();
+  cy.wait(5000);
+
+  cy.contains('Search Results', { timeout: 10000 })
+    .should('be.visible');
+
+  cy.contains('Account Number', { timeout: 10000 })
+    .should('be.visible');
+
+  cy.contains('Customer ID', { timeout: 10000 })
+    .should('be.visible');
+
+  cy.contains('Customer Name', { timeout: 10000 })
+    .should('be.visible');
+
+  cy.contains('Total Outstanding (₹)', { timeout: 10000 })
+    .should('be.visible');
+
+  cy.contains('Bucket', { timeout: 10000 })
+    .should('be.visible');
 
 }
+RepoTestPage_12() {
 
-RepoTestPage_12(){
+  cy.get(this.locators.ClickOn_Repo)
+    .click();
 
-  
-   cy.get(this.locators.ClickOn_Repo).click();
   cy.wait(2000);
-  cy.get(this.locators.ClickOn_RequestRepo).click();
+
+  cy.get(this.locators.ClickOn_RequestRepo)
+    .click();
+
   cy.wait(2000);
-  cy.get(this.locators.TypeAccNumber).type(1667);
+
+  cy.get(this.locators.TypeAccNumber)
+    .type('1667');
+
   cy.wait(2000);
-  cy.get(this.locators.ClickOn_SubmitBtn).click();
+
+  cy.get(this.locators.ClickOn_SubmitBtn)
+    .click();
+
+  cy.wait(5000);
+
+  cy.contains('Search Results', { timeout: 10000 })
+    .should('be.visible');
+
   cy.wait(2000);
-  cy.contains('Search Results').should("be.visible");
-  cy.wait(2000);
-  cy.get('tr.ng-star-inserted > .link').contains(1667).should("be.visible");
+
+  // Verify account number link is present
+  cy.contains('X1667', { timeout: 10000 })
+    .should('exist');
+
   cy.wait(1000);
 
 }
@@ -173,7 +201,7 @@ RepoTestPage_13(){
   cy.wait(2000);
   cy.contains('Search Results').should("be.visible");
   cy.wait(2000);
-  cy.get('tr.ng-star-inserted > .link').click();
+  cy.get('.link > [style="text-wrap-mode: nowrap; position: relative;"] > span').click();
   cy.wait(3000);
   cy.contains('Account Details').should("be.visible");
   cy.wait(2000);
@@ -192,7 +220,7 @@ RepoTestPage_14(){
   cy.wait(2000);
   cy.contains('Search Results').should("be.visible");
   cy.wait(2000);
-  cy.get('tr.ng-star-inserted > .link').click();
+  cy.get('.link > [style="text-wrap-mode: nowrap; position: relative;"] > span').click();
   cy.wait(3000);
   cy.contains('Account Details').should("be.visible");
   cy.wait(2000);
@@ -216,56 +244,92 @@ RepoTestPage_15(){
   cy.wait(2000);
   
 }
+RepoTestPage_16() {
 
-RepoTestPage_16(){
-
-    cy.get(this.locators.ClickOn_Repo).click();
+  cy.get(this.locators.ClickOn_Repo).click();
   cy.wait(2000);
+
   cy.get(this.locators.ClickOn_RequestRepo).click();
   cy.wait(2000);
-  cy.get(this.locators.TypeAccNumber).type(1667);
+
+  cy.get(this.locators.TypeAccNumber).type('1667');
   cy.wait(2000);
+
   cy.get(this.locators.ClickOn_SubmitBtn).click();
+  cy.wait(5000);
+
+  cy.contains('Search Results').should('be.visible');
   cy.wait(2000);
-  cy.contains('Search Results').should("be.visible");
+
+  cy.contains('Customer Name').should('be.visible');
   cy.wait(2000);
-  cy.get(':nth-child(3) > .flex-grow-1').contains("Customer Name").should("be.visible");
+
+  // Open Filter
+  cy.get(this.locators.ClickOn_Filter)
+    .click({ force: true });
+
   cy.wait(2000);
-  cy.get(this.locators.ClickOn_Filter).click();
+
+  // Uncheck Customer Name column
+  cy.get(':nth-child(2) > .dropdown-item > .flex-grow-1')
+    .click({ force: true });
+
   cy.wait(2000);
-  cy.get(':nth-child(2) > .dropdown-item > .form-check-input').click();
+
+  // Close dropdown by clicking outside
+  cy.get('body').click(0, 0);
+
   cy.wait(2000);
-    cy.get(this.locators.ClickOn_Filter).click();
-  cy.wait(2000);
-cy.get(':nth-child(3) > .flex-grow-1').contains("Customer Name").should("not.exist");
-  cy.wait(2000);
+
+  // Verify Customer Name column is removed
+  cy.contains('Customer Name')
+    .should('not.exist');
 
 }
+RepoTestPage_17() {
 
-RepoTestPage_17(){
+  cy.get(this.locators.ClickOn_Repo)
+    .click();
 
-  
-   cy.get(this.locators.ClickOn_Repo).click();
   cy.wait(2000);
-  cy.get(this.locators.ClickOn_RequestRepo).click();
+
+  cy.get(this.locators.ClickOn_RequestRepo)
+    .click({ force: true });
+
   cy.wait(2000);
-  cy.get(this.locators.TypeAccNumber).type(1667);
+
+  cy.get(this.locators.TypeAccNumber)
+    .type('1667');
+
   cy.wait(2000);
-  cy.get(this.locators.ClickOn_SubmitBtn).click();
+
+  cy.get(this.locators.ClickOn_SubmitBtn)
+    .click();
+
+  cy.wait(3000);
+
+  cy.contains('Search Results')
+    .should('be.visible');
+
   cy.wait(2000);
-  cy.contains('Search Results').should("be.visible");
+
+  cy.get('#config-button')
+    .scrollIntoView()
+    .click({ force: true });
+
   cy.wait(2000);
-  cy.get('#config-button').click();
-  cy.wait(2000);
-cy.get('[role="alert"]').should('contain', 'A repossession request for this account 1667 has already been created and is still open.');
-cy.wait(2000);
+
+  cy.get('[role="alert"]', { timeout: 10000 })
+    .should(
+      'contain',
+      'A repossession request for this account 1667 has already been created and is still open.'
+    );
 
 }
-
 RepoTestPage_18(){
 
  cy.get(this.locators.ClickOn_Repo).click();
-  cy.wait(2000);
+  cy.wait(5000);
    cy.get(this.locators.ClickOn_MyRequests).contains("My Requests").should("be.visible");
   cy.wait(2000);
 

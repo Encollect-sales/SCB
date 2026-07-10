@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T17:19:54.836Z",
+    "end": "2026-06-16T17:20:35.747Z",
+    "duration": 40911,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cbbd0253-70a0-42c8-a0af-23c0cabcce75",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_697.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_697.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dd8a8d07-17b0-4a38-91c0-0de51fb2ec2e",
+          "title": "Allocation - Upload Agency Allocation Batch - user clicked on \"ok\" so that file will get uploaded into the ENCollect systemuser will see a pop up msg as \"File uploaded successfully\" along with transaction ID.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Agency Level Allocation - TC_ID_697",
+              "fullTitle": "Allocation - Upload Agency Allocation Batch - user clicked on \"ok\" so that file will get uploaded into the ENCollect systemuser will see a pop up msg as \"File uploaded successfully\" along with transaction ID. Agency Level Allocation - TC_ID_697",
+              "timedOut": null,
+              "duration": 33609,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.Clickonallocation();\n  allocationPage.filltemplate2();\n  allocationPage.clickondownloadTemplate();\n  allocationPage.clickonRadioBtnTCA();\n  allocationPage.uploadfile2();\n  allocationPage.clickonOK();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#downloadTemplateType2`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#downloadTemplateType2`, but never found it.\n    at AllocationPage.filltemplate2 (webpack:///./cypress/e2e/pages/AllocationPage.js:160:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_697.cy.js:29:26)",
+                "diff": null
+              },
+              "uuid": "635551a4-056c-4117-8c11-81e3673552c1",
+              "parentUUID": "dd8a8d07-17b0-4a38-91c0-0de51fb2ec2e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "635551a4-056c-4117-8c11-81e3673552c1"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 33609,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

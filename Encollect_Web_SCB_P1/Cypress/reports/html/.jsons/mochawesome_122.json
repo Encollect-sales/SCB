@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T17:31:40.530Z",
+    "end": "2026-06-16T17:32:23.073Z",
+    "duration": 42543,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d6dad8f5-5d18-4297-a4cb-c615fbd32265",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_708.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_708.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b1d92adc-f666-4226-9378-06d12f03a351",
+          "title": "Allocation - Primary Allocation Status - user selected \"Processed\" under status field and clicked on search buttonuser should be able to see all processed allocation files in the result grid.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC_ID_707",
+              "fullTitle": "Allocation - Primary Allocation Status - user selected \"Processed\" under status field and clicked on search buttonuser should be able to see all processed allocation files in the result grid. TC_ID_707",
+              "timedOut": null,
+              "duration": 36160,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonallocationPAS();\n  allocationPage.fillprocessed();\n  allocationPage.clickonSearch();\n});",
+              "err": {},
+              "uuid": "09539656-499c-4e5f-a02d-e1311da0a749",
+              "parentUUID": "b1d92adc-f666-4226-9378-06d12f03a351",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "09539656-499c-4e5f-a02d-e1311da0a749"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 36160,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

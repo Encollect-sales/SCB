@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T13:59:15.424Z",
+    "end": "2026-06-16T14:00:36.014Z",
+    "duration": 80590,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f3c1e464-a3a6-466c-8ef6-68853a40aaaa",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AddStaffPageTest_647.cy.js",
+      "file": "cypress\\e2e\\tests\\AddStaffPageTest_647.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "381ee63d-cf5f-4c61-a0c7-148f92a136c5",
+          "title": "Add Staff - Add Staff - User will enter all mandatory fields in add collections staff and will click on Agency Relationship Managers Scope of Work  or Scope of Work",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add Staff - TC_ID_647",
+              "fullTitle": "Add Staff - Add Staff - User will enter all mandatory fields in add collections staff and will click on Agency Relationship Managers Scope of Work  or Scope of Work Add Staff - TC_ID_647",
+              "timedOut": null,
+              "duration": 72833,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.task('getExcelData', '../fixtures/userManagementData.xlsx').then(excelData => {\n    const firstRow = excelData['Sheet1'][0];\n    cy.wait(2000);\n    addStaffPage.Clikonusermanagement(); // Use the method without click\n    addStaffPage.ClickonSttafEmp();\n    addStaffPage.Clikonaddstaff();\n    addStaffPage.selectUserType();\n    addStaffPage.fillemployeeID(firstRow.EmployeeID); // Correct method name and pass the argument\n    addStaffPage.fillfirstname(firstRow.FirstName);\n    addStaffPage.filllastname(firstRow.LastName);\n    addStaffPage.fillemailid(firstRow.EmailID);\n    addStaffPage.fillmobilenumber(firstRow.MobileNumber);\n    addStaffPage.clickondandd();\n    cy.wait(2000);\n    // addStaffPage.clickOnAdd();\n    // cy.wait(2000);\n    addStaffPage.fillDepartment('Audit and Risk', 0);\n    addStaffPage.fillDesignation('Audit Manager', 0);\n    cy.wait(1000);\n    addStaffPage.clickonWallet();\n    addStaffPage.clickonbbrm();\n    cy.wait(2000);\n    addStaffPage.fillbasebranch();\n    cy.wait(2000);\n    // addStaffPage.clickonPlaceOkWork();\n    // cy.wait(2000);\n    // addStaffPage.ClickOnSkill();\n    // cy.wait(5000);\n    addStaffPage.clickonsubmitstaffprofile();\n    cy.wait(3000);\n  });\n});",
+              "err": {},
+              "uuid": "1066389b-767b-4e72-9863-4a331ffa9651",
+              "parentUUID": "381ee63d-cf5f-4c61-a0c7-148f92a136c5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1066389b-767b-4e72-9863-4a331ffa9651"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 72833,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

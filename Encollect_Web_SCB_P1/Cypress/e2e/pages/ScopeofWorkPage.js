@@ -86,7 +86,7 @@ class ScopeofWorkPage {
     cy.wait(1000);
     cy.get(this.locators.ClickOn_SubProduct).click();
     cy.wait(1000);
-    cy.contains("Search and select your Sub Product(s)").should("be.visible");
+    cy.contains("Search and select your SubProduct(s)").should("be.visible");
     cy.wait(1000);
   }
   ScopeOfWorkTestPage_07() {

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T13:58:41.049Z",
+    "end": "2026-06-16T13:59:17.548Z",
+    "duration": 36499,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4d46873c-ba0b-4042-b87f-fd083a06595c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocatedvsAchievedReoprtTestPage_001.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocatedvsAchievedReoprtTestPage_001.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "914e2857-5956-40ef-a994-882268ae0a64",
+          "title": "TC_001 Reports - Allocated vs Achieved Report -  Click on Allocated vs Achieved Report",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC_001 Reports - Allocated vs Achieved Report - Agency Staff - Click on Allocated vs Achieved  Report",
+              "fullTitle": "TC_001 Reports - Allocated vs Achieved Report -  Click on Allocated vs Achieved Report TC_001 Reports - Allocated vs Achieved Report - Agency Staff - Click on Allocated vs Achieved  Report",
+              "timedOut": null,
+              "duration": 28399,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  reportpage.allocatedVsAchievedReports_001();\n});",
+              "err": {},
+              "uuid": "6f8cd4df-b27e-4781-a709-08d14d16697f",
+              "parentUUID": "914e2857-5956-40ef-a994-882268ae0a64",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6f8cd4df-b27e-4781-a709-08d14d16697f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28399,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

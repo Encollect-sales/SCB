@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1f389e5d358d57d18153e4caa4528a,Telecaller,31949,,Homenick,julius@yopmail.com,6758567483,Branch Backend,Branch Manager,Bangalore,True, | First Name is required

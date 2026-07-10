@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T19:46:02.015Z",
+    "end": "2026-06-16T19:46:54.063Z",
+    "duration": 52048,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4c0a8c77-ea4b-4d6e-be3a-4183fde8fa7f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\DashboardTestPage_028.cy.js",
+      "file": "cypress\\e2e\\tests\\DashboardTestPage_028.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8a484784-7da0-45f1-a728-6bd33e4653d7",
+          "title": "Dashboard - Search account -Verify whether navigated account detail screen under Note History tab user is able to add the notes.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Payment - TC_ID_028",
+              "fullTitle": "Dashboard - Search account -Verify whether navigated account detail screen under Note History tab user is able to add the notes. Payment - TC_ID_028",
+              "timedOut": null,
+              "duration": 45048,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  dashboardpage.DashboardTestPage_028();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.m-2 > .btn`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.m-2 > .btn`, but never found it.\n    at DashboardPage.DashboardTestPage_028 (webpack:///./cypress/e2e/pages/DashboardPage.js:207:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/DashboardTestPage_028.cy.js:27:30)",
+                "diff": null
+              },
+              "uuid": "3a1ece24-e1af-4f83-8bab-5e6c9aa4d918",
+              "parentUUID": "8a484784-7da0-45f1-a728-6bd33e4653d7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "3a1ece24-e1af-4f83-8bab-5e6c9aa4d918"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 45048,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

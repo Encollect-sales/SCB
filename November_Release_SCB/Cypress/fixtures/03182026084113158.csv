@@ -1,5 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009590352,1526,yes,PTP,PTP,2026-12-26,96,,Bulk upload automation,7096161736,btm,bangalore,Douglas.Oberbrunner46@yahoo.com,permanent,new,03182026084113158,Success,
-DMI0009590352,1654,yes,PTP,PTP,2026-12-26,37,,Bulk upload automation,6990162440,btm,bangalore,Rod84@gmail.com,permanent,new,03182026084113158,Error,Agent ID not approved
-DMI0009590352,1584,yes,PTP,PTP,2026-12-26,11,,Bulk upload automation,9922112549,btm,bangalore,Kathryne93@hotmail.com,permanent,new,03182026084113158,Error,Agent ID not approved
-DMI0009590352,10031,yes,PTP,PTP,2026-12-26,46,,Bulk upload automation,7779696376,btm,bangalore,Enrique_Schinner@yahoo.com,permanent,new,03182026084113158,Error,Agent code is invalid

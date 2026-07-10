@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T16:52:23.343Z",
+    "end": "2026-06-16T16:53:38.930Z",
+    "duration": 75587,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "df2a1258-e475-4371-aabb-ab79ae876f3e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AgentEmpanelmentRequestPageTest_632.cy.js",
+      "file": "cypress\\e2e\\tests\\AgentEmpanelmentRequestPageTest_632.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "86dc1c83-8772-4965-8991-3dcb03477053",
+          "title": "Agent Empanelment Request - Create Agent - User will enter all details in banking details for creating the agent.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Agent Empanelment Request - TC_ID_632",
+              "fullTitle": "Agent Empanelment Request - Create Agent - User will enter all details in banking details for creating the agent. Agent Empanelment Request - TC_ID_632",
+              "timedOut": null,
+              "duration": 49883,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  agentemplimentationRequest.AgentEnpalmentRequest632();\n});",
+              "err": {},
+              "uuid": "6509483a-0ddf-4020-951f-c04bfed1c549",
+              "parentUUID": "86dc1c83-8772-4965-8991-3dcb03477053",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6509483a-0ddf-4020-951f-c04bfed1c549"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 49883,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T18:45:31.382Z",
+    "end": "2026-06-16T18:46:15.192Z",
+    "duration": 43810,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6e1ddd8a-d02f-4140-9817-7794ea0487f7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_790.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_790.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bf79d5b2-3df5-4e5c-9860-32d55ec872be",
+          "title": "Allocation - Upload agency Unallocation batch - User uploaded an incorrect file for doing the unallocation of field agency or telecalling agency then the status should show as \"invalid file format\"",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Agency Level UnAllocation - TC_ID_790",
+              "fullTitle": "Allocation - Upload agency Unallocation batch - User uploaded an incorrect file for doing the unallocation of field agency or telecalling agency then the status should show as \"invalid file format\" Agency Level UnAllocation - TC_ID_790",
+              "timedOut": null,
+              "duration": 37949,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.uploadAgencyUnallocationBatchWithoutUnAllocationAgency();\n});",
+              "err": {},
+              "uuid": "1decaa75-bbbc-44fc-9a6f-5c5ee1ba9719",
+              "parentUUID": "bf79d5b2-3df5-4e5c-9860-32d55ec872be",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1decaa75-bbbc-44fc-9a6f-5c5ee1ba9719"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 37949,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

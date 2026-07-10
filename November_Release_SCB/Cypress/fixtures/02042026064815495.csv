@@ -1,3 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009601002,2003,Yes,PTP,PTP,2025-12-26,25,,Pending approval test,(378) 642-5397 x106,BTM,Bangalore,Carol_OKon59@gmail.com,Permanent,New,02042026064815495,Error,Next action date cannot be less than current date
-DMI0009601001,2003,Yes,PTP,PTP,2025-12-26,25,,Pending approval test,(996) 447-8653,BTM,Bangalore,Cayla.Hessel@yahoo.com,Permanent,New,02042026064815495,Error,Next action date cannot be less than current date

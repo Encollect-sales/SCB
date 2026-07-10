@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T15:36:53.149Z",
+    "end": "2026-06-16T15:37:30.818Z",
+    "duration": 37669,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cd1f41db-d6eb-470b-b14a-bef8c4bbab10",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\MoneyMovementReportTestPage_408.cy.js",
+      "file": "cypress\\e2e\\tests\\MoneyMovementReportTestPage_408.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "299b96fa-fd5a-4293-a5d7-0076fab6d0b4",
+          "title": "MoneyMovementReportpage -  Click on Money Moment Report Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Money Movement Report - TC_ID_408",
+              "fullTitle": "MoneyMovementReportpage -  Click on Money Moment Report Page Money Movement Report - TC_ID_408",
+              "timedOut": null,
+              "duration": 26492,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  reportpage.MoneyMovementReportTestPage_408();\n});",
+              "err": {},
+              "uuid": "13fe7a0d-9c75-4c8a-a60d-85de85ac7bd9",
+              "parentUUID": "299b96fa-fd5a-4293-a5d7-0076fab6d0b4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "13fe7a0d-9c75-4c8a-a60d-85de85ac7bd9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 26492,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

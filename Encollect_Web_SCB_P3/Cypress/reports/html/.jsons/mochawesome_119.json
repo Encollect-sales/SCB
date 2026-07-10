@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T15:44:18.174Z",
+    "end": "2026-06-16T15:46:00.416Z",
+    "duration": 102242,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ab4b7a82-99a9-47bb-8f58-06887ba03a30",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\MoneyMovementReportTestPage_421.cy.js",
+      "file": "cypress\\e2e\\tests\\MoneyMovementReportTestPage_421.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9f858e7f-08e3-4708-9860-501c7d63b29b",
+          "title": "Report - Money Movement Report  - To check if the values in the \"State\" dropdown are as per the Predefined values from pull down menu",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Money Movement Report - TC_ID_421",
+              "fullTitle": "Report - Money Movement Report  - To check if the values in the \"State\" dropdown are as per the Predefined values from pull down menu Money Movement Report - TC_ID_421",
+              "timedOut": null,
+              "duration": 92853,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  reportpage.MoneyMovementReportTestPage_421();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Search Result' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Search Result' but never did.\n    at ReportsPage.MoneyMovementReportTestPage_421 (webpack://encollect_web/./cypress/e2e/pages/ReportsPage.js:4677:7)\n    at Context.eval (webpack://encollect_web/./cypress/e2e/tests/MoneyMovementReportTestPage_421.cy.js:25:27)\n    at getRet (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "3892cf5c-2f43-45fc-a663-f28ed2a9354d",
+              "parentUUID": "9f858e7f-08e3-4708-9860-501c7d63b29b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "3892cf5c-2f43-45fc-a663-f28ed2a9354d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 92853,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -33,7 +33,7 @@ class CommunicationPage {
     cy.wait(2000);
     cy.get(this.locators.recipientType).select('Agent');
     cy.wait(2000);
-    cy.get(this.locators.subjectline).type(subjectline);
+    cy.get(this.locators.subject).type(subjectline);
     cy.wait(1000);
     cy.get(this.locators.templatebody).type("Please create one Email Communication template");
     cy.wait(1000);
@@ -53,15 +53,15 @@ class CommunicationPage {
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
-    cy.get(this.locators.entryPoint).select('Collection');
+    cy.get(this.locators.entryPoint).select('Account');
     cy.wait(2000);
     cy.get(this.locators.channelType).select('Email');
     cy.wait(2000);
-     cy.get(this.locators.recipientType).select('Agent');
+     cy.get(this.locators.recipientType).select('Customer');
     cy.wait(2000);
     cy.get(this.locators.allowaccessno).click();
     cy.wait(1000);
-    cy.get(this.locators.subjectline).type(subjectline);
+    cy.get(this.locators.subject).type(subjectline);
     cy.wait(1000);
     cy.get(this.locators.templatebody).type("Please create one Email Communication template");
     cy.wait(1000);
@@ -88,7 +88,7 @@ class CommunicationPage {
     cy.wait(2000);
     cy.get(this.locators.recipientType).select('Agent');
     cy.wait(2000);
-    cy.get(this.locators.subjectline).type(subjectline);
+    cy.get(this.locators.subject).type(subjectline);
     cy.wait(1000);
     cy.get(this.locators.templatebody).type("Please create one Email Communication template");
     cy.wait(1000);
@@ -156,33 +156,52 @@ cy.get('.ng-dropdown-panel-items .ng-option')
   }
 
   Communication156() {
-   const letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-    const randomname = "Template " + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
-    const subjectline = "Template " + Array.from({ length: 30 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
-    cy.wait(1000);
+    const letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+    const randomname = "Template" + Array.from(
+        { length: 8 },
+        () => letters[Math.floor(Math.random() * letters.length)]
+    ).join("");
+
+    const subjectline = Array.from(
+        { length: 30 },
+        () => letters[Math.floor(Math.random() * letters.length)]
+    ).join("");
+
+    const bodyText = "Please create one Email Communication template";
+
+    cy.wait(2000);
     cy.get(this.locators.communicationtemplate).click();
-    cy.wait(1000);
+    cy.wait(2000);
     cy.get(this.locators.templatename).type(randomname);
-    cy.wait(1000);
-    cy.get(this.locators.entryPoint).select('Collection');
+    cy.wait(2000);
+    cy.get(this.locators.entryPoint).select('Account');
     cy.wait(2000);
     cy.get(this.locators.channelType).select('SMS');
     cy.wait(2000);
-     cy.get(this.locators.recipientType).select('Agent');
+    cy.get(this.locators.recipientType).select('Customer');
     cy.wait(2000);
     cy.get(this.locators.allowaccessno).click();
-    cy.wait(1000);
+    cy.wait(2000);
     cy.get(this.locators.subjectline).type(subjectline);
-    cy.wait(1000);
-    cy.get(this.locators.templatebody).type("Please create one Email Communication template");
-    cy.wait(1000);
-    cy.get(this.locators.createtemplate).click();
-    cy.wait(1000);
-    cy.get('.toast-message').contains('created successfully').should('be.visible')
-    cy.wait(1000);
-  }
+    cy.wait(2000);
+    const text = 'Please create one Email Communication template';
 
+cy.window().then((win) => {
+  win.navigator.clipboard.writeText(text);
+});
+
+cy.get('.editor-container > .form-control')
+  .click({ force: true })
+  .type('{ctrl}v', { force: true });
+    cy.wait(2000);
+    cy.get(this.locators.createtemplate).click();
+    cy.wait(2000);
+    cy.get('.toast-message')
+      .contains('created successfully')
+      .should('be.visible');
+}
   CreateCommunicationTask180() {
     const letters = "abcdefghijklmnopqrstuvwxyz";
     const randomname = "Template_" + Array.from({ length: 8 }, () => letters[Math.floor(Math.random() * letters.length)]).join("");
@@ -194,7 +213,7 @@ cy.get('.ng-dropdown-panel-items .ng-option')
     cy.wait(1000);
     cy.get(this.locators.templatename).type(randomname);
     cy.wait(1000);
-    cy.get(this.locators.subjectline).type(subjectline);
+    cy.get(this.locators.subject).type(subjectline);
     cy.wait(1000);
     cy.get(this.locators.templatebody).type("Please create one Email Communication template");
     cy.wait(1000);
@@ -335,10 +354,10 @@ cy.get('.ng-dropdown-panel-items .ng-option')
     cy.wait(2000);
     cy.get(this.locators.channelType).select('Letter');
     cy.wait(2000);
-    cy.get(this.locators.allowaccessno).click();
-    cy.wait(1000);
-    cy.get(this.locators.subjectline).type(subjectline);
-    cy.wait(1000);
+    // cy.get(this.locators.allowaccessno).click();
+    // cy.wait(1000);
+    // cy.get(this.locators.subjectline).type(subjectline);
+    // cy.wait(1000);
     cy.get(this.locators.templatebody).type("Please create one Email Communication template");
     cy.wait(1000);
     cy.get(this.locators.createtemplate).click();
@@ -515,16 +534,17 @@ CreateCommunicationTemplate162() {
     ).join("");
 
   cy.get(this.locators.communicationtemplate).click();
+  cy.wait(2000);
   cy.get(this.locators.templatename).type(randomname);
-
+  cy.wait(2000);
   cy.get(this.locators.entryPoint).select('Collection');
+  cy.wait(2000);
   cy.get(this.locators.channelType).select('Email');
+  cy.wait(2000);
   cy.get(this.locators.recipientType).select('Agent');
-
-  // English Subject
-  cy.get(this.locators.subjectline).type('New Line');
-
-  // ✅ English Email Body (Rich Text Editor fix)
+   cy.wait(2000);
+  cy.get(this.locators.subject).type('New Line');
+   cy.wait(2000);
   cy.get('.editor-container')
     .find('[contenteditable="true"]')
     .should('be.visible')
@@ -533,11 +553,15 @@ CreateCommunicationTemplate162() {
 
   // ---------- Add Hindi Language ----------
   cy.get(this.locators.selectlanguage).click();
+  cy.wait(2000);
   cy.get(this.locators.clickondropdownlanguage).click();
+  cy.wait(2000);
   cy.contains('Hindi').click();
+  cy.wait(2000);
   cy.get(this.locators.addlanguage).click();
+  cy.wait(2000);
   cy.get(this.locators.selectHindiTemplate).should('be.visible').click();
-
+   cy.wait(2000);
   // ---------- Random Hindi Data ----------
   const hindiSubjects = [
     "नई पंक्ति",
@@ -566,7 +590,7 @@ CreateCommunicationTemplate162() {
     hindiBodies[Math.floor(Math.random() * hindiBodies.length)];
 
   // Hindi Subject
-  cy.get(this.locators.subjectline, { timeout: 10000 })
+  cy.get(this.locators.subject, { timeout: 10000 })
     .should('be.visible')
     .clear()
     .type(randomSubject);
@@ -600,21 +624,19 @@ CreateCommunicationTemplate163() {
       letters[Math.floor(Math.random() * letters.length)]
     ).join("");
 
-  // Open Communication Template Page
   cy.get(this.locators.communicationtemplate).click();
+  cy.wait(2000);
   cy.get(this.locators.templatename).type(randomname);
-
-  // Required dropdowns
+  cy.wait(2000);
   cy.get(this.locators.entryPoint).select('Collection');
+  cy.wait(2000);
   cy.get(this.locators.channelType).select('Email');
+  cy.wait(2000);
   cy.get(this.locators.recipientType).select('Agent');
-
-  // English Subject
-  cy.get(this.locators.subjectline)
+  cy.wait(2000);
+  cy.get(this.locators.subject)
     .should('be.visible')
     .type(subjectline);
-
-  // ✅ English Email Body (Same as Hindi - NO iframe)
   cy.get('.editor-container')
     .find('[contenteditable="true"]')
     .should('be.visible')
@@ -623,16 +645,17 @@ CreateCommunicationTemplate163() {
 
   // ---------- Add Marathi Language ----------
   cy.get(this.locators.selectlanguage).click();
+  cy.wait(2000);
   cy.get(this.locators.clickondropdownlanguage).click();
+  cy.wait(2000);
   cy.contains('Marathi').click();
+  cy.wait(2000);
   cy.get(this.locators.addlanguage).click();
-
-  // Open Marathi template tab
+  cy.wait(2000);
   cy.get(this.locators.selectMarathiTemplate)
     .should('be.visible')
     .click();
-
-  // Marathi sentences
+  cy.wait(2000);
   const marathiSentences = [
     "तुमचं नाव काय आहे",
     "मी पुण्याहून आलो आहे.",
@@ -649,23 +672,21 @@ CreateCommunicationTemplate163() {
   const marathisentence =
     marathiSentences[Math.floor(Math.random() * marathiSentences.length)];
 
-  // Marathi Subject
-  cy.get(this.locators.subjectline)
+  cy.wait(2000);
+  cy.get(this.locators.subject)
     .should('be.visible')
     .clear()
     .type(marathisentence);
-
-  // ✅ Marathi Email Body (Same as Hindi - NO iframe)
+  cy.wait(2000);
   cy.get('.editor-container')
     .find('[contenteditable="true"]')
     .should('be.visible')
     .click()
     .type(marathisentence, { force: true });
 
-  // Create Template
+  cy.wait(2000);
   cy.get(this.locators.createtemplate).click();
-
-  // Success Validation
+  cy.wait(2000);
   cy.contains('.toast-message', 'created successfully.')
     .should('be.visible');
 }
@@ -686,40 +707,37 @@ CreateCommunicationTemplate164() {
 
   // Open Communication Template Page
   cy.get(this.locators.communicationtemplate).click();
-
-  cy.get(this.locators.templatename)
-    .should('be.visible')
-    .type(randomname);
-
-  // Required dropdowns (Same as previous methods)
+  cy.wait(2000);
+  cy.get(this.locators.templatename).should('be.visible').type(randomname);
+  cy.wait(2000);
   cy.get(this.locators.entryPoint).select('Collection');
+  cy.wait(2000);
   cy.get(this.locators.channelType).select('Email');
+    cy.wait(2000);
   cy.get(this.locators.recipientType).select('Agent');
-
-  // English Subject
-  cy.get(this.locators.subjectline)
-    .should('be.visible')
-    .type(subjectline);
-
-  // ✅ English Email Body (Rich Text Editor FIX)
+    cy.wait(2000);
+  cy.get(this.locators.subject).should('be.visible').type(subjectline);
+    cy.wait(2000);
   cy.get('.editor-container')
     .find('[contenteditable="true"]')
     .should('be.visible')
     .click()
     .type("Please create one Email Communication template", { force: true });
 
-  // ---------- Add Kannada Language ----------
+  cy.wait(2000);
   cy.get(this.locators.selectlanguage).click();
+  cy.wait(2000);
   cy.get(this.locators.clickondropdownlanguage).click();
+  cy.wait(2000);
   cy.contains('Kannada').click();
+  cy.wait(2000);
   cy.get(this.locators.addlanguage).click();
-
-  // Open Kannada template tab
+  cy.wait(2000);
   cy.get(this.locators.selectKannadaTemplate)
     .should('be.visible')
     .click();
 
-  // Kannada sentences
+  cy.wait(2000);
   const kannadaSentences = [
     "ನಿಮ್ಮ ಹೆಸರು ಏನು",
     "ನಾನು ಪುಣೆಯಿಂದ ಬಂದಿದ್ದೇನೆ",
@@ -736,23 +754,20 @@ CreateCommunicationTemplate164() {
   const kannadasentence =
     kannadaSentences[Math.floor(Math.random() * kannadaSentences.length)];
 
-  // Kannada Subject
-  cy.get(this.locators.subjectline)
+  cy.wait(2000);
+  cy.get(this.locators.subject)
     .should('be.visible')
     .clear()
     .type(kannadasentence);
-
-  // ✅ Kannada Email Body (Rich Text Editor FIX)
+  cy.wait(2000);
   cy.get('.editor-container')
     .find('[contenteditable="true"]')
     .should('be.visible')
     .click()
     .type(kannadasentence, { force: true });
-
-  // Create Template
+  cy.wait(2000);
   cy.get(this.locators.createtemplate).click();
-
-  // Success Validation
+  cy.wait(2000);
   cy.contains('.toast-message', 'created successfully.')
     .should('be.visible');
 }
@@ -771,42 +786,39 @@ CreateCommunicationTemplate164() {
       letters[Math.floor(Math.random() * letters.length)]
     ).join("");
 
-  // Open Communication Template Page
   cy.get(this.locators.communicationtemplate).click();
-
-  cy.get(this.locators.templatename)
-    .should('be.visible')
-    .type(randomname);
-
-  // Required dropdowns
+  cy.wait(2000);
+  cy.get(this.locators.templatename).should('be.visible').type(randomname);
+  cy.wait(2000);
   cy.get(this.locators.entryPoint).select('Collection');
+  cy.wait(2000);
   cy.get(this.locators.channelType).select('Email');
+  cy.wait(2000);
   cy.get(this.locators.recipientType).select('Agent');
-
-  // English Subject
-  cy.get(this.locators.subjectline)
+  cy.wait(2000);
+  cy.get(this.locators.subject)
     .should('be.visible')
     .type(subjectline);
-
-  // ✅ English Email Body (Rich Text Editor FIX)
+  cy.wait(2000);  
   cy.get('.editor-container')
     .find('[contenteditable="true"]')
     .should('be.visible')
     .click()
     .type("Please create one Email Communication template", { force: true });
 
-  // ---------- Add Malayalam Language ----------
+  cy.wait(2000);
   cy.get(this.locators.selectlanguage).click();
+  cy.wait(2000);
   cy.get(this.locators.clickondropdownlanguage).click();
+  cy.wait(2000);
   cy.contains('Malayalam').click();
+  cy.wait(2000);
   cy.get(this.locators.addlanguage).click();
-
-  // Open Malayalam template tab
+  cy.wait(2000);
   cy.get(this.locators.selectMalayalamTemplate)
     .should('be.visible')
     .click();
-
-  // Malayalam sentences
+  cy.wait(2000);
   const malayalamSentences = [
     "നിന്റെ പേര് എന്താണ്",
     "ഞാൻ പുനെയിൽ നിന്ന് വന്നതാണ്",
@@ -822,24 +834,20 @@ CreateCommunicationTemplate164() {
 
   const malayalamsentence =
     malayalamSentences[Math.floor(Math.random() * malayalamSentences.length)];
-
-  // Malayalam Subject
-  cy.get(this.locators.subjectline)
+  cy.wait(2000);
+  cy.get(this.locators.subject)
     .should('be.visible')
     .clear()
     .type(malayalamsentence);
-
-  // ✅ Malayalam Email Body (Rich Text Editor FIX)
+ cy.wait(2000);
   cy.get('.editor-container')
     .find('[contenteditable="true"]')
     .should('be.visible')
     .click()
     .type(malayalamsentence, { force: true });
-
-  // Create Template
+ cy.wait(2000);
   cy.get(this.locators.createtemplate).click();
-
-  // Success Validation
+  cy.wait(2000);
   cy.contains('.toast-message', 'created successfully.')
     .should('be.visible');
 }
@@ -860,18 +868,18 @@ CreateCommunicationTemplate164() {
 
   // Open Communication Template Page
   cy.get(this.locators.communicationtemplate).click();
-
+  cy.wait(2000);
   cy.get(this.locators.templatename)
     .should('be.visible')
     .type(randomname);
-
-  // Required dropdowns
+ cy.wait(2000);
   cy.get(this.locators.entryPoint).select('Collection');
+  cy.wait(2000);
   cy.get(this.locators.channelType).select('Email');
+  cy.wait(2000);
   cy.get(this.locators.recipientType).select('Agent');
-
-  // English Subject
-  cy.get(this.locators.subjectline)
+  cy.wait(2000);
+  cy.get(this.locators.subject)
     .should('be.visible')
     .type(subjectline);
 
@@ -884,16 +892,17 @@ CreateCommunicationTemplate164() {
 
   // ---------- Add Tamil Language ----------
   cy.get(this.locators.selectlanguage).click();
+  cy.wait(2000);
   cy.get(this.locators.clickondropdownlanguage).click();
+  cy.wait(2000);
   cy.contains('Tamil').click();
+  cy.wait(2000);
   cy.get(this.locators.addlanguage).click();
-
-  // Open Tamil template tab
+  cy.wait(2000);
   cy.get(this.locators.selectTamilTemplate)
     .should('be.visible')
     .click();
-
-  // Tamil sentences
+  cy.wait(2000);
   const tamilSentences = [
     "உங்கள் பெயர் என்ன",
     "நான் புனேயிலிருந்து வந்தேன்",
@@ -911,12 +920,11 @@ CreateCommunicationTemplate164() {
     tamilSentences[Math.floor(Math.random() * tamilSentences.length)];
 
   // Tamil Subject
-  cy.get(this.locators.subjectline)
+  cy.get(this.locators.subject)
     .should('be.visible')
     .clear()
     .type(tamilsentence);
-
-  // ✅ Tamil Email Body (Rich Text Editor FIX)
+  cy.wait(2000);
   cy.get('.editor-container')
     .find('[contenteditable="true"]')
     .should('be.visible')
@@ -946,40 +954,41 @@ CreateCommunicationTemplate164() {
 
   // Open Communication Template Page
   cy.get(this.locators.communicationtemplate).click();
-
+  cy.wait(2000);
   cy.get(this.locators.templatename)
     .should('be.visible')
     .type(randomname);
-
-  // Required dropdowns
+  cy.wait(2000);
   cy.get(this.locators.entryPoint).select('Collection');
+  cy.wait(2000);
   cy.get(this.locators.channelType).select('Email');
+  cy.wait(2000);
   cy.get(this.locators.recipientType).select('Agent');
-
-  // English Subject
-  cy.get(this.locators.subjectline)
+  cy.wait(2000);
+  cy.get(this.locators.subject)
     .should('be.visible')
     .type(subjectline);
 
-  // ✅ English Email Body (Rich Text Editor FIX)
+ cy.wait(2000);
   cy.get('.editor-container')
     .find('[contenteditable="true"]')
     .should('be.visible')
     .click()
     .type("Please create one Email Communication template", { force: true });
 
-  // ---------- Add Telugu Language ----------
+  cy.wait(2000);
   cy.get(this.locators.selectlanguage).click();
+  cy.wait(2000);
   cy.get(this.locators.clickondropdownlanguage).click();
+  cy.wait(2000);
   cy.contains('Telugu').click();
+  cy.wait(2000);
   cy.get(this.locators.addlanguage).click();
-
-  // Open Telugu template tab
+  cy.wait(2000);
   cy.get(this.locators.selectTeluguTemplate)
     .should('be.visible')
     .click();
-
-  // Telugu sentences
+  cy.wait(2000);
   const teluguSentences = [
     "మీ పేరు ఏమిటి",
     "నేను పుణె నుండి వచ్చాను",
@@ -996,23 +1005,23 @@ CreateCommunicationTemplate164() {
   const telugusentence =
     teluguSentences[Math.floor(Math.random() * teluguSentences.length)];
 
-  // Telugu Subject
-  cy.get(this.locators.subjectline)
+  cy.wait(2000);
+  cy.get(this.locators.subject)
     .should('be.visible')
     .clear()
     .type(telugusentence);
 
-  // ✅ Telugu Email Body (Rich Text Editor FIX)
+ cy.wait(2000);
   cy.get('.editor-container')
     .find('[contenteditable="true"]')
     .should('be.visible')
     .click()
     .type(telugusentence, { force: true });
 
-  // Create Template
+  cy.wait(2000);
   cy.get(this.locators.createtemplate).click();
 
-  // Success Validation
+  cy.wait(2000);
   cy.contains('.toast-message', 'created successfully.')
     .should('be.visible');
 }
@@ -1028,42 +1037,42 @@ CreateCommunicationTemplate164() {
 
   // Open Communication Template Page
   cy.get(this.locators.communicationtemplate).click();
-
+  cy.wait(2000);
   cy.get(this.locators.templatename)
     .should('be.visible')
     .type(randomname);
-
-  // Required dropdowns
+  cy.wait(2000);
   cy.get(this.locators.entryPoint).select('Collection');
+  cy.wait(2000);
   cy.get(this.locators.channelType).select('Email');
+  cy.wait(2000);
   cy.get(this.locators.recipientType).select('Agent');
-
-  // Added Line Here
-  cy.get(this.locators.allowaccessno).click();
-
-  // English Subject
-  cy.get(this.locators.subjectline)
+  cy.wait(2000);
+  // cy.get(this.locators.allowaccessno).click();
+  //  cy.wait(2000);
+  cy.get(this.locators.subject)
     .should('be.visible')
     .type('New Line');
-
-  // ✅ English Email Body (Rich Text Editor Fix)
+   cy.wait(2000);
   cy.get('.editor-container')
     .find('[contenteditable="true"]')
     .should('be.visible')
     .click()
     .type("Please create one Email Communication template", { force: true });
 
-  // ---------- Add Hindi Language ----------
+  cy.wait(2000);
   cy.get(this.locators.selectlanguage).click();
+  cy.wait(2000);
   cy.get(this.locators.clickondropdownlanguage).click();
+  cy.wait(2000);
   cy.contains('Hindi').click();
+  cy.wait(2000);
   cy.get(this.locators.addlanguage).click();
-
+  cy.wait(2000);
   cy.get(this.locators.selectHindiTemplate)
     .should('be.visible')
     .click();
-
-  // Hindi Data
+  cy.wait(2000);
   const hindiSubjects = [
     "नई पंक्ति",
     "महत्वपूर्ण सूचना",
@@ -1090,23 +1099,23 @@ CreateCommunicationTemplate164() {
   const randomBody =
     hindiBodies[Math.floor(Math.random() * hindiBodies.length)];
 
-  // Hindi Subject
-  cy.get(this.locators.subjectline)
+   cy.wait(2000);
+  cy.get(this.locators.subject)
     .should('be.visible')
     .clear()
     .type(randomSubject);
 
-  // ✅ Hindi Email Body
+   cy.wait(2000);
   cy.get('.editor-container')
     .find('[contenteditable="true"]')
     .should('be.visible')
     .click()
     .type(randomBody, { force: true });
 
-  // Create Template
+   cy.wait(2000);
   cy.get(this.locators.createtemplate).click();
 
-  // Success Toast Validation
+   cy.wait(2000);
   cy.contains('.toast-message', 'created successfully.')
     .should('be.visible');
 }
@@ -1126,41 +1135,41 @@ CreateCommunicationTemplate164() {
     ).join("");
 
   cy.get(this.locators.communicationtemplate).click();
-
+  cy.wait(2000);
   cy.get(this.locators.templatename)
     .should('be.visible')
     .type(randomname);
-
-  // Required dropdowns
+  cy.wait(2000);
   cy.get(this.locators.entryPoint).select('Collection');
   cy.get(this.locators.channelType).select('Email');
+  cy.wait(2000);
   cy.get(this.locators.recipientType).select('Agent');
-
-  // ✅ Added here
+  cy.wait(2000);
   cy.get(this.locators.allowaccessno).click();
-
-  // English Subject
-  cy.get(this.locators.subjectline)
+  cy.wait(2000);
+  cy.get(this.locators.subject)
     .should('be.visible')
     .type(subjectline);
-
-  // English Email Body
+  cy.wait(2000);
   cy.get('.editor-container')
     .find('[contenteditable="true"]')
     .should('be.visible')
     .click()
     .type("Please create one Email Communication template", { force: true });
 
-  // ---------- Add Marathi Language ----------
+  cy.wait(2000);
   cy.get(this.locators.selectlanguage).click();
+  cy.wait(2000);
   cy.get(this.locators.clickondropdownlanguage).click();
+  cy.wait(2000);
   cy.contains('Marathi').click();
+  cy.wait(2000);
   cy.get(this.locators.addlanguage).click();
-
+  cy.wait(2000);
   cy.get(this.locators.selectMarathiTemplate)
     .should('be.visible')
     .click();
-
+  cy.wait(2000);
   const marathiSentences = [
     "तुमचं नाव काय आहे",
     "मी पुण्याहून आलो आहे",
@@ -1176,18 +1185,18 @@ CreateCommunicationTemplate164() {
 
   const marathisentence =
     marathiSentences[Math.floor(Math.random() * marathiSentences.length)];
-
+  cy.wait(2000);
   cy.get(this.locators.subjectline)
     .clear()
     .type(marathisentence);
-
+  cy.wait(2000);
   cy.get('.editor-container')
     .find('[contenteditable="true"]')
     .click()
     .type(marathisentence, { force: true });
-
+  cy.wait(2000);
   cy.get(this.locators.createtemplate).click();
-
+  cy.wait(2000);
   cy.contains('.toast-message', 'created successfully.')
     .should('be.visible');
 }
@@ -1208,41 +1217,42 @@ CreateCommunicationTemplate164() {
 
   // Open Communication Template Page
   cy.get(this.locators.communicationtemplate).click();
-
+  cy.wait(2000);
   cy.get(this.locators.templatename)
     .should('be.visible')
     .type(randomname);
-
-  // Required dropdowns
-  cy.get(this.locators.entryPoint).select('Collection');
+   cy.wait(2000);
+  cy.get(this.locators.entryPoint).select('Account');
+  cy.wait(2000);
   cy.get(this.locators.channelType).select('Email');
-  cy.get(this.locators.recipientType).select('Agent');
-
-  // ✅ Allow Access = No
+   cy.wait(2000);
+  cy.get(this.locators.recipientType).select('Customer');
+   cy.wait(2000);
   cy.get(this.locators.allowaccessno).click();
-
-  // English Subject
-  cy.get(this.locators.subjectline)
+   cy.wait(2000);
+   cy.get(this.locators.subject)
     .should('be.visible')
     .type(subjectline);
-
-  // English Email Body
+   cy.wait(2000);
   cy.get('.editor-container')
     .find('[contenteditable="true"]')
     .should('be.visible')
     .click()
     .type("Please create one Email Communication template", { force: true });
 
-  // ---------- Add Kannada Language ----------
+   cy.wait(2000);
   cy.get(this.locators.selectlanguage).click();
+   cy.wait(2000);
   cy.get(this.locators.clickondropdownlanguage).click();
+   cy.wait(2000);
   cy.contains('Kannada').click();
+   cy.wait(2000);
   cy.get(this.locators.addlanguage).click();
-
+   cy.wait(2000);
   cy.get(this.locators.selectKannadaTemplate)
     .should('be.visible')
     .click();
-
+   cy.wait(2000);
   const kannadaSentences = [
     "ನಿಮ್ಮ ಹೆಸರು ಏನು",
     "ನಾನು ಪುಣೆಯಿಂದ ಬಂದಿದ್ದೇನೆ",
@@ -1260,20 +1270,17 @@ CreateCommunicationTemplate164() {
     kannadaSentences[Math.floor(Math.random() * kannadaSentences.length)];
 
   // Kannada Subject
-  cy.get(this.locators.subjectline)
+  cy.get(this.locators.subject)
     .clear()
     .type(kannadasentence);
-
-  // Kannada Email Body
+   cy.wait(2000);
   cy.get('.editor-container')
     .find('[contenteditable="true"]')
     .click()
     .type(kannadasentence, { force: true });
-
-  // Create Template
+   cy.wait(2000);
   cy.get(this.locators.createtemplate).click();
-
-  // Success Validation
+  cy.wait(2000);
   cy.contains('.toast-message', 'created successfully.')
     .should('be.visible');
 }
@@ -1286,49 +1293,52 @@ CreateCommunicationTemplate164() {
     Array.from({ length: 8 }, () =>
       letters[Math.floor(Math.random() * letters.length)]
     ).join("");
-
+   cy.wait(2000);
   const subjectline = "Template " +
     Array.from({ length: 30 }, () =>
       letters[Math.floor(Math.random() * letters.length)]
     ).join("");
 
-  // Open Communication Template Page
+   cy.wait(2000);
   cy.get(this.locators.communicationtemplate).click();
-
+   cy.wait(2000);
   cy.get(this.locators.templatename)
     .should('be.visible')
     .type(randomname);
-
-  // Required dropdowns
-  cy.get(this.locators.entryPoint).select('Collection');
+    cy.wait(2000); 
+  cy.get(this.locators.entryPoint).select('Account');
+   cy.wait(2000);
   cy.get(this.locators.channelType).select('Email');
-  cy.get(this.locators.recipientType).select('Agent');
-
+   cy.wait(2000);
+  cy.get(this.locators.recipientType).select('Customer');
+  cy.wait(2000);
   // Allow Access = No
   cy.get(this.locators.allowaccessno).click();
-
-  // English Subject
-  cy.get(this.locators.subjectline)
+   cy.wait(2000);
+  cy.get(this.locators.subject)
     .should('be.visible')
     .type(subjectline);
 
-  // English Email Body
+   cy.wait(2000);
   cy.get('.editor-container')
     .find('[contenteditable="true"]')
     .should('be.visible')
     .click()
     .type("Please create one Email Communication template", { force: true });
 
-  // ---------- Add Malayalam Language ----------
+  cy.wait(2000);
   cy.get(this.locators.selectlanguage).click();
+  cy.wait(2000);
   cy.get(this.locators.clickondropdownlanguage).click();
+  cy.wait(2000);
   cy.contains('Malayalam').click();
+  cy.wait(2000);
   cy.get(this.locators.addlanguage).click();
-
+  cy.wait(2000);
   cy.get(this.locators.selectMalayalamTemplate)
     .should('be.visible')
     .click();
-
+  cy.wait(2000);
   const malayalamSentences = [
     "നിന്റെ പേര് എന്താണ്",
     "ഞാൻ പുനെയിൽ നിന്ന് വന്നതാണ്",
@@ -1345,21 +1355,20 @@ CreateCommunicationTemplate164() {
   const malayalamsentence =
     malayalamSentences[Math.floor(Math.random() * malayalamSentences.length)];
 
-  // Malayalam Subject
-  cy.get(this.locators.subjectline)
+  cy.wait(2000);
+  cy.get(this.locators.subject)
     .clear()
     .type(malayalamsentence);
 
-  // Malayalam Email Body
+  cy.wait(2000);
   cy.get('.editor-container')
     .find('[contenteditable="true"]')
     .click()
     .type(malayalamsentence, { force: true });
 
-  // Create Template
+  cy.wait(2000);
   cy.get(this.locators.createtemplate).click();
-
-  // Success Validation
+  cy.wait(2000);
   cy.contains('.toast-message', 'created successfully.')
     .should('be.visible');
 }
@@ -1379,41 +1388,43 @@ CreateCommunicationTemplate164() {
 
   // Open Communication Template Page
   cy.get(this.locators.communicationtemplate).click();
-
+  cy.wait(2000);
   cy.get(this.locators.templatename)
     .should('be.visible')
     .type(randomname);
 
-  // Required dropdowns
-  cy.get(this.locators.entryPoint).select('Collection');
+  cy.wait(2000);
+  cy.get(this.locators.entryPoint).select('Account');
+  cy.wait(2000);
   cy.get(this.locators.channelType).select('Email');
-  cy.get(this.locators.recipientType).select('Agent');
-
-  // Allow Access = No
+  cy.wait(2000);
+  cy.get(this.locators.recipientType).select('Customer');
+  cy.wait(2000);
   cy.get(this.locators.allowaccessno).click();
-
-  // English Subject
-  cy.get(this.locators.subjectline)
+  cy.wait(2000);
+  cy.get(this.locators.subject)
     .should('be.visible')
     .type(subjectline);
-
-  // English Email Body
+  cy.wait(2000);
   cy.get('.editor-container')
     .find('[contenteditable="true"]')
     .should('be.visible')
     .click()
     .type("Please create one Email Communication template", { force: true });
 
-  // ---------- Add Tamil Language ----------
+  cy.wait(2000);
   cy.get(this.locators.selectlanguage).click();
+  cy.wait(2000);
   cy.get(this.locators.clickondropdownlanguage).click();
+  cy.wait(2000);
   cy.contains('Tamil').click();
+  cy.wait(2000);
   cy.get(this.locators.addlanguage).click();
-
+  cy.wait(2000);
   cy.get(this.locators.selectTamilTemplate)
     .should('be.visible')
     .click();
-
+  cy.wait(2000);
   const tamilSentences = [
     "உங்கள் பெயர் என்ன",
     "நான் புனேயிலிருந்து வந்தேன்",
@@ -1431,20 +1442,18 @@ CreateCommunicationTemplate164() {
     tamilSentences[Math.floor(Math.random() * tamilSentences.length)];
 
   // Tamil Subject
-  cy.get(this.locators.subjectline)
+  cy.get(this.locators.subject)
     .clear()
     .type(tamilsentence);
 
-  // Tamil Email Body
+  cy.wait(2000);
   cy.get('.editor-container')
     .find('[contenteditable="true"]')
     .click()
     .type(tamilsentence, { force: true });
-
-  // Create Template
+  cy.wait(2000);
   cy.get(this.locators.createtemplate).click();
-
-  // Success Validation
+  cy.wait(2000);
   cy.contains('.toast-message', 'created successfully.')
     .should('be.visible');
 }
@@ -1465,25 +1474,23 @@ CreateCommunicationTemplate164() {
 
   // Open Communication Template Page
   cy.get(this.locators.communicationtemplate).click();
-
+  cy.wait(2000);
   cy.get(this.locators.templatename)
     .should('be.visible')
     .type(randomname);
-
-  // Required dropdowns
-  cy.get(this.locators.entryPoint).select('Collection');
+  cy.wait(2000);
+  cy.get(this.locators.entryPoint).select('Account');
+  cy.wait(2000);
   cy.get(this.locators.channelType).select('Email');
-  cy.get(this.locators.recipientType).select('Agent');
-
-  // Allow Access = No
+  cy.wait(2000);
+  cy.get(this.locators.recipientType).select('Customer');
+  cy.wait(2000);
   cy.get(this.locators.allowaccessno).click();
-
-  // English Subject
-  cy.get(this.locators.subjectline)
+  cy.wait(2000);
+  cy.get(this.locators.subject)
     .should('be.visible')
     .type(subjectline);
-
-  // English Email Body
+  cy.wait(2000);
   cy.get('.editor-container')
     .find('[contenteditable="true"]')
     .should('be.visible')
@@ -1492,14 +1499,17 @@ CreateCommunicationTemplate164() {
 
   // ---------- Add Telugu Language ----------
   cy.get(this.locators.selectlanguage).click();
+  cy.wait(2000);
   cy.get(this.locators.clickondropdownlanguage).click();
+  cy.wait(2000);
   cy.contains('Telugu').click();
+  cy.wait(2000);
   cy.get(this.locators.addlanguage).click();
-
+  cy.wait(2000);
   cy.get(this.locators.selectTeluguTemplate)
     .should('be.visible')
     .click();
-
+  cy.wait(2000);
   const teluguSentences = [
     "మీ పేరు ఏమిటి",
     "నేను పుణె నుండి వచ్చాను",
@@ -1516,109 +1526,145 @@ CreateCommunicationTemplate164() {
   const telugusentence =
     teluguSentences[Math.floor(Math.random() * teluguSentences.length)];
 
-  // Telugu Subject
-  cy.get(this.locators.subjectline)
+  cy.wait(2000);
+  cy.get(this.locators.subject)
     .clear()
     .type(telugusentence);
 
-  // Telugu Email Body
+  cy.wait(2000);
   cy.get('.editor-container')
     .find('[contenteditable="true"]')
     .click()
     .type(telugusentence, { force: true });
-
-  // Create Template
+  cy.wait(2000);
   cy.get(this.locators.createtemplate).click();
-
-  // Success Validation
+  cy.wait(2000);
   cy.contains('.toast-message', 'created successfully.')
     .should('be.visible');
 }
 CreateCommunicationTemplate174() {
 
   const letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  const randomname = "Template " + Array.from({ length: 8 }, () => 
+  const randomname = "Template " + Array.from({ length: 8 }, () =>
     letters[Math.floor(Math.random() * letters.length)]
   ).join("");
 
   cy.wait(1000);
   cy.get(this.locators.communicationtemplate).click();
+
   cy.wait(1000);
+  cy.get(this.locators.entryPoint).select('Account');
 
-  cy.get(this.locators.entryPoint).select('Collection');
   cy.wait(2000);
-
   cy.get(this.locators.channelType).select('SMS');
-  cy.wait(2000);
 
-  cy.get(this.locators.recipientType).select('Agent');
   cy.wait(2000);
+  cy.get(this.locators.recipientType).select('Customer');
 
+  cy.wait(2000);
   cy.get('#allowAccessNo').click();
+
   cy.wait(3000);
-
   cy.get(this.locators.templatename).type(randomname);
-  cy.wait(1000);
 
+  cy.wait(1000);
   cy.get(this.locators.template_id).type('Header');
-  cy.wait(2000);
 
+  cy.wait(2000);
   cy.get('[title="Add Var"]').click({ force: true });
+
+  cy.wait(2000);
+  cy.get('app-template-variable-mapping > .template-variable-mapping > span')
+    .click({ force: true });
+
   cy.wait(2000);
 
-  cy.get('app-template-variable-mapping > .template-variable-mapping > span').click({ force: true });
-  cy.wait(2000);
-
-  cy.get(this.locators.clickondropdown).click();
-  cy.wait(1000);
-
-  cy.get('div[role="listbox"] .ng-option').then($options => {
-    const randomIndex = Math.floor(Math.random() * $options.length);
-    cy.wrap($options[randomIndex]).click();
+  // Remove overlay if present
+  cy.get('body').then(($body) => {
+    if ($body.find('.highlight').length > 0) {
+      cy.get('.highlight').invoke('remove');
+    }
   });
 
-  cy.get(this.locators.clickonmap).click();
+  cy.wait(1000);
+
+  // Open dropdown
+  cy.get(this.locators.clickondropdown)
+    .scrollIntoView()
+    .click({ force: true });
+
+  cy.wait(1000);
+
+  // Select random option
+  cy.get('div[role="listbox"] .ng-option:visible')
+    .should('have.length.greaterThan', 0)
+    .then(($options) => {
+      const randomIndex = Math.floor(Math.random() * $options.length);
+      cy.wrap($options.eq(randomIndex)).click({ force: true });
+    });
+
+  cy.wait(1000);
+  cy.get(this.locators.clickonmap).click({ force: true });
   cy.wait(2000);
 
   cy.get(this.locators.temp_body_sms)
-    .type("Please create one SMS Communication template");
-  cy.wait(1000);
+    .type("Please create one SMS Communication template", { force: true });
 
-  // ✅ Language Selection Changed to Hindi
-  cy.get(this.locators.selectlanguage).click();
-  cy.wait(1000);
+  cy.wait(2000);
+  cy.get(this.locators.selectlanguage).click({ force: true });
 
-  cy.get(this.locators.clickondropdownlanguage).click();
-  cy.wait(1000);
+  cy.wait(2000);
+  cy.get(this.locators.clickondropdownlanguage).click({ force: true });
 
-  cy.get(this.locators.selectHindiLanguage).contains('Hindi').click();
-  cy.wait(1000);
+  cy.wait(2000);
+  cy.get(this.locators.selectHindiLanguage)
+    .contains('Hindi')
+    .click({ force: true });
 
-  cy.get(this.locators.addlanguage).click();
-  cy.wait(1000);
+  cy.wait(2000);
+  cy.get(this.locators.addlanguage).click({ force: true });
 
-  cy.get(this.locators.selectHindiTemplate).click();
-  cy.wait(1000);
+  cy.wait(2000);
+  cy.get(this.locators.selectHindiTemplate).click({ force: true });
 
-  // ✅ Add Variable Again
+  cy.wait(2000);
   cy.get('[title="Add Var"]').click({ force: true });
+
+  cy.wait(2000);
+  cy.get('app-template-variable-mapping > .template-variable-mapping > span')
+    .click({ force: true });
+
   cy.wait(2000);
 
-  cy.get('app-template-variable-mapping > .template-variable-mapping > span').click({ force: true });
-  cy.wait(2000);
-
-  cy.get(this.locators.clickondropdown).click();
-  cy.wait(1000);
-
-  cy.get('div[role="listbox"] .ng-option').then($options => {
-    const randomIndex = Math.floor(Math.random() * $options.length);
-    cy.wrap($options[randomIndex]).click();
+  // Remove overlay again if present
+  cy.get('body').then(($body) => {
+    if ($body.find('.highlight').length > 0) {
+      cy.get('.highlight').invoke('remove');
+    }
   });
 
-  cy.get(this.locators.clickonmap).click();
+  cy.wait(1000);
+
+  // Open dropdown again
+  cy.get(this.locators.clickondropdown)
+    .scrollIntoView()
+    .click({ force: true });
+
+  cy.wait(1000);
+
+  // Select random option again
+  cy.get('div[role="listbox"] .ng-option:visible')
+    .should('have.length.greaterThan', 0)
+    .then(($options) => {
+      const randomIndex = Math.floor(Math.random() * $options.length);
+      cy.wrap($options.eq(randomIndex)).click({ force: true });
+    });
+
+  cy.wait(1000);
+  cy.get(this.locators.clickonmap).click({ force: true });
+
   cy.wait(2000);
 
-  // ✅ Hindi Sentences
   const hindiSentences = [
     "आपका नाम क्या है?",
     "मैं दिल्ली से आया हूँ।",
@@ -1632,16 +1678,22 @@ CreateCommunicationTemplate174() {
     "आपका अनुरोध दर्ज कर लिया गया है।"
   ];
 
-  const hindiSentence = hindiSentences[Math.floor(Math.random() * hindiSentences.length)];
+  const hindiSentence =
+    hindiSentences[Math.floor(Math.random() * hindiSentences.length)];
 
-  cy.get(this.locators.temp_body_sms).type(hindiSentence);
-  cy.wait(1000);
+  cy.get(this.locators.temp_body_sms)
+    .type(hindiSentence, { force: true });
 
-  cy.get(this.locators.createtemplate).click();
-  cy.wait(1000);
+  cy.wait(2000);
+  cy.get(this.locators.template_id).type('Header');
+  cy.wait(2000);
+  cy.get(this.locators.createtemplate)
+    .click({ force: true });
+
+  cy.wait(2000);
 
   cy.get('.toast-message')
-    .contains('created successfully.')
+    .contains('created successfully')
     .should('be.visible');
 }
 CreateCommunicationTemplate175() {
@@ -1654,20 +1706,16 @@ CreateCommunicationTemplate175() {
   cy.wait(1000);
   cy.get(this.locators.communicationtemplate).click();
   cy.wait(1000);
-
-  cy.get(this.locators.entryPoint).select('Collection');
+  cy.get(this.locators.entryPoint).select('Account');
   cy.wait(2000);
-
   cy.get(this.locators.channelType).select('SMS');
   cy.wait(2000);
-
-  cy.get(this.locators.recipientType).select('Agent');
+  cy.get(this.locators.recipientType).select('Customer');
   cy.wait(2000);
   cy.get('#allowAccessNo').click();
   cy.wait(3000);
   cy.get(this.locators.templatename).type(randomname);
   cy.wait(1000);
-
   cy.get(this.locators.template_id).type('Header');
   cy.wait(2000);
   cy.get('[title="Add Var"]').click({ force: true });
@@ -1726,7 +1774,8 @@ cy.get('app-template-variable-mapping > .template-variable-mapping > span').clic
   const marathisentence = marathiSentences[Math.floor(Math.random() * marathiSentences.length)];
   cy.get(this.locators.temp_body_sms).type(marathisentence);
   cy.wait(1000);
-  
+  cy.get(this.locators.template_id).type('Header');
+  cy.wait(2000);
   cy.get(this.locators.createtemplate).click();
   cy.wait(1000);
 
@@ -1831,13 +1880,13 @@ CreateCommunicationTemplate177() {
   cy.get(this.locators.communicationtemplate).click();
   cy.wait(1000);
 
-  cy.get(this.locators.entryPoint).select('Collection');
+  cy.get(this.locators.entryPoint).select('Account');
   cy.wait(2000);
 
   cy.get(this.locators.channelType).select('SMS');
   cy.wait(2000);
 
-  cy.get(this.locators.recipientType).select('Agent');
+  cy.get(this.locators.recipientType).select('Customer');
   cy.wait(2000);
 
   cy.get('#allowAccessNo').click();
@@ -1906,13 +1955,13 @@ CreateCommunicationTemplate178() {
   cy.get(this.locators.communicationtemplate).click();
   cy.wait(1000);
 
-  cy.get(this.locators.entryPoint).select('Collection');
+  cy.get(this.locators.entryPoint).select('Account');
   cy.wait(2000);
 
   cy.get(this.locators.channelType).select('SMS');
   cy.wait(2000);
 
-  cy.get(this.locators.recipientType).select('Agent');
+  cy.get(this.locators.recipientType).select('Customer');
   cy.wait(2000);
 
   cy.get('#allowAccessNo').click();
@@ -1982,13 +2031,13 @@ CreateCommunicationTemplate179() {
   cy.get(this.locators.communicationtemplate).click();
   cy.wait(1000);
 
-  cy.get(this.locators.entryPoint).select('Collection');
+  cy.get(this.locators.entryPoint).select('Account');
   cy.wait(2000);
 
   cy.get(this.locators.channelType).select('SMS');
   cy.wait(2000);
 
-  cy.get(this.locators.recipientType).select('Agent');
+  cy.get(this.locators.recipientType).select('Customer');
   cy.wait(2000);
 
   cy.get('#allowAccessNo').click();
@@ -2059,13 +2108,13 @@ CreateCommunicationTemplate179() {
   cy.get(this.locators.communicationtemplate).click();
   cy.wait(1000);
 
-  cy.get(this.locators.entryPoint).select('Collection');
+  cy.get(this.locators.entryPoint).select('Account');
   cy.wait(2000);
 
   cy.get(this.locators.channelType).select('SMS');
   cy.wait(2000);
 
-  cy.get(this.locators.recipientType).select('Agent');
+  cy.get(this.locators.recipientType).select('Customer');
   cy.wait(2000);
 
   // ✅ Updated here
@@ -2154,13 +2203,13 @@ CreateCommunicationTemplate181() {
   cy.get(this.locators.communicationtemplate).click();
   cy.wait(1000);
 
-  cy.get(this.locators.entryPoint).select('Collection');
+  cy.get(this.locators.entryPoint).select('Account');
   cy.wait(2000);
 
   cy.get(this.locators.channelType).select('SMS');
   cy.wait(2000);
 
-  cy.get(this.locators.recipientType).select('Agent');
+  cy.get(this.locators.recipientType).select('Customer');
   cy.wait(2000);
 
   cy.get('#allowAccessYes').click();
@@ -2247,13 +2296,13 @@ CreateCommunicationTemplate182() {
   cy.get(this.locators.communicationtemplate).click();
   cy.wait(1000);
 
-  cy.get(this.locators.entryPoint).select('Collection');
+  cy.get(this.locators.entryPoint).select('Account');
   cy.wait(2000);
 
   cy.get(this.locators.channelType).select('SMS');
   cy.wait(2000);
 
-  cy.get(this.locators.recipientType).select('Agent');
+  cy.get(this.locators.recipientType).select('Customer');
   cy.wait(2000);
 
   cy.get('#allowAccessYes').click();
@@ -2340,13 +2389,13 @@ CreateCommunicationTemplate183() {
   cy.get(this.locators.communicationtemplate).click();
   cy.wait(1000);
 
-  cy.get(this.locators.entryPoint).select('Collection');
+  cy.get(this.locators.entryPoint).select('Account');
   cy.wait(2000);
 
   cy.get(this.locators.channelType).select('SMS');
   cy.wait(2000);
 
-  cy.get(this.locators.recipientType).select('Agent');
+  cy.get(this.locators.recipientType).select('Customer');
   cy.wait(2000);
 
   cy.get('#allowAccessYes').click();
@@ -2432,13 +2481,13 @@ CreateCommunicationTemplate184() {
   cy.get(this.locators.communicationtemplate).click();
   cy.wait(1000);
 
-  cy.get(this.locators.entryPoint).select('Collection');
+  cy.get(this.locators.entryPoint).select('Account');
   cy.wait(2000);
 
   cy.get(this.locators.channelType).select('SMS');
   cy.wait(2000);
 
-  cy.get(this.locators.recipientType).select('Agent');
+  cy.get(this.locators.recipientType).select('Customer');
   cy.wait(2000);
 
   cy.get('#allowAccessYes').click();
@@ -2614,7 +2663,7 @@ CreateCommunicationTemplate185() {
     cy.wait(1000);
      cy.wait(1000);
   cy.get(this.locators.communicationtemplate).click();
-  cy.wait(1000);
+  cy.wait(2000);
   cy.get(this.locators.entryPoint).select('Collection');
   cy.wait(2000);
   cy.get(this.locators.channelType).select('Letter');
@@ -2622,20 +2671,20 @@ CreateCommunicationTemplate185() {
   cy.get(this.locators.recipientType).select('Customer');
   cy.wait(2000);
   cy.get(this.locators.templatename).type(randomname);
-  cy.wait(1000);
+  cy.wait(2000);
   cy.get(this.locators.hindiTemplateBody)
   .type("Please create one Email Communication template");
-    cy.wait(1000);
+    cy.wait(2000);
     cy.get(this.locators.selectlanguage).click();
-    cy.wait(1000);
+    cy.wait(2000);
     cy.get(this.locators.clickondropdownlanguage).click();
-    cy.wait(1000);
+    cy.wait(2000);
     cy.get(this.locators.selectHindiLanguage).contains('Hindi').click();
-    cy.wait(1000);
+    cy.wait(2000);
     cy.get(this.locators.addlanguage).click();
-    cy.wait(1000);
+    cy.wait(2000);
     cy.get(this.locators.selectHindiTemplate).click();
-    cy.wait(1000);
+    cy.wait(2000);
     const hindiSentences = [
       "आपका नाम क्या है?",                // What is your name?
       "मैं दिल्ली से आया हूँ।",           // I am from Delhi.
@@ -2650,11 +2699,11 @@ CreateCommunicationTemplate185() {
     ];
     const hindiSentence = hindiSentences[Math.floor(Math.random() * hindiSentences.length)];
     cy.get(this.locators.hindiTemplateBody).type(hindiSentence);
-    cy.wait(1000);
+    cy.wait(2000);
     cy.get(this.locators.createtemplate).click();
-    cy.wait(1000);
+    cy.wait(2000);
     cy.get('.toast-message').contains('created successfully.').should('be.visible')
-    cy.wait(1000);
+    cy.wait(2000);
   }
 
  CreateCommunicationTemplate187() {

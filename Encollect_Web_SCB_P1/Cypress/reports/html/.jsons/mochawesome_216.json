@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T18:55:17.880Z",
+    "end": "2026-06-16T18:55:58.592Z",
+    "duration": 40712,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "82a8d1a7-1b69-466e-ad64-27a21ccd2bd3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_801.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_801.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "351f7a63-e57f-48f3-be5c-09c471fc74ae",
+          "title": "Allocation - Primary Unallocation Status - User should be able to select any one of the drop down value from status field. for ex user selected \"Processed\" under status and clicked on search button, in the result grid user should be able to see list of processed Unallocation files and user should be able to go next page and select showing results upto 50. user should be able to scroll up and select any other drop down value under status field.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Invalid Transaction ID - TC_ID_801",
+              "fullTitle": "Allocation - Primary Unallocation Status - User should be able to select any one of the drop down value from status field. for ex user selected \"Processed\" under status and clicked on search button, in the result grid user should be able to see list of processed Unallocation files and user should be able to go next page and select showing results upto 50. user should be able to scroll up and select any other drop down value under status field. Invalid Transaction ID - TC_ID_801",
+              "timedOut": null,
+              "duration": 34031,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonallocationPUS3('Processed');\n});",
+              "err": {},
+              "uuid": "18d5d763-8621-407d-b384-daa366a45bbe",
+              "parentUUID": "351f7a63-e57f-48f3-be5c-09c471fc74ae",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "18d5d763-8621-407d-b384-daa366a45bbe"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 34031,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

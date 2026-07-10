@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T19:00:21.629Z",
+    "end": "2026-06-16T19:00:59.551Z",
+    "duration": 37922,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c4dae903-39f7-47ba-9097-76a3805b2fec",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_807.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_807.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "27e8b6e3-d9e3-4076-b8bd-f883640904a1",
+          "title": "Allocation - Upload Collector Allocation Batch - User entered required data in the template and clicked on upload button In the pop message user clicked on close button instead of OK, then user should go back to allocation page.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Collector Level Allocation - TC_ID_807",
+              "fullTitle": "Allocation - Upload Collector Allocation Batch - User entered required data in the template and clicked on upload button In the pop message user clicked on close button instead of OK, then user should go back to allocation page. Collector Level Allocation - TC_ID_807",
+              "timedOut": null,
+              "duration": 33049,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  // Download the batch file\n  allocationPage.downloadtemplateforallocation();\n  // Update the Excel file\n  const sheetName = 'Sheet1';\n  const data = {\n    'A2': 'M0010811195'\n  };\n  const excelFileName = 'AllocationToOwner.xlsx';\n  const downloadsFolder = Cypress.config('downloadsFolder');\n  const filePath = `${downloadsFolder}\\\\${excelFileName}`;\n  cy.task('updateExcelCell', {\n    filePath: filePath,\n    sheetName: sheetName,\n    data: data\n  }).then(() => {\n    cy.log('Incorrect data');\n    //allocationPage.uploadAgencyallocationBatchATAClose();\n  });\n});",
+              "err": {},
+              "uuid": "89103669-6d31-48c5-90dc-db2742cae47c",
+              "parentUUID": "27e8b6e3-d9e3-4076-b8bd-f883640904a1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "89103669-6d31-48c5-90dc-db2742cae47c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 33049,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

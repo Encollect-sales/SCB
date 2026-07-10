@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T20:51:36.898Z",
+    "end": "2026-06-16T20:52:20.785Z",
+    "duration": 43887,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e5428c60-1e8c-462f-bd31-cb9ebc6dc958",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\PaymentsPageTest_1395.cy.js",
+      "file": "cypress\\e2e\\tests\\PaymentsPageTest_1395.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "17e17be5-41ef-4b5b-92f9-6316602e8935",
+          "title": "Payments Module - Search and Print Batch - Logged in user to print batch by clicking on batch id hyperlink in the result grid of agency details",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Payment - TC_ID_1395",
+              "fullTitle": "Payments Module - Search and Print Batch - Logged in user to print batch by clicking on batch id hyperlink in the result grid of agency details Payment - TC_ID_1395",
+              "timedOut": null,
+              "duration": 37666,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  paymentsPage.SearchandPrintBatch1398();\n});",
+              "err": {},
+              "uuid": "f289619f-ac7d-4af7-9c98-1cb1375cad2a",
+              "parentUUID": "17e17be5-41ef-4b5b-92f9-6316602e8935",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f289619f-ac7d-4af7-9c98-1cb1375cad2a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 37666,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

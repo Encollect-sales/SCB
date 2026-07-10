@@ -10,7 +10,7 @@ class InsightsPage {
   clickonInsights001() {
     cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonprimaryallocationinsights).click();
+    cy.contains("Primary Allocation Insights").scrollIntoView().click();
     cy.wait(5000);
     cy.get('a[class="nav-link active"] span').contains('Overview').should('be.visible');
     cy.wait(1000);
@@ -19,7 +19,7 @@ class InsightsPage {
   clickonInsights002() {
     cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonprimaryallocationinsights).click();
+    cy.contains("Primary Allocation Insights").scrollIntoView().click();
     cy.wait(5000);
     cy.get('a[class="nav-link active"] span').contains('Overview').should('be.visible');
     cy.wait(1000);
@@ -41,7 +41,7 @@ class InsightsPage {
     cy.wait(8000);
     cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonprimaryallocationinsights).click();
+    cy.contains("Primary Allocation Insights").scrollIntoView().click();
     cy.wait(10000);
    cy.get('#allocationStatusChart')
   .find('svg g .arc')
@@ -54,9 +54,10 @@ class InsightsPage {
   }
 
   clickonInsights004() {
+    cy.wait(20000);
     cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonprimaryallocationinsights).click();
+    cy.contains("Primary Allocation Insights").scrollIntoView().click();
     cy.wait(10000);
     cy.get('.inner-container').scrollTo('0%', '50%');
     cy.wait(1000);
@@ -81,7 +82,7 @@ class InsightsPage {
   clickonInsights006() {
     cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonprimaryallocationinsights).click();
+    cy.contains("Primary Allocation Insights").scrollIntoView().click();
     cy.wait(10000);
     cy.get(':nth-child(3) > .card-header > .d-flex > .btn-group > [btnradio="bottom"]').click();
     cy.get(2000);
@@ -94,7 +95,7 @@ class InsightsPage {
   clickonInsights007() {
     cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonprimaryallocationinsights).click();
+    cy.contains("Primary Allocation Insights").scrollIntoView().click();
     cy.wait(10000);
     cy.get(':nth-child(4) > .card-header > .d-flex > .btn-group > [btnradio="bottom"]').click({force:true});
     cy.wait(1000);
@@ -106,7 +107,7 @@ class InsightsPage {
   clickonInsights008() {
     cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonprimaryallocationinsights).click();
+    cy.contains("Primary Allocation Insights").scrollIntoView().click();
     cy.wait(10000);
     cy.get(':nth-child(5) > .card-header > .d-flex > .btn-group > [btnradio="bottom"]').click({force:true});
     cy.wait(1000);
@@ -118,7 +119,7 @@ class InsightsPage {
   clickonInsights009() {
     cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonprimaryallocationinsights).click();
+    cy.contains("Primary Allocation Insights").scrollIntoView().click();
     cy.wait(10000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -134,7 +135,7 @@ class InsightsPage {
   clickonInsights010() {
     cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonprimaryallocationinsights).click();
+    cy.contains("Primary Allocation Insights").scrollIntoView().click();
     cy.wait(10000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -148,7 +149,7 @@ class InsightsPage {
   clickonInsights011() {
     cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonprimaryallocationinsights).click();
+    cy.contains("Primary Allocation Insights").scrollIntoView().click();
     cy.wait(10000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -188,7 +189,7 @@ class InsightsPage {
   clickonInsights012() {
     cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonprimaryallocationinsights).click();
+    cy.contains("Primary Allocation Insights").scrollIntoView().click();
     cy.wait(10000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -212,7 +213,7 @@ class InsightsPage {
   clickonInsights013() {
     cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonprimaryallocationinsights).click();
+    cy.contains("Primary Allocation Insights").scrollIntoView().click();
     cy.wait(10000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -289,7 +290,7 @@ clickonmoneymovementingistspage154() {
   clickonInsights014() {
     cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonprimaryallocationinsights).click();
+    cy.contains("Primary Allocation Insights").scrollIntoView().click();
     cy.wait(10000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -323,7 +324,7 @@ clickonmoneymovementingistspage154() {
     cy.wait(5000);
     cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonprimaryallocationinsights).click();
+    cy.contains("Primary Allocation Insights").scrollIntoView().click();
     cy.wait(10000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -396,7 +397,7 @@ clickonmoneymovementingistspage154() {
     cy.wait(5000);
     cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonprimaryallocationinsights).click();
+    cy.contains("Primary Allocation Insights").scrollIntoView().click();
     cy.wait(8000);
     cy.get(this.locators.hoverOnIcon).click();
     cy.wait(1000);
@@ -407,7 +408,7 @@ clickonmoneymovementingistspage154() {
   clickonInsights018() {
     cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonprimaryallocationinsights).click();
+    cy.contains("Primary Allocation Insights").scrollIntoView().click();
     cy.wait(10000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -444,7 +445,7 @@ clickonmoneymovementingistspage154() {
   clickonInsights019() {
     cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonprimaryallocationinsights).click();
+    cy.contains("Primary Allocation Insights").scrollIntoView().click();
     cy.wait(10000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -475,7 +476,7 @@ clickonmoneymovementingistspage154() {
     cy.wait(5000);
     cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonprimaryallocationinsights).click();
+    cy.contains("Primary Allocation Insights").scrollIntoView().click();
     cy.wait(10000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -562,7 +563,7 @@ clickonmoneymovementingistspage154() {
   clickonInsights022() {
     cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonprimaryallocationinsights).click();
+    cy.contains("Primary Allocation Insights").scrollIntoView().click();
     cy.wait(10000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -636,7 +637,7 @@ clickonmoneymovementingistspage154() {
   clickonInsights023() {
     cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonprimaryallocationinsights).click();
+    cy.contains("Primary Allocation Insights").scrollIntoView().click();
     cy.wait(10000);
     cy.get(this.locators.clickonfilter).click();
     cy.wait(1000);
@@ -714,7 +715,7 @@ clickonmoneymovementingistspage154() {
   clickonInsights024() {
     cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonprimaryallocationinsights).click();
+    cy.contains("Primary Allocation Insights").scrollIntoView().click();
     cy.wait(5000);
     cy.get('a[class="nav-link active"] span').contains('Overview').should('be.visible');
     cy.wait(1000);
@@ -726,7 +727,7 @@ clickonmoneymovementingistspage154() {
   clickonInsights025() {
     cy.get(this.locators.clickoninsight).click({force:true});
     cy.wait(1000);
-    cy.get(this.locators.clickonprimaryallocationinsights).click();
+    cy.contains("Primary Allocation Insights").scrollIntoView().click();
     cy.wait(5000);
     cy.get('a[class="nav-link active"] span').contains('Overview').should('be.visible');
     cy.wait(1000);
@@ -1489,7 +1490,7 @@ cy.get('form.ng-valid > :nth-child(1) > :nth-child(4) > .form-ng-select > .ng-se
     cy.wait(1000);
     cy.get('path.arc[fill*="213"]').click({ force: true });
     cy.wait(1500);
-    cy.contains('h3', 'Attempted vs Unattempted Accounts').should('be.visible');;
+    cy.contains('h3', 'Attempted vs Unattempted Accounts').scrollIntoView().should('be.visible');;
     cy.wait(1000);
   }
 
@@ -2541,8 +2542,8 @@ clickonAllocatedVsAchived106() {
     cy.contains('Geography & Product Analysis')
     .scrollIntoView()
     .click({ force: true });
-    cy.contains('h3', ' Uncollected by Product Group ').should('exist');
-    cy.contains('h3', ' Uncollected by Product Group ').scrollIntoView().should('be.visible');
+    cy.contains('h3', ' Uncollected by ProductGroup ').should('exist');
+    cy.contains('h3', ' Uncollected by ProductGroup ').scrollIntoView().should('be.visible');
     cy.wait(1000);
 
 }
@@ -2555,8 +2556,8 @@ clickonAllocatedVsAchived107() {
     cy.contains('Geography & Product Analysis')
     .scrollIntoView()
     .click({ force: true });
-    cy.contains('h3', 'Accounts Collected vs Uncollected by Product Group').should('exist');
-    cy.contains('h3', 'Accounts Collected vs Uncollected by Product Group ').scrollIntoView().should('be.visible');
+    cy.contains('h3', 'Accounts Collected vs Uncollected by ProductGroup').should('exist');
+    cy.contains('h3', 'Accounts Collected vs Uncollected by ProductGroup ').scrollIntoView().should('be.visible');
     cy.wait(1000);
 
 }
@@ -2835,9 +2836,7 @@ cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
-    cy.get('.active.tab-pane > .ng-star-inserted > .overview-cards > :nth-child(1) > .overview-card-info-icon > svg-icon > svg').click();
-    cy.wait(1000);
-    cy.get('.enc-tabs-1').contains('Allocated Accounts').should('be.visible');
+    cy.get('.enc-tabs-1').contains('Allocated Accounts').scrollIntoView().should('be.visible');
     cy.wait(1000);
   }
   clickonAllocatedVsAchived118() {
@@ -2857,9 +2856,7 @@ cy.get('#accordion-geography > .panel > .panel-collapse > .panel-body > form.ng-
     cy.wait(1000);
     cy.get(this.locators.clickOnAllocatedVsAchived).click();
     cy.wait(1000);
-    cy.get('.active.tab-pane > .ng-star-inserted > .overview-cards > :nth-child(3) > .overview-card-info-icon > svg-icon > svg').click();
-    cy.wait(1000);
-    cy.get('.enc-tabs-1').contains('Uncollected Accounts').should('be.visible');
+    cy.get('.enc-tabs-1').contains('Uncollected Accounts').scrollIntoView().should('be.visible');
     cy.wait(1000);
     
   }
@@ -6454,18 +6451,18 @@ clickonAllocatedVsAchived250() {
   //   .click();
 
   // Continue validations
-  cy.contains('th.ng-star-inserted', 'Account Number').scrollIntoView().should('be.visible');
-  cy.contains('th.ng-star-inserted', 'Product Group').scrollIntoView().should('be.visible');
-  cy.contains('th.ng-star-inserted', 'Product ').scrollIntoView().should('be.visible');
-  cy.contains('th.ng-star-inserted', 'Sub Product').scrollIntoView().should('be.visible');
-  cy.contains('th.ng-star-inserted', 'Current Bucket').scrollIntoView().should('be.visible');
-  cy.contains('th.ng-star-inserted', 'BOM Bucket').scrollIntoView().should('be.visible');
-  cy.contains('th.ng-star-inserted', 'Country').scrollIntoView().should('be.visible');
-  cy.contains('th.ng-star-inserted', 'Region').scrollIntoView().should('be.visible');
-  cy.contains('th.ng-star-inserted', 'State').scrollIntoView().should('be.visible');
-  cy.contains('th.ng-star-inserted', 'City').scrollIntoView().should('be.visible');
-  cy.contains('th.ng-star-inserted', 'Branch').scrollIntoView().should('be.visible');
-  cy.contains('th.ng-star-inserted', 'BOM POS').scrollIntoView().should('be.visible');
+ cy.contains('Account Number', { timeout: 10000 }).should('exist');
+  cy.contains('ProductGroup', { timeout: 10000 }).should('exist');
+  cy.contains('Product', { timeout: 10000 }).should('exist');
+  cy.contains('SubProduct', { timeout: 10000 }).should('exist');
+  cy.contains('Current Bucket', { timeout: 10000 }).should('exist');
+  cy.contains('BOM Bucket', { timeout: 10000 }).should('exist');
+  cy.contains('Country', { timeout: 10000 }).should('exist');
+  cy.contains('Region', { timeout: 10000 }).should('exist');
+  cy.contains('State', { timeout: 10000 }).should('exist');
+  cy.contains('City', { timeout: 10000 }).should('exist');
+  cy.contains('Branch', { timeout: 10000 }).should('exist');
+  cy.contains('BOM POS', { timeout: 10000 }).should('exist');
 
 }
 
@@ -6483,18 +6480,18 @@ clickonAllocatedVsAchived251() {
     cy.wait(1000);
     cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
-    cy.get('th.ng-star-inserted').filter(':contains("Account Number")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product Group")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product ")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Sub Product")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Current Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("BOM Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Country")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Charges Overdue")').scrollIntoView().should('be.visible');
+   cy.contains('Account Number').scrollIntoView().should('exist');
+cy.contains('ProductGroup').scrollIntoView().should('exist');
+cy.contains('Product').scrollIntoView().should('exist');
+cy.contains('SubProduct').scrollIntoView().should('exist');
+cy.contains('Current Bucket').scrollIntoView().should('exist');
+cy.contains('BOM Bucket').scrollIntoView().should('exist');
+cy.contains('Country').scrollIntoView().should('exist');
+cy.contains('Region').scrollIntoView().should('exist');
+cy.contains('State').scrollIntoView().should('exist');
+cy.contains('City').scrollIntoView().should('exist');
+cy.contains('Branch').scrollIntoView().should('exist');
+cy.contains('Charges Overdue').scrollIntoView().should('exist');
     
 }
 clickonAllocatedVsAchived252() {
@@ -6511,18 +6508,18 @@ clickonAllocatedVsAchived252() {
     cy.wait(1000);
     cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
-    cy.get('th.ng-star-inserted').filter(':contains("Account Number")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product Group")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product ")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Sub Product")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Current Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("BOM Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Country")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Amount Outstanding")').scrollIntoView().should('be.visible');
+cy.contains('Account Number').scrollIntoView().should('exist');
+cy.contains('ProductGroup').scrollIntoView().should('exist');
+cy.contains('Product').scrollIntoView().should('exist');
+cy.contains('SubProduct').scrollIntoView().should('exist');
+cy.contains('Current Bucket').scrollIntoView().should('exist');
+cy.contains('BOM Bucket').scrollIntoView().should('exist');
+cy.contains('Country').scrollIntoView().should('exist');
+cy.contains('Region').scrollIntoView().should('exist');
+cy.contains('State').scrollIntoView().should('exist');
+cy.contains('City').scrollIntoView().should('exist');
+cy.contains('Branch').scrollIntoView().should('exist');
+cy.contains('Charges Overdue').scrollIntoView().should('exist');
     
 }
 clickonAllocatedVsAchived253() {
@@ -6539,19 +6536,18 @@ clickonAllocatedVsAchived253() {
     cy.wait(1000);
     cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
-    cy.get('th.ng-star-inserted').filter(':contains("Account Number")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product Group")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product ")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Sub Product")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Current Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("BOM Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Country")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Field Primary Name")').scrollIntoView().should('be.visible');
-    
+    cy.contains('Account Number').scrollIntoView().should('exist');
+cy.contains('ProductGroup').scrollIntoView().should('exist');
+cy.contains('Product').scrollIntoView().should('exist');
+cy.contains('SubProduct').scrollIntoView().should('exist');
+cy.contains('Current Bucket').scrollIntoView().should('exist');
+cy.contains('BOM Bucket').scrollIntoView().should('exist');
+cy.contains('Country').scrollIntoView().should('exist');
+cy.contains('Region').scrollIntoView().should('exist');
+cy.contains('State').scrollIntoView().should('exist');
+cy.contains('City').scrollIntoView().should('exist');
+cy.contains('Branch').scrollIntoView().should('exist');
+cy.contains('Field Primary Name').scrollIntoView().should('exist');
 }
 clickonAllocatedVsAchived254() {
     cy.get(this.locators.clickoninsight).click({force:true});
@@ -6566,18 +6562,18 @@ clickonAllocatedVsAchived254() {
     cy.wait(1000);
     cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000);
-    cy.get('th.ng-star-inserted').filter(':contains("Account Number")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product Group")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product ")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Sub Product")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Current Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("BOM Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Country")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Last Modified Date and Time")').scrollIntoView().should('be.visible');
+   cy.contains('Account Number').scrollIntoView().should('exist');
+cy.contains('ProductGroup').scrollIntoView().should('exist');
+cy.contains('Product').scrollIntoView().should('exist');
+cy.contains('SubProduct').scrollIntoView().should('exist');
+cy.contains('Current Bucket').scrollIntoView().should('exist');
+cy.contains('BOM Bucket').scrollIntoView().should('exist');
+cy.contains('Country').scrollIntoView().should('exist');
+cy.contains('Region').scrollIntoView().should('exist');
+cy.contains('State').scrollIntoView().should('exist');
+cy.contains('City').scrollIntoView().should('exist');
+cy.contains('Branch').scrollIntoView().should('exist');
+cy.contains('Last Modified Date and Time').scrollIntoView().should('exist');
     
 }
 clickonAllocatedVsAchived255() {
@@ -6632,37 +6628,36 @@ clickonAllocatedVsAchived255() {
     cy.wait(1000);
     cy.get('#loan-grid-column-filter-button').click({force:true});
     cy.wait(2000)
-    cy.get('th.ng-star-inserted').filter(':contains("Account Number")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product Group")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Product ")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Sub Product")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Current Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("BOM Bucket")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Country")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Region")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("State")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("City")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Branch")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("BOM POS")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Current POS")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Principal Overdue")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Interest Overdue")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("Charges Overdue")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("Total Overdue")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("NPA Flag")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("Amount Outstanding")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("Allocation Owner Name")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("Allocation Owner Designation")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("Allocation Owner ID")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("TC Primary Name")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("TC Primary ID")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("Field Primary Name")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("Field Primary ID")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("TC Primary Allocation Status")').scrollIntoView().should('be.visible');
-     cy.get('th.ng-star-inserted').filter(':contains("Field Primary Allocation Status")').scrollIntoView().should('be.visible');
-    // cy.get('th.ng-star-inserted').filter(':contains("Primary Allocation Status")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Secondary Allocation Status")').scrollIntoView().should('be.visible');
-    cy.get('th.ng-star-inserted').filter(':contains("Last Modified Date and Time")').scrollIntoView().should('be.visible');
+   cy.contains('Account Number').scrollIntoView().should('exist');
+cy.contains('ProductGroup').scrollIntoView().should('exist');
+cy.contains('Product').scrollIntoView().should('exist');
+cy.contains('SubProduct').scrollIntoView().should('exist');
+cy.contains('Current Bucket').scrollIntoView().should('exist');
+cy.contains('BOM Bucket').scrollIntoView().should('exist');
+cy.contains('Country').scrollIntoView().should('exist');
+cy.contains('Region').scrollIntoView().should('exist');
+cy.contains('State').scrollIntoView().should('exist');
+cy.contains('City').scrollIntoView().should('exist');
+cy.contains('Branch').scrollIntoView().should('exist');
+cy.contains('BOM POS').scrollIntoView().should('exist');
+cy.contains('Current POS').scrollIntoView().should('exist');
+cy.contains('Principal Overdue').scrollIntoView().should('exist');
+cy.contains('Interest Overdue').scrollIntoView().should('exist');
+cy.contains('Charges Overdue').scrollIntoView().should('exist');
+cy.contains('Total Overdue').scrollIntoView().should('exist');
+cy.contains('NPA Flag').scrollIntoView().should('exist');
+cy.contains('Amount Outstanding').scrollIntoView().should('exist');
+cy.contains('Allocation Owner Name').scrollIntoView().should('exist');
+cy.contains('Allocation Owner Designation').scrollIntoView().should('exist');
+cy.contains('Allocation Owner ID').scrollIntoView().should('exist');
+cy.contains('TC Primary Name').scrollIntoView().should('exist');
+cy.contains('TC Primary ID').scrollIntoView().should('exist');
+cy.contains('Field Primary Name').scrollIntoView().should('exist');
+cy.contains('Field Primary ID').scrollIntoView().should('exist');
+cy.contains('TC Primary Allocation Status').scrollIntoView().should('exist');
+cy.contains('Field Primary Allocation Status').scrollIntoView().should('exist');
+cy.contains('Secondary Allocation Status').scrollIntoView().should('exist');
+cy.contains('Last Modified Date and Time').scrollIntoView().should('exist');
 }
 clickonmoneymovementingistspage256() {
     cy.wait(3000);

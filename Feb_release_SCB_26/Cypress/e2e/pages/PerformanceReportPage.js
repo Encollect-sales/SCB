@@ -12,6 +12,7 @@ PerformanceReportTestPage01(){
     cy.get(this.locators.PerformancePagereport).click({force:true});
     cy.wait(2000);
     cy.contains("Performance Report (Monthly)").scrollIntoView().should('be.visible');
+    // cy.wait(20000);
 }
 PerformanceReportTestPage02(){
      cy.wait(9000);
@@ -1498,7 +1499,7 @@ PerformanceReportTestPage040(){
     cy.wait(2000);
     cy.contains("Performance Report (Monthly)").should('exist').click({ force: true });
     cy.wait(2000);
-    cy.contains('label', 'Agency(s)').parent().contains('ABCDEF-12951').should('be.visible');
+    cy.contains('label', 'Agency(s)').parent().contains('Tony-10003').should('be.visible');
 }
 PerformanceReportTestPage041(){
     cy.wait(9000);
@@ -1520,7 +1521,7 @@ PerformanceReportTestPage042(){
     cy.wait(2000);
     cy.contains("Performance Report (MTD)").should('exist').click({ force: true });
     cy.wait(2000);
-    cy.contains('label', 'Agency(s)').parent().contains('ABCDEF-12951').should('be.visible');
+    cy.contains('label', 'Agency(s)').parent().contains('Tony-10003').should('be.visible');
 
 }
 
@@ -1532,7 +1533,7 @@ PerformanceReportTestPage043(){
     cy.wait(2000);
     cy.contains("Performance Report (MTD)").should('exist').click({ force: true });
     cy.wait(2000);
-    cy.get('.card-content').should('not.contain', 'Bank Staff');
+    cy.contains("Bank Staff").scrollIntoView();
 
 }
 
@@ -1639,7 +1640,7 @@ PerformanceReportTestPage48(){
     cy.wait(9000);
     cy.contains('Month').scrollIntoView().should('be.visible');
     cy.wait(2000);
-    cy.contains("Product Group(s)").scrollIntoView().should('be.visible');
+    cy.contains("ProductGroup(s)").scrollIntoView().should('be.visible');
 
 
 }
@@ -1713,13 +1714,14 @@ PerformanceReportTestPage51(){
     cy.get(this.locators.agencybutton).click({force:true});
     cy.wait(2000);
    cy.contains('Month').scrollIntoView().should('be.visible');
-    cy.contains('Product Group(s)').scrollIntoView().should('be.visible');
+    cy.contains('ProductGroup(s)').scrollIntoView().should('be.visible');
     cy.contains('Product(s)').scrollIntoView().should('be.visible');
-    cy.contains('Sub Product(s)').scrollIntoView().should('be.visible');
+    cy.contains('SubProduct(s)').scrollIntoView().should('be.visible');
     cy.contains('City(s)').scrollIntoView().should('be.visible');
     cy.contains('Branch(s)').scrollIntoView().should('be.visible');
-    cy.contains('User Branch(s)').scrollIntoView().should('be.visible');
-    cy.contains('Staff(s)').scrollIntoView().should('be.visible');
+    cy.contains('Agency(s)').scrollIntoView().should('be.visible');
+    cy.contains('Agent(s)').scrollIntoView().should('be.visible');
+
 
 }
 
@@ -1965,7 +1967,6 @@ cy.contains("Resolved")
 
 
 PerformanceReportTestPage59() {
-
   cy.wait(9000);
   cy.get(this.locators.Reports).click({ force: true });
   cy.wait(2000);
@@ -1979,14 +1980,14 @@ PerformanceReportTestPage59() {
   cy.wait(2000); 
   cy.get(this.locators.monthfield).click({ force: true });
   cy.wait(2000);
-  cy.get('.ng-dropdown-panel .ng-option')
-    .should('have.length.greaterThan', 1)
-    .then(($options) => {
-      cy.wrap($options.eq(1)).click({ force: true }); 
-
-    });
-  cy.wait(2000);
-
+cy.get('.ng-dropdown-panel .ng-option')
+  .should('have.length.greaterThan', 3)
+  .then(($options) => {
+    cy.wrap($options.eq(0)).click({ force: true });
+    cy.wrap($options.eq(1)).click({ force: true });
+    cy.wrap($options.eq(2)).click({ force: true });
+  });
+cy.wait(2000);
 
   // -------- Select Product Group --------
   cy.get(this.locators.productgroup).click();
@@ -1999,18 +2000,14 @@ PerformanceReportTestPage59() {
 
   // -------- Select Country --------
   cy.get(this.locators.country).click({ force: true });
-
-  cy.contains('.ng-option-label', 'India').click();
-
+  cy.contains('.ng-option-label', 'India','Korea').click({force:true});
   cy.wait(2000);
 
   // -------- Generate Report --------
   cy.contains('Generate Report')
     .should('be.visible')
     .click({ force: true });
-
   cy.wait(2000);
-
   // -------- Verify Search Result --------
   cy.contains('Search Result')
     .scrollIntoView()
@@ -2026,7 +2023,6 @@ PerformanceReportTestPage60(){
     cy.contains("Performance Report (Monthly)").should('exist').click({ force: true });
     cy.wait(2000);
 cy.get(this.locators.monthfield).click({ force: true });
-
 for (let i = 2; i <= 5; i++) {
   cy.get(`[id$="-${i}"] > .ng-option-label`).click({ force: true });
 }

@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T17:24:33.658Z",
+    "end": "2026-06-16T17:25:15.390Z",
+    "duration": 41732,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8a91508c-90f4-458d-856c-63f80596af4b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_701.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_701.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e6fa0cb4-e0fd-40e8-9481-84caa3b47497",
+          "title": "Allocation - Upload Agency Allocation Batch - Once after uploading the allocation file, the file status will change to processed then user should receive email notification",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Agency Level Allocation - TC_ID_701",
+              "fullTitle": "Allocation - Upload Agency Allocation Batch - Once after uploading the allocation file, the file status will change to processed then user should receive email notification Agency Level Allocation - TC_ID_701",
+              "timedOut": null,
+              "duration": 34348,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.Clickonallocation701();\n  allocationPage.clickondownloadTemplate();\n  //allocationPage.clickonRadioBtnAO();\n  allocationPage.uploadDocxExtensionFile701();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.btn.btn-secondary.ng-star-inserted`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.btn.btn-secondary.ng-star-inserted`, but never found it.\n    at AllocationPage.clickondownloadTemplate (webpack:///./cypress/e2e/pages/AllocationPage.js:170:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_701.cy.js:27:26)",
+                "diff": null
+              },
+              "uuid": "5ed63851-778a-43c9-8b83-7b5e7a4b5497",
+              "parentUUID": "e6fa0cb4-e0fd-40e8-9481-84caa3b47497",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "5ed63851-778a-43c9-8b83-7b5e7a4b5497"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 34348,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

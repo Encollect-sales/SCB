@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T16:55:17.368Z",
+    "end": "2026-06-16T16:56:10.842Z",
+    "duration": 53474,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2ecf2873-2378-4c7b-b5f3-1104c4334a54",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AgentEmpanelmentRequestPageTest_634.cy.js",
+      "file": "cypress\\e2e\\tests\\AgentEmpanelmentRequestPageTest_634.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4f9acd40-8209-4bed-a03e-f7011145a1fe",
+          "title": "Agent Empanelment Request - Create Agent - .User should be able to select all mandatory fields in place of work2.The dropdown values of all these fields coming from BE using Product, bucket and geography masters.3.User can click on \"Add\" button to add multiple product, bucket and geography at the same time.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Agent Empanelment Request - TC_ID_634",
+              "fullTitle": "Agent Empanelment Request - Create Agent - .User should be able to select all mandatory fields in place of work2.The dropdown values of all these fields coming from BE using Product, bucket and geography masters.3.User can click on \"Add\" button to add multiple product, bucket and geography at the same time. Agent Empanelment Request - TC_ID_634",
+              "timedOut": null,
+              "duration": 39385,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  agentemplimentationRequest.AgentEnpalmentRequest634();\n});",
+              "err": {},
+              "uuid": "a4a3bf8d-954b-4308-b7b3-31c8eaab9e18",
+              "parentUUID": "4f9acd40-8209-4bed-a03e-f7011145a1fe",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a4a3bf8d-954b-4308-b7b3-31c8eaab9e18"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 39385,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

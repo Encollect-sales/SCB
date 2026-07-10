@@ -39,7 +39,7 @@ describe('Trails - New Address Special Characters', () => {
             const email = `${faker.string.alpha({ length: 8 }).toLowerCase()}@yopmail.com`;
 
             const data = {
-                'A2':'18765',
+                'A2':'1667',
                 'B2':'10031',
                 'C2':'yes',
                 'D2':'PTP',

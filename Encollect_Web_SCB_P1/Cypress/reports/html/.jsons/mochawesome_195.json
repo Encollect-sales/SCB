@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T18:37:47.729Z",
+    "end": "2026-06-16T18:38:25.632Z",
+    "duration": 37903,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a9568b65-2b53-410a-aaf5-639df568a284",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_780.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_780.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dbb1c65b-c9b9-4c4e-9a45-20d901614979",
+          "title": "Allocation - Upload Agency Allocation Owner Status - .user selected \"Partially Processed\" under status field and clicked on search button user should be able to see all Partially Processed allocation files in the result grid.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Product Filter - TC_ID_780",
+              "fullTitle": "Allocation - Upload Agency Allocation Owner Status - .user selected \"Partially Processed\" under status field and clicked on search button user should be able to see all Partially Processed allocation files in the result grid. Product Filter - TC_ID_780",
+              "timedOut": null,
+              "duration": 32578,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonallocationSUS('4: Partially Processed');\n});",
+              "err": {},
+              "uuid": "2ef9f311-198a-43a3-92d0-586a0786fc66",
+              "parentUUID": "dbb1c65b-c9b9-4c4e-9a45-20d901614979",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2ef9f311-198a-43a3-92d0-586a0786fc66"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 32578,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

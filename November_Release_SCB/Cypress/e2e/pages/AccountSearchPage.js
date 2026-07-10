@@ -35,14 +35,12 @@ class AccountSearchPage {
       .scrollIntoView()
       .click({ force: true });
   });
-
+cy.wait(2000);
    cy.contains('button', 'Previous').should('be.visible');
+   cy.wait(2000);
    cy.contains('button', 'Next').should('be.visible');
-
-
-   
-
-
+cy.wait(2000);
+  
 
   }
   TC_58() {
@@ -61,20 +59,18 @@ class AccountSearchPage {
   cy.wait(2000);
   cy.get(this.locators.pagecount_dropdown).select("50");
   cy.wait(2000);
- cy.get('#grid-table tbody tr')
-  .first()
+ cy.get('#grid-table tbody tr').first()
   .find('td:nth-child(4) a')
-  .should('exist')          
-  .scrollIntoView()         
-  .click({ force: true });  
-
+  .should('exist').scrollIntoView().click({ force: true });  
+ cy.wait(2000);
   cy.contains('button', 'Previous')
     .should('be.visible')
     .and('be.disabled');
-
+ cy.wait(2000);
   cy.contains('button', 'Next')
     .should('be.visible')
     .and('not.be.disabled');
+     cy.wait(2000);
 }
 
 TC_59() {
@@ -97,21 +93,21 @@ TC_59() {
   // cy.get(this.locators.pagecount_dropdown).select('50');
   cy.get(this.locators.last_page).click({force:true});
   cy.wait(2000);
-  cy.get(':nth-child(5) > :nth-child(4) > a > [style="text-wrap-mode: nowrap;"] > :nth-child(1)').click({force:true});
+  cy.contains('#grid-table tbody td', 'X8620').find('a').click();
   cy.wait(2000);
   cy.get(this.locators.prev_button).click({force:true});
   cy.wait(2000);
   cy.get(this.locators.next_button).click({force:true});
   cy.wait(2000);
-  cy.contains('button', 'Next')
-    .should('exist')
-    .and('be.disabled');
+   cy.get(this.locators.prev_button).click({force:true});
+    cy.wait(2000);
+  cy.contains('button', 'Next').should('exist').and('be.disabled');
 
-
+  cy.wait(2000);  
   cy.contains('button', 'Previous')
     .should('exist')
     .and('not.be.disabled');
-
+ cy.wait(2000);
 }
 
 TC_60() {
@@ -143,16 +139,16 @@ TC_60() {
   cy.contains('button', 'Previous')
     .should('exist')
     .and('not.be.disabled');
-
+ cy.wait(2000);
   cy.contains('button', 'Next')
     .should('exist')
     .and('not.be.disabled');
-
+ cy.wait(2000);
 }
 
 
 TC_61() {
-  cy.wait(5000);
+  cy.wait(3000);
   cy.get(this.locators.accountsearch_btn).click({ force: true });
   cy.wait(2000);
   // cy.get('.ng-select-container').click({ force: true });
@@ -178,6 +174,7 @@ cy.get('#grid-table tbody tr')
       .scrollIntoView()
       .click({ force: true });
   });
+   cy.wait(2000);
     cy.get(this.locators.next_btn).click({force:true}); 
  
   cy.wait(2000);
@@ -186,6 +183,7 @@ cy.get('#grid-table tbody tr')
   cy.contains('button', 'Next')
     .should('exist')
     .and('not.be.disabled').click();
+ cy.wait(2000);
 
 }
 
@@ -217,6 +215,7 @@ cy.get('#grid-table tbody tr')
       .scrollIntoView()
       .click({ force: true });
   });
+   cy.wait(2000);
     cy.get(this.locators.next_btn).click({force:true}); 
  
   cy.wait(2000);
@@ -225,7 +224,7 @@ cy.get('#grid-table tbody tr')
   cy.contains('button', 'Previous')
     .should('exist')
     .and('not.be.disabled').click();
-
+ cy.wait(2000);
 }
 
 TC_63() {
@@ -260,12 +259,12 @@ TC_63() {
  cy.contains('button', 'Previous')
   .should('be.visible')
   .click({ force: true });
-
+ cy.wait(2000);
 cy.contains('button', 'Next')
   .should('be.visible')
   .click({ force: true });
 
-
+ cy.wait(2000);
 }
 
 

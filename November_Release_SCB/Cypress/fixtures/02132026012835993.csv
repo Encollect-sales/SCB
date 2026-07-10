@@ -1,3 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009590352,1174,yes,PTP,PTP,2026-12-26,69,,Bulk upload Aug29,6604552338,btm,banglore,Murphy.Russel@hotmail.com,permanent,new,02132026012835993,Success,
-DMI0009590352,118974,yes,PTP,PTP,2026-12-26,69,,Bulk upload Aug29,6604552338,btm,banglore,Murphy.Russel@hotmail.com,permanent,new,02132026012835993,Error,Agent code is invalid

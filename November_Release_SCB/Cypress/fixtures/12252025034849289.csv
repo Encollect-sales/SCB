@@ -1,3 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009590352,1174,ss,PTP,PTP,2025-12-26,98,,Bulk upload Aug29,6281449869,btm,banglore,Treva.Runolfsson@hotmail.com,permanent,new,12252025034849289,Success,
-DMI0009590352,118974,ss,PTP,PTP,2025-12-26,98,,Bulk upload Aug29,6281449869,btm,banglore,Treva.Runolfsson@hotmail.com,permanent,new,12252025034849289,Error,Agent code is invalid

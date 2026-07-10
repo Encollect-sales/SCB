@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T18:24:44.283Z",
+    "end": "2026-06-16T18:25:41.765Z",
+    "duration": 57482,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c83c43fe-8644-4b5c-9e85-aedd988055f8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_764.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_764.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "21392246-4c23-453b-8b97-16c8e43c2b12",
+          "title": "Allocation - Secondary Allocation by filters -All fields under geography filters are cascading drop down values. The values under dropdown are populated based on item selected by user from another dropdown list.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Result Grid - TC_ID_764",
+              "fullTitle": "Allocation - Secondary Allocation by filters -All fields under geography filters are cascading drop down values. The values under dropdown are populated based on item selected by user from another dropdown list. Result Grid - TC_ID_764",
+              "timedOut": null,
+              "duration": 52097,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonSABFGeography();\n});",
+              "err": {},
+              "uuid": "dd070156-2e5f-4ccc-a18f-62fccd68b599",
+              "parentUUID": "21392246-4c23-453b-8b97-16c8e43c2b12",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "dd070156-2e5f-4ccc-a18f-62fccd68b599"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 52097,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

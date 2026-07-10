@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T17:27:15.888Z",
+    "end": "2026-06-16T17:28:25.060Z",
+    "duration": 69172,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1adea48e-5334-424c-9fd3-2a5efe271e36",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_704.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_704.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "beb8b10f-415c-4fd8-89cb-aaf25602668a",
+          "title": "Allocation - Upload agency Unallocation batch -  user clicked on \"ok\" so that file will get uploaded into the ENCollect system6. user will see a pop up msg as \"File uploaded successfully\" along with transaction ID.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Agency Level UnAllocation - TC_ID_704",
+              "fullTitle": "Allocation - Upload agency Unallocation batch -  user clicked on \"ok\" so that file will get uploaded into the ENCollect system6. user will see a pop up msg as \"File uploaded successfully\" along with transaction ID. Agency Level UnAllocation - TC_ID_704",
+              "timedOut": null,
+              "duration": 57294,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.uploadAgencyUnallocationBatchFiledAgency();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(4)`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(4)`, but never found it.\n    at Context.eval (webpack:///./cypress/e2e/pages/AllocationPage.js:2374:7)",
+                "diff": null
+              },
+              "uuid": "52c6db96-520f-4b94-b29b-051726190e1c",
+              "parentUUID": "beb8b10f-415c-4fd8-89cb-aaf25602668a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "52c6db96-520f-4b94-b29b-051726190e1c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 57294,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

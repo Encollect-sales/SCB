@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T15:03:16.788Z",
+    "end": "2026-06-16T15:04:05.171Z",
+    "duration": 48383,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c825d0bb-9025-4ea2-a175-cfa9a33971d8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AddStaffPageTest_916.cy.js",
+      "file": "cypress\\e2e\\tests\\AddStaffPageTest_916.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "52a62b8b-cbfe-4a4e-a12e-5b7d7ee200c2",
+          "title": "Usermanagement- Add Staff - .User clicked on mobile number field but did not enter any value then system should show an error as \"Mobile Number is required\" below to the field.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add Staff - TC_ID_916",
+              "fullTitle": "Usermanagement- Add Staff - .User clicked on mobile number field but did not enter any value then system should show an error as \"Mobile Number is required\" below to the field. Add Staff - TC_ID_916",
+              "timedOut": null,
+              "duration": 41354,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.task('getExcelData', '../fixtures/userManagementData.xlsx').then(excelData => {\n    const firstRow = excelData['Sheet1'][0];\n    cy.wait(2000);\n    addStaffPage.Clikonusermanagement(); // Use the method without click\n    addStaffPage.Clikonaddstaff();\n    const employeeId = addStaffPage.fillemployeeID();\n    //addStaffPage.fillemployeeID(firstRow.EmployeeID);  // Correct method name and pass the argument\n    addStaffPage.fillfirstname(firstRow.FirstName);\n    addStaffPage.fillLastName(firstRow.lastname);\n  });\n});",
+              "err": {},
+              "uuid": "880939dc-340a-42ae-8540-ab047c020d09",
+              "parentUUID": "52a62b8b-cbfe-4a4e-a12e-5b7d7ee200c2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "880939dc-340a-42ae-8540-ab047c020d09"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 41354,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

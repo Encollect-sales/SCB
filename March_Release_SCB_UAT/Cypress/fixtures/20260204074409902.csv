@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1f389a8e55af448d5734715e062ea9,FOS,,Della,Huel,della@yopmail.com,9784939938,Audit and Risk,Audit Manager,Bangalore,True, | Employee Id is required

@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T20:35:17.942Z",
+    "end": "2026-06-16T20:36:20.029Z",
+    "duration": 62087,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5db7a674-097b-4174-af4f-df156581d551",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\SystemSettingPageTest_1106.cy.js",
+      "file": "cypress\\e2e\\tests\\SystemSettingPageTest_1106.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "76a3f717-9341-4bd6-befd-5eb043acfb1c",
+          "title": "System Setting - Master Upload",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Product Master- TC_ID_1106 - Admin should not change the header formats or should not add new fields in the standard product master file while uploading back to ENCollect",
+              "fullTitle": "System Setting - Master Upload Product Master- TC_ID_1106 - Admin should not change the header formats or should not add new fields in the standard product master file while uploading back to ENCollect",
+              "timedOut": null,
+              "duration": 53093,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  systemsettingPage.systemSettingModule();\n  systemsettingPage.ProductMaster1106();\n  // Define the Excel sheet data using Faker\n  const sheetName = 'Sheet1';\n  Cypress.on('uncaught:exception', (err, runnable) => {\n    if (err.message.includes('ResizeObserver loop completed with undelivered notifications.')) {\n      // ignore the error\n      return false;\n    }\n  });\n  function generateBranchCode() {\n    return faker.string.alphanumeric(6).toUpperCase(); // Generates a random 6-character alphanumeric code\n  }\n  function generateBankName() {\n    return `${faker.company.name()} Bank`; // Using faker's company name and adding \"Bank\"\n  }\n  const data = {\n    'A2': faker.commerce.department(),\n    // Random product group\n    'B2': faker.commerce.productName(),\n    // Random product\n    'C2': faker.commerce.productAdjective(),\n    // Random subproduct\n    'A3': faker.commerce.department(),\n    'B3': faker.commerce.productName(),\n    'C3': faker.commerce.productAdjective(),\n    'A4': faker.commerce.department(),\n    'B4': faker.commerce.productName(),\n    'C4': faker.commerce.productAdjective(),\n    'A5': faker.commerce.department(),\n    'B5': faker.commerce.productName(),\n    'C5': faker.commerce.productAdjective(),\n    'A6': faker.commerce.department(),\n    'B6': faker.commerce.productName(),\n    'C6': faker.commerce.productAdjective(),\n    'A7': faker.commerce.department(),\n    'B7': faker.commerce.productName(),\n    'C7': faker.commerce.productAdjective(),\n    'A8': faker.commerce.department(),\n    'B8': faker.commerce.productName(),\n    'C8': faker.commerce.productAdjective(),\n    'A9': faker.commerce.department(),\n    'B9': faker.commerce.productName(),\n    'C9': faker.commerce.productAdjective(),\n    'A10': faker.commerce.department(),\n    'B10': faker.commerce.productName(),\n    'C10': faker.commerce.productAdjective(),\n    'A11': faker.commerce.department(),\n    'B11': faker.commerce.productName(),\n    'C11': faker.commerce.productAdjective()\n  };\n  const excelFileName = 'ProductMasterTemplate.xlsx'; // Ensure this file is in the correct format\n  const downloadsFolder = Cypress.config('downloadsFolder');\n  const filePath = 'cypress/downloads/ProductMasterTemplate.xlsx';\n  // Use Cypress task to update the Excel file with dynamic data\n  cy.task('updateProductMasterTemplateCell', {\n    filePath: filePath,\n    sheetName: sheetName,\n    data: data\n  }).then(() => {\n    cy.log('Excel file updated successfully with new data');\n    cy.wait(5000);\n    cy.origin('https://yopmail.com', () => {\n      cy.wait(5000);\n      cy.visit('https://yopmail.com');\n      cy.get('#login').type('rahmancbm@yopmail.com'); // Type the email address\n      cy.get('.material-icons-outlined.f36').click();\n    });\n  });\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[role=\"alert\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[role=\"alert\"]`, but never found it.\n    at SystemSettingPage.ProductMaster1106 (webpack://encollect_web/./cypress/e2e/pages/SystemSettingPage.js:4647:30)\n    at Context.eval (webpack://encollect_web/./cypress/e2e/tests/SystemSettingPageTest_1106.cy.js:28:34)\n    at getRet (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "c8931ec7-e206-48aa-bdb2-153ac948f28e",
+              "parentUUID": "76a3f717-9341-4bd6-befd-5eb043acfb1c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "c8931ec7-e206-48aa-bdb2-153ac948f28e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 53093,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

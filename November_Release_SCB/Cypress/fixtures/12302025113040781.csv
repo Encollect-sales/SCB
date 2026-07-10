@@ -1,3 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009603002,2005,Yes,PTP,PTP,2025-12-26,36,,Rejected agent test,600.427.9290,BTM,Bangalore,Enrique_Cremin14@hotmail.com,Permanent,New,12302025113040781,Error,Next action date cannot be less than current date
-DMI0009603001,2005,Yes,PTP,PTP,2025-12-26,36,,Rejected agent test,231-855-9563 x774,BTM,Bangalore,Thomas.Hodkiewicz@gmail.com,Permanent,New,12302025113040781,Error,Next action date cannot be less than current date

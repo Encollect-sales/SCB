@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T18:50:58.662Z",
+    "end": "2026-06-16T18:51:38.415Z",
+    "duration": 39753,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "648b8078-bcd2-4dec-81bf-3589f0758950",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_796.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_796.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0f529cee-e463-4eec-820c-de83950563a8",
+          "title": "Allocation - Primary Allocation Status - User entered alphabets or special characters in transaction id field and clicked on search button, system should throw an error as \"Invalid Transaction ID \"",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Enter atleast one filter value - TC_ID_796",
+              "fullTitle": "Allocation - Primary Allocation Status - User entered alphabets or special characters in transaction id field and clicked on search button, system should throw an error as \"Invalid Transaction ID \" Enter atleast one filter value - TC_ID_796",
+              "timedOut": null,
+              "duration": 33275,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonPrmryAllocationStatus();\n});",
+              "err": {},
+              "uuid": "d2b69ec3-ee2f-4e5f-bcbd-f59509486b3a",
+              "parentUUID": "0f529cee-e463-4eec-820c-de83950563a8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d2b69ec3-ee2f-4e5f-bcbd-f59509486b3a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 33275,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

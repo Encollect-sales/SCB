@@ -1,3 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-LXMUM33020211742684,1936,Yes,PTP,PTP,2026-12-26,47,,Approved agent,0639488950,BTM,Bangalore,Barton_Fahey@hotmail.com,Permanent,New,02132026045537917,Success,
-DMI0009801001,1933,Yes,PTP,PTP,2026-12-26,47,,Failure reason validation,3895294007,BTM,Bangalore,Judge_Strosin42@gmail.com,Permanent,New,02132026045537917,Error,Account number does not exist in database

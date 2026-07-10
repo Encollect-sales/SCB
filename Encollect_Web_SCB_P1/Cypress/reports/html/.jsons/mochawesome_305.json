@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T20:11:16.284Z",
+    "end": "2026-06-16T20:11:56.374Z",
+    "duration": 40090,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d2fc824f-1437-4c1c-a8e1-7c4a8afaaaee",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\PaymentsPageTest_049.cy.js",
+      "file": "cypress\\e2e\\tests\\PaymentsPageTest_049.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8b1eb229-f22a-43d0-8bea-1a4638eb1c2f",
+          "title": "Payments Module - Search and Print Batch - Logged in user to print batch by selecting the batch id from the dropdown of batch id.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Payment - TC_ID_049",
+              "fullTitle": "Payments Module - Search and Print Batch - Logged in user to print batch by selecting the batch id from the dropdown of batch id. Payment - TC_ID_049",
+              "timedOut": null,
+              "duration": 34281,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  paymentsPage.SearchandPrintBatch051();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.breadcrumb > :nth-child(3)`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.breadcrumb > :nth-child(3)`, but never found it.\n    at PaymentsPage.SearchandPrintBatch051 (webpack:///./cypress/e2e/pages/PaymentsPage.js:377:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/PaymentsPageTest_049.cy.js:27:29)",
+                "diff": null
+              },
+              "uuid": "24767adc-cdf5-4ed4-9f47-cc41454d24dc",
+              "parentUUID": "8b1eb229-f22a-43d0-8bea-1a4638eb1c2f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "24767adc-cdf5-4ed4-9f47-cc41454d24dc"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 34281,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

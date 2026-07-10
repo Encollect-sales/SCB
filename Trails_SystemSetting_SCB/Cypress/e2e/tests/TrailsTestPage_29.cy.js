@@ -51,11 +51,11 @@ describe('Trails - Invalid Agreement ID. Special characters are not allowed.', (
 
             const data = {
                 'A2':'187@#65',
-                'B2': '67609',
+                'B2': '33322',
                 'C2': 'yes',
                 'D2': 'PTP',
                 'E2': 'PTP',
-                'F2': '2027/12/22',
+                'F2': '2027-12-22',
                 'G2': '109',
                 'H2':' ',
                 'I2':'Bulk upload',
@@ -66,8 +66,8 @@ describe('Trails - Invalid Agreement ID. Special characters are not allowed.', (
                 'N2': 'permenant',
                 'O2' : 'new',
                  
-                'A3': 'AG#123',        
-'B3': '10031',
+                'A3': '1667',        
+'B3': '85745',
 'C3': 'yes',
 'D3': 'PTP',
 'E3': 'PTP',

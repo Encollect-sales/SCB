@@ -1,2 +1,0 @@
-Id,IsParentAgency,ParentAgencyCode,AgencyCode,AgencyName,RecommendingOfficer,AgencyType,AgencySubType,TINNumber,PanCard,PrimaryOwnerFirstName,PrimaryOwnerLastName,RegisteredAgencyAddress,Landmark,MobileNo,EmailID,FirstAgreementDate,LastRenewalDate,ContractExpiryDate,Remarks,IsFailed,FailureReason
-3a1f388f2b2cab8834c32f73b7dc1e77,Yes,,247566,Bret,4408,Collections,Field Agents,12345321,PANCA9614B,hamad,P,Pune,wiki field,1844725313,bret@yopmail.com,12-10-2022,,10-10-2032,Bulk upload,True, | Last Renewal date is required

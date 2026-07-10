@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-16T15:34:10.831Z",
+    "end": "2026-06-16T15:34:54.672Z",
+    "duration": 43841,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d9640f66-f910-4262-ae69-0e18dccd21e8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\IssueReceiptTestPage_10.cy.js",
+      "file": "cypress\\e2e\\tests\\IssueReceiptTestPage_10.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "908e3030-35b6-4aec-9acc-a0816c312304",
+          "title": "Payments - Issue Receipt - user enter all the fields and submit the payment and the success message ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC_ID_10 -user enter all the fields and submit the payment and the success message",
+              "fullTitle": "Payments - Issue Receipt - user enter all the fields and submit the payment and the success message  TC_ID_10 -user enter all the fields and submit the payment and the success message",
+              "timedOut": null,
+              "duration": 35348,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(900);\n  issuereceiptpage.IssueReceiptTestPage_10();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `h5[class='ng-star-inserted']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `h5[class='ng-star-inserted']`, but never found it.\n    at IssueReceiptPage.IssueReceiptTestPage_10 (webpack://encollect_web/./cypress/e2e/pages/IssueReceiptPage.js:501:7)\n    at Context.eval (webpack://encollect_web/./cypress/e2e/tests/IssueReceiptTestPage_10.cy.js:25:33)\n    at getRet (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "e849484e-e01b-4b08-95b9-e3f8d8c72472",
+              "parentUUID": "908e3030-35b6-4aec-9acc-a0816c312304",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "e849484e-e01b-4b08-95b9-e3f8d8c72472"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 35348,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

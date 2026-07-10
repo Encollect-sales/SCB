@@ -1,3 +1,0 @@
-Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
-DMI0009001515,1515,Yes,PTP,PTP,2025-12-26,34,,Approved agent record,310-277-9525 x65908,BTM,Bangalore,Natalia_Walsh50@gmail.com,Permanent,New,02112026010215248,Error,Next action date cannot be less than current date
-DMI0009001907,1907,Yes,PTP,PTP,2025-12-26,34,,Non-approved agent,(689) 925-1640 x35876,BTM,Bangalore,Hassan.Kirlin17@gmail.com,Permanent,New,02112026010215248,Error,Next action date cannot be less than current date

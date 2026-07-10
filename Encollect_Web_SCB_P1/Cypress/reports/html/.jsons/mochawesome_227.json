@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-16T19:04:42.843Z",
+    "end": "2026-06-16T19:05:32.607Z",
+    "duration": 49764,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c0a80885-09fa-47d9-8825-229606a683b8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_813.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_813.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "061b87d4-1cfa-4c73-9a1e-586ee22cb5f3",
+          "title": "Allocation - Upload Collector Unallocation batch - User selected agent radio button and clicked on upload button and selected the file, but in the pop up user clicked on close button so that user will remain in same unallocation page. now user selected tele callerradio button and uploaded the file for collector level unallocation.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Collector Level Unallocation - TC_ID_813",
+              "fullTitle": "Allocation - Upload Collector Unallocation batch - User selected agent radio button and clicked on upload button and selected the file, but in the pop up user clicked on close button so that user will remain in same unallocation page. now user selected tele callerradio button and uploaded the file for collector level unallocation. Collector Level Unallocation - TC_ID_813",
+              "timedOut": null,
+              "duration": 44304,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.uploadCollectorUnallocationCancelUploadAndAgainUpload();\n});",
+              "err": {},
+              "uuid": "0fef4a01-3483-49b8-87c6-62d9864ef641",
+              "parentUUID": "061b87d4-1cfa-4c73-9a1e-586ee22cb5f3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0fef4a01-3483-49b8-87c6-62d9864ef641"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 44304,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
