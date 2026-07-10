@@ -1,0 +1,2 @@
+Id,IsParentAgency,ParentAgencyCode,AgencyCode,AgencyName,RecommendingOfficer,AgencyType,AgencySubType,TINNumber,PanCard,PrimaryOwnerFirstName,PrimaryOwnerLastName,RegisteredAgencyAddress,Landmark,MobileNo,EmailID,FirstAgreementDate,LastRenewalDate,ContractExpiryDate,Remarks,IsFailed,FailureReason
+3a21960946325974c4b0ce362ca979c4,Yes,,936279,Amanda,4408,Collections,Field Agents,12345321,PANCA9614B,hamad,P,Pune,wiki field,5255959607,amanda@yopmail.com,12-10-2022,,10-10-2032,Bulk upload,True, | Last Renewal date is required

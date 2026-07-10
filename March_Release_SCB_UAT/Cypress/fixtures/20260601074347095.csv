@@ -1,0 +1,2 @@
+Id,UserType,FirstName,LastName,AgencyCode,SupervisorEmailId,DialerId,DRACertificationDate,DRATrainingDate,DRAUniqueRegistrationNumber,Department,Designation,DateOfBirth,MobileNo,EmailId,FathersName,LocalResidentialAddress,PostalCode,CollectionEmploymentDate,LastRenewalDate,AuthorizationCardExpiryDate,Remarks,IsFailed,FailureReason
+3a2195b56eafc0ba0641da2f8b227d43,FOS,Cara,Hickle,13332,,435454,10-10-2030,,,Agency Frontend,Agent,18-10-1979,6227413663,cara@yopmail.com,yop,bakori,765523,19-10-2022,19-10-2023,10-10-2033,resr,True, | DRA Certification Date cannot be future date

@@ -1,0 +1,3 @@
+Agreement id,Agent ENCollect Code,RightPartyContact,DispositionCodeGroup,DispositionCode,Next Action Date,PTPAmount,NextActionCode,Remarks,Newcontactnumber,NewArea,NewAddress,NewEmailID,AddressType,PickupAddress,WorkRequestId,UploadStatus,ErrorMessage
+AG#123,85745,yes,PTP,PTP,2027-12-22,109, ,Bulk upload,6330057952,Pleasanton,91165 Hartmann Burg,xzauzqqe@yopmail.com,permenant,new,06182026121654013,Error,Account number does not exist in database
+187@#65,33322,yes,PTP,PTP,2027-12-22,109, ,Bulk upload,5757982313,East Kelsiport,160 8th Street,ebmyiegu@yopmail.com,permenant,new,06182026121654013,Error,Account number does not exist in database
