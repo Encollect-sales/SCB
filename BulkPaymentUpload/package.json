@@ -1,0 +1,35 @@
+{
+  "scripts": {
+    "test:group1:QA": "cypress run --spec 'cypress/e2e/tests/SettlementTestPage_*.cy.js' --env ENV=QA",
+    "test:group2:QA": "cypress run --spec 'cypress/e2e/tests/CollectionTrendTestPage_*.cy.js' --env ENV=QA",
+    "test:group3:QA": "cypress run --spec 'cypress/e2e/tests/VisitIntensityTestPage*.cy.js' --env ENV=QA",
+    "test:group4:QA": "cypress run --spec 'cypress/e2e/tests/InsightsTestPage*.cy.js' --env ENV=QA",
+    "test:group5:QA": "cypress run --spec 'cypress/e2e/tests/UserCreationTestPage*.cy.js' --env ENV=QA",
+    "test:group6:QA": "cypress run --spec 'cypress/e2e/tests/UserManagementTestPage_*.cy.js' --env ENV=QA",
+    "test:group7:QA": "cypress run --spec 'cypress/e2e/tests/PanCardTestPage_*.cy.js' --env ENV=QA",
+    "test:group1:UAT": "cypress run --spec 'cypress/e2e/tests/CollectionIntensityTestPage_*.cy.js' --env ENV=UAT",
+    "test:group2:UAT": "cypress run --spec 'cypress/e2e/tests/CollectionTrendTestPage_*.cy.js' --env ENV=UAT",
+    "test:group3:UAT": "cypress run --spec 'cypress/e2e/tests/VisitIntensityTestPage_*.cy.js' --env ENV=UAT",
+    "test:group4:UAT": "cypress run --spec 'cypress/e2e/tests/InsightsTestPage_*.cy.js' --env ENV=UAT",
+    "test:group5:UAT": "cypress run --spec 'cypress/e2e/tests/UserCreationTestPage_*.cy.js' --env ENV=UAT",
+    "test:group6:UAT": "cypress run --spec 'cypress/e2e/tests/UserManagementTestPage_*.cy.js' --env ENV=UAT",
+    "test:group7:UAT": "cypress run --spec 'cypress/e2e/tests/PanCardTestPage_*.cy.js' --env ENV=UAT",
+    "test:parallel:QA": "npm-run-all --parallel test:group1:QA test:group2:QA test:group3:QA test:group4:QA test:group5:QA test:group6:QA test:group7:QA",
+    "test:parallel:UAT": "npm-run-all --parallel test:group1:UAT test:group2:UAT test:group3:UAT test:group4:UAT test:group5:UAT test:group6:UAT test:group7:UAT"
+  },
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.5",
+    "cypress": "^14.5.4",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-mochawesome-reporter": "^3.8.4",
+    "cypress-wait-until": "^3.0.2",
+    "cypress-xpath": "^2.0.1",
+    "install": "^0.13.0",
+    "npm-run-all": "^4.1.5",
+    "xlsx": "^0.18.5"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "glob": "^10.3.12"
+  }
+}

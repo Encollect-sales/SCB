@@ -1,0 +1,2 @@
+Id,IsParentAgency,ParentAgencyCode,AgencyCode,AgencyName,RecommendingOfficer,AgencyType,AgencySubType,TINNumber,PanCard,PrimaryOwnerFirstName,PrimaryOwnerLastName,RegisteredAgencyAddress,Landmark,MobileNo,EmailID,FirstAgreementDate,LastRenewalDate,ContractExpiryDate,Remarks,IsFailed,FailureReason
+3a22a997311de1b27b40919967329cf1,Yes,,267135,Caitlyn,2256,Collections,Field Agents,,PANCA9614B,hamad,P,Pune,wiki field,1856905880,caitlyn@yopmail.com,12-10-2022,13-10-2023,10-10-2032,Bulk upload,True, | TIN number is Required

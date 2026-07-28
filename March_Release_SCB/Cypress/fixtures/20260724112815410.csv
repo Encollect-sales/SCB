@@ -1,0 +1,2 @@
+Id,UserType,FirstName,LastName,AgencyCode,SupervisorEmailId,DialerId,DRACertificationDate,DRATrainingDate,DRAUniqueRegistrationNumber,Department,Designation,DateOfBirth,MobileNo,EmailId,FathersName,LocalResidentialAddress,PostalCode,CollectionEmploymentDate,LastRenewalDate,AuthorizationCardExpiryDate,Remarks,IsFailed,FailureReason
+3a22a773fd125db086cf523cd9727428,FOS,Karen,Goyette,13911,,4357867680454,,,,Agency Frontend,Agent,18-10-1979,4305604617,karen@yopmail.com,yop,bakori,765523,19-10-2022,19-10-2023,10-10-2033,resr,True, | Dialer id cannot be more than 10 characters

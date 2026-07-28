@@ -1,0 +1,27 @@
+{
+  "loginPage": {
+    "companynameInput": "#login-company-name",
+    "ClickonCompanyName": ".ng-option-label",
+    "usernameInput": "#login-email",
+    "passwordInput": "#login-password",
+    "signinButton": "#login-submit-button",
+    "dashboard": ".name-width",
+    "profile": ".avatar-info",
+    "logoutButton": ":nth-child(4) > .dropdown-item"
+  },
+
+  "BulkPaymentUpload":{
+    "payments":"#nav-item-1-payments",
+    "Bulkpaymentupload":"#nav-item-2-bulk-payments-upload",
+    "Bulkupload":"#nav-item-3-bulk-payments-upload",
+    "clickokbutton":"#confirm-dialog-okay",
+    "click_cancel":"#confirm-dialog-cancel",
+    "Clickonpaymentuploadstatus":"#nav-item-3-bulk-payments-upload-status",
+    "ClickOnStatusSearchBtn":"#bulk-trail-search-button",
+    "ClickOnUploadBtn":"#bulk-trail-upload-button"
+
+  }
+
+ 
+
+}

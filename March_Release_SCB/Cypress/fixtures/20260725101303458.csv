@@ -1,0 +1,2 @@
+Id,IsParentAgency,ParentAgencyCode,AgencyCode,AgencyName,RecommendingOfficer,AgencyType,AgencySubType,TINNumber,PanCard,PrimaryOwnerFirstName,PrimaryOwnerLastName,RegisteredAgencyAddress,Landmark,MobileNo,EmailID,FirstAgreementDate,LastRenewalDate,ContractExpiryDate,Remarks,IsFailed,FailureReason
+3a22a9c25268185b256a882980bb1fe1,Yes,,384073,Emmy,2256,Collections,Field Agents,12345321,PANCA9614B,hamad,P,Pune,wiki field,4933477313,emmy@yopmail.com,12-10-2022,13-10-2023,,Bulk upload,True, | Contract Expiry Date is required

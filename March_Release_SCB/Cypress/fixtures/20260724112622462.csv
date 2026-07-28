@@ -1,0 +1,2 @@
+Id,UserType,FirstName,LastName,AgencyCode,SupervisorEmailId,DialerId,DRACertificationDate,DRATrainingDate,DRAUniqueRegistrationNumber,Department,Designation,DateOfBirth,MobileNo,EmailId,FathersName,LocalResidentialAddress,PostalCode,CollectionEmploymentDate,LastRenewalDate,AuthorizationCardExpiryDate,Remarks,IsFailed,FailureReason
+3a22a77243e5c9b866a4aa04e0884bdc,FOS,Autumn,Durgan,13911,,435ab#@#%4,,,,Agency Frontend,Agent,18-10-1979,7149263749,autumn@yopmail.com,yop,bakori,765523,19-10-2022,19-10-2023,10-10-2033,resr,True, | Please enter valid dialer id
