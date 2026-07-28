@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T16:09:17.100Z",
-    "end": "2026-06-16T16:10:21.889Z",
-    "duration": 64789,
+    "start": "2026-07-24T17:30:10.086Z",
+    "end": "2026-07-24T17:31:10.024Z",
+    "duration": 59938,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "74587354-bc83-4933-8d5a-6d385c4a6776",
+      "uuid": "687c5802-7604-44c4-9460-5f4fe72a8f43",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AgencyEmpanelmentRequest_611.cy.js",
-      "file": "cypress\\e2e\\tests\\AgencyEmpanelmentRequest_611.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_763.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_763.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "1a864bc3-9507-4851-8b17-8acb5d28f650",
-          "title": "User Management - Agency Empanelment Request",
+          "uuid": "5d2296fa-825b-44f0-aba0-37384bfe0be5",
+          "title": "Allocation - Secondary Allocation by filters -User should be able to select Current DPD, Dell string and BOM Bucket in Bucket filter ",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Reset - TC_ID_611",
-              "fullTitle": "User Management - Agency Empanelment Request Reset - TC_ID_611",
+              "title": "Other Filter - TC_ID_763",
+              "fullTitle": "Allocation - Secondary Allocation by filters -User should be able to select Current DPD, Dell string and BOM Bucket in Bucket filter  Other Filter - TC_ID_763",
               "timedOut": null,
-              "duration": 50454,
+              "duration": 46894,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  userManagementPage.CreateAgency052();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonSABF();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.col-md-6.ng-star-inserted > .form-control`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.col-md-6.ng-star-inserted > .form-control`, but never found it.\n    at UserManagementPage.CreateAgency052 (webpack:///./cypress/e2e/pages/UserManagementPage.js:5871:8)\n    at Context.eval (webpack:///./cypress/e2e/tests/AgencyEmpanelmentRequest_611.cy.js:24:25)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.panel-open > .panel > .panel-collapse > .panel-body > .row > .col-lg-4.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.panel-open > .panel > .panel-collapse > .panel-body > .row > .col-lg-4.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input`, but never found it.\n    at AllocationPage.ClickonSABF (webpack:///./cypress/e2e/pages/AllocationPage.js:1509:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_763.cy.js:26:26)",
                 "diff": null
               },
-              "uuid": "aad2f39d-d0cb-4c7d-acf0-1c674fd858a9",
-              "parentUUID": "1a864bc3-9507-4851-8b17-8acb5d28f650",
+              "uuid": "22d5324e-72f9-491b-9c72-a6c9674f372a",
+              "parentUUID": "5d2296fa-825b-44f0-aba0-37384bfe0be5",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "aad2f39d-d0cb-4c7d-acf0-1c674fd858a9"
+            "22d5324e-72f9-491b-9c72-a6c9674f372a"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 50454,
+          "duration": 46894,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

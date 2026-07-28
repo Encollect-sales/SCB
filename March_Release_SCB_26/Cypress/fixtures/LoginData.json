@@ -1,8 +1,14 @@
 {
   "login": {
     "Companyname": "ENCollect",
-      "email": "staffautomationfouruat@yopmail.com",
-    "password": "123@uaUA" 
+      "email": "staffautomationeleven@yopmail.com",
+    "password": "123@mdMD" 
+  },
+  "login2": {
+    "Companyname": "ENCollect",
+      "email": "staffautomationeleven@yopmail.com",
+    "password": "123@mdMD" 
   }
+
 
 }

@@ -1,2 +1,0 @@
-Id,IsParentAgency,ParentAgencyCode,AgencyCode,AgencyName,RecommendingOfficer,AgencyType,AgencySubType,TINNumber,PanCard,PrimaryOwnerFirstName,PrimaryOwnerLastName,RegisteredAgencyAddress,Landmark,MobileNo,EmailID,FirstAgreementDate,LastRenewalDate,ContractExpiryDate,Remarks,IsFailed,FailureReason
-3a1f5d1c28066f3fd8f7d2abff75e5cb,Yes,,794924,Hank,2256,Collections,Field Agents,12345321,PANCA9614BPANCA9614B,hamad,P,Pune,wiki field,3831679963,hank@yopmail.com,12-10-2022,13-10-2023,10-10-2032,Bulk upload,True, | PAN Number can not  be more than 10 characters

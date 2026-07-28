@@ -1,13 +1,13 @@
 {
   "scripts": {
-    "test:group1:QA": "cypress run --spec \"cypress/e2e/tests/AccountDetailsemail_*.cy.js\" --env ENV=QA",
+    "test:group1:QA": "cypress run --spec \"cypress/e2e/tests/AccountDetailsemail_*.cy.js\" --env ENV=UAT",
     "test:group2:QA": "cypress run --spec 'cypress/e2e/tests/AccountDetailssms_*.cy.js' --env ENV=QA",
-    "test:group3:QA": "cypress run --spec 'cypress/e2e/tests/VisitIntensityTestPage*.cy.js' --env ENV=QA",
+    "test:group3:QA": "cypress run --spec 'cypress/e2e/tests/MobileNumberRenewPage_*.cy.js' --env ENV=QA",
     "test:group4:QA": "cypress run --spec 'cypress/e2e/tests/InsightsTestPage*.cy.js' --env ENV=QA",
     "test:group5:QA": "cypress run --spec 'cypress/e2e/tests/UserCreationTestPage*.cy.js' --env ENV=QA",
     "test:group6:QA": "cypress run --spec 'cypress/e2e/tests/UserManagementTestPage_*.cy.js' --env ENV=QA",
     "test:group7:QA": "cypress run --spec 'cypress/e2e/tests/PanCardTestPage_*.cy.js' --env ENV=QA",
-    "test:group1:UAT": "cypress run --spec 'cypress/e2e/tests/CollectionIntensityTestPage_*.cy.js' --env ENV=UAT",
+    "test:group1:UAT": "cypress run --spec 'cypress/e2e/tests/MobileNumberRenewPage_*.cy.js' --env ENV=UAT",
     "test:group2:UAT": "cypress run --spec 'cypress/e2e/tests/CollectionTrendTestPage_*.cy.js' --env ENV=UAT",
     "test:group3:UAT": "cypress run --spec 'cypress/e2e/tests/VisitIntensityTestPage_*.cy.js' --env ENV=UAT",
     "test:group4:UAT": "cypress run --spec 'cypress/e2e/tests/InsightsTestPage_*.cy.js' --env ENV=UAT",

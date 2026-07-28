@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1f11930ccd955ef16a8c44b110d234,Telecaller,58400,Winfield,O'Kon,winfield@yopmail.com,6023620919,Audit and Risk,Arun Audit Manager,Bangalore,True, | Please enter valid Last Name | Designation is invalid

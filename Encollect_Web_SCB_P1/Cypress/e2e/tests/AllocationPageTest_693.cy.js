@@ -34,7 +34,7 @@ describe('Allocation - Upload Agency Allocation Batch - 1.User should be able to
         getTestData('loginData', 'login').then(user => {
             loginPage.login(user.Companyname, user.email, user.password);
 
-           allocationPage.Clickonallocation();
+           allocationPage. Clickonallocation();
            allocationPage.fillproductgroup();
            allocationPage.fillproduct();
            allocationPage.fillsubproduct();

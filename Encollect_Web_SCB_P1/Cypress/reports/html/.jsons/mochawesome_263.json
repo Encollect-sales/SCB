@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T19:35:55.139Z",
-    "end": "2026-06-16T19:36:39.248Z",
-    "duration": 44109,
+    "start": "2026-07-24T20:54:08.294Z",
+    "end": "2026-07-24T20:54:56.774Z",
+    "duration": 48480,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "31f7f988-1b38-4e56-b941-9d928aad22ce",
+      "uuid": "cb06c57d-f558-4bc1-b493-c818bab9fe98",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_850.cy.js",
-      "file": "cypress\\e2e\\tests\\AllocationPageTest_850.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\PaymentsPageTest_1409.cy.js",
+      "file": "cypress\\e2e\\tests\\PaymentsPageTest_1409.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "3b687209-1bdc-4437-b1e9-f451c81b4aa8",
-          "title": "Allocation - Upload Agency Allocation Owner Status - User entered alphabets or special characters in transaction id field and clicked on search button, system should throw an error as \"Invalid Transaction ID \"",
+          "uuid": "7a5b0154-9051-4ab1-ad7f-3c1d1acca475",
+          "title": "Payments Module - Search and send duplicate email e-receipt & SMS- Logged in user to get error message as No results foundwhen incorrect data is selected.",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Product Filter - TC_ID_850",
-              "fullTitle": "Allocation - Upload Agency Allocation Owner Status - User entered alphabets or special characters in transaction id field and clicked on search button, system should throw an error as \"Invalid Transaction ID \" Product Filter - TC_ID_850",
+              "title": "Payment - TC_ID_1409",
+              "fullTitle": "Payments Module - Search and send duplicate email e-receipt & SMS- Logged in user to get error message as No results foundwhen incorrect data is selected. Payment - TC_ID_1409",
               "timedOut": null,
-              "duration": 37458,
+              "duration": 42246,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  //allocationPage.ClickonallocationUAAOS('2: Invalid File Format');\n  allocationPage.ClickonUAAOvalidationCheck_50();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  paymentsPage.sendduplicateemailereceiptSMS1412();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Invalid TransactionId' but never did.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Invalid TransactionId' but never did.\n    at AllocationPage.ClickonUAAOvalidationCheck_50 (webpack:///./cypress/e2e/pages/AllocationPage.js:3480:41)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_850.cy.js:27:26)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tbody > :nth-child(1) > :nth-child(7) > .ng-star-inserted`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tbody > :nth-child(1) > :nth-child(7) > .ng-star-inserted`, but never found it.\n    at PaymentsPage.sendduplicateemailereceiptSMS1412 (webpack:///./cypress/e2e/pages/PaymentsPage.js:1696:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/PaymentsPageTest_1409.cy.js:27:29)",
                 "diff": null
               },
-              "uuid": "6943297b-ba44-4a9d-8e1d-067a4a591741",
-              "parentUUID": "3b687209-1bdc-4437-b1e9-f451c81b4aa8",
+              "uuid": "90946014-ddb6-4153-ab4c-623d4d36871a",
+              "parentUUID": "7a5b0154-9051-4ab1-ad7f-3c1d1acca475",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "6943297b-ba44-4a9d-8e1d-067a4a591741"
+            "90946014-ddb6-4153-ab4c-623d4d36871a"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 37458,
+          "duration": 42246,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

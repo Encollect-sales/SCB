@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T16:29:50.173Z",
-    "end": "2026-06-16T16:32:28.434Z",
-    "duration": 158261,
+    "start": "2026-07-24T17:39:52.939Z",
+    "end": "2026-07-24T17:40:46.682Z",
+    "duration": 53743,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "d3453389-c656-44d1-a5d3-763875484436",
+      "uuid": "6c2e8003-e279-4c88-bfdc-f38fea76d9da",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AgencyEmpanelmentRequest_85.cy.js",
-      "file": "cypress\\e2e\\tests\\AgencyEmpanelmentRequest_85.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_771.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_771.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "831bfafe-befc-4f2c-aa37-fa468450167e",
-          "title": "User Management - Agency Empanelment Request",
+          "uuid": "965baee2-69ed-4429-b11b-7be34acb08b6",
+          "title": "Allocation - user should should not enter mandatory fields it shows a popup message",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Create Agency - TC_ID_028",
-              "fullTitle": "User Management - Agency Empanelment Request Create Agency - TC_ID_028",
+              "title": "Download Allocation - TC_ID_771",
+              "fullTitle": "Allocation - user should should not enter mandatory fields it shows a popup message Download Allocation - TC_ID_771",
               "timedOut": null,
-              "duration": 146094,
+              "duration": 41796,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  userManagementPage.CreateAgency028();\n  //loginPage.logout();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonallocationUAAO();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(1) > .form-select`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(1) > .form-select`, but never found it.\n    at UserManagementPage.CreateAgency028 (webpack:///./cypress/e2e/pages/UserManagementPage.js:881:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AgencyEmpanelmentRequest_85.cy.js:24:25)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input`, but never found it.\n    at AllocationPage.ClickonallocationUAAO (webpack:///./cypress/e2e/pages/AllocationPage.js:1922:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_771.cy.js:27:26)",
                 "diff": null
               },
-              "uuid": "991820b3-faed-497d-a2c5-5bf85a8c3327",
-              "parentUUID": "831bfafe-befc-4f2c-aa37-fa468450167e",
+              "uuid": "03f1c4b7-c6a2-45a0-821b-522308b762e2",
+              "parentUUID": "965baee2-69ed-4429-b11b-7be34acb08b6",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "991820b3-faed-497d-a2c5-5bf85a8c3327"
+            "03f1c4b7-c6a2-45a0-821b-522308b762e2"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 146094,
+          "duration": 41796,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

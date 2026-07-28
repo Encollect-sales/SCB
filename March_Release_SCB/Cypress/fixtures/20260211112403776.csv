@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1f5d70646388de0d5cec542dda5881,Telecaller,45128,Daija,Paucek,daija@yopmail.com,32453049,Branch Backend,Branch Manager,Bangalore,True, | Mobile Number 10 digits are required

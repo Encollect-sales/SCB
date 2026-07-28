@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T16:02:40.275Z",
-    "end": "2026-06-16T16:05:22.053Z",
-    "duration": 161778,
+    "start": "2026-07-24T17:27:45.926Z",
+    "end": "2026-07-24T17:28:36.172Z",
+    "duration": 50246,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "f3bf1ba3-de5f-4d8d-94ff-1dda1486fe28",
+      "uuid": "1f8a2fb3-b159-47f6-9293-1b2da0d5410e",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AgencyEmpanelmentRequest_609.cy.js",
-      "file": "cypress\\e2e\\tests\\AgencyEmpanelmentRequest_609.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_761.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_761.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "7cf47cce-6690-4a80-a2c4-c98fd8f38862",
-          "title": "User Management - Agency Empanelment Request",
+          "uuid": "07c33746-344c-4dcc-936a-392000489aaa",
+          "title": "Allocation - Secondary Allocation by filters- User selected Product Group as \"Retail\", Product as \" Gold PGL\" and Sub product as \"Personal Gold Loan \"",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Submit Agency Profile - TC_ID_609",
-              "fullTitle": "User Management - Agency Empanelment Request Submit Agency Profile - TC_ID_609",
+              "title": "Bucket Filter - TC_ID_761",
+              "fullTitle": "Allocation - Secondary Allocation by filters- User selected Product Group as \"Retail\", Product as \" Gold PGL\" and Sub product as \"Personal Gold Loan \" Bucket Filter - TC_ID_761",
               "timedOut": null,
-              "duration": 149132,
+              "duration": 38003,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  userManagementPage.CreateAgency047();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonSABFBucket();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(1) > .form-select`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(1) > .form-select`, but never found it.\n    at UserManagementPage.CreateAgency047 (webpack:///./cypress/e2e/pages/UserManagementPage.js:5427:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AgencyEmpanelmentRequest_609.cy.js:24:25)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#Productgroup`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#Productgroup`, but never found it.\n    at AllocationPage.ClickonSABFBucket (webpack:///./cypress/e2e/pages/AllocationPage.js:1672:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_761.cy.js:26:26)",
                 "diff": null
               },
-              "uuid": "8626cf90-82f9-40f2-98a0-db4287196840",
-              "parentUUID": "7cf47cce-6690-4a80-a2c4-c98fd8f38862",
+              "uuid": "7e2ba83c-3ea6-43ee-a3dd-c2693a34b61f",
+              "parentUUID": "07c33746-344c-4dcc-936a-392000489aaa",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "8626cf90-82f9-40f2-98a0-db4287196840"
+            "7e2ba83c-3ea6-43ee-a3dd-c2693a34b61f"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 149132,
+          "duration": 38003,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

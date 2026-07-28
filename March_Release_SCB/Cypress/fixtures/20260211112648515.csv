@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1f5d72e7ac724d094a9209c1e8c06d,Telecaller,49613,Monique,Mills,monique@yopmail.com,6760717462,,Audit Manager,Bangalore,True, | Department is Required

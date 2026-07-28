@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T20:50:51.700Z",
-    "end": "2026-06-16T20:51:29.593Z",
-    "duration": 37893,
+    "start": "2026-07-24T22:00:32.740Z",
+    "end": "2026-07-24T22:00:35.109Z",
+    "duration": 2369,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "a29829cf-86c3-4da8-99af-20fec75769be",
+      "uuid": "4a2b9147-94f3-40a8-8ec4-430ba927ce48",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\PaymentsPageTest_1394.cy.js",
-      "file": "cypress\\e2e\\tests\\PaymentsPageTest_1394.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\SearchStaffPageTest_004.cy.js",
+      "file": "cypress\\e2e\\tests\\SearchStaffPageTest_004.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "e998c932-34c7-428a-a87e-e52fd86068db",
-          "title": "Payments Module - Create batch of payments - Logged in user to select random data in create batch of payments screen to see \"No results found\" error message.(it means data not available in the DB with selected search criteria)",
+          "uuid": "6fe95090-850e-476d-8c3a-0a29755b4e0b",
+          "title": "User Management - Search Staff",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Payment - TC_ID_1394",
-              "fullTitle": "Payments Module - Create batch of payments - Logged in user to select random data in create batch of payments screen to see \"No results found\" error message.(it means data not available in the DB with selected search criteria) Payment - TC_ID_1394",
+              "title": "Search Staff - TC_ID_004",
+              "fullTitle": "User Management - Search Staff Search Staff - TC_ID_004",
               "timedOut": null,
-              "duration": 31481,
+              "duration": 858,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  paymentsPage.PaymentModule();\n  paymentsPage.ClickOnCreateBatchOfPayment();\n  paymentsPage.ClickOnCreateBatchOfPayment_DataError();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  paymentsPage.SearchStaffTestPage_01();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#search-product-group`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#search-product-group`, but never found it.\n    at PaymentsPage.ClickOnCreateBatchOfPayment_DataError (webpack:///./cypress/e2e/pages/PaymentsPage.js:762:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/PaymentsPageTest_1394.cy.js:28:29)",
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://entqa.sumeruentiger.com/scb/web/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND entqa.sumeruentiger.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://entqa.sumeruentiger.com/scb/web/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND entqa.sumeruentiger.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:57175/__cypress/runner/cypress_runner.js:131607:74)\n    at visitFailedByErr (http://localhost:57175/__cypress/runner/cypress_runner.js:131006:12)\n    at <unknown> (http://localhost:57175/__cypress/runner/cypress_runner.js:131606:11)\n    at tryCatcher (http://localhost:57175/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (http://localhost:57175/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (http://localhost:57175/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (http://localhost:57175/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (http://localhost:57175/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (http://localhost:57175/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (http://localhost:57175/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (http://localhost:57175/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (http://localhost:57175/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/pages/LoginPage.js:20:9)\n\nFrom Node.js Internals:\n  Error: getaddrinfo ENOTFOUND entqa.sumeruentiger.com\n      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:108:26)",
                 "diff": null
               },
-              "uuid": "eaf4270a-e692-4f09-8ed8-0acd31cb8185",
-              "parentUUID": "e998c932-34c7-428a-a87e-e52fd86068db",
+              "uuid": "f9c46f1c-ec53-4ccd-8a65-c309ccb24b61",
+              "parentUUID": "6fe95090-850e-476d-8c3a-0a29755b4e0b",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "eaf4270a-e692-4f09-8ed8-0acd31cb8185"
+            "f9c46f1c-ec53-4ccd-8a65-c309ccb24b61"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 31481,
+          "duration": 858,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

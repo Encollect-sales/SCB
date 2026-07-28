@@ -1,2 +1,0 @@
-Id,IsParentAgency,ParentAgencyCode,AgencyCode,AgencyName,RecommendingOfficer,AgencyType,AgencySubType,TINNumber,PanCard,PrimaryOwnerFirstName,PrimaryOwnerLastName,RegisteredAgencyAddress,Landmark,MobileNo,EmailID,FirstAgreementDate,LastRenewalDate,ContractExpiryDate,Remarks,IsFailed,FailureReason
-3a1f116f024446f6be57736a5c582274,Yes,,500803,Jensen,2256,Collections,Field Agents,12345321,PANCA9614B,hamad,P,Pune,wiki field,6017306085,,12-10-2022,13-10-2023,10-10-2032,Bulk upload,True, | Email id is required

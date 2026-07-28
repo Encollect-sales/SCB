@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T17:20:48.049Z",
-    "end": "2026-06-16T17:21:51.109Z",
-    "duration": 63060,
+    "start": "2026-07-24T18:20:25.174Z",
+    "end": "2026-07-24T18:21:20.754Z",
+    "duration": 55580,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "0bf0e327-8a3b-42df-9e0c-bed241fd408a",
+      "uuid": "f3be5243-9217-4bf5-8aa7-a7cacd197b9b",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_698.cy.js",
-      "file": "cypress\\e2e\\tests\\AllocationPageTest_698.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_803.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_803.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "6f7f89f7-9527-4738-b822-d36a724d234b",
-          "title": "Allocation - Upload Agency Allocation Batch - User should update valid account no, allocation owner code and allocation expiry date and save the file. If invalid data entered and user uploaded the file for allocation, the status for this allocation will show as failed.",
+          "uuid": "d08cf03c-7a57-472e-ad47-ae7ac5397bcc",
+          "title": "Allocation - Upload Collector Allocation Batch - When user clicking on Download accounts button without selecting anyone of the filters system will throw an error as \"Please select atleast one filter\" in the pop up.",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Agency Level Allocation - TC_ID_698",
-              "fullTitle": "Allocation - Upload Agency Allocation Batch - User should update valid account no, allocation owner code and allocation expiry date and save the file. If invalid data entered and user uploaded the file for allocation, the status for this allocation will show as failed. Agency Level Allocation - TC_ID_698",
+              "title": "Upload file extension and validation check - TC_ID_803",
+              "fullTitle": "Allocation - Upload Collector Allocation Batch - When user clicking on Download accounts button without selecting anyone of the filters system will throw an error as \"Please select atleast one filter\" in the pop up. Upload file extension and validation check - TC_ID_803",
               "timedOut": null,
-              "duration": 54627,
+              "duration": 43038,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.Clickonallocation();\n  allocationPage.filltemplate3();\n  allocationPage.clickondownloadTemplate();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.uploadCollectorUnallocationBatchWithoutUnAllocation();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(1) > .enc-card > .card-content > :nth-child(1) > .form-radio-group > :nth-child(1)`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(1) > .enc-card > .card-content > :nth-child(1) > .form-radio-group > :nth-child(1)`, but never found it.\n    at AllocationPage.filltemplate3 (webpack:///./cypress/e2e/pages/AllocationPage.js:165:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_698.cy.js:28:26)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(3) > a`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(3) > a`, but never found it.\n    at AllocationPage.uploadCollectorUnallocationBatchWithoutUnAllocation (webpack:///./cypress/e2e/pages/AllocationPage.js:2681:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_803.cy.js:26:28)",
                 "diff": null
               },
-              "uuid": "3dd22003-b2f7-404b-8cc3-7a3b66084fc3",
-              "parentUUID": "6f7f89f7-9527-4738-b822-d36a724d234b",
+              "uuid": "dd2d0f8b-84b1-4a5a-91ab-be24924d6b56",
+              "parentUUID": "d08cf03c-7a57-472e-ad47-ae7ac5397bcc",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "3dd22003-b2f7-404b-8cc3-7a3b66084fc3"
+            "dd2d0f8b-84b1-4a5a-91ab-be24924d6b56"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 54627,
+          "duration": 43038,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

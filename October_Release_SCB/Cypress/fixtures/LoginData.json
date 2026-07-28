@@ -1,31 +1,31 @@
 {
   "login": {
     "Companyname": "ENCollect",
-    "email": "staffautomationtwelve@yopmail.com",
-    "password": "123@mdMD"
+    "email": "testinginsight@yopmail.com",
+      "password": "123@aaAA"
   },
 
   "login1": {
     "Companyname": "ENCollect",
-    "email": "staffautomationtwelve@yopmail.com",
-    "password": "123@mdMD"
+     "email": "staffautomationseven@yopmail.com",
+      "password": "123@qsQS"
   },
 
   "login2": {
     "Companyname": "ENCollect",
-    "email": "staffautomationtwelve@yopmail.com",
-    "password": "123@mdMD"
+    "email": "staffautomationseven@yopmail.com",
+      "password": "123@qsQS"
   },
 
   "Repologin1": {
     "Companyname": "ENCollect",
-    "email": "staffautomationtwelve@yopmail.com",
+    "email": "recoveryofficer@yopmail.com",
     "password": "123@mdMD"
   },
 
   "Repologin2": {
     "Companyname": "ENCollect",
-    "email": "staffautomationtwelve@yopmail.com",
+    "email": "rahmat07@yopmail.com",
     "password": "123@mdMD"
   },
 

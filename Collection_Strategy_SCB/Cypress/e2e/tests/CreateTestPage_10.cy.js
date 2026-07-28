@@ -4,7 +4,7 @@ import LoginPage from '../pages/LoginPage';
 import { getLocators } from '../utils/Locatorutils';
 import CollectionPage from '../pages/CollectionPage';
 
-describe(    () => {
+describe("TC-10 Create Segment - Verify Bucket accordion is expandable", () => {
 
     let loginPage;
     let collectionPage;
@@ -19,15 +19,14 @@ describe(    () => {
       });
     });
 
-    it('  ', () => {
+    it("Create Segment - Verify Bucket accordion is expandable", () => {
       getTestData('loginData', 'login1').then(user => {
 
         loginPage.login(user.Companyname, user.email, user.password);
         cy.wait(1000);
         collectionPage.CreateTestPage_10();
-       
+
       });
     });
 
-  }
-);
+});

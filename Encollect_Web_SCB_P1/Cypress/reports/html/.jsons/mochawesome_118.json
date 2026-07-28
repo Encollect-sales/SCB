@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T17:27:15.888Z",
-    "end": "2026-06-16T17:28:25.060Z",
-    "duration": 69172,
+    "start": "2026-07-24T18:27:05.885Z",
+    "end": "2026-07-24T18:28:02.775Z",
+    "duration": 56890,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "1adea48e-5334-424c-9fd3-2a5efe271e36",
+      "uuid": "8fa6ec7a-2793-473c-aca3-05bf2072389d",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_704.cy.js",
-      "file": "cypress\\e2e\\tests\\AllocationPageTest_704.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_810.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_810.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "beb8b10f-415c-4fd8-89cb-aaf25602668a",
-          "title": "Allocation - Upload agency Unallocation batch -  user clicked on \"ok\" so that file will get uploaded into the ENCollect system6. user will see a pop up msg as \"File uploaded successfully\" along with transaction ID.",
+          "uuid": "2c284949-8a61-419b-90d2-5da4902a89c5",
+          "title": "Allocation - Upload Collector Unallocation batch - User uploaded an incorrect file for doing the unallocation of staff or agent or telecaller then the status should show as \"invalid file format\"",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Agency Level UnAllocation - TC_ID_704",
-              "fullTitle": "Allocation - Upload agency Unallocation batch -  user clicked on \"ok\" so that file will get uploaded into the ENCollect system6. user will see a pop up msg as \"File uploaded successfully\" along with transaction ID. Agency Level UnAllocation - TC_ID_704",
+              "title": "Collector Level Unallocation - TC_ID_810",
+              "fullTitle": "Allocation - Upload Collector Unallocation batch - User uploaded an incorrect file for doing the unallocation of staff or agent or telecaller then the status should show as \"invalid file format\" Collector Level Unallocation - TC_ID_810",
               "timedOut": null,
-              "duration": 57294,
+              "duration": 42443,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.uploadAgencyUnallocationBatchFiledAgency();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.uploadCollectorUnallocationBatchInvalidFile();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(4)`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(4)`, but never found it.\n    at Context.eval (webpack:///./cypress/e2e/pages/AllocationPage.js:2374:7)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(3) > a`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(3) > a`, but never found it.\n    at AllocationPage.uploadCollectorUnallocationBatchInvalidFile (webpack:///./cypress/e2e/pages/AllocationPage.js:2700:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_810.cy.js:25:21)",
                 "diff": null
               },
-              "uuid": "52c6db96-520f-4b94-b29b-051726190e1c",
-              "parentUUID": "beb8b10f-415c-4fd8-89cb-aaf25602668a",
+              "uuid": "c46f7ea5-8142-463c-a303-9a67fad43432",
+              "parentUUID": "2c284949-8a61-419b-90d2-5da4902a89c5",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "52c6db96-520f-4b94-b29b-051726190e1c"
+            "c46f7ea5-8142-463c-a303-9a67fad43432"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 57294,
+          "duration": 42443,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

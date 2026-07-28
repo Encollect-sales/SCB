@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T21:16:30.408Z",
-    "end": "2026-06-16T21:17:14.189Z",
-    "duration": 43781,
+    "start": "2026-07-24T22:24:45.407Z",
+    "end": "2026-07-24T22:25:43.957Z",
+    "duration": 58550,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "ddbcf8ca-35cc-4a70-a295-c914de2a05f4",
+      "uuid": "ccc77a59-92eb-4426-9b5d-729be5535410",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\ScopeofWorkTestPage_04.cy.js",
-      "file": "cypress\\e2e\\tests\\ScopeofWorkTestPage_04.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\UserManagementPageTest_874.cy.js",
+      "file": "cypress\\e2e\\tests\\UserManagementPageTest_874.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "bbfcbc14-64f8-4863-8abe-511cd2ce3a65",
-          "title": "User Management - Add staff - Scope of work - user select the product group in the scope of work",
+          "uuid": "5332934f-8f06-42ba-93e7-f51b030489ee",
+          "title": "User Management - Agency Empanelment Request",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "User Management - Scope of work - TC_ID_04",
-              "fullTitle": "User Management - Add staff - Scope of work - user select the product group in the scope of work User Management - Scope of work - TC_ID_04",
+              "title": "Banking Details - TC_ID_874",
+              "fullTitle": "User Management - Agency Empanelment Request Banking Details - TC_ID_874",
               "timedOut": null,
-              "duration": 37864,
+              "duration": 51313,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  scopeofworkpage.ScopeOfWorkTestPage_04();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  // userManagementPage.UserManagementModule();\n  // userManagementPage.ClickonAgencyEmpanelmentRequest();\n  // userManagementPage.ClickOnAddAgency();\n  userManagementPage.CreateAgency();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Search and select your Product Group(s)' but never did.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Search and select your Product Group(s)' but never did.\n    at ScopeofWorkPage.ScopeOfWorkTestPage_04 (webpack:///./cypress/e2e/pages/ScopeofWorkPage.js:59:59)\n    at Context.eval (webpack:///./cypress/e2e/tests/ScopeofWorkTestPage_04.cy.js:27:32)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(8) > .form-control`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(8) > .form-control`, but never found it.\n    at UserManagementPage.CreateAgency (webpack:///./cypress/e2e/pages/UserManagementPage.js:70:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/UserManagementPageTest_874.cy.js:29:35)",
                 "diff": null
               },
-              "uuid": "319640c1-b051-47f4-a9e6-2f0c3ab67311",
-              "parentUUID": "bbfcbc14-64f8-4863-8abe-511cd2ce3a65",
+              "uuid": "4bbc2b59-3981-4742-912a-b5a11e8911cf",
+              "parentUUID": "5332934f-8f06-42ba-93e7-f51b030489ee",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "319640c1-b051-47f4-a9e6-2f0c3ab67311"
+            "4bbc2b59-3981-4742-912a-b5a11e8911cf"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 37864,
+          "duration": 51313,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

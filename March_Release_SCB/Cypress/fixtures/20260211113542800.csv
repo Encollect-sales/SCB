@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1f5d7b0ecb6e752b1a691bf4215859,Telecaller,72158,Madisen,Kertzmann,madisen@yopmail.com,1373699330,Audit and Risk,Arun Audit Manager,Bangalore,True, | Designation is invalid

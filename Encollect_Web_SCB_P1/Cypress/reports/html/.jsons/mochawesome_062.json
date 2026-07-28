@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T15:39:46.056Z",
-    "end": "2026-06-16T15:42:27.092Z",
-    "duration": 161036,
+    "start": "2026-07-24T17:16:47.258Z",
+    "end": "2026-07-24T17:17:31.294Z",
+    "duration": 44036,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "9504205b-576f-464f-8b30-b7b02a68925b",
+      "uuid": "981cfa6d-19de-4a13-a94c-df09cb585244",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AgencyEmpanelmentRequest_601.cy.js",
-      "file": "cypress\\e2e\\tests\\AgencyEmpanelmentRequest_601.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_753.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_753.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "bd33b4f4-376f-4758-b326-af37c2b4753d",
-          "title": "User Management - Agency Empanelment Request",
+          "uuid": "f4c40eac-0f1b-4838-be42-463831068fe8",
+          "title": "Allocation - Primary Allocation by filters - User should be able to click on Allocate button after selecting the loan accounts User will receive a pop us as \"Accounts allocated successfully\"",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Agreement and renewal details - TC_ID_601",
-              "fullTitle": "User Management - Agency Empanelment Request Agreement and renewal details - TC_ID_601",
+              "title": "Product Filter - TC_ID_753",
+              "fullTitle": "Allocation - Primary Allocation by filters - User should be able to click on Allocate button after selecting the loan accounts User will receive a pop us as \"Accounts allocated successfully\" Product Filter - TC_ID_753",
               "timedOut": null,
-              "duration": 148211,
+              "duration": 32868,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  userManagementPage.CreateAgency047();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickOnSearchResultAllocation();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(1) > .form-select`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(1) > .form-select`, but never found it.\n    at UserManagementPage.CreateAgency047 (webpack:///./cypress/e2e/pages/UserManagementPage.js:5427:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AgencyEmpanelmentRequest_601.cy.js:24:25)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(4) > a.ng-star-inserted`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(4) > a.ng-star-inserted`, but never found it.\n    at AllocationPage.ClickOnSearchResultAllocation (webpack:///./cypress/e2e/pages/AllocationPage.js:1570:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_753.cy.js:27:27)",
                 "diff": null
               },
-              "uuid": "c5468e43-c663-401a-b6ef-507f35431f9a",
-              "parentUUID": "bd33b4f4-376f-4758-b326-af37c2b4753d",
+              "uuid": "ab8e3dfb-423a-435f-9127-19430c9a9a76",
+              "parentUUID": "f4c40eac-0f1b-4838-be42-463831068fe8",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "c5468e43-c663-401a-b6ef-507f35431f9a"
+            "ab8e3dfb-423a-435f-9127-19430c9a9a76"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 148211,
+          "duration": 32868,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T19:27:09.388Z",
-    "end": "2026-06-16T19:27:53.872Z",
-    "duration": 44484,
+    "start": "2026-07-24T20:45:27.879Z",
+    "end": "2026-07-24T20:46:13.581Z",
+    "duration": 45702,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "f992688c-1fd1-4675-acbd-3e526bdfe3b5",
+      "uuid": "4e1e2ea5-92b8-4ced-9848-0cc55b8ff90f",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_840.cy.js",
-      "file": "cypress\\e2e\\tests\\AllocationPageTest_840.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\PaymentsPageTest_1399.cy.js",
+      "file": "cypress\\e2e\\tests\\PaymentsPageTest_1399.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "728e784f-c394-4b5d-b7fb-707516567749",
-          "title": "Allocation - Secondary Allocation By Filters - User selected the accounts in result grid but did not entered TC agent name or agent name, then system should throw an error as \"TC agent name or agent name any one required\" in the pop up",
+          "uuid": "58a03b5d-d39a-444e-90c2-684de8aebfac",
+          "title": "Payments Module - Central ops acknowledging payin slip - Logged in user from bank to acknowledge the payin slip by clicking on central ops acknowledging payin slip sub menu under payments module.",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Secondary Allocation By Filters - TC_ID_840",
-              "fullTitle": "Allocation - Secondary Allocation By Filters - User selected the accounts in result grid but did not entered TC agent name or agent name, then system should throw an error as \"TC agent name or agent name any one required\" in the pop up Secondary Allocation By Filters - TC_ID_840",
+              "title": "Payment - TC_ID_1398",
+              "fullTitle": "Payments Module - Central ops acknowledging payin slip - Logged in user from bank to acknowledge the payin slip by clicking on central ops acknowledging payin slip sub menu under payments module. Payment - TC_ID_1398",
               "timedOut": null,
-              "duration": 37198,
+              "duration": 39802,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonSAallocate();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  paymentsPage.PaymentModule();\n  paymentsPage.ClickOnCentral_ops_acknowledging_payin_slip_RadioBtn1();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[role=\"alert\"]`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[role=\"alert\"]`, but never found it.\n    at AllocationPage.ClickonSAallocate (webpack:///./cypress/e2e/pages/AllocationPage.js:1541:29)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_840.cy.js:26:27)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.payments > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(3) > a`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.payments > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(3) > a`, but never found it.\n    at PaymentsPage.ClickOnCentral_ops_acknowledging_payin_slip_RadioBtn1 (webpack:///./cypress/e2e/pages/PaymentsPage.js:1122:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/PaymentsPageTest_1399.cy.js:27:29)",
                 "diff": null
               },
-              "uuid": "4eca4dc1-5f8b-4a0f-8645-7b78ba1be78f",
-              "parentUUID": "728e784f-c394-4b5d-b7fb-707516567749",
+              "uuid": "5feab4b6-adc3-4c08-a15e-6c0848d35d17",
+              "parentUUID": "58a03b5d-d39a-444e-90c2-684de8aebfac",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "4eca4dc1-5f8b-4a0f-8645-7b78ba1be78f"
+            "5feab4b6-adc3-4c08-a15e-6c0848d35d17"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 37198,
+          "duration": 39802,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

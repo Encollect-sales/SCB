@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T17:04:51.223Z",
-    "end": "2026-06-16T17:05:54.943Z",
-    "duration": 63720,
+    "start": "2026-07-24T18:05:52.910Z",
+    "end": "2026-07-24T18:06:47.639Z",
+    "duration": 54729,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "6e2b3b2e-51ba-4354-86ad-19b3c0f9d90e",
+      "uuid": "53a3ebd7-0d0b-484d-bb06-fe76bd0fe684",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AgentEmpanelmentRequestPageTest_640.cy.js",
-      "file": "cypress\\e2e\\tests\\AgentEmpanelmentRequestPageTest_640.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_791.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_791.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "4e136724-8857-4fac-8790-435985fefb33",
-          "title": "Agent Empanelment Request - Create Agent - User will click on save agent profile button only when all mandatory details are not entered then the status will be saved as draft",
+          "uuid": "1ffe8848-3b08-4cd4-b8ca-f4fc9ecdf94d",
+          "title": "Allocation - Upload agency Unallocation batch - User clicked on upload button and selected the file, in the pop up user should be able to see OK & Close Buttons, when user clicked on close button user should remain in same agency level unallocation page.",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Agent Empanelment Request - TC_ID_640",
-              "fullTitle": "Agent Empanelment Request - Create Agent - User will click on save agent profile button only when all mandatory details are not entered then the status will be saved as draft Agent Empanelment Request - TC_ID_640",
+              "title": "Agency Level UnAllocation - TC_ID_791",
+              "fullTitle": "Allocation - Upload agency Unallocation batch - User clicked on upload button and selected the file, in the pop up user should be able to see OK & Close Buttons, when user clicked on close button user should remain in same agency level unallocation page. Agency Level UnAllocation - TC_ID_791",
               "timedOut": null,
-              "duration": 51818,
+              "duration": 39615,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  agentemplimentationRequest.AgentEnpalmentRequest640();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.uploadAgencyUnallocationBatchWithoutUnAllocationAgency();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.ng-star-inserted > .form-control`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.ng-star-inserted > .form-control`, but never found it.\n    at AgentEmpanelmentRequestPage.AgentEnpalmentRequest640 (webpack:///./cypress/e2e/pages/AgentEmpanelmentRequestPage.js:1718:5)\n    at Context.eval (webpack:///./cypress/e2e/tests/AgentEmpanelmentRequestPageTest_640.cy.js:27:43)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(3) > a`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(3) > a`, but never found it.\n    at AllocationPage.uploadAgencyUnallocationBatchWithoutUnAllocationAgency (webpack:///./cypress/e2e/pages/AllocationPage.js:2415:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_791.cy.js:25:21)",
                 "diff": null
               },
-              "uuid": "616acc73-dc2b-422b-a511-a6f7b84a5296",
-              "parentUUID": "4e136724-8857-4fac-8790-435985fefb33",
+              "uuid": "61523645-c37c-4308-94c9-d1291a1d6fb9",
+              "parentUUID": "1ffe8848-3b08-4cd4-b8ca-f4fc9ecdf94d",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "616acc73-dc2b-422b-a511-a6f7b84a5296"
+            "61523645-c37c-4308-94c9-d1291a1d6fb9"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 51818,
+          "duration": 39615,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

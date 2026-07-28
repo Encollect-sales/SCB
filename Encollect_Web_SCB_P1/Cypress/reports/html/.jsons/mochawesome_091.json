@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T16:50:44.257Z",
-    "end": "2026-06-16T16:51:49.341Z",
-    "duration": 65084,
+    "start": "2026-07-24T17:54:06.429Z",
+    "end": "2026-07-24T17:55:10.534Z",
+    "duration": 64105,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "03cf3f2d-d751-48cc-befb-fd51b31d0779",
+      "uuid": "e7a7643d-a72f-4063-b73f-a4b7870ef448",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AgentEmpanelmentRequestPageTest_631.cy.js",
-      "file": "cypress\\e2e\\tests\\AgentEmpanelmentRequestPageTest_631.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_782.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_782.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "dbb6700b-c388-4e8e-bb90-119958a7243d",
-          "title": "Agent Empanelment Request - Create Agent - User will enter all mandatory fields in local address details for creating the agent.",
+          "uuid": "4c4125bf-4d62-42eb-86db-6934f962293c",
+          "title": "Allocation - Primary Allocation by filters",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Agent Empanelment Request - TC_ID_631",
-              "fullTitle": "Agent Empanelment Request - Create Agent - User will enter all mandatory fields in local address details for creating the agent. Agent Empanelment Request - TC_ID_631",
+              "title": "Product Filter - TC_ID_258",
+              "fullTitle": "Allocation - Primary Allocation by filters Product Filter - TC_ID_258",
               "timedOut": null,
-              "duration": 52269,
+              "duration": 47810,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  agentemplimentationRequest.AgentEnpalmentRequest631();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonallocationPAF();\n  allocationPage.fillproductgroupPAF();\n  allocationPage.fillproductPAF();\n  allocationPage.fillsubproductPAF();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.ng-star-inserted > .form-control`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.ng-star-inserted > .form-control`, but never found it.\n    at AgentEmpanelmentRequestPage.AgentEnpalmentRequest631 (webpack:///./cypress/e2e/pages/AgentEmpanelmentRequestPage.js:1123:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AgentEmpanelmentRequestPageTest_631.cy.js:27:43)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'HL' within the element: <div#a1b93c287124-2.ng-option> but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'HL' within the element: <div#a1b93c287124-2.ng-option> but never did.\n    at AllocationPage.fillproductgroupPAF (webpack:///./cypress/e2e/pages/AllocationPage.js:458:40)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_782.cy.js:28:26)",
                 "diff": null
               },
-              "uuid": "a623b4e5-5c55-43e7-b2d4-5883fb749eb7",
-              "parentUUID": "dbb6700b-c388-4e8e-bb90-119958a7243d",
+              "uuid": "cff97c13-e0ba-4408-9e4c-05655770e0d0",
+              "parentUUID": "4c4125bf-4d62-42eb-86db-6934f962293c",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "a623b4e5-5c55-43e7-b2d4-5883fb749eb7"
+            "cff97c13-e0ba-4408-9e4c-05655770e0d0"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 52269,
+          "duration": 47810,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

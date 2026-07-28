@@ -4,7 +4,7 @@ import LoginPage from '../pages/LoginPage';
 import { getLocators } from '../utils/Locatorutils';
 import CollectionPage from '../pages/CollectionPage';
 
-describe('create segment', () => {
+describe('create segment - Verify Segment Creation screen loads successfully', () => {
 
     let loginPage;
     let collectionpage;
@@ -19,7 +19,7 @@ describe('create segment', () => {
       });
     });
 
-    it('  ', () => {
+    it('Screen should load successfully with all fields and accordions displayed', () => {
       getTestData('loginData', 'login1').then(user => {
 
         loginPage.login(user.Companyname, user.email, user.password);

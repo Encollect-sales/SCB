@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T19:28:55.224Z",
-    "end": "2026-06-16T19:29:45.252Z",
-    "duration": 50028,
+    "start": "2026-07-24T20:47:11.399Z",
+    "end": "2026-07-24T20:47:58.985Z",
+    "duration": 47586,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "4c09b5f7-7b96-49f6-8aa6-7d30e79ba043",
+      "uuid": "5b6b851c-f656-4c0a-a068-841ec8629b97",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_842.cy.js",
-      "file": "cypress\\e2e\\tests\\AllocationPageTest_842.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\PaymentsPageTest_1401.cy.js",
+      "file": "cypress\\e2e\\tests\\PaymentsPageTest_1401.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "e036086d-c1e5-41b9-8db6-9a52305a91c3",
-          "title": "Allocation - Secondary Allocation By Filters - User selected all filters in all the tabs and about to allocate accounts but user scrolled up to the top of the page to change any of the filter values. user should be able to changes the filters values accordingly and click on allocate button.",
+          "uuid": "f0e18488-aeeb-4a69-8d82-22df3a359078",
+          "title": "Payments Module - Central ops acknowledging payin slip -Logged in user to select the check box in \"Money received in bank status\" field of payin slip number \"xxx\" to acknowledge the payin slip",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "clicks on cancel button - TC_ID_842",
-              "fullTitle": "Allocation - Secondary Allocation By Filters - User selected all filters in all the tabs and about to allocate accounts but user scrolled up to the top of the page to change any of the filter values. user should be able to changes the filters values accordingly and click on allocate button. clicks on cancel button - TC_ID_842",
+              "title": "Payment - TC_ID_1401",
+              "fullTitle": "Payments Module - Central ops acknowledging payin slip -Logged in user to select the check box in \"Money received in bank status\" field of payin slip number \"xxx\" to acknowledge the payin slip Payment - TC_ID_1401",
               "timedOut": null,
-              "duration": 42851,
+              "duration": 42007,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickOnSearchResultAllocationSABF1();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  paymentsPage.PaymentModule();\n  paymentsPage.ClickOnC_opsAcknowledgingPayinSlip_YesConfirm();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.panel-open > .panel > .panel-collapse > .panel-body > .row > .col-lg-4.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.panel-open > .panel > .panel-collapse > .panel-body > .row > .col-lg-4.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input`, but never found it.\n    at AllocationPage.ClickOnSearchResultAllocationSABF1 (webpack:///./cypress/e2e/pages/AllocationPage.js:2265:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_842.cy.js:27:26)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.payments > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(3) > a`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.payments > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(3) > a`, but never found it.\n    at PaymentsPage.ClickOnC_opsAcknowledgingPayinSlip_YesConfirm (webpack:///./cypress/e2e/pages/PaymentsPage.js:1159:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/PaymentsPageTest_1401.cy.js:27:29)",
                 "diff": null
               },
-              "uuid": "bc7144e0-e3bf-4b8f-9781-9b2633d3d0f4",
-              "parentUUID": "e036086d-c1e5-41b9-8db6-9a52305a91c3",
+              "uuid": "2f4bca3a-ca09-4542-8660-9ead8bfdf011",
+              "parentUUID": "f0e18488-aeeb-4a69-8d82-22df3a359078",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "bc7144e0-e3bf-4b8f-9781-9b2633d3d0f4"
+            "2f4bca3a-ca09-4542-8660-9ead8bfdf011"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 42851,
+          "duration": 42007,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

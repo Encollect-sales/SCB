@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1f5d758293d4e42d6eb4840e4954a4,Telecaller,51130,Dalton,Lubowitz,dalton@yopmail.com,6326825468,Audit and Branch,Audit Manager,Bangalore,True, | Department is invalid

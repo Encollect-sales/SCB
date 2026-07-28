@@ -81,8 +81,8 @@
  "Button":"#toggleButton",
  "Payment_History_page":":nth-child(13) > .dropdown-item",
  "Settings_Page":".w-100 > .btn-outline-dark",
- "Trans_option":":nth-child(11) > .dropdown-item > .flex-grow-1",
- "Payer_Receipt_Image_option":":nth-child(10) > .dropdown-item > .flex-grow-1",
+ "Trans_option":":nth-child(2) > .dropdown-item > .flex-grow-1",
+ "Payer_Receipt_Image_option":":nth-child(1) > .dropdown-item > .flex-grow-1",
  "pagefirst":".pagination-first",
  "pagelast":".pagination-last > .page-link"
  

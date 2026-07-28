@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T16:10:42.684Z",
-    "end": "2026-06-16T16:11:46.632Z",
-    "duration": 63948,
+    "start": "2026-07-24T17:31:21.714Z",
+    "end": "2026-07-24T17:32:18.541Z",
+    "duration": 56827,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "2b94b73c-76f2-4514-add6-09f885ec5bb4",
+      "uuid": "792c7355-62a5-445a-91d5-86d09bdabfd2",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AgencyEmpanelmentRequest_612.cy.js",
-      "file": "cypress\\e2e\\tests\\AgencyEmpanelmentRequest_612.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_764.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_764.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "c437def8-f613-4082-a657-acf29e0416bd",
-          "title": "User Management - Agency Empanelment Request",
+          "uuid": "f678f4d4-5cc5-49a4-8098-3bc1a0cb9ddf",
+          "title": "Allocation - Secondary Allocation by filters -All fields under geography filters are cascading drop down values. The values under dropdown are populated based on item selected by user from another dropdown list.",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Create Agency - TC_ID_612",
-              "fullTitle": "User Management - Agency Empanelment Request Create Agency - TC_ID_612",
+              "title": "Result Grid - TC_ID_764",
+              "fullTitle": "Allocation - Secondary Allocation by filters -All fields under geography filters are cascading drop down values. The values under dropdown are populated based on item selected by user from another dropdown list. Result Grid - TC_ID_764",
               "timedOut": null,
-              "duration": 49651,
+              "duration": 46888,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  //userManagementPage.CreateAgency130();\n  userManagementPage.CreateAgency612();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonSABFGeography();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#encollectCode`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#encollectCode`, but never found it.\n    at UserManagementPage.CreateAgency612 (webpack:///./cypress/e2e/pages/UserManagementPage.js:6057:8)\n    at Context.eval (webpack:///./cypress/e2e/tests/AgencyEmpanelmentRequest_612.cy.js:25:25)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'India' within the element: <div#a4cf1c357771-0.ng-option.ng-option-marked> but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'India' within the element: <div#a4cf1c357771-0.ng-option.ng-option-marked> but never did.\n    at AllocationPage.ClickonSABFGeography (webpack:///./cypress/e2e/pages/AllocationPage.js:1698:45)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_764.cy.js:26:26)",
                 "diff": null
               },
-              "uuid": "779e4c2c-c732-4047-8af7-67ae4e53d4aa",
-              "parentUUID": "c437def8-f613-4082-a657-acf29e0416bd",
+              "uuid": "9694f2d4-a125-4a45-bc1e-8d7254045a7d",
+              "parentUUID": "f678f4d4-5cc5-49a4-8098-3bc1a0cb9ddf",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "779e4c2c-c732-4047-8af7-67ae4e53d4aa"
+            "9694f2d4-a125-4a45-bc1e-8d7254045a7d"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 49651,
+          "duration": 46888,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

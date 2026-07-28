@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T15:51:27.525Z",
-    "end": "2026-06-16T15:53:58.062Z",
-    "duration": 150537,
+    "start": "2026-07-24T17:22:02.787Z",
+    "end": "2026-07-24T17:22:51.306Z",
+    "duration": 48519,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "5d87740f-84fb-4722-9ca4-bca4ce5543a0",
+      "uuid": "135f457e-3650-45e4-9624-75c436ac2658",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AgencyEmpanelmentRequest_605.cy.js",
-      "file": "cypress\\e2e\\tests\\AgencyEmpanelmentRequest_605.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_757.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_757.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "da9360ff-8541-40b7-81f1-4def23a2131b",
-          "title": "User Management - Agency Empanelment Request",
+          "uuid": "090d6a0f-6e75-461d-897d-7179ca0f6819",
+          "title": "Allocation - Upload Agency Allocation Owner",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Scope of work - TC_ID_605",
-              "fullTitle": "User Management - Agency Empanelment Request Scope of work - TC_ID_605",
+              "title": "Download Accounts - TC_ID_361",
+              "fullTitle": "Allocation - Upload Agency Allocation Owner Download Accounts - TC_ID_361",
               "timedOut": null,
-              "duration": 142005,
+              "duration": 37096,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  userManagementPage.CreateAgency046();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonUAAOwnerChangedFilterValue();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(1) > .form-select`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(1) > .form-select`, but never found it.\n    at UserManagementPage.CreateAgency046 (webpack:///./cypress/e2e/pages/UserManagementPage.js:5241:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AgencyEmpanelmentRequest_605.cy.js:24:25)",
+                "message": "CypressError: `cy.select()` can only be called on a `<select>`. Your subject is a: `<input aria-autocomplete=\"list\" role=\"combobox\" type=\"text\" autocorrect=\"off\" autocapitalize=\"off\" autocomplete=\"off\" aria-expanded=\"false\">`\n\nhttps://on.cypress.io/select",
+                "estack": "CypressError: `cy.select()` can only be called on a `<select>`. Your subject is a: `<input aria-autocomplete=\"list\" role=\"combobox\" type=\"text\" autocorrect=\"off\" autocapitalize=\"off\" autocomplete=\"off\" aria-expanded=\"false\">`\n\nhttps://on.cypress.io/select\n    at Context.select (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:114078:70)\n    at wrapped (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:138092:19)\nFrom Your Spec Code:\n    at AllocationPage.ClickonUAAOwnerChangedFilterValue (webpack:///./cypress/e2e/pages/AllocationPage.js:3527:36)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_757.cy.js:26:27)",
                 "diff": null
               },
-              "uuid": "73cc3442-2418-412e-8ad3-86fbc01ee334",
-              "parentUUID": "da9360ff-8541-40b7-81f1-4def23a2131b",
+              "uuid": "388d8e67-1506-41d4-8336-7cf076cc5609",
+              "parentUUID": "090d6a0f-6e75-461d-897d-7179ca0f6819",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "73cc3442-2418-412e-8ad3-86fbc01ee334"
+            "388d8e67-1506-41d4-8336-7cf076cc5609"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 142005,
+          "duration": 37096,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

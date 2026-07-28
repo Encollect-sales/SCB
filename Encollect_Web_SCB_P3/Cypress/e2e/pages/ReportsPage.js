@@ -6500,7 +6500,7 @@ cy.wait(2000);
     cy.wait(2000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
-        cy.wait(7000);
+        cy.wait(3000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
@@ -6541,7 +6541,7 @@ cy.wait(2000);
     cy.wait(2000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
-        cy.wait(7000);
+        cy.wait(3000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
@@ -6628,7 +6628,7 @@ cy.wait(2000);
     cy.wait(2000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
-        cy.wait(7000);
+        cy.wait(3000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
@@ -6672,7 +6672,7 @@ cy.wait(2000);
     cy.wait(2000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
-        cy.wait(7000);
+        cy.wait(3000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
@@ -6721,7 +6721,7 @@ cy.wait(2000);
     cy.wait(2000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
-        cy.wait(7000);
+        cy.wait(3000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);
@@ -6787,7 +6787,7 @@ cy.wait(2000);
     cy.wait(2000);
     cy.get('.ng-dropdown-panel').should('be.visible')
       .within(() => {
-        cy.wait(7000);
+        cy.wait(3000);
         cy.get('.ng-option').then($options => {
           const count = $options.length;
           const randomIndex = Math.floor(Math.random() * count);

@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T20:21:27.984Z",
-    "end": "2026-06-16T20:22:05.976Z",
-    "duration": 37992,
+    "start": "2026-07-24T21:33:53.198Z",
+    "end": "2026-07-24T21:34:37.891Z",
+    "duration": 44693,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "fef8fa72-6e13-42c0-9866-196a3a490ba3",
+      "uuid": "2cf3c720-fe7d-4638-8b75-9185308924a6",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\PaymentsPageTest_059.cy.js",
-      "file": "cypress\\e2e\\tests\\PaymentsPageTest_059.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\ScopeofWorkTestPage_38.cy.js",
+      "file": "cypress\\e2e\\tests\\ScopeofWorkTestPage_38.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "f39cd58b-ac26-4f75-a95c-ccc9d1fc128a",
-          "title": "Payments Module - Search and send duplicate email e-receipt & SMS - Logged in user to view the result grid to send the duplicate e-receipt on email and sms ",
+          "uuid": "f7728f07-954b-4f3b-8ef4-9b1324cd5d06",
+          "title": "User Management -Add staff- Scope of work - user select the branches in the geography in the scope of work",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Payment - TC_ID_059",
-              "fullTitle": "Payments Module - Search and send duplicate email e-receipt & SMS - Logged in user to view the result grid to send the duplicate e-receipt on email and sms  Payment - TC_ID_059",
+              "title": "User Management - Scope of work - TC_ID_38",
+              "fullTitle": "User Management -Add staff- Scope of work - user select the branches in the geography in the scope of work User Management - Scope of work - TC_ID_38",
               "timedOut": null,
-              "duration": 31325,
+              "duration": 38125,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  paymentsPage.SearchandPrintBatch061();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  scopeofworkpage.ScopeOfWorkTestPage_38();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.payments > :nth-child(2) > :nth-child(4) > a.ng-star-inserted`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.payments > :nth-child(2) > :nth-child(4) > a.ng-star-inserted`, but never found it.\n    at PaymentsPage.SearchandPrintBatch061 (webpack:///./cypress/e2e/pages/PaymentsPage.js:417:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/PaymentsPageTest_059.cy.js:27:29)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-arrow-wrapper`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-arrow-wrapper`, but never found it.\n    at ScopeofWorkPage.ScopeOfWorkTestPage_38 (webpack:///./cypress/e2e/pages/ScopeofWorkPage.js:700:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/ScopeofWorkTestPage_38.cy.js:27:32)",
                 "diff": null
               },
-              "uuid": "7ff002a0-54a0-4875-b41b-347b47ff4598",
-              "parentUUID": "f39cd58b-ac26-4f75-a95c-ccc9d1fc128a",
+              "uuid": "21c3886f-d6c0-44cd-9467-8e2f3fa188e9",
+              "parentUUID": "f7728f07-954b-4f3b-8ef4-9b1324cd5d06",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "7ff002a0-54a0-4875-b41b-347b47ff4598"
+            "21c3886f-d6c0-44cd-9467-8e2f3fa188e9"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 31325,
+          "duration": 38125,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

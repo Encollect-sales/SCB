@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T17:03:03.784Z",
-    "end": "2026-06-16T17:04:29.971Z",
-    "duration": 86187,
+    "start": "2026-07-24T18:04:41.648Z",
+    "end": "2026-07-24T18:05:38.512Z",
+    "duration": 56864,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "f2c0055b-091f-4682-a1d2-7430eb99d7a6",
+      "uuid": "6349cf73-ad90-46c3-aa10-3e6bce08bbd3",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AgentEmpanelmentRequestPageTest_639.cy.js",
-      "file": "cypress\\e2e\\tests\\AgentEmpanelmentRequestPageTest_639.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_790.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_790.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "f8e4aacc-6d94-4706-98b4-daadf038a966",
-          "title": "Agent Empanelment Request - Create Agent - User will click on save agent profile button only when all mandatory details are not entered then the status will be saved as draft",
+          "uuid": "eea176d1-6084-4c37-b407-df05447a5706",
+          "title": "Allocation - Upload agency Unallocation batch - User uploaded an incorrect file for doing the unallocation of field agency or telecalling agency then the status should show as \"invalid file format\"",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Agent Empanelment Request - TC_ID_639",
-              "fullTitle": "Agent Empanelment Request - Create Agent - User will click on save agent profile button only when all mandatory details are not entered then the status will be saved as draft Agent Empanelment Request - TC_ID_639",
+              "title": "Agency Level UnAllocation - TC_ID_790",
+              "fullTitle": "Allocation - Upload agency Unallocation batch - User uploaded an incorrect file for doing the unallocation of field agency or telecalling agency then the status should show as \"invalid file format\" Agency Level UnAllocation - TC_ID_790",
               "timedOut": null,
-              "duration": 58373,
+              "duration": 39586,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  agentemplimentationRequest.AgentEnpalmentRequest639();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.uploadAgencyUnallocationBatchWithoutUnAllocationAgency();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.ng-star-inserted > .form-control`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.ng-star-inserted > .form-control`, but never found it.\n    at AgentEmpanelmentRequestPage.AgentEnpalmentRequest639 (webpack:///./cypress/e2e/pages/AgentEmpanelmentRequestPage.js:1503:5)\n    at Context.eval (webpack:///./cypress/e2e/tests/AgentEmpanelmentRequestPageTest_639.cy.js:27:43)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(3) > a`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(3) > a`, but never found it.\n    at AllocationPage.uploadAgencyUnallocationBatchWithoutUnAllocationAgency (webpack:///./cypress/e2e/pages/AllocationPage.js:2415:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_790.cy.js:25:21)",
                 "diff": null
               },
-              "uuid": "09e27eaa-07e5-4415-a3df-6ad49ecd7868",
-              "parentUUID": "f8e4aacc-6d94-4706-98b4-daadf038a966",
+              "uuid": "10a3b887-a224-4eb2-a284-5b7c4bf95750",
+              "parentUUID": "eea176d1-6084-4c37-b407-df05447a5706",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "09e27eaa-07e5-4415-a3df-6ad49ecd7868"
+            "10a3b887-a224-4eb2-a284-5b7c4bf95750"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 58373,
+          "duration": 39586,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

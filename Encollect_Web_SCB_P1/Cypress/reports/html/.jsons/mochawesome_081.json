@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T16:32:50.375Z",
-    "end": "2026-06-16T16:35:44.197Z",
-    "duration": 173822,
+    "start": "2026-07-24T17:41:02.700Z",
+    "end": "2026-07-24T17:41:55.258Z",
+    "duration": 52558,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "03575ac6-857e-498d-8679-f8afbb3b377e",
+      "uuid": "d14dc786-4bf8-4e70-a46c-e19c7895001f",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AgencyEmpanelmentRequest_854.cy.js",
-      "file": "cypress\\e2e\\tests\\AgencyEmpanelmentRequest_854.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_772.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_772.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "43bb7458-db1e-4efb-a9b3-0e4fc128ed8d",
-          "title": "User Management - Agency Empanelment Request",
+          "uuid": "7482704f-f9cc-4814-9fb1-4d3bf8560a1e",
+          "title": "Allocation - Upload Agency Allocation Owner - .File will get downloaded and usee can see the list of accounts which are allocated to any of the agency, so that user can take those accounts and do the allocation to agencies accordingly",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Address Details - TC_ID_654",
-              "fullTitle": "User Management - Agency Empanelment Request Address Details - TC_ID_654",
+              "title": "Download Allocation - TC_ID_772",
+              "fullTitle": "Allocation - Upload Agency Allocation Owner - .File will get downloaded and usee can see the list of accounts which are allocated to any of the agency, so that user can take those accounts and do the allocation to agencies accordingly Download Allocation - TC_ID_772",
               "timedOut": null,
-              "duration": 159438,
+              "duration": 41494,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  userManagementPage.CreateAgency043();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonallocationUAAOAA();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(1) > .form-select`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(1) > .form-select`, but never found it.\n    at UserManagementPage.CreateAgency043 (webpack:///./cypress/e2e/pages/UserManagementPage.js:4869:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AgencyEmpanelmentRequest_854.cy.js:24:25)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input`, but never found it.\n    at AllocationPage.ClickonallocationUAAOAA (webpack:///./cypress/e2e/pages/AllocationPage.js:3105:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_772.cy.js:27:26)",
                 "diff": null
               },
-              "uuid": "ee18c57d-f475-45a9-a2e2-033cec529fa5",
-              "parentUUID": "43bb7458-db1e-4efb-a9b3-0e4fc128ed8d",
+              "uuid": "55875cbb-8ebe-4941-9446-8c3130aaf742",
+              "parentUUID": "7482704f-f9cc-4814-9fb1-4d3bf8560a1e",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "ee18c57d-f475-45a9-a2e2-033cec529fa5"
+            "55875cbb-8ebe-4941-9446-8c3130aaf742"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 159438,
+          "duration": 41494,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

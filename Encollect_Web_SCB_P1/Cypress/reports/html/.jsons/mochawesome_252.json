@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T19:26:16.711Z",
-    "end": "2026-06-16T19:26:59.703Z",
-    "duration": 42992,
+    "start": "2026-07-24T20:44:38.108Z",
+    "end": "2026-07-24T20:45:23.506Z",
+    "duration": 45398,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "309d53dc-4131-4608-9a15-db9a36836300",
+      "uuid": "edfdc647-23b6-4144-a09b-be0fe82523ca",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_839.cy.js",
-      "file": "cypress\\e2e\\tests\\AllocationPageTest_839.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\PaymentsPageTest_1398.cy.js",
+      "file": "cypress\\e2e\\tests\\PaymentsPageTest_1398.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "47e60328-074f-4c40-bac8-5b2098346062",
-          "title": "Allocation -  Secondary Allocation By Filters- User clicked on Allocate button without selecting the accounts in result grid then system should throw an error as \"Please select the accounts\"",
+          "uuid": "0ed7eba1-8d26-46ae-b743-c2330f5dab7b",
+          "title": "Payments Module - Central ops acknowledging payin slip - Logged in user from bank to acknowledge the payin slip by clicking on central ops acknowledging payin slip sub menu under payments module.",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Product Filter - TC_ID_839",
-              "fullTitle": "Allocation -  Secondary Allocation By Filters- User clicked on Allocate button without selecting the accounts in result grid then system should throw an error as \"Please select the accounts\" Product Filter - TC_ID_839",
+              "title": "Payment - TC_ID_1398",
+              "fullTitle": "Payments Module - Central ops acknowledging payin slip - Logged in user from bank to acknowledge the payin slip by clicking on central ops acknowledging payin slip sub menu under payments module. Payment - TC_ID_1398",
               "timedOut": null,
-              "duration": 36851,
+              "duration": 39800,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonSABF();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  paymentsPage.PaymentModule();\n  paymentsPage.ClickOnCentral_ops_acknowledging_payin_slip_RadioBtn_visibility();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.panel-open > .panel > .panel-collapse > .panel-body > .row > .col-lg-4.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.panel-open > .panel > .panel-collapse > .panel-body > .row > .col-lg-4.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input`, but never found it.\n    at AllocationPage.ClickonSABF (webpack:///./cypress/e2e/pages/AllocationPage.js:1509:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_839.cy.js:26:27)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.payments > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(3) > a`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.payments > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(3) > a`, but never found it.\n    at PaymentsPage.ClickOnCentral_ops_acknowledging_payin_slip_RadioBtn_visibility (webpack:///./cypress/e2e/pages/PaymentsPage.js:1114:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/PaymentsPageTest_1398.cy.js:27:29)",
                 "diff": null
               },
-              "uuid": "c184d161-a515-4e49-adf3-15a72fb958f1",
-              "parentUUID": "47e60328-074f-4c40-bac8-5b2098346062",
+              "uuid": "ef669056-5299-4b61-a9f7-c59f4ce0897c",
+              "parentUUID": "0ed7eba1-8d26-46ae-b743-c2330f5dab7b",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "c184d161-a515-4e49-adf3-15a72fb958f1"
+            "ef669056-5299-4b61-a9f7-c59f4ce0897c"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 36851,
+          "duration": 39800,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

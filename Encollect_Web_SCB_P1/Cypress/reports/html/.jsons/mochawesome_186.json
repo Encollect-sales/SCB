@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T18:30:51.295Z",
-    "end": "2026-06-16T18:31:33.117Z",
-    "duration": 41822,
+    "start": "2026-07-24T19:41:58.549Z",
+    "end": "2026-07-24T19:42:08.594Z",
+    "duration": 10045,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "534c555f-0138-41c9-b1d5-3debed5276b2",
+      "uuid": "3317854a-cea5-4736-b69c-34e9b334eeba",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_771.cy.js",
-      "file": "cypress\\e2e\\tests\\AllocationPageTest_771.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\LoginPageTest1.cy.js",
+      "file": "cypress\\e2e\\tests\\LoginPageTest1.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "d16591a4-606e-4686-931f-810d289334db",
-          "title": "Allocation - user should should not enter mandatory fields it shows a popup message",
+          "uuid": "863d58fa-ac42-4b5c-948d-778c14b724df",
+          "title": "Login Functionality Tests",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Download Allocation - TC_ID_771",
-              "fullTitle": "Allocation - user should should not enter mandatory fields it shows a popup message Download Allocation - TC_ID_771",
+              "title": "Successfully logs in with valid credentials",
+              "fullTitle": "Login Functionality Tests Successfully logs in with valid credentials",
               "timedOut": null,
-              "duration": 35335,
+              "duration": 3804,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonallocationUAAO();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login1').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input`, but never found it.\n    at AllocationPage.ClickonallocationUAAO (webpack:///./cypress/e2e/pages/AllocationPage.js:1922:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_771.cy.js:27:26)",
+                "message": "CypressError: `cy.type()` can only accept a string or number. You passed in: `undefined`\n\nhttps://on.cypress.io/type",
+                "estack": "CypressError: `cy.type()` can only accept a string or number. You passed in: `undefined`\n\nhttps://on.cypress.io/type\n    at Context.type (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:115380:68)\n    at wrapped (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:138092:19)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/pages/LoginPage1.js:44:22)",
                 "diff": null
               },
-              "uuid": "50344f9b-61a0-482c-9b39-a61d7cac1202",
-              "parentUUID": "d16591a4-606e-4686-931f-810d289334db",
+              "uuid": "df79c120-91f1-499d-b07d-e77a48cf119d",
+              "parentUUID": "863d58fa-ac42-4b5c-948d-778c14b724df",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "50344f9b-61a0-482c-9b39-a61d7cac1202"
+            "df79c120-91f1-499d-b07d-e77a48cf119d"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 35335,
+          "duration": 3804,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

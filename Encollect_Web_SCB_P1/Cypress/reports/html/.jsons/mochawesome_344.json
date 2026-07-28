@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T20:43:34.009Z",
-    "end": "2026-06-16T20:44:08.965Z",
-    "duration": 34956,
+    "start": "2026-07-24T21:55:48.307Z",
+    "end": "2026-07-24T21:56:53.024Z",
+    "duration": 64717,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "48183062-c240-492c-9f16-28924505bfd1",
+      "uuid": "5d1755e1-ba67-4ef9-9b5f-6010691b9795",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\PaymentsPageTest_114.cy.js",
-      "file": "cypress\\e2e\\tests\\PaymentsPageTest_114.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\ScopeofWorkTestPage_67.cy.js",
+      "file": "cypress\\e2e\\tests\\ScopeofWorkTestPage_67.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "ca855843-8b7d-416b-ae2c-6eddd87bcea7",
-          "title": "Payments Module - Walkin Customer Receipt - Logged in user to enter receipt amount greater than 49,999 but did noto enter PAN number then encollect system will throw an error.",
+          "uuid": "9ce1b96b-fc0b-4a0c-a268-c32b8b1dcfd3",
+          "title": "User Management -Add agent- Scope of work - user select the country in the geography in the scope of work",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Payment - TC_ID_119",
-              "fullTitle": "Payments Module - Walkin Customer Receipt - Logged in user to enter receipt amount greater than 49,999 but did noto enter PAN number then encollect system will throw an error. Payment - TC_ID_119",
+              "title": "User Management - Scope of work - TC_ID_67",
+              "fullTitle": "User Management -Add agent- Scope of work - user select the country in the geography in the scope of work User Management - Scope of work - TC_ID_67",
               "timedOut": null,
-              "duration": 29036,
+              "duration": 60240,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  paymentsPage.PaymentModule();\n  paymentsPage.ClickOnWalkInCustomerReceipt_creditcard_options_visibility();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  scopeofworkpage.ScopeOfWorkTestPage_67();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.payments > :nth-child(2) > :nth-child(4) > a.ng-star-inserted`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.payments > :nth-child(2) > :nth-child(4) > a.ng-star-inserted`, but never found it.\n    at PaymentsPage.ClickOnWalkInCustomerReceipt_creditcard_options_visibility (webpack:///./cypress/e2e/pages/PaymentsPage.js:1432:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/PaymentsPageTest_114.cy.js:27:29)",
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `Encollect_Project\\Web_Testing\\SCB\\Frameworks\\SCB\\Encollect_Web_SCB_P1\\cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `Encollect_Project\\Web_Testing\\SCB\\Frameworks\\SCB\\Encollect_Web_SCB_P1\\cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:130639:64)\n    at <unknown> (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:131624:16)\n    at tryCatcher (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1830:23)\n    at <unknown> (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:4209:41)\n    at tryCatcher (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/pages/LoginPage.js:20:9)",
                 "diff": null
               },
-              "uuid": "70e7966a-67bd-4be6-a4d4-bda82494e4eb",
-              "parentUUID": "ca855843-8b7d-416b-ae2c-6eddd87bcea7",
+              "uuid": "476017a1-4987-4a52-92df-017423c9e0af",
+              "parentUUID": "9ce1b96b-fc0b-4a0c-a268-c32b8b1dcfd3",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "70e7966a-67bd-4be6-a4d4-bda82494e4eb"
+            "476017a1-4987-4a52-92df-017423c9e0af"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 29036,
+          "duration": 60240,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

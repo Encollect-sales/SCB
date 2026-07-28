@@ -30,6 +30,8 @@ class CommunicationPage {
   cy.wait(2000);
   cy.get(this.locators.entry_point).select('Account');
   cy.wait(2000);
+  cy.get(this.locators.Recipient_Type).select('Customer');
+  cy.wait(2000);
   cy.get('#allowAccessYes')
     .should('exist')
     .and('be.visible');
@@ -47,6 +49,8 @@ class CommunicationPage {
   cy.get(this.locators.channel_type).select('Email');
   cy.wait(2000);
   cy.get(this.locators.entry_point).select('Account');
+  cy.wait(2000);
+  cy.get(this.locators.Recipient_Type).select('Customer');
   cy.wait(2000);
   cy.get('#allowAccessNo')
     .should('be.checked');
@@ -370,7 +374,7 @@ cy.wait(2000);
 cy.get(this.locators.Recipient_Type).select('Customer');
 cy.wait(2000);
 
-cy.get(this.locators.Header).type(randomHeader);
+cy.get(this.locators.subjectline).type(randomHeader);
 cy.wait(2000);
 
 cy.get(this.locators.template_name).type(randomTemplateName);
@@ -434,7 +438,7 @@ cy.wait(2000);
 cy.get(this.locators.Recipient_Type).select('Customer');
 cy.wait(2000);
 
-cy.get(this.locators.Header).type(randomHeader);
+cy.get(this.locators.subjectline).type(randomHeader);
 cy.wait(2000);
 
 cy.get(this.locators.template_name).type(randomTemplateName);
@@ -498,7 +502,7 @@ cy.wait(2000);
 cy.get(this.locators.Recipient_Type).select('Customer');
 cy.wait(2000);
 
-cy.get(this.locators.Header).type(randomHeader);
+cy.get(this.locators.subjectline).type(randomHeader);
 cy.wait(2000);
 
 cy.get(this.locators.template_name).type(randomTemplateName);

@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1f1191c21cc2ca1d7db52abd3a38e1,FOS,31257,Dario,Jast-Sauer,dario@yopmail.com,9464039122,Branch Backend,,Bangalore,True, | Please enter valid Last Name | Designation is Required

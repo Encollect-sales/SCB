@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T15:24:17.371Z",
-    "end": "2026-06-16T15:26:56.695Z",
-    "duration": 159324,
+    "start": "2026-07-24T17:10:26.862Z",
+    "end": "2026-07-24T17:11:53.333Z",
+    "duration": 86471,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "2e53a34d-b83c-489a-b2ff-0acc78b4fa83",
+      "uuid": "dcaf4b50-ec04-443c-87f3-5a09efd371d4",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AgencyEmpanelmentRequest_596.cy.js",
-      "file": "cypress\\e2e\\tests\\AgencyEmpanelmentRequest_596.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_748.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_748.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "7f68651a-1def-433b-82f2-31940c916a8c",
-          "title": "User Management - Agency Empanelment Request",
+          "uuid": "3acb7236-f8cb-4746-9637-ebfac3b68cf9",
+          "title": "Allocation - Primary Allocation by filters - User should be able to select Current DPD, Dell string and BOM Bucket in Bucket filter ",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Create Agency - TC_ID_596",
-              "fullTitle": "User Management - Agency Empanelment Request Create Agency - TC_ID_596",
+              "title": "Result Grid - TC_ID_748",
+              "fullTitle": "Allocation - Primary Allocation by filters - User should be able to select Current DPD, Dell string and BOM Bucket in Bucket filter  Result Grid - TC_ID_748",
               "timedOut": null,
-              "duration": 146158,
+              "duration": 49574,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  userManagementPage.CreateAgency035();\n  //loginPage.logout();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  //allocationPage.ClickonAllocationSearchResult();\n  allocationPage.ClickonallocationBF();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(1) > .form-select`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(1) > .form-select`, but never found it.\n    at UserManagementPage.CreateAgency035 (webpack:///./cypress/e2e/pages/UserManagementPage.js:3366:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AgencyEmpanelmentRequest_596.cy.js:24:25)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(4) > a.ng-star-inserted`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(4) > a.ng-star-inserted`, but never found it.\n    at AllocationPage.ClickonallocationBF (webpack:///./cypress/e2e/pages/AllocationPage.js:742:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_748.cy.js:28:26)",
                 "diff": null
               },
-              "uuid": "f358994c-1583-4af2-b236-6149c690b9d8",
-              "parentUUID": "7f68651a-1def-433b-82f2-31940c916a8c",
+              "uuid": "2a96480a-850a-457b-a48e-c8132a9a8a28",
+              "parentUUID": "3acb7236-f8cb-4746-9637-ebfac3b68cf9",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "f358994c-1583-4af2-b236-6149c690b9d8"
+            "2a96480a-850a-457b-a48e-c8132a9a8a28"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 146158,
+          "duration": 49574,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

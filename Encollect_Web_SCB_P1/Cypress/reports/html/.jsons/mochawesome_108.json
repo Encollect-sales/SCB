@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T17:16:49.122Z",
-    "end": "2026-06-16T17:17:36.421Z",
-    "duration": 47299,
+    "start": "2026-07-24T18:15:21.758Z",
+    "end": "2026-07-24T18:16:21.631Z",
+    "duration": 59873,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "50f08025-f212-431b-a075-be6ee9d5b9ac",
+      "uuid": "854de9c0-641b-40c1-9f32-da7526620fac",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_694.cy.js",
-      "file": "cypress\\e2e\\tests\\AllocationPageTest_694.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_799.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_799.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "f0f82e15-6831-439e-b4a4-ffa915d9340f",
-          "title": "Allocation - Upload Agency Allocation Batch - User selected template for \"field agency\" and clicked on \"Download template of agency level allocation file\" button",
+          "uuid": "6639844f-cc86-45d4-b9d3-d2b6787a6281",
+          "title": "Allocation - Primary Allocation Status - User clicked on search button without selecting anyone of the filter in primary Unallocation status, then system should throw an error as \"Enter atleast one filter value\" in the pop up",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Agency Level Allocation - TC_ID_211",
-              "fullTitle": "Allocation - Upload Agency Allocation Batch - User selected template for \"field agency\" and clicked on \"Download template of agency level allocation file\" button Agency Level Allocation - TC_ID_211",
+              "title": "status of list of allocation files - TC_ID_799",
+              "fullTitle": "Allocation - Primary Allocation Status - User clicked on search button without selecting anyone of the filter in primary Unallocation status, then system should throw an error as \"Enter atleast one filter value\" in the pop up status of list of allocation files - TC_ID_799",
               "timedOut": null,
-              "duration": 36331,
+              "duration": 47031,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.Clickonallocation();\n  allocationPage.filltemplate();\n  allocationPage.clickondownloadTemplate();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonPrimaryAllocationStatus1('Processed');\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#downloadTemplateType1`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#downloadTemplateType1`, but never found it.\n    at AllocationPage.filltemplate (webpack:///./cypress/e2e/pages/AllocationPage.js:155:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_694.cy.js:28:26)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tbody > :nth-child(2) > :nth-child(5) > .ng-star-inserted`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tbody > :nth-child(2) > :nth-child(5) > .ng-star-inserted`, but never found it.\n    at AllocationPage.ClickonPrimaryAllocationStatus1 (webpack:///./cypress/e2e/pages/AllocationPage.js:1905:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_799.cy.js:26:27)",
                 "diff": null
               },
-              "uuid": "a2e475e8-183b-49ac-9c63-bb7812eb81cb",
-              "parentUUID": "f0f82e15-6831-439e-b4a4-ffa915d9340f",
+              "uuid": "d7aac44b-91a2-44dc-a428-d98a7799187b",
+              "parentUUID": "6639844f-cc86-45d4-b9d3-d2b6787a6281",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "a2e475e8-183b-49ac-9c63-bb7812eb81cb"
+            "d7aac44b-91a2-44dc-a428-d98a7799187b"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 36331,
+          "duration": 47031,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

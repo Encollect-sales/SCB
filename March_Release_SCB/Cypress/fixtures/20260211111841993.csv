@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1f5d6b7c35c65049f9e4a5369af2ac,Telecaller,98762,Faustino,Hand,faustino@yopmail.com,,Branch Backend,Branch Manager,Bangalore,True, | Mobile Number is required

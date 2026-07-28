@@ -2385,7 +2385,7 @@ PanCardTestPage_03(){
   cy.wait(2000);
   cy.get(this.locators.Click_On_Submit).click();
   cy.wait(4000);
-  cy.get('tbody > :nth-child(2) > :nth-child(5) > .form-control-group > .form-check-group > label > input').click();
+  cy.get('tbody > :nth-child(4) > :nth-child(5) > .form-control-group > .form-check-group > label > input').click();
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Edit).click();
   cy.wait(3000);
@@ -2413,7 +2413,7 @@ PanCardTestPage_04(){
   cy.wait(2000);
   cy.get(this.locators.Click_On_Submit).click();
   cy.wait(4000);
-  cy.get('tbody > :nth-child(2) > :nth-child(5) > .form-control-group > .form-check-group > label > input').click();
+  cy.get('tbody > :nth-child(4) > :nth-child(5) > .form-control-group > .form-check-group > label > input').click();
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Edit).click();
   cy.wait(3000);
@@ -2529,7 +2529,7 @@ PanCardTestPage_07(){
   cy.wait(2000);
   cy.get(this.locators.Click_On_Submit).click();
   cy.wait(4000);
-  cy.get('tbody > :nth-child(2) > :nth-child(5) > .form-control-group > .form-check-group > label > input').click();
+  cy.get('tbody > :nth-child(4) > :nth-child(5) > .form-control-group > .form-check-group > label > input').click();
   cy.wait(2000);
   cy.get(this.locators.ClickOn_Edit).click();
   cy.wait(3000);

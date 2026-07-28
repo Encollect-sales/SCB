@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T14:45:03.023Z",
-    "end": "2026-06-16T14:46:35.822Z",
-    "duration": 92799,
+    "start": "2026-07-24T16:37:03.149Z",
+    "end": "2026-07-24T16:37:52.333Z",
+    "duration": 49184,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "5edb5df6-6902-4b5b-873e-b5c61ba3156a",
+      "uuid": "34d1a841-1803-40e1-90d0-b2be2c463ebb",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AddStaffPageTest_682.cy.js",
-      "file": "cypress\\e2e\\tests\\AddStaffPageTest_682.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_725.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_725.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "72c36114-c6b0-42e7-8733-91a85fc1030a",
-          "title": "User Management - Add Staff-Once staff submitted for approval, email notification to be received on the provided email id.",
+          "uuid": "87c4143b-4a60-4634-95d8-d95ebb996eda",
+          "title": "Allocation - Upload Collector Unallocation batch -  Once after uploading the allocation file, the file status will change to processed then user should receive email notification",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Add Staff - TC_ID_682",
-              "fullTitle": "User Management - Add Staff-Once staff submitted for approval, email notification to be received on the provided email id. Add Staff - TC_ID_682",
+              "title": "Collector Level UnAllocation - TC_ID_725",
+              "fullTitle": "Allocation - Upload Collector Unallocation batch -  Once after uploading the allocation file, the file status will change to processed then user should receive email notification Collector Level UnAllocation - TC_ID_725",
               "timedOut": null,
-              "duration": 84768,
+              "duration": 39167,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.task('getExcelData', '../fixtures/userManagementData.xlsx').then(excelData => {\n    const firstRow = excelData['Sheet1'][0];\n    cy.wait(2000);\n    addStaffPage.Clikonusermanagement(); // Use the method without click\n    addStaffPage.ClickonSttafEmp();\n    addStaffPage.Clikonaddstaff();\n    addStaffPage.selectUserType();\n    addStaffPage.fillemployeeID(firstRow.EmployeeID); // Correct method name and pass the argument\n    addStaffPage.fillfirstname(firstRow.FirstName);\n    addStaffPage.filllastname(firstRow.LastName);\n    addStaffPage.fillemailid(firstRow.EmailID);\n    addStaffPage.fillmobilenumber(firstRow.MobileNumber);\n    addStaffPage.typeexistingcode();\n    addStaffPage.clickondandd();\n    cy.wait(2000);\n    // addStaffPage.clickOnAdd();\n    // cy.wait(2000);\n    addStaffPage.fillDepartment('Audit and Risk', 0);\n    addStaffPage.fillDesignation('Audit Manager', 0);\n    cy.wait(1000);\n    addStaffPage.clickonWallet();\n    addStaffPage.clickonbbrm();\n    cy.wait(2000);\n    addStaffPage.fillbasebranch();\n    cy.wait(2000);\n    // addStaffPage.clickonPlaceOkWork();\n    // cy.wait(2000);\n    // addStaffPage.ClickOnSkill();\n    // cy.wait(5000);\n    addStaffPage.clickonsubmitstaffprofile();\n    cy.wait(3000);\n    addStaffPage.Sucessmessage();\n    cy.wait(1000);\n  });\n});",
+              "code": "const sheetName = 'Sheet1';\nconst data = {\n  'A2': '68200000021940'\n};\nconst excelFileName = 'UnAllocation.xlsx';\n(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.downloadCollectorUnallocationbatch();\n  const downloadsFolder = Cypress.config('downloadsFolder');\n  const filePath = `${downloadsFolder}\\\\${excelFileName}`;\n  cy.task('updateExcelCell', {\n    filePath: filePath,\n    sheetName: sheetName,\n    data: data\n  }).then(() => {\n    cy.log('Cells updated successfully in the Excel file');\n  });\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[role=\"alert\"]`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[role=\"alert\"]`, but never found it.\n    at AddStaffPage.Sucessmessage (webpack:///./cypress/e2e/pages/AddStaffPage.js:928:47)\n    at Context.eval (webpack:///./cypress/e2e/tests/AddStaffPageTest_682.cy.js:61:29)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(3) > a`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(3) > a`, but never found it.\n    at AllocationPage.downloadCollectorUnallocationbatch (webpack:///./cypress/e2e/pages/AllocationPage.js:2586:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_725.cy.js:29:21)",
                 "diff": null
               },
-              "uuid": "0f383f27-39c9-4eaa-894d-12f9838bb2fd",
-              "parentUUID": "72c36114-c6b0-42e7-8733-91a85fc1030a",
+              "uuid": "a46ddc3c-a0e7-4fb2-bf25-ecb1f479c120",
+              "parentUUID": "87c4143b-4a60-4634-95d8-d95ebb996eda",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "0f383f27-39c9-4eaa-894d-12f9838bb2fd"
+            "a46ddc3c-a0e7-4fb2-bf25-ecb1f479c120"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 84768,
+          "duration": 39167,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

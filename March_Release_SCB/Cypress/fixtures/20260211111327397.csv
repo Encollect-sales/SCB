@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1f5d66ae68d866a86b09517a0c97c8,Telecaller,46540,Krystina,Daniel,,8372845727,Audit and Risk,Audit Manager,Bangalore,True, | Email id is required

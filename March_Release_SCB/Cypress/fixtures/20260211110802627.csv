@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1f5d61ba19b74dbf114b0cbe45e365,Telecaller,51254,Zola,test@#psa,zola@yopmail.com,9056430371,Branch Backend,Branch Manager,Bangalore,True, | Please enter valid Last Name

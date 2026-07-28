@@ -49,8 +49,8 @@ class LoginPage {
 }
  
 Clikcompanyname() {
-  cy.get(this.locators.ClickonCompanyName).click();
-  cy.wait(3000);
+  cy.get(this.locators.ClickonCompanyName).contains("ENCollect").click();
+  cy.wait(1000);
 }
  
   fillUsername(email) {
@@ -68,19 +68,25 @@ Clikcompanyname() {
     cy.get(this.locators.signinButton).click();
     cy.wait(2000);
   }
-
-   enterotp(){
-
-    cy.get('#otp-input').type(560062);
-    cy.wait(1000);
-    cy.get('.btn-success').click();
-    cy.wait(6000);
-  }
  
   // verifyLoginSuccess() {
   //   return cy.get(this.locators.dashboard).then(() => {
   //   });
   // }
+
+   enterotp(){
+
+    cy.get('#otp-input').type(560062);
+    cy.wait(2000);
+    cy.get('.btn-success').click();
+    cy.wait(7000);
+   cy.get('body', { timeout: 5000 }).then(($body) => {
+  if ($body.find('button:contains("I Agree")').length > 0) {
+    cy.contains('button', 'I Agree').click();
+  }
+});   
+
+  }
  
   login(Companyname, email, password) {
    
@@ -90,9 +96,8 @@ Clikcompanyname() {
       this.fillUsername(email);
       this.fillPassword(password);
       this.submit();
-      cy.wait(6000);
-      // this.enterotp();
-
+      cy.wait(1000);
+      this.enterotp();
       // this.verifyLoginSuccess();
   }
 

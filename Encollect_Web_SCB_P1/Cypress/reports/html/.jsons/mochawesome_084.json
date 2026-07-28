@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T16:40:20.465Z",
-    "end": "2026-06-16T16:41:30.056Z",
-    "duration": 69591,
+    "start": "2026-07-24T17:44:37.097Z",
+    "end": "2026-07-24T17:45:41.175Z",
+    "duration": 64078,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "871d3531-c368-4588-be70-688920c1385a",
+      "uuid": "efd293b8-3776-41f5-b58f-eeeb6b19e2b8",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AgentEmpanelmentRequestPageTest_624.cy.js",
-      "file": "cypress\\e2e\\tests\\AgentEmpanelmentRequestPageTest_624.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_775.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_775.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "5cdf6a9d-da43-4b06-9a39-4388067c2a35",
-          "title": "Agent Empanelment Request - Create Agent - User will enter all mandatory fields in create agent tab by selecting anyone of the id type and by uploading an image",
+          "uuid": "55ade92b-8629-42f1-b38c-1e95ae9cffbb",
+          "title": "Allocation - Upload Agency Allocation Batch - When the user trying to upload the file, but the file name has any special characters, system will throw an error as \"File name should not contain any special characters\"",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Agent Empanelment Request - TC_ID_624",
-              "fullTitle": "Agent Empanelment Request - Create Agent - User will enter all mandatory fields in create agent tab by selecting anyone of the id type and by uploading an image Agent Empanelment Request - TC_ID_624",
+              "title": "Agency Level Allocation - TC_ID_775",
+              "fullTitle": "Allocation - Upload Agency Allocation Batch - When the user trying to upload the file, but the file name has any special characters, system will throw an error as \"File name should not contain any special characters\" Agency Level Allocation - TC_ID_775",
               "timedOut": null,
-              "duration": 54966,
+              "duration": 47622,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  agentemplimentationRequest.AgentEnpalmentRequest624();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.Clickonallocation();\n  allocationPage.filltemplate3();\n  allocationPage.clickondownloadTemplate();\n  allocationPage.clickonRadioBtnAO();\n  allocationPage.uploadfilewithSpclChrctr();\n  allocationPage.clickonOK();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.ng-star-inserted > .form-control`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.ng-star-inserted > .form-control`, but never found it.\n    at AgentEmpanelmentRequestPage.AgentEnpalmentRequest624 (webpack:///./cypress/e2e/pages/AgentEmpanelmentRequestPage.js:903:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AgentEmpanelmentRequestPageTest_624.cy.js:27:43)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.col-md-12 > .btn`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.col-md-12 > .btn`, but never found it.\n    at AllocationPage.clickondownloadTemplate (webpack:///./cypress/e2e/pages/AllocationPage.js:170:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_775.cy.js:29:26)",
                 "diff": null
               },
-              "uuid": "b87fa9ac-34ed-4f9a-af4f-752e03f40008",
-              "parentUUID": "5cdf6a9d-da43-4b06-9a39-4388067c2a35",
+              "uuid": "31c414d9-8f2d-44eb-bdac-211e4506c3ff",
+              "parentUUID": "55ade92b-8629-42f1-b38c-1e95ae9cffbb",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "b87fa9ac-34ed-4f9a-af4f-752e03f40008"
+            "31c414d9-8f2d-44eb-bdac-211e4506c3ff"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 54966,
+          "duration": 47622,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

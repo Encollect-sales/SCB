@@ -7,28 +7,34 @@ class LoginPage {
   }
  
   visit() {
-    return getBaseUrl().then((baseUrl) => {
+
+    
+    Cypress.on('uncaught:exception', (err, runnable) => {
+      console.error('Uncaught exception:', err.message);
+      console.error(err);
+      // Returning false prevents Cypress from failing the test
+      return false;
+    });
+    
+    getBaseUrl().then((baseUrl) => {
       console.log('Visiting URL:', baseUrl);
       cy.visit(baseUrl);
     });
   }
  
-  
-  
   // fillcompanyname(Companyname) {
   //   //cy.get(this.locators.companynameInput).type(Companyname);
   //   cy.get(this.locators.companynameInput).type("ENCollect");
-  //   cy.wait(2000);
+  //   cy.wait(2000)
   // }
  
- 
-  // clickCompanyname() {
+  // Clikcompanyname() {
+  //   cy.wait(1000);
   //   cy.get(this.locators.ClickonCompanyName).click();
-  //   cy.wait(2000);
+  //   cy.wait(1000);
   // }
- 
-  
-  fillcompanyname(Companyname) {
+
+   fillcompanyname(Companyname) {
   cy.get(this.locators.companynameInput).then(($input) => {
     const currentValue = $input.val();
  
@@ -42,73 +48,69 @@ class LoginPage {
   cy.wait(2000);
 }
  
-clickcompanyname() {
-  cy.get(this.locators.ClickonCompanyName).click();
+Clikcompanyname() {
+  cy.get(this.locators.ClickonCompanyName).contains("ENCollect").click();
   cy.wait(1000);
 }
-
-
+ 
   fillUsername(email) {
     cy.get(this.locators.usernameInput).type(email);
-    cy.wait(2000);
+    cy.wait(1000);
   }
  
   fillPassword(password) {
     cy.get(this.locators.passwordInput).type(password);
-    cy.wait(2000);
+    cy.wait(1000);
   }
  
   submit() {
+    cy.wait(1000)
     cy.get(this.locators.signinButton).click();
     cy.wait(2000);
-    Cypress.on('uncaught:exception', (err, runnable) => {
-      console.error('Uncaught exception:', err.message);
-      console.error(err);
-      // Returning false prevents Cypress from failing the test
-      return false;
-    });
   }
  
+  // verifyLoginSuccess() {
+  //   return cy.get(this.locators.dashboard).then(() => {
+  //   });
+  // }
+
    enterotp(){
 
     cy.get('#otp-input').type(560062);
-    cy.wait(1000);
+    cy.wait(2000);
     cy.get('.btn-success').click();
-    cy.wait(8000);
+    cy.wait(3000);
+   cy.get('body', { timeout: 5000 }).then(($body) => {
+  if ($body.find('button:contains("I Agree")').length > 0) {
+    cy.contains('button', 'I Agree').click();
   }
-  verifyLoginSuccess() {
-    return cy.get(this.locators.dashboard).then(() => {});
+});   
+
   }
  
   login(Companyname, email, password) {
-    this.visit();
-    this.fillcompanyname(Companyname);
-    this.clickcompanyname();
-    this.fillUsername(email);
-    this.fillPassword(password);
-    this.submit();
-    cy.wait(5000);
-    // this.enterotp();
+   
+      this.visit();
+      this.fillcompanyname(Companyname);
+      this.Clikcompanyname();
+      this.fillUsername(email);
+      this.fillPassword(password);
+      this.submit();
+      cy.wait(1000);
+      this.enterotp();
+      // this.verifyLoginSuccess();
   }
- 
-  login1(Companyname,email1, password1) {
-    this.visit();
-    this.fillcompanyname(Companyname);
-    this.clickcompanyname();
-    this.fillUsername(email1);
-    this.fillPassword(password1);
-    this.submit();
-    cy.wait(5000);
-    // this.enterotp();
-  }
- 
-  logout() {
-    // Implement logout functionality here
-    cy.wait(900);
-    cy.get(this.locators.profile).click();
-    cy.get(this.locators.logoutButton).click();
-    cy.wait(2000); // Adjust wait time if necessary
-  }
+
+  // logout() {
+  //   // Implement logout functionality here
+  //   cy.wait(5000);
+  //   cy.get(this.locators.profile).click();
+  //   cy.get(this.locators.logoutButton).click(); // Example locator for logout button
+  //   cy.wait(2000); // Adjust wait time if necessary
+  // }
+
+
+
 }
  
 export default LoginPage;

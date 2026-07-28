@@ -73,8 +73,9 @@
     "ac_details_gear_icon":".w-100 > .btn-outline-dark",
     "Account_details":"#nav-item-1-account-search",
     "customer_accountnumber":"#search-account-number",
+    "case_details_cc":":nth-child(2) > .dropdown-item",
     "submit_button":"#search-submit-button",
-    "toggle_button":"#toggleButton",
+    "toggle_button_cc":":nth-child(1) > .btn",
     "Dailer":":nth-child(18) > .dropdown-item",
     "mb_dropdown":"#mobile_number",
     "callbutton":"app-call-button > .btn",
@@ -103,8 +104,10 @@
     "cc_mobile_number_field":":nth-child(3) > .form-control-group > .form-control-with-icon > .form-control",
     "Demographic_details_cc":":nth-child(5) > .dropdown-item",
     "toggle":":nth-child(1) > .btn",
-    "cc_case_details":"div[class='router-container'] li:nth-child(2) span:nth-child(1)",
-    "cc_ac_field":"#search-account-number"
+    "cc_ac_field":"#search-account-number",
+    "toggle_button":"#toggleButton",
+    "cc_case_details":":nth-child(2) > .dropdown-item"
+    
 
     
     
@@ -730,7 +733,14 @@
       "staff_empanelment_new":"#nav-item-2-staff-empanelment",
       "agency":"#nav-item-2-agency-empanelment",
       "agency_search":"#nav-item-3-search-agency",
-      "agency_status":"#empStatus"
+      "agency_status":"#empStatus",
+      "agentcode":"#agentCode",
+      "DepartmentsDesignations":":nth-child(2) > .nav-link > span",
+      "wallet_limit_staff":":nth-child(4) > .nav-link > span",
+      "BaseBranchAndReportingManager":":nth-child(5) > .nav-link > span",
+      "domain":"#domainId",
+      "pagecount":".pagination-count > .form-select",
+      "departmentagent":":nth-child(2) > .nav-link > span"
 
 
  

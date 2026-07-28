@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T16:36:07.087Z",
-    "end": "2026-06-16T16:38:55.583Z",
-    "duration": 168496,
+    "start": "2026-07-24T17:42:06.216Z",
+    "end": "2026-07-24T17:42:58.759Z",
+    "duration": 52543,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "d2fb52c7-0803-43e1-9919-4389369a6965",
+      "uuid": "e7ade69b-6cc5-4677-9db6-430c79f06a00",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AgencyEmpanelmentRequest_86.cy.js",
-      "file": "cypress\\e2e\\tests\\AgencyEmpanelmentRequest_86.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_773.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_773.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "d13d42b4-7d02-4c14-ba0e-97cde9b1f3a7",
-          "title": "User Management - Agency Empanelment Request",
+          "uuid": "e7b7fff1-98ea-4204-bf42-c81f80f6b2dc",
+          "title": "Allocation - Upload Agency Allocation Owner -If invalid data entered and user uploaded the file for allocation, the status for this allocation will show as failed.",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Create Agency - TC_ID_86",
-              "fullTitle": "User Management - Agency Empanelment Request Create Agency - TC_ID_86",
+              "title": "Agency Level Allocation - TC_ID_773",
+              "fullTitle": "Allocation - Upload Agency Allocation Owner -If invalid data entered and user uploaded the file for allocation, the status for this allocation will show as failed. Agency Level Allocation - TC_ID_773",
               "timedOut": null,
-              "duration": 153073,
+              "duration": 39927,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "// Fetch and login with first set of credentials\n(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  userManagementPage.CreateAgency008();\n  //loginPage.logout();\n});",
+              "code": "const sheetName = 'Sheet1';\nconst data = {\n  'A2': 'DMI0010811195'\n};\nconst excelFileName = 'UnAllocation.xlsx';\n(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.downloadAgencyallocationbatch();\n  const downloadsFolder = Cypress.config('downloadsFolder');\n  const filePath = `${downloadsFolder}\\\\${excelFileName}`;\n  cy.task('updateExcelCell', {\n    filePath: filePath,\n    sheetName: sheetName,\n    data: data\n  }).then(() => {\n    cy.log('Cells updated successfully in the Excel file');\n    allocationPage.UploadFilledAgencyLevelAllocationFile290();\n  });\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(1) > .form-select`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(1) > .form-select`, but never found it.\n    at UserManagementPage.CreateAgency008 (webpack:///./cypress/e2e/pages/UserManagementPage.js:612:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AgencyEmpanelmentRequest_86.cy.js:25:25)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(1) > a`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(1) > a`, but never found it.\n    at AllocationPage.downloadAgencyallocationbatch (webpack:///./cypress/e2e/pages/AllocationPage.js:2974:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_773.cy.js:29:21)",
                 "diff": null
               },
-              "uuid": "7961ecc8-2435-4540-a374-2269c4df8e20",
-              "parentUUID": "d13d42b4-7d02-4c14-ba0e-97cde9b1f3a7",
+              "uuid": "fa1ffa9d-af5e-470b-a504-8d2e186dab93",
+              "parentUUID": "e7b7fff1-98ea-4204-bf42-c81f80f6b2dc",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "7961ecc8-2435-4540-a374-2269c4df8e20"
+            "fa1ffa9d-af5e-470b-a504-8d2e186dab93"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 153073,
+          "duration": 39927,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

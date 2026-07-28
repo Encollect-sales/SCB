@@ -59,13 +59,16 @@ class LoginPage {
     cy.wait(3000);
   }
 
-  enterotp() {
-    cy.get('#otp-input').type(560062);
-    cy.wait(2000);
-    cy.get('.btn-success').click();
-    cy.wait(8000);
+  // enterotp() {
+  //   cy.get('#otp-input').type(560062);
+  //   cy.wait(2000);
+  //   cy.get('.btn-success').click();
+  //   cy.wait(8000);
+  //   cy.wait(8000);
+  //   cy.wait(3000);
+  //   //cy.wait(20000);
     
-  }
+  // }
  
   login(Companyname, email, password) {
     this.visit();
@@ -75,7 +78,7 @@ class LoginPage {
     this.fillPassword(password);
     this.submit();
     cy.wait(3000);
-    this.enterotp();
+    //this.enterotp();
   }
 
   logout() {
@@ -83,6 +86,7 @@ class LoginPage {
     cy.wait(2000);
     cy.get(':nth-child(3) > .dropdown-item').click();
     cy.wait(6000);
+
   }
 }
  

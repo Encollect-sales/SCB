@@ -49,7 +49,7 @@ class LoginPage {
 }
  
 Clikcompanyname() {
-  cy.get(this.locators.ClickonCompanyName).click();
+  cy.get(this.locators.ClickonCompanyName).contains("ENCollect").click();
   cy.wait(1000);
 }
  
@@ -80,8 +80,11 @@ Clikcompanyname() {
     cy.wait(2000);
     cy.get('.btn-success').click();
     cy.wait(7000);
-  //   cy.wait(9000);
-  //  cy.wait(20000)
+   cy.get('body', { timeout: 5000 }).then(($body) => {
+  if ($body.find('button:contains("I Agree")').length > 0) {
+    cy.contains('button', 'I Agree').click();
+  }
+});   
 
   }
  
@@ -93,8 +96,8 @@ Clikcompanyname() {
       this.fillUsername(email);
       this.fillPassword(password);
       this.submit();
-      cy.wait(6000);
-      // this.enterotp();
+      cy.wait(1000);
+      this.enterotp();
       // this.verifyLoginSuccess();
   }
 

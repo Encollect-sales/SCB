@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T15:42:52.407Z",
-    "end": "2026-06-16T15:45:33.825Z",
-    "duration": 161418,
+    "start": "2026-07-24T17:17:47.944Z",
+    "end": "2026-07-24T17:18:41.616Z",
+    "duration": 53672,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "8db2125c-44b1-40f9-abd1-1bd0e43f3408",
+      "uuid": "efa43aec-4b19-4fbc-9bd8-84089654400f",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AgencyEmpanelmentRequest_602.cy.js",
-      "file": "cypress\\e2e\\tests\\AgencyEmpanelmentRequest_602.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_754.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_754.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "c58afb74-b2e7-43b5-adb2-5e3ab466d7ea",
-          "title": "User Management - Agency Empanelment Request",
+          "uuid": "aa81c608-e500-4a46-b52e-16434611206b",
+          "title": "Allocation - Upload Agency Allocation Owner",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Create Agency - TC_ID_602",
-              "fullTitle": "User Management - Agency Empanelment Request Create Agency - TC_ID_602",
+              "title": "Agency Level Allocation - TC_ID_363",
+              "fullTitle": "Allocation - Upload Agency Allocation Owner Agency Level Allocation - TC_ID_363",
               "timedOut": null,
-              "duration": 148879,
+              "duration": 36175,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  userManagementPage.CreateAgency041();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  // Download the batch file\n  allocationPage.downloadAgencyAllocationOwner();\n  // Update the Excel file\n  const sheetName = 'Sheet1';\n  const data = {\n    'A2': 'DMI0010811195'\n  };\n  const excelFileName = 'AllocationToOwner.xlsx';\n  const downloadsFolder = Cypress.config('downloadsFolder');\n  const filePath = `${downloadsFolder}\\\\${excelFileName}`;\n  cy.task('updateExcelCell', {\n    filePath: filePath,\n    sheetName: sheetName,\n    data: data\n  }).then(() => {\n    cy.log('Account number updated successfully in the Excel file');\n    allocationPage.uploadAgencyAllocationBatchWrongAccountNo();\n  });\n});\nallocationPage.uploadAgencyAllocationOwnerAccountNo();",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(1) > .form-select`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(1) > .form-select`, but never found it.\n    at UserManagementPage.CreateAgency041 (webpack:///./cypress/e2e/pages/UserManagementPage.js:4495:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AgencyEmpanelmentRequest_602.cy.js:24:25)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(1) > a.ng-star-inserted`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(1) > a.ng-star-inserted`, but never found it.\n    at AllocationPage.downloadAgencyAllocationOwner (webpack:///./cypress/e2e/pages/AllocationPage.js:3556:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_754.cy.js:25:21)",
                 "diff": null
               },
-              "uuid": "48cadaa1-5661-40ae-b56d-42f1b2169074",
-              "parentUUID": "c58afb74-b2e7-43b5-adb2-5e3ab466d7ea",
+              "uuid": "8f75788a-bd91-449f-ad21-5af310ca2329",
+              "parentUUID": "aa81c608-e500-4a46-b52e-16434611206b",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "48cadaa1-5661-40ae-b56d-42f1b2169074"
+            "8f75788a-bd91-449f-ad21-5af310ca2329"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 148879,
+          "duration": 36175,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

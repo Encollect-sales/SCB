@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T18:33:11.853Z",
-    "end": "2026-06-16T18:33:50.684Z",
-    "duration": 38831,
+    "start": "2026-07-24T19:44:12.506Z",
+    "end": "2026-07-24T19:45:03.506Z",
+    "duration": 51000,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "16900511-c1dc-48e5-bf0c-ff9209c1debc",
+      "uuid": "92e7505a-1e2f-4b3f-9024-ccd7db55cd6d",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_774.cy.js",
-      "file": "cypress\\e2e\\tests\\AllocationPageTest_774.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\PaymentsPageTest_039.cy.js",
+      "file": "cypress\\e2e\\tests\\PaymentsPageTest_039.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "2f1b9647-ac12-4faf-a23d-7160296139bb",
-          "title": "Allocation - Upload Agency Allocation owner - user clicked on \"ok\" so that file will get uploaded into the ENCollect system user will see a pop up msg as \"File uploaded successfully\" along with transaction ID.",
+          "uuid": "7b8051b9-d2de-443b-b203-6547070c7ebc",
+          "title": "Payments Module - Receive money from collector - Logged in user (Agency Cashier) to click on \"Receive money from collector\" sub menu to acknowledge the receipts issued by the field collector.",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Agency Level UnAllocation - TC_ID_774",
-              "fullTitle": "Allocation - Upload Agency Allocation owner - user clicked on \"ok\" so that file will get uploaded into the ENCollect system user will see a pop up msg as \"File uploaded successfully\" along with transaction ID. Agency Level UnAllocation - TC_ID_774",
+              "title": "Payment - TC_ID_039",
+              "fullTitle": "Payments Module - Receive money from collector - Logged in user (Agency Cashier) to click on \"Receive money from collector\" sub menu to acknowledge the receipts issued by the field collector. Payment - TC_ID_039",
               "timedOut": null,
-              "duration": 33898,
+              "duration": 44094,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.UploadFilledAgencyLevelAllocationFile();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  paymentsPage.PaymentModule_39();\n});",
               "err": {
-                "message": "CypressError: `cy.selectFile(\"Cypress/downloads/AllocationToOwner.xlsx\")` failed because the file does not exist at the following path:\n\n`D:\\Encollect_Project\\Web_Testing\\SCB\\Frameworks\\SCB\\Encollect_Web_SCB_P1\\Cypress\\downloads\\AllocationToOwner.xlsx`\n\nhttps://on.cypress.io/selectfile",
-                "estack": "CypressError: `cy.selectFile(\"Cypress/downloads/AllocationToOwner.xlsx\")` failed because the file does not exist at the following path:\n\n`D:\\Encollect_Project\\Web_Testing\\SCB\\Frameworks\\SCB\\Encollect_Web_SCB_P1\\Cypress\\downloads\\AllocationToOwner.xlsx`\n\nhttps://on.cypress.io/selectfile\n    at <unknown> (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:114515:70)\n    at tryCatcher (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://scbdemo.sumeruentiger.com/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at AllocationPage.UploadFilledAgencyLevelAllocationFile (webpack:///./cypress/e2e/pages/AllocationPage.js:2992:37)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_774.cy.js:25:21)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `typeahead-container .dropdown-item`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `typeahead-container .dropdown-item`, but never found it.\n    at PaymentsPage.PaymentModule_39 (webpack:///./cypress/e2e/pages/PaymentsPage.js:81:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/PaymentsPageTest_039.cy.js:26:29)",
                 "diff": null
               },
-              "uuid": "2766977f-1f97-4bcf-b446-4757612b72c3",
-              "parentUUID": "2f1b9647-ac12-4faf-a23d-7160296139bb",
+              "uuid": "bc548a31-b379-4b4c-ae2b-fa2a7a8e659a",
+              "parentUUID": "7b8051b9-d2de-443b-b203-6547070c7ebc",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "2766977f-1f97-4bcf-b446-4757612b72c3"
+            "bc548a31-b379-4b4c-ae2b-fa2a7a8e659a"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 33898,
+          "duration": 44094,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

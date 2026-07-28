@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T14:02:00.094Z",
-    "end": "2026-06-16T14:03:04.714Z",
-    "duration": 64620,
+    "start": "2026-07-24T15:59:42.266Z",
+    "end": "2026-07-24T16:00:33.631Z",
+    "duration": 51365,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "97c92876-ce07-4186-b65d-ed5761c47010",
+      "uuid": "74d127e0-252a-481c-9815-f0565616017b",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AddStaffPageTest_649.cy.js",
-      "file": "cypress\\e2e\\tests\\AddStaffPageTest_649.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_695.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_695.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "dc078429-c913-4788-a003-c8608ba1c935",
-          "title": "Add Staff - Scope of Work - User should be able to select all fields in Scope of work The dropdown values of all these fields coming from BE using Product, bucket and geography masters.",
+          "uuid": "e09db9e5-5053-4926-977c-96a97a1c5fa3",
+          "title": "Allocation - Upload Agency Allocation Batch -  user clicked on \"ok\" so that file will get uploaded into the ENCollect system user will see a pop up msg as \"File uploaded successfully\" along with transaction ID.",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Add Staff - TC_ID_649",
-              "fullTitle": "Add Staff - Scope of Work - User should be able to select all fields in Scope of work The dropdown values of all these fields coming from BE using Product, bucket and geography masters. Add Staff - TC_ID_649",
+              "title": "Agency Level Allocation - TC_ID_695",
+              "fullTitle": "Allocation - Upload Agency Allocation Batch -  user clicked on \"ok\" so that file will get uploaded into the ENCollect system user will see a pop up msg as \"File uploaded successfully\" along with transaction ID. Agency Level Allocation - TC_ID_695",
               "timedOut": null,
-              "duration": 55768,
+              "duration": 43399,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.task('getExcelData', '../fixtures/userManagementData.xlsx').then(excelData => {\n    const firstRow = excelData['Sheet1'][0];\n    cy.wait(2000);\n    addStaffPage.Clikonusermanagement();\n    addStaffPage.Clikonaddstaff();\n    const employeeId = addStaffPage.fillemployeeID();\n    //addStaffPage.fillemployeeID(firstRow.EmployeeID); \n    addStaffPage.fillfirstname(firstRow.FirstName);\n    addStaffPage.filllastname(firstRow.LastName);\n    addStaffPage.fillemailid(firstRow.EmailID);\n    addStaffPage.fillmobilenumber(firstRow.MobileNumber);\n    addStaffPage.ClikonSOW();\n    cy.wait(2000);\n    addStaffPage.ScopeOfWorkTestPage_02();\n    addStaffPage.clickonbbrm();\n    addStaffPage.fillbasebranch();\n  });\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.Clickonallocation();\n  allocationPage.filltemplate();\n  allocationPage.clickondownloadTemplate();\n  allocationPage.clickonRadioBtnFA();\n  allocationPage.uploadfile1_Spl_Chr();\n  allocationPage.clickonOK();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input`, but never found it.\n    at AddStaffPage.ScopeOfWorkTestPage_02 (webpack:///./cypress/e2e/pages/AddStaffPage.js:294:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AddStaffPageTest_649.cy.js:42:29)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.col-md-12 > .btn`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.col-md-12 > .btn`, but never found it.\n    at AllocationPage.clickondownloadTemplate (webpack:///./cypress/e2e/pages/AllocationPage.js:170:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_695.cy.js:29:26)",
                 "diff": null
               },
-              "uuid": "49d2d961-076d-46ca-a4dd-7b1c79262ab6",
-              "parentUUID": "dc078429-c913-4788-a003-c8608ba1c935",
+              "uuid": "950c4ae5-0e1f-4741-a109-fd0640c2ee17",
+              "parentUUID": "e09db9e5-5053-4926-977c-96a97a1c5fa3",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "49d2d961-076d-46ca-a4dd-7b1c79262ab6"
+            "950c4ae5-0e1f-4741-a109-fd0640c2ee17"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 55768,
+          "duration": 43399,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

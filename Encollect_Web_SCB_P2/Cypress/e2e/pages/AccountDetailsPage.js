@@ -445,7 +445,7 @@ ViewAccountDetailsPageTest_248() {
       // returning false here prevents Cypress from failing the test
       return false;
     });
-    cy.wait(5000);
+    cy.wait(2000);
     //cy.get('#radios-0').click();
     cy.wait(500);
     // cy.get('.ng-arrow-wrapper').click();

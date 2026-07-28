@@ -20,7 +20,8 @@ class CommunicationPage {
   cy.get(this.locators.Button).click({ force: true });
   cy.wait(2000);
 
-  cy.get(this.locators.Payment_History_page).click({ force: true });
+  cy.contains("Payment History").scrollIntoView().click({force:true});
+
   cy.wait(2000);
 
   // Open gear/settings
@@ -59,7 +60,8 @@ AccountSearchPage_02() {
   cy.get(this.locators.Button).click({ force: true });
   cy.wait(2000);
 
-  cy.get(this.locators.Payment_History_page).click({ force: true });
+  cy.contains("Payment History").scrollIntoView().click({force:true});
+
   cy.wait(2000);
 
   // Open gear/settings
@@ -93,7 +95,8 @@ AccountSearchPage_03() {
   cy.get(this.locators.Button).click({ force: true });
   cy.wait(2000);
 
-  cy.get(this.locators.Payment_History_page).click({ force: true });
+  cy.contains("Payment History").scrollIntoView().click({force:true});
+
   cy.wait(2000);  
 
   // Open gear/settings
@@ -149,7 +152,8 @@ AccountSearchPage_04() {
   cy.get(this.locators.Button).click({ force: true });
   cy.wait(2000);
 
-  cy.get(this.locators.Payment_History_page).click({ force: true });
+  cy.contains("Payment History").scrollIntoView().click({force:true});
+
   cy.wait(2000);  
 
   // Open gear/settings
@@ -182,7 +186,8 @@ AccountSearchPage_05() {
   cy.get(this.locators.Button).click({ force: true });
   cy.wait(2000);
 
-  cy.get(this.locators.Payment_History_page).click({ force: true });
+  cy.contains("Payment History").scrollIntoView().click({force:true});
+
   cy.wait(2000);  
 
   // Open gear/settings
@@ -239,7 +244,8 @@ AccountSearchPage_06() {
   cy.get(this.locators.Button).click({ force: true });
   cy.wait(2000);
 
-  cy.get(this.locators.Payment_History_page).click({ force: true });
+  cy.contains("Payment History").scrollIntoView().click({force:true});
+
   cy.wait(2000);  
 
   // Open gear/settings

@@ -4,7 +4,7 @@ import LoginPage from '../pages/LoginPage';
 import { getLocators } from '../utils/Locatorutils';
 import CollectionPage from '../pages/CollectionPage';
 
-describe(  'create segment',  () => {
+describe(  'create segment - Verify Segment Name accepts valid text',  () => {
 
     let loginPage;
     let collectionPage;
@@ -19,7 +19,7 @@ describe(  'create segment',  () => {
       });
     });
 
-    it('  ', () => {
+    it('Verify Segment Name accepts valid text  ', () => {
       getTestData('loginData', 'login1').then(user => {
 
         loginPage.login(user.Companyname, user.email, user.password);

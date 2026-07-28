@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T17:22:07.127Z",
-    "end": "2026-06-16T17:23:15.032Z",
-    "duration": 67905,
+    "start": "2026-07-24T18:21:32.922Z",
+    "end": "2026-07-24T18:22:25.454Z",
+    "duration": 52532,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "b8e6a5d8-d091-4241-8025-d64cf5fda26b",
+      "uuid": "cb716deb-0812-4754-9f10-e242b5c61540",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_699.cy.js",
-      "file": "cypress\\e2e\\tests\\AllocationPageTest_699.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_804.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_804.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "c7d1bda0-56c3-4466-8ac3-56a032db4930",
-          "title": "Allocation - Upload Agency Allocation Batch -  user clicked on \"ok\" so that file will get uploaded into the ENCollect systemuser will see a pop up msg as \"File uploaded successfully\" along with transaction ID.",
+          "uuid": "70eeb8d5-1016-4850-8ff7-83e85781937d",
+          "title": "Allocation - Upload Collector Allocation Batch - If the file, that the user is trying to upload, is other than .xls or .xlsx extension, when user clicked on upload button user will not be able to see other file extensions file.",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Agency Level Allocation - TC_ID_699",
-              "fullTitle": "Allocation - Upload Agency Allocation Batch -  user clicked on \"ok\" so that file will get uploaded into the ENCollect systemuser will see a pop up msg as \"File uploaded successfully\" along with transaction ID. Agency Level Allocation - TC_ID_699",
+              "title": "Download Accounts - TC_ID_804",
+              "fullTitle": "Allocation - Upload Collector Allocation Batch - If the file, that the user is trying to upload, is other than .xls or .xlsx extension, when user clicked on upload button user will not be able to see other file extensions file. Download Accounts - TC_ID_804",
               "timedOut": null,
-              "duration": 57177,
+              "duration": 40704,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.Clickonallocation699();\n  //allocationPage.filltemplate3();\n  //allocationPage.clickondownloadTemplate();\n  allocationPage.clickonRadioBtnAO1();\n  allocationPage.uploadfile3();\n  allocationPage.clickonOK1();\n  allocationPage.clickonaccountsearch();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.uploadCollectorUnallocationBatchInvalidFileFormat();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(4)`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(4)`, but never found it.\n    at AllocationPage.clickonOK1 (webpack:///./cypress/e2e/pages/AllocationPage.js:229:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_699.cy.js:32:26)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(3) > a`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(2) > .sub-nav-list > :nth-child(3) > a`, but never found it.\n    at AllocationPage.uploadCollectorUnallocationBatchInvalidFileFormat (webpack:///./cypress/e2e/pages/AllocationPage.js:2825:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_804.cy.js:26:27)",
                 "diff": null
               },
-              "uuid": "07a9327c-ac81-4f2d-87ee-ed38db30b605",
-              "parentUUID": "c7d1bda0-56c3-4466-8ac3-56a032db4930",
+              "uuid": "187345d5-3d5b-4395-89ad-e16c9bd01c0e",
+              "parentUUID": "70eeb8d5-1016-4850-8ff7-83e85781937d",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "07a9327c-ac81-4f2d-87ee-ed38db30b605"
+            "187345d5-3d5b-4395-89ad-e16c9bd01c0e"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 57177,
+          "duration": 40704,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -4,7 +4,7 @@ import LoginPage from '../pages/LoginPage';
 import { getLocators } from '../utils/Locatorutils';
 import CollectionPage from '../pages/CollectionPage';
 
-describe( 'create segment',   () => {
+describe( 'create segment - Verify Segment Name field is available',   () => {
 
     let loginPage;
     let collectionPage;

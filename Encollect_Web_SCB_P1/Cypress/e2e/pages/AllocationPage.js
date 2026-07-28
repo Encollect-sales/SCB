@@ -7,30 +7,30 @@ class AllocationPage {
     this.locators = locators;
   }
 
-  Clickonallocation() {
-    cy.get(this.locators.allocation).click();
+ Clickonallocation() {
+    cy.get(this.locators.allocation).click({force: true});
     cy.wait(2000);
-    cy.get(this.locators.ClickOnABAL).click();
+    cy.get(this.locators.ClickOnABAL).click({force: true});
     cy.wait(2000);
-    cy.get(this.locators.uploadallocation).click();
+    cy.get(this.locators.uploadallocation).click({force: true});
     cy.wait(2000);
   } 
 
     Clickonallocation699() {
-    cy.get(this.locators.allocation).click();
+    cy.get(this.locators.allocation).click({force: true});
     cy.wait(2000);
-    cy.get(this.locators.clickonallocationtoowner).click();
+    cy.get(this.locators.clickonallocationtoowner).click({force: true});
     cy.wait(2000);
-    cy.get(this.locators.ownerbulkupladaccountlevel).click();
+    cy.get(this.locators.ownerbulkupladaccountlevel).click({force: true});
     cy.wait(2000);
-    cy.get('#downloadTemplate3').click();
+    cy.get('#downloadTemplate3').click({force: true});
     cy.wait(2000);
     //cy.get(this.locators.uploadallocation).click();
     //cy.wait(2000);
   } 
 
   Clickonallocation701() {
-    cy.get(this.locators.allocation).click();
+    cy.get(this.locators.allocation).click({force: true});
     cy.wait(2000);
     cy.get('a[title="Allocation Owner Bulk Upload"]').click();
     cy.wait(2000);
@@ -217,7 +217,7 @@ cy.get('.ng-dropdown-panel .ng-option').each(($option, index) => {
         cy.wait(1000);
       }
     });
-    cy.get('.allocation > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(3) > a').click();
+   cy.contains("Allocation Owner Upload Status").click();
     cy.wait(2000);
     cy.then(() => {
         const transactionId = Cypress.env('transactionID');
@@ -298,7 +298,7 @@ cy.get('.ng-dropdown-panel .ng-option').each(($option, index) => {
         cy.wait(1000);
       }
     });
-    cy.get('.allocation > :nth-child(2) > :nth-child(3) > .sub-nav-list > :nth-child(3) > a').click();
+   cy.contains("Allocation Owner Upload Status").click();
     cy.wait(2000);
     cy.then(() => {
         const transactionId = Cypress.env('transactionID');

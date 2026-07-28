@@ -87,14 +87,14 @@
      "ClickonCustomerContactReport":":nth-child(2) > :nth-child(13) > .ng-star-inserted",
      "ClickonVisitIntensityReport":":nth-child(2) > :nth-child(12) > .ng-star-inserted",
 
-     "ClickOn_Product_group":":nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+     "ClickOn_Product_group":":nth-child(2) > :nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
      "Clickon_Bucket":":nth-child(4) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
      "ClickOn_Country":":nth-child(5) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
      "ClickOn_Payment_generate_btn":"#generate-report-button",
      "Click_Generate_Report_button":".btn-secondary",
      "Clickonradiobutton":"#agencyUserRadio",
      "Clickon_Productgroup":".row > :nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
-    "ClickOn_Product":":nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
+    "ClickOn_Product":":nth-child(2) > :nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     
     "ClickOn_SubProduct":":nth-child(3) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
     "ClickOn_Region":":nth-child(6) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",

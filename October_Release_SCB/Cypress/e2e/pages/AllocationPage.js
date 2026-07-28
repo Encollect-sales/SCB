@@ -33,7 +33,7 @@ Allocation_sow_TestPage_01() {
         cy.log(`Available Options: ${actualOptions.join(', ')}`);
         console.log('Available Options:', actualOptions);
 
-        expect(actualOptions).to.include('Credit Card');
+        expect(actualOptions).to.include('CreditCard');
       });
 
     cy.wait(2000);
@@ -73,7 +73,7 @@ Allocation_sow_TestPage_01() {
     cy.get(':nth-child(6) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input').click({force:true});
     cy.wait(2000);
 
-    const expectedBranches = [ "India", "Korea"] ;
+    const expectedBranches = [ 'Chennai Main', 'Pallikaranai', 'Velachery' ] ;
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -108,7 +108,7 @@ Allocation_sow_TestPage_01() {
         cy.log(`Available Options: ${actual.join(', ')}`);
         console.log('Available Options:', actual);
 
-        expect(actual).to.include('Credit Card');
+        expect(actual).to.include('CreditCard');
       });
 
     cy.wait(2000);
@@ -151,7 +151,7 @@ Allocation_sow_TestPage_01() {
     cy.get(this.locators.ClickOn_Branch).click()
     cy.wait(2000);
 
-    const expectedBranches = [ 'India', 'Korea' ];
+    const expectedBranches = [ 'Chennai Main', 'Pallikaranai', 'Velachery' ];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -186,7 +186,7 @@ Allocation_sow_TestPage_01() {
         cy.log(`Available Options: ${actual.join(', ')}`);
         console.log('Available Options:', actual);
 
-        expect(actual).to.include('Credit Card');
+        expect(actual).to.include('CreditCard');
       });
 
     cy.wait(2000);
@@ -225,7 +225,7 @@ Allocation_sow_TestPage_01() {
     cy.get(this.locators.ClickOn_Branch).click()
     cy.wait(2000);
 
-    const expectedBranches = ['India','Korea'];
+    const expectedBranches = [ 'Chennai Main', 'Pallikaranai', 'Velachery' ];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -260,7 +260,7 @@ Allocation_sow_TestPage_01() {
         cy.log(`Available Options: ${actual.join(', ')}`);
         console.log('Available Options:', actual);
 
-        expect(actual).to.include('Credit Card');
+        expect(actual).to.include('CreditCard');
       });
 
     cy.wait(2000);
@@ -302,7 +302,7 @@ Allocation_sow_TestPage_01() {
     cy.get(this.locators.ClickOn_Branch).click()
     cy.wait(2000);
 
-    const expectedBranches = [ 'India',  'Korea' ];
+    const expectedBranches = ['Chennai Main', 'Pallikaranai', 'Velachery'];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -333,7 +333,7 @@ Allocation_sow_TestPage_01() {
         cy.log(`Available Options: ${actual.join(', ')}`);
         console.log('Available Options:', actual);
 
-        expect(actual).to.include('Credit Card');
+        expect(actual).to.include('CreditCard');
       });
 
     cy.wait(2000);
@@ -371,7 +371,7 @@ Allocation_sow_TestPage_01() {
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Branch).click()
     cy.wait(2000);
-   const expectedBranches = [ 'India', 'Korea' ];
+   const expectedBranches = [ 'Chennai Main', 'Pallikaranai', 'Velachery' ];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -402,10 +402,10 @@ Allocation_sow_TestPage_16() {
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
           const actual = [...$options].map(o => o.innerText.trim());
-          expect(actual).to.include("Credit Card");
+          expect(actual).to.include("CreditCard");
       });
 
-    cy.contains('.ng-option', 'Credit Card')
+    cy.contains('.ng-option', 'CreditCard')
       .click();
 
     cy.wait(2000);
@@ -447,7 +447,7 @@ Allocation_sow_TestPage_16() {
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Branch).click()
     cy.wait(2000);
-   const expectedBranches = [ 'India', 'Korea' ];
+   const expectedBranches = [ 'Chennai Main', 'Pallikaranai', 'Velachery' ];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -482,7 +482,7 @@ Allocation_sow_TestPage_19() {
         cy.log(`Available Options: ${actual.join(', ')}`);
         console.log('Available Options:', actual);
 
-        expect(actual).to.include('Credit Card');
+        expect(actual).to.include('CreditCard');
       });
 
     cy.wait(2000);
@@ -520,7 +520,7 @@ Allocation_sow_TestPage_19() {
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Branch).click()
     cy.wait(2000);
-   const expectedBranches = [ 'India', 'Korea' ];
+   const expectedBranches = [ 'Chennai Main', 'Pallikaranai', 'Velachery' ];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -558,7 +558,7 @@ Allocation_sow_TestPage_19() {
         cy.log(actual.join(', '));
         console.log('Available Options:', actual);
 
-        expect(actual).to.include('Credit Card');
+        expect(actual).to.include('CreditCard');
       });
 
     cy.wait(2000);
@@ -599,7 +599,7 @@ Allocation_sow_TestPage_19() {
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Branch).click()
     cy.wait(2000);
-   const expectedBranches = [ 'India', 'Korea' ];
+   const expectedBranches = [ 'Chennai Main', 'Pallikaranai', 'Velachery' ];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -628,8 +628,8 @@ Allocation_sow_TestPage_25() {
       .then($options => {
         const actual = [...$options].map(o => o.innerText.trim());
 
-        // Verify Credit Card is present
-        expect(actual).to.include("Credit Card");
+        // Verify CreditCard is present
+        expect(actual).to.include("CreditCard");
       });
 
     cy.wait(2000);
@@ -667,7 +667,7 @@ Allocation_sow_TestPage_25() {
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Branch).click()
     cy.wait(2000);
-   const expectedBranches = [ 'India', 'Korea' ];
+   const expectedBranches = [ 'Chennai Main', 'Pallikaranai', 'Velachery' ];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -700,7 +700,7 @@ Allocation_sow_TestPage_28() {
         cy.log('Available Options: ' + actual.join(', '));
         console.log('Available Options:', actual);
 
-        expect(actual).to.include('Credit Card');
+        expect(actual).to.include('CreditCard');
       });
 
     cy.wait(2000);
@@ -738,7 +738,7 @@ Allocation_sow_TestPage_28() {
     cy.wait(2000);
     cy.get(this.locators.ClickOn_Branch).click()
     cy.wait(2000);
-   const expectedBranches = [ 'India', 'Korea' ];
+   const expectedBranches = [ 'Chennai Main', 'Pallikaranai', 'Velachery' ];
 
     cy.get(".ng-dropdown-panel .ng-option")
       .then($options => {
@@ -771,7 +771,7 @@ Allocation_sow_TestPage_31() {
         cy.log('Available Options: ' + actual.join(', '));
         console.log('Available Options:', actual);
 
-        expect(actual).to.include('Credit Card');
+        expect(actual).to.include('CreditCard');
       });
 }
 Allocation_sow_TestPage_32() {

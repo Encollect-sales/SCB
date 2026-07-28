@@ -705,7 +705,7 @@ cy.contains("Allocation Filters").scrollIntoView().should("be.visible").click();
   cy.get('#Allocated').click();
   cy.wait(1000);
   cy.get('#searchAccount').click();
-  cy.wait(7000);
+  cy.wait(3000);
   cy.get(':nth-child(1) > :nth-child(1) > .form-control-group > .form-check-group > label > #checked').click().scrollIntoView();
   cy.wait(1000);
   cy.get('#TcagentName').type("a");
@@ -735,7 +735,7 @@ cy.contains("Allocation Filters").scrollIntoView().should("be.visible").click();
   cy.get('#Allocated').click();
   cy.wait(1000);
   cy.get('#searchAccount').click();
-  cy.wait(7000);
+  cy.wait(3000);
   cy.get('.tab-content').scrollIntoView().should("be.visible")
   cy.wait(2000);
  

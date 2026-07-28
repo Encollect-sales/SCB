@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T16:21:26.145Z",
-    "end": "2026-06-16T16:24:11.137Z",
-    "duration": 164992,
+    "start": "2026-07-24T17:36:08.285Z",
+    "end": "2026-07-24T17:37:09.574Z",
+    "duration": 61289,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "5cde4fa3-d796-41b5-94e6-ecca0a7845d8",
+      "uuid": "45743cae-3d33-4cfe-91d4-db6f40f9d44b",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AgencyEmpanelmentRequest_82.cy.js",
-      "file": "cypress\\e2e\\tests\\AgencyEmpanelmentRequest_82.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_768.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_768.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "6ea0e509-a448-43c6-b812-ba99fd17aae3",
-          "title": "User Management - Agency Empanelment Request-User should be able to enter data in all mandatory fields in create agency screen ",
+          "uuid": "5682a2e3-d545-44ce-ada3-4b2361112056",
+          "title": "Allocation - Secondary Allocation by filters - User should be able to select Allocate selected accounts to agents radio button and user should be able to enter TC agent name, agent name and agent allocation expiry date",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Create Agency - TC_ID_82",
-              "fullTitle": "User Management - Agency Empanelment Request-User should be able to enter data in all mandatory fields in create agency screen  Create Agency - TC_ID_82",
+              "title": "Email notification - TC_ID_768",
+              "fullTitle": "Allocation - Secondary Allocation by filters - User should be able to select Allocate selected accounts to agents radio button and user should be able to enter TC agent name, agent name and agent allocation expiry date Email notification - TC_ID_768",
               "timedOut": null,
-              "duration": 151608,
+              "duration": 47879,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  userManagementPage.CreateAgency();\n  //loginPage.logout();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonallocationPUS68();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(1) > .form-select`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(1) > .form-select`, but never found it.\n    at UserManagementPage.CreateAgency (webpack:///./cypress/e2e/pages/UserManagementPage.js:187:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AgencyEmpanelmentRequest_82.cy.js:24:25)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.panel-open > .panel > .panel-collapse > .panel-body > .row > .col-lg-4.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.panel-open > .panel > .panel-collapse > .panel-body > .row > .col-lg-4.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input`, but never found it.\n    at AllocationPage.ClickonallocationPUS68 (webpack:///./cypress/e2e/pages/AllocationPage.js:2147:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_768.cy.js:27:26)",
                 "diff": null
               },
-              "uuid": "7804359f-4717-4fe1-aa10-7df3fd9f10c8",
-              "parentUUID": "6ea0e509-a448-43c6-b812-ba99fd17aae3",
+              "uuid": "30db5844-fa26-4370-8f98-d5c4291277b9",
+              "parentUUID": "5682a2e3-d545-44ce-ada3-4b2361112056",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "7804359f-4717-4fe1-aa10-7df3fd9f10c8"
+            "30db5844-fa26-4370-8f98-d5c4291277b9"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 151608,
+          "duration": 47879,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

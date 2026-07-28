@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T17:07:51.709Z",
-    "end": "2026-06-16T17:08:55.549Z",
-    "duration": 63840,
+    "start": "2026-07-24T18:08:30.174Z",
+    "end": "2026-07-24T18:09:30.613Z",
+    "duration": 60439,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "3bc5b311-dba0-421d-9ea6-037cfa17d4ee",
+      "uuid": "86e7b871-18d4-4508-8a68-aba5e01d7b7d",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AgentEmpanelmentRequestPageTest_88.cy.js",
-      "file": "cypress\\e2e\\tests\\AgentEmpanelmentRequestPageTest_88.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_793.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_793.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "ce532bbc-ed37-40b9-9e80-ee96d9dcefa7",
-          "title": "Agent Empanelment Request - Create Agent - Logged in user should be able to enter data in all mandatory fields in create agent screen.",
+          "uuid": "d857d58f-d583-44d5-84e1-90af9a38d780",
+          "title": "Allocation - Agency Level UnAllocation - User selected field agency radio button and clicked on upload button and selected the file, but in the pop up user clicked on close button so that user will remain in same unallocation page. now user selected telecalling agency radio button and uploaded the file for agency level unallocation.",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Agent Empanelment Request - TC_ID_88",
-              "fullTitle": "Agent Empanelment Request - Create Agent - Logged in user should be able to enter data in all mandatory fields in create agent screen. Agent Empanelment Request - TC_ID_88",
+              "title": "Agency Level UnAllocation - TC_ID_793",
+              "fullTitle": "Allocation - Agency Level UnAllocation - User selected field agency radio button and clicked on upload button and selected the file, but in the pop up user clicked on close button so that user will remain in same unallocation page. now user selected telecalling agency radio button and uploaded the file for agency level unallocation. Agency Level UnAllocation - TC_ID_793",
               "timedOut": null,
-              "duration": 51689,
+              "duration": 46440,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  agentemplimentationRequest.AgentEnpalmentRequest88();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  // Download the batch file\n  allocationPage.downloadAgencyUnallocationbatch();\n  // Update the Excel file\n  const sheetName = 'Sheet1';\n  const data = {\n    'A2': 'MMM0010811195'\n  };\n  const excelFileName = 'UnAllocation.xlsx';\n  const downloadsFolder = Cypress.config('downloadsFolder');\n  const filePath = `${downloadsFolder}\\\\${excelFileName}`;\n  cy.task('updateExcelCell', {\n    filePath: filePath,\n    sheetName: sheetName,\n    data: data\n  }).then(() => {\n    cy.log('Account number updated successfully in the Excel file');\n    allocationPage.uploadAgencyUnallocationBatchWrongAccountNo();\n  });\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.ng-star-inserted > .form-control`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.ng-star-inserted > .form-control`, but never found it.\n    at AgentEmpanelmentRequestPage.AgentEnpalmentRequest88 (webpack:///./cypress/e2e/pages/AgentEmpanelmentRequestPage.js:337:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AgentEmpanelmentRequestPageTest_88.cy.js:27:43)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(3) > a`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(3) > a`, but never found it.\n    at AllocationPage.downloadAgencyUnallocationbatch (webpack:///./cypress/e2e/pages/AllocationPage.js:2335:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_793.cy.js:25:21)",
                 "diff": null
               },
-              "uuid": "0e8ad126-af57-48dc-b130-2528c16264f8",
-              "parentUUID": "ce532bbc-ed37-40b9-9e80-ee96d9dcefa7",
+              "uuid": "4d6ac340-1279-4a37-8435-7ab10b01f130",
+              "parentUUID": "d857d58f-d583-44d5-84e1-90af9a38d780",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "0e8ad126-af57-48dc-b130-2528c16264f8"
+            "4d6ac340-1279-4a37-8435-7ab10b01f130"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 51689,
+          "duration": 46440,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

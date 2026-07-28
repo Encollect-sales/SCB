@@ -53,7 +53,7 @@ PaymentTestPage_03_upload(){
     cy.get(this.locators.ClickOnUploadSubmit).click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnDialogOK).click();
-    cy.wait(7000);
+    cy.wait(3000);
     // cy.get('.ng-trigger').should("be,visible");
     // cy.wait(2000);
  
@@ -147,7 +147,7 @@ PaymentTestPage_06(){
     cy.get(this.locators.ClickOnUploadSubmit).click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnDialogOK).click();
-    cy.wait(7000);
+    cy.wait(3000);
     // cy.get('.ng-trigger').should("be,visible");
     // cy.wait(2000);
 

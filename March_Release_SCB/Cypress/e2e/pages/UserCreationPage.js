@@ -8,11 +8,11 @@ class UserCreationPage {
   }
 
   UserCreationAgentTemplate_download() {
-    cy.get(this.locators.ClickOnUserManagement).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBulkUpload).click();
+    cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnUserCreationUpload).click();
+   cy.contains("User Creation Upload").should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnDownloadAgentRadioBtn).click();
     cy.wait(2000);
@@ -47,7 +47,7 @@ class UserCreationPage {
         }
       });
 
-    cy.get(this.locators.ClickOnUserCreationUploadStatus).click();
+    cy.contains("User Creation Upload Status").should("be.visible").click();
     cy.wait(3000);
     cy.then(() => {
       const transactionId = Cypress.env("transactionID");
@@ -59,11 +59,9 @@ class UserCreationPage {
     cy.wait(2000);
     cy.get(this.locators.ClickOnStatusSearchBtn).click();
     cy.wait(3000);
-    cy.get(this.locators.ClickOnStatusSearchBtn).click();
-    cy.wait(3000);
-    cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
+    cy.get('tbody > tr > :nth-child(3)').contains('Failed').should('be.visible');
     cy.wait(2000);
-    cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
+    cy.get("tr > :nth-child(4) > a").click();
     cy.wait(3000);
   }
 
@@ -94,7 +92,7 @@ class UserCreationPage {
         }
       });
 
-    cy.get(this.locators.ClickOnUserCreationUploadStatus).click();
+    cy.contains("User Creation Upload Status").should("be.visible").click();
     cy.wait(3000);
     cy.then(() => {
       const transactionId = Cypress.env("transactionID");
@@ -106,20 +104,18 @@ class UserCreationPage {
     cy.wait(3000);
     cy.get(this.locators.ClickOnStatusSearchBtn).click();
     cy.wait(3000);
-    cy.get(this.locators.ClickOnStatusSearchBtn).click();
-    cy.wait(3000);
-  cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Processed').should('be.visible');
+  cy.get('tbody > tr > :nth-child(3)').contains('Processed').should('be.visible');
     cy.wait(2000);
-    cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
+    cy.get("tr > :nth-child(4) > a").click();
     cy.wait(3000);
   }
 
   UserCreationAgencyTemplate_download() {
-    cy.get(this.locators.ClickOnUserManagement).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBulkUpload).click();
+    cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnUserCreationUpload).click();
+   cy.contains("User Creation Upload").should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnDownloadAgencyRadioBtn).click();
     cy.wait(2000);
@@ -154,7 +150,7 @@ class UserCreationPage {
         }
       });
 
-    cy.get(this.locators.ClickOnUserCreationUploadStatus).click();
+    cy.contains("User Creation Upload Status").should("be.visible").click();
     cy.wait(3000);
     cy.then(() => {
       const transactionId = Cypress.env("transactionID");
@@ -166,11 +162,9 @@ class UserCreationPage {
     cy.wait(3000);
     cy.get(this.locators.ClickOnStatusSearchBtn).click();
     cy.wait(3000);
-    cy.get(this.locators.ClickOnStatusSearchBtn).click();
-    cy.wait(3000);
-    cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
+    cy.get('tbody > tr > :nth-child(3)').contains('Failed').should('be.visible');
     cy.wait(2000);
-    cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
+    cy.get("tr > :nth-child(4) > a").click();
     cy.wait(3000);
   }
 
@@ -202,7 +196,7 @@ class UserCreationPage {
         }
       });
 
-    cy.get(this.locators.ClickOnUserCreationUploadStatus).click();
+    cy.contains("User Creation Upload Status").should("be.visible").click();
     cy.wait(3000);
     cy.then(() => {
       const transactionId = Cypress.env("transactionID");
@@ -214,11 +208,9 @@ class UserCreationPage {
     cy.wait(2000);
     cy.get(this.locators.ClickOnStatusSearchBtn).click();
     cy.wait(3000);
-    cy.get(this.locators.ClickOnStatusSearchBtn).click();
-    cy.wait(3000);
-    cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Processed').should('be.visible');
+    cy.get('tbody > tr > :nth-child(3)').contains('Processed').should('be.visible');
     cy.wait(2000);
-    cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
+    cy.get("tr > :nth-child(4) > a").click();
     cy.wait(3000);
 
 
@@ -227,11 +219,11 @@ class UserCreationPage {
 
 
   UserCreationStaffTemplate_download() {
-    cy.get(this.locators.ClickOnUserManagement).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBulkUpload).click();
+    cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnUserCreationUpload).click();
+   cy.contains("User Creation Upload").should("be.visible").click();
     cy.wait(2000);
     cy.get(this.locators.ClickOnDownloadStaffRadioBtn).click();
     cy.wait(2000);
@@ -266,7 +258,7 @@ class UserCreationPage {
         }
       });
 
-    cy.get(this.locators.ClickOnUserCreationUploadStatus).click();
+    cy.contains("User Creation Upload Status").should("be.visible").click();
     cy.wait(3000);
     cy.then(() => {
       const transactionId = Cypress.env("transactionID");
@@ -278,11 +270,9 @@ class UserCreationPage {
     cy.wait(2000);
     cy.get(this.locators.ClickOnStatusSearchBtn).click();
     cy.wait(3000);
-    cy.get(this.locators.ClickOnStatusSearchBtn).click();
-    cy.wait(3000);
-    cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Failed').should('be.visible');
+    cy.get('tbody > tr > :nth-child(3)').contains('Failed').should('be.visible');
     cy.wait(2000);
-    cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
+    cy.get("tr > :nth-child(4) > a").click();
     cy.wait(3000);
   }
 
@@ -313,7 +303,7 @@ class UserCreationPage {
         }
       });
 
-    cy.get(this.locators.ClickOnUserCreationUploadStatus).click();
+    cy.contains("User Creation Upload Status").should("be.visible").click();
     cy.wait(3000);
     cy.then(() => {
       const transactionId = Cypress.env("transactionID");
@@ -325,11 +315,9 @@ class UserCreationPage {
     cy.wait(2000);
     cy.get(this.locators.ClickOnStatusSearchBtn).click();
     cy.wait(3000);
-    cy.get(this.locators.ClickOnStatusSearchBtn).click();
-    cy.wait(3000);
-    cy.get('tbody > .ng-star-inserted > :nth-child(3)').contains('Processed').should('be.visible');
+    cy.get('tbody > tr > :nth-child(3)').contains('Processed').should('be.visible');
     cy.wait(2000);
-    cy.get("tbody > .ng-star-inserted > :nth-child(4) > a").click();
+    cy.get("tr > :nth-child(4) > a").click();
     cy.wait(3000);
   }
 
@@ -350,11 +338,11 @@ class UserCreationPage {
   }
 
   UserCreationTestPage_40() {
-    cy.get(this.locators.ClickOnUserManagement).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnBulkUpload).click();
+    cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
     cy.wait(2000);
-    cy.get(this.locators.ClickOnUserCreationUploadStatus).click();
+    cy.contains("User Creation Upload Status").should("be.visible").click();
     cy.wait(2000);
     cy.contains("File Name").should("be.visible");
     cy.wait(2000);
@@ -367,11 +355,11 @@ class UserCreationPage {
   }
 
   UserCreationTestPage_41() {
-    cy.get(this.locators.ClickOnUserManagement).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnBulkUpload).click();
+    cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnUserCreationUploadStatus).click();
+    cy.contains("User Creation Upload Status").should("be.visible").click();
     cy.wait(1000);
     cy.get(".form-select").select("Failed");
     cy.wait(1000);
@@ -382,11 +370,11 @@ class UserCreationPage {
   }
 
   UserCreationTestPage_42() {
-    cy.get(this.locators.ClickOnUserManagement).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnBulkUpload).click();
+    cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnUserCreationUploadStatus).click();
+    cy.contains("User Creation Upload Status").should("be.visible").click();
     cy.wait(1000);
     cy.get(".form-select").select("Failed");
     cy.wait(1000);
@@ -397,11 +385,11 @@ class UserCreationPage {
   }
 
   UserCreationTestPage_43() {
-    cy.get(this.locators.ClickOnUserManagement).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnBulkUpload).click();
+    cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnUserCreationUploadStatus).click();
+    cy.contains("User Creation Upload Status").should("be.visible").click();
     cy.wait(1000);
     cy.get(".form-select").select("Failed");
     cy.wait(1000);
@@ -412,11 +400,11 @@ class UserCreationPage {
   }
 
   UserCreationTestPage_44() {
-    cy.get(this.locators.ClickOnUserManagement).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnBulkUpload).click();
+    cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnUserCreationUploadStatus).click();
+    cy.contains("User Creation Upload Status").should("be.visible").click();
     cy.wait(1000);
     cy.get(".form-select").select("Failed");
     cy.wait(1000);
@@ -427,11 +415,11 @@ class UserCreationPage {
   }
 
   UserCreationTestPage_45() {
-    cy.get(this.locators.ClickOnUserManagement).click();
+   cy.contains("User Management").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnBulkUpload).click();
+    cy.contains("Bulk Upload").scrollIntoView().should("be.visible").click();
     cy.wait(1000);
-    cy.get(this.locators.ClickOnUserCreationUploadStatus).click();
+    cy.contains("User Creation Upload Status").should("be.visible").click();
     cy.wait(1000);
     cy.get(this.locators.ClickOnStatusSearchBtn).click({ force: true });
     cy.wait(2000);

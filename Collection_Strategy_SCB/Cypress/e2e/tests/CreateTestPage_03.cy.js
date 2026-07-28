@@ -4,7 +4,7 @@ import LoginPage from '../pages/LoginPage';
 import { getLocators } from '../utils/Locatorutils';
 import CollectionPage from '../pages/CollectionPage';
 
-describe(    () => {
+describe( 'Create segment -   Verify Segment Name field is mandatory',  () => {
 
     let loginPage;
     let collectionPage;
@@ -19,7 +19,7 @@ describe(    () => {
       });
     });
 
-    it('  ', () => {
+    it(' Validation message should be displayed ', () => {
       getTestData('loginData', 'login1').then(user => {
 
         loginPage.login(user.Companyname, user.email, user.password);

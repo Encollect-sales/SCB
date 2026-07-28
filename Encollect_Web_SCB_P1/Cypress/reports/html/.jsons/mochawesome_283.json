@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T19:53:48.441Z",
-    "end": "2026-06-16T19:54:40.710Z",
-    "duration": 52269,
+    "start": "2026-07-24T21:09:07.937Z",
+    "end": "2026-07-24T21:09:48.711Z",
+    "duration": 40774,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "8b681497-6ff9-4812-ab5f-35ef6fcc6c63",
+      "uuid": "710ec18a-5fbb-43be-ac36-11b404a61dce",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\DashboardTestPage_036.cy.js",
-      "file": "cypress\\e2e\\tests\\DashboardTestPage_036.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\ScopeofWorkTestPage_06.cy.js",
+      "file": "cypress\\e2e\\tests\\ScopeofWorkTestPage_06.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "21e5a2ca-aa31-4e3e-b62d-8e0d52a2bcae",
-          "title": "Dashboard - Search account -Verify whether navigated account detail screen under Note History tab user is able to add the notes.",
+          "uuid": "e4bbb4f9-b6c9-414c-aedd-5e810b7f6ee2",
+          "title": "User Management - Add staff - Scope of work - user select the sub-product in the scope of work",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Payment - TC_ID_036",
-              "fullTitle": "Dashboard - Search account -Verify whether navigated account detail screen under Note History tab user is able to add the notes. Payment - TC_ID_036",
+              "title": "User Management - Scope of work - TC_ID_06",
+              "fullTitle": "User Management - Add staff - Scope of work - user select the sub-product in the scope of work User Management - Scope of work - TC_ID_06",
               "timedOut": null,
-              "duration": 45689,
+              "duration": 35797,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  dashboardpage.DashboardTestPage_036();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  scopeofworkpage.ScopeOfWorkTestPage_06();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `select[name='isActive']`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `select[name='isActive']`, but never found it.\n    at DashboardPage.DashboardTestPage_036 (webpack:///./cypress/e2e/pages/DashboardPage.js:446:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/DashboardTestPage_036.cy.js:27:30)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Search and select your SubProduct(s)' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Search and select your SubProduct(s)' but never did.\n    at ScopeofWorkPage.ScopeOfWorkTestPage_06 (webpack:///./cypress/e2e/pages/ScopeofWorkPage.js:89:56)\n    at Context.eval (webpack:///./cypress/e2e/tests/ScopeofWorkTestPage_06.cy.js:27:32)",
                 "diff": null
               },
-              "uuid": "0e2cb64c-ef4f-476c-adb5-cd9e25f5dec3",
-              "parentUUID": "21e5a2ca-aa31-4e3e-b62d-8e0d52a2bcae",
+              "uuid": "502e624d-6c92-400e-80f0-039223f03a78",
+              "parentUUID": "e4bbb4f9-b6c9-414c-aedd-5e810b7f6ee2",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "0e2cb64c-ef4f-476c-adb5-cd9e25f5dec3"
+            "502e624d-6c92-400e-80f0-039223f03a78"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 45689,
+          "duration": 35797,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

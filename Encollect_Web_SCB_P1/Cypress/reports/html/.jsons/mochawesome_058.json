@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T15:27:21.067Z",
-    "end": "2026-06-16T15:30:05.873Z",
-    "duration": 164806,
+    "start": "2026-07-24T17:12:10.471Z",
+    "end": "2026-07-24T17:12:56.636Z",
+    "duration": 46165,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "a1bc210a-6e5a-492b-80d8-e48967a2de09",
+      "uuid": "74eb4086-6856-4995-a2f4-777612330b7c",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AgencyEmpanelmentRequest_597.cy.js",
-      "file": "cypress\\e2e\\tests\\AgencyEmpanelmentRequest_597.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_749.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_749.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "d483cf0c-3f67-43d0-8db0-cbfc81106caa",
-          "title": "User Management - Agency Empanelment Request",
+          "uuid": "e3279735-b969-484a-841d-b0f6b807a3a9",
+          "title": "Allocation - Primary Allocation by filters - All fields under geography filters are cascading drop down values. The values under dropdown are populated based on item selected by user from another dropdown list.",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Create Agency - TC_ID_597",
-              "fullTitle": "User Management - Agency Empanelment Request Create Agency - TC_ID_597",
+              "title": "Allocation - TC_ID_249",
+              "fullTitle": "Allocation - Primary Allocation by filters - All fields under geography filters are cascading drop down values. The values under dropdown are populated based on item selected by user from another dropdown list. Allocation - TC_ID_249",
               "timedOut": null,
-              "duration": 150586,
+              "duration": 33684,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  userManagementPage.CreateAgency036();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  //allocationPage.ClickOnSearchResultAllocation();\n  allocationPage.ClickOnGeographyFilter();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(1) > .form-select`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(1) > .form-select`, but never found it.\n    at UserManagementPage.CreateAgency036 (webpack:///./cypress/e2e/pages/UserManagementPage.js:3563:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AgencyEmpanelmentRequest_597.cy.js:24:25)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(4) > a.ng-star-inserted`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.allocation > :nth-child(2) > :nth-child(4) > a.ng-star-inserted`, but never found it.\n    at AllocationPage.ClickOnGeographyFilter (webpack:///./cypress/e2e/pages/AllocationPage.js:788:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_749.cy.js:28:26)",
                 "diff": null
               },
-              "uuid": "c555b345-3007-4347-8977-01318c056f91",
-              "parentUUID": "d483cf0c-3f67-43d0-8db0-cbfc81106caa",
+              "uuid": "e96a734f-c8e5-4423-bd97-c9d9fbe26a14",
+              "parentUUID": "e3279735-b969-484a-841d-b0f6b807a3a9",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "c555b345-3007-4347-8977-01318c056f91"
+            "e96a734f-c8e5-4423-bd97-c9d9fbe26a14"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 150586,
+          "duration": 33684,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

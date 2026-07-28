@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T18:08:26.496Z",
-    "end": "2026-06-16T18:09:06.928Z",
-    "duration": 40432,
+    "start": "2026-07-24T19:11:11.783Z",
+    "end": "2026-07-24T19:12:07.015Z",
+    "duration": 55232,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "a4faf9cf-7f6c-464c-ab9f-af2758d082f8",
+      "uuid": "5b308ced-3bb9-41ca-b9a8-db470f24ac03",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_744.cy.js",
-      "file": "cypress\\e2e\\tests\\AllocationPageTest_744.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_852.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_852.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "1a16838b-4b79-41e7-8e11-93807ecb5133",
-          "title": "Allocation - Primary Allocation by filters -All fields under Product filters are cascading drop down values. The values under dropdown are populated based on item selected by user from another dropdown list.",
+          "uuid": "ae94d1a4-784c-4628-83f1-b9d1c74c4bf0",
+          "title": "Allocation - Upload Agency Allocation Owner Status - User should be able to enter file name, file upload date, transaction id and select anyone dropdown value under status field to see the status of list of allocation files.",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Product Filter - TC_ID_744",
-              "fullTitle": "Allocation - Primary Allocation by filters -All fields under Product filters are cascading drop down values. The values under dropdown are populated based on item selected by user from another dropdown list. Product Filter - TC_ID_744",
+              "title": "Product Filter - TC_ID_852",
+              "fullTitle": "Allocation - Upload Agency Allocation Owner Status - User should be able to enter file name, file upload date, transaction id and select anyone dropdown value under status field to see the status of list of allocation files. Product Filter - TC_ID_852",
               "timedOut": null,
-              "duration": 34448,
+              "duration": 42425,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.ClickonallocationPAF();\n  allocationPage.fillproductgroupPAF6();\n  allocationPage.fillproductPAF6();\n  allocationPage.fillsubproductPAF6();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  //allocationPage.ClickonallocationUAAOS('4: Partially Processed');\n  allocationPage.ClickonUAAOvalidationCheck_52();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Loan Products' within the element: <div#a57636391755-4.ng-option> but never did.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Loan Products' within the element: <div#a57636391755-4.ng-option> but never did.\n    at AllocationPage.fillproductgroupPAF6 (webpack:///./cypress/e2e/pages/AllocationPage.js:721:44)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_744.cy.js:28:26)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tbody > :nth-child(2) > :nth-child(5) > .ng-star-inserted`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tbody > :nth-child(2) > :nth-child(5) > .ng-star-inserted`, but never found it.\n    at AllocationPage.ClickonUAAOvalidationCheck_52 (webpack:///./cypress/e2e/pages/AllocationPage.js:3511:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_852.cy.js:27:26)",
                 "diff": null
               },
-              "uuid": "20b6b33a-2fa9-4d5e-b125-72d135783347",
-              "parentUUID": "1a16838b-4b79-41e7-8e11-93807ecb5133",
+              "uuid": "68392065-4d6a-4bc7-b03c-cf11474a9d19",
+              "parentUUID": "ae94d1a4-784c-4628-83f1-b9d1c74c4bf0",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "20b6b33a-2fa9-4d5e-b125-72d135783347"
+            "68392065-4d6a-4bc7-b03c-cf11474a9d19"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 34448,
+          "duration": 42425,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1f1187787c0a349bc1381185174422,FOS,18003,Prudence,,prudence@yopmail.com,2495192682,Audit and Risk,Audit Manager,Bangalore,True, | Last Name is required

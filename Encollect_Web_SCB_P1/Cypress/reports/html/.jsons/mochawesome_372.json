@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T21:05:41.412Z",
-    "end": "2026-06-16T21:06:19.673Z",
-    "duration": 38261,
+    "start": "2026-07-24T22:11:38.443Z",
+    "end": "2026-07-24T22:12:21.323Z",
+    "duration": 42880,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "7bbac37f-4ceb-42ec-83c9-09dd92453626",
+      "uuid": "8642a4b4-11f0-45a3-9493-2505554ecee6",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\PaymentsPageTest_1412.cy.js",
-      "file": "cypress\\e2e\\tests\\PaymentsPageTest_1412.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\UserManagementPageTest_859.cy.js",
+      "file": "cypress\\e2e\\tests\\UserManagementPageTest_859.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "11e74ac0-dcdc-4ddd-8c93-3d2b82a91a5d",
-          "title": "Payments Module - Search and send duplicate email e-receipt & SMS -Logged in user entered numbers or special characters in customer name field.",
+          "uuid": "9f4b2004-0b17-49a8-98d0-2e7105dcbea7",
+          "title": "User Management - Agency Empanelment Request",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Payment - TC_ID_1412",
-              "fullTitle": "Payments Module - Search and send duplicate email e-receipt & SMS -Logged in user entered numbers or special characters in customer name field. Payment - TC_ID_1412",
+              "title": "Address Details - TC_ID_859",
+              "fullTitle": "User Management - Agency Empanelment Request Address Details - TC_ID_859",
               "timedOut": null,
-              "duration": 30790,
+              "duration": 35748,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  paymentsPage.sendduplicateemailereceiptSMS1415();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  userManagementPage.UserManagementModule();\n  userManagementPage.ClickonAgencyEmpanelmentRequest();\n  userManagementPage.ClickOnAddAgency();\n  userManagementPage.ClickonPrimaryOwnerCheckLastNameValidation();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.payments > :nth-child(2) > :nth-child(4) > a.ng-star-inserted`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.payments > :nth-child(2) > :nth-child(4) > a.ng-star-inserted`, but never found it.\n    at PaymentsPage.sendduplicateemailereceiptSMS1415 (webpack:///./cypress/e2e/pages/PaymentsPage.js:1711:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/PaymentsPageTest_1412.cy.js:27:29)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.user-management > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(1) > a`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.user-management > :nth-child(2) > :nth-child(1) > .sub-nav-list > :nth-child(1) > a`, but never found it.\n    at UserManagementPage.ClickOnAddAgency (webpack:///./cypress/e2e/pages/UserManagementPage.js:1688:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/UserManagementPageTest_859.cy.js:28:35)",
                 "diff": null
               },
-              "uuid": "57af1531-0e20-4231-b13b-4d338df906e2",
-              "parentUUID": "11e74ac0-dcdc-4ddd-8c93-3d2b82a91a5d",
+              "uuid": "9372d3c6-911a-4899-8f65-f647db70f049",
+              "parentUUID": "9f4b2004-0b17-49a8-98d0-2e7105dcbea7",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "57af1531-0e20-4231-b13b-4d338df906e2"
+            "9372d3c6-911a-4899-8f65-f647db70f049"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 30790,
+          "duration": 35748,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

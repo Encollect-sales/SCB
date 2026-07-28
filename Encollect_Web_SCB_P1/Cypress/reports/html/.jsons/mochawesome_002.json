@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-06-16T14:00:47.913Z",
-    "end": "2026-06-16T14:01:49.326Z",
-    "duration": 61413,
+    "start": "2026-07-24T15:58:31.854Z",
+    "end": "2026-07-24T15:59:26.418Z",
+    "duration": 54564,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "c1062785-04a2-4e8b-a584-69143be20165",
+      "uuid": "ecb42f78-d718-4d2d-83c4-c1b97ecbdeab",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AddStaffPageTest_648.cy.js",
-      "file": "cypress\\e2e\\tests\\AddStaffPageTest_648.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_694.cy.js",
+      "file": "cypress\\e2e\\tests\\AllocationPageTest_694.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "c73ffcbb-779b-4283-b25f-cea9e98e0eb6",
-          "title": "Add Staff - Agency Relationship Managers Scope of Work - User should be able to select all fields in Agency Relationship Managers Scope of work The dropdown values of all these fields coming from BE using Product, bucket and geography masters.",
+          "uuid": "ae935a85-2a8f-4b4c-bfea-63421c96ca15",
+          "title": "Allocation - Upload Agency Allocation Batch - User selected template for \"field agency\" and clicked on \"Download template of agency level allocation file\" button",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Add Staff - TC_ID_648",
-              "fullTitle": "Add Staff - Agency Relationship Managers Scope of Work - User should be able to select all fields in Agency Relationship Managers Scope of work The dropdown values of all these fields coming from BE using Product, bucket and geography masters. Add Staff - TC_ID_648",
+              "title": "Agency Level Allocation - TC_ID_211",
+              "fullTitle": "Allocation - Upload Agency Allocation Batch - User selected template for \"field agency\" and clicked on \"Download template of agency level allocation file\" button Agency Level Allocation - TC_ID_211",
               "timedOut": null,
-              "duration": 48384,
+              "duration": 41428,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.task('getExcelData', '../fixtures/userManagementData.xlsx').then(excelData => {\n    const firstRow = excelData['Sheet1'][0];\n    cy.wait(2000);\n    addStaffPage.Clikonusermanagement();\n    addStaffPage.Clikonaddstaff();\n    const employeeId = addStaffPage.fillemployeeID();\n    //addStaffPage.fillemployeeID(firstRow.EmployeeID); \n    addStaffPage.fillfirstname(firstRow.FirstName);\n    addStaffPage.filllastname(firstRow.LastName);\n    addStaffPage.fillemailid(firstRow.EmailID);\n    addStaffPage.fillmobilenumber(firstRow.MobileNumber);\n    addStaffPage.ClikonSOW();\n    cy.wait(2000);\n    addStaffPage.ScopeOfWorkTestPage_01();\n    addStaffPage.clickonbbrm();\n    cy.wait(2000);\n    addStaffPage.fillbasebranch();\n  });\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.Clickonallocation();\n  allocationPage.filltemplate();\n  allocationPage.clickondownloadTemplate();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input`, but never found it.\n    at AddStaffPage.ScopeOfWorkTestPage_01 (webpack:///./cypress/e2e/pages/AddStaffPage.js:264:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AddStaffPageTest_648.cy.js:42:29)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.col-md-12 > .btn`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.col-md-12 > .btn`, but never found it.\n    at AllocationPage.clickondownloadTemplate (webpack:///./cypress/e2e/pages/AllocationPage.js:170:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_694.cy.js:29:26)",
                 "diff": null
               },
-              "uuid": "617d3409-3aad-4187-85ea-e2fb149e9252",
-              "parentUUID": "c73ffcbb-779b-4283-b25f-cea9e98e0eb6",
+              "uuid": "fcc2becf-8610-4166-b1e5-e853b8c3d508",
+              "parentUUID": "ae935a85-2a8f-4b4c-bfea-63421c96ca15",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "617d3409-3aad-4187-85ea-e2fb149e9252"
+            "fcc2becf-8610-4166-b1e5-e853b8c3d508"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 48384,
+          "duration": 41428,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

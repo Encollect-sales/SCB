@@ -1,2 +1,0 @@
-Id,UserType,EmployeeId,FirstName,LastName,EmailId,MobileNumber,Department,Designation,BranchName,IsFailed,FailureReason
-3a1fef967dba9edfa56f4baa886b0030,Telecaller,88999,Emily,Torphy,emily@yopmail.com,8389585183,Audit and Risk,Arun Audit Manager,Bangalore,True, | Designation is invalid

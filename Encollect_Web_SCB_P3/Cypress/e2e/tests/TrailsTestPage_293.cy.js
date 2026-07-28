@@ -77,7 +77,7 @@ describe('Trails - Bulk trail upload  -', () => {
                 cy.get('.fileupload-new').click({ force: true });
                 cy.wait(2000);
                 cy.get('#confirm-dialog-okay').click();
-                cy.wait(7000);
+                cy.wait(3000);
             });
         });
     });
