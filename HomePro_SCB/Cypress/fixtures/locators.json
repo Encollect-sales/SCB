@@ -1,0 +1,64 @@
+{
+  "loginPage": {
+    "companynameInput": "#login-company-name",
+    "ClickonCompanyName": ".ng-option-label",
+    "usernameInput": "#login-email",
+    "passwordInput": "#login-password",
+    "signinButton": "#login-submit-button",
+    "dashboard": ".name-width",
+    "profile": ".avatar-section",
+    "logoutButton": "#user-menu-item-logout"
+  },
+  "HomePro":{
+     "searchfield": ".col-md-12 > .form-control-group > .form-ng-select > .ng-select-container",
+    "searchAccountNumber": "input[placeholder='Enter Account Number']",
+    "searchfielddropdown": ".col-md-12 > .form-control-group > .form-ng-select > .ng-select-container > .ng-arrow-wrapper",
+    "cancelbutton": "span[title='Clear']",
+    "propertyCity": "input[placeholder='Enter Property City']",
+    "propertyName": "input[placeholder='Enter Property Name']",
+    "builderName": "input[placeholder='Enter Builder Name']",
+    "branchName": ":nth-child(6) > .form-control-group > .form-ng-select > .ng-select-container",
+    "customerName": "input[placeholder='Enter Customer Name']",
+    "mobileNumber": "input[placeholder='Enter Mobile Number']",
+    "accountNumber": "input[aria-expanded='true']",
+    "customerId": "input[placeholder='Enter Customer ID']",
+    "searchButton": "#search-submit-button",
+    "resetButton": "#search-clear-button",
+    "gearSettings": "#loan-grid-column-filter-button",
+    "Searchinputfield":"input[role='combobox']",
+    "currentBucket": "",
+    "emiAmount": "",
+    "monthOpeningBucket": "",
+    "totalOverdueAmount": "",
+    "propertyCityColumn": "",
+    "propertyNameColumn": "",
+    "builderNameColumn": "",
+    "branchNameColumn": "",
+    "accountImport": "",
+    "mappingDropdown": "",
+    "uploadButton": "",
+    "browseFile": "",
+    "submitButton": "",
+    "resultGrid": "",
+    "horizontalScroll": "",
+    "propertyCitygridresult": "thead > tr > :nth-child(4)",
+    "propertyNamegridresult": "body app-root th:nth-child(5)",
+    "builderNamegridresult": "body app-root th:nth-child(6)",
+    "branchNamegridresult": "thead > tr > :nth-child(7)",
+    "toastMessage": "",
+    "loader": "",
+    "noRecordFound": "",
+    "accountRow": "",
+    "assetDetails": "",
+    "view360": "",
+    "clearbutton":"#search-clear-button",
+    "accountnumber":"td[class='link'] a span span",
+    "toggle":"#toggleButton"
+
+  }
+
+
+
+
+
+}

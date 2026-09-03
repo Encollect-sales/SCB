@@ -1,0 +1,4 @@
+File Number,Loan Account Number,Sub LAN,Case Filing Date,Forum (court),Case type,Case Number,Case Year,Petitioner,Respondent,CNR (district courts),Lawyer,Next Hearing Date,TransactionId,Status,Remarks
+"=""FN883662""","=""68210000005802""",,"=""2024-05-10""","=""Civil Court""","=""Recovery""","=""CASE2001""","=""2024""","=""Marianne Marks""","=""Olive Bergnaum""","=""CNR066008095885""","=""Ora Monahan""","=""2028-12-31""","=""20260730205148332""",Success,
+"=""FN728824""","=""68210000005802""",,"=""2024-05-12""","=""Civil Court""","=""Recovery""","=""CASE2002""","=""2024""","=""Kelvin Yost""","=""Esther Miller""","=""CNR949064116647""","=""Dr. Edgar Hudson""","=""2028-12-31""","=""20260730205148332""",Success,
+"=""FN579064""","=""68210000005802""",,"=""2024-05-15""","=""District Court""","=""Civil""","=""CASE2003""","=""2024""","=""Ralph Boyer""","=""Joe Pfeffer""","=""CNR560677138502""","=""Marilyn Rohan""","=""2028-12-31""","=""20260730205148332""",Success,

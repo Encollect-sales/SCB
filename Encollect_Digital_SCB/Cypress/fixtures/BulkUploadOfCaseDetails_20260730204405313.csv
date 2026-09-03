@@ -1,0 +1,2 @@
+File Number,Loan Account Number,Sub LAN,Case Filing Date,Forum (court),Case type,Case Number,Case Year,Petitioner,Respondent,CNR (district courts),Lawyer,Next Hearing Date,TransactionId,Status,Remarks
+,"=""68210000005802""",,"=""2028-12-31""","=""Civil Court""","=""Recovery""","=""CASE12345""","=""2024""",,"=""Ramesh Kumar""",,"=""Adv. Suresh Patil""","=""2029-01-01""","=""20260730204405313""",Fail,File Number cannot be blank | Invalid Case Filing Date | Petitioner cannot be blank

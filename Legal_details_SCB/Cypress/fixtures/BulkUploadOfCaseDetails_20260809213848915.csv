@@ -1,0 +1,2 @@
+File Number,Loan Account Number,Sub LAN,Case Filing Date,Forum (court),Case type,Case Number,Case Year,Petitioner,Respondent,CNR (district courts),Lawyer,Next Hearing Date,TransactionId,Status,Remarks
+"=""FN534194""","=""68210000005802""",,"=""ABCDEFGHIJ""","=""Civil Court""","=""Recovery""","=""CASE12345""","=""2024""","=""Tomas Moore""","=""Jennie Streich""","=""CNR010937618959""","=""Wilson McKenzie""","=""2027-08-15""","=""20260809213848915""",Fail,Case Filing Date must be in yyyy-MM-dd format.

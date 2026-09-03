@@ -1,0 +1,2 @@
+File Number,Loan Account Number,Sub LAN,Case Filing Date,Forum (court),Case type,Case Number,Case Year,Petitioner,Respondent,CNR (district courts),Lawyer,Next Hearing Date,TransactionId,Status,Remarks
+"=""FN498182""","=""68210000005802""",,"=""10-05-2024""","=""Civil Court""","=""Recovery""","=""CASE12345""","=""2024""","=""Mr. Myron Becker""","=""Sherman Littel""","=""CNR776437655091""","=""Nick Marquardt""","=""2027-08-15""","=""20260722133208796""",Fail,Case Filing Date must be in yyyy-MM-dd format.

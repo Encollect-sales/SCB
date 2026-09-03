@@ -1,0 +1,2 @@
+File Number,Loan Account Number,Sub LAN,Case Filing Date,Forum (court),Case type,Case Number,Case Year,Petitioner,Respondent,CNR (district courts),Lawyer,Next Hearing Date,TransactionId,Status,Remarks
+"=""FN014047""","=""68210000005802""",,"=""2024-05-10""","=""Civil Court""","=""Recovery""","=""CASE12345""","=""2024""",,"=""Shari Klein""","=""CNR806145760706""","=""Joe Bayer""","=""2027-08-15""","=""20260730200233991""",Fail,Petitioner cannot be blank

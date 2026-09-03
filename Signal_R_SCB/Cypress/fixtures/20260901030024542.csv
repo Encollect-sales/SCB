@@ -1,0 +1,2 @@
+CustomerId,AccountNo,AllocationOwnerCode,AllocationExpireDate,WorkRequestId,UploadStatus,Remarks
+1667,1667,4821,2027-09-09 00:00:00.000000,20260901030024542,Error,Invalid CustomerID

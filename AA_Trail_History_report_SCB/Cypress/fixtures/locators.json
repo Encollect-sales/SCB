@@ -1,0 +1,48 @@
+{
+  "loginPage": {
+    "companynameInput": "#login-company-name",
+    "ClickonCompanyName": ".ng-option-label",
+    "usernameInput": "#login-email",
+    "passwordInput": "#login-password",
+    "signinButton": "#login-submit-button",
+    "dashboard": ".name-width",
+    "profile": ".avatar-info",
+    "logoutButton": ":nth-child(4) > .dropdown-item"
+  },
+
+  "AccountAggregator":{
+    "ccradiobutton":"#cc-account-type",
+    "AccountNumber:":"#search-account-number",
+    "search":"#search-submit-button",
+    "clickonacno":"td[class='link'] a span span",
+    "togglebutton":"#toggleButton",
+    "viewbutton":"button[type='button']",
+    "viewbankbalance":".card-content > .d-flex > .btn",
+    "overdueamount":".overdue-amount",
+    "togglecc":":nth-child(1) > .btn"
+  
+   
+  },
+  "TrailHistoryReport":{
+    "reports": "#nav-item-1-reports",
+    "trailReports": "#nav-item-2-trail-reports",
+    "trailHistoryReport": "#nav-item-3-trail-history-report",
+    "pageTitle": ".title",
+    "productgroup": ":nth-child(1) > .form-control-group > .form-ng-select > .ng-select-container > .ng-arrow-wrapper",
+    "product": ":nth-child(2) > :nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-arrow-wrapper",
+    "bucket":":nth-child(4) > .form-control-group > .form-ng-select > .ng-select-container > .ng-arrow-wrapper",
+    "region":":nth-child(5) > .form-control-group > .form-ng-select > .ng-select-container > .ng-arrow-wrapper",
+    "pbg": "#pbg",
+    "trailFromDate": "#trailDate_from",
+    "trailToDate": "#trailDate_to",
+    "dispositionCodeGroup": "#discCodeGroup",
+    "dispositionCode": "#discCode",
+    "downloadReport": "#downloadReport",
+    "successToast": ".toast-success",
+    "validationMessage": ".invalid-feedback",
+    "dispositionCodeGroupMandatory": "#dispositionCodeGroup + .mandatory",
+    "dispositionCodeMandatory": "#dispositionCode + .mandatory",
+    "agencyradio":"#agencyUserRadio"
+  }
+
+}

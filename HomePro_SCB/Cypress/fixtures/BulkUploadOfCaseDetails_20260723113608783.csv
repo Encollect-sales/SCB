@@ -1,0 +1,2 @@
+File Number,Loan Account Number,Sub LAN,Case Filing Date,Forum (court),Case type,Case Number,Case Year,Petitioner,Respondent,CNR (district courts),Lawyer,Next Hearing Date,TransactionId,Status,Remarks
+"=""FN615568""","=""68210000005802""",,"=""2024-05-10""","=""Civil Court""","=""Recovery""","=""CASE12345""",,"=""Lisa Hudson-Reichert""","=""Rita O'Keefe""","=""CNR178185954588""","=""Mrs. Nichole Littel-Hodkiewicz""","=""2027-08-15""","=""20260723113608783""",Fail,Case Year cannot be blank

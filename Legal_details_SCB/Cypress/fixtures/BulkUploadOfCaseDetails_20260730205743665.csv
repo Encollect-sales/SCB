@@ -1,0 +1,3 @@
+File Number,Loan Account Number,Sub LAN,Case Filing Date,Forum (court),Case type,Case Number,Case Year,Petitioner,Respondent,CNR (district courts),Lawyer,Next Hearing Date,TransactionId,Status,Remarks
+"=""FN727072""","=""68210000005802""",,"=""2024-05-10""","=""Civil Court""","=""Recovery""","=""CASE5001""","=""2024""","=""Mario Flatley""","=""Edwin Hodkiewicz""","=""CNR808160906771""","=""Lester Botsford""","=""2028-12-31""","=""20260730205743665""",Success,
+"=""FN727072""","=""68210000005802""",,"=""2024-05-15""","=""Civil Court""","=""Recovery""","=""CASE5002""","=""2024""","=""Bonnie Morar Jr.""","=""Sherri Von V""","=""CNR922571922927""","=""Erin Heathcote""","=""2028-12-31""","=""20260730205743665""",Fail,File Number should be unique

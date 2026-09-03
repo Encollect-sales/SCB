@@ -1,0 +1,2 @@
+File Number,Loan Account Number,Sub LAN,Case Filing Date,Forum (court),Case type,Case Number,Case Year,Petitioner,Respondent,CNR (district courts),Lawyer,Next Hearing Date,TransactionId,Status,Remarks
+"=""FN243804""","=""68210000005802""",,"=""2024-05-10""","=""Civil Court""","=""Recovery""","=""CASE12345""",,"=""Frances Parker""","=""Moses Wuckert""","=""CNR950504760050""","=""Damon Morissette I""","=""2027-08-15""","=""20260730195041550""",Fail,Case Year cannot be blank

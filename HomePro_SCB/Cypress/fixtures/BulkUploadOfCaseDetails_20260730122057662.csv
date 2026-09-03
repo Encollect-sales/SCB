@@ -1,0 +1,3 @@
+File Number,Loan Account Number,Sub LAN,Case Filing Date,Forum (court),Case type,Case Number,Case Year,Petitioner,Respondent,CNR (district courts),Lawyer,Next Hearing Date,TransactionId,Status,Remarks
+"=""FN398041""","=""68210000005802""",,"=""2024-05-10""","=""Civil Court""","=""Recovery""","=""CASE5001""","=""2024""","=""Shari Waters""","=""Enrique Kozey""","=""CNR575139420848""","=""Beth Abbott""","=""2028-12-31""","=""20260730122057662""",Success,
+"=""FN398041""","=""68210000005802""",,"=""2024-05-15""","=""Civil Court""","=""Recovery""","=""CASE5002""","=""2024""","=""Terrance Lubowitz""","=""Deanna Lueilwitz""","=""CNR200487089271""","=""Dallas Dicki""","=""2028-12-31""","=""20260730122057662""",Fail,File Number should be unique

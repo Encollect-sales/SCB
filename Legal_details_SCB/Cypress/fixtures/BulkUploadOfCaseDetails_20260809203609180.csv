@@ -1,0 +1,2 @@
+File Number,Loan Account Number,Sub LAN,Case Filing Date,Forum (court),Case type,Case Number,Case Year,Petitioner,Respondent,CNR (district courts),Lawyer,Next Hearing Date,TransactionId,Status,Remarks
+"=""FN100001""","=""68210000005802""",,"=""2024-05-10""","=""Civil Court""","=""Recovery""","=""CASE12345""","=""2024""","=""Shelly Bergstrom""","=""Jeremiah Grimes""","=""CNR709706008321""","=""Irma Rath""","=""2027-08-15""","=""20260809203609180""",Fail,File Number should be unique

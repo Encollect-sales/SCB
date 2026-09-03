@@ -1,0 +1,2 @@
+File Number,Loan Account Number,Sub LAN,Case Filing Date,Forum (court),Case type,Case Number,Case Year,Petitioner,Respondent,CNR (district courts),Lawyer,Next Hearing Date,TransactionId,Status,Remarks
+"=""FN100001""","=""68210000005802""",,"=""2024-05-10""","=""Civil Court""","=""Recovery""","=""CASE12345""","=""2024""","=""Erik Beer-Larson""","=""Nettie Ward""","=""CNR969986912046""","=""Horace Rempel""","=""2027-08-15""","=""20260721134430614""",Fail,File Number should be unique
