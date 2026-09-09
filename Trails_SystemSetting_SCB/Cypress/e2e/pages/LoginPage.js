@@ -1,116 +1,113 @@
-import { getLocators } from '../utils/locatorUtils';
 import { getBaseUrl } from '../utils/configUtils';
- 
+
 class LoginPage {
   constructor(locators) {
     this.locators = locators;
   }
- 
-  visit() {
 
-    Cypress.on('uncaught:exception', (err, runnable) => {
-      console.error('Uncaught exception:', err.message);
-      console.error(err);
-      // Returning false prevents Cypress from failing the test
-      return false;
-    });
-   
-    getBaseUrl().then((baseUrl) => {
-      console.log('Visiting URL:', baseUrl);
+  visit() {
+    return getBaseUrl().then((baseUrl) => {
       cy.visit(baseUrl);
     });
   }
- 
-  // 
-  
-  fillcompanyname(Companyname) {
-  cy.get(this.locators.companynameInput).then(($input) => {
-    const currentValue = $input.val();
- 
-    if (currentValue) {
-      cy.wrap($input).clear().type(Companyname);
-    } else {
-      cy.wrap($input).type(Companyname);
+
+  fillcompanyname(companyName) {
+
+    if (!companyName) {
+      throw new Error("Company name is required");
     }
-  });
- 
-  cy.wait(2000);
-}
- 
-Clikcompanyname() {
-  cy.get(this.locators.ClickonCompanyName).click();
-  cy.wait(2000);
-}
- 
-  fillUsername(email) {
-    
-    cy.get(this.locators.usernameInput).type(email);
+
+    cy.get(this.locators.companynameInput)
+      .should("be.visible")
+      .type(companyName);
+
+    // Wait until dropdown appears
+    cy.get(".ng-option-label")
+      .should("have.length.greaterThan", 0);
+
     cy.wait(2000);
   }
- 
+
+  clickcompanyname() {
+    cy.contains(".ng-option-label", /^ENCollect$/)
+      .should("be.visible")
+      .click({ force: true });
+
+    cy.wait(2000);
+  }
+
+  fillUsername(username) {
+
+    cy.get(this.locators.usernameInput)
+      .should("be.visible")
+      .type(username);
+
+    cy.wait(2000);
+  }
+
   fillPassword(password) {
-    
-    cy.get(this.locators.passwordInput).type(password);
-  }
- 
-  submit() {
-    cy.wait(2000);
-    cy.get(this.locators.signinButton).click();
-    cy.wait(2000);
-  }
 
-  enterotp(){
+    cy.get(this.locators.passwordInput)
+      .should("be.visible")
+      .type(password);
 
-    cy.get('#otp-input').type(560062);
     cy.wait(1000);
-    cy.get('.btn-success').click();
-    cy.wait(6000);
-  }
- 
-  // verifyLoginSuccess() {
-  //   return cy.get(this.locators.dashboard).then(() => {
-  //   });
-  // }
- 
-  login(Companyname, email, password) {
-   
-      this.visit();
-      this.fillcompanyname(Companyname);
-      this.Clikcompanyname();
-      this.fillUsername(email);
-      this.fillPassword(password);
-      this.submit();
-      cy.wait(6000);
-      // this.enterotp();
-      // cy.wait(10000);
-      //this.verifyLoginSuccess();
   }
 
-  // login1(Companyname, email, password) {
-   
-  //     this.visit();
-  //     this.fillcompanyname(Companyname);
-  //     this.Clikcompanyname();
-  //     this.fillUsername(email);
-  //     this.fillPassword(password);
-  //     this.submit();
-  //     cy.wait(7000);
+  submit() {
 
-  // }
+    cy.get(this.locators.signinButton)
+      .should("be.visible")
+      .click();
 
-  logout(){
-
-    cy.get('.avatar').click();
     cy.wait(2000);
-    cy.get(':nth-child(3) > .dropdown-item').click();
-    cy.wait(6000);
-
   }
 
- 
+  enterotp() {
 
+    cy.get("#otp-input")
+      .should("be.visible")
+      .type("560062");
+    cy.wait(2000);
+    cy.get(".btn-success").click();
 
+    cy.wait(20000);
+  }
+
+  verifyLoginSuccess() {
+
+    cy.get(this.locators.dashboard)
+      .should("be.visible");
+  }
+
+  login(companyName, username, password) {
+
+    this.visit();
+
+    this.fillcompanyname(companyName);
+
+    this.clickcompanyname();
+
+    this.fillUsername(username);
+
+    this.fillPassword(password);
+
+    this.submit();
+
+    this.enterotp();
+  }
+
+  logout() {
+
+    cy.get(this.locators.profile)
+      .should("be.visible")
+      .click();
+
+    cy.get(this.locators.logoutButton)
+      .should("be.visible")
+      .click();
+  }
 
 }
- 
+
 export default LoginPage;

@@ -23,7 +23,22 @@
     "ClickOnStatusSearchBtn":"#bulk-trail-search-button",
     "cancelbutton":"#confirm-dialog-cancel",
     "firstpage":".pagination-first",
-    "lastpage":".pagination-last > .page-link"
+    "lastpage":".pagination-last > .page-link",
+    "accountdetails":"#nav-item-1-account-search",
+    "Account_Number":"#search-account-number",
+    "togglebutton":"#toggleButton",
+    "search":"#search-submit-button",
+    "Trail_History":":nth-child(17) > .dropdown-item",
+    "Disp_Date":"tbody > :nth-child(1) > :nth-child(1)",
+    "Customer_Met":"tbody > :nth-child(1) > :nth-child(2)",
+    "Mode_of_Communication":"tbody > :nth-child(1) > :nth-child(3)",
+    "Disp_code":"tbody > :nth-child(1) > :nth-child(4)",
+    "PTP_Date_Next_Action_date":"tbody > :nth-child(1) > :nth-child(5)",
+    "PTPamount":"tr:nth-child(1) td[style*=\"text-align: right\"]",
+    "Collector_First_Name":"tbody > :nth-child(1) > :nth-child(7)",
+    "Collector_Last_Name":"tbody > :nth-child(1) > :nth-child(8)",
+    "Remarks":"tbody > :nth-child(1) > :nth-child(9)",
+    "New_Area":"tbody > :nth-child(1) > :nth-child(10)"
 
     
 

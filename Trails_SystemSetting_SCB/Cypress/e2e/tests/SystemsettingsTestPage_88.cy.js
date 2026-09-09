@@ -23,6 +23,9 @@ describe(
 
     it('Should show validation message when PDF file is uploaded', () => {
       getTestData('loginData', 'login2').then(user => {
+         // Login
+        loginPage.login(user.Companyname, user.email, user.password);
+        cy.wait(1000);
       systemSettingsPage.Systemsettings_BulkMasters_05();
 
       

@@ -40,7 +40,7 @@ describe('Trails - New Area Alphanumeric', () => {
 
             const data = {
                 'A2':'1667',
-                'B2':'1668',
+                'B2':'10169',
                 'C2':'yes',
                 'D2':'PTP',
                 'E2':'PTP',
@@ -68,6 +68,31 @@ describe('Trails - New Area Alphanumeric', () => {
 
             cy.task('moveAllDownloadsToFixtures');
             trailspage.Bulktrail_Processed();
+
+            
+            cy.wait(5000);
+
+            // =====================================================
+            // Verify Data Under Account Details
+            // =====================================================
+
+            trailspage.AccountDetailsarea({
+
+                accountNumber: '1667',
+
+                customerMet: 'Met Customer',
+
+                dispCode: 'PTP',
+
+                ptpDate: '22-Dec-27',
+
+                ptpAmount: '109',
+
+                remarks: 'Bulk upload',
+
+                newArea: 'Area123'
+
         });
     });
+});
 });

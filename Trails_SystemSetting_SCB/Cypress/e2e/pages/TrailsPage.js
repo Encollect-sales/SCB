@@ -639,8 +639,654 @@ Upload_button_disabled(){
   cy.contains('button', 'Upload')
     .should('be.enabled');
 }
+AccountDetails(data) {
+ 
+    cy.get(this.locators.accountdetails).click({ force: true });
+    cy.wait(2000);
+    cy.get(this.locators.Account_Number).type(data.accountNumber);
+    cy.wait(2000);
+    cy.get(this.locators.search).click({ force: true });
+    cy.wait(2000);
+    cy.get(
+        '[style="text-wrap-mode: nowrap; position: relative;"] > span'
+    )
+        .click({ force: true });
+    cy.wait(8000);
+    cy.get(this.locators.togglebutton).click({ force: true });
+    cy.wait(2000);
+    cy.get(this.locators.Trail_History).click({ force: true });
+    cy.wait(2000);
+ 
+    const today = new Date();
+ 
+    const day = String(today.getDate()).padStart(2, '0');
+ 
+    const monthNames = [
+        'Jan',
+        'Feb',
+        'Mar',
+        'Apr',
+        'May',
+        'Jun',
+        'Jul',
+        'Aug',
+        'Sept',
+        'Oct',
+        'Nov',
+        'Dec'
+    ];
+ 
+    const month = monthNames[today.getMonth()];
+ 
+    const year = String(today.getFullYear()).slice(-2);
+ 
+    const expectedDate = `${day}-${month}-${year}`;
+ 
+    cy.log(`Expected Disp Date: ${expectedDate}`);
+ 
+    // FIXED: was getLocators('Disp_Date') - now uses the page's own
+    // locators object, same as every other field in this method.
+    cy.get(this.locators.Disp_Date)
+        .scrollIntoView()
+        .should('be.visible')
+        .invoke('text')
+        .then((actualDate) => {
+ 
+            const displayedDate = actualDate.trim();
+ 
+            cy.log(`Actual Disp Date: ${displayedDate}`);
+ 
+            expect(displayedDate).to.equal(expectedDate);
+ 
+        });
+ 
+    cy.wait(2000);
+    cy.get(this.locators.Customer_Met)
+        .scrollIntoView()
+        .should('be.visible')
+        .and('not.be.empty')
+        .and('contain.text', data.customerMet);
+    cy.wait(2000);
+    // cy.get(this.locators.Mode_of_Communication)
+    //     .scrollIntoView()
+    //     .should('be.visible')
+    //     .and('not.be.empty')
+    //     .and('contain.text', data.modeOfCommunication);
+    // cy.wait(2000);
+    cy.get(this.locators.Disp_code)
+        .scrollIntoView()
+        .should('be.visible')
+        .and('not.be.empty')
+        .and('contain.text', data.dispCode);
+    cy.wait(2000);
+    cy.get(this.locators.PTP_Date_Next_Action_date)
+        .scrollIntoView()
+        .should('be.visible')
+        .and('not.be.empty')
+        .and('contain.text', data.ptpDate);
+    cy.wait(2000);
+    cy.get(':nth-child(1) > [style="text-align: right;"]')
+        .scrollIntoView()
+        .should('be.visible')
+        .and('not.be.empty')
+        .and('contain.text', data.ptpAmount);
+    cy.wait(2000);
+    cy.get(this.locators.Remarks)
+        .scrollIntoView()
+        .should('be.visible')
+        .and('not.be.empty')
+        .and('contain.text', data.remarks);
+    cy.wait(2000);
+ 
+    cy.log('Bulk Trail uploaded data is visible in Trail History');
+ 
+
+}
+
+AccountDetailsptp(data) {
+
+    cy.get(this.locators.accountdetails).click({ force: true });
+    cy.wait(2000);
+
+    cy.get(this.locators.Account_Number).type(data.accountNumber);
+    cy.wait(2000);
+
+    cy.get(this.locators.search).click({ force: true });
+    cy.wait(2000);
+
+    cy.get(
+        '[style="text-wrap-mode: nowrap; position: relative;"] > span'
+    ).click({ force: true });
+
+    cy.wait(8000);
+
+    cy.get(this.locators.togglebutton).click({ force: true });
+    cy.wait(2000);
+
+    cy.get(this.locators.Trail_History).click({ force: true });
+    cy.wait(2000);
 
 
+    // =========================================================
+    // Verify Disp Date - Current Date
+    // Expected UI format: DD-MMM-YY
+    // Example: 03-Sept-26
+    // =========================================================
+
+    const today = new Date();
+
+    const day = String(today.getDate()).padStart(2, '0');
+
+    const monthNames = [
+        'Jan',
+        'Feb',
+        'Mar',
+        'Apr',
+        'May',
+        'Jun',
+        'Jul',
+        'Aug',
+        'Sept',
+        'Oct',
+        'Nov',
+        'Dec'
+    ];
+
+    const month = monthNames[today.getMonth()];
+
+    const year = String(today.getFullYear()).slice(-2);
+
+    const expectedDate = `${day}-${month}-${year}`;
+
+    cy.log(`Expected Disp Date: ${expectedDate}`);
+
+    cy.get(this.locators.Disp_Date)
+        .scrollIntoView()
+        .should('be.visible')
+        .invoke('text')
+        .then((actualDate) => {
+
+            const displayedDate = actualDate.trim();
+
+            cy.log(`Actual Disp Date: ${displayedDate}`);
+
+            expect(displayedDate).to.equal(expectedDate);
+
+        });
+
+    cy.wait(2000);
+
+
+    // =========================================================
+    // Verify Customer Met
+    // =========================================================
+
+    cy.get(this.locators.Customer_Met)
+        .scrollIntoView()
+        .should('be.visible')
+        .and('not.be.empty')
+        .and('contain.text', data.customerMet);
+
+    cy.wait(2000);
+
+
+    // =========================================================
+    // Verify Disp Code
+    // =========================================================
+
+    cy.get(this.locators.Disp_code)
+        .scrollIntoView()
+        .should('be.visible')
+        .and('not.be.empty')
+        .and('contain.text', data.dispCode);
+
+    cy.wait(2000);
+
+
+    // =========================================================
+    // Verify PTP Date / Next Action Date
+    // Excel Format: YYYY-MM-DD
+    // UI Format: DD-MMM-YY 00:00:00
+    // =========================================================
+
+    const [ptpYear, ptpMonth, ptpDay] = data.ptpDate.split('-');
+
+    const expectedPTPDate =
+        `${ptpDay}-${monthNames[parseInt(ptpMonth, 10) - 1]}-${ptpYear.slice(-2)}`;
+
+    cy.log(`Expected PTP Date: ${expectedPTPDate}`);
+
+    cy.get(this.locators.PTP_Date_Next_Action_date)
+        .scrollIntoView()
+        .should('be.visible')
+        .should('not.be.empty')
+        .invoke('text')
+        .then((actualDate) => {
+
+            const displayedDate = actualDate.trim();
+
+            cy.log(`Actual PTP Date: ${displayedDate}`);
+
+            expect(displayedDate).to.contain(expectedPTPDate);
+
+        });
+
+    cy.wait(2000);
+
+
+    // =========================================================
+    // Verify PTP Amount
+    // =========================================================
+
+    cy.get(':nth-child(1) > [style="text-align: right;"]')
+        .scrollIntoView()
+        .should('be.visible')
+        .and('not.be.empty')
+        .and('contain.text', data.ptpAmount);
+
+    cy.wait(2000);
+
+
+    // =========================================================
+    // Verify Remarks
+    // =========================================================
+
+    cy.get(this.locators.Remarks)
+        .scrollIntoView()
+        .should('be.visible')
+        .and('not.be.empty')
+        .and('contain.text', data.remarks);
+
+    cy.wait(2000);
+
+
+    cy.log('Bulk Trail uploaded data is visible in Trail History');
+
+}
+
+
+AccountDetailsarea(data) {
+
+    cy.get(this.locators.accountdetails)
+        .click({ force: true });
+
+    cy.wait(2000);
+
+    cy.get(this.locators.Account_Number)
+        .clear()
+        .type(data.accountNumber);
+
+    cy.wait(2000);
+
+    cy.get(this.locators.search)
+        .click({ force: true });
+
+    cy.wait(2000);
+
+    cy.get(
+        '[style="text-wrap-mode: nowrap; position: relative;"] > span'
+    )
+        .click({ force: true });
+
+    cy.wait(8000);
+
+    cy.get(this.locators.togglebutton)
+        .click({ force: true });
+
+    cy.wait(2000);
+
+    cy.get(this.locators.Trail_History)
+        .click({ force: true });
+
+    cy.wait(2000);
+
+
+    // =========================================================
+    // Verify Disp Date
+    // Expected format: DD-MMM-YY
+    // Example: 03-Sept-26
+    // =========================================================
+
+    
+    const today = new Date();
+
+    const day = String(today.getDate()).padStart(2, '0');
+
+    const monthNames = [
+        'Jan',
+        'Feb',
+        'Mar',
+        'Apr',
+        'May',
+        'Jun',
+        'Jul',
+        'Aug',
+        'Sept',
+        'Oct',
+        'Nov',
+        'Dec'
+    ];
+
+    const month = monthNames[today.getMonth()];
+
+    const year = String(today.getFullYear()).slice(-2);
+
+    const expectedDate = `${day}-${month}-${year}`;
+
+    cy.log(`Expected Disp Date: ${expectedDate}`);
+
+    cy.get(this.locators.Disp_Date)
+        .scrollIntoView()
+        .should('be.visible')
+        .invoke('text')
+        .then((actualDate) => {
+
+            const displayedDate = actualDate.trim();
+
+            cy.log(`Actual Disp Date: ${displayedDate}`);
+
+            expect(displayedDate).to.equal(expectedDate);
+
+        });
+
+    cy.wait(2000);
+
+
+    // =========================================================
+    // Verify Customer Met
+    // =========================================================
+
+    cy.get(this.locators.Customer_Met)
+        .scrollIntoView()
+        .should('be.visible')
+        .should('not.be.empty')
+        .and(
+            'contain.text',
+            data.customerMet
+        );
+
+    cy.wait(2000);
+
+
+    // =========================================================
+    // Verify Disp Code
+    // =========================================================
+
+    cy.get(this.locators.Disp_code)
+        .scrollIntoView()
+        .should('be.visible')
+        .should('not.be.empty')
+        .and(
+            'contain.text',
+            data.dispCode
+        );
+
+    cy.wait(2000);
+
+
+    // =========================================================
+    // Verify PTP Date / Next Action Date
+    // Excel Format: YYYY-MM-DD
+    // UI Format: DD-MMM-YY 00:00:00
+    // =========================================================
+  cy.get(this.locators.PTP_Date_Next_Action_date)
+        .scrollIntoView()
+        .should('be.visible')
+        .and('not.be.empty')
+        .and('contain.text', data.ptpDate);
+    cy.wait(2000);
+    // =========================================================
+    // Verify PTP Amount
+    // =========================================================
+
+    cy.get(
+        ':nth-child(1) > [style="text-align: right;"]'
+    )
+        .scrollIntoView()
+        .should('be.visible')
+        .should('not.be.empty')
+        .and(
+            'contain.text',
+            data.ptpAmount
+        );
+
+    cy.wait(2000);
+
+
+    
+
+
+    // =========================================================
+    // Verify Remarks
+    // =========================================================
+
+    cy.get(this.locators.Remarks)
+        .scrollIntoView()
+        .should('be.visible')
+        .should('not.be.empty')
+        .and(
+            'contain.text',
+            data.remarks
+        );
+
+    cy.wait(2000);
+
+  // =========================================================
+    // Verify New Area
+    // =========================================================
+    cy.get('.w-100 > .btn-outline-dark').click({force:true});
+    cy.wait(2000);
+    cy.get(':nth-child(4) > .dropdown-item').scrollIntoView().click({force:true});
+    cy.wait(2000);
+    cy.get('.w-100 > .btn-outline-dark').click({force:true});
+    cy.wait(2000);
+    cy.get("tbody > :nth-child(1) > :nth-child(10)")
+        .scrollIntoView()
+        .should('be.visible')
+        .should('not.be.empty')
+        .and(
+            'contain.text',
+            data.newArea
+        );
+
+    cy.wait(2000);
+    // =========================================================
+    // Final Log
+    // =========================================================
+
+    cy.log(
+        'Bulk Trail uploaded data is visible in Trail History'
+    );
+
+}
+
+
+AccountDetailsaddress(data) {
+
+   cy.get(this.locators.accountdetails)
+        .click({ force: true });
+
+    cy.wait(2000);
+
+    cy.get(this.locators.Account_Number)
+        .clear()
+        .type(data.accountNumber);
+
+    cy.wait(2000);
+
+    cy.get(this.locators.search)
+        .click({ force: true });
+
+    cy.wait(2000);
+
+    cy.get(
+        '[style="text-wrap-mode: nowrap; position: relative;"] > span'
+    )
+        .click({ force: true });
+
+    cy.wait(8000);
+
+    cy.get(this.locators.togglebutton)
+        .click({ force: true });
+
+    cy.wait(2000);
+
+    cy.get(this.locators.Trail_History)
+        .click({ force: true });
+
+    cy.wait(2000);
+
+
+    // =========================================================
+    // Verify Disp Date
+    // Expected format: DD-MMM-YY
+    // Example: 03-Sept-26
+    // =========================================================
+
+    
+    const today = new Date();
+
+    const day = String(today.getDate()).padStart(2, '0');
+
+    const monthNames = [
+        'Jan',
+        'Feb',
+        'Mar',
+        'Apr',
+        'May',
+        'Jun',
+        'Jul',
+        'Aug',
+        'Sept',
+        'Oct',
+        'Nov',
+        'Dec'
+    ];
+
+    const month = monthNames[today.getMonth()];
+
+    const year = String(today.getFullYear()).slice(-2);
+
+    const expectedDate = `${day}-${month}-${year}`;
+
+    cy.log(`Expected Disp Date: ${expectedDate}`);
+
+    cy.get(this.locators.Disp_Date)
+        .scrollIntoView()
+        .should('be.visible')
+        .invoke('text')
+        .then((actualDate) => {
+
+            const displayedDate = actualDate.trim();
+
+            cy.log(`Actual Disp Date: ${displayedDate}`);
+
+            expect(displayedDate).to.equal(expectedDate);
+
+        });
+
+    cy.wait(2000);
+
+
+    // =========================================================
+    // Verify Customer Met
+    // =========================================================
+
+    cy.get(this.locators.Customer_Met)
+        .scrollIntoView()
+        .should('be.visible')
+        .should('not.be.empty')
+        .and(
+            'contain.text',
+            data.customerMet
+        );
+
+    cy.wait(2000);
+
+
+    // =========================================================
+    // Verify Disp Code
+    // =========================================================
+
+    cy.get(this.locators.Disp_code)
+        .scrollIntoView()
+        .should('be.visible')
+        .should('not.be.empty')
+        .and(
+            'contain.text',
+            data.dispCode
+        );
+
+    cy.wait(2000);
+
+
+    // =========================================================
+    // Verify PTP Date / Next Action Date
+    // Excel Format: YYYY-MM-DD
+    // UI Format: DD-MMM-YY 00:00:00
+    // =========================================================
+  cy.get(this.locators.PTP_Date_Next_Action_date)
+        .scrollIntoView()
+        .should('be.visible')
+        .and('not.be.empty')
+        .and('contain.text', data.ptpDate);
+    cy.wait(2000);
+    // =========================================================
+    // Verify PTP Amount
+    // =========================================================
+
+    cy.get(
+        ':nth-child(1) > [style="text-align: right;"]'
+    )
+        .scrollIntoView()
+        .should('be.visible')
+        .should('not.be.empty')
+        .and(
+            'contain.text',
+            data.ptpAmount
+        );
+
+    cy.wait(2000);
+
+
+    
+
+
+    // =========================================================
+    // Verify Remarks
+    // =========================================================
+
+    cy.get(this.locators.Remarks)
+        .scrollIntoView()
+        .should('be.visible')
+        .should('not.be.empty')
+        .and(
+            'contain.text',
+            data.remarks
+        );
+
+    cy.wait(2000);
+// ===========================
+      cy.get('.w-100 > .btn-outline-dark').click({force:true});
+    cy.wait(2000);
+    cy.get(':nth-child(4) > .dropdown-item').scrollIntoView().click({force:true});
+    cy.wait(2000);
+    cy.get('.w-100 > .btn-outline-dark').click({force:true});
+    cy.wait(2000);
+    cy.get("tbody > :nth-child(1) > :nth-child(10)")
+        .scrollIntoView()
+        .should('be.visible')
+        .and('not.be.empty')
+        .and('contain.text', data.newAddress);
+
+    cy.wait(2000);
+
+
+
+    cy.log(
+        'Bulk Trail uploaded data is visible in Trail History'
+    );
+}
   }
 export default TrailsPage;
    
