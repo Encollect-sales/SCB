@@ -1,0 +1,28 @@
+{
+  "loginPage": {
+    "companynameInput": "#login-company-name",
+    "ClickonCompanyName": ".ng-option-label",
+    "usernameInput": "#login-email",
+    "passwordInput": "#login-password",
+    "signinButton": "#login-submit-button",
+    "dashboard": ".name-width",
+    "profile": ".avatar-info",
+    "logoutButton": ":nth-child(4) > .dropdown-item"
+  },
+
+
+  "Settlement":{
+    "Flagged_As_Eligible":"#IsEligibleForSettlement",
+    "searchbutton":"#search-submit-button",
+    "uploadbutton":"#fileInputChange-0",
+    "Action_Dropdown": ".form-field > .form-select",
+    "Remarks_Field": ":nth-child(3) > .form-field > .form-control",
+    "Update_Status_Button": ".button-container > .btn-secondary",
+     "closebutton":".btn-close",
+     "RenegotiateAmountfield":":nth-child(3) > .form-field > .form-control",
+     "Rejection_Reason":":nth-child(6) > .form-control",
+     "Remarks":":nth-child(7) > .form-control"
+
+  }
+ 
+}

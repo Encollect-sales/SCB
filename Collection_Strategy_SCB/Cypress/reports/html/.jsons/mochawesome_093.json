@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-09-09T21:08:49.116Z",
+    "end": "2026-09-09T21:09:44.646Z",
+    "duration": 55530,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4e0278c9-0913-4544-afc3-33b9de01958a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\DigitalCampaignsTestPage_326.cy.js",
+      "file": "cypress\\e2e\\tests\\DigitalCampaignsTestPage_326.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "66865daa-f86d-4812-880c-e2bafead7908",
+          "title": "TC-326 Verify validation for invalid Max Accounts value",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify validation for invalid Max Accounts value",
+              "fullTitle": "TC-326 Verify validation for invalid Max Accounts value Verify validation for invalid Max Accounts value",
+              "timedOut": null,
+              "duration": 48020,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)(\"loginData\", \"login1\").then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  collectionPage.DigitalCampaignsTestPage_326();\n});",
+              "err": {},
+              "uuid": "6bce2988-a396-495a-afdc-5fd82805361c",
+              "parentUUID": "66865daa-f86d-4812-880c-e2bafead7908",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6bce2988-a396-495a-afdc-5fd82805361c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 48020,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

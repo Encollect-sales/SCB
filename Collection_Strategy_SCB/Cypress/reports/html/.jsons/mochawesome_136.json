@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-09-09T21:56:27.855Z",
+    "end": "2026-09-09T21:56:41.218Z",
+    "duration": 13363,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6e8fcfa3-915a-4844-8769-516018d97dd1",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\DigitalStrategiesTestPage_208.cy.js",
+      "file": "cypress\\e2e\\tests\\DigitalStrategiesTestPage_208.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fbbc4278-0a17-42e3-9f59-aab0313681e8",
+          "title": "TC-208 Verify Duplicate action navigation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Duplicate action navigation",
+              "fullTitle": "TC-208 Verify Duplicate action navigation Verify Duplicate action navigation",
+              "timedOut": null,
+              "duration": 13257,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\DigitalStrategiesTestPage_208.cy.js\\\\TC-208 Verify Duplicate action navigation -- Verify Duplicate action navigation (failed).png\"\n    ]\n  ]\n}",
+              "code": "(0, _TestDataUtils.getTestData)(\"loginData\", \"login1\").then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  collectionPage.DigitalStrategiesTestPage_208();\n});",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://entqa.sumeruentiger.com/scb/web/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 74.225.190.68:443\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://entqa.sumeruentiger.com/scb/web/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 74.225.190.68:443\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:55907/__cypress/runner/cypress_runner.js:135198:74)\n    at visitFailedByErr (http://localhost:55907/__cypress/runner/cypress_runner.js:134588:12)\n    at <unknown> (http://localhost:55907/__cypress/runner/cypress_runner.js:135197:11)\n    at tryCatcher (http://localhost:55907/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (http://localhost:55907/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (http://localhost:55907/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (http://localhost:55907/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (http://localhost:55907/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (http://localhost:55907/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (http://localhost:55907/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (http://localhost:55907/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (http://localhost:55907/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/pages/LoginPage.js:21:9)\n    at getRet (http://localhost:55907/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (http://localhost:55907/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (http://localhost:55907/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (http://localhost:55907/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (http://localhost:55907/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (http://localhost:55907/__cypress/runner/cypress_runner.js:141671:19)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 74.225.190.68:443\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)",
+                "diff": null
+              },
+              "uuid": "968aacd0-d7ea-4ca1-b853-6dd1591dc03f",
+              "parentUUID": "fbbc4278-0a17-42e3-9f59-aab0313681e8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "968aacd0-d7ea-4ca1-b853-6dd1591dc03f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 13257,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

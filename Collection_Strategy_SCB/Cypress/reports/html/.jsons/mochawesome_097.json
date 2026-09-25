@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-09-09T21:13:55.042Z",
+    "end": "2026-09-09T21:14:52.660Z",
+    "duration": 57618,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "82ab7103-e9f9-4919-9f30-4fcbe4be0bbe",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\DigitalCampaignsTestPage_330.cy.js",
+      "file": "cypress\\e2e\\tests\\DigitalCampaignsTestPage_330.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ad86785a-cc3c-4e4e-b7d6-3620f13b0c02",
+          "title": "TC-330 Verify duplicate click handling on Start Campaign Run",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify duplicate click handling on Start Campaign Run",
+              "fullTitle": "TC-330 Verify duplicate click handling on Start Campaign Run Verify duplicate click handling on Start Campaign Run",
+              "timedOut": null,
+              "duration": 50690,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)(\"loginData\", \"login1\").then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  collectionPage.DigitalCampaignsTestPage_330();\n});",
+              "err": {},
+              "uuid": "0ca33d86-4578-4a9b-99c4-2586045ccd55",
+              "parentUUID": "ad86785a-cc3c-4e4e-b7d6-3620f13b0c02",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0ca33d86-4578-4a9b-99c4-2586045ccd55"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 50690,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,2 @@
+Id,IsParentAgency,ParentAgencyCode,AgencyCode,AgencyName,RecommendingOfficer,AgencyType,AgencySubType,TINNumber,PanCard,PrimaryOwnerFirstName,PrimaryOwnerLastName,RegisteredAgencyAddress,Landmark,MobileNo,EmailID,FirstAgreementDate,LastRenewalDate,ContractExpiryDate,Remarks,IsFailed,FailureReason
+3a239a20f521f6a104ba5fae209d78cd,Yes,10090,372438,Warren,2256,Collections,Field Agents,12345321,PANCA9614B,hamad,P,Pune,wiki field,1025984784,warren@yopmail.com,12-10-2022,13-10-2023,10-10-2032,Bulk upload,True, | Parent Agency Code is not required

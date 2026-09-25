@@ -96,7 +96,7 @@ Clikcompanyname() {
       this.fillUsername(email);
       this.fillPassword(password);
       this.submit();
-      cy.wait(1000);
+      cy.wait(2000);
       this.enterotp();
       // this.verifyLoginSuccess();
   }

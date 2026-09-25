@@ -80,8 +80,8 @@ Clikcompanyname() {
       this.fillUsername(email);
       this.fillPassword(password);
       this.submit();
-      cy.wait(6000);
-      // this.enterotp();
+      cy.wait(2000);
+      this.enterotp();
       // cy.wait(10000);
       // this.verifyLoginSuccess();
   }

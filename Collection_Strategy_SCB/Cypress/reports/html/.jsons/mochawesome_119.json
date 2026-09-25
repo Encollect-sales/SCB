@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-09-09T21:38:04.336Z",
+    "end": "2026-09-09T21:38:33.997Z",
+    "duration": 29661,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ba5fa724-d93e-4e17-8256-bd9c71dea3fc",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\DigitalCampaignsTestPage_354.cy.js",
+      "file": "cypress\\e2e\\tests\\DigitalCampaignsTestPage_354.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "94ab4321-bdef-4fd6-8ddd-28664b7e2819",
+          "title": "TC-354 Verify Remove Accounts Under Legal Dispute toggle OFF",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Remove Accounts Under Legal Dispute toggle OFF",
+              "fullTitle": "TC-354 Verify Remove Accounts Under Legal Dispute toggle OFF Verify Remove Accounts Under Legal Dispute toggle OFF",
+              "timedOut": null,
+              "duration": 20867,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\DigitalCampaignsTestPage_354.cy.js\\\\TC-354 Verify Remove Accounts Under Legal Dispute toggle OFF -- Verify Remove Accounts Under Legal Dispute toggle OFF (failed).png\"\n    ]\n  ]\n}",
+              "code": "(0, _TestDataUtils.getTestData)(\"loginData\", \"login1\").then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  collectionPage.DigitalCampaignsTestPage_354();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#otp-input`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#otp-input`, but never found it.\n    at LoginPage.enterotp (webpack:///./cypress/e2e/pages/LoginPage.js:79:7)\n    at LoginPage.login (webpack:///./cypress/e2e/pages/LoginPage.js:100:11)\n    at Context.eval (webpack:///./cypress/e2e/tests/DigitalCampaignsTestPage_354.cy.js:26:22)\n    at getRet (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "8355c8b9-579f-4659-9dd1-a25e1e51dd12",
+              "parentUUID": "94ab4321-bdef-4fd6-8ddd-28664b7e2819",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "8355c8b9-579f-4659-9dd1-a25e1e51dd12"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 20867,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

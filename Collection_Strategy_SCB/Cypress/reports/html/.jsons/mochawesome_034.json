@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-09-09T20:06:02.901Z",
+    "end": "2026-09-09T20:06:55.798Z",
+    "duration": 52897,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ac8c0d94-e9b9-407b-8f64-3f21c887f133",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\DigitalCampaignRunsTestPage_451.cy.js",
+      "file": "cypress\\e2e\\tests\\DigitalCampaignRunsTestPage_451.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c1503409-d347-4631-98c2-8cdd6533aa55",
+          "title": "TC-451 Verify cancel action for Scheduled campaign",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify cancel action for Scheduled campaign",
+              "fullTitle": "TC-451 Verify cancel action for Scheduled campaign Verify cancel action for Scheduled campaign",
+              "timedOut": null,
+              "duration": 40039,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\DigitalCampaignRunsTestPage_451.cy.js\\\\TC-451 Verify cancel action for Scheduled campaign -- Verify cancel action for Scheduled campaign (failed).png\"\n    ]\n  ]\n}",
+              "code": "(0, _TestDataUtils.getTestData)(\"loginData\", \"login1\").then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  collectionPage.DigitalCampaignRunsTestPage_451();\n});",
+              "err": {
+                "message": "AssertionError: expected -1 to not equal -1",
+                "estack": "AssertionError: expected -1 to not equal -1\n    at Context.eval (webpack:///./cypress/e2e/pages/CollectionPage.js:8090:36)\n    at getRet (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)",
+                "diff": ""
+              },
+              "uuid": "e60132d8-5352-42b2-abc1-787673eddcd3",
+              "parentUUID": "c1503409-d347-4631-98c2-8cdd6533aa55",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "e60132d8-5352-42b2-abc1-787673eddcd3"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 40039,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-09-09T21:56:59.892Z",
+    "end": "2026-09-09T21:57:22.987Z",
+    "duration": 23095,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b7c5ef77-9498-41d5-9885-8238fbb757ef",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\DigitalStrategiesTestPage_209.cy.js",
+      "file": "cypress\\e2e\\tests\\DigitalStrategiesTestPage_209.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f51201da-cc30-4021-b2e3-7047f9f919e5",
+          "title": "TC-209 Verify duplicated strategy values are pre-populated",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify duplicated strategy values are pre-populated",
+              "fullTitle": "TC-209 Verify duplicated strategy values are pre-populated Verify duplicated strategy values are pre-populated",
+              "timedOut": null,
+              "duration": 13546,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\DigitalStrategiesTestPage_209.cy.js\\\\TC-209 Verify duplicated strategy values are pre-populated -- Verify duplicated strategy values are pre-populated (failed).png\"\n    ]\n  ]\n}",
+              "code": "(0, _TestDataUtils.getTestData)(\"loginData\", \"login1\").then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  collectionPage.DigitalStrategiesTestPage_209();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.ng-option-label`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.ng-option-label`, but never found it.\n    at LoginPage.Clikcompanyname (webpack:///./cypress/e2e/pages/LoginPage.js:52:5)\n    at LoginPage.login (webpack:///./cypress/e2e/pages/LoginPage.js:95:11)\n    at Context.eval (webpack:///./cypress/e2e/tests/DigitalStrategiesTestPage_209.cy.js:26:22)\n    at getRet (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "b3176eb4-36b7-4b30-97c2-68777b8a0818",
+              "parentUUID": "f51201da-cc30-4021-b2e3-7047f9f919e5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b3176eb4-36b7-4b30-97c2-68777b8a0818"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 13546,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

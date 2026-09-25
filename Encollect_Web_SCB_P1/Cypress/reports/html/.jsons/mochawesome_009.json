@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-07-24T16:06:51.896Z",
-    "end": "2026-07-24T16:08:13.483Z",
-    "duration": 81587,
+    "start": "2026-09-09T19:35:04.631Z",
+    "end": "2026-09-09T19:36:54.876Z",
+    "duration": 110245,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "b587ba85-55df-4d15-8bc4-2974c1795821",
+      "uuid": "525ca499-fd3b-4184-8c62-84c1adc2134d",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_701.cy.js",
-      "file": "cypress\\e2e\\tests\\AllocationPageTest_701.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AgentEmpanelmentRequestPageTest_633.cy.js",
+      "file": "cypress\\e2e\\tests\\AgentEmpanelmentRequestPageTest_633.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "ee068ecc-b71d-4d6b-a901-663b0cd58c2e",
-          "title": "Allocation - Upload Agency Allocation Batch - Once after uploading the allocation file, the file status will change to processed then user should receive email notification",
+          "uuid": "3c24ab76-3322-4fbb-93e4-9f03905633d8",
+          "title": "Agent Empanelment Request - Create Agent - .User should be able to select all mandatory fields in place of work2.The dropdown values of all these fields coming from BE using Product, bucket and geography masters.3.User can click on \"Add\" button to add multiple product, bucket and geography at the same time.",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Agency Level Allocation - TC_ID_701",
-              "fullTitle": "Allocation - Upload Agency Allocation Batch - Once after uploading the allocation file, the file status will change to processed then user should receive email notification Agency Level Allocation - TC_ID_701",
+              "title": "Agent Empanelment Request - TC_ID_633",
+              "fullTitle": "Agent Empanelment Request - Create Agent - .User should be able to select all mandatory fields in place of work2.The dropdown values of all these fields coming from BE using Product, bucket and geography masters.3.User can click on \"Add\" button to add multiple product, bucket and geography at the same time. Agent Empanelment Request - TC_ID_633",
               "timedOut": null,
-              "duration": 71793,
+              "duration": 66119,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  allocationPage.Clickonallocation701();\n  allocationPage.clickondownloadTemplate();\n  //allocationPage.clickonRadioBtnAO();\n  allocationPage.uploadDocxExtensionFile701();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  agentemplimentationRequest.AgentEnpalmentRequest633();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(4)`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr.ng-star-inserted > :nth-child(4)`, but never found it.\n    at AllocationPage.uploadDocxExtensionFile701 (webpack:///./cypress/e2e/pages/AllocationPage.js:310:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_701.cy.js:29:26)",
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `ng-select[placeholder='Search and select your Bucket(s)'] input[role='combobox']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `ng-select[placeholder='Search and select your Bucket(s)'] input[role='combobox']`, but never found it.\n    at AgentEmpanelmentRequestPage.AgentEnpalmentRequest633 (webpack:///./cypress/e2e/pages/AgentEmpanelmentRequestPage.js:1336:6)\n    at Context.eval (webpack:///./cypress/e2e/tests/AgentEmpanelmentRequestPageTest_633.cy.js:27:43)",
                 "diff": null
               },
-              "uuid": "a390c5f9-faae-4843-9a1c-fd1d4ca542f1",
-              "parentUUID": "ee068ecc-b71d-4d6b-a901-663b0cd58c2e",
+              "uuid": "08fcb898-cb18-4ee2-b8c1-f2a8554587ef",
+              "parentUUID": "3c24ab76-3322-4fbb-93e4-9f03905633d8",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "a390c5f9-faae-4843-9a1c-fd1d4ca542f1"
+            "08fcb898-cb18-4ee2-b8c1-f2a8554587ef"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 71793,
+          "duration": 66119,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

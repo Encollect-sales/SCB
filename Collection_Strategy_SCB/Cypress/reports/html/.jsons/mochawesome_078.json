@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-09-09T20:47:15.809Z",
+    "end": "2026-09-09T20:48:25.349Z",
+    "duration": 69540,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "555a72c1-8bcd-4c40-9189-d19eb95ab700",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\DigitalCampaignsTestPage_307.cy.js",
+      "file": "cypress\\e2e\\tests\\DigitalCampaignsTestPage_307.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4ccf9911-a578-47cd-b844-2eb1ef630611",
+          "title": "TC-307 Verify success message after marking recurring",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify success message after marking recurring",
+              "fullTitle": "TC-307 Verify success message after marking recurring Verify success message after marking recurring",
+              "timedOut": null,
+              "duration": 58482,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)(\"loginData\", \"login1\").then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  collectionPage.DigitalCampaignsTestPage_307();\n});",
+              "err": {},
+              "uuid": "911c7652-674e-4317-8f88-d6455043c157",
+              "parentUUID": "4ccf9911-a578-47cd-b844-2eb1ef630611",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "911c7652-674e-4317-8f88-d6455043c157"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 58482,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

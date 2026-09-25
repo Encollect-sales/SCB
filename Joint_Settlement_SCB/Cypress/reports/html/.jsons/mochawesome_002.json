@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-09-21T07:18:37.356Z",
+    "end": "2026-09-21T07:18:56.449Z",
+    "duration": 19093,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "00ef7dbc-6e57-4c7b-b6db-72b9c99151ea",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\JointSettlement_03.cy.js",
+      "file": "cypress\\e2e\\tests\\JointSettlement_03.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a672d109-3ace-4286-b25d-9c35c83e9f63",
+          "title": "Settlement - Submitting the settlement for approval",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC_001 - Submitting the settlement for approval",
+              "fullTitle": "Settlement - Submitting the settlement for approval TC_001 - Submitting the settlement for approval",
+              "timedOut": null,
+              "duration": 11980,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\JointSettlement_03.cy.js\\\\Settlement - Submitting the settlement for approval -- TC_001 - Submitting the settlement for approval (failed).png\"\n    ]\n  ]\n}",
+              "code": "(0, _TestDataUtils.getTestData)('loginData', 'BranchManagerLogin').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  Cypress.on('uncaught:exception', err => {\n    if (err.message.includes('ResizeObserver loop completed with undelivered notifications.')) {\n      return false;\n    }\n  });\n  settlementPage.NavigateToSettlement();\n  settlementPage.NavigateToSettlementRequestInformationPage();\n  settlementPage.Submittingthesettlementforapproval();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.ng-option-label`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.ng-option-label`, but never found it.\n    at LoginPage.fillcompanyname (webpack:///./cypress/e2e/pages/LoginPage.js:26:7)\n    at LoginPage.login (webpack:///./cypress/e2e/pages/LoginPage.js:87:9)\n    at Context.eval (webpack:///./cypress/e2e/tests/JointSettlement_03.cy.js:27:22)\n    at getRet (https://scbuat.sumeruentiger.com/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (https://scbuat.sumeruentiger.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://scbuat.sumeruentiger.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://scbuat.sumeruentiger.com/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (https://scbuat.sumeruentiger.com/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (https://scbuat.sumeruentiger.com/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "b9e49f92-55ff-4f81-b4c6-ab4195c15f57",
+              "parentUUID": "a672d109-3ace-4286-b25d-9c35c83e9f63",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b9e49f92-55ff-4f81-b4c6-ab4195c15f57"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 11980,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

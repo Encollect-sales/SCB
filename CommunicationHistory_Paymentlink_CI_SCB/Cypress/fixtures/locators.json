@@ -1,0 +1,103 @@
+{
+  "loginPage": {
+    "companynameInput": "#login-company-name",
+    "ClickonCompanyName": ".ng-option-label",
+    "usernameInput": "#login-email",
+    "passwordInput": "#login-password",
+    "signinButton": "#login-submit-button",
+    "dashboard": ".name-width",
+    "profile": ".avatar-info",
+    "logoutButton": ":nth-child(4) > .dropdown-item"
+  },
+
+
+  "UserCommunicationReport":{
+    "CommunicationFromDate":":nth-child(1) > .form-control",
+    "CommunicationToDate":":nth-child(2) > .form-control",
+    "channeltype":"#channelType",
+    "generate":"#generate-report-button",
+    "triggertype":"#triggerType",
+    "Download":".btn-outline-dark",
+    "accountnumber":"#search-account-number",
+    "searchbutton":"#search-submit-button",
+    "selectoption":"#selectOption",
+    "issuereceipt":":nth-child(3) > .dropdown-item",
+    "PhysicalReceiptNo ":":nth-child(1) > .form-control-group > .form-control",
+    "CollectorIDarrow":":nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-arrow-wrapper",
+    "RelationshipWithCustomer":".form-control-group > .form-select",
+    "ModeOfPayment ":".payment-input > .form-select",
+    "othercharge":":nth-child(6) > :nth-child(2) > .form-control-group > .form-control",
+    "checkboxemail":":nth-child(1) > .d-flex > .form-check-group > label > .ng-untouched",
+    "checkboxsms":":nth-child(2) > .d-flex > .form-check-group > label > .ng-untouched",
+    "submit":".btn-secondary",
+    "emailenter":":nth-child(1) > .d-flex > .form-control-with-icon > .form-control",
+    "mobilenoenter":":nth-child(2) > .d-flex > .form-control-with-icon > .form-control",
+    "okay":"#confirm-dialog-okay",
+    "accountdetails":"#nav-item-1-account-search",
+    "togglebutton":"#toggleButton",
+    "Communicationhistory":":nth-child(13) > .dropdown-item",
+    "account_no":":nth-child(5) > .form-control-group > .form-control-with-icon > .form-control",
+    "creditcard":"#cc-account-type",
+    "togglebuttoncard":".btn-outline-dark",
+    "toggle":":nth-child(1) > .btn",
+    "creditcardpayment":"#radios-1",
+    "CustomerAccountNumber":".form-control-with-icon > .form-control",
+    "fromdate":":nth-child(4) > .form-control",
+    "todate":":nth-child(5) > .form-control",
+    "button":".btn",
+    "mail":":nth-child(1) > :nth-child(12) > .d-flex > .fa-envelope",
+    "sms":":nth-child(1) > :nth-child(12) > .d-flex > .fa-sms",
+    "actiontoggle":".action-icon-button",
+    "AmberPay":"form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-radio-group > :nth-child(1) > .ng-untouched",
+    "InstaPay":"form.ng-untouched > :nth-child(1) > :nth-child(1) > .form-radio-group > :nth-child(2) > .ng-untouched",
+    "RazorPay":":nth-child(3) > .ng-untouched",
+    "newEmail":"#newEmail",
+    "new":"#new",
+    "amount":"#amount",
+    "send":"#aend",
+    "mailid":"#old_mailId",
+    "mobileNumber":"#new_mobileNumber",
+    "togglehistorycomm":"#communication-history-grid-column-filter-button",
+    "lastpage":".pagination-last > .page-link",
+    "firstpage":".pagination-first",
+    "pageno":"#itemsPerPage_communication"
+    
+
+
+  },
+  "CampaignInsights":{
+    "campaignFilter": ":nth-child(1) > .form-ng-select > .ng-select-container > .ng-arrow-wrapper",
+    "campaignOption": ".ng-dropdown-panel-items",
+    "segmentFilter": ":nth-child(3) > .form-ng-select > .ng-select-container > .ng-arrow-wrapper",
+    "segmentOption": ".ng-dropdown-panel-items",
+    "strategyFilter": ":nth-child(4) > .form-ng-select > .ng-select-container > .ng-arrow-wrapper",
+    "strategyOption": ".ng-dropdown-panel-items",
+    "dateRange": ".form-control",
+    "searchCampaign": ":nth-child(1) > .form-ng-select > .ng-select-container",
+    "applyButton": ".fields > .btn"
+  },
+  "CommunicationTemplate":{
+    "entrypointcollection":":nth-child(3) > .h-100 > .form-control-group > .form-select",
+    "templateName":"#templateName",
+    "channelType":"#channelType",
+    "RecipientType":":nth-child(4) > .form-control-group > .form-select",
+    "Tone":":nth-child(5) > .form-control-group > .form-select",
+    "header":"#dltTemplateId",
+    "templateBody":".editor-container > .form-control",
+    "map":".modal-footer > .btn",
+    "templatemapping":".template-variable-mapping",
+    "Header":"#subject",
+    "TemplateBody":".editor-container",
+    "searchTemplate":".form-control",
+    "togglebutton":":nth-child(1) > .actions > .d-flex > .action-icon-button",
+    "edittemplate":":nth-child(2) > .dropdown-item",
+     "preview":".form-control-group > .btn",
+     "customerNameVariable":"customerNameVariable",
+     "actionbutton":":nth-child(1) > .actions > .d-flex > .action-icon-button",
+         "view":":nth-child(1) > .dropdown-item"
+  
+
+  }
+  
+
+}

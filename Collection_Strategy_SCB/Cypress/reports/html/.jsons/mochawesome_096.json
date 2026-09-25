@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-09-09T21:12:42.289Z",
+    "end": "2026-09-09T21:13:40.895Z",
+    "duration": 58606,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "77036c3b-726d-4768-8970-947fd935ca71",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\DigitalCampaignsTestPage_329.cy.js",
+      "file": "cypress\\e2e\\tests\\DigitalCampaignsTestPage_329.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c9339d16-459f-4a20-aeb2-71921712ac9a",
+          "title": "TC-329 Verify scheduled campaign run creation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify scheduled campaign run creation",
+              "fullTitle": "TC-329 Verify scheduled campaign run creation Verify scheduled campaign run creation",
+              "timedOut": null,
+              "duration": 47577,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _TestDataUtils.getTestData)(\"loginData\", \"login1\").then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  collectionPage.DigitalCampaignsTestPage_329();\n});",
+              "err": {},
+              "uuid": "d5bcfc7f-2b7c-4096-b262-aabc0f7e5208",
+              "parentUUID": "c9339d16-459f-4a20-aeb2-71921712ac9a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d5bcfc7f-2b7c-4096-b262-aabc0f7e5208"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 47577,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

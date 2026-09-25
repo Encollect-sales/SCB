@@ -109,10 +109,10 @@
       "Select_Product":".col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
       "Select_Sub_product":".col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
 
-      "ClickOnBucket_head":"[heading='Bucket'] > .panel > .panel-heading > .panel-title",
+      "ClickOnBucket_head":":nth-child(2) > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn",
       "ClickonBucket_Dropdown":".col-md-12 > .form-control-group > .form-ng-select > .ng-select-container > .ng-arrow-wrapper",
 
-      "ClickOnGeography_head":"[heading='Geography'] > .panel > .panel-heading > .panel-title",
+      "ClickOnGeography_head":":nth-child(3) > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn",
       "Select_Country_Dropdown":".col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-arrow-wrapper",
       "Select_region_Dropdown":":nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
       "Select_State_Dropdown":":nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
@@ -784,7 +784,7 @@
       "productoption1_Suboptions":".col-md-12.ng-star-inserted > .form-control-group > .form-ng-select > .ng-select-container > .ng-arrow-wrapper",
       "selectsuboptions":".ng-option-label.ng-star-inserted",
 
-      "ClickOnBucketHead":"[heading='Bucket'] > .panel > .panel-heading > .panel-title",
+      "ClickOnBucketHead":":nth-child(2) > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn",
       "ClickOnBucket":"ng-select[placeholder='Search and select your Bucket(s)'] input[role='combobox']",
       
       "SelectAgencyReportManager":"#reportingManager > .ng-select-container > .ng-value-container > .ng-input > input"
@@ -865,10 +865,10 @@
       "Select_Product":":nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
       "Select_Sub_product":":nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
 
-      "ClickOnBucket_head":"[heading='Bucket'] > .panel > .panel-heading > .panel-title",
+      "ClickOnBucket_head":":nth-child(2) > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn",
       "ClickonBucket_Dropdown":".col-md-12 > .form-control-group > .form-ng-select > .ng-select-container > .ng-arrow-wrapper",
 
-      "ClickOnGeography_head":"[heading='Geography'] > .panel > .panel-heading > .panel-title",
+      "ClickOnGeography_head":":nth-child(3) > .panel > .panel-heading > .panel-title > .accordion-toggle > .btn",
       "Select_Country_Dropdown":":nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
       "Select_region_Dropdown":":nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",
       "Select_State_Dropdown":":nth-child(2) > .form-control-group > .form-ng-select > .ng-select-container > .ng-value-container > .ng-input > input",

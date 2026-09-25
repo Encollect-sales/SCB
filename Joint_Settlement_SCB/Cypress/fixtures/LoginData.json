@@ -1,0 +1,66 @@
+{
+  "BranchManagerLogin": {
+    "Companyname": "ENCollect",
+    "email": "BranchManager1@yopmail.com",
+    "password": "123@dkDK"
+  },
+
+  "BranchCashierLogin": {
+    "Companyname": "ENCollect",
+    "email": "BranchCashier@yopmail.com",
+    "password": "123@dkDK"
+  },
+
+  "CollectionSupervisorLogin": {
+    "Companyname": "ENCollect",
+    "email": "collectionsupervisoruat@yopmail.com",
+    "password": "123@dkDK"
+  },
+
+  "BranchSupervisorLogin": {
+    "Companyname": "ENCollect",
+    "email": "BranchSupervisor@yopmail.com",
+    "password": "123@dkDK"
+  },
+
+  "CollectionManagerLogin": {
+    "Companyname": "ENCollect",
+    "email": "CollectionManaguaters@yopmail.com",
+    "password": "123@dkDK"
+  },
+
+  "BucketCollectionHeadLogin": {
+    "Companyname": "ENCollect",
+    "email": "BucketCollectionHeaduat@yopmail.com",
+    "password": "123@dkDK"
+  },
+
+  "CityCollectionHeadLogin": {
+    "Companyname": "ENCollect",
+    "email": "CityCollectionHeaduat1@yopmail.com",
+    "password": "123@dkDK"
+  },
+
+  "ProductCollectionHeadLogin": {
+    "Companyname": "ENCollect",
+    "email": "ProductCollectionHeaduat1@yopmail.com",
+    "password": "123@dkDK"
+  },
+
+  "RegionalCollectionHeadLogin": {
+    "Companyname": "ENCollect",
+    "email": "RegionalCollectionHeaduat1@yopmail.com",
+    "password": "123@dkDK"
+  },
+
+  "ZonalCollectionHeadLogin": {
+    "Companyname": "ENCollect",
+    "email": "ZonalCollectionHeaduat1@yopmail.com",
+    "password": "123@dkDK"
+  },
+  "login":{
+    "Companyname": "ENCollect",
+    "email": "staffautomationtwouat@yopmail.com",
+    "password": "123@qaQA"
+  }
+}

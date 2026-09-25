@@ -1,0 +1,79 @@
+pipeline {
+    agent any
+
+    environment {
+        NO_COLOR = '1'
+    }
+
+    tools {
+        nodejs 'NodeJS'
+    }
+
+    stages {
+        stage('Clean Workspace') {
+            steps {
+                deleteDir()
+                echo 'Workspace has been cleaned to ensure a fresh build.'
+            }
+        }
+
+        stage('Checkout SCM') {
+            steps {
+                checkout scm
+                echo 'Source code successfully checked out from version control.'
+            }
+        }
+
+        stage('Install Dependencies') {
+    steps {
+        bat 'npm install'
+    }
+}
+
+
+        stage('Run Tests') {
+    steps {
+        bat "npx cypress run"
+            }
+        }
+
+
+        stage('Generate Reports') {
+            steps {
+                bat "npx cypress run --reporter cypress-mochawesome-reporter"
+                publishHTML(target: [
+                    reportName: 'Cypress Test Report',
+                    reportDir: 'cypress/reports/mochawesome-report',
+                    reportFiles: 'index.html',
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true
+                ])
+            }
+        }
+
+        stage('Archive Artifacts') {
+            steps {
+                archiveArtifacts artifacts: 'cypress/screenshots/**/*.png', fingerprint: true
+                archiveArtifacts artifacts: 'cypress/videos/**/*.mp4', fingerprint: true
+                archiveArtifacts artifacts: 'cypress/reports/mochawesome-report/*.html', fingerprint: true
+            }
+        }
+    }
+
+    post {
+        always {
+            cleanWs()
+            echo 'Post-build cleanup has been completed.'
+        }
+
+        // failure {
+        //     mail to: 'santosh.k@apptestify.com',
+        //           subject: "Failed Pipeline: ${env.JOB_NAME} build ${env.BUILD_NUMBER}",
+        //           body: "Something is wrong with ${env.BUILD_URL}"
+        // }
+
+        success {
+            echo 'Build and tests completed successfully.'
+        }
+    }
+}

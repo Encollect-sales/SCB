@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-09-09T20:14:29.939Z",
+    "end": "2026-09-09T20:14:30.596Z",
+    "duration": 657,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1988b646-e4bf-42be-810e-e194fbd90948",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\DigitalCampaignRunsTestPage_460.cy.js",
+      "file": "cypress\\e2e\\tests\\DigitalCampaignRunsTestPage_460.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4970fc87-1939-4a13-a3c3-c1aa1851ec9c",
+          "title": "TC-460 Verify popup close on Go Back click",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify popup close on Go Back click",
+              "fullTitle": "TC-460 Verify popup close on Go Back click Verify popup close on Go Back click",
+              "timedOut": null,
+              "duration": 516,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\DigitalCampaignRunsTestPage_460.cy.js\\\\TC-460 Verify popup close on Go Back click -- Verify popup close on Go Back click (failed).png\"\n    ]\n  ]\n}",
+              "code": "(0, _TestDataUtils.getTestData)(\"loginData\", \"login1\").then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  collectionPage.DigitalCampaignTestPage_460();\n});",
+              "err": {
+                "message": "TypeError: collectionPage.DigitalCampaignTestPage_460 is not a function",
+                "estack": "TypeError: collectionPage.DigitalCampaignTestPage_460 is not a function\n    at Context.eval (webpack:///./cypress/e2e/tests/DigitalCampaignRunsTestPage_460.cy.js:30:27)\n    at getRet (http://localhost:55907/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (http://localhost:55907/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (http://localhost:55907/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (http://localhost:55907/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (http://localhost:55907/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (http://localhost:55907/__cypress/runner/cypress_runner.js:141671:19)\n    at <unknown> (http://localhost:55907/__cypress/runner/cypress_runner.js:147616:15)\n    at tryCatcher (http://localhost:55907/__cypress/runner/cypress_runner.js:1777:23)",
+                "diff": null
+              },
+              "uuid": "0751fd9b-963c-4572-973f-0918de4d4e2a",
+              "parentUUID": "4970fc87-1939-4a13-a3c3-c1aa1851ec9c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "0751fd9b-963c-4572-973f-0918de4d4e2a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 516,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

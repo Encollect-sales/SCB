@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-09-09T20:05:16.944Z",
+    "end": "2026-09-09T20:05:17.536Z",
+    "duration": 592,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7ea5f7e3-2088-490a-8f4a-a8d943d63781",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\DigitalCampaignRunsTestPage_449.cy.js",
+      "file": "cypress\\e2e\\tests\\DigitalCampaignRunsTestPage_449.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d6571514-6264-47a6-9a66-10e1f506aec2",
+          "title": "TC-449 Verify reach percentage for 0 accounts contacted",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify reach percentage for 0 accounts contacted",
+              "fullTitle": "TC-449 Verify reach percentage for 0 accounts contacted Verify reach percentage for 0 accounts contacted",
+              "timedOut": null,
+              "duration": 404,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\DigitalCampaignRunsTestPage_449.cy.js\\\\TC-449 Verify reach percentage for 0 accounts contacted -- Verify reach percentage for 0 accounts contacted (failed).png\"\n    ]\n  ]\n}",
+              "code": "(0, _TestDataUtils.getTestData)(\"loginData\", \"login1\").then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  collectionPage.DigitalCampaignTestPage_449();\n});",
+              "err": {
+                "message": "TypeError: collectionPage.DigitalCampaignTestPage_449 is not a function",
+                "estack": "TypeError: collectionPage.DigitalCampaignTestPage_449 is not a function\n    at Context.eval (webpack:///./cypress/e2e/tests/DigitalCampaignRunsTestPage_449.cy.js:30:27)\n    at getRet (http://localhost:55907/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (http://localhost:55907/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (http://localhost:55907/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (http://localhost:55907/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (http://localhost:55907/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (http://localhost:55907/__cypress/runner/cypress_runner.js:141671:19)\n    at <unknown> (http://localhost:55907/__cypress/runner/cypress_runner.js:147616:15)\n    at tryCatcher (http://localhost:55907/__cypress/runner/cypress_runner.js:1777:23)",
+                "diff": null
+              },
+              "uuid": "1d7af907-6d41-4384-b7e6-9d7a99ccdf6a",
+              "parentUUID": "d6571514-6264-47a6-9a66-10e1f506aec2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "1d7af907-6d41-4384-b7e6-9d7a99ccdf6a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 404,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

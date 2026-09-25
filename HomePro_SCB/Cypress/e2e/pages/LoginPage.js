@@ -71,7 +71,7 @@ class LoginPage {
     cy.wait(2000);
     cy.get(".btn-success").click();
 
-    cy.wait(20000);
+    cy.wait(11000);
   }
 
   verifyLoginSuccess() {

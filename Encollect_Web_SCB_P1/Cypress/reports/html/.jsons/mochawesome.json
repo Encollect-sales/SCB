@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-07-24T15:52:35.583Z",
-    "end": "2026-07-24T15:55:31.389Z",
-    "duration": 175806,
+    "start": "2026-09-09T19:10:52.504Z",
+    "end": "2026-09-09T19:12:18.616Z",
+    "duration": 86112,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "e39fa4d5-808f-4d8e-b48f-cb06a90baaaf",
+      "uuid": "b45c1657-1846-40be-bb45-58bf2a4b8b18",
       "title": "",
-      "fullFile": "cypress\\e2e\\tests\\AllocationPageTest_692.cy.js",
-      "file": "cypress\\e2e\\tests\\AllocationPageTest_692.cy.js",
+      "fullFile": "cypress\\e2e\\tests\\AgentEmpanelmentRequestPageTest_624.cy.js",
+      "file": "cypress\\e2e\\tests\\AgentEmpanelmentRequestPageTest_624.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "939d62e6-56a3-4867-9a60-0bf277a0de7b",
-          "title": "Allocation - Upload Agency Allocation Batch -  User should be able to click on primary allocation file under file name column so that a zip file will get downloaded.5.User should be able to open the zip file and see the list of accounts which are not allocated to any of the agency, so that user can take those accounts and do the allocation to agencies accordingly.",
+          "uuid": "a7b4cf38-97ee-4e6b-8d81-52168f11aa54",
+          "title": "Agent Empanelment Request - Create Agent - User will enter all mandatory fields in create agent tab by selecting anyone of the id type and by uploading an image",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Download Allocation TC_ID_692",
-              "fullTitle": "Allocation - Upload Agency Allocation Batch -  User should be able to click on primary allocation file under file name column so that a zip file will get downloaded.5.User should be able to open the zip file and see the list of accounts which are not allocated to any of the agency, so that user can take those accounts and do the allocation to agencies accordingly. Download Allocation TC_ID_692",
+              "title": "Agent Empanelment Request - TC_ID_624",
+              "fullTitle": "Agent Empanelment Request - Create Agent - User will enter all mandatory fields in create agent tab by selecting anyone of the id type and by uploading an image Agent Empanelment Request - TC_ID_624",
               "timedOut": null,
-              "duration": 165776,
+              "duration": 62504,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  allocationPage.Clickonallocation();\n  cy.wait(2000);\n  allocationPage.fillproductgroup();\n  allocationPage.fillproduct();\n  allocationPage.fillsubproduct();\n  allocationPage.fillBucketAndCountry();\n  allocationPage.clickNotAllcated();\n  allocationPage.clickonDownload();\n  allocationPage.clickonprimaryfile();\n});",
+              "code": "(0, _testDataUtils.getTestData)('loginData', 'login').then(user => {\n  loginPage.login(user.Companyname, user.email, user.password);\n  cy.wait(2000);\n  agentemplimentationRequest.AgentEnpalmentRequest624();\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tbody > :nth-child(1) > :nth-child(2) > a`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `tbody > :nth-child(1) > :nth-child(2) > a`, but never found it.\n    at AllocationPage.clickonprimaryfile (webpack:///./cypress/e2e/pages/AllocationPage.js:150:7)\n    at Context.eval (webpack:///./cypress/e2e/tests/AllocationPageTest_692.cy.js:47:26)",
+                "message": "CypressError: Timed out retrying after 4000ms: `cy.select()` failed because it could not find a single `<option>` with value, index, or text matching: `Arun`\n\nhttps://on.cypress.io/select",
+                "estack": "CypressError: Timed out retrying after 4000ms: `cy.select()` failed because it could not find a single `<option>` with value, index, or text matching: `Arun`\n\nhttps://on.cypress.io/select\n    at getOptions (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:114180:72)\n    at tryCatcher (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise.attempt.Promise.try (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:4338:29)\n    at retryOptions (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:114212:70)\n    at tryCatcher (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise.attempt.Promise.try (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:4338:29)\n    at whenStable (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:143744:68)\n    at <unknown> (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:143685:14)\n    at tryCatcher (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1724:18)\n    at Promise._fulfill (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:1668:18)\n    at <unknown> (https://entqa.sumeruentiger.com/__cypress/runner/cypress_runner.js:5473:46)\nFrom Your Spec Code:\n    at AgentEmpanelmentRequestPage.AgentEnpalmentRequest624 (webpack:///./cypress/e2e/pages/AgentEmpanelmentRequestPage.js:886:37)\n    at Context.eval (webpack:///./cypress/e2e/tests/AgentEmpanelmentRequestPageTest_624.cy.js:27:43)",
                 "diff": null
               },
-              "uuid": "e05dcccf-413e-45f5-950d-a73dca17c92f",
-              "parentUUID": "939d62e6-56a3-4867-9a60-0bf277a0de7b",
+              "uuid": "3a23c3bf-9d92-4eb7-b202-aeee3ce176ea",
+              "parentUUID": "a7b4cf38-97ee-4e6b-8d81-52168f11aa54",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "e05dcccf-413e-45f5-950d-a73dca17c92f"
+            "3a23c3bf-9d92-4eb7-b202-aeee3ce176ea"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 165776,
+          "duration": 62504,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
